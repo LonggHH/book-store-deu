@@ -1,0 +1,14 @@
+{
+    "home": {
+        "headerCategory": [
+             {"id": 1, "name": "전체", "active": true, "highlight": false},
+             {"id": 2, "name": "스페셜", "active": false, "highlight": true},
+             {"id": 3, "name": "도서", "active": false, "highlight": false},
+             {"id": 4, "name": "성물", "active": false, "highlight": false},
+             {"id": 5, "name": "굿즈", "active": false, "highlight": false},
+             {"id": 6, "name": "바오로딸 Pick", "active": false, "highlight": false},
+             {"id": 7, "name": "ebook", "active": false, "highlight": false},
+             {"id": 8, "name": "음반/뮤직/DVD", "active": false, "highlight": false}
+        ]            
+    }
+}

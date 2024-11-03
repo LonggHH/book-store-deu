@@ -1,0 +1,165 @@
+.text-2028-2838 {
+    font-size: 28px;
+    line-height: 38px;  
+}
+
+.text-2028-2230 {
+    font-size: 22px;
+    line-height: 30px;  
+}
+
+.text-1624-2230 {
+    font-size: 22px;
+    line-height: 30px; 
+}
+
+.text-1522-1826 {
+    font-size: 18px;
+    line-height: 26px;  
+}
+
+.text-1522-1624 {
+    font-size: 16px;
+    line-height: 24px;  
+}
+
+.text-1318-1522 {
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.text-1420-1724 {
+    font-size: 17px;
+    line-height: 24px;  
+}
+
+.text-1420-1522 {
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.text-1724-2230 {
+    font-size: 22px;
+    line-height: 30px;  
+}
+
+.text-1724-1826 {
+    font-size: 18px;
+    line-height: 26px;  
+}
+/* ------------------------------------------------------------- */
+.frame-size-102102-160160 {
+    width: 160px;
+    height: 160px;
+}
+
+.frame-size-70108-160150 {
+    width: 160px;
+    height: 150px;
+}
+
+.frame-size-7070-160160 {
+    width: 160px;
+    height: 160px;
+}
+
+.image-size-70108-102150 {
+    width: 102px;
+    height: 150px;
+}
+
+.note-frame-size {
+    max-width: 700px;
+}
+
+.payment-detail-size {
+    width: 340px;
+}
+/* ------------------------------------------------------------- */
+@media (max-width: 940px) { 
+    .note-frame-size {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .payment-detail-size {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 640px) {
+    .text-2028-2838 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .text-2028-2230 {
+        font-size: 20px;
+        line-height: 28px;  
+    }
+
+    .text-1624-2230 {
+        font-size: 16px;
+        line-height: 24px; 
+    }
+
+    .text-1522-1826 {
+        font-size: 15px;
+        line-height: 22px;  
+    }
+
+    .text-1522-1624 {
+        font-size: 15px;
+        line-height: 22px;  
+    }
+
+    .text-1318-1522 {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .text-1420-1724 {
+        font-size: 14px;
+        line-height: 20px;  
+    }
+
+    .text-1420-1522 {
+        font-size: 14px;
+        line-height: 20px;  
+    }
+
+    .text-1724-1826 {
+        font-size: 17px;
+        line-height: 24px;  
+    }
+
+    .text-1724-2230 {
+        font-size: 17px;
+        line-height: 24px;  
+    }
+    /* ------------------------------------------------------------- */
+    .frame-size-102102-160160 {
+        width: 102px;
+        height: 102px;
+    }
+
+    .frame-size-70108-160150 {
+        width: 70px;
+        height: 108px;
+    }
+
+    .frame-size-7070-160160 {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .image-size-70108-102150 {
+        width: 70px;
+        height: 108px;
+    }
+
+    .modal-box-size {
+        max-width: calc(100%);
+    }
+}
