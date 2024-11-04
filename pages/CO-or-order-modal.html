@@ -17,6 +17,43 @@
 
     <link rel="stylesheet" href="../assets/css/util.css">
     <link rel="stylesheet" href="../assets/css/CO/co.css">
+
+    <style>
+
+        .bg-gray-100-overflow-8 {
+            position: relative;
+        }
+
+        .bg-gray-100-overflow-8::after {
+            content: '';
+            position: absolute;
+            width: 32px;
+            height: 100%;
+            top: 0;
+            left: 100%;
+            background-color: #f3f4f6;
+        }
+        
+        .bg-gray-100-overflow-8::before {
+            content: '';
+            position: absolute;
+            width: 32px;
+            height: 100%;
+            top: 0;
+            right: 100%;
+            background-color: #f3f4f6;
+        }
+
+        @media (max-width: 640px) {
+            .bg-gray-100-overflow-8::after {
+                width: 20px;
+            }
+            
+            .bg-gray-100-overflow-8::before {
+                width: 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -56,21 +93,25 @@
                     <div class="flex-grow space-y-3">
                         <div class="flex items-center gap-2">
                             <span class="inline-block text-base font-semibold">배송지명</span>
-                            <span class="inline-block text-xs font-medium px-2.5 py-1 text-blue-500 border-blue-500 border rounded-full">기본 배송지</span>
+                            <span
+                                class="inline-block text-xs font-medium px-2.5 py-1 text-blue-500 border-blue-500 border rounded-full">기본
+                                배송지</span>
                         </div>
                         <div class="text-15-l-22 font-normal text-gray-700">홍길동 000-0000-0000</div>
                         <div class="text-15-l-22 font-normal text-gray-500 text-sm">
                             [02763] 서울특별시 00구 00로 100 (00동 000) 000동 000호
                         </div>
                     </div>
-                    
+
                     <div class="flex flex-row sm:flex-col items-center justify-center gap-2">
-                        <button class="hover:text-gray-800 whitespace-nowrap flex items-center gap-x-0.5 py-1.5 pl-2 pr-4 border rounded ">
+                        <button
+                            class="hover:text-gray-800 whitespace-nowrap flex items-center gap-x-0.5 py-1.5 pl-2 pr-4 border rounded ">
                             <img src="../assets/images/icon/cart/pen-edit.svg" alt="">
                             <span class="inline-block text-13-l-18 font-semibold">수정</span>
                         </button>
-                        <button class="hover:text-gray-800 whitespace-nowrap flex items-center gap-x-0.5 py-1.5 pl-2 pr-4 border rounded ">
-                            <img src="../assets/images/icon/cart/trash-del.svg" alt=""> 
+                        <button
+                            class="hover:text-gray-800 whitespace-nowrap flex items-center gap-x-0.5 py-1.5 pl-2 pr-4 border rounded ">
+                            <img src="../assets/images/icon/cart/trash-del.svg" alt="">
                             <span class="inline-block text-13-l-18 font-semibold">삭제</span>
                         </button>
                     </div>
@@ -83,21 +124,23 @@
 
                     <div class="flex-grow space-y-3">
                         <div class="flex items-center gap-2">
-                            <span class="inline-block text-base font-semibold">배송지명</span>                            
+                            <span class="inline-block text-base font-semibold">배송지명</span>
                         </div>
                         <div class="text-15-l-22 font-normal text-gray-700">홍길동 000-0000-0000</div>
                         <div class="text-15-l-22 font-normal text-gray-500 text-sm">
                             [02763] 서울특별시 00구 00로 100 (00동 000) 000동 000호
                         </div>
                     </div>
-                    
+
                     <div class="flex flex-row sm:flex-col items-center justify-center gap-2">
-                        <button class="hover:text-gray-800 whitespace-nowrap flex items-center gap-x-0.5 py-1.5 pl-2 pr-4 border rounded ">
+                        <button
+                            class="hover:text-gray-800 whitespace-nowrap flex items-center gap-x-0.5 py-1.5 pl-2 pr-4 border rounded ">
                             <img src="../assets/images/icon/cart/pen-edit.svg" alt="">
                             <span class="inline-block text-13-l-18 font-semibold">수정</span>
                         </button>
-                        <button class="hover:text-gray-800 whitespace-nowrap flex items-center gap-x-0.5 py-1.5 pl-2 pr-4 border rounded ">
-                            <img src="../assets/images/icon/cart/trash-del.svg" alt=""> 
+                        <button
+                            class="hover:text-gray-800 whitespace-nowrap flex items-center gap-x-0.5 py-1.5 pl-2 pr-4 border rounded ">
+                            <img src="../assets/images/icon/cart/trash-del.svg" alt="">
                             <span class="inline-block text-13-l-18 font-semibold">삭제</span>
                         </button>
                     </div>
@@ -114,7 +157,7 @@
         </div>
     </div>
     <!--modal/주소록 (2) -->
-    <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+    <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
         <!-- Modal Content -->
         <div class="bg-white sm:rounded-lg p-5 sm:p-8" style="width: 560px;">
             <!-- Modal Header -->
@@ -123,7 +166,7 @@
                 <button class="cursor-pointer">
                     <img class="w-6 h-6" src="../assets/images/icon/common/x.svg" alt="icon">
                 </button>
-            </div>            
+            </div>
 
             <!-- Address List -->
             <div class="space-y-5 sm:space-y-6 mb-2.5 sm:mb-6">
@@ -140,12 +183,12 @@
                 <div class="flex-1 py-2 px-4 rounded border flex items-center gap-3">
                     <input placeholder="기존 입력된 주소" type="text" class="w-full inline-block text-15-l-22">
                     <img src="../assets/images/icon/header/home-search.svg" alt="">
-                </div> 
-                
+                </div>
+
                 <div class="flex-1 py-2 px-4 rounded border flex items-center gap-3">
-                    <input placeholder="기존 입력된 주소" type="text" class="w-full inline-block text-15-l-22">                    
-                </div> 
-              
+                    <input placeholder="기존 입력된 주소" type="text" class="w-full inline-block text-15-l-22">
+                </div>
+
             </div>
 
             <!-- Select Button -->
@@ -159,29 +202,29 @@
     </div>
 
     <!--배송지 추가 (1) -->
-    <div id="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+    <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
         <!-- Modal Content -->
-        <div class="bg-white sm:rounded-lg p-5 sm:p-8" style="width: 560px;">
+        <div class="bg-white sm:rounded-lg p-5 sm:p-8 overflow-y-auto h-full custom-scroll" style="width: 560px;">
             <!-- Modal Header -->
             <div class="flex items-center justify-between mb-6">
                 <h3 class="text-2028-2230 font-semibold">배송지 변경</h3>
                 <button class="cursor-pointer">
                     <img class="w-6 h-6" src="../assets/images/icon/common/x.svg" alt="icon">
                 </button>
-            </div>            
+            </div>
 
             <!-- Address List -->
             <div class="space-y-5 sm:space-y-6 mb-2.5 sm:mb-6">
                 <!-- Address Item 1 -->
                 <div class="space-y-4">
                     <div class="flex items-center gap-6">
-                        <span class="inline-block text-sm font-medium whitespace-nowrap w-20">배송지명                        
+                        <span class="inline-block text-sm font-medium whitespace-nowrap w-20">배송지명
                         </span>
                         <div class="flex-1 py-2 px-4 rounded border">
                             <input placeholder="입력값" type="text" class="w-full inline-block text-15-l-22">
                         </div>
                     </div>
-    
+
                     <div class="flex items-center gap-6">
                         <span class="inline-block text-sm font-medium whitespace-nowrap w-20">
                             배송지명
@@ -191,7 +234,7 @@
                             <input placeholder="입력값" type="text" class="w-full inline-block text-15-l-22">
                         </div>
                     </div>
-    
+
                     <div class="flex items-center gap-6">
                         <span class="inline-block text-sm font-medium whitespace-nowrap w-20">
                             배송지명
@@ -209,7 +252,11 @@
                     <input placeholder="기존 입력된 주소" type="text" class="w-full inline-block text-15-l-22">
                     <img src="../assets/images/icon/header/home-search.svg" alt="">
                 </div>
-                
+
+                <div class="flex-1 py-2 px-4 rounded border flex items-center gap-3">
+                    <input placeholder="상세주소 입력" type="text" class="w-full inline-block text-15-l-22">
+                </div>
+
                 <div class="rounded-lg bg-gray-100 p-3">
                     <p class="text-sm font-semibold mb-3">도로명, 건물명, 또는 지번 중 편한 방법으로 검색하세요.</p>
 
@@ -217,16 +264,157 @@
                         <li class="text-13-l-18 font-normal">도로명 + 건물번호(예: 세종로 119)</li>
                         <li class="text-13-l-18 font-normal">지역명(동/리) + 번지(예: 종로1)</li>
                         <li class="text-13-l-18 font-normal">지역명(동/리) + 건물명(아파트명)</li>
-                    </ul>                   
+                    </ul>
                 </div>
 
                 <div class="p-5 sm:p-0">
                     <div class="sm:py-3 sm:border-b mb-3">
-                        <h2 class="text-1624-1826 font-semibold">주문 합계</h2>                    
+                        <h2 class="text-1624-1826 font-semibold">주문 합계</h2>
                     </div>
-    
+
                     <div class="">
-                        table...
+                        <div class="flex flex-col gap-y-2 sm:gap-y-1 mb-3">
+
+                            <!-- Mẫu địa chỉ 1 -->
+                            <div class="flex items-center flex-wrap gap-3 sm:p-3">
+                                <!-- Radio button -->
+                                <input type="radio" name="address" class="h-5 w-5 text-blue-600 focus:ring-blue-500">
+
+                                <!-- Nội dung địa chỉ -->
+                                <div class="space-y-2">
+                                    <div class="flex items-center gap-2 flex-wrap">
+                                        <span
+                                            class="inline-block text-xs font-medium px-2.5 py-1 bg-blue-100 text-blue-700 rounded-full">도로명</span>
+                                        <span class="inline-block text-sm font-normal">서울 특별시 00구 00로 00길00 (00동,
+                                            건물명)</span>
+                                    </div>
+
+                                    <div class="flex items-center gap-2 flex-wrap">
+                                        <span
+                                            class="inline-block text-xs font-medium px-4 py-1 bg-gray-100 text-gray-700 rounded-full">지번</span>
+                                        <span class="inline-block text-sm font-normal text-gray-400">서울 특별시 00구 00로
+                                            00길00 (00동, 건물명)</span>
+                                    </div>
+                                </div>
+
+                                <!-- Đoạn số bên phải -->
+                                <span class="w-24 inline-block text-sm font-medium sm:text-right">000000</span>
+                            </div>
+
+                            <!-- Mẫu địa chỉ 2 -->
+                            <div class="flex items-center flex-wrap gap-3 sm:p-3">
+                                <!-- Radio button -->
+                                <input type="radio" name="address" class="h-5 w-5 text-blue-600 focus:ring-blue-500">
+
+                                <!-- Nội dung địa chỉ -->
+                                <div class="space-y-2">
+                                    <div class="flex items-center gap-2 flex-wrap">
+                                        <span
+                                            class="inline-block text-xs font-medium px-2.5 py-1 bg-blue-100 text-blue-700 rounded-full">도로명</span>
+                                        <span class="inline-block text-sm font-normal">서울 특별시 00구 00로 00길00 (00동,
+                                            건물명)</span>
+                                    </div>
+
+                                    <div class="flex items-center gap-2 flex-wrap">
+                                        <span
+                                            class="inline-block text-xs font-medium px-4 py-1 bg-gray-100 text-gray-700 rounded-full">지번</span>
+                                        <span class="inline-block text-sm font-normal text-gray-400">서울 특별시 00구 00로
+                                            00길00 (00동, 건물명)</span>
+                                    </div>
+                                </div>
+
+                                <!-- Đoạn số bên phải -->
+                                <span class="w-24 inline-block text-sm font-medium sm:text-right">000000</span>
+                            </div>
+
+                            <!-- Mẫu địa chỉ 3 -->
+                            <div class="flex items-center flex-wrap gap-3 sm:p-3">
+                                <!-- Radio button -->
+                                <input type="radio" name="address" class="h-5 w-5 text-blue-600 focus:ring-blue-500">
+
+                                <!-- Nội dung địa chỉ -->
+                                <div class="space-y-2">
+                                    <div class="flex items-center gap-2 flex-wrap">
+                                        <span
+                                            class="inline-block text-xs font-medium px-2.5 py-1 bg-blue-100 text-blue-700 rounded-full">도로명</span>
+                                        <span class="inline-block text-sm font-normal">서울 특별시 00구 00로 00길00 (00동,
+                                            건물명)</span>
+                                    </div>
+
+                                    <div class="flex items-center gap-2 flex-wrap">
+                                        <span
+                                            class="inline-block text-xs font-medium px-4 py-1 bg-gray-100 text-gray-700 rounded-full">지번</span>
+                                        <span class="inline-block text-sm font-normal text-gray-400">서울 특별시 00구 00로
+                                            00길00 (00동, 건물명)</span>
+                                    </div>
+                                </div>
+
+                                <!-- Đoạn số bên phải -->
+                                <span class="w-24 inline-block text-sm font-medium sm:text-right">000000</span>
+                            </div>
+
+                            <!-- Mẫu địa chỉ 4 -->
+                            <div class="flex items-center flex-wrap gap-3 sm:p-3">
+                                <!-- Radio button -->
+                                <input type="radio" name="address" class="h-5 w-5 text-blue-600 focus:ring-blue-500">
+
+                                <!-- Nội dung địa chỉ -->
+                                <div class="space-y-2">
+                                    <div class="flex items-center gap-2 flex-wrap">
+                                        <span
+                                            class="inline-block text-xs font-medium px-2.5 py-1 bg-blue-100 text-blue-700 rounded-full">도로명</span>
+                                        <span class="inline-block text-sm font-normal">서울 특별시 00구 00로 00길00 (00동,
+                                            건물명)</span>
+                                    </div>
+
+                                    <div class="flex items-center gap-2 flex-wrap">
+                                        <span
+                                            class="inline-block text-xs font-medium px-4 py-1 bg-gray-100 text-gray-700 rounded-full">지번</span>
+                                        <span class="inline-block text-sm font-normal text-gray-400">서울 특별시 00구 00로
+                                            00길00 (00동, 건물명)</span>
+                                    </div>
+                                </div>
+
+                                <!-- Đoạn số bên phải -->
+                                <span class="w-24 inline-block text-sm font-medium sm:text-right">000000</span>
+                            </div>
+
+
+                        </div>
+
+                        <div class="flex items-center justify-center">
+                            <div class="flex items-center">
+                                <button class="p-1 sm:p-2">
+                                    <img class="w-6 h-6" src="../assets/images/icon/common/prev-to-first.svg"
+                                        alt="icon">
+                                </button>
+                                <button class="p-1 sm:p-2">
+                                    <img class="w-6 h-6" src="../assets/images/icon/common/prev.svg" alt="icon">
+                                </button>
+
+                                <div class="flex items-center">
+                                    <button class="p-1 sm:p-2">
+                                        <span
+                                            class="w-6 h-6 rounded-full bg-black text-white text-13-l-18 font-medium flex items-center justify-center">1</span>
+                                    </button>
+                                    <button class="p-1 sm:p-2">
+                                        <span
+                                            class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">2</span>
+                                    </button>
+                                    <button class="p-1 sm:p-2">
+                                        <span
+                                            class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">3</span>
+                                    </button>
+                                </div>
+
+                                <button class="p-1 sm:p-2">
+                                    <img class="w-6 h-6" src="../assets/images/icon/common/next.svg" alt="icon">
+                                </button>
+                                <button class="p-1 sm:p-2">
+                                    <img class="w-6 h-6" src="../assets/images/icon/common/next-to-end.svg" alt="icon">
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -241,6 +429,271 @@
         </div>
     </div>
 
+    <!-- 도서소득 공제 결제 안내 -->
+    <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+        <!-- Modal Content -->
+        <div class="bg-white sm:rounded-lg p-5 sm:p-8 custom-scroll" style="width: 364px;">
+            <!-- Modal Header -->
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-18-l-26 font-semibold text-center w-full">도서소득 공제 결제 안내</h3>
+            </div>
+
+            <!-- Address List -->
+            <div class="space-y-3">
+                <p class="text-15-l-22 font-normal text-center text-gray-400">
+                    소득공제가 되는 상품과 되지 않는 상품을 같이
+                    구매하셔서 결제가 2번 발생합니다.
+                </p>
+
+                <p class="text-base font-normal text-gray-300">
+                    결제 후 해당 상품은 배송지로 묶음배송됩니다.
+                </p>
+
+                <div class="py-1.5 flex justify-center bg-gray-200">
+                    <span class="inline-block text-13-l-18 font-semibold">도서소득공제 안내</span>
+                </div>
+            </div>
+
+            <!-- Select Button -->
+            <div class="mt-6 sm:mt-6 pb-1 sm:pb-0 pt-6 sm:pt-0">
+                <button
+                    class="w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    선택하기
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 사용가능 쿠폰 -->
+    <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+        <!-- Modal Content -->
+        <div class="bg-white sm:rounded-lg p-5 sm:p-8 h-full overflow-y-auto custom-scroll" style="width: 560px;">
+            <!-- Modal Header -->
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-2028-2230 font-semibold">사용가능 쿠폰</h3>
+                <button class="cursor-pointer">
+                    <img class="w-6 h-6" src="../assets/images/icon/common/x.svg" alt="icon">
+                </button>
+            </div>
+
+            <!-- Address List -->
+            <div class="space-y-5 sm:space-y-6">
+                <div class="sm:px-9">
+                    <!-- item 1 -->
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-x-6 gap-y-3">
+                        <!-- Radio button -->
+                        <input type="radio" name="coupon" class="h-5 w-5 text-blue-600 focus:ring-blue-500">
+
+                        <!-- Coupon Card -->
+                        <div class="w-full rounded-xl border overflow-hidden">
+                            <div class="flex justify-between items-start py-6 pr-6 sm:pr-4 pl-6 flex-wrap">
+                                <!-- Coupon Details -->
+                                <div>
+                                    <p class="text-1318-1420 font-medium mb-1">쿠폰명</p>
+                                    <p class="text-2028-2230 font-semibold mb-3">10% 할인</p>
+                                    <p class="text-xs font-normal text-gray-400">최소 금액 10,000원 사용시 이용가능</p>
+                                </div>
+
+                                <!-- Tag Label -->
+                                <div class="flex flex-col gap-y-3">
+                                    <span
+                                        class="px-2.5 py-1 text-xs font-medium bg-blue-100 text-blue-600 rounded-full">도서전용</span>
+
+                                    <div class="w-16 h-16 rounded-full bg-gray-200"></div>
+                                </div>
+                            </div>
+
+                            <!-- Date Range -->
+                            <div class="border-t border-dashed mt-4 py-3 px-6">
+                                <p class="text-1318-1420 font-normal text-gray-400">2024.09.09 ~ 2024.09.09</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sm:px-9">
+                    <!-- item 1 -->
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-x-6 gap-y-3">
+                        <!-- Radio button -->
+                        <input type="radio" name="coupon" class="h-5 w-5 text-blue-600 focus:ring-blue-500">
+
+                        <!-- Coupon Card -->
+                        <div class="w-full rounded-xl border overflow-hidden">
+                            <div class="flex justify-between items-start py-6 pr-6 sm:pr-4 pl-6 flex-wrap">
+                                <!-- Coupon Details -->
+                                <div>
+                                    <p class="text-1318-1420 font-medium mb-1">쿠폰명</p>
+                                    <p class="text-2028-2230 font-semibold mb-3">10% 할인</p>
+                                    <p class="text-xs font-normal text-gray-400">최소 금액 10,000원 사용시 이용가능</p>
+                                </div>
+
+                                <!-- Tag Label -->
+                                <div class="flex flex-col gap-y-3">
+                                    <span
+                                        class="px-2.5 py-1 text-xs font-medium bg-purple-100 text-purple-600 rounded-full">도서전용</span>
+
+                                    <div class="w-16 h-16 rounded-full bg-gray-200"></div>
+                                </div>
+                            </div>
+
+                            <!-- Date Range -->
+                            <div class="border-t border-dashed mt-4 py-3 px-6">
+                                <p class="text-1318-1420 font-normal text-gray-400">2024.09.09 ~ 2024.09.09</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sm:px-9">
+                    <!-- item 1 -->
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-x-6 gap-y-3">
+                        <!-- Radio button -->
+                        <input type="radio" name="coupon" class="h-5 w-5 text-blue-600 focus:ring-blue-500">
+
+                        <!-- Coupon Card -->
+                        <div class="w-full rounded-xl border overflow-hidden">
+                            <div class="flex justify-between items-start py-6 pr-6 sm:pr-4 pl-6 flex-wrap">
+                                <!-- Coupon Details -->
+                                <div>
+                                    <p class="text-1318-1420 font-medium mb-1">쿠폰명</p>
+                                    <p class="text-2028-2230 font-semibold mb-3">10% 할인</p>
+                                    <p class="text-xs font-normal text-gray-400">최소 금액 10,000원 사용시 이용가능</p>
+                                </div>
+
+                                <!-- Tag Label -->
+                                <div class="flex flex-col gap-y-3">
+                                    <span
+                                        class="px-2.5 py-1 text-xs font-medium bg-red-100 text-red-600 rounded-full">도서전용</span>
+
+                                    <div class="w-16 h-16 rounded-full bg-gray-200"></div>
+                                </div>
+                            </div>
+
+                            <!-- Date Range -->
+                            <div class="border-t border-dashed mt-4 py-3 px-6">
+                                <p class="text-1318-1420 font-normal text-gray-400">2024.09.09 ~ 2024.09.09</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Select Button -->
+            <div class="mt-20 sm:mt-6 pb-1 sm:pb-0 pt-6 sm:pt-0">
+                <button
+                    class="w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    선택하기
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 상품권 등록 -->
+    <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+        <!-- Modal Content -->
+        <div class="bg-white sm:rounded-lg p-5 sm:p-8 h-full overflow-y-auto custom-scroll" style="width: 560px;">
+            <!-- Modal Header -->
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-2028-2230 font-semibold">상품권 등록</h3>
+                <button class="cursor-pointer">
+                    <img class="w-6 h-6" src="../assets/images/icon/common/x.svg" alt="icon">
+                </button>
+            </div>
+
+            <div class="flex flex-col items-center justify-center gap-y-6 pb-3">
+                <div class="rounded-xl shadow-md pt-3.5 pl-3.5 pr-4 pb-5 border" style="width: 244px; height: 146px;">
+                    <div>
+                        <img style="width: 38px; height: 38px;" src="../assets/images/logo/Logo.svg" alt="icon">
+                    </div>
+                    <div class="flex justify-end w-full">
+                        <div class="py-1 px-2.5 border-2 border-blue-600">
+                            <span class="text-base font-semibold">1234 1234 1234</span>
+                        </div>
+                    </div>
+                    <div class="mt-8 flex justify-end">
+                        <img src="../assets/images/image/common/barcode.png" alt="bode">
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <p class="text-15-l-22 font-normal text-gray-600">상품권 뒷면 하단의 스크래치를 동전으로 긁으신 후 12자리 번호를 입력하시고 하단에
+                        [결제하기] 버튼을 클릭하시면 됩니다.</p>
+                    <p class="text-15-l-22 font-normal text-gray-600">상품권 번호는 영문 대/소 문자를 구분하여 입력해 주시기 바랍니다.</p>
+                </div>
+            </div>
+            
+            <div class="bg-gray-100 bg-gray-100-overflow-8">
+                <div class="py-3">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-3">
+                        <div class="flex items-center">
+                            <span class="inline-block h-5 w-5 text-sm">1.</span>
+                            <input type="text" class="ml-2 border rounded w-full p-2">
+                        </div>
+                        <div class="flex items-center">
+                            <span class="inline-block h-5 w-5 text-sm">2.</span>
+                            <input type="text" class="ml-2 border rounded w-full p-2">
+                        </div>
+                        <div class="flex items-center">
+                            <span class="inline-block h-5 w-5 text-sm">3.</span>
+                            <input type="text" class="ml-2 border rounded w-full p-2">
+                        </div>
+                        <div class="flex items-center">
+                            <span class="inline-block h-5 w-5 text-sm">4.</span>
+                            <input type="text" class="ml-2 border rounded w-full p-2">
+                        </div>
+                        <div class="flex items-center">
+                            <span class="inline-block h-5 w-5 text-sm">5.</span>
+                            <input type="text" class="ml-2 border rounded w-full p-2">
+                        </div>
+                        <div class="flex items-center">
+                            <span class="inline-block h-5 w-5 text-sm">6.</span>
+                            <input type="text" class="ml-2 border rounded w-full p-2">
+                        </div>
+                        <div class="flex items-center">
+                            <span class="inline-block h-5 w-5 text-sm">7.</span>
+                            <input type="text" class="ml-2 border rounded w-full p-2">
+                        </div>
+                        <div class="flex items-center">
+                            <span class="inline-block h-5 w-5 text-sm">8.</span>
+                            <input type="text" class="ml-2 border rounded w-full p-2">
+                        </div>
+                        <div class="flex items-center">
+                            <span class="inline-block h-5 w-5 text-sm">9.</span>
+                            <input type="text" class="ml-2 border rounded w-full p-2">
+                        </div>
+                        <div class="flex items-center">
+                            <span class="inline-block h-5 w-5 text-sm">10.</span>
+                            <input type="text" class="ml-2 border rounded w-full p-2">
+                        </div>
+                        <div class="flex items-center">
+                            <span class="inline-block h-5 w-5 text-sm">11.</span>
+                            <input type="text" class="ml-2 border rounded w-full p-2">
+                        </div>
+                        <div class="flex items-center">
+                            <span class="inline-block h-5 w-5 text-sm">12.</span>
+                            <input type="text" class="ml-2 border rounded w-full p-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Select Button -->
+            <div class="mt-20 sm:mt-6 pb-1 sm:pb-0 pt-6 sm:pt-0 space-y-6">
+                <p class="text-14-l-20 font-normal text-gray-400">
+                    - 상품권의 스크래치를 벗긴 이후 바오로딸 전국 서원에서는 사용하실 수 없습니다. <br>
+                    - 상품권 결제 후 잔액 발생 시 예치금으로 충전하여 드립니다. <br>
+                    - 결제 후 주문 취소 시 상품권은 예치금으로 전환하여 드립니다.
+                </p>
+                <button
+                    class="w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    선택하기
+                </button>
+            </div>
+        </div>
+        
+    </div>
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
     <script>
         function toggleModal() {
