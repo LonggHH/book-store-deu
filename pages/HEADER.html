@@ -12,10 +12,10 @@
     <!-- Link Tailwind -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="../assets/css/util/util.css">
+    <link rel="stylesheet" href="../assets/css/util.css">
 </head>
 <body>
-    
+    <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
     <header>
         <section class="hidden sm:block h-16 overflow-hidden pt-2" style="background: linear-gradient(to right, #2e3d4e, #241d36);">
             <div class="container-layout h-16 flex items-center justify-center">
@@ -343,15 +343,125 @@
             </div>    
         </section>
     </header>
-    
+    <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
 
 
+    <!-- breadcrumb -->
+    <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
+    <section class="sm:mt-6 sm:mb-8">
+        <div class="container-layout mobi-px py-2 sm:py-0 bg-gray-100 sm:bg-white">
+            <div class="flex items-center gap-2 sm:py-1">
+                <div>
+                    <img src="../assets/images/icon/category/breadcrumb-home.svg" alt="icon">
+                </div>
+                <div>
+                    <span>/</span>
+                </div>
+                <div class="flex items-center gap-1 relative cursor-pointer breadcrumb-main-category-menu">
+                    <span>도서</span>
+                    <img class="icon-down" src="../assets/images/icon/category/breadcrumb-down.svg" alt="icon">
+                    <img class="icon-up hidden" src="../assets/images/icon/category/breadcrumb-up.svg" alt="icon">
+                    <div class="absolute z-10 top-7 left-0 hidden breadcrumb-sub-menu">
+                        <ul class="py-1 border rounded-lg bg-white">
+                            <li class="py-1 px-2.5 w-full">
+                                <a href="#" class="text-13-18 font-normal text-black whitespace-nowrap">도서</a>
+                            </li>
+                            <li class="py-1 px-2.5 w-full">
+                                <a href="#" class="text-13-18 font-normal text-gray-400 whitespace-nowrap">성물</a>
+                            </li>
+                            <li class="py-1 px-2.5 w-full">
+                                <a href="#" class="text-13-18 font-normal text-gray-400 whitespace-nowrap">굿즈</a>
+                            </li>
+                            <li class="py-1 px-2.5 w-full">
+                                <a href="#" class="text-13-18 font-normal text-gray-400 whitespace-nowrap">바오로딸 Pick</a>
+                            </li>
+                            <li class="py-1 px-2.5 w-full">
+                                <a href="#" class="text-13-18 font-normal text-gray-400 whitespace-nowrap">ebook</a>
+                            </li>
+                            <li class="py-1 px-2.5 w-full">
+                                <a href="#" class="text-13-18 font-normal text-gray-400 whitespace-nowrap">음반/뮤직/DVD</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>            
+                <div>
+                    <span>/</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <span>전체</span>
+                    <img src="../assets/images/icon/category/breadcrumb-down.svg" alt="icon">
+                </div>               
+            </div>
+        </div>
+    </section>
+    <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <!-- main category -->
 
 
-    <section class="h-36"></section>
+    <section class="">
+        <div class="container-layout">
+            <div class="flex items-start relative justify-between flex-wrap gap-side-menu-main-content">
+
+                <div class="bg-blue-200 hidden md:block h-56 category-side-menu">
+                    side menu ...
+                </div>
+
+                <div class="flex-1 h-96 bg-red-200">
+                    main content ...
+                </div>
+
+                <aside class="hidden xl:block absolute top-0 aside-event">
+                    <div class="space-y-4">
+                        <div class="rounded-md border p-2.5 flex flex-col items-center gap-y-2">
+                            <h4 class="text-xs font-medium">이벤트</h4>
+                            
+                            <hr class="w-full">
+
+                            <h4 class="text-xs font-medium">출석체크</h4>
+                        </div>
+
+                        <div class="w-full">
+
+                            <div class="py-2 text-center"
+                                style="background-color: rgba(40, 42, 63, 1); border-top-left-radius: 12px; border-top-right-radius: 12px;">
+                                <span class="inline-block text-13-l-18 font-medium text-white">최근 본 상품</span>
+                            </div>
+                            
+                            <div class="space-y-1">
+                                <div class="px-3 pt-3 overflow-hidden bg-gray-100"
+                                    style="height: 90px; border-bottom-left-radius: 6px; border-bottom-right-radius: 6px;">
+                                    <div class="w-full overflow-hidden">
+                                        <div class="w-full h-full bg-blue-200 scope-imgage-small">
+                                            <img class="w-full h-full" src="../assets/images/image/books/book4.png" alt="img">
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="px-3 pt-3 overflow-hidden rounded-md bg-gray-100" style="height: 90px;">
+                                    <div class="w-full overflow-hidden">
+                                        <div class="w-full h-full bg-blue-200 scope-imgage-small">
+                                            <img class="w-full h-full" src="../assets/images/image/books/book11.png" alt="img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+
+                        <div class="flex justify-center">
+                            <div class="w-14 h-14 rounded-full bg-white shadow-md flex flex-col items-center justify-center">
+                                <img src="../assets/images/icon/common/up.svg" alt="">
+                                <span class="inline-block text-xs font-medium">TOP</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
 
 
-
+    <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
     <div class="fixed bottom-24 right-6 block sm:hidden z-50">
         <div class="flex flex-col justify-center items-center gap-1 shadow-lg rounded-full bg-white" style="width: 56px; height: 56px;">
             <img src="../assets/images/icon/common/up.svg" alt="">
@@ -575,8 +685,6 @@
             </div>
         </div>
     </footer>
-    
-
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
 
     <script src="../assets/js/util.js"></script>

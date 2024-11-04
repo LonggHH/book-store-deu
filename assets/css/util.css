@@ -207,7 +207,15 @@ ol li {
     font-size: 13px; line-height: 18px; font-weight: 400; color: rgba(55, 56, 60, 0.6);
 }
 
-.scope-imgage {
+.scope-imgage-small {
+    border-top-left-radius: 2px; 
+    border-top-right-radius: 6px; 
+    border-bottom-left-radius: 2px; 
+    border-bottom-right-radius: 6px;
+    overflow: hidden;    
+}
+
+.scope-imgage-big {
     border-top-left-radius: 4px; 
     border-top-right-radius: 8px; 
     border-bottom-left-radius: 4px; 
@@ -275,6 +283,46 @@ input[type="number"] {
     -moz-appearance: none; /* Firefox */
     /* background: transparent; */
 }
+
+.h-1-px {
+    height: 1px;
+}
+
+/* ------------- breadcrumb ---------------------------- */
+.breadcrumb-main-category-menu:hover .breadcrumb-sub-menu {
+    display: block;
+}
+.breadcrumb-main-category-menu:hover .icon-down {
+    display: none;
+}
+.breadcrumb-main-category-menu:hover .icon-up {
+    display: block;
+}
+
+.breadcrumb-sub-menu::after {
+    content: '';
+    width: 100px;
+    height: 30px;    
+    position: absolute;
+    top: -20px;
+    left: 0;
+}
+/* ------------- breadcrumb ---------------------------- */
+
+/* ------------- category event ---------------------------- */
+.aside-event {
+    width: 100px;
+    left: calc(100% + 32px);
+}
+
+.category-side-menu {
+    width: 120px;
+}
+
+.gap-side-menu-main-content {
+    gap: 60px;
+}
+/* ------------- category event ---------------------------- */
 
 @media (max-width:768px) {
     .mobi-px {
