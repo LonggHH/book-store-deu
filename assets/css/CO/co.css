@@ -13,6 +13,11 @@
     line-height: 30px; 
 }
 
+.text-1624-1826 {
+    font-size: 18px;
+    line-height: 26px; 
+}
+
 .text-1522-1826 {
     font-size: 18px;
     line-height: 26px;  
@@ -102,6 +107,11 @@
     .text-2028-2230 {
         font-size: 20px;
         line-height: 28px;  
+    }
+
+    .text-1624-1826 {
+        font-size: 16px;
+        line-height: 24px; 
     }
 
     .text-1624-2230 {
