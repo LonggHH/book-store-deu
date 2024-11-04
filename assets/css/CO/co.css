@@ -75,6 +75,11 @@
 .payment-detail-size {
     width: 340px;
 }
+
+.co-input-discount {
+    width: auto;
+}
+
 /* ------------------------------------------------------------- */
 @media (max-width: 940px) { 
     .note-frame-size {
@@ -161,5 +166,11 @@
 
     .modal-box-size {
         max-width: calc(100%);
+    }
+}
+
+@media (max-width: 375px) {
+    .co-input-discount {
+        width: 128px;
     }
 }
