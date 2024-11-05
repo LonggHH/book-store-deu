@@ -38,6 +38,11 @@
     line-height: 20px;
 }
 
+.text-1420-1624 {
+    font-size: 16px;
+    line-height: 24px;  
+}
+
 .text-1420-1724 {
     font-size: 17px;
     line-height: 24px;  
@@ -142,6 +147,11 @@
     .text-1318-1420 {
         font-size: 13px;
         line-height: 18px;
+    }
+
+    .text-1420-1624 {
+        font-size: 14px;
+        line-height: 20px;  
     }
 
     .text-1420-1724 {

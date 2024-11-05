@@ -1,0 +1,21 @@
+.frame-size-140190-164250 {
+    width: 164px;
+    height: 250px;
+}
+
+.frame-main-size {
+    max-width: 940px;  
+}
+
+@media (max-width: 1024px) {
+    .frame-main-size {        
+        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 640px) {
+    .frame-size-140190-164250 {
+        width: 140px;
+        height: 190px;
+    }    
+}
