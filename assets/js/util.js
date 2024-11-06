@@ -7,6 +7,10 @@ function formatMoney(number) {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
+function toggle(stringQuery) {
+    document.querySelector(stringQuery).classList.toggle('hidden')
+}
+
 function throttle(func, delay) {
     let lastCall = 0; // Biến để lưu thời gian của lần gọi gần nhất
     return function (...args) {

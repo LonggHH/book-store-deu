@@ -146,6 +146,11 @@ ol li {
     line-height: 48px;
 }
 
+.text-2028-2838 {
+    font-size: 28px;
+    line-height: 38px;
+}
+
 .w-30px {
     width: 30px;
 }
@@ -475,6 +480,19 @@ input[type="number"] {
     width: 940px;
 }
 
+.frame-width-196-196 {
+    width: 196px;
+}
+
+.frame-image-size-196196 {
+    width: 196px;
+    height: 196px;
+}
+
+.frame-video-size-320180-340190 {
+    width: 340px;
+    height: 190px;
+}
 /* ------------- category event ---------------------------- */
 
 .space-y-12-18 > *:not(:last-child) {
@@ -517,6 +535,12 @@ input[type="number"] {
 }
 
 @media (max-width: 640px) {
+
+    .text-2028-2838 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
     .space-y-12-18 > *:not(:last-child) {
         margin-bottom: 48px;
     }
@@ -590,6 +614,11 @@ input[type="number"] {
     .frame-image-size-102102-196196 {
         width: 102px;
         width: 102px;
+    }
+
+    .frame-video-size-320180-340190 {
+        width: 320px;
+        height: 190px;
     }
 }
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header</title>
+    <title>음반,뮤직,DVD - 카테고리 메인 / 음반,뮤직,DVD</title>
 
     <!-- Link Font -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
@@ -11,8 +11,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Link Tailwind -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Link Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="../assets/css/util.css">
+    <link rel="stylesheet" href="../assets/css/CO/co.css">
+    <link rel="stylesheet" href="../assets/css/CA/ca.css">
+
 </head>
 <body>
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
@@ -358,7 +365,7 @@
                     <span>/</span>
                 </div>
                 <div class="flex items-center gap-1 relative cursor-pointer breadcrumb-main-category-menu">
-                    <span>도서</span>
+                    <span>음반/뮤직/DVD</span>
                     <img class="icon-down" src="../assets/images/icon/category/breadcrumb-down.svg" alt="icon">
                     <img class="icon-up hidden" src="../assets/images/icon/category/breadcrumb-up.svg" alt="icon">
                     <div class="absolute z-10 top-7 left-0 hidden breadcrumb-sub-menu">
@@ -399,15 +406,15 @@
     <!-- main category -->
 
 
-    <section class="">
+    <section class="mt-6 sm:mt-0">
         <div class="container-layout">
-            <div class="flex items-start relative justify-between flex-wrap gap-side-menu-main-content">
+            <div class="flex items-start relative justify-between flex-wrap">
 
                 <nav class="hidden md:block category-side-menu">
                     <div class="space-y-3">                    
                         <div class="space-y-3">
                             <div class="space-y-3">
-                                <h3 class="text-28-l-38 font-bold">DVD</h3>
+                                <h3 class="text-28-l-38 font-bold">음반</h3>
                                 <ul class="border-t border-black">
                                     <li class="">
                                         <button class="w-full text-left text-sm leading-5 font-semibold cursor-pointer p-2">대분류</button>
@@ -437,7 +444,7 @@
                             </div>
 
                             <div class="space-y-3">
-                                <h3 class="text-28-l-38 font-bold">DVD</h3>
+                                <h3 class="text-28-l-38 font-bold">뮤직</h3>
                                 <ul class="">
                                     <li class="text-sm font-semibold cursor-pointer p-2">대분류</li>
                                     <li class="text-sm font-semibold cursor-pointer p-2">대분류</li>
@@ -470,11 +477,296 @@
                     </div>
                 </nav>
 
-                <!-- start main -->
-                <main class="flex-1 h-96 bg-red-200">
-                    main content ...
+                <!-- =================================== start main >>>>>>>>> =================================== -->
+
+                <main class="flex-1 space-y-12-18 frame-main-size">
+                    <!-- banner slide -->
+                    <div id="frame-banner" class="mobi-px">
+                        <div id="frame-boss" style="max-width: 940px; height: 340px;">
+                            <div class="container-custom-slide">
+                                <!-- slide -->
+                                <div class="slide">
+                                    <div class="item" style="background-image: url(https://i.ibb.co/qCkd9jS/img1.jpg);"></div>
+                                    <div class="item" style="background-image: url(https://i.ibb.co/jrRb11q/img2.jpg);"></div>
+                                    <div class="item" style="background-image: url(https://i.ibb.co/NSwVv8D/img3.jpg);"></div>
+
+                                    <div class="item"                                     
+                                        style=" background-color: rgb(67, 83, 135); background-image: linear-gradient(to right,rgba(40, 59, 118, 0.9), rgba(67, 83, 135, 0.4)), url('../assets/images/banner/banner-book-15-transparent.png');"
+                                    >
+                                        <div class="content w-full h-full">
+                                            <div class="w-full h-full flex items-stretch justify-center gap-4 md:gap-0 lg:gap-4">
+                                                <div class="flex items-center">
+                                                    <div class="flex flex-col items-end justify-between">
+                                                        <h4 class="text-36-l-48 text-right font-bold text-white mb-4 whitespace-nowrap">
+                                                            마리아의<br>
+                                                            신비를<br>
+                                                            풀다
+                                                        </h4>                                                        
+                                                        <div class="text-sm font-normal py-1 px-2 border rounded-sm border-white text-white">브랜트 피트리</div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="flex items-center">
+                                                    <div class="frame-size-140190-164250">
+                                                        <img class="hidden sm:block frame-size-140190-164250" src="../assets/images/image/books/book15.png" alt="img">
+                                                        <img class="block sm:hidden frame-size-140190-164250" src="../assets/images/image/books/book15-1.png" alt="img">
+                                                    </div>
+                                                </div>
+    
+                                                <div class="hidden sm:flex items-center md:ml-0 lg:ml-4">
+                                                    <div class="w-52 h-60 flex items-end">
+                                                        <p class="text-13-l-18 font-normal text-gray-50">
+                                                            성서학자인 저자가 성모 신심에 의구심을 품었던 자신의 체험을 바탕으로, 학술적인 내용인 마리아 교리에 대한 성경적 근거를 명확하게 밝히면서도 대중 강연처럼 설득력 있고 알기 쉽게 설명해주는 책이다. 
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+
+                                    <div class="item" style="background-image: url(https://i.ibb.co/jTQfmTq/img5.jpg);"></div>
+                                    <div class="item" style="background-image: url(https://i.ibb.co/RNkk6L0/img6.jpg);"></div>
+                                </div>                            
+
+                                <!-- text -->
+                                <div class="absolute bottom-3 right-3 z-10 px-2 rounded-full" style="background-color: rgba(0, 0, 0, 0.12);">                                                                       
+                                    <span class="h-4 inline-block text-xs font-medium text-white">01</span>
+                                    <span class="h-4 inline-block text-xs font-medium" style="color: rgba(255, 255, 255, 0.3);">/</span>
+                                    <span class="h-4 inline-block text-xs font-medium" style="color: rgba(255, 255, 255, 0.3);">10</span>                                                                     
+                                </div>
+
+                                <!-- button -->
+                                <div class="mobi-hidden absolute left-0 right-0 z-10 flex justify-end" style="top: calc(50% - 28px);">
+                                    <div class="flex justify-between items-center px-3" style="width: calc(100% - 2 * 40px - 2 * 10px);">
+                                        <button class="w-14 h-14 rounded-full prev" style="background-color: rgba(0, 0, 0, 0.12);">
+                                            <i class="text-white fa-solid fa-chevron-left"></i>
+                                        </button>
+                                        <button class="w-14 h-14 rounded-full next" style="background-color: rgba(0, 0, 0, 0.12);">
+                                            <i class="text-white fa-solid fa-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>                       
+                        </div>
+
+                        <!-- dots -->
+                        <div class="relative block sm:hidden mt-3">
+                            <ul class="w-full space-x-1 flex justify-center" style="color: #333;">
+                                <li class="w-5 h-2 rounded-2xl transition duration-500 bg-gray-800"></li>
+                                <li class="w-2 h-2 rounded-2xl transition duration-500 bg-gray-300"></li>
+                                <li class="w-2 h-2 rounded-2xl transition duration-500 bg-gray-300"></li>
+                                <li class="w-2 h-2 rounded-2xl transition duration-500 bg-gray-300"></li>
+                                <li class="w-2 h-2 rounded-2xl transition duration-500 bg-gray-300"></li>
+                            </ul>
+                        </div>
+                    </div>                   
+
+                    <div class="space-y-6">
+                        <!-- 추천 음반 -->
+                        <div id="frame-paul" class="px-5 py-8 sm:p-8 sm:rounded-xl" style="background-color: rgba(247, 247, 248, 1);">
+                            <div class="flex justify-between flex-wrap gap-y-2">
+                                <div class="flex flex-col gap-y-2.5 sm:gap-y-6 w-full sm:w-auto">
+                                    <div>
+                                        <div class="flex items-center gap-1 whitespace-nowrap">
+                                            <h3 class="text-2028-2230 font-semibold">추천 음반</h3>                                        
+                                        </div>
+                                    </div>    
+                                </div>
+
+                                <div class="flex gap-5 overflow-x-auto custom-scroll">
+
+                                    <div class="space-y-2 sm:space-y-3 frame-width-196-196">
+                                        <div class="rounded-lg frame-image-size-196196 overflow-hidden shadow-md border">
+                                            <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="book">
+                                        </div>
+
+                                        <div>
+                                            <h4 class="text-base font-semibold mb-1 truncate sm:mb-3">영원한 도움의 성모 매일기도</h4>
+                                            <div class="block sm:hidden text-13-l-18 font-normal text-gray-400 mb-3">성바오로딸</div>
+                                            <div class="flex items-center gap-1">
+                                                <span class="inline-block text-sm font-semibold text-red-500">10%</span>
+                                                <span class="inline-block text-sm font-semibold">12,600</span><span class="inline-block text-sm font-normal">원</span>
+                                                <span class="hidden sm:inline-block text-11-l-14 font-normal ml-1 pl-1 border-l text-gray-400">100P</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="space-y-2 sm:space-y-3 frame-width-196-196">
+                                        <div class="rounded-lg frame-image-size-196196 overflow-hidden shadow-md border">
+                                            <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="book">
+                                        </div>
+
+                                        <div>
+                                            <h4 class="text-base font-semibold mb-1 truncate sm:mb-3">영원한 도움의 성모 매일기도</h4>
+                                            <div class="block sm:hidden text-13-l-18 font-normal text-gray-400 mb-3">성바오로딸</div>
+                                            <div class="flex items-center gap-1">
+                                                <span class="inline-block text-sm font-semibold text-red-500">10%</span>
+                                                <span class="inline-block text-sm font-semibold">12,600</span><span class="inline-block text-sm font-normal">원</span>
+                                                <span class="hidden sm:inline-block text-11-l-14 font-normal ml-1 pl-1 border-l text-gray-400">100P</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="space-y-2 sm:space-y-3 frame-width-196-196">
+                                        <div class="rounded-lg frame-image-size-196196 overflow-hidden shadow-md border">
+                                            <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="book">
+                                        </div>
+
+                                        <div>
+                                            <h4 class="text-base font-semibold mb-1 truncate sm:mb-3">영원한 도움의 성모 매일기도</h4>
+                                            <div class="block sm:hidden text-13-l-18 font-normal text-gray-400 mb-3">성바오로딸</div>
+                                            <div class="flex items-center gap-1">
+                                                <span class="inline-block text-sm font-semibold text-red-500">10%</span>
+                                                <span class="inline-block text-sm font-semibold">12,600</span><span class="inline-block text-sm font-normal">원</span>
+                                                <span class="hidden sm:inline-block text-11-l-14 font-normal ml-1 pl-1 border-l text-gray-400">100P</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 추천 DVD -->
+                        <div id="frame-dvd" class="px-5 py-8 sm:p-8 sm:rounded-xl" style="background-color: rgba(247, 247, 248, 1);">
+                            <div class="flex justify-between flex-wrap gap-y-2">
+                                <div class="flex flex-col gap-y-2.5 sm:gap-y-6 w-full sm:w-auto">
+                                    <div>
+                                        <div class="flex items-center gap-1 whitespace-nowrap">
+                                            <h3 class="text-2028-2230 font-semibold">추천 DVD</h3>                                        
+                                        </div>
+                                    </div>    
+                                </div>
+
+                                <div class="flex gap-5 overflow-x-auto custom-scroll">
+
+                                    <div class="space-y-2 sm:space-y-3 frame-width-196-196">
+                                        <div class="rounded-lg frame-image-size-196196 overflow-hidden shadow-md border">
+                                            <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="book">
+                                        </div>
+
+                                        <div>
+                                            <h4 class="text-base font-semibold mb-1 truncate sm:mb-3">영원한 도움의 성모 매일기도</h4>
+                                            <div class="block sm:hidden text-13-l-18 font-normal text-gray-400 mb-3">성바오로딸</div>
+                                            <div class="flex items-center gap-1">
+                                                <span class="inline-block text-sm font-semibold text-red-500">10%</span>
+                                                <span class="inline-block text-sm font-semibold">12,600</span><span class="inline-block text-sm font-normal">원</span>
+                                                <span class="hidden sm:inline-block text-11-l-14 font-normal ml-1 pl-1 border-l text-gray-400">100P</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="space-y-2 sm:space-y-3 frame-width-196-196">
+                                        <div class="rounded-lg frame-image-size-196196 overflow-hidden shadow-md border">
+                                            <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="book">
+                                        </div>
+
+                                        <div>
+                                            <h4 class="text-base font-semibold mb-1 truncate sm:mb-3">영원한 도움의 성모 매일기도</h4>
+                                            <div class="block sm:hidden text-13-l-18 font-normal text-gray-400 mb-3">성바오로딸</div>
+                                            <div class="flex items-center gap-1">
+                                                <span class="inline-block text-sm font-semibold text-red-500">10%</span>
+                                                <span class="inline-block text-sm font-semibold">12,600</span><span class="inline-block text-sm font-normal">원</span>
+                                                <span class="hidden sm:inline-block text-11-l-14 font-normal ml-1 pl-1 border-l text-gray-400">100P</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="space-y-2 sm:space-y-3 frame-width-196-196">
+                                        <div class="rounded-lg frame-image-size-196196 overflow-hidden shadow-md border">
+                                            <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="book">
+                                        </div>
+
+                                        <div>
+                                            <h4 class="text-base font-semibold mb-1 truncate sm:mb-3">영원한 도움의 성모 매일기도</h4>
+                                            <div class="block sm:hidden text-13-l-18 font-normal text-gray-400 mb-3">성바오로딸</div>
+                                            <div class="flex items-center gap-1">
+                                                <span class="inline-block text-sm font-semibold text-red-500">10%</span>
+                                                <span class="inline-block text-sm font-semibold">12,600</span><span class="inline-block text-sm font-normal">원</span>
+                                                <span class="hidden sm:inline-block text-11-l-14 font-normal ml-1 pl-1 border-l text-gray-400">100P</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <div class="px-5 md:px-0 flex justify-between flex-wrap flex-col sm:flex-row w-full gap-5">
+                        
+                        <div class="flex-1">
+                            <h4 class="text-2028-2230 font-semibold mb-5 sm:mb-6">베스트 뮤직</h4>
+
+                            <div class="h-1-px bg-black mb-2"></div>
+
+                            <div id="list-best-music" class="pt-2 space-y-0.5">
+
+                                <!-- <div class="px-5 py-3 sm:py-0 flex gap-y-2 gap-x-5 mb-2 flex-wrap justify-between">
+                                    <div class="flex items-center gap-5">
+                                        <p class="text-sm font-normal text-left w-8 text-gray-400">01</p>
+                                        <p class="flex-1 text-sm font-medium truncate">나는 소중하니까요</p>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <button class="w-8 h-8 hover:border rounded-full hover:shadow-md overflow-hidden">
+                                            <img class="w-8 h-8" src="../assets/images/icon//category/dvd-g.svg" alt="icon">
+                                        </button>
+                                        <span class="inline-block text-xs text-gray-400">|</span>
+                                        <button class="w-8 h-8 hover:border rounded-full hover:shadow-md overflow-hidden">
+                                            <img class="w-8 h-8" src="../assets/images/icon//category/dvd-v.svg" alt="icon">
+                                        </button>
+                                        <span class="inline-block text-xs text-gray-400">|</span>
+                                        <button class="w-8 h-8 hover:border rounded-full hover:shadow-md overflow-hidden">
+                                            <img class="w-8 h-8" src="../assets/images/icon//category/dvd-b.svg" alt="icon">
+                                        </button>
+                                        <span class="inline-block text-xs text-gray-400">|</span>
+                                        <button class="w-8 h-8 hover:border rounded-full hover:shadow-md overflow-hidden">
+                                            <img class="w-8 h-8" src="../assets/images/icon//category/dvd-f.svg" alt="icon">
+                                        </button>
+                                        <span class="inline-block text-xs text-gray-400">|</span>
+                                        <button class="w-8 h-8 hover:border rounded-full hover:shadow-md overflow-hidden">
+                                            <img class="w-8 h-8" src="../assets/images/icon//category/dvd-o.svg" alt="icon">
+                                        </button>
+                                    </div>
+                                </div> -->
+
+                            </div>
+                            
+                        </div>
+
+                        <div>
+                            <h4 class="text-2028-2230 font-semibold mb-5 sm:mb-6">유튜브</h4>
+
+                            <div class="flex flex-col gap-5">
+                                <div class="dvd-frame-video">
+                                    <iframe width="100%" height="100%" 
+                                        src="https://www.youtube.com/embed/3rYL8AHJaTc?si=DyfiHHOoQmJDRv0M" 
+                                        title="Video1" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        referrerpolicy="strict-origin-when-cross-origin" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+
+                                <div class="">
+                                    <iframe width="100%" height="100%" 
+                                        src="https://www.youtube.com/embed/le0GI8FtB2o?si=3yyo2f5XoVfNw2P_" 
+                                        title="Video2" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        referrerpolicy="strict-origin-when-cross-origin" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </main>
-                <!-- start main -->
+
+                <!-- =================================== <<<<<<<<<<<< end main =================================== -->
 
 
                 <aside class="hidden xl:block absolute top-0 aside-event">
@@ -526,6 +818,7 @@
         </div>
     </section>
 
+    <aside style="height: 72px;"></aside>
 
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
     <div class="fixed bottom-24 right-6 block sm:hidden z-50">
@@ -754,6 +1047,55 @@
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../assets/js/util.js"></script>
-    <script src="../assets/js/common.js"></script>    
+    <script src="../assets/js/common.js"></script>
+    
+    <script>
+        let next = document.querySelector('#frame-boss .next')
+        let prev = document.querySelector('#frame-boss .prev')
+
+        next.addEventListener('click', throttle(() => handleNext('frame-boss'), 1000))
+        prev.addEventListener('click', throttle(() => handlePrev('frame-boss'), 1000))
+
+        function renderListBestMusic() {
+            let stringHTMl = ""
+            Array(10).fill(null).forEach((e, i) => {
+                let number = i + 1
+                if (number < 10) number = "0" + number
+                stringHTMl +=
+                `
+                    <div class="px-5 py-3 sm:py-0 flex gap-y-2 gap-x-5 mb-2 flex-wrap justify-between">
+                        <div class="flex items-center gap-5">
+                            <p class="text-sm font-normal text-left w-8 text-gray-400">${number}</p>
+                            <p class="flex-1 text-sm font-medium truncate">나는 소중하니까요</p>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <button class="w-8 h-8 hover:border rounded-full hover:shadow-md overflow-hidden">
+                                <img class="w-8 h-8" src="../assets/images/icon/category/dvd-g.svg" alt="icon">
+                            </button>
+                            <span class="inline-block text-xs text-gray-400">|</span>
+                            <button class="w-8 h-8 hover:border rounded-full hover:shadow-md overflow-hidden">
+                                <img class="w-8 h-8" src="../assets/images/icon/category/dvd-v.svg" alt="icon">
+                            </button>
+                            <span class="inline-block text-xs text-gray-400">|</span>
+                            <button class="w-8 h-8 hover:border rounded-full hover:shadow-md overflow-hidden">
+                                <img class="w-8 h-8" src="../assets/images/icon/category/dvd-b.svg" alt="icon">
+                            </button>
+                            <span class="inline-block text-xs text-gray-400">|</span>
+                            <button class="w-8 h-8 hover:border rounded-full hover:shadow-md overflow-hidden">
+                                <img class="w-8 h-8" src="../assets/images/icon/category/dvd-f.svg" alt="icon">
+                            </button>
+                            <span class="inline-block text-xs text-gray-400">|</span>
+                            <button class="w-8 h-8 hover:border rounded-full hover:shadow-md overflow-hidden">
+                                <img class="w-8 h-8" src="../assets/images/icon/category/dvd-o.svg" alt="icon">
+                            </button>
+                        </div>
+                    </div>
+                `
+            })                 
+            document.querySelector(`#list-best-music`).innerHTML = stringHTMl;
+        }
+        renderListBestMusic()
+    </script>
 </body>
 </html>
