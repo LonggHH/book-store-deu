@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>도서 - 카테고리 메인 / 도서 / 중분류</title>
+    <title>도서 - 카테고리 메인 / 도서 / Best</title>
 
     <!-- Link Font -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
@@ -363,7 +363,7 @@
                     <span class="text-13-18 font-normal text-gray-400 whitespace-nowrap">/</span>
                 </div>
                 <div class="flex items-center gap-1 relative cursor-pointer breadcrumb-main-category-menu">
-                    <span>도서</span>
+                    <span class="text-13-18 font-normal text-gray-400 whitespace-nowrap">도서</span>
                     <img class="icon-down" src="../assets/images/icon/category/breadcrumb-down.svg" alt="icon">
                     <img class="icon-up hidden" src="../assets/images/icon/category/breadcrumb-up.svg" alt="icon">
                     <div class="absolute z-10 top-7 left-0 hidden breadcrumb-sub-menu">
@@ -423,7 +423,7 @@
                                 <ul class="border-t border-black">
                                     <li class="">
                                         <button class="w-full text-left text-sm leading-5 font-semibold cursor-pointer p-2">대분류</button>
-                                        <ul class="p-2 border-b">
+                                        <ul class="p-2 border-b hidden">
                                             <li class="flex items-center justify-between py-1">
                                                 <span class="text-sm font-normal">중분류</span>
                                                 <img src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg" alt=">">
@@ -468,7 +468,7 @@
                     <div class="px-5 sm:px-0">
                         <div class="flex items-center justify-between pb-2 border-b border-black">
                             <div class="flex items-center gap-1">
-                                <h4 class="text-1724-1826 font-semibold whitespace-nowrap">중분류</h4>
+                                <h4 class="text-1724-1826 font-semibold whitespace-nowrap">Best</h4>
                                 <h4 class="text-1318-1624 font-normal text-gray-400 whitespace-nowrap">에 관한 상품 18 개 있습니다</h4>
                             </div>
     
@@ -547,7 +547,7 @@
 
                             <div id="list-book-grid" class="flex flex-wrap gap-x-2 sm:gap-x-8 gap-y-6"></div>    
                             
-                            <div id="list-book-list" class="space-y-9 sm:space-y-6"></div>
+                            <!-- <div id="list-book-list" class="space-y-9 sm:space-y-6"></div> -->
                                              
                         </div>
                     </div>                    
@@ -878,8 +878,23 @@
                 stringHTML +=
                 `
                     <div class="space-y-3 frame-width-102-160">
-                        <div>
+                        <div class="flex justify-between">
                             <img src="../assets/images/icon/common/check-white.svg" alt="o">
+
+                            <div class="h-6 px-3 ${i <= 2 ? "bg-highlight" : "bg-gray"} flex justify-center gap-6 items-center" style="border-top-left-radius: 8px; border-bottom-right-radius: 8px;">
+                                ${
+                                    (i+1) === 1 ? 
+                                        `
+                                            <div class="flex items-center gap-1.5">
+                                                <img src="../assets/images/icon/category/book-best-crown.svg" />
+                                                <div class="hidden sm:block text-xs font-medium text-white">Best</div>
+                                            </div>
+                                        ` : ""
+                                }
+                                
+                                <div class="text-xs font-semibold text-white">${i+1}</div>
+                            </div>
+
                         </div>
         
                         <div class="space-y-3">

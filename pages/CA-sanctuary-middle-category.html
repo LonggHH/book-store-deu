@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>도서 - 카테고리 메인 / 도서 / 중분류</title>
+    <title>성물 - 카테고리 메인 / 성물 / 중분류</title>
 
     <!-- Link Font -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
@@ -18,6 +18,14 @@
 
     <link rel="stylesheet" href="../assets/css/util.css">
     <link rel="stylesheet" href="../assets/css/icons.css">
+
+    <style>
+        .border-select-active {
+            border-bottom-left-radius: 0; 
+            border-bottom-right-radius: 0; 
+            border-color: black;
+        }
+    </style>
 </head>
 <body>
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
@@ -360,10 +368,10 @@
                     <img src="../assets/images/icon/category/breadcrumb-home.svg" alt="icon">
                 </div>
                 <div>
-                    <span class="text-13-18 font-normal text-gray-400 whitespace-nowrap">/</span>
+                    <span>/</span>
                 </div>
                 <div class="flex items-center gap-1 relative cursor-pointer breadcrumb-main-category-menu">
-                    <span>도서</span>
+                    <span class="text-13-18 font-normal text-gray-400 whitespace-nowrap">도서</span>
                     <img class="icon-down" src="../assets/images/icon/category/breadcrumb-down.svg" alt="icon">
                     <img class="icon-up hidden" src="../assets/images/icon/category/breadcrumb-up.svg" alt="icon">
                     <div class="absolute z-10 top-7 left-0 hidden breadcrumb-sub-menu">
@@ -388,7 +396,7 @@
                             </li>
                         </ul>
                     </div>
-                </div>            
+                </div>
                 <div>
                     <span class="text-13-18 font-normal text-gray-400 whitespace-nowrap">/</span>
                 </div>
@@ -552,38 +560,10 @@
                         </div>
                     </div>                    
 
-                    <div class="flex items-center justify-center pt-2.5">
-                        <div class="flex items-center">
-                            <button class="p-1 sm:p-2">
-                                <img class="w-6 h-6" src="../assets/images/icon/common/prev-to-first.svg"
-                                    alt="icon">
-                            </button>
-                            <button class="p-1 sm:p-2">
-                                <img class="w-6 h-6" src="../assets/images/icon/common/prev.svg" alt="icon">
-                            </button>
+                    <div class="h-1-px"></div>
 
-                            <div class="flex items-center">
-                                <button class="p-1 sm:p-2">
-                                    <span
-                                        class="w-6 h-6 rounded-full bg-black text-white text-13-l-18 font-medium flex items-center justify-center">1</span>
-                                </button>
-                                <button class="p-1 sm:p-2">
-                                    <span
-                                        class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">2</span>
-                                </button>
-                                <button class="p-1 sm:p-2">
-                                    <span
-                                        class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">3</span>
-                                </button>
-                            </div>
-
-                            <button class="p-1 sm:p-2">
-                                <img class="w-6 h-6" src="../assets/images/icon/common/next.svg" alt="icon">
-                            </button>
-                            <button class="p-1 sm:p-2">
-                                <img class="w-6 h-6" src="../assets/images/icon/common/next-to-end.svg" alt="icon">
-                            </button>
-                        </div>
+                    <div class="flex items-center justify-center rounded border cursor-pointer py-3.5">
+                        <span class="inline-block text-base font-semibold">더보기</span>
                     </div>
                 </main>
                 <!-- start main -->
@@ -639,6 +619,54 @@
     </section>
 
     <aside style="height: 72px;"></aside>
+
+    <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+        <!-- Modal Content -->
+        <div class="bg-white sm:rounded-lg p-5 sm:p-8" style="width: 560px;">
+            <!-- Modal Header -->
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-2028-2230 font-semibold">옵션 상품을 선택해주세요</h3>                
+            </div>
+
+
+            <!-- Address List -->
+            <div>
+                <div>
+                    <div id="select-menu" class="relative rounded border" onclick="toggleModal()">
+                        <button class="w-full h-full text-left py-2.5 px-4">
+                            옵션선택
+                        </button>
+                        <div class="w-5 h-5 absolute right-4 z-20 cursor-pointer" style="top: calc(50% - 10px);">
+                            <i id="select-icon" class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div id="select-option" class="hidden absolute top-0 left-0 right-0 border border-black border-t-0 rounded bg-white overflow-hidden" style="border-top-left-radius: 0; border-top-right-radius: 0;">
+                            <ul>
+                                <li class="text-15-l-22 font-normal py-2.5 px-4 border-b cursor-pointer hover:bg-blue-50">옵션선택</li>
+                                <li class="text-15-l-22 font-normal py-2.5 px-4 border-b cursor-pointer hover:bg-blue-50">성물축복 신청</li>
+                                <li class="text-15-l-22 font-normal py-2.5 px-4 border-b cursor-pointer hover:bg-blue-50">옵션명 2</li>
+                                <li class="text-15-l-22 font-normal py-2.5 px-4 border-b cursor-pointer hover:bg-blue-50 text-blue-500">옵션명 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Select Button -->
+            <div class="mt-20 sm:mt-6 pb-1 sm:pb-0 pt-6 sm:pt-0 flex justify-center gap-4">
+                <button
+                    class="flex-1 w-full py-2 border rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300">
+                    취소
+                </button>
+                <button
+                    class="flex-1 w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    선택하기
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
     <div class="fixed bottom-24 right-6 block sm:hidden z-50">
@@ -883,7 +911,7 @@
                         </div>
         
                         <div class="space-y-3">
-                            <div class="relative frame-image-border-26 frame-image-size-102150-160236 overflow-hidden shadow-md border">
+                            <div class="relative rounded-lg frame-image-size-102102-160160 overflow-hidden shadow-md border">
                                 <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="book">
                                 <div class="absolute bottom-3 right-3 z-10 w-9 h-9 rounded-full flex items-center justify-center"
                                     style="background-color: rgba(0, 0, 0, 0.16);">
@@ -919,7 +947,7 @@
             })
             document.querySelector('#list-book-grid').innerHTML = stringHTML
         }
-        renderListBookGridView()
+        // renderListBookGridView()
 
         function renderListBookListView() {
             let stringHTML = ""
@@ -934,22 +962,17 @@
                         <div class="flex-1 flex flex-col sm:flex-row gap-x-5 gap-y-3 items-start">
                             <div class="flex-1 flex gap-5 items-start">
                                 <div class="space-y-3 frame-width-102-160">
-                                    <div class="relative frame-image-border-26 frame-image-size-102150-160236 overflow-hidden shadow-md border">
+                                    <div class="relative rounded-lg frame-image-size-102102-160160 overflow-hidden shadow-md border">
                                         <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="book">
                                         <div class="absolute bottom-3 right-3 z-10 w-9 h-9 rounded-full flex items-center justify-center"
                                             style="background-color: rgba(0, 0, 0, 0.16);">
                                             <i class="fa-solid fa-heart text-white"></i>
                                         </div>                                        
-                                    </div>
-
-                                    <div class="flex items-center justify-center gap-2 py-1.5 rounded border">
-                                        <img src="../assets/images/icon/category/middle-preview.svg" alt="">
-                                        <span class="inline-block text-13-l-18 font-semibold">미리보기</span>
-                                    </div>
+                                    </div>                                    
                                 </div>
                                 
                                 <div class="flex-1">
-                                    <div class="frame-height-full-236 flex flex-col justify-between w-full">
+                                    <div class="flex flex-col w-full">
                                         <div class="w-full">                                        
                                             <h4 class="text-base font-semibold truncate mb-1">책 제목</h4>
                                             <p class="text-13-l-18 font-normal text-gray-400 mb-3">저자 ∙ 바오로딸</p>                                        
@@ -980,10 +1003,7 @@
                                 </div>
                                 <div class="py-2.5 px-0 sm:px-6 rounded border flex-1 flex items-center justify-center">
                                     <span class="whitespace-nowrap inline-block text-15-l-22 font-semibold">장바구니</span>
-                                </div>
-                                <div class="py-2.5 px-0 sm:px-6 rounded border flex-1 flex items-center justify-center">
-                                    <span class="whitespace-nowrap inline-block text-15-l-22 font-semibold">기부하기</span>
-                                </div>
+                                </div>                                
                             </div>
                         </div>
                     </div>
@@ -991,7 +1011,14 @@
                 document.querySelector('#list-book-list').innerHTML = stringHTML
             })
         }
-        // renderListBookListView()
+        renderListBookListView()
+
+        function toggleModal() {
+            toggle(`#select-option`)
+            document.querySelector(`#select-menu`).classList.toggle('border-select-active')
+            document.querySelector(`#select-icon`).classList.toggle('fa-chevron-down')
+            document.querySelector(`#select-icon`).classList.toggle('fa-chevron-up')
+        }
     </script>
 </body>
 </html>

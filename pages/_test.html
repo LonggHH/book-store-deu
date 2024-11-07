@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>_test</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center">
+        <!-- Modal Container -->
+        <div class="bg-white rounded-lg p-6 w-80" x-data="{ isOpen: false, selectedOption: '옵션선택' }">
+            <!-- Modal Title -->
+            <h2 class="text-lg font-semibold text-center mb-4">옵션 상품을 선택해 주세요</h2>
+            
+            <!-- Dropdown Component -->
+            <div @click="isOpen = !isOpen" class="relative">
+                <!-- Selected Option -->
+                <button class="w-full bg-gray-100 text-left p-2 rounded border" x-text="selectedOption"></button>
+                
+                <!-- Dropdown Options -->
+                <div 
+                    x-show="isOpen" 
+                    @click.away="isOpen = false" 
+                    class="absolute left-0 top-full mt-1 w-full bg-white border border-gray-200 rounded shadow-lg z-10"
+                >
+                    <!-- Options List -->
+                    <ul>
+                        <li 
+                            @click="selectedOption = '성물축복 신청'; isOpen = false" 
+                            class="p-2 cursor-pointer hover:bg-gray-200"
+                        >성물축복 신청</li>
+                        <li 
+                            @click="selectedOption = '옵션명 2'; isOpen = false" 
+                            class="p-2 cursor-pointer hover:bg-gray-200"
+                        >옵션명 2</li>
+                        <li 
+                            @click="selectedOption = '옵션명 3'; isOpen = false" 
+                            class="p-2 cursor-pointer hover:bg-gray-200 text-blue-600"
+                        >옵션명 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</body>
+</html>
