@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>도서 - 상품상세페이지</title>
+    <title>성물 - 상품상세페이지/성물,굿즈</title>
 
     <!-- Link Font -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
@@ -500,24 +500,24 @@
                 <main class="">
                     
                     <div id="bk-profile">
-                        <div class="flex flex-col md:flex-row gap-x-5 gap-y-12">
-                            <div class="space-y-3">
-                                <div class="space-y-3">
+                        <div class="flex items-stretch flex-col md:flex-row gap-x-5 gap-y-12">
+                            <div class="flex flex-col justify-between gap-y-3">
+                                <div class="flex-1 flex flex-col justify-between">
                                     <div class="sm:pt-0.5">
-                                        <div class="px-10 pt-8 sm:pt-5">
-                                            <div id="bookImageSwiper" class="swiper frame-image-size-196290-350520 border-imgage-48 border shadow-md md:shadow-lg">
+                                        <div class="px-10 pt-8 sm:py-5">
+                                            <div id="bookImageSwiper" class="swiper frame-slide-size-198198-352352 border-imgage-48 border shadow-md md:shadow-lg">
                                                 <div class="swiper-wrapper">
         
                                                     <div class="swiper-slide">
                                                         <div class="">
-                                                            <div class="frame-image-size-194288-348518 border">
+                                                            <div class="frame-slide-size-196196-350350 border">
                                                                 <img class="w-full h-full" src="../assets/images/image/books/book1.png" alt="">
                                                             </div>
                                                         </div>                                                                                                              
                                                     </div>                                                    
                                                     <div class="swiper-slide">
                                                         <div class="">
-                                                            <div class="frame-image-size-194288-348518 border">
+                                                            <div class="frame-slide-size-196196-350350 border">
                                                                 <img class="w-full h-full" src="../assets/images/image/books/book2.png" alt="">
                                                             </div>
                                                         </div>                                                                                                              
@@ -527,6 +527,7 @@
                                             </div>
                                         </div>
                                     </div>
+
                                     <div>
                                         <div class="flex items-center justify-center gap-0.5">
                                             <button id="book-img-swiper-button-prev" class="p-2 cursor-pointer">
@@ -545,11 +546,11 @@
 
                                 <div class="py-4  border-t border-b">
                                     <div class="flex items-center gap-x-0 sm:gap-x-1 py-2 ">
-                                        <button class="flex-1 flex items-center justify-center gap-x-1">
+                                        <button class="flex-1 flex sm:hidden items-center justify-center gap-x-1">
                                             <span class="hidden sm:inline-block text-15-l-24 font-medium whitespace-nowrap">미리보기</span>
                                             <img src="../assets/images/icon/category/middle-preview.svg" alt="preview">
                                         </button>
-                                        <span class="inline-block w-1-px h-6 bg-gray-300"></span>
+                                        <span class="inline-block sm:hidden w-1-px h-6 bg-gray-300"></span>
                                         <button class="flex-1 flex items-center justify-center gap-x-1">
                                             <span class="hidden sm:inline-block text-15-l-24 font-medium whitespace-nowrap">찜</span>
                                             <div class="w-6 h-6">
@@ -691,7 +692,19 @@
                                     </div>
                                 </div>
 
-                                <div class="hidden sm:block py-4 border-t" style="height: 74px;"></div>
+                                <div class="hidden sm:block py-4 border-t">
+                                    <div class="flex items-center justify-between">
+                                        <span class="inline-block text-15-l-22 font-medium">옵션 선택</span>
+
+                                        <div>
+                                            <select name="" id="" class="px-4 py-2.5 rounded border text-gray-400 w-80">
+                                                <option value="">옵션선택</option>
+                                                <option value="">옵션선택-1</option>
+                                                <option value="">옵션선택-2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -745,73 +758,34 @@
                                                     <span class="inline-block text-sm font-normal text-gray-400 flex-1 whitespace-nowrap">9788933113462</span>
                                                 </div>
                                             </div>
-                                        </div>
-
-                                        <div class="hidden sm:block h-48 bg-gray-100"></div>
+                                        </div>                                        
 
                                         <p class="hidden sm:block text-16-l-26 font-normal">
-                                            이 책은 남양성모성지에서 오랫동안 준비한 오상의 비오 신부님(1887-1968) 강의록으로 7가지 주제(비오 신부의 카리스마/ 고통의 신비/ 골고타 수난이 재현되는 미사/ 고해소, 또 하나의 골고타/ 기도의 화신/ 마리아의 아들/ 여러분의 수호자로 비오 성인을 선물합니다)로 살펴본 비오 신부의 내면성을 잘 드러낸다. 다소 반복되는 부분이 있지만 글의 자연스런 흐름과 느낌을 살리면서 정리한 것으로 읽기 쉬우며 30여 개의 자료 사진이 들어 있어 더욱 흥미롭다.
+                                            재질(소재): 월넛, 주석합금
                                             <br><br>
-                                            이전에 나온 책들이 비오 신부의 기적을 많이 강조한 데 반해 이 책은 비오 신부의 내면성에 더 많은 비중을 두고 있다. 이 책은 우리 삶 가운데 때로는 이유 없이 찾아오는 고통의 의미가 무엇인지, 왜 내가 먼저 희생하고 보속해야 하는지를 분명히 인식하고 기꺼이 고통을 껴안게 한다.
+                                            크기: 별도 표기
                                             <br><br>
-                                            이웃이나 가족의 고통 앞에서 그저 지켜만 보아야 하는 사람, 여러 모습의 고통을 받는 사람, 고통의 의미에 물음을 던지는 사람을 비롯해, 기도와 미사, 고해성사와 묵주기도의 의미를 깨닫고 살아내려는 이들에게 도움이 된다.
+                                            ‘내가 너와 함께 있겠다’
+                                            <br><br>
+                                            탈출기 3장 12절의 말씀을 음각한 나무 펜던트가 특징인 ‘말씀 키링’입니다. <br>
+                                            앤틱한 느낌의 성화 메달과 금박 예수님 장식을 더한 나무 십자가로 포인트를 주었습니다. 가방이나 자동차 키, 블루투스 이어폰 케이스에 달아 힘이 되는 말씀과 항상 함께 하실 수 있습니다. <br>
+                                            연령대에 구애받지 않고 누구나 유용하게 사용하게 사용할 수 있는 키링 상품으로 위로와 격려가 필요한 수험생을 위한 선물이나 단체 선물로도 좋습니다. <br>
+                                            ※‘예수님’ 옵션의 고리 모양이 기존 원형에서 별 모양으로 변경되었습니다.
+                                            <br><br>
+                                            ● 규격 <br>
+                                            전체 길이: 9cm <br>
+                                            나무 펜던트: 가로 2cm, 세로 3.8cm <br>
+                                            성화 메달: 가로 0.8cm, 세로 1.8cm <br>
+                                            십자가: 가로 2cm, 세로 2.5cm
+                                            <br><br>
+                                            * 상품의 색상은 모니터 해상도나 설정에 따라 조금씩 다르게 보일 수 있으며, 성물의 규격은 측정 위치와 방법에 따라 오차가 발생할 수 있습니다.
                                         </p>
-                                    </div>
+                                    </div>                                    
 
-                                    <hr class="hidden sm:block">
-
-                                    <div class="px-5 sm:px-0 space-y-2 sm:space-y-5">
-                                        <h4 class="text-1724-2230 font-semibold">책소개</h4>                                        
-                                        
-                                        <div>
-                                            <p class="text-15-l-22 font-medium">1. 비오 신부의 카리스마</p>
-                                            <p class="text-15-l-22 font-medium text-gray-400">
-                                                성인의 죽음은 새로운 존재로의 시작 <br>
-                                                오상을 받은 첫 사제 <br>
-                                                비오 신부의 성소 <br>
-                                                젊은 시한부 인생의 기적 ...
-                                            </p>
-                                        </div>
-
-                                        <div class="flex items-center gap-1">
-                                            <span class="inline-block text-13-l-18 font-normal text-gray-400">더보기</span>
-                                            <div class="h-5 w-5 rounded-full border flex items-center justify-center">
-                                                <i class="text-xs fa-solid fa-chevron-down"></i>
-                                            </div>
-                                        </div>
-
-                                        <div class="h-48 bg-gray-100"></div>                                        
-                                    </div>
-
-                                    <hr class="hidden sm:block">
-
-                                    <div class="px-5 sm:px-0 space-y-2 sm:space-y-5">
-                                        <h4 class="text-1724-2230 font-semibold">작가 정보</h4>                                        
-                                        
-                                        <div class="rounded-xl p-6 bg-gray-100">
-                                            <div class="flex items-center gap-3 mb-8">
-                                                <button class="text-base font-medium">지은이</button>
-                                                <button class="text-base font-semibold">이상각 신부</button>
-                                                <button class="text-13-l-18 font-semibold rounded-lg border py-1.5 px-3 bg-white">인물정보</button>
-                                            </div>
-                                            
-                                            <p class="text-16-l-26 font-normal mb-3">
-                                                1958년 12월 10일 충청북도 무극에서 태어났다. 1986년 1월 27일 사제 서품을 받았으며 비산동 본당 보좌 신부로 사목을 시작했다. 1987년 보좌 신부로 부임한 지동 본당에서 무주구천동으로 야유회를 갔다가 물에 빠진 신자를 구하다 죽음 직전 기적적으로 구조되었다. 이 체험을 통해 성모님의 보호와 도우심을 깨닫고 남은 사제의 삶을 성모님께 바치기로 서약한다. 1988년 신갈 본당 주임 신부를 거쳐 이듬해 군종 신부로 임명되었다가 1989년 8월 24일 남양 본당 주임 신
-                                            </p>
-
-                                            <div class="flex items-center gap-1">
-                                                <span class="inline-block text-13-l-18 font-normal text-gray-400">더보기</span>
-                                                <div class="h-5 w-5 rounded-full border flex items-center justify-center">
-                                                    <i class="text-xs fa-solid fa-chevron-down"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <hr class="hidden sm:block">
+                                    <hr class="hidden sm:block">                                   
 
                                     <div class="px-5 sm:px-0 space-y-2.5 sm:space-y-3">
-                                        <h4 class="text-1724-2230 font-semibold">미디어 리뷰</h4>                                        
+                                        <h4 class="text-1724-2230 font-semibold">상세이미지</h4>                                        
                                         
                                         <div class="bg-gray-100 h-48"></div>
                                     </div>
@@ -860,17 +834,17 @@
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <div class="relative">
+                                            <!-- start sua -->
+                                            <!-- <div class="relative">
                                                 <textarea id="textarea" class="custom-scroll w-full h-40 p-5 border rounded-xl resize-none text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" 
                                                     placeholder="입력 내용을 작성해주세요." maxlength="3000" oninput="updateCharacterCount()">
                                                 </textarea>
                                                 <div class="absolute bottom-5 right-5 flex items-center text-gray-400 mt-1 text-xs font-normal">
                                                     <span id="charCount" class="inline-block text-xs font-normal">0</span>/3000
                                                 </div>
-                                            </div>
+                                            </div> -->
                                             
-                                            <div class="flex gap-5">
+                                            <!-- <div class="flex gap-5">
                                                 <div>
                                                     <input id="input-image" type="file" accept="image/*" hidden>
                                                     <label for="input-image" class="cursor-pointer frame-size-7272-115115 flex justify-center items-center rounded-xl border-dashed border bg-gray-200"                                                        >
@@ -883,8 +857,7 @@
                                                     </label>
                                                 </div>
 
-                                                <div class="flex items-center gap-5 flex-wrap">
-                                                    <!-- 5 -->
+                                                <div class="flex items-center gap-5 flex-wrap">                                                    
                                                     <div class="relative frame-size-7272-115115 flex justify-center items-center rounded-xl border bg-gray-200 overflow-hidden"                                                        >
                                                         <img src="../assets/images/image/books/book-error-small-x.png" alt="">
                                                         <div class="p-2 absolute top-0 right-0 bg-gray-400" style="border-bottom-left-radius: 12px; border-top-right-radius: 12px;">
@@ -892,12 +865,46 @@
                                                                 <i class="fa-solid fa-x text-white"></i>
                                                             </button>
                                                         </div>
+                                                    </div>                                                    
+                                                </div>
+                                            </div> -->
+                                            
+                                            <!--  -->
+                                            <!-- end sua -->
+
+                                            <div>
+                                                <div class="flex gap-5 flex-col sm:flex-row">
+                                                    <div>
+                                                        <input id="input-image" type="file" accept="image/*" hidden>
+                                                        <label for="input-image" class="cursor-pointer frame-size-115115-160160 flex justify-center items-center rounded-xl border-dashed border bg-gray-100"                                                        >
+                                                            <div class="flex flex-col items-center justify-center gap-y-1">
+                                                                <div class="flex items-center gap-x-1">
+                                                                    <span class="inline-block text-15-l-22 font-normal">사진 첨부</span>
+                                                                    <div class="w-6 h-6 flex items-center justify-center">
+                                                                        <i class="text-lg fa-solid fa-plus"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <p class="hidden sm:block text-xs font-normal text-gray-400 text-center">*JPG, PNG, GIF 파일만 최대 5장 업로드 가능합니다</p>
+                                                            </div>
+                                                        </label>
+                                                        <p class="block sm:hidden text-xs font-normal text-gray-400 mt-2">*JPG, PNG, GIF 파일만 최대 5장 업로드 가능합니다</p>
                                                     </div>
-                                                    <!-- 5 -->
+
+                                                    <div class="flex-1 relative">
+                                                        <textarea id="textarea" 
+                                                            class="custom-scroll w-full h-40 p-5 border rounded-xl resize-none text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                                                                maxlength="3000" 
+                                                                oninput="updateCharacterCount()"
+                                                                placeholder="주제와 무관하거나 악의적인 의도, 해당 상품과 관련이 없는 문의성(배송문의, 결제문의 등) 등의 글은 사전 고지 없이 임의로 삭제될 수 있습니다. 내용은 10자 이상, 최대 3000자까지 작성이 가능합니다."
+                                                            >
+                                                        </textarea>
+                                                        <div class="absolute bottom-5 right-5 flex items-center text-gray-400 mt-1 text-xs font-normal">
+                                                            <span id="charCount" class="inline-block text-xs font-normal">0</span>/3000
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            
-                                            <p class="text-11-l-14 font-normal text-gray-400">*JPG, PNG, GIF 파일만 최대 5장 업로드 가능합니다</p>
+
 
                                             <div class="flex items-center justify-end">
                                                 <button class="flex-1 sm:flex-none text-15-l-22 font-semibold py-2.5 px-4 rounded bg-gray-300">작성완료</button>
@@ -1278,55 +1285,6 @@
                                     </div>
                                 </div>
 
-                                <!-- slide car new -->
-                                <div class="px-5 sm:px-0 overflow-hidden">
-                                    <h4 class="text-1724-2230 font-semibold mb-2.5 sm:mb-5">카드뉴스</h4>
-        
-                                    <div id="card-new" class="frame-width-320-250 overflow-hidden">
-                                        <div id="cardNewSwiper" class="swiper frame-slide-size-320166-250150 rounded-lg" style="width: 320px;">
-                                            <div class="swiper-wrapper">
-    
-                                                <div class="swiper-slide">
-                                                    <div class="overflow-hidden" style="width: 150px;">
-                                                        <div class="overflow-hidden rounded-lg border" style="width: 150px; height: 150px;">
-                                                            <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="event">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="swiper-slide">
-                                                    <div class="overflow-hidden" style="width: 150px;">
-                                                        <div class="overflow-hidden rounded-lg border" style="width: 150px; height: 150px;">
-                                                            <img class="w-full h-full" src="../assets/images/image/books/book1.png" alt="event">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="swiper-slide">
-                                                    <div class="overflow-hidden" style="width: 150px;">
-                                                        <div class="overflow-hidden rounded-lg border" style="width: 150px; height: 150px;">
-                                                            <img class="w-full h-full" src="../assets/images/image/books/book2.png" alt="event">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                                                            
-                                            </div>
-                                        </div>
-                                        <!-- navi -->
-                                        <div class="hidden sm:flex justify-end">
-                                            <div class="p-2">
-                                                <button id="card-new-swiper-button-prev" class="w-6 h-6 rounded-full border bg-white flex items-center justify-center">
-                                                    <i class="text-xs fa-solid fa-chevron-left"></i>
-                                                </button>
-                                            </div>
-                                            <div class="p-2">
-                                                <button id="card-new-swiper-button-next" class="w-6 h-6 rounded-full border bg-white flex items-center justify-center">
-                                                    <i class="text-xs fa-solid fa-chevron-right"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </article>
                         </div>
                     </section>
@@ -1594,17 +1552,7 @@
                 nextEl: "#event-swiper-button-next",
                 prevEl: "#event-swiper-button-prev",
             },             
-        })
-       
-        var cardNewSwiper = new Swiper("#cardNewSwiper", {
-            slidesPerView: 2,
-            spaceBetween: 10,
-            loop: true,
-            navigation: {
-                nextEl: "#card-new-swiper-button-next",
-                prevEl: "#card-new-swiper-button-prev",
-            },                 
-        })        
+        })                
 
         function toggleIcons(isHover) {
             document.querySelector("#shareIcon").classList.toggle("hidden", isHover);
