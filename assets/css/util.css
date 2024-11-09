@@ -61,6 +61,16 @@ ol li {
     background: linear-gradient(to right, #0C98E7, #B956EA, #F03964);
 }
 
+.border-b-highlight::after {
+    content: ''; /* Tạo một phần tử ảo */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px; /* Chiều cao của border */
+    background: linear-gradient(to right, #0C98E7, #B956EA, #F03964);
+}
+
 .bg-header-highlight {
     background: linear-gradient(to right, #71B0FF, #2C79FE, #7B37FF);
 }
