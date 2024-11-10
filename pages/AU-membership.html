@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인/회원가입 - 회원가입</title>
+
+    <!-- Link Font -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <!-- Link Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Link Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../assets/css/util.css">
+    <link rel="stylesheet" href="../assets/css/CO/co.css">
+    <link rel="stylesheet" href="../assets/css/AU/au.css">
+
+    <style>
+        .hanging-indent ol {
+            list-style-position: inside;
+            padding-left: 1.25rem;
+            /* Adjust as needed for alignment */
+        }
+
+        .hanging-indent li::marker {
+            font-weight: normal;
+            /* Style the numbers if you like */
+        }
+
+        .hanging-indent li {
+            text-indent: -1.25rem;
+            padding-left: 1.25rem;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(247, 247, 247);">
+
+    <header class="bg-white" style="margin-bottom: 72px;">
+        <section class="flex items-center justify-center relative border-b border-b-highlight">
+            <div class="py-3">
+                <img class="w-14 h-14" src="../assets/images/logo/Logo.svg" alt="" />
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <div class="w-full">
+            <div class="bg-white rounded-xl overflow-hidden" style="max-width: 460px; margin: 0 auto;">
+                <h4 class="text-18-l-26 font-semibold text-center py-3">회원가입</h4>
+
+                <div class="px-5 py-5 sm:px-14 sm:py-12 shadow-sm">
+                    <div class="sm:px-1 sm:py-0.5">
+                        <div class="pb-12">
+                            <!-- 1 -->
+                            <div class="space-y-5 mb-14">
+                                <div class="space-y-3 mb-8">
+                                    <div class="flex items-center gap-x-2">
+                                        <div
+                                            class="w-5 h-5 rounded-full bg-blue-500 flex items-center justify-center text-11-l-14 text-white">
+                                            1</div>
+                                        <h5 class="text-base font-medium">인증하기</h5>
+                                    </div>
+
+                                    <div class=" py-3">
+                                        <p class="text-xs font-normal text-center">휴대폰 또는 이메일로 간편하게 인증 합니다</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center justify-between gap-x-2">
+                                    <button
+                                        class="flex-1 text-15-l-22 font-semibold py-2.5 rounded border text-blue-500 border-blue-500 bg-blue-100">휴대폰
+                                        인증</button>
+                                    <button class="flex-1 text-15-l-22 font-semibold py-2.5 rounded border">이메일
+                                        인증</button>
+                                </div>
+
+                                <div>
+                                    <div class="space-y-2">
+                                        <label for="" class="text-sm font-medium">이름 <span
+                                                class="text-red-500">*</span></label>
+                                        <div class="rounded border py-2.5 px-4">
+                                            <input type="text" class="text-15-l-22 font-normal w-full"
+                                                placeholder="이름을 입력해주세요">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2">
+                                    <label for="" class="text-sm font-semibold">휴대폰 번호 <span
+                                            class="text-red-500">*</span></label>
+
+                                    <div class="flex items-center gap-x-2">
+                                        <div class="py-2.5 px-4 rounded border" style="width: calc(100% - 88px);">
+                                            <input type="text" class="flex-1 text-15-l-22 w-full"
+                                                placeholder="'-' 없이 번호만 입력해주세요">
+                                        </div>
+                                        <button
+                                            class="text-15-l-22 py-2.5 text-center w-20 rounded border border-blue-500 text-blue-500">
+                                            인증요청
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 2 -->
+                            <div class="space-y-5 mb-14">
+                                <div class="space-y-3 mb-8">
+                                    <div class="flex items-center gap-x-2">
+                                        <div
+                                            class="w-5 h-5 rounded-full bg-blue-500 flex items-center justify-center text-11-l-14 text-white">
+                                            2</div>
+                                        <h5 class="text-base font-medium">정보 입력</h5>
+                                    </div>
+
+                                    <!-- (2) -->
+                                    <div class=" py-3">
+                                        <p class="text-xs font-normal text-center">회원 정보를 입력하시면 서비스 이용이 더 편리해집니다</p>
+                                    </div>
+                                    <!-- (2) -->
+                                </div>
+
+                                <!-- (1) -->
+                                <div class="space-y-2">
+                                    <label for="" class="text-sm font-semibold">아이디 <span
+                                            class="text-red-500">*</span></label>
+
+                                    <div class="flex items-center gap-x-2">
+                                        <div class="py-2.5 px-4 rounded border" style="width: calc(100% - 88px);">
+                                            <input type="text" class="flex-1 text-15-l-22 w-full"
+                                                placeholder="아이디를 입력해주세요">
+                                        </div>
+                                        <button
+                                            class="text-15-l-22 py-2.5 text-center w-20 rounded border border-blue-500 text-blue-500">
+                                            중복확인
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-y-2">
+                                    <label for="" class="text-sm font-semibold">비밀번호<span
+                                            class="text-red-500">*</span></label>
+
+                                    <div class="flex items-center justify-between gap-x-2 py-2.5 px-4 rounded border">
+                                        <input type="password" class="flex-1 text-15-l-22"
+                                            placeholder="영문, 숫자, 특수문자 3가지 조합 8자리 이상">
+                                        <i class="cursor-pointer text-gray-400 fa-regular fa-eye-slash"></i>
+                                    </div>
+
+                                    <p class="text-red-500 text-xs font-normal px-4 hidden">영문, 숫자, 특수문자 3가지 조합 8자리 이상
+                                    </p>
+                                </div>
+
+                                <div class="flex flex-col gap-y-2">
+                                    <label for="" class="text-sm font-semibold">비밀번호 확인<span
+                                            class="text-red-500">*</span></label>
+
+                                    <div class="flex items-center justify-between gap-x-2 py-2.5 px-4 rounded border">
+                                        <input type="password" class="flex-1 text-15-l-22" placeholder="입력값">
+                                        <i class="cursor-pointer text-gray-400 fa-regular fa-eye-slash"></i>
+                                    </div>
+
+                                    <p class="text-red-500 text-xs font-normal px-4 hidden">입력하신 비밀번호가 일치하지 않습니다</p>
+                                </div>
+
+                                <!-- (2) -->
+                                <!-- <div>
+                                    <div class="flex items-center justify-center mb-8">
+                                        <div class="flex items-center gap-x-3">
+                                            <div class="w-8 h-8 rounded-full bg-gray-500"></div>
+                                            <h5 class="text-sm font-medium">카카오 로그인 연동</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="space-y-5">                                        
+                                        <div class="flex items-center gap-x-2">
+                                            <div class="flex-1 flex flex-col gap-y-2">
+                                                <label for="" class="text-sm font-semibold">이름<span class="text-red-500">*</span></label>
+            
+                                                <div class="py-2.5 px-4 rounded border bg-gray-100">
+                                                    <input type="text" class="w-full flex-1 text-15-l-22 bg-transparent" placeholder="홍길도">
+                                                </div>
+                                            </div>
+
+                                            <div class="flex-1 flex flex-col gap-y-2">
+                                                <label for="" class="text-sm font-semibold">세례명</label>
+            
+                                                <div class="py-2.5 px-4 rounded border">
+                                                    <input type="text" class="w-full flex-1 text-15-l-22 bg-transparent" placeholder="예) 마르코">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="flex items-center gap-x-2">
+                                            <div class="flex-1 flex flex-col gap-y-2">
+                                                <label for="" class="text-sm font-semibold">이름<span class="text-red-500">*</span></label>
+            
+                                                <div class="py-2.5 px-4 rounded border bg-gray-100">
+                                                    <input type="date" class="w-full flex-1 text-15-l-22 bg-transparent" placeholder="19990101">
+                                                </div>
+                                            </div>
+
+                                            <div class="flex-1 flex flex-col gap-y-2">
+                                                <label for="" class="text-sm font-semibold">세례명</label>
+            
+                                                <div class="flex items-center justify-between">
+                                                    <button class="flex-1 text-15-l-22 font-semibold py-2.5 text-center border text-blue-500 bg-blue-100 border-blue-500" style="border-top-left-radius: 4px; border-bottom-left-radius: 4px;">남</button>
+                                                    <button class="flex-1 text-15-l-22 font-semibold py-2.5 text-center border" style="border-top-right-radius: 4px; border-bottom-right-radius: 4px;">여</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex flex-col gap-y-2">
+                                            <label for="" class="text-sm font-semibold">휴대폰 번호<span class="text-red-500">*</span> </label>
+        
+                                            <div class="py-2.5 px-4 rounded border bg-gray-100">
+                                                <input type="text" class="flex-1 text-15-l-22 bg-transparent" placeholder="01012341234">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="flex flex-col gap-y-2">
+                                            <label for="" class="text-sm font-semibold">이메일<span class="text-red-500">*</span> </label>
+        
+                                            <div class="py-2.5 px-4 rounded border">
+                                                <input type="text" class="flex-1 text-15-l-22" placeholder="이메일을 입력해주세요">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+
+                            <!-- 3 -->
+                            <div class="space-y-8">
+                                <div class="space-y-3 mb-8">
+                                    <div class="flex items-center gap-x-2">
+                                        <div
+                                            class="w-5 h-5 rounded-full bg-blue-500 flex items-center justify-center text-11-l-14 text-white">
+                                            3</div>
+                                        <h5 class="text-base font-medium">약관동의</h5>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-x-3">
+                                    <img src="../assets/images/icon/common/check-white.svg" alt="">
+                                    <span class="inline-block text-sm font-semibold">아래 내용을 모두 동의 합니다.</span>
+                                </div>
+
+                                <div class="space-y-3">
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex items-center gap-x-3">
+                                            <img src="../assets/images/icon/common/check-white.svg" alt="">
+                                            <span class="text-sm font-normal">[필수] 바오로딸 이용약관</span>
+                                        </div>
+
+                                        <div class="w-5 h-5 flex items-center justify-center cursor-pointer">
+                                            <i class="text-gray-400 text-xs fa-solid fa-chevron-right"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex items-center gap-x-3">
+                                            <img src="../assets/images/icon/common/check-white.svg" alt="">
+                                            <span class="text-sm font-normal">[필수] 개인정보 수집/이용 등에 대한 동의</span>
+                                        </div>
+
+                                        <div class="w-5 h-5 flex items-center justify-center cursor-pointer">
+                                            <i class="text-gray-400 text-xs fa-solid fa-chevron-right"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex items-center gap-x-3">
+                                            <img src="../assets/images/icon/common/check-white.svg" alt="">
+                                            <span class="text-sm font-normal">[선택] 마케팅 활용 동의</span>
+                                        </div>
+
+                                        <div class="w-5 h-5 flex items-center justify-center cursor-pointer">
+                                            <i class="text-gray-400 text-xs fa-solid fa-chevron-right"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex items-center gap-x-3">
+                                            <img src="../assets/images/icon/common/check-white.svg" alt="">
+                                            <span class="text-sm font-normal">[필수] 만 14세 이용자입니다</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <div class="space-y-5">
+                                    <h4 class="text-sm font-semibold">신간 소식과 이벤트 정보를 받겠습니다</h4>
+
+                                    <div class="rounded-lg border p-3 flex items-center justify-between">
+                                        <span>수신방법</span>
+
+                                        <div class="flex items-center gap-x-6">
+                                            <div class="flex items-center gap-x-3">
+                                                <img src="../assets/images/icon/common/check-white.svg" alt="">
+                                                <span class="inline-block text-sm font-normal">SMS</span>
+                                            </div>
+                                            <div class="flex items-center gap-x-3">
+                                                <img src="../assets/images/icon/common/check-white.svg" alt="">
+                                                <span class="inline-block text-sm font-normal">이메일</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="space-y-3">
+                                        <div class="flex items-center justify-between pl-3">
+                                            <span class="inline-block text-sm font-normal">정보 메일 수신 여부</span>
+
+                                            <div class="flex items-center gap-x-2">
+                                                <button
+                                                    class="text-15-l-22 font-semibold py-2.5 px-3 rounded border text-center w-16 whitespace-nowrap">미동의</button>
+                                                <button
+                                                    class="text-15-l-22 font-semibold py-2.5 px-3 rounded border text-center w-16 whitespace-nowrap text-blue-500 bg-blue-100 border-blue-500">동의</button>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center justify-between pl-3">
+                                            <span class="inline-block text-sm font-normal">정보 문자 수신 여부</span>
+
+                                            <div class="flex items-center gap-x-2">
+                                                <button
+                                                    class="text-15-l-22 font-semibold py-2.5 px-3 rounded border text-center w-16 whitespace-nowrap">미동의</button>
+                                                <button
+                                                    class="text-15-l-22 font-semibold py-2.5 px-3 rounded border text-center w-16 whitespace-nowrap text-blue-500 bg-blue-100 border-blue-500">동의</button>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center justify-between pl-3">
+                                            <span class="inline-block text-sm font-normal">야간 정보 알림 수신 여부</span>
+
+                                            <div class="flex items-center gap-x-2">
+                                                <button
+                                                    class="text-15-l-22 font-semibold py-2.5 px-3 rounded border text-center w-16 whitespace-nowrap">미동의</button>
+                                                <button
+                                                    class="text-15-l-22 font-semibold py-2.5 px-3 rounded border text-center w-16 whitespace-nowrap text-blue-500 bg-blue-100 border-blue-500">동의</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-14">
+                                <button
+                                    class="text-gray-300 bg-gray-100 rounded py-2.5 text-center w-full text-15-l-22 font-semibold">
+                                    회원가입 완료
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-6"></div>
+
+        </div>
+    </main>
+
+    <div class="h-32"></div>
+
+
+    <section>
+        <!-- modal 1-1 -->
+        <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+            <!-- Modal Content -->
+            <div class="bg-white sm:rounded-lg p-5 sm:p-8" style="width: 364px;">
+                <!-- Modal Header -->
+                <div class="flex items-center justify-center mb-6">
+                    <h3 class="text-1724-1826 font-semibold text-center">
+                        ABCDEFG
+                    </h3>
+                </div>
+
+                <!-- Address List -->
+                <div class="space-y-5 sm:space-y-6 mb-2.5 sm:mb-6">
+                    <!-- Address Item 1 -->
+                    <p class="text-1724-1826 font-semibold text-center">
+                        이미 사용중인 아이디 입니다
+                    </p>
+                </div>
+
+                <!-- Select Button -->
+                <div class="mt-20 sm:mt-6 pb-1 sm:pb-0 pt-6 sm:pt-0 flex items-center justify-center gap-x-4">
+                    <button
+                        class="flex-1 w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        확인
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal 1-2 -->
+        <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+            <!-- Modal Content -->
+            <div class="bg-white sm:rounded-lg p-5 sm:p-8" style="width: 364px;">
+                <!-- Modal Header -->
+                <div class="flex items-center justify-center mb-6">
+                    <h3 class="text-1724-1826 font-semibold text-center">
+                        입력하신 비밀번호가 일치하지 않습니다.
+                    </h3>
+                </div>
+
+                <!-- Select Button -->
+                <div class="mt-20 sm:mt-6 pb-1 sm:pb-0 pt-6 sm:pt-0 flex items-center justify-center gap-x-4">
+                    <button
+                        class="flex-1 w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        확인
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal 2-1 -->
+        <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+            <!-- Modal Content -->
+            <div class="bg-white sm:rounded-lg p-5 sm:p-8" style="width: 364px;">
+                <!-- Modal Header -->
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-1724-1826 font-semibold text-center">로그인/회원가입 진행을 닫으시겠습니까?</h3>
+                </div>
+
+                <!-- Address List -->
+                <div class="space-y-5 sm:space-y-6 mb-2.5 sm:mb-6">
+                    <!-- Address Item 1 -->
+                    <p class="text-xs font-normal text-gray-400 text-center">
+                        창을 닫으면 진행중인 사항이 모두 사라집니다.
+                    </p>
+                </div>
+
+                <!-- Select Button -->
+                <div class="mt-20 sm:mt-6 pb-1 sm:pb-0 pt-6 sm:pt-0 flex items-center justify-center gap-x-4">
+                    <button
+                        class="flex-1 w-full py-2 border rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-100">
+                        취소
+                    </button>
+                    <button
+                        class="flex-1 w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        확인
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal 2-2 -->
+        <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+            <!-- Modal Content -->
+            <div class="bg-white sm:rounded-lg p-5 sm:p-8" style="width: 364px;">
+                <!-- Modal Header -->
+                <div class="flex items-center justify-center mb-6">
+                    <h3 class="text-1724-1826 font-semibold text-center">
+                        입력하신 인증번호가 맞지 않습니다.
+                    </h3>
+                </div>
+
+                <!-- Select Button -->
+                <div class="mt-20 sm:mt-6 pb-1 sm:pb-0 pt-6 sm:pt-0 flex items-center justify-center gap-x-4">
+                    <button
+                        class="flex-1 w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        확인
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal 3-1 -->
+        <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+            <!-- Modal Content -->
+            <div class="bg-white sm:rounded-lg p-5 sm:p-8" style="width: 364px;">
+                <!-- Modal Header -->
+                <div class="flex items-center justify-center mb-6">
+                    <h3 class="text-1724-1826 font-semibold text-center">
+                        입력하지 않은 <br>
+                        필수 정보가 있습니다
+                    </h3>
+                </div>
+
+                <!-- Select Button -->
+                <div class="mt-20 sm:mt-6 pb-1 sm:pb-0 pt-6 sm:pt-0 flex items-center justify-center gap-x-4">
+                    <button
+                        class="flex-1 w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        확인
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal 3-2 -->
+        <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+            <!-- Modal Content -->
+            <div class="bg-white sm:rounded-lg p-5 sm:p-8" style="width: 364px;">
+                <!-- Modal Header -->
+                <div class="flex items-center justify-center mb-6">
+                    <h3 class="text-1724-1826 font-semibold text-center">
+                        수신 방법 중 <br>
+                        하나 이상을 선택해주셔야 합니다
+                    </h3>
+                </div>
+
+                <!-- Select Button -->
+                <div class="mt-20 sm:mt-6 pb-1 sm:pb-0 pt-6 sm:pt-0 flex items-center justify-center gap-x-4">
+                    <button
+                        class="flex-1 w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        확인
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal 3-3 -->
+        <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+            <!-- Modal Content -->
+            <div class="bg-white sm:rounded-lg p-5 sm:p-8" style="width: 364px;">
+                <!-- Modal Header -->
+                <div class="flex items-center justify-center mb-6">
+                    <h3 class="text-1724-1826 font-semibold text-center">
+                        회원가입을 축하합니다
+                    </h3>
+                </div>
+
+                <!-- Select Button -->
+                <div class="mt-20 sm:mt-6 pb-1 sm:pb-0 pt-6 sm:pt-0 flex items-center justify-center gap-x-4">
+                    <button
+                        class="flex-1 w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        확인
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal text -->
+        <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+            <!-- Modal Content -->
+            <div class="bg-white sm:rounded-lg p-5 sm:p-8 h-screen overflow-y-auto custom-scroll" style="width: 560px;">
+                <!-- Modal Header -->
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-2028-2230 font-semibold text-center">
+                        회원가입을 축하합니다
+                    </h3>
+
+                    <button class="w-6 h-6 flex items-center justify-center">
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="text-16-l-26 font-semibold">제1장 총칙</h4>
+
+                    <h5 class="text-15-l-22 font-semibold">제1조 (목적)</h5>
+
+                    <p class="text-15-l-24 font-normal">
+                        본 약관은 (재)성바오로딸수도회에서 운영하는 가톨릭인터넷서점 바오로딸 (이하 "바오로딸"이라 합니다.)에서 제공하는 유무선 인터넷 관련 서비스와 가톨릭 정보제공 서비스(이하
+                        "서비스"라 합니다.)및 부가 서비스를 이용함에 있어 바오로딸과 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다. ※「PC통신, 무선 등을 이용하는 전자상거래에
+                        대해서도 그 성질에 반하지 않는 한 이 약관을 준용합니다」
+                    </p>
+
+                    <h5 class="text-15-l-22 font-semibold">제2조 (약관의 효력 및 변경)</h5>
+
+                    <div class="hanging-indent">
+                        <ul class="list-decimal list-inside">
+                            <li class="text-15-l-24 font-normal">
+                                본 약관은 인터넷 서비스화면(www.pauline.or.kr)에 게시하거나 이용자에게 공시함으로써 효력을 발생합니다.
+                            </li>
+                            <li class="text-15-l-24 font-normal">
+                                “바오로딸”은 약관을 변경할 수 있으며 변경된 약관은 1항과 같은 방법으로 효력을 발생합니다.
+                            </li>
+                            <li class="text-15-l-24 font-normal">
+                                “바오로딸”이 약관을 변경할 경우에는 변경된 약관은 그 적용일 이후에 체결되는 계약에만 적용되고 그 시점 이전의 계약에 대해서는 소급 적용되지 않습니다. 단,
+                                이미 계약을 체결한 이용자가 변경된 약관 조항의 적용을 받기 원하는 경우에는 “바오로딸”에 의사를 표명하여 “바오로딸”의 동의를 받은 경우에는 변경된 조항이
+                                적용됩니다.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h5 class="text-15-l-22 font-semibold">제3조 (약관 외 준칙)</h5>
+
+                    <p class="text-15-l-24 font-normal">
+                        본 약관에 정의되지 않은 사항은 약관의 규제들에 관한 법령, 전자상거래 기본법, 정보통신망이용 촉진 등에 관한 법률 확보, 전기통신기본법, 전기통신사업법, 전자서명법,
+                        소비자보호법 등 관련 법령의 규정에 의합니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
