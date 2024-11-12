@@ -1,0 +1,35 @@
+.cs-main-size {
+    width: 790px;
+}
+
+/* Default (for screens smaller than 640px) */
+.space-y-0-18 > * + * {
+    margin-top: 72px;
+}
+
+.frequently-asked-questions-item-size {
+    width: calc(50% - 10px);
+}
+
+@media (max-width: 969px) {
+    .cs-main-size {
+        width: calc(100% - 180px);
+    }
+}
+
+@media (max-width: 767px) {
+    .cs-main-size {
+        width: 100%;
+    }
+}
+
+/* Apply 72px spacing for screens 640px and larger */
+@media (max-width: 640px) {
+    .space-y-0-18 > * + * {
+        margin-top: 0px;
+    }
+
+    .frequently-asked-questions-item-size {
+        width: 100%;
+    }
+}
