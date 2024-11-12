@@ -22,7 +22,7 @@
 
 <body style="background-color: rgb(247, 247, 247);">
 
-    <header class="bg-white" style="margin-bottom: 72px;">
+    <header class="bg-white hidden sm:block" style="margin-bottom: 72px;">
         <section class="flex items-center justify-center relative border-b border-b-highlight">
             <div class="py-3">
                 <img class="w-14 h-14" src="../assets/images/logo/Logo.svg" alt="" />
@@ -32,12 +32,19 @@
 
     <main>
         <div class="w-full">
-            <div class="bg-white rounded-xl overflow-hidden" style="max-width: 460px; margin: 0 auto;">
-                <h4 class="text-18-l-26 font-semibold text-center py-2.5">간편 로그인</h4>
+            <div class="bg-white sm:rounded-xl overflow-hidden" style="max-width: 460px; margin: 0 auto;">
+
+                <div class="px-5 sm:px-0 flex items-center justify-between sm:justify-center py-6 sm:py-0">
+                    <h4 class="text-2028-1826 font-semibold text-center py-2.5">간편 로그인</h4>
+    
+                    <button class="h-6 w-6 flex sm:hidden items-center justify-center">
+                        <i class="text-sm fa-solid fa-x"></i>
+                    </button>
+                </div>
 
                 <div class="px-5 py-5 sm:px-14 sm:py-12 shadow-sm">
                     <div class="sm:px-1 sm:py-0.5">
-                        <div class="space-y-16">
+                        <div class="space-y-8 sm:space-y-16">
                             <p class="text-18-l-26 font-semibold text-center">이미 간편 로그인을 이용중이세요</p>
                            
                             <div>
@@ -76,6 +83,8 @@
                                 </div>
                             </div>
 
+                            <div class="h-28 block sm:hidden"></div>
+
                             <div class="flex items-center justify-center">                               
                                 <button
                                     class="py-2.5 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 
@@ -83,8 +92,7 @@
                                 >
                                     간편로그인 하기
                                 </button>
-                            </div>
-                            
+                            </div>                            
                         </div>
                     </div>
                 </div>

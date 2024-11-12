@@ -559,6 +559,10 @@ input[type="number"] {
     column-gap: 60px;
 }
 
+.gap-side-menu-service-content {
+    column-gap: 110px;
+}
+
 .space-y-12-18 > *:not(:last-child) {
     margin-bottom: 72px;
 }
@@ -569,6 +573,22 @@ input[type="number"] {
 
 .bulletin-item-width {
     width: calc(50% - 10px);
+}
+
+.hanging-indent ol {
+    list-style-position: inside;
+    padding-left: 1.25rem;
+    /* Adjust as needed for alignment */
+}
+
+.hanging-indent li::marker {
+    font-weight: normal;
+    /* Style the numbers if you like */
+}
+
+.hanging-indent li {
+    text-indent: -1.25rem;
+    padding-left: 1.25rem;
 }
 
 @media (max-width:768px) {
