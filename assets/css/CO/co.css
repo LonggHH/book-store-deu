@@ -33,6 +33,11 @@
     line-height: 24px;  
 }
 
+.text-1522-1626 {
+    font-size: 16px;
+    line-height: 26px;  
+}
+
 .text-1318-1522 {
     font-size: 15px;
     line-height: 22px;
@@ -155,6 +160,11 @@
     }
 
     .text-1522-1624 {
+        font-size: 15px;
+        line-height: 22px;  
+    }
+
+    .text-1522-1626 {
         font-size: 15px;
         line-height: 22px;  
     }

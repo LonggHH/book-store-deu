@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>고객센터 - 고객센터 메인</title>
+    <title>고객센터 - 고객센터 / 자주 묻는 질문</title>
 
     <!-- Link Font -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Link Tailwind -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Link Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="../assets/css/util.css">
     <link rel="stylesheet" href="../assets/css/CS/cs.css">
@@ -438,7 +442,7 @@
                     <span class="inline-block text-13-18 font-normal text-gray-400 whitespace-nowrap">/</span>
                 </div>
                 <div class="flex items-center gap-1">
-                    <span class="inline-block text-13-18 font-normal text-gray-400 whitespace-nowrap">전체</span>
+                    <span class="inline-block text-13-18 font-normal text-gray-400 whitespace-nowrap">자주 묻는 질문</span>
                     <img src="../assets/images/icon/category/breadcrumb-down.svg" alt="icon">
                 </div>
             </div>
@@ -464,11 +468,11 @@
                                 <ul class="space-y-3">
                                     <li class="flex items-center justify-between py-2 pl-2">
                                         <span class="inline-block text-sm font-semibold">공지사항</span>
-                                        <img class="hidden" src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg"
-                                            alt=">">
                                     </li>
                                     <li class="flex items-center justify-between py-2 pl-2">
                                         <span class="inline-block text-sm font-semibold">자주 묻는 질문</span>
+                                        <img src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg"
+                                            alt=">">
                                     </li>
                                     <li class="flex items-center justify-between py-2 pl-2">
                                         <span class="inline-block text-sm font-semibold">1:1 문의</span>
@@ -505,192 +509,138 @@
 
                 <!-- start main -->
                 <main class="cs-main-size">
-                    <div class="space-y-0-18">
-
-                        <div class="space-y-3">
-                            <div class="sm:rounded-xl overflow-hidden p-8 space-y-5"
-                                style="background: linear-gradient(to right, #ECFCFF, #FFE8FF);">
-                                <div class="space-y-3">
-                                    <h4 class="text-2028-2432 font-bold">
-                                        궁금하신 점, <br>
-                                        불편하신 점 무엇이든 문의해 주세요.
-                                    </h4>
-
-                                    <p class="text-sm font-normal">항상 함께하는 바오로딸 고객만족센터 입니다.</p>
-                                </div>
-
-                                <div class="h-1-px bg-highlight"></div>
+                    <div class="sm:space-y-8">
+                        <div class="flex items-center justify-between p-5 sm:p-0 sm:mb-8">
+                            <h4 class="text-1724-2230 font-semibold">공지사항</h4>
+                        </div>                        
+                        
+                        <div class="p-5 sm:p-0 space-y-2">
+                            <div class="flex items-center sm:justify-between gap-2 flex-wrap sm:flex-nowrap">
+                                <button class="text-15-l-22 font-semibold py-2.5 rounded-lg border text-center w-20 sm:flex-1 whitespace-nowrap">전체</button>
+                                <button class="text-15-l-22 font-semibold py-2.5 rounded-lg border text-center w-20 sm:flex-1 whitespace-nowrap">회원</button>
+                                <button class="text-15-l-22 font-semibold py-2.5 rounded-lg border text-center w-20 sm:flex-1 whitespace-nowrap">상품</button>
+                                <button class="text-15-l-22 font-semibold py-2.5 rounded-lg border text-center w-20 sm:flex-1 whitespace-nowrap">주문</button>
+                                <button class="text-15-l-22 font-semibold py-2.5 rounded-lg border text-center w-20 sm:flex-1 whitespace-nowrap">결제</button>
+                                <button class="text-15-l-22 font-semibold py-2.5 rounded-lg border text-center w-20 sm:flex-1 whitespace-nowrap">배송</button>
+                                <button class="text-15-l-22 font-semibold py-2.5 rounded-lg border text-center w-36 sm:flex-1 whitespace-nowrap">교환/반품/환불</button>
                             </div>
-
-                            <div class="p-5 sm:p-0">
-                                <div
-                                    class="flex flex-col sm:flex-row gap-y-5 gap-x-3 justify-start lg:justify-between sm:items-stretch flex-wrap ">
-                                    <div class="sm:rounded-xl sm:border sm:p-6 flex items-center sm:flex-none">
-                                        <div class="flex-1 sm:flex-none space-y-1 sm:space-y-0.5">
-                                            <h4 class="text-sm font-medium">전화 상담</h4>
-                                            <h5 class="text-2028-2230 font-semibold">02.944.0807</h5>
-                                            <p class="text-11-l-14 font-normal">평일 9시~18시 | 점심시간 12시30분~13시 30분</p>
-                                        </div>
-                                        <img class="block sm:hidden"
-                                            src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg"
-                                            alt=">">
-                                    </div>
-
-                                    <hr class="block sm:hidden">
-
-                                    <div class="sm:rounded-xl sm:border sm:p-6 flex items-center sm:flex-none">
-                                        <div
-                                            class="flex-1  flex flex-col items-start gap-y-1 sm:justify-between sm:h-full">
-                                            <h4 class="text-sm font-medium">1:1 문의</h4>
-
-                                            <div class="flex items-center gap-x-2 justify-between">
-                                                <h5 class="text-2028-2230 font-semibold">02.944.0807</h5>
-                                                <img class="hidden sm:block"
-                                                    src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg"
-                                                    alt=">">
-                                            </div>
-                                        </div>
-                                        <img class="block sm:hidden"
-                                            src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg"
-                                            alt=">">
-                                    </div>
-
-                                    <hr class="block sm:hidden">
-
-                                    <div class="md:h-28 lg:h-auto sm:rounded-xl sm:border sm:px-6 flex sm:py-4">
-                                        <div class="flex-1 flex flex-col gap-y-3 sm:justify-center sm:h-full">
-                                            <div class="flex items-center justify-between w-full">
-                                                <div
-                                                    class="flex flex-col gap-y-2 sm:flex-row items-start sm:items-center gap-x-3 w-full">
-                                                    <img src="../assets/images/icon/service/ch.svg" alt="">
-                                                    <span class="inline-block text-base font-semibold">바오로딸 인터넷서점</span>
-                                                </div>
-                                                <img src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg"
-                                                    alt=">">
-                                            </div>
-
-                                            <hr>
-
-                                            <div class="flex items-center justify-between gap-x-3">
-                                                <div class="flex-1 flex items-center justify-between">
-                                                    <span
-                                                        class="inline-block text-sm font-medium whitespace-nowrap">이메일</span>
-                                                    <h5 class="text-base font-medium">grace@pauline.or.kr</h5>
-                                                </div>
-
-                                                <button
-                                                    class="text-13-l-18 font-semibold rounded border px-2 py-1 whitespace-nowrap">
-                                                    복사
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="flex items-center sm:justify-between gap-2 flex-wrap sm:flex-nowrap">
+                                <button class="text-15-l-22 font-semibold py-2.5 rounded-lg border text-center w-20 sm:flex-1 whitespace-nowrap">상품권</button>
+                                <button class="text-15-l-22 font-semibold py-2.5 rounded-lg border text-center w-20 sm:flex-1 whitespace-nowrap">방문수령</button>
+                                <button class="text-15-l-22 font-semibold py-2.5 rounded-lg border text-center w-20 sm:flex-1 whitespace-nowrap">소득공제</button>
+                                <button class="text-15-l-22 font-semibold py-2.5 rounded-lg border text-center w-20 sm:flex-1 whitespace-nowrap">마일리지</button>
+                                <button class="text-15-l-22 font-semibold py-2.5 rounded-lg border text-center  flex-1 whitespace-nowrap">세금계산서/증빙서류</button>
                             </div>
                         </div>
 
-                        <div class="h-2 w-full block sm:hidden" style="background-color: rgba(247, 247, 248, 1);"></div>
+                        <div class="h-2 bg-gray-100 block sm:hidden"></div>
 
-                        <div class="sm:space-y-5">
-                            <div class="flex items-center justify-between p-5 sm:pb-3 border-b sm:border-black">
-                                <h4 class="text-1724-2230 font-semibold">자주 묻는 질문</h4>
-
-                                <div class="flex items-center justify-center gap-x-1 cursor-pointer">
-                                    <span class="inline-block text-sm font-medium text-gray-400">더보기</span>
-                                    <div>
-                                        <img src="../assets/images/icon/footer/add.svg" alt="icon">
+                        <div>
+                            <div class="p-5 sm:p-0 sm:py-8 flex items-center justify-center sm:bg-blue-50 rounded-lg">
+                                <div class="flex items-center justify-center gap-x-2">
+                                    <div class="rounded border px-4 bg-white flex items-center" style="height: 42px;">
+                                        <input type="text" class="w-full bg-transparent text-15-l-22 font-normal text-gray-400" placeholder="질문을 검색해 보세요">
                                     </div>
+                                    <button class="rounded bg-blue-500 text-white py-2.5 px-7 text-15-l-22 font-semibold whitespace-nowrap">
+                                        검색
+                                    </button>
                                 </div>
                             </div>
 
-                            <div class="p-5 sm:p-0 flex gap-x-5 gap-y-2.5 flex-wrap">
-                                <div class="rounded border p-5 flex frequently-asked-questions-item-size">
-                                    <div class="py-0.5 flex items-center justify-between w-full">
-                                        <p class="text-sm font-medium">회원 정보 수정은 어떻게 하나요?</p>
-                                        <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-xs font-medium text-blue-500">
-                                            01
+                            <div class="h-1-px bg-black hidden sm:block"></div>
+
+                            <div class="px-5">
+
+                                <div class="py-6 space-y-5 border-b">
+                                    <div class="pl-3 sm:px-5 flex items-center justify-between gap-x-3">
+                                        <div class="flex items-center gap-x-3 sm:gap-x-10">
+                                            <span class="inline-block text-base font-semibold text-blue-500">Q</span>
+                                            <div class="space-y-1.5">
+                                                <span class="inline-block text-xs font-medium py-1 px-2.5 rounded-full bg-blue-100 text-blue-500">영수증 / 세금계산서</span>
+                                                <p class="text-15-l-22 font-medium">주문 결제 시 도서 소득공제를 신청하지 못했습니다. 주문 후 신청이 가능한가요?</p>
+                                            </div>
+                                        </div>
+                                        <div class="w-6 h-6 cursor-pointer" onclick="toggleFAQ('#a1-content', '#a1-icon')">
+                                            <i id="a1-icon" class="fa-solid fa-chevron-down text-gray-400"></i>
                                         </div>
                                     </div>
-                                </div>
-                                
-                                <div class="rounded border p-5 flex frequently-asked-questions-item-size">
-                                    <div class="py-0.5 flex items-center justify-between w-full">
-                                        <p class="text-sm font-medium">회원 정보 수정은 어떻게 하나요?</p>
-                                        <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-xs font-medium text-blue-500">
-                                            02
-                                        </div>
-                                    </div>    
-                                </div>
-                                
-                                <div class="rounded border p-5 flex frequently-asked-questions-item-size">
-                                    <div class="py-0.5 flex items-center justify-between w-full">
-                                        <p class="text-sm font-medium">회원 정보 수정은 어떻게 하나요?</p>
-                                        <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-xs font-medium text-blue-500">
-                                            03
-                                        </div>
+
+                                    <div id="a1-content" class="flex items-center gap-x-3 sm:gap-x-10 py-3 sm:py-8 px-3 sm:px-5 bg-blue-50 rounded-xl border border-blue-100 hidden">
+                                        <span class="inline-block text-base font-semibold text-blue-500">A</span>
+                                        <p class="text-15-l-24 font-normal">주문 후 신청은 불가합니다. 출고 이전이라면 주문을 전체 취소 하신 후 다시 주문을 해주셔야 합니다.</p>
                                     </div>
                                 </div>
-                                
-                                <div class="rounded border p-5 flex frequently-asked-questions-item-size">
-                                    <div class="py-0.5 flex items-center justify-between w-full">
-                                        <p class="text-sm font-medium">회원 정보 수정은 어떻게 하나요?</p>
-                                        <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-xs font-medium text-blue-500">
-                                            04
+
+                                <div class="py-6 space-y-5 border-b">
+                                    <div class="pl-3 sm:px-5 flex items-center justify-between gap-x-3">
+                                        <div class="flex items-center gap-x-3 sm:gap-x-10">
+                                            <span class="inline-block text-base font-semibold text-blue-500">Q</span>
+                                            <div class="space-y-1.5">
+                                                <span class="inline-block text-xs font-medium py-1 px-2.5 rounded-full bg-blue-100 text-blue-500">영수증 / 세금계산서</span>
+                                                <p class="text-15-l-22 font-medium">주문 결제 시 도서 소득공제를 신청하지 못했습니다. 주문 후 신청이 가능한가요?</p>
+                                            </div>
+                                        </div>
+                                        <div class="w-6 h-6 cursor-pointer" onclick="toggleFAQ('#a2-content', '#a2-icon')">
+                                            <i id="a2-icon" class="fa-solid fa-chevron-down text-gray-400"></i>
                                         </div>
                                     </div>
+
+                                    <div id="a2-content" class="flex items-center gap-x-3 sm:gap-x-10 py-3 sm:py-8 px-3 sm:px-5 bg-blue-50 rounded-xl border border-blue-100 hidden">
+                                        <span class="inline-block text-base font-semibold text-blue-500">A</span>
+                                        <p class="text-15-l-24 font-normal">주문 후 신청은 불가합니다. 출고 이전이라면 주문을 전체 취소 하신 후 다시 주문을 해주셔야 합니다.</p>
+                                    </div>
                                 </div>
+                               
                                 
                             </div>
                         </div>
 
-                        <div class="h-2 w-full block sm:hidden" style="background-color: rgba(247, 247, 248, 1);"></div>
-
-                        <div class="sm:space-y-5">
-                            <div class="flex items-center justify-between p-5 sm:pb-3 border-b sm:border-black">
-                                <h4 class="text-1724-2230 font-semibold">공지사항</h4>
-
-                                <div class="flex items-center justify-center gap-x-1 cursor-pointer">
-                                    <span class="inline-block text-sm font-medium text-gray-400">더보기</span>
-                                    <div>
-                                        <img src="../assets/images/icon/footer/add.svg" alt="icon">
+                        <div class="px-5 sm:p-0 space-y-5 mt-5 sm:mt-8">                           
+                            <div class="flex items-center justify-center">
+                                <div class="flex items-center">
+                                    <button class="p-1 sm:p-2">
+                                        <img class="w-6 h-6" src="../assets/images/icon/common/prev-to-first.svg" alt="icon">
+                                    </button>
+                                    <button class="p-1 sm:p-2">
+                                        <img class="w-6 h-6" src="../assets/images/icon/common/prev.svg" alt="icon">
+                                    </button>
+        
+                                    <div class="flex items-center">
+                                        <button class="p-1 sm:p-2">
+                                            <span class="w-6 h-6 rounded-full bg-black text-white text-13-l-18 font-medium flex items-center justify-center">1</span>
+                                        </button>
+                                        <button class="p-1 sm:p-2">
+                                            <span class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">2</span>
+                                        </button>
+                                        <button class="p-1 sm:p-2">
+                                            <span class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">3</span>
+                                        </button>
+                                        <button class="p-1 sm:p-2">
+                                            <span class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">4</span>
+                                        </button>
+                                        <button class="p-1 sm:p-2">
+                                            <span class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">5</span>
+                                        </button>
                                     </div>
+        
+                                    <button class="p-1 sm:p-2">
+                                        <img class="w-6 h-6" src="../assets/images/icon/common/next.svg" alt="icon">
+                                    </button>
+                                    <button class="p-1 sm:p-2">
+                                        <img class="w-6 h-6" src="../assets/images/icon/common/next-to-end.svg" alt="icon">
+                                    </button>
                                 </div>
                             </div>
-
-                            <div class="px-5 sm:p-0 sm:space-y-5">
-                                <div class="hidden sm:flex items-center">
-                                    <div class="w-11 pr-2.5 text-15-l-22 font-medium text-gray-400">NO</div>
-                                    <div class="flex-1 px-2.5 text-15-l-22 font-medium text-gray-400 text-center">공지 제목</div>
-                                    <div class="w-32 px-2.5 text-15-l-22 font-medium text-gray-400 text-center">작성자</div>
-                                    <div class="w-24 pl-2.5 text-15-l-22 font-medium text-gray-400 text-center">등록일</div>
-                                </div>
-                                <div class="">
-                                    <div class="flex items-center flex-wrap gap-y-3 py-5 sm:py-6 border-b ">
-                                        <div class="hidden sm:block w-11 pr-2.5 text-15-l-22 font-normal">300</div>
-                                        <div class="flex-1 sm:px-2.5 text-15-l-22 font-medium text-start whitespace-nowrap">[지연] 생활성서 출판사 도서 배송 지연 안내</div>
-                                        <div class="w-auto sm:w-32 sm:px-2.5 text-15-l-22 font-normal text-center">관리자</div>
-                                        <div class="w-24 pl-2.5 text-sm font-normal text-gray-400 text-center">2024.09.09</div>
-                                    </div>
-                                    <div class="flex items-center flex-wrap gap-y-3 py-5 sm:py-6 border-b ">
-                                        <div class="hidden sm:block w-11 pr-2.5 text-15-l-22 font-normal">300</div>
-                                        <div class="flex-1 sm:px-2.5 text-15-l-22 font-medium text-start whitespace-nowrap">[지연] 생활성서 출판사 도서 배송 지연 안내</div>
-                                        <div class="w-auto sm:w-32 sm:px-2.5 text-15-l-22 font-normal text-center">관리자</div>
-                                        <div class="w-24 pl-2.5 text-sm font-normal text-gray-400 text-center">2024.09.09</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="h-2 w-full block sm:hidden" style="background-color: rgba(247, 247, 248, 1);"></div>
-                    </div>
+                        </div>                        
+                    </div>                    
                 </main>
                 <!-- start main -->
-
             </div>
         </div>
     </section>
 
-    <div class="h-72-px"></div>
+    <div class="h-11 sm:h-32"></div>
+    <div class="h-2 bg-gray-100 block sm:hidden"></div>
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
     <div class="fixed bottom-24 right-6 block sm:hidden z-50">
         <div class="flex flex-col justify-center items-center gap-1 shadow-lg rounded-full bg-white"
@@ -926,6 +876,14 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../assets/js/util.js"></script>
     <script src="../assets/js/common.js"></script>
+    
+    <script>
+        function toggleFAQ(aId, iconId) {
+            toggle(aId)
+            document.querySelector(iconId).classList.toggle('fa-chevron-up')
+            document.querySelector(iconId).classList.toggle('fa-chevron-down')
+        }
+    </script>
 </body>
 
 </html>

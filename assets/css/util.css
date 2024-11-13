@@ -180,6 +180,11 @@ ol li {
   line-height: 22px;
 }
 
+.text-1422-1524 {
+  font-size: 15px;
+  line-height: 24px;
+}
+
 .w-30px {
   width: 30px;
 }
@@ -670,6 +675,11 @@ input[type="number"] {
   height: 115px;
 }
 
+.frame-size-7272-160156 {
+  width: 160px;
+  height: 156px;
+}
+
 .frame-width-120-200 {
   width: 200px;
 }
@@ -703,6 +713,11 @@ input[type="number"] {
   .text-1216-1522 {
     font-size: 12px;
     line-height: 16px;
+  }
+
+  .text-1422-1524 {
+    font-size: 14px;
+    line-height: 22px;
   }
 
   .space-y-12-18 > *:not(:last-child) {
@@ -836,6 +851,12 @@ input[type="number"] {
     width: 72px;
     height: 72px;
   }
+
+  .frame-size-7272-160156 {
+    width: 72px;
+    height: 72px;
+  }
+  
 
   .width-image-book-detail-new {
     width: 420px;

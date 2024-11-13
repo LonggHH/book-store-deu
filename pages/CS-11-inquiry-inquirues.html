@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>고객센터 - 고객센터 메인</title>
+    <title>고객센터 - 고객센터 / 1:1 문의 / 문의하기</title>
 
     <!-- Link Font -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Link Tailwind -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Link Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="../assets/css/util.css">
     <link rel="stylesheet" href="../assets/css/CS/cs.css">
@@ -438,7 +442,14 @@
                     <span class="inline-block text-13-18 font-normal text-gray-400 whitespace-nowrap">/</span>
                 </div>
                 <div class="flex items-center gap-1">
-                    <span class="inline-block text-13-18 font-normal text-gray-400 whitespace-nowrap">전체</span>
+                    <span class="inline-block text-13-18 font-normal text-gray-400 whitespace-nowrap">1:1 문의</span>
+                    <img src="../assets/images/icon/category/breadcrumb-down.svg" alt="icon">
+                </div>
+                <div>
+                    <span class="inline-block text-13-18 font-normal text-gray-400 whitespace-nowrap">/</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <span class="inline-block text-13-18 font-normal text-gray-400 whitespace-nowrap">1:1 문의하기</span>
                     <img src="../assets/images/icon/category/breadcrumb-down.svg" alt="icon">
                 </div>
             </div>
@@ -464,14 +475,14 @@
                                 <ul class="space-y-3">
                                     <li class="flex items-center justify-between py-2 pl-2">
                                         <span class="inline-block text-sm font-semibold">공지사항</span>
-                                        <img class="hidden" src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg"
-                                            alt=">">
                                     </li>
                                     <li class="flex items-center justify-between py-2 pl-2">
                                         <span class="inline-block text-sm font-semibold">자주 묻는 질문</span>
                                     </li>
                                     <li class="flex items-center justify-between py-2 pl-2">
                                         <span class="inline-block text-sm font-semibold">1:1 문의</span>
+                                        <img src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg"
+                                            alt=">">
                                     </li>
                                     <li class="rounded-md border px-5 py-2.5">
                                         <ul class="space-y-2">
@@ -505,192 +516,143 @@
 
                 <!-- start main -->
                 <main class="cs-main-size">
-                    <div class="space-y-0-18">
+                    <div class="">
 
-                        <div class="space-y-3">
-                            <div class="sm:rounded-xl overflow-hidden p-8 space-y-5"
-                                style="background: linear-gradient(to right, #ECFCFF, #FFE8FF);">
-                                <div class="space-y-3">
-                                    <h4 class="text-2028-2432 font-bold">
-                                        궁금하신 점, <br>
-                                        불편하신 점 무엇이든 문의해 주세요.
-                                    </h4>
+                        <div class="">
+                            <div class="px-5 sm:px-0 py-5 sm:p-0 sm:pb-3 border-b sm:border-black">
+                                <h4 class="text-1724-2230 font-semibold">1:1 문의하기</h4>                                
+                            </div>
+                        </div>
 
-                                    <p class="text-sm font-normal">항상 함께하는 바오로딸 고객만족센터 입니다.</p>
+                        <div class="p-5 sm:p-0 sm:mt-5 sm:mb-2">
+                            <div class="space-y-5">
+                                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-y-3 gap-x-12 sm:py-2.5">
+                                    <label class="inline-block w-20 text-sm font-medium">작성자</label>
+                                    <span class="inline-block flex-1 text-15-l-22 font-medium">홍길동</span>
                                 </div>
 
-                                <div class="h-1-px bg-highlight"></div>
-                            </div>
+                                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-y-2 gap-x-12">
+                                    <label class="inline-block w-20 text-sm font-medium">구분 <span class="text-red-500">*</span> </label>
+                                    <select name="" id="" class="flex-1 text-15-l-22 font-normal text-gray-400 px-4 py-2.5 rounded border">
+                                        <option value="">문의 카테고리를 선택해 주세요</option>
+                                    </select>
+                                </div>
 
-                            <div class="p-5 sm:p-0">
-                                <div
-                                    class="flex flex-col sm:flex-row gap-y-5 gap-x-3 justify-start lg:justify-between sm:items-stretch flex-wrap ">
-                                    <div class="sm:rounded-xl sm:border sm:p-6 flex items-center sm:flex-none">
-                                        <div class="flex-1 sm:flex-none space-y-1 sm:space-y-0.5">
-                                            <h4 class="text-sm font-medium">전화 상담</h4>
-                                            <h5 class="text-2028-2230 font-semibold">02.944.0807</h5>
-                                            <p class="text-11-l-14 font-normal">평일 9시~18시 | 점심시간 12시30분~13시 30분</p>
-                                        </div>
-                                        <img class="block sm:hidden"
-                                            src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg"
-                                            alt=">">
+                                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-y-2 gap-x-12">
+                                    <label class="inline-block w-20 text-sm font-medium">제목 <span class="text-red-500">*</span> </label>
+                                    <div class="flex-1 px-4 py-2 rounded border">
+                                        <input name="" id="" class="w-full text-15-l-22 font-normal text-gray-400 " placeholder="제목을 입력해 주세요." style="height: 22px;">
                                     </div>
+                                </div>
+                                
+                                <div class="flex flex-col sm:flex-row justify-between gap-y-2 gap-x-12">
+                                    <label class="inline-block w-20 text-sm font-medium">내용 <span class="text-red-500">*</span> </label>
 
-                                    <hr class="block sm:hidden">
-
-                                    <div class="sm:rounded-xl sm:border sm:p-6 flex items-center sm:flex-none">
-                                        <div
-                                            class="flex-1  flex flex-col items-start gap-y-1 sm:justify-between sm:h-full">
-                                            <h4 class="text-sm font-medium">1:1 문의</h4>
-
-                                            <div class="flex items-center gap-x-2 justify-between">
-                                                <h5 class="text-2028-2230 font-semibold">02.944.0807</h5>
-                                                <img class="hidden sm:block"
-                                                    src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg"
-                                                    alt=">">
-                                            </div>
+                                    <div class="flex-1 relative">
+                                        <textarea id="textarea" 
+                                            class="custom-scroll w-full h-40 sm:h-52 py-2.5 px-4 border rounded-xl resize-none text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                                                maxlength="3000" 
+                                                oninput="updateCharacterCount()"
+                                                placeholder="악의적인 의도, 남을 비방하는 목적 등의 글은 사전 고지 없이 임의로 삭제될 수 있습니다. 내용은 10자 이상, 최대 3000자까지 작성이 가능합니다"
+                                            >
+                                        </textarea>
+                                        <div class="absolute bottom-5 right-5 flex items-center text-gray-400 mt-1 text-xs font-normal">
+                                            <span id="charCount" class="inline-block text-xs font-normal">0</span>/3000
                                         </div>
-                                        <img class="block sm:hidden"
-                                            src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg"
-                                            alt=">">
                                     </div>
+                                </div>
 
-                                    <hr class="block sm:hidden">
-
-                                    <div class="md:h-28 lg:h-auto sm:rounded-xl sm:border sm:px-6 flex sm:py-4">
-                                        <div class="flex-1 flex flex-col gap-y-3 sm:justify-center sm:h-full">
-                                            <div class="flex items-center justify-between w-full">
-                                                <div
-                                                    class="flex flex-col gap-y-2 sm:flex-row items-start sm:items-center gap-x-3 w-full">
-                                                    <img src="../assets/images/icon/service/ch.svg" alt="">
-                                                    <span class="inline-block text-base font-semibold">바오로딸 인터넷서점</span>
+                                <div class="flex flex-col sm:flex-row justify-between gap-y-2 gap-x-12">
+                                    <label class="inline-block w-20 text-sm font-medium">사진첨부 <span class="inline-block text-sm font-normal text-gray-400">0/3</span></label>
+                                    
+                                    <div class="flex-1">
+                                        <input id="input-image" type="file" accept="image/*" hidden>
+                                        <label for="input-image" class="cursor-pointer frame-size-7272-160156 flex justify-center items-center rounded-xl border-dashed border bg-gray-100"                                                        >
+                                            <div class="flex flex-col items-center justify-center gap-y-3">
+                                                <div class="flex items-center gap-x-1">                                                    
+                                                    <div class="w-6 h-6 flex items-center justify-center">
+                                                        <i class="text-lg fa-solid fa-plus"></i>
+                                                    </div>
                                                 </div>
-                                                <img src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg"
-                                                    alt=">">
+                                                <p class="hidden sm:block text-xs font-normal text-gray-400 text-center">*JPG, PNG, JPEG 파일(건당 30MG)만 최대 5장 업로드 가능합니다</p>
                                             </div>
+                                        </label>
+                                        <p class="block sm:hidden text-xs font-normal text-gray-400 mt-2">*JPG, PNG, JPEG 파일(건당 30MG)만 최대 5장 업로드 가능합니다</p>
+                                    </div>
+                                </div>
 
-                                            <hr>
+                                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-y-3 gap-x-12 sm:py-2.5">
+                                    <label class="inline-block w-20 text-sm font-medium">이메일</label>
+                                    <span class="inline-block flex-1 text-15-l-22 font-medium">email@naver.com</span>
+                                </div>
 
-                                            <div class="flex items-center justify-between gap-x-3">
-                                                <div class="flex-1 flex items-center justify-between">
-                                                    <span
-                                                        class="inline-block text-sm font-medium whitespace-nowrap">이메일</span>
-                                                    <h5 class="text-base font-medium">grace@pauline.or.kr</h5>
+                                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-y-3 gap-x-12 sm:py-2.5">
+                                    <label class="inline-block w-20 text-sm font-medium">휴대폰 번호</label>
+                                    <span class="inline-block flex-1 text-15-l-22 font-medium">010.0000.0000</span>
+                                </div>
+
+                                <hr>
+
+                                <div class="space-y-5">
+                                    <div class="space-y-2">
+                                        <h4 class="text-15-l-22 font-medium">답변이 등록될 때 알림을 받으시겠습니까?</h4>
+                                        <p class="text-xs font-normal text-gray-400">(이메일과 전화번호는 마이페이지>내 정보 확인/수정에서 변경할 수 있습니다.)</p>
+                                    </div>
+
+                                    <div>
+                                        <ul class="space-y-3">
+                                            <li class="flex items-center gap-x-3 ">
+                                                <div class="w-6 h-6 flex items-center justify-center">
+                                                    <input type="radio" class="inline-block h-5 w-5">
                                                 </div>
-
-                                                <button
-                                                    class="text-13-l-18 font-semibold rounded border px-2 py-1 whitespace-nowrap">
-                                                    복사
-                                                </button>
-                                            </div>
-                                        </div>
+                                                <label for="" class="inline-block text-sm font-normal">이메일과 문자 모두</label>
+                                            </li>
+                                            <li class="flex items-center gap-x-3 ">
+                                                <div class="w-6 h-6 flex items-center justify-center">
+                                                    <input type="radio" class="inline-block h-5 w-5">
+                                                </div>
+                                                <label for="" class="inline-block text-sm font-normal">이메일</label>
+                                            </li>                                       
+                                            <li class="flex items-center gap-x-3 ">
+                                                <div class="w-6 h-6 flex items-center justify-center">
+                                                    <input type="radio" class="inline-block h-5 w-5">
+                                                </div>
+                                                <label for="" class="inline-block text-sm font-normal">문자</label>
+                                            </li>                                       
+                                            <li class="flex items-center gap-x-3 ">
+                                                <div class="w-6 h-6 flex items-center justify-center">
+                                                    <input type="radio" class="inline-block h-5 w-5">
+                                                </div>
+                                                <label for="" class="inline-block text-sm font-normal">카카오톡</label>
+                                            </li>                                       
+                                            <li class="flex items-center gap-x-3 ">
+                                                <div class="w-6 h-6 flex items-center justify-center">
+                                                    <input type="radio" class="inline-block h-5 w-5">
+                                                </div>
+                                                <label for="" class="inline-block text-sm font-normal">받지 않음</label>
+                                            </li>                                       
+                                        </ul>
                                     </div>
+
+                                    <div class="h-1-px border-b"></div>
                                 </div>
+
                             </div>
                         </div>
-
-                        <div class="h-2 w-full block sm:hidden" style="background-color: rgba(247, 247, 248, 1);"></div>
-
-                        <div class="sm:space-y-5">
-                            <div class="flex items-center justify-between p-5 sm:pb-3 border-b sm:border-black">
-                                <h4 class="text-1724-2230 font-semibold">자주 묻는 질문</h4>
-
-                                <div class="flex items-center justify-center gap-x-1 cursor-pointer">
-                                    <span class="inline-block text-sm font-medium text-gray-400">더보기</span>
-                                    <div>
-                                        <img src="../assets/images/icon/footer/add.svg" alt="icon">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="p-5 sm:p-0 flex gap-x-5 gap-y-2.5 flex-wrap">
-                                <div class="rounded border p-5 flex frequently-asked-questions-item-size">
-                                    <div class="py-0.5 flex items-center justify-between w-full">
-                                        <p class="text-sm font-medium">회원 정보 수정은 어떻게 하나요?</p>
-                                        <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-xs font-medium text-blue-500">
-                                            01
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="rounded border p-5 flex frequently-asked-questions-item-size">
-                                    <div class="py-0.5 flex items-center justify-between w-full">
-                                        <p class="text-sm font-medium">회원 정보 수정은 어떻게 하나요?</p>
-                                        <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-xs font-medium text-blue-500">
-                                            02
-                                        </div>
-                                    </div>    
-                                </div>
-                                
-                                <div class="rounded border p-5 flex frequently-asked-questions-item-size">
-                                    <div class="py-0.5 flex items-center justify-between w-full">
-                                        <p class="text-sm font-medium">회원 정보 수정은 어떻게 하나요?</p>
-                                        <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-xs font-medium text-blue-500">
-                                            03
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="rounded border p-5 flex frequently-asked-questions-item-size">
-                                    <div class="py-0.5 flex items-center justify-between w-full">
-                                        <p class="text-sm font-medium">회원 정보 수정은 어떻게 하나요?</p>
-                                        <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-xs font-medium text-blue-500">
-                                            04
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
+                        
+                        <div class="flex items-center justify-center">
+                            <button class="text-15-l-22 font-semibold py-2.5 px-7 rounded border bg-gray-200 text-gray-400">등록하기</button>
                         </div>
-
-                        <div class="h-2 w-full block sm:hidden" style="background-color: rgba(247, 247, 248, 1);"></div>
-
-                        <div class="sm:space-y-5">
-                            <div class="flex items-center justify-between p-5 sm:pb-3 border-b sm:border-black">
-                                <h4 class="text-1724-2230 font-semibold">공지사항</h4>
-
-                                <div class="flex items-center justify-center gap-x-1 cursor-pointer">
-                                    <span class="inline-block text-sm font-medium text-gray-400">더보기</span>
-                                    <div>
-                                        <img src="../assets/images/icon/footer/add.svg" alt="icon">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="px-5 sm:p-0 sm:space-y-5">
-                                <div class="hidden sm:flex items-center">
-                                    <div class="w-11 pr-2.5 text-15-l-22 font-medium text-gray-400">NO</div>
-                                    <div class="flex-1 px-2.5 text-15-l-22 font-medium text-gray-400 text-center">공지 제목</div>
-                                    <div class="w-32 px-2.5 text-15-l-22 font-medium text-gray-400 text-center">작성자</div>
-                                    <div class="w-24 pl-2.5 text-15-l-22 font-medium text-gray-400 text-center">등록일</div>
-                                </div>
-                                <div class="">
-                                    <div class="flex items-center flex-wrap gap-y-3 py-5 sm:py-6 border-b ">
-                                        <div class="hidden sm:block w-11 pr-2.5 text-15-l-22 font-normal">300</div>
-                                        <div class="flex-1 sm:px-2.5 text-15-l-22 font-medium text-start whitespace-nowrap">[지연] 생활성서 출판사 도서 배송 지연 안내</div>
-                                        <div class="w-auto sm:w-32 sm:px-2.5 text-15-l-22 font-normal text-center">관리자</div>
-                                        <div class="w-24 pl-2.5 text-sm font-normal text-gray-400 text-center">2024.09.09</div>
-                                    </div>
-                                    <div class="flex items-center flex-wrap gap-y-3 py-5 sm:py-6 border-b ">
-                                        <div class="hidden sm:block w-11 pr-2.5 text-15-l-22 font-normal">300</div>
-                                        <div class="flex-1 sm:px-2.5 text-15-l-22 font-medium text-start whitespace-nowrap">[지연] 생활성서 출판사 도서 배송 지연 안내</div>
-                                        <div class="w-auto sm:w-32 sm:px-2.5 text-15-l-22 font-normal text-center">관리자</div>
-                                        <div class="w-24 pl-2.5 text-sm font-normal text-gray-400 text-center">2024.09.09</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="h-2 w-full block sm:hidden" style="background-color: rgba(247, 247, 248, 1);"></div>
+                                      
                     </div>
                 </main>
                 <!-- start main -->
-
             </div>
         </div>
     </section>
 
-    <div class="h-72-px"></div>
+    <div class="h-11 sm:h-32"></div>
+    <div class="h-2 bg-gray-100 block sm:hidden"></div>
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
     <div class="fixed bottom-24 right-6 block sm:hidden z-50">
         <div class="flex flex-col justify-center items-center gap-1 shadow-lg rounded-full bg-white"
@@ -925,7 +887,14 @@
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../assets/js/util.js"></script>
-    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/common.js"></script>   
+    <script>
+        function updateCharacterCount() {
+            const textarea = document.getElementById("textarea");
+            const charCount = document.getElementById("charCount");
+            charCount.textContent = textarea.value.length;
+        }
+    </script>
 </body>
 
 </html>

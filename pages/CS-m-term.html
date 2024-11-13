@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>고객센터 - 고객센터 메인</title>
+    <title>고객센터 - 이용약관</title>
 
     <!-- Link Font -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
@@ -12,10 +12,27 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Link Tailwind -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Link Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="../assets/css/util.css">
     <link rel="stylesheet" href="../assets/css/CS/cs.css">
     <link rel="stylesheet" href="../assets/css/CO/co.css">
+
+    <style>
+        .hanging-indent ol {
+    list-style-position: inside;
+    padding-left: 1.25rem;
+}
+
+.hanging-indent li {
+    text-indent: -1.25rem;
+    padding-left: 1.25rem;
+}
+
+    </style>
 </head>
 
 <body>
@@ -438,7 +455,7 @@
                     <span class="inline-block text-13-18 font-normal text-gray-400 whitespace-nowrap">/</span>
                 </div>
                 <div class="flex items-center gap-1">
-                    <span class="inline-block text-13-18 font-normal text-gray-400 whitespace-nowrap">전체</span>
+                    <span class="inline-block text-13-18 font-normal text-gray-400 whitespace-nowrap">서비스 이용약관</span>
                     <img src="../assets/images/icon/category/breadcrumb-down.svg" alt="icon">
                 </div>
             </div>
@@ -464,14 +481,12 @@
                                 <ul class="space-y-3">
                                     <li class="flex items-center justify-between py-2 pl-2">
                                         <span class="inline-block text-sm font-semibold">공지사항</span>
-                                        <img class="hidden" src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg"
-                                            alt=">">
                                     </li>
                                     <li class="flex items-center justify-between py-2 pl-2">
                                         <span class="inline-block text-sm font-semibold">자주 묻는 질문</span>
                                     </li>
                                     <li class="flex items-center justify-between py-2 pl-2">
-                                        <span class="inline-block text-sm font-semibold">1:1 문의</span>
+                                        <span class="inline-block text-sm font-semibold">1:1 문의</span>                                        
                                     </li>
                                     <li class="rounded-md border px-5 py-2.5">
                                         <ul class="space-y-2">
@@ -489,11 +504,13 @@
                                             <hr>
                                             <li class="flex items-center justify-between">
                                                 <span class="inline-block text-xs font-medium truncate">바오로딸 목록
-                                                    다운로드</span>
+                                                    다운로드</span>                                                
                                             </li>
                                             <hr>
                                             <li class="flex items-center justify-between">
                                                 <span class="inline-block text-xs font-medium">서비스 이용 약관</span>
+                                                <img src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg"
+                                                    alt=">">
                                             </li>
                                         </ul>
                                     </li>
@@ -505,192 +522,91 @@
 
                 <!-- start main -->
                 <main class="cs-main-size">
-                    <div class="space-y-0-18">
-
-                        <div class="space-y-3">
-                            <div class="sm:rounded-xl overflow-hidden p-8 space-y-5"
-                                style="background: linear-gradient(to right, #ECFCFF, #FFE8FF);">
-                                <div class="space-y-3">
-                                    <h4 class="text-2028-2432 font-bold">
-                                        궁금하신 점, <br>
-                                        불편하신 점 무엇이든 문의해 주세요.
-                                    </h4>
-
-                                    <p class="text-sm font-normal">항상 함께하는 바오로딸 고객만족센터 입니다.</p>
-                                </div>
-
-                                <div class="h-1-px bg-highlight"></div>
-                            </div>
-
-                            <div class="p-5 sm:p-0">
-                                <div
-                                    class="flex flex-col sm:flex-row gap-y-5 gap-x-3 justify-start lg:justify-between sm:items-stretch flex-wrap ">
-                                    <div class="sm:rounded-xl sm:border sm:p-6 flex items-center sm:flex-none">
-                                        <div class="flex-1 sm:flex-none space-y-1 sm:space-y-0.5">
-                                            <h4 class="text-sm font-medium">전화 상담</h4>
-                                            <h5 class="text-2028-2230 font-semibold">02.944.0807</h5>
-                                            <p class="text-11-l-14 font-normal">평일 9시~18시 | 점심시간 12시30분~13시 30분</p>
-                                        </div>
-                                        <img class="block sm:hidden"
-                                            src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg"
-                                            alt=">">
-                                    </div>
-
-                                    <hr class="block sm:hidden">
-
-                                    <div class="sm:rounded-xl sm:border sm:p-6 flex items-center sm:flex-none">
-                                        <div
-                                            class="flex-1  flex flex-col items-start gap-y-1 sm:justify-between sm:h-full">
-                                            <h4 class="text-sm font-medium">1:1 문의</h4>
-
-                                            <div class="flex items-center gap-x-2 justify-between">
-                                                <h5 class="text-2028-2230 font-semibold">02.944.0807</h5>
-                                                <img class="hidden sm:block"
-                                                    src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg"
-                                                    alt=">">
-                                            </div>
-                                        </div>
-                                        <img class="block sm:hidden"
-                                            src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg"
-                                            alt=">">
-                                    </div>
-
-                                    <hr class="block sm:hidden">
-
-                                    <div class="md:h-28 lg:h-auto sm:rounded-xl sm:border sm:px-6 flex sm:py-4">
-                                        <div class="flex-1 flex flex-col gap-y-3 sm:justify-center sm:h-full">
-                                            <div class="flex items-center justify-between w-full">
-                                                <div
-                                                    class="flex flex-col gap-y-2 sm:flex-row items-start sm:items-center gap-x-3 w-full">
-                                                    <img src="../assets/images/icon/service/ch.svg" alt="">
-                                                    <span class="inline-block text-base font-semibold">바오로딸 인터넷서점</span>
-                                                </div>
-                                                <img src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg"
-                                                    alt=">">
-                                            </div>
-
-                                            <hr>
-
-                                            <div class="flex items-center justify-between gap-x-3">
-                                                <div class="flex-1 flex items-center justify-between">
-                                                    <span
-                                                        class="inline-block text-sm font-medium whitespace-nowrap">이메일</span>
-                                                    <h5 class="text-base font-medium">grace@pauline.or.kr</h5>
-                                                </div>
-
-                                                <button
-                                                    class="text-13-l-18 font-semibold rounded border px-2 py-1 whitespace-nowrap">
-                                                    복사
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="">
+                        <div class="flex items-center justify-between p-5 sm:p-0 sm:pb-3 border-b sm:border-black">
+                            <h4 class="text-1724-2230 font-semibold">서비스 이용 약관</h4>
                         </div>
+                        
+                        <div class="px-5 sm:px-0">
+                            <div class="py-6 border-b space-y-4">
+                                <div class="flex items-center justify-between" onclick="toggleTerm('#term-content-1', '#term-icon-1')">
+                                    <h4 class="text-1522-1826 font-semibold">바오로딸 가톨릭 인터넷서점 이용약관</h4>
+                                    <div class="w-6 h-6">
+                                        <i id="term-icon-1" class="text-gray-400 fa-solid fa-chevron-down"></i>
+                                    </div>
+                                </div>
 
-                        <div class="h-2 w-full block sm:hidden" style="background-color: rgba(247, 247, 248, 1);"></div>
+                                <div id="term-content-1" class="rounded-lg bg-blue-50 px-5 py-5 sm:py-8 space-y-3 hidden">                                    
+                                    <h4 class="text-1522-1626 font-semibold">제1장 총칙</h4>
 
-                        <div class="sm:space-y-5">
-                            <div class="flex items-center justify-between p-5 sm:pb-3 border-b sm:border-black">
-                                <h4 class="text-1724-2230 font-semibold">자주 묻는 질문</h4>
+                                    <h4 class="text-15-l-22 font-semibold">제1조 (목적)</h4>
+                                    
+                                    <p class="text-1422-1524 font-normal">
+                                        본 약관은 (재)성바오로딸수도회에서 운영하는 가톨릭인터넷서점 바오로딸 (이하 "바오로딸"이라 합니다.)에서 제공하는 유무선 인터넷 관련 서비스와 가톨릭 정보제공 서비스(이하 "서비스"라 합니다.)및 부가 서비스를 이용함에 있어 바오로딸과 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다. ※「PC통신, 무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는 한 이 약관을 준용합니다」
+                                    </p>
 
-                                <div class="flex items-center justify-center gap-x-1 cursor-pointer">
-                                    <span class="inline-block text-sm font-medium text-gray-400">더보기</span>
+                                    <h4 class="text-15-l-22 font-semibold">제2조 (약관의 효력 및 변경)</h4>
+
                                     <div>
-                                        <img src="../assets/images/icon/footer/add.svg" alt="icon">
+                                        <ul class="list-decimal list-outside pl-6 text-1422-1524 font-normal space-y-1">
+                                            <li>본 약관은 인터넷 서비스화면(www.pauline.or.kr)에 게시하거나 이용자에게 공시함으로써 효력을 발생합니다.</li>
+                                            <li>“바오로딸”은 약관을 변경할 수 있으며 변경된 약관은 1항과 같은 방법으로 효력을 발생합니다.</li>
+                                            <li>“바오로딸”이 약관을 변경할 경우에는 변경된 약관은 그 적용일 이후에 체결되는 계약에만 적용되고 그 시점 이전의 계약에 대해서는 소급 적용되지 않습니다. 단, 이미 계약을 체결한 이용자가 변경된 약관 조항의 적용을 받기 원하는 경우에는 “바오로딸”에 의사를 표명하여 “바오로딸”의 동의를 받은 경우에는 변경된 조항이 적용됩니다.</li>
+                                        </ul>
                                     </div>
+
+                                    <h4 class="text-15-l-22 font-semibold">제3조 (약관 외 준칙)</h4>
+
+                                    <p class="text-1422-1524 font-normal">
+                                        본 약관에 정의되지 않은 사항은 약관의 규제들에 관한 법령, 전자상거래 기본법, 정보통신망이용 촉진 등에 관한 법률 확보, 전기통신기본법, 전기통신사업법, 전자서명법, 소비자보호법 등 관련 법령의 규정에 의합니다.
+                                    </p>                                    
                                 </div>
                             </div>
 
-                            <div class="p-5 sm:p-0 flex gap-x-5 gap-y-2.5 flex-wrap">
-                                <div class="rounded border p-5 flex frequently-asked-questions-item-size">
-                                    <div class="py-0.5 flex items-center justify-between w-full">
-                                        <p class="text-sm font-medium">회원 정보 수정은 어떻게 하나요?</p>
-                                        <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-xs font-medium text-blue-500">
-                                            01
-                                        </div>
+                            <!-- <div class="py-6 border-b space-y-4">
+                                <div class="flex items-center justify-between" onclick="toggleTerm('#term-content-2', '#term-icon-2')">
+                                    <h4 class="text-1522-1826 font-semibold">바오로딸 가톨릭 인터넷서점 이용약관</h4>
+                                    <div class="w-6 h-6">
+                                        <i id="term-icon-2" class="text-gray-400 fa-solid fa-chevron-down"></i>
                                     </div>
                                 </div>
-                                
-                                <div class="rounded border p-5 flex frequently-asked-questions-item-size">
-                                    <div class="py-0.5 flex items-center justify-between w-full">
-                                        <p class="text-sm font-medium">회원 정보 수정은 어떻게 하나요?</p>
-                                        <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-xs font-medium text-blue-500">
-                                            02
-                                        </div>
-                                    </div>    
-                                </div>
-                                
-                                <div class="rounded border p-5 flex frequently-asked-questions-item-size">
-                                    <div class="py-0.5 flex items-center justify-between w-full">
-                                        <p class="text-sm font-medium">회원 정보 수정은 어떻게 하나요?</p>
-                                        <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-xs font-medium text-blue-500">
-                                            03
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="rounded border p-5 flex frequently-asked-questions-item-size">
-                                    <div class="py-0.5 flex items-center justify-between w-full">
-                                        <p class="text-sm font-medium">회원 정보 수정은 어떻게 하나요?</p>
-                                        <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-xs font-medium text-blue-500">
-                                            04
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
 
-                        <div class="h-2 w-full block sm:hidden" style="background-color: rgba(247, 247, 248, 1);"></div>
+                                <div id="term-content-2" class="rounded-lg bg-blue-50 px-5 py-8 space-y-3 hidden">                                    
+                                    <h4 class="text-1522-1626 font-semibold">제1장 총칙</h4>
 
-                        <div class="sm:space-y-5">
-                            <div class="flex items-center justify-between p-5 sm:pb-3 border-b sm:border-black">
-                                <h4 class="text-1724-2230 font-semibold">공지사항</h4>
+                                    <h4 class="text-15-l-22 font-semibold">제1조 (목적)</h4>
+                                    
+                                    <p class="text-1422-1524 font-normal">
+                                        본 약관은 (재)성바오로딸수도회에서 운영하는 가톨릭인터넷서점 바오로딸 (이하 "바오로딸"이라 합니다.)에서 제공하는 유무선 인터넷 관련 서비스와 가톨릭 정보제공 서비스(이하 "서비스"라 합니다.)및 부가 서비스를 이용함에 있어 바오로딸과 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다. ※「PC통신, 무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는 한 이 약관을 준용합니다」
+                                    </p>
 
-                                <div class="flex items-center justify-center gap-x-1 cursor-pointer">
-                                    <span class="inline-block text-sm font-medium text-gray-400">더보기</span>
+                                    <h4 class="text-15-l-22 font-semibold">제2조 (약관의 효력 및 변경)</h4>
+
                                     <div>
-                                        <img src="../assets/images/icon/footer/add.svg" alt="icon">
+                                        <ul class="list-decimal list-outside pl-6 text-1422-1524 font-normal space-y-1">
+                                            <li>본 약관은 인터넷 서비스화면(www.pauline.or.kr)에 게시하거나 이용자에게 공시함으로써 효력을 발생합니다.</li>
+                                            <li>“바오로딸”은 약관을 변경할 수 있으며 변경된 약관은 1항과 같은 방법으로 효력을 발생합니다.</li>
+                                            <li>“바오로딸”이 약관을 변경할 경우에는 변경된 약관은 그 적용일 이후에 체결되는 계약에만 적용되고 그 시점 이전의 계약에 대해서는 소급 적용되지 않습니다. 단, 이미 계약을 체결한 이용자가 변경된 약관 조항의 적용을 받기 원하는 경우에는 “바오로딸”에 의사를 표명하여 “바오로딸”의 동의를 받은 경우에는 변경된 조항이 적용됩니다.</li>
+                                        </ul>
                                     </div>
-                                </div>
-                            </div>
 
-                            <div class="px-5 sm:p-0 sm:space-y-5">
-                                <div class="hidden sm:flex items-center">
-                                    <div class="w-11 pr-2.5 text-15-l-22 font-medium text-gray-400">NO</div>
-                                    <div class="flex-1 px-2.5 text-15-l-22 font-medium text-gray-400 text-center">공지 제목</div>
-                                    <div class="w-32 px-2.5 text-15-l-22 font-medium text-gray-400 text-center">작성자</div>
-                                    <div class="w-24 pl-2.5 text-15-l-22 font-medium text-gray-400 text-center">등록일</div>
+                                    <h4 class="text-15-l-22 font-semibold">제3조 (약관 외 준칙)</h4>
+
+                                    <p class="text-1422-1524 font-normal">
+                                        본 약관에 정의되지 않은 사항은 약관의 규제들에 관한 법령, 전자상거래 기본법, 정보통신망이용 촉진 등에 관한 법률 확보, 전기통신기본법, 전기통신사업법, 전자서명법, 소비자보호법 등 관련 법령의 규정에 의합니다.
+                                    </p>                                    
                                 </div>
-                                <div class="">
-                                    <div class="flex items-center flex-wrap gap-y-3 py-5 sm:py-6 border-b ">
-                                        <div class="hidden sm:block w-11 pr-2.5 text-15-l-22 font-normal">300</div>
-                                        <div class="flex-1 sm:px-2.5 text-15-l-22 font-medium text-start whitespace-nowrap">[지연] 생활성서 출판사 도서 배송 지연 안내</div>
-                                        <div class="w-auto sm:w-32 sm:px-2.5 text-15-l-22 font-normal text-center">관리자</div>
-                                        <div class="w-24 pl-2.5 text-sm font-normal text-gray-400 text-center">2024.09.09</div>
-                                    </div>
-                                    <div class="flex items-center flex-wrap gap-y-3 py-5 sm:py-6 border-b ">
-                                        <div class="hidden sm:block w-11 pr-2.5 text-15-l-22 font-normal">300</div>
-                                        <div class="flex-1 sm:px-2.5 text-15-l-22 font-medium text-start whitespace-nowrap">[지연] 생활성서 출판사 도서 배송 지연 안내</div>
-                                        <div class="w-auto sm:w-32 sm:px-2.5 text-15-l-22 font-normal text-center">관리자</div>
-                                        <div class="w-24 pl-2.5 text-sm font-normal text-gray-400 text-center">2024.09.09</div>
-                                    </div>
-                                </div>
-                            </div>
+                            </div> -->
                         </div>
-
-                        <div class="h-2 w-full block sm:hidden" style="background-color: rgba(247, 247, 248, 1);"></div>
                     </div>
                 </main>
                 <!-- start main -->
-
             </div>
         </div>
     </section>
 
-    <div class="h-72-px"></div>
+    <div class="h-11 sm:h-32"></div>
+    <div class="h-2 bg-gray-100 block sm:hidden"></div>
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
     <div class="fixed bottom-24 right-6 block sm:hidden z-50">
         <div class="flex flex-col justify-center items-center gap-1 shadow-lg rounded-full bg-white"
@@ -925,7 +841,15 @@
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../assets/js/util.js"></script>
-    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/common.js"></script>   
+
+    <script>
+        function toggleTerm(aId, iconId) {
+            toggle(aId)
+            document.querySelector(iconId).classList.toggle('fa-chevron-up')
+            document.querySelector(iconId).classList.toggle('fa-chevron-down')
+        }
+    </script>
 </body>
 
 </html>
