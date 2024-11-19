@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>마이페이지 - 주문내역 - 마이페이지/ 주문내역 / 방문수령</title>
+    <title>마이페이지 - 주문내역 - 마이페이지/ 주문내역 / 교환반품</title>
 
     <!-- Link Font -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
@@ -369,7 +369,7 @@
                     <span class="inline-block text-13-18 font-normal text-gray-400 whitespace-nowrap">/</span>
                 </div>
                 <div class="flex items-center gap-1">
-                    <span class="inline-block text-13-18 font-normal text-gray-400 whitespace-nowrap">방문수령 주문 내역</span>
+                    <span class="inline-block text-13-18 font-normal text-gray-400 whitespace-nowrap">교환/반품 주문 내역</span>
                     <img src="../assets/images/icon/category/breadcrumb-down.svg" alt="icon">
                 </div>
             </div>
@@ -398,11 +398,11 @@
                                             <span class="inline-block text-sm font-normal text-gray-400">전체 주문 내역</span>                                            
                                         </li>
                                         <li class="py-1 flex items-center justify-between">
-                                            <span class="inline-block text-sm font-normal">방문수령 주문 내역</span>
-                                            <img src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg" alt=">">
+                                            <span class="inline-block text-sm font-normal text-gray-400">방문수령 주문 내역</span>                                            
                                         </li>
                                         <li class="py-1 flex items-center justify-between">
-                                            <span class="inline-block text-sm font-normal text-gray-400">교환/반품 주문 내역</span>
+                                            <span class="inline-block text-sm font-normal ">교환/반품 주문 내역</span>
+                                            <img src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg" alt=">">
                                         </li>
                                         <li class="py-1 flex items-center justify-between">
                                             <span class="inline-block text-sm font-normal text-gray-400">주문 취소 내역</span>
@@ -481,7 +481,7 @@
                 <main class="flex-1 overflow-x-auto custom-scroll">
 
                     <div class="p-5 sm:p-0 space-y-5 sm:space-y-6 border-b sm:border-black sm:pb-3">
-                        <h4 class="text-1724-2230 font-semibold">방문 수령 조회</h4>
+                        <h4 class="text-1724-2230 font-semibold">교환/반품 내역</h4>
 
                         <div class="space-y-2">
                             <div class="flex flex-col gap-y-2 sm:flex-row sm:items-center justify-between">
@@ -498,9 +498,8 @@
 
                             <div class="flex items-center gap-x-2 bg-gray-100 rounded-lg p-1">
                                 <button class="flex-1 whitespace-nowrap text-sm font-medium py-1.5 rounded-lg bg-white text-black shadow-md">전체</button>
-                                <button class="flex-1 whitespace-nowrap text-sm font-medium text-gray-400 py-1.5">방문수령 주문</button>
-                                <button class="flex-1 whitespace-nowrap text-sm font-medium text-gray-400 py-1.5">방문수령 완료</button>
-                                <button class="flex-1 whitespace-nowrap text-sm font-medium text-gray-400 py-1.5">반품</button>
+                                <button class="flex-1 whitespace-nowrap text-sm font-medium text-gray-400 py-1.5">반품</button>                                
+                                <button class="flex-1 whitespace-nowrap text-sm font-medium text-gray-400 py-1.5">교환</button>
                             </div>
                         </div>
                     </div>
@@ -512,7 +511,7 @@
                             <div class="space-y-3 sm:space-y-6 sm:pb-3">
                                 <div class="py-1.5 sm:py-4 sm:border-t sm:border-b flex items-center gap-x-6">
                                     <div class="flex sm:hidden items-center justify-start flex-1">
-                                        <span class="inline-block text-xs font-medium">방문수령 주문</span>
+                                        <span class="inline-block text-xs font-medium whitespace-nowrap truncate">교환/반품 중</span>
                                     </div>
                                     <div class="flex items-center gap-x-2">
                                         <span class="hidden sm:inline-block text-sm font-normal sm:font-medium sm:text-gray-400">주문 일자</span>
@@ -520,7 +519,7 @@
                                     </div>
                                     <div class="flex items-center gap-x-2">
                                         <span class="hidden sm:inline-block text-sm font-normal sm:font-medium sm:text-gray-400">주문번호</span>
-                                        <span class="inline-block text-sm font-normal sm:font-medium">000-000-000-000</span>
+                                        <span class="inline-block text-sm font-normal sm:font-medium whitespace-nowrap">000-000-000-000</span>
                                     </div>
                                 </div>
                                 <!-- book -->
@@ -569,10 +568,9 @@
     
                                             <div class="rounded-full bg-blue-100 hidden sm:flex items-center justify-center" style="width: 90px; height: 90px;">
                                                 <div class="flex flex-col gap-y-1 items-center justify-center">
-                                                    <img src="../assets/images/icon/my-page/location.svg" alt="">
+                                                    <img class="opacity-0" src="../assets/images/icon/my-page/location.svg" alt="">
                                                     <span class="inline-block text-xs font-medium text-center">
-                                                        방문수령 <br>
-                                                        주문
+                                                        교환/반품 <br> 중
                                                     </span>
                                                 </div>
                                             </div>
@@ -583,28 +581,55 @@
                                             <span class="inline-block text-xs font-normal text-gray-400">|</span>
                                             <span class="inline-block text-sm font-normal text-gray-400 whitespace-nowrap">2024.09.09</span>
                                         </div>
+
+                                        <div class="block sm:hidden">
+                                            <div class="space-y-2 bg-gray-100 p-3">
+                                                <span class="inline-block text-sm font-semibold">카드결제 ∙ 현금환불</span>
+                                                
+                                                <div class="flex items-center gap-x-2.5">
+                                                    <span class="inline-block text-sm font-normal text-gray-400">추가 배송비</span>
+                                                    <span class="inline-block text-sm font-semibold">3,000<span class="inline-block text-sm font-normal">원</span></span>
+                                                </div>
+                                                
+                                                <div class="flex items-center gap-x-2.5">
+                                                    <span class="inline-block text-sm font-normal text-gray-400">실 환불금액</span>
+                                                    <span class="inline-block text-sm font-semibold">100,000<span class="inline-block text-sm font-normal">원</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
     
-                                        <div class="flex items-center sm:items-stretch flex-row sm:flex-col gap-y-1 gap-x-1.5 sm:px-8 sm:w-48">
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap">1:1 문의</button>
+                                        <div class="flex items-center justify-center sm:items-stretch flex-row sm:flex-col gap-y-1 gap-x-1.5 sm:px-8 sm:w-48">
+                                            <button class="text-13-l-18 font-semibold py-1.5 sm:w-full sm:px-7 flex-1 sm:flex-none sm:rounded sm:border whitespace-nowrap">1:1 문의</button>
                                             <div class="w-1-px h-5 bg-gray-400 block sm:hidden"></div>
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap">방문 수령 정보</button>
-                                            <div class="w-1-px h-5 bg-gray-400 block sm:hidden"></div>
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap">주문 취소</button>                                                                                    
+                                            <button class="text-13-l-18 font-semibold py-1.5 sm:w-full sm:px-7 flex-1 sm:flex-none sm:rounded sm:border whitespace-nowrap">교환/반품 철회</button>
                                         </div>
                                     </div>
-
-                                   
+                                    
+                                    <div class="hidden sm:block">
+                                        <div class="flex items-center gap-x-6 py-3 bg-gray-100 justify-center">
+                                            <span class="inline-block text-sm font-semibold">카드결제 ∙ 현금환불</span>
+                                            <span class="w-1-px h-4 bg-gray-200"></span>
+                                            <div class="flex items-center gap-x-2.5">
+                                                <span class="inline-block text-sm font-normal text-gray-400">추가 배송비</span>
+                                                <span class="inline-block text-sm font-semibold">3,000<span class="inline-block text-sm font-normal">원</span></span>
+                                            </div>
+                                            <span class="w-1-px h-4 bg-gray-200"></span>
+                                            <div class="flex items-center gap-x-2.5">
+                                                <span class="inline-block text-sm font-normal text-gray-400">실 환불금액</span>
+                                                <span class="inline-block text-sm font-semibold">100,000<span class="inline-block text-sm font-normal">원</span></span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
-                            </div>
-                            
+                            </div>                            
                             <div class="h-1-px w-full border-b block sm:hidden"></div>
 
                             <!-- khung 2 -->                             
                             <div class="space-y-3 sm:space-y-6 sm:pb-3">
                                 <div class="py-1.5 sm:py-4 sm:border-t sm:border-b flex items-center gap-x-6">
                                     <div class="flex sm:hidden items-center justify-start flex-1">
-                                        <span class="inline-block text-xs font-medium">방문수령 완료</span>
+                                        <span class="inline-block text-xs font-medium whitespace-nowrap truncate">교환/반품 중</span>
                                     </div>
                                     <div class="flex items-center gap-x-2">
                                         <span class="hidden sm:inline-block text-sm font-normal sm:font-medium sm:text-gray-400">주문 일자</span>
@@ -612,7 +637,7 @@
                                     </div>
                                     <div class="flex items-center gap-x-2">
                                         <span class="hidden sm:inline-block text-sm font-normal sm:font-medium sm:text-gray-400">주문번호</span>
-                                        <span class="inline-block text-sm font-normal sm:font-medium">000-000-000-000</span>
+                                        <span class="inline-block text-sm font-normal sm:font-medium whitespace-nowrap">000-000-000-000</span>
                                     </div>
                                 </div>
                                 <!-- book -->
@@ -661,10 +686,9 @@
     
                                             <div class="rounded-full bg-blue-100 hidden sm:flex items-center justify-center" style="width: 90px; height: 90px;">
                                                 <div class="flex flex-col gap-y-1 items-center justify-center">
-                                                    <img src="../assets/images/icon/my-page/location-check.svg" alt="">
+                                                    <img class="opacity-0" src="../assets/images/icon/my-page/location.svg" alt="">
                                                     <span class="inline-block text-xs font-medium text-center">
-                                                        방문수령 <br>
-                                                        완료
+                                                        교환/반품 <br> 중
                                                     </span>
                                                 </div>
                                             </div>
@@ -675,30 +699,58 @@
                                             <span class="inline-block text-xs font-normal text-gray-400">|</span>
                                             <span class="inline-block text-sm font-normal text-gray-400 whitespace-nowrap">2024.09.09</span>
                                         </div>
+
+                                        <div class="block sm:hidden">
+                                            <div class="space-y-2 bg-gray-100 p-3">
+                                                <span class="inline-block text-sm font-semibold">카드결제 ∙ 현금환불</span>
+                                                
+                                                <div class="flex items-center gap-x-2.5">
+                                                    <span class="inline-block text-sm font-normal text-gray-400">추가 배송비</span>
+                                                    <span class="inline-block text-sm font-semibold">3,000<span class="inline-block text-sm font-normal">원</span></span>
+                                                </div>
+                                                
+                                                <div class="flex items-center gap-x-2.5">
+                                                    <span class="inline-block text-sm font-normal text-gray-400">실 환불금액</span>
+                                                    <span class="inline-block text-sm font-semibold">100,000<span class="inline-block text-sm font-normal">원</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
     
-                                        <div class="flex items-center sm:items-stretch flex-row sm:flex-col gap-y-1 gap-x-1.5 sm:px-8 sm:w-48">
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap">1:1 문의</button>
+                                        <div class="flex items-center justify-center sm:items-stretch flex-row sm:flex-col gap-y-1 gap-x-1.5 sm:px-8 sm:w-48">
+                                            <button class="text-13-l-18 font-semibold py-1.5 sm:w-full sm:px-7 flex-1 sm:flex-none sm:rounded sm:border whitespace-nowrap">1:1 문의</button>
                                             <div class="w-1-px h-5 bg-gray-400 block sm:hidden"></div>
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap">리뷰쓰기</button>
-                                            <div class="w-1-px h-5 bg-gray-400 block sm:hidden"></div>
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap">장바구니 담기</button>                                           
+                                            <button class="text-13-l-18 font-semibold py-1.5 sm:w-full sm:px-7 flex-1 sm:flex-none sm:rounded sm:border whitespace-nowrap">교환/반품 철회</button>
                                         </div>
                                     </div>
+                                    
+                                    <div class="hidden sm:block">
+                                        <div class="flex items-center gap-x-6 py-3 bg-gray-100 justify-center">
+                                            <span class="inline-block text-sm font-semibold">카드결제 ∙ 현금환불</span>
+                                            <span class="w-1-px h-4 bg-gray-200"></span>
 
-                                   
+                                            <div class="flex items-center gap-x-2.5">
+                                                <span class="inline-block text-sm font-normal text-gray-400">추가 배송비</span>
+                                                <span class="inline-block text-sm font-semibold">3,000<span class="inline-block text-sm font-normal">원</span></span>
+                                            </div>
+
+                                            <span class="w-1-px h-4 bg-gray-200"></span>
+                                            <div class="flex items-center gap-x-2.5">
+                                                <span class="inline-block text-sm font-normal text-gray-400">실 환불금액</span>
+                                                <span class="inline-block text-sm font-semibold">100,000<span class="inline-block text-sm font-normal">원</span></span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
-                            </div>
-                            
+                            </div>                            
                             <div class="h-1-px w-full border-b block sm:hidden"></div>
                             
                             
                             <!-- khung 3 -->
                             <div class="space-y-3 sm:space-y-6 sm:pb-3">
-                                <!-- time -->
                                 <div class="py-1.5 sm:py-4 sm:border-t sm:border-b flex items-center gap-x-6">
                                     <div class="flex sm:hidden items-center justify-start flex-1">
-                                        <span class="inline-block text-xs font-medium">방문수령 완료</span>
+                                        <span class="inline-block text-xs font-medium whitespace-nowrap truncate">교환/반품 중</span>
                                     </div>
                                     <div class="flex items-center gap-x-2">
                                         <span class="hidden sm:inline-block text-sm font-normal sm:font-medium sm:text-gray-400">주문 일자</span>
@@ -706,17 +758,19 @@
                                     </div>
                                     <div class="flex items-center gap-x-2">
                                         <span class="hidden sm:inline-block text-sm font-normal sm:font-medium sm:text-gray-400">주문번호</span>
-                                        <span class="inline-block text-sm font-normal sm:font-medium">000-000-000-000</span>
+                                        <span class="inline-block text-sm font-normal sm:font-medium whitespace-nowrap">000-000-000-000</span>
                                     </div>
                                 </div>
-                                <!-- content -->
+                                <!-- book -->
                                 <div class="space-y-4">
-                                    <!-- 1 -->
+
                                     <div class="flex flex-col sm:flex-row gap-y-3">
-                                        <div class="flex-1 flex items-center justify-between  gap-x-5">
-                                            <div class="flex flex-1 gap-x-5">
-                                                <div class="frame-size-70108-102108 scope-imgage-super-small border shadow-md overflow-hidden h-full">
-                                                    <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="">
+                                        <div class="flex-1 flex items-center justify-between gap-x-5">
+                                            <div class="flex-1 flex gap-x-5">
+                                                <div class="frame-size-70108-102108">
+                                                    <div class="scope-imgage-super-small border shadow-md overflow-hidden h-full" style="width: 70px;">
+                                                        <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="">                                                    
+                                                    </div>
                                                 </div>
     
                                                 <div class="flex-1 flex items-center justify-between">
@@ -753,37 +807,70 @@
     
                                             <div class="rounded-full bg-blue-100 hidden sm:flex items-center justify-center" style="width: 90px; height: 90px;">
                                                 <div class="flex flex-col gap-y-1 items-center justify-center">
-                                                    <!-- <img src="../assets/images/icon/my-page/packaging.svg" alt="">
-                                                    <span class="inline-block text-xs font-medium">상품 준비중</span> -->
+                                                    <img class="opacity-0" src="../assets/images/icon/my-page/location.svg" alt="">
+                                                    <span class="inline-block text-xs font-medium text-center">
+                                                        교환/반품 <br> 완료
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div class="flex sm:hidden items-center justify-center gap-x-2 py-2 bg-gray-100">
+                                        <div class="hidden items-center justify-center gap-x-2 py-2 bg-gray-100">
                                             <span class="inline-block text-sm font-normal whitespace-nowrap">방문할 서원명</span>
                                             <span class="inline-block text-xs font-normal text-gray-400">|</span>
                                             <span class="inline-block text-sm font-normal text-gray-400 whitespace-nowrap">2024.09.09</span>
                                         </div>
+
+                                        <div class="block sm:hidden">
+                                            <div class="space-y-2 bg-gray-100 p-3">
+                                                <span class="inline-block text-sm font-semibold">카드결제 ∙ 현금환불</span>
+                                                
+                                                <div class="flex items-center gap-x-2.5">
+                                                    <span class="inline-block text-sm font-normal text-gray-400">추가 배송비</span>
+                                                    <span class="inline-block text-sm font-semibold">3,000<span class="inline-block text-sm font-normal">원</span></span>
+                                                </div>
+                                                
+                                                <div class="flex items-center gap-x-2.5">
+                                                    <span class="inline-block text-sm font-normal text-gray-400">실 환불금액</span>
+                                                    <span class="inline-block text-sm font-semibold">100,000<span class="inline-block text-sm font-normal">원</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
     
-                                        <div class="flex items-center sm:items-stretch flex-row sm:flex-col gap-y-1 gap-x-1.5 sm:px-8 sm:w-48">
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap">1:1 문의</button>
+                                        <div class="flex items-center justify-center sm:items-stretch flex-row sm:flex-col gap-y-1 gap-x-1.5 sm:px-8 sm:w-48">
+                                            <button class="text-13-l-18 font-semibold py-1.5 sm:w-full sm:px-7 flex-1 sm:flex-none sm:rounded sm:border whitespace-nowrap">1:1 문의</button>
                                             <div class="w-1-px h-5 bg-gray-400 block sm:hidden"></div>
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap">추가주문</button>
-                                            <div class="w-1-px h-5 bg-gray-400 block sm:hidden"></div>
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap">주문취소</button>                                                                                      
+                                            <button class="text-13-l-18 font-semibold py-1.5 sm:w-full sm:px-7 flex-1 sm:flex-none sm:rounded sm:border whitespace-nowrap">장바구니 담기</button>
                                         </div>
                                     </div>
-                                   
+                                    
+                                    <div class="hidden sm:block">
+                                        <div class="flex items-center gap-x-6 py-3 bg-gray-100 justify-center">
+                                            <span class="inline-block text-sm font-semibold">카드결제 ∙ 현금환불</span>
+                                            <span class="w-1-px h-4 bg-gray-200"></span>
+
+                                            <div class="flex items-center gap-x-2.5">
+                                                <span class="inline-block text-sm font-normal text-gray-400">추가 배송비</span>
+                                                <span class="inline-block text-sm font-semibold">3,000<span class="inline-block text-sm font-normal">원</span></span>
+                                            </div>
+                                            
+                                            <span class="w-1-px h-4 bg-gray-200"></span>
+                                            <div class="flex items-center gap-x-2.5">
+                                                <span class="inline-block text-sm font-normal text-gray-400">실 환불금액</span>
+                                                <span class="inline-block text-sm font-semibold">100,000<span class="inline-block text-sm font-normal">원</span></span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+
                             </div>
                             <div class="h-1-px w-full border-b block sm:hidden"></div>
 
                             <!-- khung 4 -->
                             <div class="space-y-3 sm:space-y-6 sm:pb-3">
-                                <!-- time -->
                                 <div class="py-1.5 sm:py-4 sm:border-t sm:border-b flex items-center gap-x-6">
                                     <div class="flex sm:hidden items-center justify-start flex-1">
-                                        <span class="inline-block text-xs font-medium">방문수령 완료</span>
+                                        <span class="inline-block text-xs font-medium whitespace-nowrap truncate">교환/반품 중</span>
                                     </div>
                                     <div class="flex items-center gap-x-2">
                                         <span class="hidden sm:inline-block text-sm font-normal sm:font-medium sm:text-gray-400">주문 일자</span>
@@ -791,17 +878,19 @@
                                     </div>
                                     <div class="flex items-center gap-x-2">
                                         <span class="hidden sm:inline-block text-sm font-normal sm:font-medium sm:text-gray-400">주문번호</span>
-                                        <span class="inline-block text-sm font-normal sm:font-medium">000-000-000-000</span>
+                                        <span class="inline-block text-sm font-normal sm:font-medium whitespace-nowrap">000-000-000-000</span>
                                     </div>
                                 </div>
-                                <!-- content -->
+                                <!-- book -->
                                 <div class="space-y-4">
-                                    <!-- 1 -->
+
                                     <div class="flex flex-col sm:flex-row gap-y-3">
-                                        <div class="flex-1 flex items-center justify-between  gap-x-5">
-                                            <div class="flex flex-1 gap-x-5">
-                                                <div class="frame-size-70108-102108 scope-imgage-super-small border shadow-md overflow-hidden h-full">
-                                                    <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="">
+                                        <div class="flex-1 flex items-center justify-between gap-x-5">
+                                            <div class="flex-1 flex gap-x-5">
+                                                <div class="frame-size-70108-102108">
+                                                    <div class="scope-imgage-super-small border shadow-md overflow-hidden h-full" style="width: 70px;">
+                                                        <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="">                                                    
+                                                    </div>
                                                 </div>
     
                                                 <div class="flex-1 flex items-center justify-between">
@@ -838,37 +927,70 @@
     
                                             <div class="rounded-full bg-blue-100 hidden sm:flex items-center justify-center" style="width: 90px; height: 90px;">
                                                 <div class="flex flex-col gap-y-1 items-center justify-center">
-                                                    <!-- <img src="../assets/images/icon/my-page/packaging.svg" alt="">
-                                                    <span class="inline-block text-xs font-medium">상품 준비중</span> -->
+                                                    <img class="opacity-0" src="../assets/images/icon/my-page/location.svg" alt="">
+                                                    <span class="opacity-0 inline-block text-xs font-medium text-center">
+                                                        교환/반품 <br> 완료
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div class="flex sm:hidden items-center justify-center gap-x-2 py-2 bg-gray-100">
+                                        <div class="hidden items-center justify-center gap-x-2 py-2 bg-gray-100">
                                             <span class="inline-block text-sm font-normal whitespace-nowrap">방문할 서원명</span>
                                             <span class="inline-block text-xs font-normal text-gray-400">|</span>
                                             <span class="inline-block text-sm font-normal text-gray-400 whitespace-nowrap">2024.09.09</span>
                                         </div>
+
+                                        <div class="block sm:hidden">
+                                            <div class="space-y-2 bg-gray-100 p-3">
+                                                <span class="inline-block text-sm font-semibold">카드결제 ∙ 현금환불</span>
+                                                
+                                                <div class="flex items-center gap-x-2.5">
+                                                    <span class="inline-block text-sm font-normal text-gray-400">추가 배송비</span>
+                                                    <span class="inline-block text-sm font-semibold">3,000<span class="inline-block text-sm font-normal">원</span></span>
+                                                </div>
+                                                
+                                                <div class="flex items-center gap-x-2.5">
+                                                    <span class="inline-block text-sm font-normal text-gray-400">실 환불금액</span>
+                                                    <span class="inline-block text-sm font-semibold">100,000<span class="inline-block text-sm font-normal">원</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
     
-                                        <div class="flex items-center sm:items-stretch flex-row sm:flex-col gap-y-1 gap-x-1.5 sm:px-8 sm:w-48">
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap">1:1 문의</button>
+                                        <div class="flex items-center justify-center sm:items-stretch flex-row sm:flex-col gap-y-1 gap-x-1.5 sm:px-8 sm:w-48">
+                                            <button class="text-13-l-18 font-semibold py-1.5 sm:w-full sm:px-7 flex-1 sm:flex-none sm:rounded sm:border whitespace-nowrap">1:1 문의</button>
                                             <div class="w-1-px h-5 bg-gray-400 block sm:hidden"></div>
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap">배송조회</button>
-                                            <div class="w-1-px h-5 bg-gray-400 block sm:hidden"></div>
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap">교환/반품</button>                                                                                      
+                                            <button class="text-13-l-18 font-semibold py-1.5 sm:w-full sm:px-7 flex-1 sm:flex-none sm:rounded sm:border whitespace-nowrap">장바구니 담기</button>
                                         </div>
                                     </div>
-                                   
+                                    
+                                    <div class="hidden sm:block">
+                                        <div class="flex items-center gap-x-6 py-3 bg-gray-100 justify-center">
+                                            <span class="inline-block text-sm font-semibold">카드결제 ∙ 현금환불</span>
+                                            <span class="w-1-px h-4 bg-gray-200"></span>
+
+                                            <div class="flex items-center gap-x-2.5">
+                                                <span class="inline-block text-sm font-normal text-gray-400">추가 배송비</span>
+                                                <span class="inline-block text-sm font-semibold">3,000<span class="inline-block text-sm font-normal">원</span></span>
+                                            </div>
+                                            
+                                            <span class="w-1-px h-4 bg-gray-200"></span>
+                                            <div class="flex items-center gap-x-2.5">
+                                                <span class="inline-block text-sm font-normal text-gray-400">실 환불금액</span>
+                                                <span class="inline-block text-sm font-semibold">100,000<span class="inline-block text-sm font-normal">원</span></span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+
                             </div>
                             <div class="h-1-px w-full border-b block sm:hidden"></div>
 
                             <!-- khung 5 -->
                             <div class="space-y-3 sm:space-y-6 sm:pb-3">
-                                <!-- time -->
                                 <div class="py-1.5 sm:py-4 sm:border-t sm:border-b flex items-center gap-x-6">
                                     <div class="flex sm:hidden items-center justify-start flex-1">
-                                        <span class="inline-block text-xs font-medium">방문수령 주문</span>
+                                        <span class="inline-block text-xs font-medium whitespace-nowrap truncate">교환/반품 중</span>
                                     </div>
                                     <div class="flex items-center gap-x-2">
                                         <span class="hidden sm:inline-block text-sm font-normal sm:font-medium sm:text-gray-400">주문 일자</span>
@@ -876,17 +998,19 @@
                                     </div>
                                     <div class="flex items-center gap-x-2">
                                         <span class="hidden sm:inline-block text-sm font-normal sm:font-medium sm:text-gray-400">주문번호</span>
-                                        <span class="inline-block text-sm font-normal sm:font-medium">000-000-000-000</span>
+                                        <span class="inline-block text-sm font-normal sm:font-medium whitespace-nowrap">000-000-000-000</span>
                                     </div>
                                 </div>
-                                <!-- content -->
+                                <!-- book -->
                                 <div class="space-y-4">
-                                    <!-- 1 -->
+
                                     <div class="flex flex-col sm:flex-row gap-y-3">
-                                        <div class="flex-1 flex items-center justify-between  gap-x-5">
-                                            <div class="flex flex-1 gap-x-5">
-                                                <div class="frame-size-70108-102108 scope-imgage-super-small border shadow-md overflow-hidden h-full">
-                                                    <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="">
+                                        <div class="flex-1 flex items-center justify-between gap-x-5">
+                                            <div class="flex-1 flex gap-x-5">
+                                                <div class="frame-size-70108-102108">
+                                                    <div class="scope-imgage-super-small border shadow-md overflow-hidden h-full" style="width: 70px;">
+                                                        <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="">                                                    
+                                                    </div>
                                                 </div>
     
                                                 <div class="flex-1 flex items-center justify-between">
@@ -923,30 +1047,62 @@
     
                                             <div class="rounded-full bg-blue-100 hidden sm:flex items-center justify-center" style="width: 90px; height: 90px;">
                                                 <div class="flex flex-col gap-y-1 items-center justify-center">
-                                                    <!-- <img src="../assets/images/icon/my-page/packaging.svg" alt="">
-                                                    <span class="inline-block text-xs font-medium">상품 준비중</span> -->
+                                                    <img class="opacity-0" src="../assets/images/icon/my-page/location.svg" alt="">
+                                                    <span class="opacity-0 inline-block text-xs font-medium text-center">
+                                                        교환/반품 <br> 완료
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div class="flex sm:hidden items-center justify-center gap-x-2 py-2 bg-gray-100">
+                                        <div class="hidden items-center justify-center gap-x-2 py-2 bg-gray-100">
                                             <span class="inline-block text-sm font-normal whitespace-nowrap">방문할 서원명</span>
                                             <span class="inline-block text-xs font-normal text-gray-400">|</span>
                                             <span class="inline-block text-sm font-normal text-gray-400 whitespace-nowrap">2024.09.09</span>
                                         </div>
+
+                                        <div class="block sm:hidden">
+                                            <div class="space-y-2 bg-gray-100 p-3">
+                                                <span class="inline-block text-sm font-semibold">카드결제 ∙ 현금환불</span>
+                                                
+                                                <div class="flex items-center gap-x-2.5">
+                                                    <span class="inline-block text-sm font-normal text-gray-400">추가 배송비</span>
+                                                    <span class="inline-block text-sm font-semibold">3,000<span class="inline-block text-sm font-normal">원</span></span>
+                                                </div>
+                                                
+                                                <div class="flex items-center gap-x-2.5">
+                                                    <span class="inline-block text-sm font-normal text-gray-400">실 환불금액</span>
+                                                    <span class="inline-block text-sm font-semibold">100,000<span class="inline-block text-sm font-normal">원</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
     
-                                        <div class="flex items-center sm:items-stretch flex-row sm:flex-col gap-y-1 gap-x-1.5 sm:px-8 sm:w-48">
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap">1:1 문의</button>
+                                        <div class="flex items-center justify-center sm:items-stretch flex-row sm:flex-col gap-y-1 gap-x-1.5 sm:px-8 sm:w-48">
+                                            <button class="text-13-l-18 font-semibold py-1.5 sm:w-full sm:px-7 flex-1 sm:flex-none sm:rounded sm:border whitespace-nowrap">1:1 문의</button>
                                             <div class="w-1-px h-5 bg-gray-400 block sm:hidden"></div>
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap">배송조회</button>
-                                            <div class="w-1-px h-5 bg-gray-400 block sm:hidden"></div>
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap">리뷰쓰기</button>
-                                            <div class="w-1-px h-5 bg-gray-400 block sm:hidden"></div>
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap">교환/반품</button>
+                                            <button class="text-13-l-18 font-semibold py-1.5 sm:w-full sm:px-7 flex-1 sm:flex-none sm:rounded sm:border whitespace-nowrap">장바구니 담기</button>
                                         </div>
                                     </div>
-                                   
+                                    
+                                    <div class="hidden sm:block">
+                                        <div class="flex items-center gap-x-6 py-3 bg-gray-100 justify-center">
+                                            <span class="inline-block text-sm font-semibold">카드결제 ∙ 현금환불</span>
+                                            <span class="w-1-px h-4 bg-gray-200"></span>
+
+                                            <div class="flex items-center gap-x-2.5">
+                                                <span class="inline-block text-sm font-normal text-gray-400">추가 배송비</span>
+                                                <span class="inline-block text-sm font-semibold">3,000<span class="inline-block text-sm font-normal">원</span></span>
+                                            </div>
+                                            
+                                            <span class="w-1-px h-4 bg-gray-200"></span>
+                                            <div class="flex items-center gap-x-2.5">
+                                                <span class="inline-block text-sm font-normal text-gray-400">실 환불금액</span>
+                                                <span class="inline-block text-sm font-semibold">100,000<span class="inline-block text-sm font-normal">원</span></span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+
                             </div>
 
                         </div>
@@ -961,71 +1117,54 @@
                     <div class="sm:mt-16 sm:pt-2">
                         <div class="sm:space-y-6">
                             <div class="p-5 sm:p-0 sm:pb-3 border-b sm:border-black">
-                                <h4 class="text-1724-2230 font-semibold">방문수령 주문 안내</h4>
+                                <h4 class="text-1724-2230 font-semibold">교환/반품 안내</h4>
                             </div>
 
                             <div class="hidden sm:flex items-start gap-x-6 overflow-x-auto custom-scroll">
                                 
                                 <div class="flex flex-col gap-y-1.5 items-center justify-center">
-                                    <div class="flex flex-col gap-y-1 items-center justify-center bg-blue-100 rounded-full" style="width: 90px; height: 90px;">                                       
-                                        <img src="../assets/images/icon/my-page/location.svg" alt="">
+                                    <div class="flex flex-col gap-y-1 items-center justify-center bg-blue-100 rounded-full" style="width: 90px; height: 90px;">
+                                        <img src="../assets/images/icon/my-page/packaging.svg" alt="">
                                         <span class="inline-block text-xs font-medium text-center">
-                                            방문수령 <br>
-                                            주문
-                                        </span>                                        
+                                            교환/반품 <br> 중
+                                        </span>
                                     </div>
-                                    <div class="w-1-px h-3 bg-gray-400"></div>
-                                    <h5 class="text-11-l-14 font-normal text-gray-500 text-center">
-                                        입금확인 <br>
-                                        및 결제완료
-                                    </h5>
                                 </div>
                                 
                                 <div class="flex flex-col gap-y-1.5 items-center justify-center">
-                                    <div class="flex flex-col gap-y-1 items-center justify-center bg-blue-100 rounded-full" style="width: 90px; height: 90px;">                                       
-                                        <img src="../assets/images/icon/my-page/location-check.svg" alt="">
+                                    <div class="flex flex-col gap-y-1 items-center justify-center bg-blue-100 rounded-full" style="width: 90px; height: 90px;">
+                                        <img src="../assets/images/icon/my-page/completion-delivery.svg" alt="">
                                         <span class="inline-block text-xs font-medium text-center">
-                                            방문수령 <br>
-                                            완료
-                                        </span>                                        
+                                            교환/반품 <br> 완료
+                                        </span>
                                     </div>
-                                    <div class="w-1-px h-3 bg-gray-400"></div>
-                                    <h5 class="text-11-l-14 font-normal text-gray-500 text-center">
-                                        방문해서 <br>
-                                        수령한 단계
-                                    </h5>
                                 </div>
 
-                                <div class="flex flex-col gap-y-1.5 items-center justify-center">
-                                    <div class="flex flex-col gap-y-1 items-center justify-center bg-blue-100 rounded-full" style="width: 90px; height: 90px;">                                       
-                                        <img src="../assets/images/icon/my-page/withdraw-order.svg" alt="">
-                                        <span class="inline-block text-xs font-medium">주문 취소</span>                                        
-                                    </div>
-                                    <div class="w-1-px h-3 bg-gray-400"></div>
-                                    <h5 class="text-11-l-14 font-normal text-gray-500 text-center">
-                                        수령전 취소 단계
-                                    </h5>
-                                </div>
-
-                                <div class="flex flex-col gap-y-1.5 items-center justify-center">
-                                    <div class="flex flex-col gap-y-1 items-center justify-center bg-blue-100 rounded-full" style="width: 90px; height: 90px;">                                       
-                                        <img src="../assets/images/icon/my-page/return.svg" alt="">
-                                        <span class="inline-block text-xs font-medium text-center">교환/반품</span>                                        
-                                    </div>
-                                    <div class="w-1-px h-3 bg-gray-400"></div>
-                                    <h5 class="text-11-l-14 font-normal text-gray-500 text-center">수령후 반품 단계</h5>
-                                </div>
-                               
                             </div>
 
                             <hr class="hidden sm:block">
 
-                            <div class="p-5 sm:p-0">
-                                <ul class="list-disc pl-5 space-y-2 text-gray-600">
-                                    <li class="text-13-l-18 font-normal text-gray-500">주문/배송 현황은 주문 상태 란을 보시면 됩니다.</li>
-                                    <li class="text-13-l-18 font-normal text-gray-500">‘상품준비중’ 상태까지 주문 정보 수정(주문 취소, 추가주문)이 가능합니다.</li>
-                                    <li class="text-13-l-18 font-normal text-gray-500">상세한 주문 내역을 보시려면 주문 상세보기를 클릭하세요.</li>
-                                </ul>                                  
+                            <div class="p-5 sm:p-0 space-y-3">
+                                <div class="space-y-2.5">
+                                    <h4 class="text-13-l-18 font-medium">소비자 변심일 경우</h4>
+                                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                                        <li class="text-xs font-normal text-gray-500">주문/배송 현황은 주문 상태 란을 보시면 됩니다.</li>
+                                        <li class="text-xs font-normal text-gray-500">‘상품준비중’ 상태까지 주문 정보 수정(주문 취소, 추가주문)이 가능합니다.</li>
+                                        <li class="text-xs font-normal text-gray-500">상세한 주문 내역을 보시려면 주문 상세보기를 클릭하세요.</li>
+                                    </ul>
+                                </div>                                 
+                                <div class="space-y-2.5">
+                                    <h4 class="text-13-l-18 font-medium">판매자 사유일 경우</h4>
+                                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                                        <li class="text-xs font-normal text-gray-500">이 경우 상품수령 후 7일 이내 운연자에게 연락을 주셔야 합니다.</li>                                        
+                                    </ul>
+                                </div>                                 
+                                <div class="space-y-2.5">
+                                    <h4 class="text-13-l-18 font-medium">반품 기한</h4>
+                                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                                        <li class="text-xs font-normal text-gray-500">상품수령 후 7일 이내에 반송하여야 합니다.</li>                                       
+                                    </ul>
+                                </div>                                 
                             </div>
                         </div>
                     </div>
