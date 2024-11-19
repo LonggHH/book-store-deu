@@ -108,6 +108,11 @@
   height: 160px;
 }
 
+.frame-size-7070-70108 {
+  width: 70px;
+  height: 108px;
+}
+
 .frame-size-70108-7070 {
   width: 70px;
   height: 70px;
@@ -258,11 +263,15 @@
     height: 70px;
   }
 
+  .frame-size-7070-70108 {
+    width: 70px;
+    height: 70px;
+  }
+
   .frame-size-70108-7070 {
     width: 70px;
     height: 108px;
   }
-  
 
   .frame-size-70108-102108 {
     width: 70px;
