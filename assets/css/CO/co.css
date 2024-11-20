@@ -8,6 +8,10 @@
   line-height: 30px;
 }
 
+.text-1624-2028 {
+  font-size: 20px;
+  line-height: 28px;
+}
 .text-1624-2230 {
   font-size: 22px;
   line-height: 30px;
@@ -140,6 +144,11 @@
   width: auto;
 }
 
+.bg-text-violet {
+  background-color: rgba(226, 238, 255, 1);
+  color: rgba(160, 181, 255, 1);
+}
+
 /* ------------------------------------------------------------- */
 @media (max-width: 940px) {
   .note-frame-size {
@@ -168,6 +177,10 @@
     line-height: 24px;
   }
 
+  .text-1624-2028 {
+    font-size: 16px;
+    line-height: 24px;
+  }
   .text-1624-2230 {
     font-size: 16px;
     line-height: 24px;

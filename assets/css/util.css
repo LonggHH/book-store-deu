@@ -66,6 +66,10 @@ ol li {
   border-bottom-right-radius: 8px;
 }
 
+.border-bl-0-30 {
+  border-bottom-left-radius: 30px;
+}
+
 .bg-highlight {
   background: linear-gradient(to right, #0c98e7, #b956ea, #f03964);
 }
@@ -194,6 +198,11 @@ ol li {
   line-height: 24px;
 }
 
+.text-1524-1626 {
+  font-size: 16px;
+  line-height: 26px;
+}
+
 .w-30px {
   width: 30px;
 }
@@ -301,6 +310,11 @@ ol li {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 8px;
   overflow: hidden;
+}
+
+.border-b-12-30 {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 .custom-scroll::-webkit-scrollbar {
@@ -743,6 +757,14 @@ input[type="number"] {
 
 @media (max-width: 640px) {
 
+  .border-bl-0-30 {
+    border-bottom-left-radius: 0;
+  }
+
+  .border-b-12-30 {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
   .bg-white-blue-10 {
     background-color: white;
   }
@@ -779,6 +801,11 @@ input[type="number"] {
   .text-1422-1524 {
     font-size: 14px;
     line-height: 22px;
+  }
+
+  .text-1524-1626 {
+    font-size: 15px;
+    line-height: 24px;
   }
 
   .space-y-12-18 > *:not(:last-child) {
@@ -951,7 +978,6 @@ input[type="number"] {
     width: 72px;
     height: 72px;
   }
-  
 
   .width-image-book-detail-new {
     width: 420px;

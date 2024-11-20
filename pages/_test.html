@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Link Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  <label
+   for="toggleTwo"
+   class="flex items-center cursor-pointer select-none text-dark dark:text-white"
+   >
+   <div class="relative">
+      <input
+         type="checkbox"
+         id="toggleTwo"
+         class="peer sr-only"
+         />
+      <div
+         class="block h-8 rounded-full dark:bg-dark-2 bg-gray-3 w-14"
+         ></div>
+      <div
+         class="absolute w-6 h-6 transition bg-white rounded-full dot dark:bg-dark-4 left-1 top-1 peer-checked:translate-x-full peer-checked:bg-primary"
+         ></div>
+   </div>
+</label>
+  
+</body>
+</html>
