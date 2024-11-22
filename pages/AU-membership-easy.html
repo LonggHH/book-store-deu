@@ -140,60 +140,14 @@
                                             2</div>
                                         <h5 class="text-base font-medium">정보 입력</h5>
                                     </div>
-
-                                    <!-- (2) -->
-                                    <!-- <div class="py-3 rounded-lg bg-blue-50">
+                                    
+                                    <div class="py-3 rounded-lg bg-blue-50">
                                         <p class="text-xs font-normal text-center">회원 정보를 입력하시면 서비스 이용이 더 편리해집니다</p>
-                                    </div> -->
-                                    <!-- (2) -->
-                                </div>
-
-                                <!-- (1) -->
-                                <!-- id -->
-                                <div class="space-y-2">
-                                    <label for="" class="text-sm font-semibold">아이디 <span
-                                            class="text-red-500">*</span></label>
-
-                                    <div class="flex items-center gap-x-2">
-                                        <div class="py-2.5 px-4 rounded border" style="width: calc(100% - 88px);">
-                                            <input id="input-id" type="text" class="flex-1 text-15-l-22 w-full"
-                                                placeholder="아이디를 입력해주세요">
-                                        </div>
-                                        <button id="btn-auth-id"
-                                            class="text-15-l-22 py-2.5 text-center w-20 rounded border text-gray-400 cursor-default">
-                                            중복확인
-                                        </button>
                                     </div>
-                                </div>
-                                <!-- password -->
-                                <div class="flex flex-col gap-y-2">
-                                    <label for="" class="text-sm font-semibold">비밀번호<span
-                                            class="text-red-500">*</span></label>
-
-                                    <div class="flex items-center justify-between gap-x-2 py-2.5 px-4 rounded border">
-                                        <input id="input-pass" type="password" class="flex-1 text-15-l-22"
-                                            placeholder="영문, 숫자, 특수문자 3가지 조합 8자리 이상">
-                                        <i class="icon-type-display cursor-pointer text-gray-400 fa-regular fa-eye-slash"></i>
-                                    </div>
-
-                                    <p id="err-input-pass" class="text-red-500 text-xs font-normal px-4 hidden">영문, 숫자, 특수문자 3가지 조합 8자리 이상
-                                    </p>
-                                </div>
-                                <!-- cf-password -->
-                                <div class="flex flex-col gap-y-2">
-                                    <label for="" class="text-sm font-semibold">비밀번호 확인<span
-                                            class="text-red-500">*</span></label>
-
-                                    <div class="flex items-center justify-between gap-x-2 py-2.5 px-4 rounded border">
-                                        <input id="input-cf-pass" type="password" class="flex-1 text-15-l-22" placeholder="입력값">
-                                        <i class="icon-type-display cursor-pointer text-gray-400 fa-regular fa-eye-slash"></i>
-                                    </div>
-
-                                    <p id="err-input-cf-pass" class="text-red-500 text-xs font-normal px-4 hidden">입력하신 비밀번호가 일치하지 않습니다</p>
-                                </div>
+                                </div>                              
 
                                 <!-- (2) -->
-                                <!-- <div>
+                                <div>
                                     <div class="flex items-center justify-center mb-8">
                                         <div class="flex items-center gap-x-3">
                                             <div class="w-8 h-8 rounded-full bg-gray-500"></div>
@@ -207,7 +161,7 @@
                                                 <label for="" class="text-sm font-semibold">이름<span class="text-red-500">*</span></label>
             
                                                 <div class="py-2.5 px-4 rounded border bg-gray-100">
-                                                    <input type="text" class="w-full flex-1 text-15-l-22 bg-transparent" placeholder="홍길도">
+                                                    <input type="text" class="w-full flex-1 text-15-l-22 bg-transparent" placeholder="홍길도" readonly disabled>
                                                 </div>
                                             </div>
 
@@ -222,19 +176,19 @@
                                         
                                         <div class="flex items-center gap-x-2">
                                             <div class="flex-1 flex flex-col gap-y-2">
-                                                <label for="" class="text-sm font-semibold">이름<span class="text-red-500">*</span></label>
+                                                <label for="" class="text-sm font-semibold">생년월일<span class="text-red-500">*</span></label>
             
                                                 <div class="py-2.5 px-4 rounded border bg-gray-100">
-                                                    <input type="date" class="w-full flex-1 text-15-l-22 bg-transparent" placeholder="19990101">
+                                                    <input type="date" class="w-full flex-1 text-15-l-22 bg-transparent text-gray-400" placeholder="1999/01/01" disabled readonly value="1999-11-22">
                                                 </div>
                                             </div>
 
                                             <div class="flex-1 flex flex-col gap-y-2">
-                                                <label for="" class="text-sm font-semibold">세례명</label>
+                                                <label for="" class="text-sm font-semibold">성별 <span class="text-red-500">*</span></label>
             
                                                 <div class="flex items-center justify-between">
-                                                    <button class="flex-1 text-15-l-22 font-semibold py-2.5 text-center border text-blue-500 bg-blue-100 border-blue-500" style="border-top-left-radius: 4px; border-bottom-left-radius: 4px;">남</button>
-                                                    <button class="flex-1 text-15-l-22 font-semibold py-2.5 text-center border" style="border-top-right-radius: 4px; border-bottom-right-radius: 4px;">여</button>
+                                                    <button  id="male-btn" class="flex-1 text-15-l-22 font-semibold py-2.5 text-center border text-blue-500 bg-blue-100 border-blue-500" style="border-top-left-radius: 4px; border-bottom-left-radius: 4px;" onclick="toggleGender('male')">남</button>
+                                                    <button id="female-btn" class="flex-1 text-15-l-22 font-semibold py-2.5 text-center border" style="border-top-right-radius: 4px; border-bottom-right-radius: 4px;" onclick="toggleGender('female')">여</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -243,7 +197,7 @@
                                             <label for="" class="text-sm font-semibold">휴대폰 번호<span class="text-red-500">*</span> </label>
         
                                             <div class="py-2.5 px-4 rounded border bg-gray-100">
-                                                <input type="text" class="flex-1 text-15-l-22 bg-transparent" placeholder="01012341234">
+                                                <input type="text" class="flex-1 text-15-l-22 bg-transparent text-gray-400" placeholder="01012341234" readonly disabled>
                                             </div>
                                         </div>
                                         
@@ -251,11 +205,11 @@
                                             <label for="" class="text-sm font-semibold">이메일<span class="text-red-500">*</span> </label>
         
                                             <div class="py-2.5 px-4 rounded border">
-                                                <input type="text" class="flex-1 text-15-l-22" placeholder="이메일을 입력해주세요">
+                                                <input id="input-cf-email" type="text" class="flex-1 text-15-l-22" placeholder="이메일을 입력해주세요">
                                             </div>
                                         </div>
                                     </div>
-                                </div> -->
+                                </div>
                             </div>
 
                             <!-- step 3 hidden-->
@@ -693,9 +647,7 @@
         const inputPhone = document.querySelector('#input-phone')
         const inputEmail = document.querySelector('#input-email')
         const inputCertification = document.querySelector('#input-certification')
-        const inputId = document.querySelector('#input-id')
-        const inputPass = document.querySelector('#input-pass')
-        const inputCFPass = document.querySelector('#input-cf-pass')
+        const inputCFEmail = document.querySelector('#input-cf-email')
 
         const btnAuthPhone = document.querySelector('#btn-auth-phone')
         const btnAuthEmail = document.querySelector('#btn-auth-email')
@@ -712,9 +664,6 @@
         
         let listIconDisplay = document.querySelectorAll('.icon-type-display')
 
-        const errPass = document.querySelector('#err-input-pass')
-        const errCFPass = document.querySelector('#err-input-cf-pass')
-        
         let chooseAllTerms = document.querySelector('#all-terms')
         let listTermsItem = document.querySelectorAll('.item-terms')
         let listMethodNotiItem = document.querySelectorAll('.item-method-noti')
@@ -842,6 +791,17 @@
             if (!checkFieldName()) return
         })
 
+        inputCFEmail.addEventListener('input', () => {
+            const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+
+            if (regexEmail.test(inputCFEmail.value.trim())) {
+                frameStep3.classList.remove('hidden')
+            } else {
+                frameStep3.classList.add('hidden')
+                document.documentElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
+            }
+        })
+
 
         btnAuthPhone.addEventListener('click', () => {
             if (inputPhone.value.length > 0) {
@@ -885,72 +845,6 @@
             } else {
                 toggle('#modal-err-otp')
             }
-        })
-
-
-        inputId.addEventListener('input', () => {
-            checkUId = false
-            if (inputId.value.length !== 0) {
-                btnAuthId.classList.add('text-blue-500')
-                btnAuthId.classList.add('bg-blue-100')
-                btnAuthId.classList.add('border-blue-500')
-                btnAuthId.classList.add('cursor-pointer')
-                btnAuthId.textContent = '중복확인'
-                inputId.parentElement.classList.remove('border-red-500')
-            } else {
-                btnAuthId.classList.remove('text-blue-500')
-                btnAuthId.classList.remove('bg-blue-100')
-                btnAuthId.classList.remove('border-blue-500')
-                btnAuthId.classList.remove('cursor-pointer')
-            }
-        })
-
-        btnAuthId.addEventListener('click', () => {
-            if (inputId.value.length === 0) return        
-
-            inputId.parentElement.classList.remove('border-red-500')
-            if (inputId.value.toLowerCase() === 'abcdefg') {
-                toggle('#modal-overlap-id')
-                checkUId = false
-            } else {
-                btnAuthId.textContent = '확인 완료'
-                btnAuthId.classList.remove('text-blue-500')
-                btnAuthId.classList.remove('bg-blue-100')
-                btnAuthId.classList.remove('border-blue-500')
-                btnAuthId.classList.remove('cursor-pointer')
-                checkUId = true
-            }
-        })
-
-
-        inputPass.addEventListener('input', () => {            
-            if (inputId.value.length === 0 || !checkUId) {
-                inputId.parentElement.classList.add('border-red-500')
-                inputPass.value = ''
-            } else {
-                inputId.parentElement.classList.remove('border-red-500')                    
-                if (!passwordRegex.test(inputPass.value)) {
-                    inputPass.parentElement.classList.add('border-red-500')
-                    errPass.classList.remove('hidden')
-                } else {
-                    inputPass.parentElement.classList.remove('border-red-500')
-                    errPass.classList.add('hidden')
-                }
-            }
-        })
-
-        inputCFPass.addEventListener('input', () => {            
-            if (inputCFPass.value !== inputPass.value) {
-                inputCFPass.parentElement.classList.add('border-red-500')
-                errCFPass.classList.remove('hidden')
-                frameStep3.classList.add('hidden')
-                document.documentElement.scrollIntoView({ behavior: 'smooth', block: 'end' })
-            } else {
-                inputCFPass.parentElement.classList.remove('border-red-500')
-                errCFPass.classList.add('hidden')
-                frameStep3.classList.remove('hidden')
-                document.documentElement.scrollIntoView({ behavior: 'smooth', block: 'end' })
-            }            
         })
 
         listIconDisplay.forEach(icon => {
@@ -1069,6 +963,25 @@
         function closeMdSuccsess() {
             mdSuccsess.classList.add('hidden')
             window.location.href = "./AU-login-login.html"
+        }
+
+        function toggleGender(gender) {
+            const maleBtn = document.getElementById('male-btn');
+            const femaleBtn = document.getElementById('female-btn');
+
+            if (gender === 'male') {
+                maleBtn.classList.add('bg-blue-100', 'text-blue-500', 'border-blue-500');
+                maleBtn.classList.remove('bg-transparent', 'text-gray-500', 'border-gray-300');
+                
+                femaleBtn.classList.remove('bg-blue-100', 'text-blue-500', 'border-blue-500');
+                femaleBtn.classList.add('bg-transparent', 'text-gray-500', 'border-gray-300');
+            } else {
+                femaleBtn.classList.add('bg-blue-100', 'text-blue-500', 'border-blue-500');
+                femaleBtn.classList.remove('bg-transparent', 'text-gray-500', 'border-gray-300');
+                
+                maleBtn.classList.remove('bg-blue-100', 'text-blue-500', 'border-blue-500');
+                maleBtn.classList.add('bg-transparent', 'text-gray-500', 'border-gray-300');
+            }
         }
 
 

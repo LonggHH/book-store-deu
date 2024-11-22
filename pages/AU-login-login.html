@@ -67,8 +67,8 @@
 
                             <div class="space-y-3 mb-14">
                                 <div>
-                                    <button type="button" onclick="submitFormLogin()"
-                                        class="w-full text-gray-400 text-15-l-22 font-semibold py-2.5 text-center rounded bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-200">
+                                    <button id="btn-submit-form" type="button" onclick="submitFormLogin()"
+                                        class="w-full text-gray-400 text-15-l-22 font-semibold py-2.5 text-center rounded bg-gray-100 cursor-default">
                                         로그인
                                     </button>
                                 </div>
@@ -279,10 +279,43 @@
         const frameUPassword = document.querySelector('#frame-user-password')
         // save id
         const iconSaveId = document.querySelector('#icon-save-id')
+        const btnSubmitForm = document.querySelector('#btn-submit-form')
         let saveId = false;
         // modal
         const mdIncorrect = document.querySelector('#modal-incorrect')
         const mdClose = document.querySelector('#modal-close')
+
+        function activeBtnSubmit() {
+            if (UId.value.length > 0 && UPassword.value.length > 0) {                
+                btnSubmitForm.classList.remove('bg-gray-100')                
+                btnSubmitForm.classList.remove('text-gray-400')
+                btnSubmitForm.classList.remove('cursor-default')
+
+                btnSubmitForm.classList.add('bg-blue-400')
+                btnSubmitForm.classList.add('hover:bg-blue-500')
+                btnSubmitForm.classList.add('text-white')
+                btnSubmitForm.classList.add('cursor-pointer')
+                return true
+            } else {
+                btnSubmitForm.classList.remove('bg-blue-400')
+                btnSubmitForm.classList.remove('hover:bg-blue-500')
+                btnSubmitForm.classList.remove('text-white')
+                btnSubmitForm.classList.remove('cursor-pointer')
+
+                btnSubmitForm.classList.add('bg-gray-100')                
+                btnSubmitForm.classList.add('text-gray-400')
+                btnSubmitForm.classList.add('cursor-default')
+                return false         
+            }
+        }
+
+        UId.addEventListener('input', () => {                        
+            activeBtnSubmit() 
+        })
+
+        UPassword.addEventListener('input', () => {
+            activeBtnSubmit()
+        })
 
         function toggleSaveId() {
             saveId = !saveId;
@@ -314,14 +347,12 @@
         }
 
         function submitFormLogin() {
-            let checkDataEmpty = checkFieldsEmpty()
-
-            if (!checkDataEmpty) {
-                if (UId.value === '1' && UPassword.value === '1') {                    
-                    localStorage.setItem('BS-login', JSON.stringify(true))
-                } else {
-                    mdIncorrect.classList.remove('hidden')
-                }
+            if (!activeBtnSubmit()) return            
+          
+            if (UId.value === '1' && UPassword.value === '1') {
+                localStorage.setItem('BS-login', JSON.stringify(true))
+            } else {
+                mdIncorrect.classList.remove('hidden')
             }
         }
 
