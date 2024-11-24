@@ -66,6 +66,15 @@ ol li {
   border-bottom-right-radius: 8px;
 }
 
+.border-bl-br-24-px {
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+.border-tl-tr-24-px {
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+
 .border-bl-0-30 {
   border-bottom-left-radius: 30px;
 }
@@ -321,6 +330,29 @@ ol li {
   display: none;
   /* Chrome, Safari, Opera */
   -webkit-overflow-scrolling: touch;
+}
+
+/* Tùy chỉnh thanh cuộn */ /* Tùy chỉnh thanh cuộn */
+/* Tùy chỉnh thanh cuộn */
+.custom-scroll-x {
+  padding-bottom: 4px;
+  cursor: pointer;
+  overflow-x: auto; /* Chỉ cuộn ngang */
+  -webkit-overflow-scrolling: touch; /* Đảm bảo mượt mà khi cuộn trên thiết bị di động */
+}
+
+/* Webkit browsers (Chrome, Safari) */
+.custom-scroll-x::-webkit-scrollbar {
+  height: 3px; /* Đặt độ cao của thanh cuộn ngang chỉ 2px */
+}
+
+.custom-scroll-x::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3); /* Màu của thanh cuộn */
+  border-radius: 2px; /* Bo góc thanh cuộn */
+}
+
+.custom-scroll-x::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0); /* Nền trong suốt cho thanh cuộn */
 }
 
 .toggle-menu-size {
@@ -756,7 +788,6 @@ input[type="number"] {
 }
 
 @media (max-width: 640px) {
-
   .border-bl-0-30 {
     border-bottom-left-radius: 0;
   }

@@ -17,22 +17,24 @@ function fetchData(url) {
 }
 fetchData(DEF_URL.page + '/data/data.json');
 
-function renderHeaderCategory(listData) {    
+function renderHeaderCategory(listData) {
     let stringHtml = '';
     for (const item of listData) {
             if (item.active) {
                 stringHtml +=
-                `<li class="py-3 sm:py-4 px-3.5 relative underline-active"> <a class="inline-block h-6 text-base font-semibold" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="#">${item.name}</a> </li>`;
+                `<li class="py-3 sm:py-4 px-3.5 relative underline-active"> <a class="inline-block h-6 text-base font-semibold" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="${item.link}">${item.name}</a> </li>`;
                 continue;
             }
             if (item.highlight) {
                 stringHtml +=
-                `<li class="py-3 sm:py-4 px-3.5 text-highlight text-highlight-dot"> <a class="inline-block h-6 text-base font-semibold" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="#">${item.name}</a> </li>`;
+                `<li class="py-3 sm:py-4 px-3.5 text-highlight text-highlight-dot"> <a class="inline-block h-6 text-base font-semibold" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="${item.link}">${item.name}</a> </li>`;
                 continue;
             }
             stringHtml +=
-            `<li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="#">${item.name}</a> </li>`;
+            `<li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="${item.link}">${item.name}</a> </li>`;
     }
+    if (!document.querySelector('#header-list-category')) return
+
     document.querySelector('#header-list-category').innerHTML = stringHtml;
 }
 
