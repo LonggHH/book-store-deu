@@ -104,7 +104,15 @@
             <div class="container-layout overflow-hidden">
                 <div class="flex justify-between overflow-auto custom-scroll">
                     <div>
-                        <ul id="header-list-category" class="flex">                            
+                        <ul class="flex">
+                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="../index.html">전체</a> </li>
+                            <li class="py-4 px-3.5 text-highlight text-highlight-dot"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="../index.html">스페셜</a> </li>
+                            <li class="py-4 px-3.5 relative underline-active"> <a class="inline-block h-6 text-base font-semibold" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="./CA-book-main-category.html">도서</a> </li>
+                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="./CA-sanctuary-main-category.html">성물</a> </li>
+                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="./CA-good-main-category.html">굿즈</a> </li>
+                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="./CA-pick-main-category.html">바오로딸 Pick</a> </li>
+                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="./CA-ebook-main-category.html">ebook</a> </li>
+                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="./CA-dvd-main-category.html">음반/뮤직/DVD</a> </li>
                         </ul>
                     </div>
                     <div class="hidden sm:flex gap-2 items-center">
@@ -630,7 +638,7 @@
             <!-- event side -->
             <aside class="hidden xl:block" style="position: fixed; top: 380px; left: calc(50vw + 600px) ; width: 100px;">               
                 <div class="space-y-4">
-                    <div class="rounded-md border p-2.5 flex flex-col items-center gap-y-2">
+                    <div class="rounded-md border p-2.5 flex flex-col items-center gap-y-2 bg-white">
                         <h4 class="text-xs font-medium cursor-pointer" onclick="gotoPage('./P-event.html')">이벤트</h4>
                         
                         <hr class="w-full">
@@ -951,7 +959,7 @@
                 `
                     <div class="space-y-3 frame-width-102-160">
                         <div>
-                            <img class='item-choose-book' src="../assets/images/icon/common/check-white.svg" alt="o">
+                            <img onclick="chooseBookItem(this)" class='cursor-pointer item-choose-book' src="../assets/images/icon/common/check-white.svg" alt="o">
                         </div>
         
                         <div class="space-y-3">
@@ -1004,7 +1012,7 @@
                 `
                     <div class="flex-1 flex gap-3">
                         <div class="w-6 h-6">
-                            <img class='item-choose-book' src="../assets/images/icon/common/check-white.svg" alt="o">
+                            <img onclick="chooseBookItem(this)" class='cursor-pointer item-choose-book' src="../assets/images/icon/common/check-white.svg" alt="o">
                         </div>
         
                         <div class="flex-1 flex flex-col sm:flex-row gap-x-5 gap-y-3 items-start">
@@ -1071,6 +1079,15 @@
 
         const gridButton = document.getElementById('gridButton');
         const listButton = document.getElementById('listButton');
+
+        function chooseBookItem(icon) {
+            console.log(icon)
+            if (icon.src.includes('white')) {
+                icon.src = '../assets/images/icon/common/check-black.svg'
+            } else {
+                icon.src = '../assets/images/icon/common/check-white.svg'
+            }
+        }
 
         gridButton.addEventListener('click', () => {
             // Toggle between active states

@@ -117,7 +117,15 @@
             <div class="container-layout overflow-hidden">
                 <div class="flex justify-between overflow-auto custom-scroll">
                     <div>
-                        <ul id="header-list-category" class="flex">                            
+                        <ul class="flex">
+                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="../index.html">전체</a> </li>
+                            <li class="py-4 px-3.5 text-highlight text-highlight-dot"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="../index.html">스페셜</a> </li>
+                            <li class="py-4 px-3.5 relative underline-active"> <a class="inline-block h-6 text-base font-semibold" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="./CA-book-main-category.html">도서</a> </li>
+                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="./CA-sanctuary-main-category.html">성물</a> </li>
+                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="./CA-good-main-category.html">굿즈</a> </li>
+                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="./CA-pick-main-category.html">바오로딸 Pick</a> </li>
+                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="./CA-ebook-main-category.html">ebook</a> </li>
+                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="./CA-dvd-main-category.html">음반/뮤직/DVD</a> </li>
                         </ul>
                     </div>
                     <div class="hidden sm:flex gap-2 items-center">
@@ -732,7 +740,7 @@
                                             </p>
                                         </div>
 
-                                        <div class="flex items-center gap-1 cursor-pointer" onclick="displsyMoreContent('#icon-up-down-1','#content-1')">
+                                        <div class="flex items-center gap-1 cursor-pointer" onclick="displayContent('#icon-up-down-1','#content-1')">
                                             <span class="inline-block text-13-l-18 font-normal text-gray-400">더보기</span>
                                             <div class="h-5 w-5 rounded-full border flex items-center justify-center">
                                                 <i id="icon-up-down-1" class="text-xs fa-solid fa-chevron-down text-gray-400"></i>
@@ -760,7 +768,7 @@
                                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus eligendi praesentium iusto quod. Maxime vero quo sequi odio cum recusandae, laudantium eos sapiente et cumque accusamus mollitia officiis! Fugiat, velit.
                                             </p>
 
-                                            <div class="flex items-center gap-1 cursor-pointer" onclick="displsyMoreContent('#icon-up-down-2', '#info-author-paragraph')">
+                                            <div class="flex items-center gap-1 cursor-pointer" onclick="displayContent('#icon-up-down-2', '#info-author-paragraph')">
                                                 <span class="inline-block text-13-l-18 font-normal text-gray-400">더보기</span>
                                                 <div class="h-5 w-5 rounded-full border flex items-center justify-center">
                                                     <i id="icon-up-down-2" class="text-xs fa-solid fa-chevron-down text-gray-400"></i>
@@ -861,7 +869,7 @@
                                             <p class="text-11-l-14 font-normal text-gray-400">*JPG, PNG, GIF 파일만 최대 5장 업로드 가능합니다</p>
 
                                             <div class="flex items-center justify-end">
-                                                <button class="flex-1 sm:flex-none text-15-l-22 font-semibold py-2.5 px-4 rounded bg-gray-300">작성완료</button>
+                                                <button class="flex-1 sm:flex-none text-15-l-22 font-semibold py-2.5 px-4 rounded bg-gray-300 text-gray-400">작성완료</button>
                                             </div>
                                         </div>
                                     </div>
@@ -908,9 +916,9 @@
                                 <div class="space-y-5">
                                     <div class="px-5 sm:px-0">
                                         <ul class="flex items-center gap-x-2 border-b">
-                                            <li class="text-base font-semibold border-b border-black p-2.5">최신순</li>
-                                            <li class="text-base font-semibold text-gray-400 p-2.5">평점 높은순</li>
-                                            <li class="text-base font-semibold text-gray-400 p-2.5">평점 낮은순</li>
+                                            <li class="text-base font-semibold border-b border-black p-2.5 cursor-pointer">최신순</li>
+                                            <li class="text-base font-semibold text-gray-400 p-2.5 cursor-pointer">평점 높은순</li>
+                                            <li class="text-base font-semibold text-gray-400 p-2.5 cursor-pointer">평점 낮은순</li>
                                         </ul>
                                     </div>
 
@@ -955,14 +963,16 @@
                                                     </div>
                                                 </div>
 
-                                                <p class="px-5 sm:px-0 text-15-l-24 font-normal two-lines" style="max-width: 550px;">
+                                                <p id="comment-1" class="px-5 sm:px-0 text-15-l-24 font-normal two-lines" style="max-width: 550px;">
                                                     매일 하고 있는 가족기도서로 우선 쓰고 있습니다. 딱이라는 생각도 들었고, 다른 사람이 문의 올린글의 답변에서 가족기도용으로 추천하신 것 중 성체조배책이 있어서요.
+                                                    <br>
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque accusamus, sit omnis error accusantium nobis recusandae libero reiciendis quos possimus earum dolore! Quo voluptas delectus magni, laborum deserunt esse similique!
                                                 </p>
 
-                                                <div class="px-5 sm:px-0 flex items-center gap-1">
+                                                <div class="px-5 sm:px-0 flex items-center gap-1 cursor-pointer" onclick="displayComment('#icon-up-down-3', '#comment-1')">
                                                     <span class="inline-block text-13-l-18 font-normal text-gray-400">더보기</span>
                                                     <div class="h-5 w-5 rounded-full border flex items-center justify-center">
-                                                        <i class="text-xs fa-solid fa-chevron-down"></i>
+                                                        <i id="icon-up-down-3" class="text-xs fa-solid fa-chevron-down text-gray-400"></i>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1007,14 +1017,14 @@
                                                     </div>
                                                 </div> -->
 
-                                                <p class="px-5 sm:px-0 text-15-l-24 font-normal two-lines" style="max-width: 550px;">
+                                                <p id="comment-2" class="px-5 sm:px-0 text-15-l-24 font-normal two-lines" style="max-width: 550px;">
                                                     매일 하고 있는 가족기도서로 우선 쓰고 있습니다. 딱이라는 생각도 들었고, 다른 사람이 문의 올린글의 답변에서 가족기도용으로 추천하신 것 중 성체조배책이 있어서요.
                                                 </p>
 
-                                                <div class="px-5 sm:px-0 flex items-center gap-1">
-                                                    <span class="inline-block text-13-l-18 font-normal text-gray-400">더보기</span>
+                                                <div class="px-5 sm:px-0 flex items-center gap-1 cursor-pointer" onclick="displayComment('#icon-up-down-4', '#comment-2')">
+                                                    <span class="inline-block text-13-l-18 font-normal text-gray-400 ">더보기</span>
                                                     <div class="h-5 w-5 rounded-full border flex items-center justify-center">
-                                                        <i class="text-xs fa-solid fa-chevron-down"></i>
+                                                        <i id="icon-up-down-4" class="text-xs fa-solid fa-chevron-down text-gray-400"></i>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1579,20 +1589,15 @@
 
     <script>
 
-        function renderListStarComment(num) {
-            let dfNum = 5
-            if(num) {
-                dfNum = 4 - num
-            }
-
+        function renderListStarComment() {          
             let stringHTML = ''
             Array(5).fill(null).forEach((item, i) => {                            
                 stringHTML +=
                 `
-                    <div class="w-10 h-10 flex items-center justify-center star cursor-pointer" onclick="renderListStarComment(${i})">
-                        <i class="text-3xl fa-solid fa-star ${i <= dfNum ? 'text-gray-400' : 'text-blue-400'}"></i>
+                    <div class="w-10 h-10 flex items-center justify-center star cursor-pointer">
+                        <i class="text-3xl fa-solid fa-star text-gray-400"></i>
                     </div>
-                `         
+                `
             })
             document.querySelector('#list-star-comment').innerHTML = stringHTML
         }
@@ -1614,8 +1619,13 @@
             });
         });
 
+        function displayComment(iconId, blockId) {
+            document.querySelector(blockId).classList.toggle('two-lines')
+            document.querySelector(iconId).classList.toggle('fa-chevron-down')
+            document.querySelector(iconId).classList.toggle('fa-chevron-up')
+        }
 
-        function displsyMoreContent(iconId, blockId) {
+        function displayContent(iconId, blockId) {
             document.querySelector(blockId).classList.toggle('four-lines')
             document.querySelector(iconId).classList.toggle('fa-chevron-down')
             document.querySelector(iconId).classList.toggle('fa-chevron-up')
@@ -1675,7 +1685,7 @@
             Array(7).fill(null).forEach((e, i) => {
                 stringHTML +=
                 `
-                    <div class="swiper-slide space-y-3" style="width: 104px;">
+                    <div class="swiper-slide space-y-3 cursor-pointer" style="width: 104px;" onclick="gotoPage('#')">
                         <div class="space-y-2">
                             <div class="relative frame-image-border-26 frame-image-size-102150 overflow-hidden shadow-md border">
                                 <img class="w-full h-full" src="../assets/images/image/books/book${i+1}.png" alt="book">                                                        
@@ -1715,7 +1725,7 @@
             Array(7).fill(null).forEach((e, i) => {
                 stringHTML +=
                 `
-                    <div class="swiper-slide space-y-3" style="width: 104px;">
+                    <div class="swiper-slide space-y-3 cursor-pointer" style="width: 104px;" onclick="gotoPage('#')">
                         <div class="space-y-2">
                             <div class="relative frame-image-border-26 frame-image-size-102150 overflow-hidden shadow-md border">
                                 <img class="w-full h-full" src="../assets/images/image/books/book${i+1}.png" alt="book">                                                        

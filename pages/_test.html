@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#div1, #div2, #div3, #div4 {
+  float: left;
+  width: 100px;
+  height: 35px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  text-align: center;
+  vertical-align: top;
+}
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault(); // Cho phép thả
+}
+
+function drag(ev) {
+  // Lưu id của phần tử đang kéo và div chứa nó
+  var parentDivId = ev.target.parentElement.id;
+  ev.dataTransfer.setData("text", ev.target.id); // Lưu id của phần tử đang kéo
+  ev.dataTransfer.setData("parentDivId", parentDivId); // Lưu id của div chứa phần tử
+}
+
+function drop(ev) {
+  ev.preventDefault(); // Ngừng hành động mặc định (thả)
+
+  // Lấy id của phần tử đang kéo và id của div chứa nó
+  var draggedElementId = ev.dataTransfer.getData("text");
+  var parentDivId = ev.dataTransfer.getData("parentDivId");
+
+  // Lấy phần tử đang kéo và phần tử đích (div)
+  var draggedElement = document.getElementById(draggedElementId);
+  var targetDiv = ev.target;
+
+  // Nếu phần tử đích không phải là div, lấy parentElement (div chứa phần tử con)
+  if (targetDiv.tagName !== "DIV") {
+    targetDiv = targetDiv.parentElement;
+  }
+
+  // Lấy div nguồn và div đích
+  var sourceDiv = document.getElementById(parentDivId);
+  
+  // Lấy phần tử con của div nguồn và div đích
+  var sourceChild = sourceDiv.firstElementChild;
+  var targetChild = targetDiv.firstElementChild;
+
+  // Hoán đổi các phần tử con giữa hai div
+  sourceDiv.appendChild(targetChild); // Di chuyển phần tử con của div đích vào div nguồn
+  targetDiv.appendChild(sourceChild); // Di chuyển phần tử con của div nguồn vào div đích
+  
+  // Di chuyển phần tử kéo vào div đích
+  targetDiv.appendChild(draggedElement);
+}
+</script>
+</head>
+<body>
+
+<h2>Drag and Drop</h2>
+<p>Drag the image and text between the four div elements.</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="img_w3slogo.gif" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <p id="text1" draggable="true" ondragstart="drag(event)">ABC</p>
+</div>
+
+<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <p id="text2" draggable="true" ondragstart="drag(event)">DEF</p>
+</div>
+
+<div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="img_w3slogo.gif" draggable="true" ondragstart="drag(event)" id="drag2" width="88" height="31">
+</div>
+
+</body>
+</html>
+thầy test xem được k
