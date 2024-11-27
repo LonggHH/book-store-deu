@@ -44,6 +44,7 @@ function renderIconAccLogin() {
         document.querySelector('#toggle-menu-overview-login').classList.remove('hidden')
 
         document.querySelector('#btn-logout').classList.remove('hidden')
+        document.querySelector('#icon-acc-login').addEventListener('click', () => gotoPage('./MY-main.html'))
     } else {
         document.querySelector('#icon-acc-login').src = '../assets/images/icon/header/my-home-no-login.svg'
 
@@ -51,6 +52,7 @@ function renderIconAccLogin() {
         document.querySelector('#toggle-menu-overview-login').classList.add('hidden')
 
         document.querySelector('#btn-logout').classList.add('hidden')
+        document.querySelector('#icon-acc-login').addEventListener('click', () => gotoPage('./AU-login-login.html'))
     }    
 }
 renderIconAccLogin()
