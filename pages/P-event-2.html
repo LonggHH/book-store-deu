@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>카테고리 메인 / 이벤트</title>
+    <title>카테고리 메인 / 출석체크</title>
 
     <!-- Link Font -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
@@ -389,7 +389,7 @@
                     <span class="text-gray-400 inline-block text-13-l-18 font-normal">/</span>
                 </div>
                 <div class="flex items-center gap-1 relative cursor-pointer breadcrumb-main-category-menu">
-                    <span class="text-gray-400 inline-block text-13-l-18 font-normal">이벤트</span>
+                    <span class="text-gray-400 inline-block text-13-l-18 font-normal">출석체크</span>
                     <img class="icon-down" src="../assets/images/icon/category/breadcrumb-down.svg" alt="icon">
                     <img class="icon-up hidden" src="../assets/images/icon/category/breadcrumb-up.svg" alt="icon">
 
@@ -427,131 +427,157 @@
             <div class="">
 
                 <div class="px-5 sm:px-0 flex items-center gap-x-6">
-                    <h4 class="text-2028-2838 font-medium cursor-pointer" onclick="gotoPage('./P-event.html')">이벤트</h4>
+                    <h4 class="text-2028-2838 font-medium text-gray-400 cursor-pointer" onclick="gotoPage('./P-event.html')">이벤트</h4>
                     <h4 class="text-2028-2838 font-medium text-gray-400">|</h4>
-                    <h4 class="text-2028-2838 font-medium text-gray-400 cursor-pointer" onclick="gotoPage('./P-event-2.html')">출석 체크</h4>
-
+                    <h4 class="text-2028-2838 font-medium cursor-pointer" onclick="gotoPage('./P-event-2.html')">출석 체크</h4>
                 </div>
 
-                <div class="px-5 sm:px-0 grid grid-cols-1 gap-5 md:grid-cols-3 mt-8">
-                    <div class="cursor-pointer" onclick="gotoPage('./P-event-2.html')">
-                        <div>
-                            <div class="h-56 rounded-lg bg-gray-200"></div>
-                            <div class="flex items-center justify-between mt-2.5 mb-1">
-                                <span class="inline-block text-11-l-14 font-medium py-1 px-4 rounded-full" style="background-color: rgba(254, 230, 198, 1);">상시</span>
-
-                                <span class="inline-block text-11-l-14 font-medium text-gray-400"></span>
-                            </div>
-                            <h4 class="text-1624-1826 font-semibold">리뷰쓰고 선물 받고</h4>
+                <div class="rounded-lg bg-blue-50 pt-16 pb-36 mt-8">
+                    <div style="max-width: 740px; margin: 0 auto;">
+                        <div class="text-center">
+                            <h3 style="font-size: 28px; line-height: 28px; font-weight: 400;">이달의</h3>
+                            <h3 class="mt-4 mb-3" style="font-size: 42px; line-height: 42px; font-weight: 700;">출석체크</h3>
+                            <p class="text-14-l-22 font-normal px-5 sm:px-0">바오로딸에 접속하셔서 매일 출석 도장을 찍어주세요!
+                                출석 횟수에 따라 할인 쿠폰을 드립니다.</p>
                         </div>
-                    </div>
-                    <div class="cursor-pointer" onclick="gotoPage('./P-event-2.html')">
-                        <div>
-                            <div class="h-56 rounded-lg bg-gray-200"></div>
-                            <div class="flex items-center justify-between mt-2.5 mb-1">
-                                <span class="inline-block text-11-l-14 font-medium py-1 px-4 rounded-full" style="background-color: rgba(254, 230, 198, 1);">상시</span>
-
-                                <span class="inline-block text-11-l-14 font-medium text-gray-400"></span>
-                            </div>
-                            <h4 class="text-1624-1826 font-semibold">리뷰쓰고 선물 받고</h4>
-                        </div>
-                    </div>
-                    <div class="cursor-pointer" onclick="gotoPage('./P-event-2.html')">
-                        <div>
-                            <div class="h-56 rounded-lg bg-gray-200"></div>
-                            <div class="flex items-center justify-between mt-2.5 mb-1">
-                                <span class="inline-block text-11-l-14 font-medium py-1 px-4 rounded-full" style="background-color: rgba(253, 228, 236, 1);">상시</span>
-
-                                <span class="inline-block text-11-l-14 font-medium text-gray-400">2024.09.01 ~ 소진시 마감</span>
-                            </div>
-                            <h4 class="text-1624-1826 font-semibold">리뷰쓰고 선물 받고</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="h-9 sm:h-16"></div>
-
-                <main class="cs-main-size">
-                    <div class="space-y-5">
-                        <div class="flex items-center justify-between p-5 sm:p-0 sm:pb-3 border-b">
-                            <h4 class="text-1624-1826 font-semibold">종료된 이벤트</h4>
-
-                            <button class="px-4" id="btn-toggle-table-event">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </button>
-                        </div>                        
-                        
-                        <div id="table-event" class="px-5 sm:p-0 space-y-5">
-                            <div class="hidden sm:flex items-center">
-                                <div class="w-11 pr-2.5 text-15-l-22 font-medium text-gray-400">NO</div>
-                                <div class="flex-1 px-2.5 text-15-l-22 font-medium text-gray-400">제목</div>                                
-                                <div class="w-32 px-2.5 text-15-l-22 font-medium text-gray-400 text-center">조회수</div>
-                                <div class="w-24 pl-2.5 text-15-l-22 font-medium text-gray-400 text-center">종료일</div>
+    
+                        <div class="rounded-xl bg-white py-6 mt-14 space-y-6" >
+                            <div class="text-center">
+                                <span class="inline-block text-1624-1826 font-semibold text-blue-500 py-1 px-6 rounded-full bg-blue-50">참여혜택</span>
                             </div>
 
-                            <div class="border-t">
-                                <div class="flex items-center flex-wrap gap-y-3 py-5 sm:py-6 border-b ">
-                                    <div class="hidden sm:block w-11 pr-2.5 text-15-l-22 font-normal text-gray-400">00</div>
-                                    <div class="flex-1 sm:px-2.5 text-15-l-22 font-medium text-start whitespace-nowrap truncate cursor-pointer" onclick="gotoPage('./CS-no-notice-detail.html')">이벤트명</div>
-                                    <div class="w-auto sm:w-32 sm:px-2.5 text-15-l-22 font-normal text-center text-gray-400">000000</div>
-                                    <div class="w-24 pl-2.5 text-sm font-normal text-gray-400 text-center">2024-00-00</div>
-                                </div>
-                                <div class="flex items-center flex-wrap gap-y-3 py-5 sm:py-6 border-b ">
-                                    <div class="hidden sm:block w-11 pr-2.5 text-15-l-22 font-normal text-gray-400">00</div>
-                                    <div class="flex-1 sm:px-2.5 text-15-l-22 font-medium text-start whitespace-nowrap truncate cursor-pointer" onclick="gotoPage('./CS-no-notice-detail.html')">이벤트명</div>
-                                    <div class="w-auto sm:w-32 sm:px-2.5 text-15-l-22 font-normal text-center text-gray-400">000000</div>
-                                    <div class="w-24 pl-2.5 text-sm font-normal text-gray-400 text-center">2024-00-00</div>
-                                </div>
-                            </div>
+                            <div class="px-5 sm:px-10">
+                                <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
 
-                            <br class="hidden sm:block">
+                                    <div class="space-y-3.5">
+                                        <div class="relative pb-3.5 rounded-xl text-center px-2" style="background: linear-gradient(90deg, rgba(100, 195, 255, 1) 0%, rgba(67, 151, 254, 1) 100%);">
+                                            <div class="w-full border-b border-dashed border-white">
+                                                <span class="inline-block text-xs font-normal text-white">COUPON</span>
+                                            </div>
+                                            <div class="mb-2 mt-3">
+                                                <h4 class="text-white" style="font-size: 30px; line-height: 30px; font-weight: 700;">300원</h4>
+                                            </div>
+                                            <div>
+                                                <span class="inline-block text-11-l-14 font-normal text-white py-0.5 px-3 rounded-full" style="background-color: rgba(255, 255, 255, 0.2);">출석체크 10번 이상</span>
+                                            </div>
+                                            <div class="absolute right-0 left-0 flex items-center justify-between" style="top: calc(50% - 11px);">
+                                                <div class="rounded-full bg-white transform -translate-x-3" style="width: 22px; height: 22px;"></div>
+                                                <div class="rounded-full bg-white transform translate-x-3" style="width: 22px; height: 22px;"></div>
+                                            </div>
+                                        </div>
 
-                            <div id="frame-pagi" class="flex items-center justify-center pt-2.5">
-                                <div class="flex items-center">
-                                    <button onclick="gotoSE('start')" class="p-1 sm:p-2">
-                                        <img class="w-6 h-6" src="../assets/images/icon/common/prev-to-first.svg"
-                                            alt="icon">
-                                    </button>
-                                    <button onclick="moveTenPage('minus')" class="p-1 sm:p-2">
-                                        <img class="w-6 h-6" src="../assets/images/icon/common/prev.svg" alt="icon">
-                                    </button>
-        
-                                    <div id="list-btn-pagi" class="flex items-center">
-                                        <button class="p-1 sm:p-2">
-                                            <span
-                                                class="w-6 h-6 rounded-full bg-black text-white text-13-l-18 font-medium flex items-center justify-center">1</span>
-                                        </button>
-                                        <button class="p-1 sm:p-2">
-                                            <span
-                                                class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">2</span>
-                                        </button>
-                                        <button class="p-1 sm:p-2">
-                                            <span
-                                                class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">3</span>
-                                        </button>
-                                        <button class="p-1 sm:p-2">
-                                            <span
-                                                class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">4</span>
-                                        </button>
-                                        <button class="p-1 sm:p-2">
-                                            <span
-                                                class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">5</span>
-                                        </button>
+                                        <div class="rounded overflow-hidden border border-dashed">
+                                            <button class="text-gray-400 text-13-l-18 font-semibold py-1.5 w-full bg-gray-100">완료</button>
+                                        </div>
                                     </div>
-        
-                                    <button onclick="moveTenPage('plus')" class="p-1 sm:p-2">
-                                        <img class="w-6 h-6" src="../assets/images/icon/common/next.svg" alt="icon">
-                                    </button>
-                                    <button onclick="gotoSE('end')" class="p-1 sm:p-2">
-                                        <img class="w-6 h-6" src="../assets/images/icon/common/next-to-end.svg" alt="icon">
-                                    </button>
+
+                                    <div class="space-y-3.5">
+                                        <div class="relative pb-3.5 rounded-xl text-center px-2" style="background: linear-gradient(90deg, rgba(100, 169, 255, 1) 0%, rgba(67, 101, 254, 1) 100%);">
+                                            <div class="w-full border-b border-dashed border-white">
+                                                <span class="inline-block text-xs font-normal text-white">COUPON</span>
+                                            </div>
+                                            <div class="mb-2 mt-3">
+                                                <h4 class="text-white" style="font-size: 30px; line-height: 30px; font-weight: 700;">600원</h4>
+                                            </div>
+                                            <div>
+                                                <span class="inline-block text-11-l-14 font-normal text-white py-0.5 px-3 rounded-full" style="background-color: rgba(255, 255, 255, 0.2);">출석체크 20번 이상</span>
+                                            </div>
+                                            <div class="absolute right-0 left-0 flex items-center justify-between" style="top: calc(50% - 11px);">
+                                                <div class="rounded-full bg-white transform -translate-x-3" style="width: 22px; height: 22px;"></div>
+                                                <div class="rounded-full bg-white transform translate-x-3" style="width: 22px; height: 22px;"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="rounded overflow-hidden border border-gray-700">
+                                            <button class="text-white text-13-l-18 font-semibold py-1.5 w-full bg-gray-700">쿠폰 받기</button>
+                                        </div>
+                                    </div>
+
+                                    
+                                    <div class="space-y-3.5">
+                                        <div class="relative pb-3.5 rounded-xl text-center px-2" style="background: linear-gradient(90deg, rgba(128, 158, 255, 1) 0%, rgba(96, 71, 255, 1) 100%);">
+                                            <div class="w-full border-b border-dashed border-white">
+                                                <span class="inline-block text-xs font-normal text-white">COUPON</span>
+                                            </div>
+                                            <div class="mb-2 mt-3">
+                                                <h4 class="text-white" style="font-size: 30px; line-height: 30px; font-weight: 700;">1,000원</h4>
+                                            </div>
+                                            <div>
+                                                <span class="inline-block text-11-l-14 font-normal text-white py-0.5 px-3 rounded-full" style="background-color: rgba(255, 255, 255, 0.2);">출석체크 100%</span>
+                                            </div>
+                                            <div class="absolute right-0 left-0 flex items-center justify-between" style="top: calc(50% - 11px);">
+                                                <div class="rounded-full bg-white transform -translate-x-3" style="width: 22px; height: 22px;"></div>
+                                                <div class="rounded-full bg-white transform translate-x-3" style="width: 22px; height: 22px;"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="rounded overflow-hidden border-gray-100">
+                                            <button class="text-gray-400 text-13-l-18 font-semibold py-1.5 w-full bg-gray-100">완료</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+    
+                        <div class="mt-6 rounded-xl bg-white">
+                            <div class="py-5 sm:py-12 px-5 sm:px-16 space-y-6">
+                                <div>
+                                    <span class="inline-block font-bold" style="font-size: 36px; line-height: 48px;">10월</span>
+                                </div>
+    
+                                <div class="flex items-center flex-wrap gap-2">
+                                    <div class="w-20 h-20">
+                                        <img class="w-full h-full" src="../assets/images/image/event/cup.png" alt="">
+                                    </div>
+                                    <div class="w-20 h-20">
+                                        <img class="w-full h-full" src="../assets/images/image/event/cup.png" alt="">
+                                    </div>
+                                    <div class="w-20 h-20">
+                                        <img class="w-full h-full" src="../assets/images/image/event/text.png" alt="">
+                                    </div>
+                                    <div class="relative w-20 h-20">
+                                        <img class="w-full h-full" src="../assets/images/image/event/frame.png" alt="">
+                                        <div class="absolute w-20 h-20 top-0 left-0 z-10 flex items-center justify-center text-gray-400 font-bold" style="font-size: 32px; line-height: 32px;">
+                                            4
+                                        </div>
+                                    </div>
+                                    <div class="relative w-20 h-20">
+                                        <img class="w-full h-full" src="../assets/images/image/event/frame.png" alt="">
+                                        <div class="absolute w-20 h-20 top-0 left-0 z-10 flex items-center justify-center text-gray-400 font-bold" style="font-size: 32px; line-height: 32px;">
+                                            5
+                                        </div>
+                                    </div>
+                                    <div class="relative w-20 h-20">
+                                        <img class="w-full h-full" src="../assets/images/image/event/frame.png" alt="">
+                                        <div class="absolute w-20 h-20 top-0 left-0 z-10 flex items-center justify-center text-gray-400 font-bold" style="font-size: 32px; line-height: 32px;">
+                                            6
+                                        </div>
+                                    </div>
+                                    <div class="relative w-20 h-20">
+                                        <img class="w-full h-full" src="../assets/images/image/event/frame.png" alt="">
+                                        <div class="absolute w-20 h-20 top-0 left-0 z-10 flex items-center justify-center text-gray-400 font-bold" style="font-size: 32px; line-height: 32px;">
+                                            7
+                                        </div>
+                                    </div>
+                                    <div class="relative w-20 h-20">
+                                        <img class="w-full h-full" src="../assets/images/image/event/frame.png" alt="">
+                                        <div class="absolute w-20 h-20 top-0 left-0 z-10 flex items-center justify-center text-gray-400 font-bold" style="font-size: 32px; line-height: 32px;">
+                                            8
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <ul class="px-5 sm:px-0 mt-6 pl-3 list-disc list-inside text-gray-800 space-y-2">
+                            <li class="text-xs">출석체크는 매일 ID당 1회 참여 가능합니다.</li>
+                            <li class="text-xs">전월 출석수에 따라 활성화 된 쿠폰을 클릭하면 출석 수에 따라 발급되며, 당월 말까지 사용가능합니다.</li>
+                            <li class="text-xs">도서정가제로 인하여 발급된 할인쿠폰은 음반, DVD, 성물 구매 시 사용 가능합니다.</li>
+                            <li class="text-xs">(책 단독 구매에는 사용이 불가하나 음반, DVD, 성물을 포함한 책 구매 시에는 사용 가능합니다.)</li>
+                            <li class="text-xs">본 이벤트 쿠폰 지급은 내부 사정에 따라 변경될 수 있습니다.</li>
+                        </ul>
                     </div>
-                    
-                </main>
-                
+                </div>
             </div>
           
         </div>
@@ -561,16 +587,6 @@
 
     <script src="../assets/js/util.js"></script>
     <script src="../assets/js/common.js"></script>
-
-    <script>
-        const btnToggle = document.querySelector('#btn-toggle-table-event')
-        btnToggle.addEventListener('click', () => {
-            btnToggle.querySelector('i').classList.toggle('fa-chevron-down')
-            btnToggle.querySelector('i').classList.toggle('fa-chevron-up')
-
-            document.querySelector('#table-event').classList.toggle('hidden')
-        })
-    </script>
 
 </body>
 </html>
