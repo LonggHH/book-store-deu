@@ -568,6 +568,16 @@ input[type="number"] {
   border-bottom-left-radius: 2px;
 }
 
+.frame-image-size-280160-520292 {
+  width: 520px;
+  height: 292px;
+}
+
+.frame-image-size-102150-196290 {
+  width: 196px;
+  height: 290px;
+}
+
 .frame-image-size-102150-160236 {
   width: 160px;
   height: 236px;
@@ -606,6 +616,10 @@ input[type="number"] {
 .frame-image-size-194288-348518 {
   width: 348px;
   height: 518px;
+}
+
+.frame-width-102-196 {
+  width: 196px;
 }
 
 .frame-width-102-160 {
@@ -715,6 +729,11 @@ input[type="number"] {
   }
 }
 
+.main-best-slide-size {
+  width: 1120px;
+  height: 514px;
+}
+
 .best-slide-size {
   width: 940px;
   height: 514px;
@@ -723,6 +742,11 @@ input[type="number"] {
 .sanctuary-best-slide-size {
   width: 940px;
   height: 370px;
+}
+
+.main-new-slide-size {
+  width: 1120px;
+  /* height: 376px; */
 }
 
 .new-slide-size {
@@ -787,7 +811,59 @@ input[type="number"] {
   background-color: rgba(250, 252, 255, 1);
 }
 
+.width-580-1120 {
+  width: 1120px;
+}
+
+.width-full-433 {
+  width: 433px;
+}
+
+.h-150-200 {
+  height: 200px;
+}
+
+.size-160160-250250 {
+  width: 250px;
+  height: 250px;
+}
+
+.w-340-520 {
+  width: 520px;
+}
+
+.w-280-340 {
+  width: 340px;
+}
+
 @media (max-width: 640px) {
+
+  .w-280-340 {
+    width: 280px;
+  }
+
+  .w-340-520 {
+    width: 340px;
+  }
+
+  .size-160160-250250 {
+    width: 160px;
+    height: 160px;
+  }
+
+  .h-150-200 {
+    height: 150px;
+  }
+
+  .width-full-433 {
+    width: 100%;
+  }
+  
+
+  .width-580-1120 {
+    width: 580px;
+  }
+
   .border-bl-0-30 {
     border-bottom-left-radius: 0;
   }
@@ -869,6 +945,16 @@ input[type="number"] {
     border-bottom-left-radius: 8px;
   }
 
+  .frame-image-size-280160-520292 {
+    width: 280px;
+    height: 160px;
+  }
+
+  .frame-image-size-102150-196290 {
+    width: 102px;
+    height: 150px;
+  }
+
   .frame-image-size-102150-160236 {
     width: 102px;
     height: 150px;
@@ -904,14 +990,23 @@ input[type="number"] {
     height: 288px;
   }
 
+  .main-best-slide-size {
+    width: 580px;
+  }
+
   .best-slide-size {
     width: 580px;
-    height: 384px;
+    /* height: 384px; */
   }
 
   .sanctuary-best-slide-size {
     width: 940px;
     height: 370px;
+  }
+
+  .main-new-slide-size {
+    width: 600px;
+    /* height: 236px; */
   }
 
   .new-slide-size {
@@ -937,6 +1032,10 @@ input[type="number"] {
   .sanctuary-new-slide-size {
     width: 590px;
     height: 228px;
+  }
+
+  .frame-width-102-196 {
+    width: 102px;
   }
 
   .frame-width-102-160 {

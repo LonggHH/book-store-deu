@@ -82,6 +82,23 @@
         .container-custom-slide .slide .item:nth-child(4) .content {
             opacity: 1;
         }
+
+        @media (max-width: 425px) {
+            
+
+            /* custom slide */
+            .container-custom-slide .slide .item:nth-child(1),
+            .container-custom-slide .slide .item:nth-child(2),
+            .container-custom-slide .slide .item:nth-child(3) {
+                left: -50px;
+            }
+
+            .container-custom-slide .slide .item:nth-child(4) {
+                width: 100%;
+                left: 0;
+            }
+            /* custom slide */           
+        }
     </style>
 </head>
 
@@ -540,15 +557,574 @@
         </div>
     </section>
 
-    <section class="mt-8">
+    <section class="my-12 sm:my-8">
         <div class="container-layout">
-            
+            <ul class="pl-5 sm:pl-0 flex items-center justify-between gap-x-5 overflow-x-auto custom-scroll-x">
+                <li class="flex items-center gap-y-2 justify-center flex-col">
+                    <div class="w-20 h-20 rounded-3xl flex items-center justify-center" style="background-color: rgba(247, 247, 248, 1);">
+                        <img src="./assets/images/icon/main/li1.svg" alt="">
+                    </div>
+                    <h4 class="text-sm font-medium text-center whitespace-nowrap">키워드 Pick</h4>
+                </li>
+                <li class="flex items-center gap-y-2 justify-center flex-col">
+                    <div class="w-20 h-20 rounded-3xl flex items-center justify-center" style="background-color: rgba(247, 247, 248, 1);">
+                        <img src="./assets/images/icon/main/li2.svg" alt="">
+                    </div>
+                    <h4 class="text-sm font-medium text-center whitespace-nowrap">이벤트</h4>
+                </li>
+                <li class="flex items-center gap-y-2 justify-center flex-col">
+                    <div class="w-20 h-20 rounded-3xl flex items-center justify-center" style="background-color: rgba(247, 247, 248, 1);">
+                        <img src="./assets/images/icon/main/li3.svg" alt="">
+                    </div>
+                    <h4 class="text-sm font-medium text-center whitespace-nowrap">수도자의 독서노트</h4>
+                </li>
+                <li class="flex items-center gap-y-2 justify-center flex-col">
+                    <div class="w-20 h-20 rounded-3xl flex items-center justify-center" style="background-color: rgba(247, 247, 248, 1);">
+                        <img src="./assets/images/icon/main/li4.svg" alt="">
+                    </div>
+                    <h4 class="text-sm font-medium text-center whitespace-nowrap">신간메일진</h4>
+                </li>
+                <li class="flex items-center gap-y-2 justify-center flex-col">
+                    <div class="w-20 h-20 rounded-3xl flex items-center justify-center" style="background-color: rgba(247, 247, 248, 1);">
+                        <img src="./assets/images/icon/main/li5.svg" alt="">
+                    </div>
+                    <h4 class="text-sm font-medium text-center whitespace-nowrap">성경공부교재</h4>
+                </li>
+                <li class="flex items-center gap-y-2 justify-center flex-col">
+                    <div class="w-20 h-20 rounded-3xl flex items-center justify-center" style="background-color: rgba(247, 247, 248, 1);">
+                        <img src="./assets/images/icon/main/li6.svg" alt="">
+                    </div>
+                    <h4 class="text-sm font-medium text-center whitespace-nowrap">출석체크</h4>
+                </li>
+                <li class="flex items-center gap-y-2 justify-center flex-col">
+                    <div class="w-20 h-20 rounded-3xl flex items-center justify-center" style="background-color: rgba(247, 247, 248, 1);">
+                        <img src="./assets/images/icon/main/li7.svg" alt="">
+                    </div>
+                    <h4 class="text-sm font-medium text-center whitespace-nowrap">리뷰</h4>
+                </li>
+            </ul>
         </div>
     </section>
 
+    <section style="background-color: rgba(255, 249, 237, 1);">
+        <div class="container-layout">
+            <div class="px-5 sm:px-0 space-y-5 sm:space-y-8 py-12 sm:py-14">
+                <h4 class="text-2028-2838 font-semibold">바오로딸 <span class="inline-block text-2028-2838 font-semibold text-highlight">추천</span> </h4>
+
+                <div>
+                    slide...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="h-12 sm:h-24"></div>
+    <section>
+        <div class="container-layout">
+            <div class="space-y-5 sm:space-y-8">
+                <div class="px-5 sm:px-0 flex flex-col sm:flex-row sm:items-center gap-y-3 gap-x-6">
+                    <div class="flex items-center gap-x-1">
+                        <h4 class="text-2028-2838 font-semibold">NEW</h4>
+                        <img src="./assets/images/icon/main/new.svg" alt="">
+                    </div>
+                    <div class="flex-1 flex items-center justify-between">
+                        <div>
+                            <button class="text-base py-1.5 px-3.5 font-semibold rounded-full bg-black text-white">도서</button>
+                            <button class="text-base py-1.5 px-3.5 font-medium rounded-full">성물</button>
+                            <button class="text-base py-1.5 px-3.5 font-medium rounded-full">굿즈</button>
+                        </div>
+
+                        <div class="flex items-center gap-1 py-1 cursor-pointer" onclick="gotoPage('./CA-book-main-category.html')">
+                            <span class="inline-block text-sm sm:text-base font-semibold text-gray-400">더보기</span>
+                            <img src="./assets/images/icon/common/plus-gray.svg" alt="+">
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <!-- start slide -->
+                    <div class="pl-5 md:pl-0">
+                        <div class="relative">
+                            <!-- new swiper -->
+                            <div class="overflow-x-hidden">
+                                <div id="newSwiper" class="swiper main-new-slide-size">
+                                    <div class="swiper-wrapper">
+
+                                        <!-- <div class="swiper-slide">
+                                            <div class="space-y-2 sm:space-y-3 frame-width-102-196">
+                                                <div class="frame-image-border-26-48 frame-image-size-102150-196290 overflow-hidden shadow-md border">
+                                                    <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="book">
+                                                </div>
+                                                                
+                                                <div>
+                                                    <h4 class="text-base font-semibold mb-1 truncate">영원한 도움의 성모 매일기도</h4>
+                                                    <div class="text-13-l-18 font-normal text-gray-400 mb-3">성바오로딸</div>
+                                                    <div class="flex items-center gap-1">
+                                                        <span class="inline-block text-sm font-semibold text-red-500">10%</span>
+                                                        <span class="inline-block text-sm font-semibold">12,600</span><span class="inline-block text-sm font-normal">원</span>
+                                                        <span class="hidden sm:inline-block text-11-l-14 font-normal ml-1 pl-1 border-l text-gray-400">100P</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> -->
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- button navigation -->
+                            <div class="hidden absolute left-0 right-0 z-10 sm:flex justify-between items-center" style="top: calc(50% - 20px);">
+                                <button id="new-swiper-button-prev" class="w-10 h-10 bg-white rounded-full border shadow transform -translate-x-16">
+                                    <i class="text-gray-600 fa-solid fa-chevron-left"></i>
+                                </button>
+                                <button id="new-swiper-button-next" class="w-10 h-10 bg-white rounded-full border shadow transform translate-x-16">
+                                    <i class="text-gray-600 fa-solid fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end slide -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="h-12 sm:h-24"></div>
+    <section>
+        <div class="container-layout">
+            <div class="space-y-5 sm:space-y-8">
+                <div class="px-5 sm:px-0 flex flex-col sm:flex-row sm:items-center gap-y-3 gap-x-6">
+                    <div class="flex items-center gap-x-1">
+                        <h4 class="text-2028-2838 font-semibold">BEST</h4>
+                        <img src="./assets/images/icon/main/best.svg" alt="">
+                    </div>
+                    <div class="flex-1 flex items-center justify-between">
+                        <div>
+                            <button class="text-base py-1.5 px-3.5 font-semibold rounded-full bg-black text-white">도서</button>
+                            <button class="text-base py-1.5 px-3.5 font-medium rounded-full">성물</button>
+                            <button class="text-base py-1.5 px-3.5 font-medium rounded-full">굿즈</button>
+                        </div>
+
+                        <div class="flex items-center gap-1 py-1 cursor-pointer" onclick="gotoPage('./CA-book-main-category.html')">
+                            <span class="inline-block text-sm sm:text-base font-semibold text-gray-400">더보기</span>
+                            <img src="./assets/images/icon/common/plus-gray.svg" alt="+">
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <!-- start slide -->
+                    <div class="pl-5 md:pl-0">
+                        <div class="relative">
+                            <!-- best swiper -->
+                            <div class="overflow-x-hidden">
+                                <div id="bestSwiper" class="swiper main-best-slide-size">
+                                    <div class="swiper-wrapper">
+
+                                        <!-- <div class="swiper-slide">
+                                            <div class="flex gap-4">
+                                                <div class="frame-image-border-24-26 image-size-70108-102150 overflow-hidden shadow-md border">
+                                                    <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="book">
+                                                </div>
+                
+                                                <div class="flex gap-4">
+                                                    <div class="relative">
+                                                        <span class="absolute top-1 left-2 inline-block text-xs font-semibold text-white">1</span>
+                                                        <img src="../assets/images/icon/category/badge-color.svg" alt="icon">
+                                                    </div>
+        
+                                                    <div class="space-y-1 sm:space-y-1.5">
+                                                        <h4 class="text-base font-semibold">영원한 도움의 성모 매일기도</h4>
+                                                        <span class="text-13-l-18 font-normal text-gray-400">지은이</span>
+                                                        <div class="hidden sm:block">
+                                                            <span class="inline-block text-sm font-semibold text-red-500">10%</span>
+                                                            <span class="inline-block text-sm font-semibold">12,600</span><span class="inline-block text-sm font-normal">원</span>                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> -->
+
+                                    </div>
+                                </div>                                    
+                            </div>
+
+                            <!-- button navigation -->
+                            <div class="absolute left-0 right-0 z-10 hidden sm:flex justify-between items-center" style="top: calc(50% - 20px);">
+                                <button id="best-swiper-button-prev" class="w-10 h-10 bg-white rounded-full border shadow transform -translate-x-16">
+                                    <i class="text-gray-600 fa-solid fa-chevron-left"></i>
+                                </button>
+                                <button id="best-swiper-button-next" class="w-10 h-10 bg-white rounded-full border shadow transform translate-x-16">
+                                    <i class="text-gray-600 fa-solid fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end slide -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="h-12 sm:h-24"></div>
+    <section style="background-color: rgba(247, 247, 248, 1);">
+        <div class="container-layout py-12 sm:py-14 space-y-5 overflow-x-auto custom-scroll">
+            <h4 class="px-5 sm:px-0 text-2028-2838 font-semibold">바오로딸 <span class="inline-block text-2028-2838 font-semibold text-highlight">Pick</span> </h4>
+
+            <div class="pl-5 sm:pl-0" style="width: 1120px;">
+                <div class="flex items-center gap-x-10">
+                    <!-- 1 -->
+                    <div class="rounded-xl overflow-hidden relative" style="width: 250px !important;">
+                        <h4 class="text-white text-22-l-30 font-semibold py-5 px-4" style="background-color: rgba(99, 115, 194, 1);">전례 Pick</h4>
+    
+                        <div class="space-y-2.5 p-5 bg-white">
+                            <h4 class="text-18-l-26 font-semibold">
+                                내 마음아, <br>
+                                주님을 찬미하라
+                            </h4>
+    
+                            <p class="text-13-l-18 font-normal text-gray-400 whitespace-nowrap">하느님과 함께 머물고 싶은 분에게</p>
+                        </div>
+    
+                        <div class="absolute right-4 top-9 rounded-full bg-white flex items-center justify-center" style="width: 70px; height: 70px;">
+                            <img src="./assets/images/icon/main/pick_1.svg" alt="">
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="rounded-xl overflow-hidden relative" style="width: 250px !important;">
+                        <h4 class="text-white text-22-l-30 font-semibold py-5 px-4" style="background-color: rgba(143, 99, 194, 1);">기도 Pick</h4>
+    
+                        <div class="space-y-2.5 p-5 bg-white">
+                            <h4 class="text-18-l-26 font-semibold">
+                                내 마음아, <br>
+                                주님을 찬미하라
+                            </h4>
+    
+                            <p class="text-13-l-18 font-normal text-gray-400 whitespace-nowrap">하느님과 함께 머물고 싶은 분에게</p>
+                        </div>
+    
+                        <div class="absolute right-4 top-9 rounded-full bg-white flex items-center justify-center" style="width: 70px; height: 70px;">
+                            <img src="./assets/images/icon/main/pick_2.svg" alt="">
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="rounded-xl overflow-hidden relative" style="width: 250px !important;">
+                        <h4 class="text-white text-22-l-30 font-semibold py-5 px-4" style="background-color: rgba(194, 99, 194, 1);">전례 Pick</h4>
+    
+                        <div class="space-y-2.5 p-5 bg-white">
+                            <h4 class="text-18-l-26 font-semibold">
+                                내 마음아, <br>
+                                주님을 찬미하라
+                            </h4>
+    
+                            <p class="text-13-l-18 font-normal text-gray-400 whitespace-nowrap">하느님과 함께 머물고 싶은 분에게</p>
+                        </div>
+    
+                        <div class="absolute right-4 top-9 rounded-full bg-white flex items-center justify-center" style="width: 70px; height: 70px;">
+                            <img src="./assets/images/icon/main/pick_3.svg" alt="">
+                        </div>
+                    </div>
+                    <!-- 4 -->
+                    <div class="rounded-xl overflow-hidden relative" style="width: 250px !important;">
+                        <h4 class="text-white text-22-l-30 font-semibold py-5 px-4" style="background-color: rgba(194, 99, 101, 1);">전례 Pick</h4>
+    
+                        <div class="space-y-2.5 p-5 bg-white">
+                            <h4 class="text-18-l-26 font-semibold">
+                                내 마음아, <br>
+                                주님을 찬미하라
+                            </h4>
+    
+                            <p class="text-13-l-18 font-normal text-gray-400 whitespace-nowrap">하느님과 함께 머물고 싶은 분에게</p>
+                        </div>
+    
+                        <div class="absolute right-4 top-9 rounded-full bg-white flex items-center justify-center" style="width: 70px; height: 70px;">
+                            <img src="./assets/images/icon/main/pick_4.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="h-12 sm:h-24"></div>
+    <section>
+        <div class="container-layout">
+            이 책의 한 문장 slide...
+        </div>
+    </section>
+
+    <div class="h-12 sm:h-24"></div>
+    <section>
+        <div class="container-layout pl-5 sm:pl-0">
+            <div class="relative">
+
+                <div class="overflow-x-auto custom-scroll-x">
+                    <div class="swiper banner2Swiper" style="width: 1120px;">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="rounded-md flex items-center" style="background-color: rgba(62, 81, 155, 1);">
+                                    <div class="flex-1 py-6 px-8">
+                                        <p class="text-white text-18-l-26 font-semibold">수도자의 <br>독서 노트</p>
+                                    </div>
+                                    
+                                    <div class="pr-10">
+                                        <img src="./assets/images/icon/main/bn2_1.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="rounded-md flex items-start" style="background-color: rgba(62, 81, 155, 1);">
+                                    <div class="flex-1 py-6 px-8">
+                                        <p class="text-white text-18-l-26 font-semibold">이 책 <br> 너무 좋은데</p>
+                                    </div>
+                                    
+                                    <div class="pr-10 flex items-end" style="height: 100px;">
+                                        <img src="./assets/images/icon/main/bn2_2.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="rounded-md flex items-start" style="background-color: rgba(62, 81, 155, 1);">
+                                    <div class="flex-1 py-6 px-8">
+                                        <p class="text-white text-18-l-26 font-semibold">기부나눔</p>
+                                    </div>
+                                    
+                                    <div class="pr-10 flex items-start" style="height: 100px;">
+                                        <img src="./assets/images/icon/main/bn2_3.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+
+                <!-- button navigation -->
+                <div class="absolute left-0 right-0 z-10 hidden sm:flex justify-between items-center" style="top: calc(50% - 20px);">
+                    <button id="banner2-swiper-button-prev" class="w-10 h-10 bg-white rounded-full border shadow transform -translate-x-16">
+                        <i class="text-gray-600 fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button id="banner2-swiper-button-next" class="w-10 h-10 bg-white rounded-full border shadow transform translate-x-16">
+                        <i class="text-gray-600 fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="h-12 sm:h-24"></div>
+    <section>
+        <div class="container-layout">
+            <div class="space-y-5 sm:space-y-8">
+                <div class="px-5 sm:px-0 flex flex-col sm:flex-row sm:items-center gap-y-3 gap-x-6">
+                    <div class="flex items-center gap-x-1">
+                        <h4 class="text-2028-2838 font-semibold">바오로딸 유튜브</h4>
+                        <img src="./assets/images/icon/main/yt.svg" alt="">
+                    </div>
+                </div>
+
+                <div>
+                    <!-- start slide -->
+                    <div class="pl-5 md:pl-0">
+                        <div class="relative">
+                            <!-- best swiper -->
+                            <div class="overflow-x-auto custom-scroll-x">
+                                <div id="ytSwiper" class="swiper width-580-1120">
+                                    <div class="swiper-wrapper">
+
+                                        <div class="swiper-slide">
+                                            <div class="frame-image-size-280160-520292 rounded-lg overflow-hidden">
+                                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rQD_OvfOP_A?si=7l2WxnYYmbR_abk5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="frame-image-size-280160-520292 rounded-lg overflow-hidden">
+                                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FyZPYucXiIQ?si=D3IqTm9-bdB54UGq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>                                    
+                            </div>
+
+                            <!-- button navigation -->
+                            <div class="absolute left-0 right-0 z-10 hidden sm:flex justify-between items-center" style="top: calc(50% - 20px);">
+                                <button id="yt-swiper-button-prev" class="w-10 h-10 bg-white rounded-full border shadow transform -translate-x-16">
+                                    <i class="text-gray-600 fa-solid fa-chevron-left"></i>
+                                </button>
+                                <button id="yt-swiper-button-next" class="w-10 h-10 bg-white rounded-full border shadow transform translate-x-16">
+                                    <i class="text-gray-600 fa-solid fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end slide -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="h-12 sm:h-24"></div>
+    <section>
+        <div class="container-layout">
+            <div class="flex flex-col sm:flex-row items-start sm:justify-between gap-y-12">
+                <div>
+                    <div class="px-5 sm:px-0 flex items-center gap-x-1">
+                        <h4 class="text-2028-2838 font-semibold">카드뉴스</h4>
+                        <img src="./assets/images/icon/main/news.svg" alt="">
+                    </div>
 
 
+                    <div class="pl-5 md:pl-0">
+                        <div class="relative">
+                            <!-- best swiper -->
+                            <div class="overflow-x-auto custom-scroll-x">
+                                <div id="newsSwiper" class="swiper w-340-520">
+                                    <div class="swiper-wrapper">
+
+                                        <div class="swiper-slide">
+                                            <div class="size-160160-250250 rounded-lg overflow-hidden" style="background-color: rgba(0, 166, 146, 1);">
+                                                
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="size-160160-250250 rounded-lg overflow-hidden" style="background-color: rgba(0, 166, 146, 1);">
+                                                
+                                            </div>
+                                        </div>  
+
+                                        <div class="swiper-slide">
+                                            <div class="size-160160-250250 rounded-lg overflow-hidden" style="background-color: rgba(0, 166, 146, 1);">
+                                                
+                                            </div>
+                                        </div>                                        
+
+                                    </div>
+                                </div>                                    
+                            </div>
+
+                            <!-- button navigation -->
+                            <div class="absolute left-0 right-0 z-10 hidden sm:flex justify-between items-center" style="top: calc(50% - 20px);">
+                                <button id="news-swiper-button-prev" class="w-10 h-10 bg-white rounded-full border shadow transform -translate-x-16">
+                                    <i class="text-gray-600 fa-solid fa-chevron-left"></i>
+                                </button>
+                                <button id="news-swiper-button-next" class="w-10 h-10 bg-white rounded-full border shadow transform translate-x-16">
+                                    <i class="text-gray-600 fa-solid fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-5 sm:space-y-8 width-full-433">
+                    <h4 class="px-5 sm:px-0 text-2028-2838 font-semibold">주님과 함께</h4>
+
+                    <div class="rounded-lg overflow-hidden border">
+                        <div class="overflow-hidden flex items-end justify-center h-150-200">
+                            <img src="./assets/images/image/common/main-1.png" alt="">
+                        </div>
+
+                        <div class="flex items-center justify-between py-3 px-5">
+                            <span class="inline-block text-base font-medium">20024.08.26</span>
+                            <span class="inline-block text-base font-medium">박향숙 수녀</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="h-12 sm:h-24"></div>
+    <section>
+        <div class="container-layout">
+            <div class="space-y-5 sm:space-y-8">
+                <div class="px-5 sm:px-0 flex flex-col sm:flex-row sm:items-center gap-y-3 gap-x-6">
+                    <div class="flex items-center gap-x-1">
+                        <h4 class="text-2028-2838 font-semibold">리뷰</h4>
+                        <img src="./assets/images/icon/main/review.svg" alt="">
+                    </div>
+                </div>
+
+                <div>
+                    <!-- start slide -->
+                    <div class="pl-5 md:pl-0">
+                        <div class="relative">
+                            <!-- best swiper -->
+                            <div class="overflow-x-auto custom-scroll-x">
+                                <div id="reviewSwiper" class="swiper width-580-1120">
+                                    <div class="swiper-wrapper">
+
+                                        <!-- <div class="swiper-slide rounded-lg border flex flex-col gap-5 px-5 py-6"
+                                                style="border-color: rgba(112, 115, 124, 0.08); background-color: rgba(247, 247, 248, 1);">
+                                                <div class="flex gap-4">
+                                                    <div style="width: 70px; height: 108px;">
+                                                        <img style="width: 70px; height: 108px;"
+                                                            src="./assets/images/image/books/book1.png" alt="img">
+                                                    </div>
+                                                    <div class="py-2 flex-1">
+                                                        <p class="text-base font-semibold mb-1" style="line-height: 26px;">필사와 함께하는
+                                                            구약성경 컬러링북</p>
+                                                        <span
+                                                            style="font-size: 13px; line-height: 18px; font-weight: 400; color: rgba(55, 56, 60, 0.6);">구민정</span>
+                                                    </div>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <div class="flex">
+                                                        <img style="width: 24px; height: 24px;"
+                                                            src="./assets/images/icon/common/blue-star.svg" alt="icon">
+                                                        <img style="width: 24px; height: 24px;"
+                                                            src="./assets/images/icon/common/blue-star.svg" alt="icon">
+                                                        <img style="width: 24px; height: 24px;"
+                                                            src="./assets/images/icon/common/blue-star.svg" alt="icon">
+                                                        <img style="width: 24px; height: 24px;"
+                                                            src="./assets/images/icon/common/blue-star.svg" alt="icon">
+                                                        <img style="width: 24px; height: 24px;"
+                                                            src="./assets/images/icon/common/blue-star.svg" alt="icon">
+                                                    </div>
+                                                    <div style="color: rgba(55, 56, 60, 0.16);">|</div>
+                                                    <div style="font-size: 15px; line-height: 22px;" class="font-medium">5</div>
+                                                </div>
+                                                <div>
+                                                    <p style="font-size: 15px; line-height: 24px; font-weight: 400; color: rgba(46, 47, 51, 0.88);
+                                                    display: -webkit-box;
+                                                    -webkit-box-orient: vertical;
+                                                    -webkit-line-clamp: 4;
+                                                    overflow: hidden;
+                                                    text-overflow: ellipsis;">성서를 읽다보면 처음에는 열심히 읽어보려고 애 쓰지만 어느새 깨알 같은 글씨에 눈도 아프고
+                                                        졸음이 솔솔 밀려온다. 그러다가 에이 하고 덮기도 하고 말이다. 말씀은 봐야겠는데, 쉽지가 않고 그렇다고 덮</p>
+                                                </div>
+                                                <div class="py-2"
+                                                    style="font-size: 14px; line-height: 20px; font-weight: 400px; color: rgba(46, 47, 51, 0.88);">
+                                                    <span>닉***** 님의 </span>
+                                                    <span>후기</span>
+                                                </div>
+                                            
+                                        </div> -->
+
+                                    </div>
+                                </div>                                    
+                            </div>
+
+                            <!-- button navigation -->
+                            <div class="absolute left-0 right-0 z-10 hidden sm:flex justify-between items-center" style="top: calc(50% - 20px);">
+                                <button id="review-swiper-button-prev" class="w-10 h-10 bg-white rounded-full border shadow transform -translate-x-16">
+                                    <i class="text-gray-600 fa-solid fa-chevron-left"></i>
+                                </button>
+                                <button id="review-swiper-button-next" class="w-10 h-10 bg-white rounded-full border shadow transform translate-x-16">
+                                    <i class="text-gray-600 fa-solid fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end slide -->
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- main ^^^^ -->
+
+    <div class="h-12 mt-0 sm:mt-2 sm:h-16"></div>
 
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
     <!-- go to top -->
@@ -818,6 +1394,227 @@
         // const intervalId = setInterval(() => {
         //     handleNext('frame-boss')
         // }, 5000);
+
+        function renderSlideNew() {
+            let stringHTMl = ""
+            Array(6).fill(null).forEach((e, i) => {
+                stringHTMl +=
+                `
+                    <div class="swiper-slide cursor-pointer" onclick="gotoPage('./CA-book-product-detail.html')">
+                        <div class="space-y-2 sm:space-y-3 frame-width-102-196">
+                            <div class="frame-image-border-26-48 frame-image-size-102150-196290 overflow-hidden shadow-md border">
+                                <img class="w-full h-full" src="../assets/images/image/books/book${i+1}.png" alt="book">
+                            </div>
+                                            
+                            <div>
+                                <h4 class="text-base font-semibold mb-1 two-lines">영원한 도움의 성모 매일기도</h4>
+                                <div class="text-13-l-18 font-normal text-gray-400 mb-3">성바오로딸</div>
+                                <div class="flex items-center gap-1">
+                                    <span class="inline-block text-sm font-semibold text-red-500">10%</span>
+                                    <span class="inline-block text-sm font-semibold">12,600</span><span class="inline-block text-sm font-normal">원</span>
+                                    <span class="hidden sm:inline-block text-11-l-14 font-normal ml-1 pl-1 border-l text-gray-400">100P</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            })                 
+            document.querySelector(`#newSwiper .swiper-wrapper`).innerHTML = stringHTMl;
+
+            var newSwiper = new Swiper("#newSwiper", {
+                slidesPerView: 5,               
+                loop: true,
+                spaceBetween: 20,
+                navigation: {
+                    nextEl: "#new-swiper-button-next",
+                    prevEl: "#new-swiper-button-prev",
+                },             
+            })
+        }
+        renderSlideNew()
+
+        function renderSlideBest() {
+            let stringHTMl = ""
+            Array(8).fill(null).forEach((e, i) => {               
+                let badge = '<img src="../assets/images/icon/category/' + (i === 0 ? 'badge-color' : 'badge-gray') +'.svg" alt="icon">'
+
+                stringHTMl +=
+                `
+                    <div class="swiper-slide cursor-pointer" onclick="gotoPage('./CA-book-product-detail.html')">
+                        <div class="flex gap-4">
+                            <div class="frame-image-border-24-26 image-size-70108-102150 overflow-hidden shadow-md border">
+                                <img class="w-full h-full" src="../assets/images/image/books/book${i+1}.png" alt="book">
+                            </div>
+
+                            <div class="flex gap-4">
+                                <div class="relative">
+                                    <span class="absolute top-1 left-2 inline-block text-xs font-semibold text-white">${i+1}</span>
+                                    ${badge}
+                                </div>
+
+                                <div class="space-y-1 sm:space-y-1.5">
+                                    <h4 class="text-base font-semibold">영원한 도움의 성모 매일기도</h4>
+                                    <span class="text-13-l-18 font-normal text-gray-400">지은이</span>
+                                    <div class="hidden sm:block">
+                                        <span class="inline-block text-sm font-semibold text-red-500">10%</span>
+                                        <span class="inline-block text-sm font-semibold">12,600</span><span class="inline-block text-sm font-normal">원</span>                            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            })                 
+            document.querySelector(`#bestSwiper .swiper-wrapper`).innerHTML = stringHTMl;
+
+            var bestSwiper = new Swiper("#bestSwiper", {
+                slidesPerView: 2,
+                grid: {
+                    rows: 3,
+                },
+                loop: true,
+                spaceBetween: 20,
+                navigation: {
+                    nextEl: "#best-swiper-button-next",
+                    prevEl: "#best-swiper-button-prev",
+                },             
+            })
+        }
+        renderSlideBest()
+        
+        function renderSlideReview() {
+            let stringHTMl = ""
+            Array(8).fill(null).forEach((e, i) => {               
+                let badge = '<img src="../assets/images/icon/category/' + (i === 0 ? 'badge-color' : 'badge-gray') +'.svg" alt="icon">'
+
+                stringHTMl +=
+                `
+                     <div class="swiper-slide rounded-lg border flex flex-col gap-5 px-5 py-6 w-280-340"
+                            style="border-color: rgba(112, 115, 124, 0.08); background-color: rgba(247, 247, 248, 1);">
+                            <div class="flex gap-4">
+                                <div class="scope-imgage-super-small border shadow-md" style="width: 70px; height: 108px;">
+                                    <img style="width: 70px; height: 108px;"
+                                        src="./assets/images/image/books/book1.png" alt="img">
+                                </div>
+                                <div class="py-2 flex-1">
+                                    <p class="text-base font-semibold mb-1" style="line-height: 26px;">필사와 함께하는
+                                        구약성경 컬러링북</p>
+                                    <span
+                                        style="font-size: 13px; line-height: 18px; font-weight: 400; color: rgba(55, 56, 60, 0.6);">구민정</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="flex">
+                                    <img style="width: 24px; height: 24px;"
+                                        src="./assets/images/icon/common/blue-star.svg" alt="icon">
+                                    <img style="width: 24px; height: 24px;"
+                                        src="./assets/images/icon/common/blue-star.svg" alt="icon">
+                                    <img style="width: 24px; height: 24px;"
+                                        src="./assets/images/icon/common/blue-star.svg" alt="icon">
+                                    <img style="width: 24px; height: 24px;"
+                                        src="./assets/images/icon/common/blue-star.svg" alt="icon">
+                                    <img style="width: 24px; height: 24px;"
+                                        src="./assets/images/icon/common/blue-star.svg" alt="icon">
+                                </div>
+                                <div style="color: rgba(55, 56, 60, 0.16);">|</div>
+                                <div style="font-size: 15px; line-height: 22px;" class="font-medium">5</div>
+                            </div>
+                            <div>
+                                <p style="font-size: 15px; line-height: 24px; font-weight: 400; color: rgba(46, 47, 51, 0.88);
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 4;
+                                overflow: hidden;
+                                text-overflow: ellipsis;">성서를 읽다보면 처음에는 열심히 읽어보려고 애 쓰지만 어느새 깨알 같은 글씨에 눈도 아프고
+                                    졸음이 솔솔 밀려온다. 그러다가 에이 하고 덮기도 하고 말이다. 말씀은 봐야겠는데, 쉽지가 않고 그렇다고 덮</p>
+                            </div>
+                            <div class="py-2"
+                                style="font-size: 14px; line-height: 20px; font-weight: 400px; color: rgba(46, 47, 51, 0.88);">
+                                <span>닉***** 님의 </span>
+                                <span>후기</span>
+                            </div>                        
+                    </div>
+                `
+            })                 
+            document.querySelector(`#reviewSwiper .swiper-wrapper`).innerHTML = stringHTMl;
+
+            var reviewSwiper = new Swiper("#reviewSwiper", {
+                slidesPerView: 3,               
+                loop: true,
+                spaceBetween: 20,
+                navigation: {
+                    nextEl: "#review-swiper-button-next",
+                    prevEl: "#review-swiper-button-prev",
+                },
+                breakpoints: {
+                320: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                },
+            },        
+            })
+        }
+        renderSlideReview()
+
+        var banner2Swiper = new Swiper(".banner2Swiper", {
+            slidesPerView: 3,               
+            loop: true,
+            spaceBetween: 50,
+            navigation: {
+                nextEl: ".banner2-swiper-button-next",
+                prevEl: ".banner2-swiper-button-prev",
+            },
+            breakpoints: {
+                320: {
+                    spaceBetween: 20,
+                },
+                640: {
+                    spaceBetween: 50,
+                },
+            },
+        });
+        
+        var ytSwiper = new Swiper("#ytSwiper", {
+            slidesPerView: 2,
+            loop: true,
+            spaceBetween: 50,
+            navigation: {
+                nextEl: "#yt-swiper-button-next",
+                prevEl: "#yt-swiper-button-prev",
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 50,
+                },
+            },
+        });
+        
+        var newsSwiper = new Swiper("#newsSwiper", {
+            slidesPerView: 2,
+            loop: true,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: "#news-swiper-button-next",
+                prevEl: "#news-swiper-button-prev",
+            },
+            // breakpoints: {
+            //     320: {
+            //         slidesPerView: 2,                    
+            //     },
+            //     640: {
+            //         slidesPerView: 2,                    
+            //     },
+            // },
+        });
     </script>
 </body>
 
