@@ -489,12 +489,67 @@
                             <div class="container-custom-slide">
                                 <!-- slide -->
                                 <div class="slide">
-                                    <div class="item" style="background-image: url(https://i.ibb.co/qCkd9jS/img1.jpg);"></div>
-                                    <div class="item" style="background-image: url(https://i.ibb.co/jrRb11q/img2.jpg);"></div>
-                                    <div class="item" style="background-image: url(https://i.ibb.co/NSwVv8D/img3.jpg);"></div>
+                                    
+                                    <div class="item">
+                                        <div class="w-full h-full"
+                                            style="
+                                            background-image: url(../assets/images/image/banner/banner2.png);
+                                            background-position: center bottom;
+                                            background-repeat: no-repeat;
+                                            background-size: cover;
+                                            "
+                                        >
+                                            <div class="w-full h-full"
+                                                style="
+                                                    background-color: rgba(29, 144, 225, 0); 
+                                                    background-image: 
+                                                        linear-gradient(to top,rgba(29, 144, 225, 0), rgba(29, 144, 225, 0.85), rgba(29, 144, 225, 1)), 
+                                                        url('../assets/images/image/banner/banner2-tran.png');"
+                                            >
+                                                <div class="content w-full h-full">
+                                                    <div class="w-full h-full pt-8 flex flex-col items-center gap-y-2">
+                                                        <button class="text-sm font-normal text-white py-1 px-2 border border-white rounded-sm">이재근 신부</button>
+                                                        <h4 class="text-white" style="font-size: 32px; line-height: 44px; font-weight: 700px;">유쾌하게 설레게</h4>
+                                                        <p class="text-13-l-15 text-white font-medium text-center">
+                                                            한 사제의 삷이 고스란히 담겨있다. 어린 시절의 일화들, 사제로 살아가면서 체험한 것들, <br>
+                                                            동기 신부들 간의 끈끈한 우정 등을 그렸다.
+                                                        </p>
+                                                        <div style="width: 164px; height: 232px;">
+                                                            <img src="../assets/images/image/banner/banner2.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="item">
+                                        <div class="w-full h-full flex items-center justify-end" style="background-color: rgba(250, 211, 163, 1);">
+                                            <div class="relative sm:left-20" style="width: 140px; height: 234px;">
+                                                <img class="w-full h-full" src="../assets/images/image/banner/banner3.png" alt="">
+                                            </div>
+                                            <div class="h-full w-3/4 flex items-center justify-center" style="border-top-left-radius: 1000px; border-bottom-left-radius: 1000px; background-color: rgba(216, 82, 52, 1);">
+                                                <div class="space-y-3" style="width: 298px;">
+                                                    <h4 class="inline-block text-13-l-18 font-medium text-white w-fit px-2" style="background-color: rgba(0, 0, 0, 0.2);">히라바야시 후유키 신부</h4>
+                                                    <h5 class="text-2028-2838 font-bold text-white">
+                                                        상처에서 희망으로 <br>
+                                                        나아가는 기도
+                                                    </h5>
+                                                    <p class="text-13-l-18 font-medium text-white">말씀을 통하여 빛을 얻고 상처와 고통 가운데에서도 희망을 발견할 수 있도록 동반하는 기도 안내서</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                    <div class="item"                                     
-                                        style=" background-color: rgb(67, 83, 135); background-image: linear-gradient(to right,rgba(40, 59, 118, 0.9), rgba(67, 83, 135, 0.4)), url('../assets/images/banner/banner-book-15-transparent.png');"
+
+                                    <div class="item" style="background-image: url(https://i.ibb.co/jTQfmTq/img3.jpg);"></div>
+
+                                    <div class="item"
+                                        style="
+                                            background-color: rgb(67, 83, 135); 
+                                            background-image: 
+                                                linear-gradient(to right,rgba(40, 59, 118, 0.9), rgba(67, 83, 135, 0.4)), 
+                                                url('../assets/images/banner/banner-book-15-transparent.png');"
                                     >
                                         <div class="content w-full h-full">
                                             <div class="w-full h-full flex items-stretch justify-center gap-4 md:gap-0 lg:gap-4">
@@ -1199,9 +1254,9 @@
             document.querySelector('#index-slide-boss-item').innerHTML = index
         }, 1000))
 
-        const intervalId = setInterval(() => {
-            handleNext('frame-boss')
-        }, 5000);
+        // const intervalId = setInterval(() => {
+        //     handleNext('frame-boss')
+        // }, 5000);
 
         function renderSlideBest() {
             let stringHTMl = ""
