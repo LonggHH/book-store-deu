@@ -91,6 +91,11 @@
   font-size: 36px;
   line-height: 48px;
 }
+
+.text-2230-2838 {
+  font-size: 28px;
+  line-height: 38px;
+}
 /* ------------------------------------------------------------- */
 .frame-size-102102-160160 {
   width: 160px;
@@ -252,6 +257,11 @@
   }
 
   .text-2230-3648 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .text-2230-2838 {
     font-size: 22px;
     line-height: 30px;
   }
