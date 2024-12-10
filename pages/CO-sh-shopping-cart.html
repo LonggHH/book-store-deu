@@ -512,7 +512,7 @@
                         <div>
                             <input id="sanctuary-1" type="checkbox" checked hidden>
                             <label for="sanctuary-1" class="flex items-center gap-2 cursor-pointer">
-                                <img class="item-book-2 item-choose-book w-6 h-6" src="../assets/images/icon/common/check-black.svg" alt="icon">
+                                <img class="item-choose-book w-6 h-6" src="../assets/images/icon/common/check-white.svg" alt="icon">
                                 <h4 class="block sm:hidden text-base font-semibold">책 제목</h4>
                             </label>
                         </div>
@@ -553,24 +553,26 @@
 
                                     <!-- Bộ điều khiển số lượng và Giá tổng cộng -->
                                     <div
-                                        class="flex flex-col-reverse justify-start gap-3 sm:gap-0 sm:flex-row sm:items-center sm:space-x-4">
+                                        class="">
                                         <!-- Điều khiển số lượng -->
-                                        <div class="flex items-center space-x-4 p-1 bg-gray-100 border rounded text-disable"
-                                            style="width: fit-content;">
-                                            <button
-                                                class="xy-30-px flex items-center justify-center rounded cursor-not-allowed">-</button>
-                                            <input type="number" min="1"
-                                                class="w-12 text-center outline-none cursor-not-allowed bg-transparent"
-                                                value="000" disabled readonly />
-                                            <button
-                                                class="xy-30-px flex items-center justify-center rounded cursor-not-allowed">+</button>
-                                        </div>
+                                        <div class="opacity-0 flex sm:space-x-4">
+                                            <div class="scope-change-quantity flex items-center space-x-4 p-1 border rounded"
+                                                style="width: fit-content;">
+                                                <button
+                                                    class="xy-30-px flex items-center justify-center bg-gray-100 rounded">-</button>
+                                                <input type="number" min="1" class="w-12 text-center outline-none"
+                                                    value="000" />
+                                                <button
+                                                    class="xy-30-px flex items-center justify-center bg-gray-100 rounded">+</button>
+                                            </div>
 
-                                        <!-- Giá tổng cộng -->
-                                        <div class="hidden sm:flex items-center gap-0.5 text-disable">
-                                            <span class="text-1624-2230 font-semibold">12,000</span>
-                                            <span class="text-sm font-normal">원</span>
+                                            <!-- Giá tổng cộng -->
+                                            <div class="flex items-center gap-0.5">
+                                                <span class="text-money text-1624-2230 font-semibold">12,000</span>
+                                                <span class="text-sm font-normal">원</span>
+                                            </div>
                                         </div>
+                                        <p class="text-gray-400">구매불가</p>
                                     </div>
                                 </div>
                             </div>

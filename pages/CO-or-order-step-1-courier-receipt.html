@@ -659,12 +659,10 @@
                                                 </div>
 
                                                 <div class="my-6 sm:my-0">
-                                                    <select name="" id=""
-                                                        class="py-1 px-3 rounded bg-gray-100 text-sm font-normal select-hidden-arrow outline-none cursor-pointer w-full">
-                                                        <option value="">옵션명</option>
-                                                        <option value="">옵션명-1</option>
-                                                        <option value="">옵션명-2</option>
-                                                    </select>
+                                                    <span 
+                                                        class="inline-block py-1 px-3 rounded bg-gray-100 text-sm font-normal select-hidden-arrow outline-none w-full">
+                                                        옵션명
+                                                    </span>
                                                 </div>
 
                                                 <!-- Bộ điều khiển số lượng và Giá tổng cộng -->
@@ -733,12 +731,10 @@
                                                 </div>
 
                                                 <div class="my-6 sm:my-0">
-                                                    <select name="" id=""
-                                                        class="py-1 px-3 rounded bg-gray-100 text-sm font-normal select-hidden-arrow outline-none cursor-pointer w-full">
-                                                        <option value="">옵션명</option>
-                                                        <option value="">옵션명-1</option>
-                                                        <option value="">옵션명-2</option>
-                                                    </select>
+                                                    <span 
+                                                        class="inline-block py-1 px-3 rounded bg-gray-100 text-sm font-normal select-hidden-arrow outline-none w-full">
+                                                        옵션명
+                                                    </span>
                                                 </div>
 
                                                 <!-- Bộ điều khiển số lượng và Giá tổng cộng -->
@@ -1062,7 +1058,7 @@
                                         
                                         <div class="flex-1 flex items-center gap-x-2">
                                             <div class="flex-1 border rounded p-2 px-4 flex items-center gap-2">
-                                                <input type="text" placeholder="0" class="text-right flex-1 border-gray-300 co-input-discount">
+                                                <input id="text-coupon" readonly type="text" placeholder="0" class="text-right flex-1 border-gray-300 co-input-discount">
                                                 <span class="inline-block text-xs font-normal text-gray-300">원</span>                                      
                                             </div>
                                             <button 
@@ -1189,8 +1185,10 @@
                     <div class="block sm:hidden h-2" style="background-color: rgba(247, 247, 248, 1);"></div>
                     <!-- khung 7 -->
                     <div class="bg-white sm:border-t sm:border border-gray-200 rounded-lg">
-                        <div class="p-5 sm:py-5 sm:px-6 sm:border-b flex items-center justify-between">
+                        <div class="p-5 sm:py-5 sm:px-6 sm:border-b flex items-center gap-x-2.5">
                             <h2 class="text-1724-2230 font-semibold">결제 수단</h2>
+
+                            <span class="text-xs font-medium text-blue-500 bg-blue-100 py-1 px-2.5 rounded-full">도서소득공제 적용</span>
                         </div>
 
                         <div class="p-5 sm:p-6 sm:pb-8">
@@ -1578,7 +1576,7 @@
                         <!-- item 1 -->
                         <div class="flex flex-col sm:flex-row items-start sm:items-center gap-x-6 gap-y-3">
                             <!-- Radio button -->
-                            <input type="radio" name="coupon" class="cursor-pointer h-5 w-5 text-blue-600 focus:ring-blue-500">
+                            <input type="radio" checked name="coupon" class="cursor-pointer h-5 w-5 text-blue-600 focus:ring-blue-500">
     
                             <!-- Coupon Card -->
                             <div class="w-full rounded-xl border overflow-hidden">
@@ -1676,7 +1674,7 @@
     
                 <!-- Select Button -->
                 <div class="mt-20 sm:mt-6 pb-1 sm:pb-0 pt-6 sm:pt-0">
-                    <button onclick="toggle('#modal-coupon')"
+                    <button onclick="document.querySelector('#text-coupon').value = '쿠폰명' ;toggle('#modal-coupon')"
                         class="w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
                         선택하기
                     </button>

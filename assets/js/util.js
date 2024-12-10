@@ -115,3 +115,7 @@ document.querySelectorAll('.toggle-menu-btn').forEach(button => {
         }
     });
 });
+
+document.querySelector('header img[src="../assets/images/icon/header/home-cart.svg"]').addEventListener('click', () => {
+    gotoPage('./CO-sh-shopping-cart-empty.html')
+})

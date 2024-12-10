@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>마이페이지 - 회원정보 - 마이페이지/ 회원정보 / 내 정보 확인,수정</title>
+    <title>장바구니,주문하기 / 장바구니 / 장바구니</title>
 
     <!-- Link Font -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Link Tailwind -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- Link Font-awesome -->
@@ -18,10 +17,10 @@
 
     <link rel="stylesheet" href="../assets/css/util.css">
     <link rel="stylesheet" href="../assets/css/CO/co.css">
-    <link rel="stylesheet" href="../assets/css/CS/cs.css">
 </head>
+
 <body>
-    <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
+    <!-- ----------------------------------------------------------------------------------------------------------------- -->
     <header>
         <section class="hidden sm:block h-16 overflow-hidden pt-2" style="background: linear-gradient(to right, #2e3d4e, #241d36);">
             <div class="container-layout h-16 flex items-center justify-center">
@@ -364,540 +363,604 @@
             </div>    
         </section>
     </header>
-    <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
+    <!-- ----------------------------------------------------------------------------------------------------------------- -->
 
+    <section class="mt-6 sm:mt-12">
 
-    <!-- breadcrumb -->
-    <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
-    <section class="sm:mt-6 sm:mb-8">
-        <div class="container-layout mobi-px py-2 sm:py-0 bg-gray-100 sm:bg-white">
-            <div class="flex items-center gap-2 sm:py-1">
-                <div>
-                    <img src="../assets/images/icon/category/breadcrumb-home.svg" alt="icon">
-                </div>
-                <div>
-                    <span class="text-13-18 font-normal text-gray-400 whitespace-nowrap">/</span>
-                </div>
-                <div class="flex items-center gap-1 relative cursor-pointer breadcrumb-main-category-menu">
-                    <span class="text-13-18 font-normal text-gray-400 whitespace-nowrap">마이페이지</span>
-                    <img class="icon-down" src="../assets/images/icon/category/breadcrumb-down.svg" alt="icon">
-                    <img class="icon-up hidden" src="../assets/images/icon/category/breadcrumb-up.svg" alt="icon">
-                    <div class="absolute z-10 top-7 left-0 hidden breadcrumb-sub-menu">
-                        <ul class="py-1 border rounded-lg bg-white">
-                            <li class="py-1 px-2.5 w-full">
-                                <a href="#" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">도서</a>
-                            </li>
-                            <li class="py-1 px-2.5 w-full">
-                                <a href="#" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">성물</a>
-                            </li>
-                            <li class="py-1 px-2.5 w-full">
-                                <a href="#" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">굿즈</a>
-                            </li>
-                            <li class="py-1 px-2.5 w-full">
-                                <a href="#" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">바오로딸 Pick</a>
-                            </li>
-                            <li class="py-1 px-2.5 w-full">
-                                <a href="#" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">ebook</a>
-                            </li>
-                            <li class="py-1 px-2.5 w-full">
-                                <a href="#" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">음반/뮤직/DVD</a>
-                            </li>
-                        </ul>
+        <div class="container-layout mobi-px">
+            <div class="flex justify-between items-center gap-12 overflow-x-auto custom-scroll">
+                <div class="flex items-center gap-6">
+                    <!-- Giỏ hàng (장바구니) -->
+                    <div class="flex items-center space-x-1 cursor-pointer" onclick="gotoPage('./CO-sh-shopping-cart.html')">
+                        <span class="font-bold text-2028-2838 whitespace-nowrap">상바구니</span>
+                        <span class="font-bold text-2028-2838 whitespace-nowrap">(0)</span>
                     </div>
-                </div>            
-                <div>
-                    <span class="text-13-18 font-normal text-gray-400 whitespace-nowrap">/</span>
+
+                    <!-- Divider -->
+                    <div class="h-6 w-2-px bg-gray-300"></div>
+
+                    <!-- Sản phẩm yêu thích (찜) -->
+                    <div class="flex items-center space-x-1 text-gray-400 cursor-pointer" onclick="gotoPage('./CO-wl-wishlist.html')">
+                        <span class="font-bold text-2028-2838 whitespace-nowrap">찜</span>
+                        <span class="font-bold text-2028-2838 whitespace-nowrap">(2)</span>
+                    </div>
                 </div>
-                <div class="flex items-center gap-1">
-                    <span class="text-13-18 font-normal text-gray-400 whitespace-nowrap">내 정보 확인/수정</span>
-                    <img src="../assets/images/icon/category/breadcrumb-down.svg" alt="icon">
+
+                <div class="hidden sm:flex items-center gap-6">
+                    <!-- Bước 1: 장바구니 -->
+                    <div class="flex items-center space-x-2">
+                        <div
+                            class="w-6 h-6 rounded-full bg-blue-500 text-white flex items-center justify-center text-xs font-semibold">
+                            1</div>
+                        <span class="whitespace-nowrap text-base font-semibold">장바구니</span>
+                    </div>
+
+                    <!-- Bước 2: 선택 -->
+                    <div class="flex items-center space-x-2 text-gray-400">
+                        <div
+                            class="w-6 h-6 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-xs font-semibold">
+                            2</div>
+                        <span class="whitespace-nowrap text-base font-semibold">사은품/포장 선택</span>
+                    </div>
+
+                    <!-- Bước 3: 주문/결제 -->
+                    <div class="flex items-center space-x-2 text-gray-400">
+                        <div
+                            class="w-6 h-6 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-xs font-semibold">
+                            3</div>
+                        <span class="whitespace-nowrap text-base font-semibold">주문/결제</span>
+                    </div>
+
+                    <!-- Bước 4: 주문완료 -->
+                    <div class="flex items-center space-x-2 text-gray-400">
+                        <div
+                            class="w-6 h-6 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-xs font-semibold">
+                            4</div>
+                        <span class="whitespace-nowrap text-base font-semibold">주문완료</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
 
-    <!-- main category -->
-
-    <section class="">
+    <section class="mt-6 sm:mt-8">
         <div class="container-layout">
-            <div class="flex items-start relative justify-between flex-wrap gap-x-5">
+            <div class="flex items-center justify-between bg-blue-100 px-6 py-3 sm:rounded-lg">
+                <!-- Text -->
+                <div>
+                    <span
+                        class="inline-block text-1522-1826 font-semibold whitespace-nowrap text-blue-600 ">30,000원</span>
+                    <span class="inline-block text-1522-1826 font-semibold whitespace-nowrap">이상 무료 배송</span>
+                </div>
 
-                <nav class="hidden md:block w-40">
-                    <div class="space-y-3">                    
-                        <div class="space-y-8">
-                            <div class="space-y-3">
-                                <h3 class="text-28-l-38 font-bold cursor-pointer" onclick="gotoPage('./MY-main.html')">마이페이지</h3>
+                <!-- Button -->
+                <div class="flex items-center">
+                    <button class="text-white text-13-l-18 font-semibold rounded cursor-pointer py-1.5 px-8"  onclick="gotoPage('./CO-wl-wishlist.html')"
+                        style="background-color: rgba(46, 47, 51, 0.88);">상품 추가하기</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="sm:mt-5">
+        <div class="container-layout">
+            <div
+                class="flex items-center justify-between space-x-4 border-gray-300 py-3 sm:py-5 px-5 sm:px-6 sm:border-t border-b">
+                <!-- Chọn toàn bộ -->
+                <div class="flex items-center space-x-2">
+                    <input id="full-choice" type="checkbox" class="form-checkbox text-gray-600 rounded-full" checked
+                        hidden>
+                    <label for="full-choice" class="flex items-center gap-2 cursor-default">
+                        <img id="icon-choose-all-book" class="w-6 h-6" src="../assets/images/icon/common/check-white.svg" alt="">
+                        <span class="inline-block text-15-l-22 font-medium">전체 선택</span>
+                    </label>
+                </div>
+
+                <!-- Các nút hành động -->
+                <div class="flex space-x-2 ml-auto">
+                    <button
+                        class="cursor-default bg-gray-100 text-13-l-18 font-semibold py-1.5 px-3 rounded border border-gray-300">
+                        선택 삭제
+                    </button>
+                    <button
+                        class="cursor-default bg-gray-100 text-13-l-18 font-semibold py-1.5 px-3 rounded border border-gray-300">
+                        주문 불가 삭제
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="container-layout">
+            <div class="my-14">
+                <div class="flex flex-col items-center">
+                    <div class="p-1">
+                        <div class="rounded-full flex items-center justify-center" style="width: 46px; height: 46px; background-color: rgba(254, 230, 198, 1);">
+                            <i class="fa-solid fa-exclamation" style="color: rgba(255, 146, 0, 1);"></i>
+                        </div>
+                    </div>
+                    <h4 class="mt-3 mb-2 text-base font-semibold text-center">
+                        장바구니에 담긴 상품이 없습니다
+                    </h4>
+                    <p class="text-xs font-normal text-gray-400 text-center">
+                        마음에 드는 상품을 담아보세요!
+                    </p>
+                </div>
+            </div>
+
+            <hr class="sm:mb-20"> 
+
+        </div>
+    </section>
+
+    <div id="popup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 overflow-auto hidden">
+        <!-- Modal Box -->
+        <div class="bg-white sm:rounded-lg modal-box-size max-h-screen overflow-auto custom-scroll">
+            <div class="px-5 py-6 sm:p-8 flex flex-col gap-6">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-2028-2230 font-semibold">묶음배송이 가능한 상품입니다</h3>
+                    <img onclick="togglePopup()" class="w-6 h-6 cursor-pointer" src="../assets/images/icon/common/x.svg" alt="x">
+                </div>
+
+                <div class="flex items-center justify-between gap-3">
+                    <button class="w-60 flex-1 text-15-l-22 font-semibold py-2 rounded border" onclick="gotoPage('./CO-or-order-step-0.html')">별도 주문</button>
+                    <button class="w-60 flex-1 text-15-l-22 font-semibold py-2 rounded border"
+                        style="background-color: rgba(230, 241, 255, 1); border-color: rgba(14, 84, 196, 1); color: rgba(14, 84, 196, 1);">
+                        묶음배송 주문</button>
+                </div>
+            </div>
+
+            <div class="px-5 py-6 sm:p-8 flex flex-col gap-4 sm:gap-6"
+                style="background-color: rgba(247, 247, 248, 1);">
+                <div class="bg-white">
+                    <div class="w-full border rounded-lg overflow-hidden">
+                        <div class="border-b">
+                            <div onclick="toggleAccordion(this,'accordion-1')"
+                                class="flex items-center justify-between w-full py-5 px-6 cursor-pointer">
+                                <div class="flex items-center gap-2">
+                                    <span class="flex items-center gap-2">
+                                        <input id="radio-accordion-1" class="w-6 h-6" type="radio">
+                                        <span
+                                            class="inline-block text-gray-700 text-18-l-26 font-normal">000-0000-0000</span>
+                                    </span>
+                                    <span class="inline-block h-3"
+                                        style="width: 1px; background-color: rgba(112, 115, 124, 0.16);"></span>
+                                    <span class="inline-block text-18-l-26 font-semibold">39,000 <span
+                                            class="inline-block text-18-l-26 font-normal">원</span></span>
+                                </div>
+                                <i id="icon-accordion-1" class="fa-solid fa-chevron-down"></i>
                             </div>
-                            
-                            <div class="space-y-3">                               
-                                <div>
-                                    <h4 class="text-sm font-semibold p-2">주문내역</h4>
-                                    <ul class="p-2">
-                                        <li class="py-1 flex items-center justify-between cursor-pointer" onclick="gotoPage('./MY-oh-full-history.html')">
-                                            <span class="inline-block text-sm font-normal text-gray-400">전체 주문 내역</span>                                            
-                                        </li>
-                                        <li class="py-1 flex items-center justify-between cursor-pointer" onclick="gotoPage('./MY-oh-receive-visit.html')">
-                                            <span class="inline-block text-sm font-normal text-gray-400">방문수령 주문 내역</span>
-                                        </li>
-                                        <li class="py-1 flex items-center justify-between cursor-pointer" onclick="gotoPage('./MY-oh-return.html')">
-                                            <span class="inline-block text-sm font-normal text-gray-400">교환/반품 주문 내역</span>
-                                        </li>
-                                        <li class="py-1 flex items-center justify-between cursor-pointer" onclick="gotoPage('./MY-oh-cancellation.html')">
-                                            <span class="inline-block text-sm font-normal text-gray-400">주문 취소 내역</span>
-                                        </li>
-                                        <li class="py-1 flex items-center justify-between cursor-pointer" onclick="gotoPage('./MY-oh-tax.html')">
-                                            <span class="inline-block text-sm font-normal text-gray-400">세금계산서 신청</span>
-                                        </li>
-                                    </ul>
+
+                            <div id="accordion-1" class="p-6 hidden flex flex-col gap-5">
+                                <div class="flex gap-5">
+                                    <div class="relative frame-size-70108-160150">
+                                        <div class="relative image-size-70108-102150 scope-imgage shadow-md border">
+                                            <img class="w-full h-full"
+                                                src="../assets/images/image/books/book-error-small-x.png" alt="img">
+                                        </div>
+                                    </div>
+
+                                    <div class="flex-1 flex flex-col justify-between sm:pr-5">
+                                        <div>
+                                            <h4 class="text-base font-semibold mb-2 sm:mb-3">책 제목</h4>
+                                            <p class="flex items-center">
+                                                <span class="inline-block text-sm font-semibold text-red-500">10%</span>
+                                                <span class="ml-1 flex items-center gap-0">
+                                                    <span class="inline-block text-sm font-semibold">12,000</span>
+                                                    <span class="inline-block text-sm font-normal">원</span>
+                                                </span>
+                                                <span
+                                                    class="ml-3 inline-block line-through text-gray-400 text-sm font-normal">12,000
+                                                    원</span>
+                                            </p>
+                                        </div>
+                                        <div class="flex items-center justify-between">
+                                            <p class="text-sm font-semibold">2<span
+                                                    class="inline-block text-sm font-normal">개</span></p>
+                                            <p class="flex items-center">
+                                                <span class="text-1624-2230 font-semibold">24,000</span>
+                                                <span class="inline-block text-sm font-normal">원</span>
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <hr class="my-3">
-                                
-                                <div>
-                                    <h4 class="text-sm font-semibold p-2">나의 지갑</h4>
-                                    <ul class="p-2">
-                                        <li class="py-1 flex items-center justify-between cursor-pointer" onclick="gotoPage('./MY-mw-mileage.html')">
-                                            <span class="inline-block text-sm font-normal text-gray-400">마일리지</span>
-                                        </li>
-                                        <li class="py-1 flex items-center justify-between cursor-pointer" onclick="gotoPage('./MY-mw-deposit.html')">
-                                            <span class="inline-block text-sm font-normal text-gray-400">예치금</span>
-                                        </li>
-                                        <li class="py-1 flex items-center justify-between cursor-pointer" onclick="gotoPage('./MY-mw-coupon.html')">
-                                            <span class="inline-block text-sm font-normal text-gray-400">쿠폰 내역</span>
-                                        </li>
-                                    </ul>
+
+                                <div class="flex gap-5">
+                                    <div class="relative frame-size-7070-160160">
+                                        <div class="relative frame-size-7070-160160 scope-imgage shadow-md border">
+                                            <img class="w-full h-full"
+                                                src="../assets/images/image/books/book-error-small-x.png" alt="img">
+                                        </div>
+                                    </div>
+
+                                    <div class="flex-1 flex flex-col justify-between sm:pr-5">
+                                        <div class="mb-3">
+                                            <h4 class="text-base font-semibold mb-2 sm:mb-3">책 제목</h4>
+                                            <p class="flex items-center">
+                                                <span class="inline-block text-sm font-semibold text-red-500">10%</span>
+                                                <span class="ml-1 flex items-center gap-0">
+                                                    <span class="inline-block text-sm font-semibold">12,000</span>
+                                                    <span class="inline-block text-sm font-normal">원</span>
+                                                </span>
+                                                <span
+                                                    class="ml-3 inline-block line-through text-gray-400 text-sm font-normal">12,000
+                                                    원</span>
+                                            </p>
+                                        </div>
+
+                                        <div class="mb-3 sm:my-0">
+                                            <select name="" id=""
+                                                class="py-1 px-3 w-28 rounded bg-gray-200 text-sm font-normal select-hidden-arrow outline-none cursor-pointer">
+                                                <option value="">옵션명</option>
+                                                <option value="">옵션명-1</option>
+                                                <option value="">옵션명-2</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="flex items-center justify-between">
+                                            <p class="text-sm font-semibold">2<span
+                                                    class="inline-block text-sm font-normal">개</span></p>
+                                            <p class="flex items-center">
+                                                <span class="text-1624-2230 font-semibold">24,000</span>
+                                                <span class="inline-block text-sm font-normal">원</span>
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <hr class="my-3">
-                                
-                                <div>
-                                    <h4 class="text-sm font-semibold p-2">바오로딸 활동</h4>
-                                    <ul class="p-2">
-                                        <li class="py-1 flex items-center justify-between cursor-pointer" onclick="gotoPage('./MY-ac-review.html')">
-                                            <span class="inline-block text-sm font-normal text-gray-400">리뷰 관리</span>
-                                        </li>
-                                        <li class="py-1 flex items-center justify-between cursor-pointer" onclick="gotoPage('./MY-ac-inquiry.html')">
-                                            <span class="inline-block text-sm font-normal text-gray-400">문의 내역</span>
-                                        </li>
-                                        <li class="py-1 flex items-center justify-between cursor-pointer" onclick="gotoPage('./MY-ac-activity.html')">
-                                            <span class="inline-block text-sm font-normal text-gray-400">입고 안내 메일 신청</span>
-                                        </li>
-                                        <li class="py-1 flex items-center justify-between cursor-pointer" onclick="gotoPage('./MY-ac-author.html')">
-                                            <span class="inline-block text-sm font-normal text-gray-400">저자 신간 알림</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <hr class="my-3">
-                                
-                                <div>
-                                    <h4 class="text-sm font-semibold p-2">회원 정보</h4>
-                                    <ul class="p-2">
-                                        <li class="py-1 flex items-center justify-between cursor-pointer" onclick="gotoPage('./MY-mi-my-info.html')">
-                                            <span class="inline-block text-sm font-normal text-gray-400">내 정보 확인/수정</span>
-                                            <img src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg" alt=">">
-                                        </li>
-                                        <li class="py-1 flex items-center justify-between cursor-pointer" onclick="gotoPage('./MY-mi-mem-regis.html')">
-                                            <span class="inline-block text-sm font-normal text-gray-400">통합회원 등록</span>
-                                        </li>
-                                        <li class="py-1 flex items-center justify-between cursor-pointer" onclick="gotoPage('./MY-mi-history.html')">
-                                            <span class="inline-block text-sm font-normal text-gray-400">알림 설정</span>
-                                        </li>
-                                        <li class="py-1 flex items-center justify-between cursor-pointer" onclick="gotoPage('./MY-mi-address.html')">
-                                            <span class="inline-block text-sm font-normal text-gray-400">주소록</span>
-                                        </li>
-                                        <li class="py-1 flex items-center justify-between cursor-pointer" onclick="gotoPage('./MY-mi-withdrawal.html')">
-                                            <span class="inline-block text-sm font-normal text-gray-400">회원 탈퇴</span>
-                                        </li>
-                                        <li class="py-1 flex items-center justify-between cursor-pointer">
-                                            <span class="inline-block text-sm font-normal text-gray-400">로그아웃</span>
-                                        </li>
-                                    </ul>
-                                </div>                                
                             </div>
                         </div>
                     </div>
-                </nav>
+                </div>
 
-                <!-- start main -->
-                <main class="cs-main-size">
+                <div class="bg-white">
+                    <div class="w-full border rounded-lg overflow-hidden">
+                        <div class="border-b">
+                            <div onclick="toggleAccordion(this,'accordion-2')"
+                                class="flex items-center justify-between w-full py-5 px-6 cursor-pointer">
+                                <div class="flex items-center gap-2">
+                                    <span class="flex items-center gap-2">
+                                        <input id="radio-accordion-2" class="w-6 h-6" type="radio">
+                                        <span
+                                            class="inline-block text-gray-700 text-18-l-26 font-normal">000-0000-0000</span>
+                                    </span>
+                                    <span class="inline-block h-3"
+                                        style="width: 1px; background-color: rgba(112, 115, 124, 0.16);"></span>
+                                    <span class="inline-block text-18-l-26 font-semibold">39,000 <span
+                                            class="inline-block text-18-l-26 font-normal">원</span></span>
+                                </div>
+                                <i id="icon-accordion-2" class="fa-solid fa-chevron-down"></i>
+                            </div>
 
-                    <div class="overflow-hidden border-bl-br-8-px sm:shadow-md">
-                        <div class="py-8 px-5 sm:py-6 sm:px-8 flex flex-col gap-y-5 sm:flex-row sm:items-center justify-between bg-white-blue-10">
-                            <div class="flex items-center justify-between">
-                                <div class="space-y-3">
-                                    <div class="flex items-center gap-x-0.5">
-                                        <h4 class="text-2028-1826 font-semibold">마르코</h4>
-                                        <h4 class="text-2028-1826 font-normal">님</h4>
+                            <div id="accordion-2" class="p-6 hidden flex flex-col gap-5">
+                                <div class="flex gap-5">
+                                    <div class="relative frame-size-70108-160150">
+                                        <div class="relative image-size-70108-102150 scope-imgage shadow-md border">
+                                            <img class="w-full h-full"
+                                                src="../assets/images/image/books/book-error-small-x.png" alt="img">
+                                        </div>
                                     </div>
+
+                                    <div class="flex-1 flex flex-col justify-between sm:pr-5">
+                                        <div>
+                                            <h4 class="text-base font-semibold mb-2 sm:mb-3">책 제목</h4>
+                                            <p class="flex items-center">
+                                                <span class="inline-block text-sm font-semibold text-red-500">10%</span>
+                                                <span class="ml-1 flex items-center gap-0">
+                                                    <span class="inline-block text-sm font-semibold">12,000</span>
+                                                    <span class="inline-block text-sm font-normal">원</span>
+                                                </span>
+                                                <span
+                                                    class="ml-3 inline-block line-through text-gray-400 text-sm font-normal">12,000
+                                                    원</span>
+                                            </p>
+                                        </div>
+                                        <div class="flex items-center justify-between">
+                                            <p class="text-sm font-semibold">2<span
+                                                    class="inline-block text-sm font-normal">개</span></p>
+                                            <p class="flex items-center">
+                                                <span class="text-1624-2230 font-semibold">24,000</span>
+                                                <span class="inline-block text-sm font-normal">원</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex gap-5">
+                                    <div class="relative frame-size-7070-160160">
+                                        <div class="relative frame-size-7070-160160 scope-imgage shadow-md border">
+                                            <img class="w-full h-full"
+                                                src="../assets/images/image/books/book-error-small-x.png" alt="img">
+                                        </div>
+                                    </div>
+
+                                    <div class="flex-1 flex flex-col justify-between sm:pr-5">
+                                        <div class="mb-3">
+                                            <h4 class="text-base font-semibold mb-2 sm:mb-3">책 제목</h4>
+                                            <p class="flex items-center">
+                                                <span class="inline-block text-sm font-semibold text-red-500">10%</span>
+                                                <span class="ml-1 flex items-center gap-0">
+                                                    <span class="inline-block text-sm font-semibold">12,000</span>
+                                                    <span class="inline-block text-sm font-normal">원</span>
+                                                </span>
+                                                <span
+                                                    class="ml-3 inline-block line-through text-gray-400 text-sm font-normal">12,000
+                                                    원</span>
+                                            </p>
+                                        </div>
+
+                                        <div class="mb-3 sm:my-0">
+                                            <select name="" id=""
+                                                class="py-1 px-3 w-28 rounded bg-gray-200 text-sm font-normal select-hidden-arrow outline-none cursor-pointer">
+                                                <option value="">옵션명</option>
+                                                <option value="">옵션명-1</option>
+                                                <option value="">옵션명-2</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="flex items-center justify-between">
+                                            <p class="text-sm font-semibold">2<span
+                                                    class="inline-block text-sm font-normal">개</span></p>
+                                            <p class="flex items-center">
+                                                <span class="text-1624-2230 font-semibold">24,000</span>
+                                                <span class="inline-block text-sm font-normal">원</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="px-5 py-6 sm:p-8">
+                <div class="mb-8 sm:mb-6">
+                    <h2 class="text-1724-1826 font-semibold py-3 border-b mb-3">주문자 정보</h2>
+
+                    <div class="flex flex-col gap-y-5 sm:gap-y-3">
+                        <div class="flex items-start flex-wrap gap-x-6 gap-y-1">
+                            <span class="text-gray-500 w-20 inline-block text-15-l-22 font-medium">주문자</span>
+                            <span class="inline-block text-15-l-22 font-normal whitespace-normal">홍길동 010-0000-0000</span>
+                        </div>
     
-                                    <div class="flex items-center gap-x-4">
-                                        <div class="flex items-center gap-x-2">
-                                            <div class="w-6 h-6 overflow-hidden">
-                                                <img class="w-full h-full" src="../assets/images/icon/common/kakao-white.svg" alt="">
-                                            </div>
-                                            <span class="inline-block text-xs font-normal whitespace-nowrap">카카오 연동</span>
-                                        </div>
-                                        
-                                        <div class="flex items-center gap-x-2">
-                                            <div class="w-6 h-6 overflow-hidden bg-gray-400 rounded-full"></div>
-                                            <span class="inline-block text-xs font-normal whitespace-nowrap">등급</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="flex flex-col gap-y-2 sm:hidden">
-                                    <button class="text-13-l-18 font-semibold py-1 px-5 border rounded-full">장바구니</button>
-                                    <button class="text-13-l-18 font-semibold py-1 px-5 border rounded-full">찜 목록</button>
-                                </div>
-                            </div>
-
-                            <div class="w-1-px h-16 bg-gray-400 hidden sm:block"></div>
-
-                            <div>
-                                <div class="sm:space-y-3">
-                                    <div class="hidden sm:flex items-center justify-end">
-                                        <div class="hidden sm:flex gap-x-2">
-                                            <button class="text-13-l-18 font-semibold py-1 px-5 border rounded-full" onclick="gotoPage('./CO-sh-shopping-cart.html')">장바구니</button>
-                                            <button class="text-13-l-18 font-semibold py-1 px-5 border rounded-full" onclick="gotoPage('./CO-wl-wishlist.html')">찜 목록</button>
-                                        </div>
-                                    </div>
-
-                                    <div class="flex items-center gap-x-5">
-                                        <div class="flex-1 flex flex-col gap-y-1.5 sm:flex-row sm:items-center sm:w-28">
-                                            <span class="inline-block text-xs font-normal whitespace-nowrap">마일리지</span>
-                                            <span class="inline-block text-1724-1826 font-semibold text-blue-500 flex-1 sm:text-right">0</span>
-                                        </div>
-
-                                        <div class="w-1-px h-5 bg-gray-400"></div>
-                                        <div class="flex-1 flex flex-col gap-y-1.5 sm:flex-row sm:items-center sm:w-28">
-                                            <span class="inline-block text-xs font-normal whitespace-nowrap">예치금</span>
-                                            <span class="inline-block text-1724-1826 font-semibold text-blue-500 flex-1 sm:text-right">0</span>
-                                        </div>
-
-                                        <div class="w-1-px h-5 bg-gray-400"></div>
-                                        <div class="flex-1 flex flex-col gap-y-1.5 sm:flex-row sm:items-center sm:w-28">
-                                            <span class="inline-block text-xs font-normal whitespace-nowrap">보유쿠폰</span>
-                                            <span class="inline-block text-1724-1826 font-semibold text-blue-500 flex-1 sm:text-right">0</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="flex items-start flex-wrap gap-x-6 gap-y-1">
+                            <span class="text-gray-500 w-20 inline-block text-15-l-22 font-medium">주소</span>
+                            <span class="inline-block text-15-l-22 font-normal whitespace-nowrap">서울특별시 성북구 00동 00동 00호 (00000)</span>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="py-2 bg-highlight">
-                            <p class="text-15-l-22 font-normal text-white text-center">마르코 님께 주님의 평화를 빕니다.</p>
+                <div class="mb-8 sm:mb-6">
+                    <div class="py-3 border-b mb-3 flex items-center justify-between flex-wrap gap-y-1">
+                        <h2 class="text-1724-1826 font-semibold">주문자 정보</h2>
+
+                        <div class="flex gap-2.5">
+                            <button class="text-13-l-18 font-semibold py-1.5 px-2.5 border rounded">주문자와 동일</button>
+                            <button class="text-13-l-18 font-semibold py-1.5 px-2.5 border rounded">주소록</button>
+                            <button class="text-13-l-18 font-semibold py-1.5 px-2.5 border rounded">신규 주소지</button>
                         </div>
                     </div>
 
-                    <div id="content-info" class="hidden p-5 sm:p-0 sm:mt-16 sm:pt-2 space-y-5 sm:space-y-6 overflow-x-auto custom-scroll">
-                        <h4 class="text-1724-2230 font-semibold p-5 sm:p-0 sm:pb-3 border-b sm:border-black">회원정보 확인</h4>
-                        
-                        <div class="space-y-5 sm:space-y-8">
-                            <!-- 1 -->
-                            <div class="flex flex-col gap-y-3 sm:flex-row sm:items-center gap-x-5">
-                                <span class="inline-block text-sm font-medium w-24">아이디 <span class="text-red-500">*</span></span>
+                    <div class="flex flex-col gap-y-5 sm:gap-y-3">
+                        <div class="flex items-start flex-wrap gap-x-6 gap-y-1">
+                            <span class="text-gray-500 w-20 inline-block text-15-l-22 font-medium">주문자</span>
+                            <span class="inline-block text-15-l-22 font-normal whitespace-normal">홍길동 010-0000-0000</span>
+                        </div>
+    
+                        <div class="flex items-start flex-wrap gap-x-6 gap-y-1">
+                            <span class="text-gray-500 w-20 inline-block text-15-l-22 font-medium">주소</span>
+                            <span class="inline-block text-15-l-22 font-normal whitespace-nowrap">서울특별시 성북구 00동 00동 00호 (00000)</span>
+                        </div>
+                    </div>
+                </div>
 
-                                <div class="flex flex-col gap-y-2 sm:flex-row sm:items-center gap-x-24">
-                                    <h5 class="text-15-l-22 font-normal">아이디</h5>
-                                    <p class="text-xs font-normal text-gray-400">*아이디는 변경할 수 없습니다</p>
-                                </div>
+                <div class="mb-8 sm:mb-6 rounded-lg p-4" style="background-color: rgba(255, 249, 237, 1);">
+                    <h2 class="text-base font-semibold mb-2">배송 안내</h2>
+                    <p class="text-13-l-18 font-normal">해외 주문을 원하는 분은 메일(grace@pauline.or.kr)주시면 도움을 드리겠습니다.</p>
+                </div>
+
+                <div class="mb-8 sm:mb-6">
+                    <h2 class="text-1724-1826 font-semibold py-3 border-b mb-3">결제 상세</h2>
+
+                    <div class="flex flex-col gap-y-3">
+                        <div class="flex items-center justify-between flex-wrap gap-y-1">
+                            <span class="text-gray-500 inline-block text-15-l-22 font-medium">상품수</span>
+                            <div class="flex items-center gap-1">
+                                <span class="inline-block text-xs font-medium py-0.5 px-2 border rounded-full" style="color: rgba(255, 146, 0, 1); border-color: rgba(255, 146, 0, 1);">추가</span>
+                                <span class="text-15-l-22 font-normal inline-block">2개 + 2개</span>
                             </div>
-                            <!-- pass -->
-                            <div class="flex flex-col gap-y-2 sm:flex-row sm:items-center gap-x-5">
-                                <label for="input-password" class="cursor-pointer inline-block text-sm font-medium w-24">비밀번호 <span class="text-red-500">*</span></label>
-
-                                <div id="frame-input-password" class="flex-1 flex flex-row items-center gap-x-2 sm:gap-x-2.5">
-                                    <div class="py-2.5 px-4 rounded border flex-1 relative">
-                                        <input id="input-password" type="password" class="text-15-l-22 font-normal w-full pr-6" placeholder="*********">
-                                        <i class="absolute right-3 top-3.5 text-gray-400 fa-regular fa-eye-slash"></i>
-                                    </div>
-                                    <button class="text-15-l-22 font-semibold py-2.5 px-3.5 rounded border text-gray-400 cursor-default">변경하기</button>
-                                </div>
-                            </div>
-                            <!-- name -->
-                            <div class="flex flex-col gap-y-2 sm:flex-row sm:items-center gap-x-5">
-                                <label for="" class="inline-block text-sm font-medium w-24">이름 <span class="text-red-500">*</span>/세례명</label>
-
-                                <div class="flex-1 flex flex-row items-center gap-x-2 sm:gap-x-2.5">
-                                    <div class="py-2.5 px-4 rounded border flex-1">
-                                        <input type="text" class="text-15-l-22 font-normal w-full" placeholder="홍길동">
-                                    </div>
-                                    <div class="py-2.5 px-4 rounded border flex-1">
-                                        <input type="text" class="text-15-l-22 font-normal w-full" placeholder="입력값">
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- gender -->
-                            <div class="flex flex-col gap-y-2 sm:flex-row sm:items-center gap-x-5">
-                                <label for="" class="inline-block text-sm font-medium w-24">생년월일 <span class="text-red-500">*</span>/성별<span class="text-red-500"></span> </label>
-
-                                <div class="flex-1 flex flex-row items-center gap-x-2 sm:gap-x-2.5">
-                                    <div class="py-2.5 px-4 rounded border flex-1">
-                                        <input type="date" class="text-15-l-22 font-normal w-full" placeholder="홍길동">
-                                    </div>
-                                    <div class="flex items-center">
-                                        <button onclick="changeGen(this)" class="btn-gen text-15-l-22 font-semibold py-2.5 px-7 border text-blue-500 bg-blue-100 border-blue-500" style="border-top-left-radius: 4px; border-bottom-left-radius: 4px;">남</button>
-                                        <button onclick="changeGen(this)" class="btn-gen text-15-l-22 font-semibold py-2.5 px-7 border"  style="border-top-right-radius: 4px; border-bottom-right-radius: 4px;">여</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- phone -->
-                            <div class="flex flex-col gap-y-2 sm:flex-row sm:items-center gap-x-5">
-                                <label for="input-phone" class="cursor-pointer inline-block text-sm font-medium w-24">휴대폰 번호 <span class="text-red-500">*</span></label>
-
-                                <div id="frame-phone" class="flex-1 flex flex-row items-center gap-x-2 sm:gap-x-2.5">
-                                    <div class="py-2.5 px-4 rounded border flex-1">
-                                        <input id="input-phone" type="text" class="text-15-l-22 font-normal w-full" placeholder="01012341234" maxlength="12">
-                                    </div>
-                                    <button class="text-15-l-22 font-semibold py-2.5 px-3.5 rounded border cursor-default text-gray-400">변경하기</button>
-                                </div>
-                            </div>
-                            <!-- email -->
-                            <div class="flex flex-col gap-y-2 sm:flex-row sm:items-center gap-x-5">
-                                <label for="input-f-mail" class="cursor-pointer inline-block text-sm font-medium w-24">이메일 <span class="text-red-500">*</span></label>
-
-                                <div id="frame-mail" class="flex-1 flex flex-row items-center gap-x-2 sm:gap-x-2.5">
-                                    <div class="flex-1 flex items-center gap-x-1">
-                                        <div class="flex-1 py-2.5 px-4 rounded border">
-                                            <input id="input-f-mail" type="text" class="text-15-l-22 font-normal w-full" placeholder="입력값">
-                                        </div>
-                                        <span class="inline-block text-15-l-22 font-normal">@</span>
-                                        <div class="flex-1 py-2.5 px-4 rounded border">
-                                            <input id="input-l-mail" type="text" class="text-15-l-22 font-normal w-full" placeholder="입력값">
-                                        </div>
-                                        <select name="" id="" class="cursor-pointer flex-1 py-3 px-4 rounded border text-15-l-22 w-full text-gray-400">
-                                            <option value="">선택</option>
-                                        </select>
-                                    </div>
-                                    <button class="text-15-l-22 font-semibold py-2.5 px-3.5 rounded border cursor-default text-gray-400">변경하기</button>
-                                </div>
-                            </div>
-                            <!-- address -->
-                            <div class="flex flex-col gap-y-3 sm:flex-row sm:items-center gap-x-5">
-                                <label for="" class="inline-block text-sm font-medium w-24">주소</label>
-
-                                <div class="flex-1 flex flex-col gap-y-3 sm:flex-row sm:items-center gap-x-2 sm:gap-x-2.5">
-                                    <div class="flex-1 flex flex-col items-start gap-y-2">
-                                        <span class="inline-block text-15-l-22 font-normal">[02763]</span class="inline-block text-15-l-22 font-normal">
-                                        <span class="inline-block text-15-l-22 font-normal">서울특별시 00구 00로 100 (00동 000) </span class="inline-block text-15-l-22 font-normal">
-                                        <span class="inline-block text-15-l-22 font-normal">000동 000호</span class="inline-block text-15-l-22 font-normal">
-                                    </div>
-                                    <div class="flex items-center justify-end">
-                                        <button class="text-15-l-22 font-semibold py-2.5 px-3.5 rounded border text-blue-500 border-blue-500" onclick="toggle('#modal-address')">변경하기</button>
-                                    </div>
-                                </div>
+                        </div>                        
+                        <div class="flex items-center justify-between flex-wrap gap-y-1">
+                            <span class="text-gray-500 inline-block text-15-l-22 font-medium">선택한 상품 주문금액</span>
+                            <div class="flex items-center gap-1">                                
+                                <span class="text-15-l-22 font-normal inline-block">95,400원</span>
                             </div>
                         </div>
-
-                        <hr>
-
-                        <div class="flex items-center justify-center">
-                            <button class="w-full sm:w-auto text-15-l-22 font-semibold py-2.5 px-11 rounded bg-blue-400 text-white">수정하기</button>
+                        <div class="flex items-center justify-between flex-wrap gap-y-1">
+                            <span class="text-gray-500 inline-block text-15-l-22 font-medium">총 배송비</span>
+                            <div class="flex items-center gap-1">
+                                <span class="inline-block text-xs font-medium py-0.5 px-2 border rounded-full" style="color: rgba(0, 191, 64, 1); border-color: rgba(0, 191, 64, 1);">합배송할인</span>
+                                <span class="inline-block text-15-l-22 font-normal text-gray-400 line-through">3,000원</span>
+                                <img class="w-5 h-5" src="../assets/images/icon/cart/play.svg" alt="icon">
+                                <span class="text-15-l-22 font-normal inline-block">0원</span>
+                            </div>
                         </div>
-                        
+                        <div class="flex items-center justify-between flex-wrap gap-y-1">
+                            <span class="text-gray-500 inline-block text-15-l-22 font-medium">할인금액</span>
+                            <div class="flex items-center gap-1">                                
+                                <span class="text-15-l-22 font-normal inline-block">5,000원</span>
+                            </div>
+                        </div>                  
                     </div>
-                    
-                </main>
-                <!-- start main -->
-            </div>
-        </div>
-    </section>
-
-    <div class="h-2 bg-gray-100 mt-6 sm:hidden"></div>
-    <div class="hidden sm:block" style="height: 72px;"></div>
-
-    <section>
-        <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
-            <!-- Modal Content -->
-            <div class="bg-white sm:rounded-lg p-5 sm:p-8 space-y-6 overflow-hidden" style="width: 364px;">
-                <!-- Modal Header -->
-                <div class="flex items-center justify-between mb-6">
-                    <h3 class="text-1624-1826 font-semibold text-center">
-                        상품명 <br>
-                        입고 안내 메일 신청을 취소하시겠습니까?
-                    </h3>                    
-                </div>               
-               
-                <div class="flex items-center gap-x-4">
-                    <button class="flex-1 text-15-l-22 font-semibold py-2.5 rounded  border">장바구니</button>
-                    <button class="flex-1 text-15-l-22 font-semibold py-2.5 rounded bg-blue-400 text-white border border-blue-400">바로 구매</button>
-                </div>                
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <!-- 1 -->
-        <div id="modal-pass" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
-            <!-- Modal Content -->
-            <div class="bg-white sm:rounded-lg p-5 sm:p-8 space-y-6" style="width: 364px;">
-                <!-- Modal Header -->
-                <div class="flex items-center justify-center">
-                    <h3 class="text-1724-1826 font-semibold text-center">
-                        비밀번호 변경
-                    </h3>
                 </div>
 
-                <!-- content -->
-                <div class="space-y-3">
-                    <div id="frame-old-pass" class="rounded border py-2.5 px-4 flex items-center gap-x-3">
-                        <input type="password" class="flex-1 text-15-l-22 font-normal" placeholder="입력값">
-                        <button class="w-5 h-5">
-                            <i class="form-eye fa-regular fa-eye-slash text-gray-400 cursor-pointer"></i>
-                        </button>
-                    </div>
-                    <div id="frame-new-pass" class="rounded border py-2.5 px-4 flex items-center gap-x-3">
-                        <input type="password" class="flex-1 text-15-l-22 font-normal" placeholder="입력값">
-                        <button class="w-5 h-5">
-                            <i class="form-eye fa-regular fa-eye-slash text-gray-400 cursor-pointer"></i>
-                        </button>
-                    </div>
-                    <div id="frame-cf-pass" class="space-y-2">
-                        <div class="rounded border py-2.5 px-4 flex items-center gap-x-3">
-                            <input type="password" class="flex-1 text-15-l-22 font-normal" placeholder="입력값">
-                            <button class="w-5 h-5">
-                                <i class="form-eye fa-regular fa-eye-slash text-gray-400 cursor-pointer"></i>
-                            </button>
-                        </div>
-                        <p class="hidden text-xs font-normal text-red-500 px-4">일치하지 않는 비밀번호 입니다</p>
-                    </div>                    
-                </div>
+                <div class="mb-8 sm:mb-6 flex items-center justify-between">
+                    <span class="inline-block text-15-l-22 font-medium">최종 결제 금액</span>
 
-                <!-- Button -->
-                <div class="flex items-center gap-x-4">
-                    <button onclick="toggle('#modal-pass')"
-                        class="flex-1 py-2.5 border rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-100">
-                        취소
-                    </button>
-                    <button onclick="changePass()"
-                        class="flex-1 py-2.5 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        변경하기
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- 3 -->
-        <div id="modal-otp" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
-            <!-- Modal Content -->
-            <div class="bg-white sm:rounded-lg p-5 sm:p-8 space-y-6" style="width: 364px;">
-                <!-- Modal Header -->
-                <div class="flex items-center justify-center">
-                    <h3 class="text-1724-1826 font-semibold text-center">
-                        인증번호
-                    </h3>
-                </div>
-
-                <!-- content -->
-                <div class="space-y-3">
-                    <div class="rounded border py-2.5 px-4 flex items-center gap-x-3">
-                        <input id="input-otp" type="text" class="flex-1 text-15-l-22 font-normal" placeholder="입력값">
-                        <button id="btn-clear-otp" class="w-5 h-5">
-                            <i class="fa-solid fa-x text-sm text-gray-400"></i>
-                        </button>
-                        <span class="flex items-center justify-center text-gray-900 text-xs font-normal">
-                            50
-                        </span>
-                    </div>                 
-                </div>
-
-                <!-- Button -->
-                <div class="flex items-center gap-x-4">
-                    <button onclick="toggle('#modal-otp')"
-                        class="flex-1 py-2.5 border rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-100">
-                        취소
-                    </button>
-                    <button id="btn-submit-otp" onclick="toggle('#modal-otp')"
-                        class="flex-1 py-2.5 bg-gray-100 text-gray-400 rounded-md hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-200">
-                        인증하기
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- 4 -->
-        <div id="modal-address" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
-            <!-- Modal Content -->
-            <div class="bg-white sm:rounded-lg overflow-hidden" style="width: 560px;">
-                <!-- Modal Header -->
-                <div class="px-5 pt-6 sm:pb-0 flex items-center justify-between">
-                    <h3 class="text-2028-2230 font-semibold">나의 리뷰</h3>
-                    <button class="cursor-pointer" onclick="toggle('#modal-address')">
-                        <img class="w-6 h-6" src="../assets/images/icon/common/x.svg" alt="icon">
-                    </button>
-                </div>
-
-                <div class="px-5 py-6 space-y-5 sm:space-y-6">
                     <div class="flex items-center gap-x-6">
-                        <label for="" class="inline-block w-20 text-sm font-medium">배송지명</label>
-
-                        <div class="flex-1 rounded border py-2 px-4">
-                            <input type="text" placeholder="입력값" class="w-full text-15-l-22 font-normal">
+                        <div class="flex items-center gap-0.5">
+                            <span class="inline-block text-22-l-30 font-normal">4</span>
+                            <span class="inline-block text-15-l-22 font-normal">개</span>
+                        </div>
+                        <div class="w-1-px h-3" style="background-color: rgba(112, 115, 124, 0.16);"></div>
+                        <div class="flex items-center gap-0.5">
+                            <span class="inline-block text-22-l-30 font-normal">93,400</span>
+                            <span class="inline-block text-15-l-22 font-normal">원</span>
                         </div>
                     </div>
-
-                    <hr>
-
-                    <div class="rounded border py-2 px-4">
-                        <input type="text" placeholder="기존 입력된 주소" class="w-full text-15-l-22 font-normal">
-                    </div>
-
-                    <div class="rounded border py-2 px-4 flex items-center gap-x-3">
-                        <input type="text" placeholder="기존에 입력된 상세 주소" class="flex-1 text-15-l-22 font-normal">
-                        <i class="text-sm fa-solid fa-magnifying-glass"></i>
-                    </div>
                 </div>
 
-                <div class="sm:hidden h-24"></div>
-
-                <div class="px-5 py-6 sm:pt-0">
-                    <button class="text-15-l-22 font-semibold text-white bg-blue-500 text-center py-2.5 w-full rounded" onclick="toggle('#modal-address')">저장하기</button>
+                <div class="flex items-center justify-between flex-wrap gap-2">
+                    <button class="rounded text-15-l-22 font-semibold py-2 px-3 border">기부하기</button>
+                    <button class="rounded text-15-l-22 font-semibold py-2 px-3 border" style="border-color: rgba(238, 23, 98, 1); color: rgba(214, 15, 89, 1);">방문수령</button>
+                    <button class="flex-1 rounded text-15-l-22 font-semibold py-2 border text-white" style="border-color: rgba(238, 23, 98, 1); background-color: rgba(238, 23, 98, 1);">주문하기</button>
                 </div>
-                            
+            </div>
+
+            <div style="height: 140px;"></div>
+        </div>
+    </div>
+
+    <div id="modal-delete-book" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+        <!-- Modal Box -->
+        <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-8">
+            <!-- Modal Text -->
+            <p class="text-center text-18-l-26 font-medium mb-6">선택한 상품이 <br>장바구니에서 삭제됩니다.</p>
+
+            <!-- Buttons -->
+            <div class="flex justify-center space-x-4">
+                <!-- Cancel Button -->
+                <button onclick="toggle('#modal-delete-book')"
+                    class="w-36 px-6 py-2 border border-gray-300 rounded text-gray-600 hover:bg-gray-100 text-15-l-22 font-semibold">취소</button>
+                <!-- Confirm Button -->
+                <button onclick="toggle('#modal-delete-book')"
+                    class="w-36 px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 text-15-l-22 font-semibold">확인</button>
             </div>
         </div>
+    </div>
+    
+    <div id="modal-delete-book-expired" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+        <!-- Modal Box -->
+        <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-8">
+            <!-- Modal Text -->
+            <p class="text-center text-18-l-26 font-medium mb-6">품절된 상품은 삭제됩니다.</p>
 
-        <!-- 5 -->
-        <div id="modal-re-enter-pass" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+            <!-- Buttons -->
+            <div class="flex justify-center space-x-4">
+                <!-- Cancel Button -->
+                <button onclick="toggle('#modal-delete-book-expired')"
+                    class="w-36 px-6 py-2 border border-gray-300 rounded text-gray-600 hover:bg-gray-100 text-15-l-22 font-semibold">취소</button>
+                <!-- Confirm Button -->
+                <button onclick="toggle('#modal-delete-book-expired')"
+                    class="w-36 px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 text-15-l-22 font-semibold">확인</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="modal-delete-book-item" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+        <!-- Modal Box -->
+        <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-8">
+            <!-- Modal Text -->
+            <p class="text-center text-18-l-26 font-medium mb-6">상품 삭제.</p>
+
+            <!-- Buttons -->
+            <div class="flex justify-center space-x-4">
+                <!-- Cancel Button -->
+                <button onclick="toggle('#modal-delete-book-item')"
+                    class="w-36 px-6 py-2 border border-gray-300 rounded text-gray-600 hover:bg-gray-100 text-15-l-22 font-semibold">취소</button>
+                <!-- Confirm Button -->
+                <button onclick="toggle('#modal-delete-book-item')"
+                    class="w-36 px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 text-15-l-22 font-semibold">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-qg" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+        <!-- Modal Box -->
+        <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-8">
+            <!-- Modal Text -->
+            <p class="text-center text-18-l-26 font-medium mb-6">총 3개의 상품을 기부합니다.</p>
+
+            <!-- Buttons -->
+            <div class="flex justify-center space-x-4">
+                <!-- Cancel Button -->
+                <button onclick="toggle('#modal-qg')"
+                    class="w-36 px-6 py-2 border border-gray-300 rounded text-gray-600 hover:bg-gray-100 text-15-l-22 font-semibold">취소</button>
+                <!-- Confirm Button -->
+                <button
+                    class="w-36 px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 text-15-l-22 font-semibold">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-store" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+        <!-- Modal Box -->
+        <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-8 flex flex-col gap-6">
+            <!-- Modal Title -->
+            <p class="text-center text-18-l-26 font-semibold">방문 수령을 하실 서원을 선택해주세요</p>
+
+            <!-- Dropdown Menu -->
+            <div class="relative">
+                <select class="w-full border-gray-300 text-gray-700 outline-none appearance-none border rounded py-3 px-4 cursor-pointer">
+                    <option>서원 선택</option>
+                </select>       
+                
+                <span class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </span>
+            </div>
+
             <!-- Modal Content -->
-            <div class="bg-white sm:rounded-lg p-5 sm:p-8 space-y-6" style="width: 364px;">
-                <!-- Modal Header -->
-                <div class="flex items-center justify-center">
-                    <h3 class="text-1724-1826 font-semibold text-center">
-                        비밀번호 확인
-                    </h3>
-                </div>
+            <p class=" text-gray-500 text-xs font-normal text-justify">
+                실시간으로 재고가 변하니 꼭 서원에서 확인 후 주문해 주세요
+                주문 후 7일 이내 수령하지 않으면 자동으로 결제가 취소됩니다
+                *취소된 금액은 결제 취소 후 예치금으로 전환됩니다.
+            </p>
 
-                <p class="text-xs font-normal text-gray-400 text-center">안전한 개인정보보호를 위해 비밀번호를 입력해 주세요</p>
-
-                <!-- content -->
-                <div class="space-y-3">
-                    <div id="frame-re-enter-pass" class="space-y-2">
-                        <div class="rounded border py-2.5 px-4 flex items-center gap-x-3">
-                            <input type="password" class="flex-1 text-15-l-22 font-normal" placeholder="비밀번호를 입력해 주세요">
-                            <button class="w-5 h-5">
-                                <i class="form-eye fa-regular fa-eye-slash text-gray-400 cursor-pointer"></i>
-                            </button>
-                        </div>
-                        <p class="hidden text-xs font-normal text-red-500 px-4">입력하신 정보가 일치하지 않습니다</p>
-                    </div>                    
-                </div>
-
-                <!-- Button -->
-                <div class="flex items-center gap-x-4">
-                    <button onclick="toggle('#modal-re-enter-pass')"
-                        class="flex-1 py-2.5 border rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-100">
-                        취소
-                    </button>
-                    <button onclick="reEnterPass()"
-                        class="flex-1 py-2.5 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        변경하기
-                    </button>
-                </div>
+            <!-- Buttons -->
+            <div class="flex justify-center space-x-4">
+                <!-- Cancel Button -->
+                <button onclick="toggle('#modal-store')" class="flex-1 text-15-l-22 font-medium px-6 py-2 border border-gray-300 rounded-md text-gray-600 hover:bg-gray-100">취소</button>
+                <!-- Confirm Button -->
+                <button class="flex-1 text-15-l-22 font-medium px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600" 
+                onclick="toggle('#modal-store')">확인</button>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
+    <div id="modal-ship" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+        <!-- Modal Box -->
+        <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-6 flex flex-col gap-8">
+            <!-- Modal Title -->
+            <p class="text-center text-18-l-26 font-semibold">도서소득 공제 결제 안내</p>
+
+            <!-- Modal Content -->
+            <div class="flex flex-col gap-3">
+                <p class="text-center text-15-l-22 text-gray-700">
+                    소득공제가 되는 상품과 되지 않는 상품을 같이<br>
+                    구매하셔서 결제가 2번 발생합니다.
+                </p>
+
+                <p class="text-center text-xs font-normal text-gray-400">
+                    결제 후 해당 상품은 배송지로 묶음배송됩니다.
+                </p>
+                <button
+                    class="text-13-l-18 py-1.5 font-semibold w-full bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200">
+                    도서소득공제 안내
+                </button>
+            </div>
+
+            <!-- Confirm Button -->
+            <button class="text-15-l-22 font-semibold w-full py-2.5 bg-blue-500 text-white rounded hover:bg-blue-600"
+                onclick="gotoPage('./CO-or-order-step-0.html')">
+                확인
+            </button>
+        </div>
+    </div>
+    <!-- ----------------------------------------------------------------------------------------------------------- -->
     <!-- go to top -->
     <div class="fixed bottom-24 right-6 block sm:hidden z-50">
         <div onclick="scrollToTop()" class="cursor-pointer flex flex-col justify-center items-center gap-1 shadow-lg rounded-full bg-white" style="width: 56px; height: 56px;">
@@ -1122,151 +1185,121 @@
         </div>
     </footer>
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script src="../assets/js/util.js"></script>
-    <script src="../assets/js/common.js"></script> 
+    <script src="../assets/js/common.js"></script>    
+
     <script>
-        let isTypePassword = true
-        const frameIPass = document.querySelector('#frame-input-password')
-        const iPass = frameIPass.querySelector('input')
-        const btnPass = frameIPass.querySelector('button')
-        frameIPass.querySelector('i').addEventListener('click', () => {
-            isTypePassword = !isTypePassword
-            if (isTypePassword) {
-                frameIPass.querySelector('input').type = 'password'
-                frameIPass.querySelector('i').classList.toggle('fa-eye')
-                frameIPass.querySelector('i').classList.toggle('fa-eye-flash')
-            } else {
-                frameIPass.querySelector('input').type = 'text'
-                frameIPass.querySelector('i').classList.toggle('fa-eye')
-                frameIPass.querySelector('i').classList.toggle('fa-eye-flash')
-            }
-        })
-        iPass.addEventListener('input', () => {
-            if (iPass.value.length > 0) {
-                btnPass.classList.remove('text-gray-400', 'cursor-default')
-                btnPass.classList.add('text-blue-500', 'border-blue-500', 'cursor-pointer')                
-            } else {
-                btnPass.classList.add('text-gray-400', 'cursor-default')
-                btnPass.classList.remove('text-blue-500', 'border-blue-500', 'cursor-pointer') 
-            }
-        })
-        btnPass.addEventListener('click', () => {
-            if(iPass.value.length === 0) return
-            toggle('#modal-pass')
-        })
+    
 
-        const frameOldPass = document.querySelector('#frame-old-pass')
-        const frameNewPass = document.querySelector('#frame-new-pass')
-        const frameCfNewPass = document.querySelector('#frame-cf-pass')
-        let isTypePassForm = true
-        document.querySelectorAll('.form-eye').forEach((item) => {
-            item.addEventListener('click', () => {
-                isTypePassForm = !isTypePassForm
-                if (isTypePassForm) {
-                    frameOldPass.querySelector('input').type = 'password'
-                    frameNewPass.querySelector('input').type = 'password'
-                    frameCfNewPass.querySelector('input').type = 'password'
-                } else {
-                    frameOldPass.querySelector('input').type = 'text'
-                    frameNewPass.querySelector('input').type = 'text'
-                    frameCfNewPass.querySelector('input').type = 'text'
-                }                
+        function renderListBook() {
+            let stringHTMl = "";
+            Array(2).fill(null).forEach(() => {
+                stringHTMl +=
+                    `
+                    <div class="relative flex flex-col sm:flex-row items-stretch gap-3 sm:gap-5 w-full sm:w-auto">
+                        <div>
+                            <input id="book-1" type="checkbox" checked hidden>
+                            <label for="book-1" class="flex items-center gap-2 cursor-pointer">
+                                <img class="item-book-1 item-choose-book w-6 h-6" src="../assets/images/icon/common/check-black.svg" alt="icon">
+                                <h4 class="block sm:hidden text-base font-semibold">책 제목</h4>
+                            </label>
+                        </div>
+
+                        <div class="flex-1 flex items-stretch gap-5">
+                            <!-- Sách Hình ảnh -->
+                            <div class="relative frame-size-70108-160150">
+                                <div class="relative image-size-70108-102150 scope-imgage shadow-md border">
+                                    <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png"
+                                        alt="img">
+                                    <div onclick="likeBook(this)" class="absolute bottom-1 right-1 z-20 w-9 h-9 rounded-full hidden sm:flex items-center justify-center cursor-pointer"
+                                        style="background-color: rgba(0, 0, 0, 0.16);">
+                                        <i class="fa-solid fa-heart text-white"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Thông tin Sách -->
+                            <div class="flex-1">
+                                <div class="flex flex-col justify-between h-full">
+                                    <div class="flex flex-col gap-3">
+                                        <!-- Tiêu đề sách -->
+                                        <h4 class="hidden sm:block text-base font-semibold pr-8">책 제목 책</h4>
+                                        <!-- Giá và Giảm giá -->
+                                        <div class="flex items-baseline">
+                                            <span class="inline-block text-sm font-semibold text-red-500">10%</span>
+                                            <span class="ml-1">
+                                                <span class="inline-block text-sm font-semibold">12,000</span><span
+                                                    class="inline-block text-sm font-normal">원</span>
+                                            </span>
+                                            <span
+                                                class="inline-block text-sm line-through font-normal text-gray-400 ml-3">12,000원</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Bộ điều khiển số lượng và Giá tổng cộng -->
+                                    <div class="flex flex-col-reverse justify-start gap-3 sm:gap-0 sm:flex-row sm:items-center sm:space-x-4">
+                                        <!-- Điều khiển số lượng -->
+                                        <div class="scope-change-quantity flex items-center space-x-4 p-1 border rounded" style="width: fit-content;">
+                                            <button
+                                                class="xy-30-px flex items-center justify-center bg-gray-100 rounded">-</button>
+                                            <input type="number" min="1" class="w-12 text-center outline-none" value="000" />
+                                            <button
+                                                class="xy-30-px flex items-center justify-center bg-gray-100 rounded">+</button>
+                                        </div>
+
+                                        <!-- Giá tổng cộng -->
+                                        <div class="flex items-center gap-0.5">
+                                            <span class="text-money text-1624-2230 font-semibold">12,000</span>
+                                            <span class="text-sm font-normal">원</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Nút đóng -->
+                        <button class="absolute top-0 right-0 cursor-pointer" onclick="toggle('#modal-delete-book-item')">
+                            <img class="w-6 h-6" src="../assets/images/icon/common/x.svg" alt="icon">
+                        </button>
+                    </div>
+                `
             })
-        })
+            document.querySelector('#list-book').innerHTML = stringHTMl;
+        }
+        // renderListBook()
 
-        function changePass() {
-            if (frameNewPass.querySelector('input').value !== frameCfNewPass.querySelector('input').value) {
-                frameCfNewPass.querySelector('p').classList.remove('hidden')
-                frameCfNewPass.querySelector('div').classList.add('border-red-500')
+        function toggleAccordion(thisEl,acId) {
+            const radioAc = document.getElementById(`radio-${acId}`)
+            const iconAc = document.getElementById(`icon-${acId}`)
+            const ac = document.getElementById(acId)
+
+            radioAc.checked = !radioAc.checked
+            if (radioAc.checked) {
+                iconAc.classList.add('fa-chevron-up')
+                iconAc.classList.remove('fa-chevron-down')
+
+                ac.classList.remove('hidden')
+                thisEl.classList.add('border-b')
             } else {
-                frameCfNewPass.querySelector('p').classList.add('hidden')
-                frameCfNewPass.querySelector('div').classList.remove('border-red-500')
-                toggle('#modal-pass')
-                iPass.value = ''
-                btnPass.classList.add('text-gray-400', 'cursor-default')
-                btnPass.classList.remove('text-blue-500', 'border-blue-500', 'cursor-pointer') 
-            }
+                iconAc.classList.add('fa-chevron-down')
+                iconAc.classList.remove('fa-chevron-up')
+
+                ac.classList.add('hidden')
+                thisEl.classList.remove('border-b')
+            }    
         }
 
-        function changeGen(btn) {
-            document.querySelectorAll('.btn-gen').forEach((item) => {
-                item.classList.remove('text-blue-500', 'bg-blue-100', 'border-blue-500')
-            })
-            btn.classList.add('text-blue-500', 'bg-blue-100', 'border-blue-500')
+        function togglePopup() {
+            document.getElementById('popup').classList.toggle('hidden');
         }
 
-        const framePhone = document.querySelector('#frame-phone')
-        framePhone.querySelector('input').addEventListener('input', () => {
-            framePhone.querySelector('input').value = framePhone.querySelector('input').value.replace(/[^0-9]/g, '')
-            if (framePhone.querySelector('input').value.length > 0) {                
-                framePhone.querySelector('button').classList.remove('text-gray-400', 'cursor-default')
-                framePhone.querySelector('button').classList.add('text-blue-500', 'border-blue-500', 'cursor-pointer')
-            } else {
-                framePhone.querySelector('button').classList.add('text-gray-400', 'cursor-default')
-                framePhone.querySelector('button').classList.remove('text-blue-500', 'border-blue-500', 'cursor-pointer')
-            }
-        })
-        framePhone.querySelector('button').addEventListener('click', () => {
-            toggle('#modal-otp')
-            framePhone.querySelector('input').value = ''
-            framePhone.querySelector('button').classList.add('text-gray-400', 'cursor-default')
-            framePhone.querySelector('button').classList.remove('text-blue-500', 'border-blue-500', 'cursor-pointer')
-        })
-        document.querySelector('#btn-clear-otp').addEventListener('click', () => {
-            document.querySelector('#input-otp').value = ''
-        })
-        document.querySelector('#input-otp').addEventListener('input', () => {
-            if (document.querySelector('#input-otp').value.length > 0) {
-                document.querySelector('#btn-submit-otp').classList.add('bg-blue-50', 'text-blue-500', 'border-blue-500')                
-            } else {
-                document.querySelector('#btn-submit-otp').classList.remove('bg-blue-50', 'text-blue-500', 'border-blue-500')
-            }
-        })
-
-        document.querySelector('#frame-mail').querySelectorAll('input').forEach(input => {
-            input.addEventListener('input', () => {
-                if (document.querySelector('#input-f-mail').value.length > 0 && document.querySelector('#input-l-mail').value.length >= 2) {
-                    document.querySelector('#frame-mail').querySelector('button').classList.remove('text-gray-400', 'cursor-default')
-                    document.querySelector('#frame-mail').querySelector('button').classList.add('text-blue-500', 'border-blue-500', 'cursor-pointer')
-                } else {
-                    document.querySelector('#frame-mail').querySelector('button').classList.add('text-gray-400', 'cursor-default')
-                    document.querySelector('#frame-mail').querySelector('button').classList.remove('text-blue-500', 'border-blue-500', 'cursor-pointer')
-                }
-            })
-        });
-        document.querySelector('#frame-mail').querySelector('button').addEventListener('click', () => {
-            document.querySelector('#input-f-mail').value = ''
-            document.querySelector('#input-l-mail').value = ''
-            document.querySelector('#frame-mail').querySelector('button').classList.add('text-gray-400', 'cursor-default')
-            document.querySelector('#frame-mail').querySelector('button').classList.remove('text-blue-500', 'border-blue-500', 'cursor-pointer')
-        })
-
-        document.querySelector('#frame-re-enter-pass i').addEventListener('click', () => {
-            const inputPass =  document.querySelector('#frame-re-enter-pass input')
-            // document.querySelector('#frame-re-enter-pass input').type = ''
-            if (inputPass.type === 'password') {
-                inputPass.type = 'text'
-                document.querySelector('#frame-re-enter-pass i').classList.remove('fa-eye-slash')
-                document.querySelector('#frame-re-enter-pass i').classList.add('fa-eye')
-            } else {
-                inputPass.type = 'password'
-                document.querySelector('#frame-re-enter-pass i').classList.add('fa-eye-slash')
-                document.querySelector('#frame-re-enter-pass i').classList.remove('fa-eye')
-            }
-        })
-        function reEnterPass() {
-            const inputPass =  document.querySelector('#frame-re-enter-pass input')
-            if (inputPass.value !== '000000') {
-                document.querySelector('#frame-re-enter-pass div').classList.add('border-red-500')
-                document.querySelector('#frame-re-enter-pass p').classList.remove('hidden')
-            } else {
-                document.querySelector('#frame-re-enter-pass div').classList.remove('border-red-500')
-                document.querySelector('#frame-re-enter-pass p').classList.add('hidden')
-                toggle('#modal-re-enter-pass')
-                document.querySelector('#content-info').classList.remove('hidden')
-            }
+    
+        function likeBook(btn) {
+            btn.querySelector('i').classList.toggle('text-red-500')
+            btn.querySelector('i').classList.toggle('text-white')
         }
+
     </script>
 </body>
+
 </html>
