@@ -688,7 +688,7 @@
                                 <span class="inline-block text-1420-1522 font-normal">도착 예정</span>
                             </div>
                             <button class="hidden sm:block px-3 py-1.5 text-13-l-18 font-semibold text-white rounded"
-                                style="background-color: rgba(46, 47, 51, 0.88);"  onclick="togglePopup()">예정일 안내 정책</button>
+                                style="background-color: rgba(46, 47, 51, 0.88);"  onclick="toggle('#modal-expected-date')">예정일 안내 정책</button>
                             <img class="w-6 h-6 block sm:hidden" src="../assets/images/icon/cart/round-full-sxcl.svg"
                                 alt="icon">
                         </div>
@@ -1221,7 +1221,7 @@
                 <p class="text-center text-xs font-normal text-gray-400">
                     결제 후 해당 상품은 배송지로 묶음배송됩니다.
                 </p>
-                <button
+                <button onclick="toggle('#modal-deduction')"
                     class="text-13-l-18 py-1.5 font-semibold w-full bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200">
                     도서소득공제 안내
                 </button>
@@ -1232,6 +1232,158 @@
                 onclick="gotoPage('./CO-or-order-step-0.html')">
                 확인
             </button>
+        </div>
+    </div>
+
+    <div id="modal-deduction" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+        <!-- Modal Box -->
+        <div class="bg-white rounded-lg shadow-lg w-full max-w-xl p-6 flex flex-col gap-y-6 custom-scroll" style="height: 630px; overflow-y: scroll;">
+            <div class="flex items-center justify-between">
+                <h3 class="text-2028-2230 font-semibold">도서소득공제 안내</h3>
+                <img onclick="toggle('#modal-deduction')" class="w-6 h-6 cursor-pointer" src="../assets/images/icon/common/x.svg" alt="x">
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="text-base font-semibold">도서 소득공제란?</h4>
+
+                <ul class="list-disc pl-6 space-y-2">
+                    <li class="text-15-l-22 font-normal text-gray-600">2018년 7월 1일 부터 근로소득자가 신용카드 등으로 도서·공연 구입을 위해 사용한 금액이 추가 공제됩니다.</li>
+                    <li class="text-15-l-22 font-normal text-gray-600">총 급여 7,000만 원 이하 근로소득자 중 신용카드, 직불카드 등 사용액이 총 급여의 25%가 넘는 사람에게 적용</li>
+                    <li class="text-15-l-22 font-normal text-gray-600">현재 ‘신용카드 등 사용금액’의 소득 공제한도는 300만 원이고 신용카드사용액의공제율은 15%이지만, 도서·공연 사용분은 추가로 100만 원의 소득 공제한도가 인정되고 공제율은 30%로 적용</li>
+                    <li class="text-15-l-22 font-normal text-gray-600">시행시기 이후 도서·공연 사용액에 대해서는 “2018년 귀속 근로소득 연말 정산” 시기(19.1.15~)에 국세청 홈택스 연말정산간소화 서비스 제공</li>
+                </ul>
+            </div>
+
+
+            <div class="space-y-4">
+                <h4 class="text-base font-semibold">도서 소득공제 대상</h4>
+
+                <div class="space-y-2">
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li class="text-15-l-22 font-normal text-gray-600">도서(국내도서-ISBN 코드 서적), eBook(구매)</li>
+                        <li class="text-15-l-22 font-normal text-gray-600">도서 소득공제 대상 상품에 수반되는 국내 배송비 (해외 배송비 제외)</li>
+                    </ul>
+
+                    <div class="pl-2 space-y-2">
+                        <p class="text-13-l-18 font-normal text-gray-400">* 제외상품 : 음반, DVD, 성물, 뮤직/동영상</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="text-base font-semibold">도서 소득공제 가능 결제수단</h4>
+
+                <div class="space-y-2">
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li class="text-15-l-22 font-normal text-gray-600">카드결제: 신용카드(법인카드 불가), 제휴신용카드</li>
+                        <li class="text-15-l-22 font-normal text-gray-600">현금결제: 실시간계좌이체, 온라인입금, 예치금, 바오로딸 상품권</li>
+                        <li class="text-15-l-22 font-normal text-gray-600">간편결제: 카카오페이, 삼성페이, 페이나우</li>
+                    </ul>
+
+                    <div class="pl-2 space-y-2">
+                        <p class="text-13-l-18 font-normal text-gray-400">* 현금결제는 현금영수증을 개인소득공제용으로 신청 시에만 도서 소득공제 됩니다.</p>
+                        <p class="text-13-l-18 font-normal text-gray-400">* 휴대폰 결제는 도서 소득공제 불가합니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="text-base font-semibold">부분 취소/반품 안내</h4>
+
+                <div class="space-y-2">
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li class="text-15-l-22 font-normal text-gray-600">대상상품 + 제외상품을 주문하여 신용카드 "2회 결제하기"를 선택 한 경우,부분취소 / 반품 시 예치금으로 환원됩니다.</li>
+                    </ul>
+
+                    <div class="pl-2 space-y-2">
+                        <p class="text-13-l-18 font-normal text-gray-400">(신용카드 결제 후 예치금으로 환원 된 경우 승인취소 되지 않습니다.)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="text-base font-semibold">도서 소득공제 불가 안내</h4>
+
+                <div class="space-y-2">
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li class="text-15-l-22 font-normal text-gray-600">법인카드로 결제 한 경우</li>
+                        <li class="text-15-l-22 font-normal text-gray-600">현금영수증을 사업자증빙용으로 신청 한 경우</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="space-y-2">
+                <p class="text-15-l-22 font-normal text-gray-600">※ 추가 궁금한 사항은 아래 링크를 통해서 확인하실 수 있습니다.</p>
+                <p class="text-15-l-22 font-normal text-gray-600 underline">도서ㆍ공연비 소득공제 시행 자료집 보기</p>
+                <p class="text-15-l-22 font-normal text-gray-600 underline">관련 기사 보기</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="modal-expected-date" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+        <div class="rounded-lg shadow-lg w-full max-w-xl p-8 bg-white">
+            <div class="flex flex-col gap-y-6">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-2028-2230 font-semibold">예정일 안내 정책</h3>
+                    <img onclick="toggle('#modal-expected-date')" class="w-6 h-6 cursor-pointer" src="../assets/images/icon/common/x.svg" alt="x">
+                </div>
+    
+                <div>
+                    <p class="text-15-l-22 font-normal text-gray-600">도착예정일은 출고예정일에서 택배사의 배송일(2~3일)이 더해진 날이며 연휴와 주말(토,일), 공휴일과 성바오로딸수도회 고유 휴일을 제외한 근무일 기준입니다.</p>
+                </div>
+
+                <div>
+                    <table class="table-fixed w-full border-collapse">
+                        <thead>
+                            <tr style="background-color: rgba(255, 249, 237, 1);">
+                                <th class="w-1/3 text-15-l-22 font-semibold text-center py-2">출고 예정일</th>
+                                <th class="w-1/3 text-15-l-22 font-semibold text-center py-2">도착 예정일</th>
+                                <th class="w-1/3 text-15-l-22 font-semibold text-center py-2">비고</th>
+                            </tr>
+                        </thead>
+                        <tbody class="border-b">
+                            <tr>
+                                <td class="border-b text-15-l-22 font-normal py-1.5 text-center">1일 이내</td>
+                                <td class="border-b text-15-l-22 font-normal py-1.5 text-center">3~4일 이내</td>
+                                <td rowspan="4" class="border-b text-15-l-22 font-normal py-1.5 text-center">
+                                    연휴와 토, 일, 공휴일 <br>
+                                    성바오로딸수도회 <br>
+                                    고유 휴일 제외
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-b text-15-l-22 font-normal py-1.5 text-center">2일 이내</td>
+                                <td class="border-b text-15-l-22 font-normal py-1.5 text-center">4~5일 이내</td>
+                            </tr>
+                            <tr>
+                                <td class="border-b text-15-l-22 font-normal py-1.5 text-center">3일 이내</td>
+                                <td class="border-b text-15-l-22 font-normal py-1.5 text-center">5~6일 이내</td>
+                            </tr>
+                            <tr>
+                                <td class="border-b text-15-l-22 font-normal py-1.5 text-center">기타</td>
+                                <td class="border-b text-15-l-22 font-normal py-1.5 text-center">7~10일 이내</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-base font-semibold text-red-500">유의하세요!</h4>
+                    <p class="text-15-l-22 font-normal text-gray-600">일부 상품 품절 시 도착예정일이 늦어질 수 있습니다.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-base font-semibold">기타 배송지역에 대한 도착예정일입니다.</h4>
+
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li class="text-15-l-22 font-normal text-gray-600">수도권 지역: 출고예정일+2일</li>
+                        <li class="text-15-l-22 font-normal text-gray-600">수도권 외 지역 배송: 출고예정일+3일</li>
+                        <li class="text-15-l-22 font-normal text-gray-600">도서지역: 출고예정일+4일</li>
+                        <li class="text-15-l-22 font-normal text-gray-600">해외배송: 출고예정일+특급우편(EMS) 4-15일/일반항공 7-25일/선박 2-6개월</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
     <!-- ----------------------------------------------------------------------------------------------------------- -->
