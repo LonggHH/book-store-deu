@@ -543,34 +543,37 @@
         </div>
     </section>
 
-    <footer class="py-6 mb-16">
+    <footer class="py-6">
         <div class="container-layout px-5 sm:px-0 flex justify-between flex-col sm:flex-row mobi-px">
             <div>
-                <div class="text-base font-medium">고객센터</div>
+                <div class="text-base font-medium cursor-pointer" onclick="gotoPage('./CS-cc-main.html')">고객센터</div>
                 <div class="my-3">
                     <h2 class="text-2xl font-bold mb-4">02-944-0807</h2>
                     <div class="flex flex-col gap-1">
                         <p class="font-normal text-13-l-18"><span>상당시간</span> <span
-                                style="color: rgba(46, 47, 51, 0.88);">9:00~18:000</span></p>
+                                style="color: rgba(46, 47, 51, 0.88);">9:00~18:00</span></p>
                         <p class="font-normal text-13-l-18"><span>점심시간</span> <span>12:30~13:30</span></p>
                         <p class="font-normal text-13-l-18">토, 일, 공휴일 휴무</p>
                     </div>
                 </div>
-                <div class="font-semibold text-13-l-18 py-1.5 text-center text-white rounded hidden sm:block"
-                    style="background-color: rgba(46, 47, 51, 0.88);">1:1 문의</div>
+                <div class="font-semibold text-13-l-18 py-1.5 text-center text-white rounded hidden sm:block cursor-pointer"
+                    style="background-color: rgba(46, 47, 51, 0.88);" onclick="gotoPage('./CS-11-inquiry.html')" >1:1 문의</div>
             </div>
             <!--  -->
             <div class="sm:px-2 sm:mx-2 md:px-16 md:mx-16 border-r border-l hidden sm:flex sm:flex-col">
                 <div class="text-base font-medium mb-3">은행계좌 안내</div>
                 <div class="mb-2">
-                    <p class="mb-1 text-lg font-semibold">
-                        <span class="text-13-l-18 font-normal">농협</span> 171104-51-006966
+                    <p class="mb-1 text-lg font-semibold flex items-center flex-wrap">
+                        <span class="inline-block sm:w-14 text-13-l-18 font-normal">농협</span> <span class="inline-block text-lg font-semibold">171104-51-006966</span>
                     </p>
-                    <p class="mb-1 text-lg font-semibold">
-                        <span class="text-13-l-18 font-normal">국민은행</span> 017037-04-000844
+                    <p class="mb-1 text-lg font-semibold flex items-center flex-wrap">
+                        <span class="inline-block sm:w-14 text-13-l-18 font-normal">국민은행</span> <span class="inline-block text-lg font-semibold">017037-04-000844</span>
+                    </p>
+                    <p class="mb-1 flex items-center flex-wrap">
+                        <span class="inline-block sm:w-14 text-13-l-18 font-normal">예금주</span> <span class="inline-block text-13-l-18 font-normal">재단법인 천주교 성바오로딸수도회</span>
                     </p>
                 </div>
-                <div class="text-13-l-18 font-normal">예금주 : 재단법인 천주교 성바오로딸수도회</div>
+                <!-- <div class="text-13-l-18 font-normal">예금주 : 재단법인 천주교 성바오로딸수도회</div> -->
             </div>
             <!--  -->
             <div class="hidden sm:block">
@@ -578,7 +581,7 @@
                 <div>
                     <div class="grid grid-cols-3 gap-6">
                         <div>
-                            <h2 class="text-13-l-18 font-medium py-1 px-2">혜화나무</h2>
+                            <h2 class="text-13-l-18 font-medium py-1 px-2 cursor-pointer" onclick="gotoPage('./CS-m-national.html')">알베리오네센터</h2>
                             <ul class="space-y-2 text-13-l-18 font-normal">
                                 <li class="py-1 px-2">광주</li>
                                 <li class="py-1 px-2">부산</li>
@@ -588,7 +591,7 @@
                         </div>
 
                         <div>
-                            <h2 class="text-13-l-18 font-medium py-1 px-2">알베리오네센터</h2>
+                            <h2 class="text-13-l-18 font-medium py-1 px-2 cursor-pointer" onclick="gotoPage('./CS-m-national.html')">혜화나무</h2>
                             <ul class="space-y-2 text-13-l-18 font-normal">
                                 <li class="py-1 px-2">대구</li>
                                 <li class="py-1 px-2">분당</li>
@@ -598,7 +601,7 @@
                         </div>
 
                         <div>
-                            <h2 class="text-13-l-18 font-medium py-1 px-2">명동 가톨릭 회관</h2>
+                            <h2 class="text-13-l-18 font-medium py-1 px-2 cursor-pointer" onclick="gotoPage('./CS-m-national.html')">명동 가톨릭 회관</h2>
                             <ul class="space-y-2 text-13-l-18 font-normal">
                                 <li class="py-1 px-2">대전</li>
                                 <li class="py-1 px-2">수원</li>
@@ -613,15 +616,14 @@
             <div class="block sm:hidden">
                 <div class="flex gap-3 items-center">
                     <ul class="flex gap-1.5">
-                        <li> <img src="../assets/images/icon/footer/chat.svg" alt="icon"> </li>
-                        <li> <img src="../assets/images/icon/footer/instagram.svg" alt="icon"> </li>
-                        <li> <img src="../assets/images/icon/footer/youtube.svg" alt="icon"> </li>
+                        <li class="cursor-pointer"> <img src="../assets/images/icon/footer/chat.svg" alt="icon"> </li>
+                        <li class="cursor-pointer"> <img src="../assets/images/icon/footer/instagram.svg" alt="icon"> </li>
+                        <li class="cursor-pointer"> <img src="../assets/images/icon/footer/youtube.svg" alt="icon"> </li>
                     </ul>
                     <div>
                         <select class="py-2.5 px-4 border rounded-lg">
                             <option value="패밀리 사이트">패밀리 사이트</option>
-                            <option value="123 456">123 456</option>
-                            <option value="abc xyz">abc xyz</option>
+                            <option value="예시">예시 - 1</option>                            
                         </select>
                     </div>
                 </div>
@@ -636,11 +638,11 @@
         <div class="flex justify-center sm:hidden border-b">
             <ul class="flex">
                 <li class="py-2.5 px-4"> <a class="text-sm font-medium whitespace-nowrap"
-                        style="color: rgba(46, 47, 51, 0.88);" href="#">출판사 소개</a> </li>
+                        style="color: rgba(46, 47, 51, 0.88);" href="./CS-m-introduction.html">출판사 소개</a> </li>
                 <li class="py-2.5 px-4"> <a class="text-sm font-medium whitespace-nowrap"
-                        style="color: rgba(46, 47, 51, 0.88);" href="#">이용약관</a> </li>
+                        style="color: rgba(46, 47, 51, 0.88);" href="./CS-m-term.html">이용약관</a> </li>
                 <li class="py-2.5 px-4"> <a class="text-sm font-medium whitespace-nowrap"
-                        style="color: rgba(46, 47, 51, 0.88);" href="#">개인정보 취급방법</a> </li>
+                        style="color: rgba(46, 47, 51, 0.88);" href="./CS-cc-main.html">개인정보 취급방법</a> </li>
             </ul>
         </div>
 
@@ -655,26 +657,24 @@
                 <div class="hidden sm:flex justify-between items-center">
                     <ul class="flex">
                         <li class="p-2.5"> <a class="text-base font-medium whitespace-nowrap"
-                                style="color: rgba(46, 47, 51, 0.88);" href="#">출판사 소개</a> </li>
+                                style="color: rgba(46, 47, 51, 0.88);" href="./CS-m-introduction.html">출판사 소개</a> </li>
                         <li class="p-2.5"> <a class="text-base font-medium whitespace-nowrap"
-                                style="color: rgba(46, 47, 51, 0.88);" href="#">이용약관</a> </li>
+                                style="color: rgba(46, 47, 51, 0.88);" href="./CS-m-term.html">이용약관</a> </li>
                         <li class="p-2.5"> <a class="text-base font-medium whitespace-nowrap"
-                                style="color: rgba(46, 47, 51, 0.88);" href="#">개인정보 취급방법</a> </li>
+                                style="color: rgba(46, 47, 51, 0.88);" href="./CS-cc-main.html">개인정보 취급방법</a> </li>
                         <li class="p-2.5"> <a class="text-base font-medium whitespace-nowrap"
-                                style="color: rgba(46, 47, 51, 0.88);" href="#">고객센터</a> </li>
+                                style="color: rgba(46, 47, 51, 0.88);" href="./CS-cc-main.html">고객센터</a> </li>
                     </ul>
 
                     <div class="gap-3 items-center hidden sm:flex">
                         <ul class="flex gap-1.5">
-                            <li> <img src="../assets/images/icon/footer/chat.svg" alt="icon"> </li>
-                            <li> <img src="../assets/images/icon/footer/instagram.svg" alt="icon"> </li>
-                            <li> <img src="../assets/images/icon/footer/youtube.svg" alt="icon"> </li>
+                            <li class="cursor-pointer"> <img src="../assets/images/icon/footer/chat.svg" alt="icon"> </li>
+                            <li class="cursor-pointer"> <img src="../assets/images/icon/footer/instagram.svg" alt="icon"> </li>
+                            <li class="cursor-pointer"> <img src="../assets/images/icon/footer/youtube.svg" alt="icon"> </li>
                         </ul>
                         <div>
                             <select class="py-2.5 px-4 border rounded-lg">
                                 <option value="패밀리 사이트">패밀리 사이트</option>
-                                <option value="123 456">123 456</option>
-                                <option value="abc xyz">abc xyz</option>
                             </select>
                         </div>
                     </div>

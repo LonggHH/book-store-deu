@@ -3,6 +3,11 @@
   height: 250px;
 }
 
+.frame-size-80134-164250 {
+  width: 164px;
+  height: 250px;
+}
+
 .frame-main-size {
   max-width: 940px;
 }
@@ -17,5 +22,10 @@
   .frame-size-140190-164250 {
     width: 140px;
     height: 190px;
+  }
+
+  .frame-size-80134-164250 {
+    width: 80px;
+    height: 134px;
   }
 }

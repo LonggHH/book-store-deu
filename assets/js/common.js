@@ -41,14 +41,25 @@ function renderHeaderCategory(listData) {
 const btnToggleMenuL = document.querySelector('#btn-toggle-menu-l');
 const btnToggleMenuM = document.querySelector('#btn-toggle-menu-m');
 const toggleMenu = document.querySelector('#toggle-menu');
+const contentToggleMenu = document.querySelector('#content-toggle-menu');
 let isOpen = false;
 
-btnToggleMenuL.addEventListener('click', () => {
+btnToggleMenuL.addEventListener('click', (event) => {
+    event.stopPropagation()
     btnToggleMenuL.src = isOpen ? "../assets/images/icon/header/home-hbg-menu.svg" : "../assets/images/icon/header/menu-x.svg"
     isOpen = !isOpen;
     toggleMenu.classList.toggle('hidden')
 })
-btnToggleMenuM.addEventListener('click', () => {            
+btnToggleMenuM.addEventListener('click', () => {
+    event.stopPropagation()          
     isOpen = !isOpen;
     toggleMenu.classList.toggle('hidden')
 })
+
+document.addEventListener('click', (event) => {
+    if (!contentToggleMenu.contains(event.target) && !toggleMenu.classList.contains('hidden')) {
+        btnToggleMenuL.src = isOpen ? "../assets/images/icon/header/home-hbg-menu.svg" : "../assets/images/icon/header/menu-x.svg"
+        isOpen = !isOpen;
+        toggleMenu.classList.add('hidden');
+    }
+});

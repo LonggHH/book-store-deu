@@ -1,0 +1,70 @@
+.pika-single {
+  border-radius: 6px;
+  border: 1px solid;
+  border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+}
+
+.pika-lendar {
+  margin: 0;
+  width: 284px;
+}
+
+.pika-title {
+  line-height: 48px;
+  height: 48px;
+  background-color: rgba(247, 247, 248, 1);
+  padding: 0 40px;
+}
+
+.pika-label {
+  background-color: rgba(247, 247, 248, 1);
+  height: 100%;
+  align-content: center;
+}
+
+.pika-label select {
+  height: 100%;
+}
+
+.pika-title button {
+  margin-top: 9px;
+}
+.pika-title button {
+  margin-top: 9px;
+}
+
+.pika-button {
+  background-color: white;
+}
+
+.pika-table {
+  margin: 12px 0;
+}
+
+.pika-table th abbr {
+  text-decoration: none !important;
+}
+
+.pika-table td button {
+  text-align: center;
+}
+
+.is-selected .pika-button {
+  background-color: rgba(32, 131, 254, 1) !important;
+  color: white;
+  border-radius: 999px;
+}
+
+.is-today .pika-button {
+  background-color: rgb(180, 206, 237);
+  color: white;
+  border-radius: 999px;
+}
+
+.hover-text-white:hover {
+  color: white !important;
+}
+
+.pika-button {
+  margin: 3px 0;
+}
