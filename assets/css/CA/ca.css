@@ -12,9 +12,41 @@
   max-width: 940px;
 }
 
+.frame-size-full-300 {
+  width: 300px;
+}
+
+.frame-size-full-456 {
+  width: 456px;
+}
+
+ 
+.custom-input-range::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 50%;
+  background: #3b82f6;
+  cursor: pointer !important;
+}
+
+
 @media (max-width: 1024px) {
   .frame-main-size {
     overflow-x: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .frame-size-full-300 {
+    width: 100%;
+    max-width: 360px;
+  }
+  
+  .frame-size-full-456 {
+    width: 100%;
+    max-width: 360px;
   }
 }
 

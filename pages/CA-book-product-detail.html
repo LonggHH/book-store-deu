@@ -525,7 +525,7 @@
 
                                 <div class="py-4  border-t border-b">
                                     <div class="flex items-center gap-x-0 sm:gap-x-1 py-2 ">
-                                        <button class="flex-1 flex items-center justify-center gap-x-1">
+                                        <button onclick="toggle('#modal-pre-book')" class="flex-1 flex items-center justify-center gap-x-1">
                                             <span class="hidden sm:inline-block text-15-l-24 font-medium whitespace-nowrap">미리보기</span>
                                             <img src="../assets/images/icon/category/middle-preview.svg" alt="preview">
                                         </button>
@@ -1453,6 +1453,224 @@
         </div>
     </section>
 
+    <!-- pre book -->
+    <section id="modal-pre-book" class="overflow-y-auto fixed top-0 left-0 w-screen min-h-screen flex items-center justify-center hidden" style="background-color: rgba(0, 0, 0, .3); z-index: 55;">
+        <div class="w-full h-screen overflow-y-auto overflow-x-auto custom-scroll" style="max-width: 1240px;">
+            <div>
+                <div class="bg-white">
+                    <div class="sm:hidden py-4 px-5 bg-black">
+                        <div class="overflow-x-auto" style="min-width: 320px;">
+                            <ul class="flex items-center gap-x-3 overflow-x-auto">
+                                <li class="w-14 h-20 bg-gray-400"></li>
+                                <li class="w-14 h-20 bg-gray-400"></li>
+                                <li class="w-14 h-20 bg-gray-400"></li>
+                                <li class="w-14 h-20 bg-gray-400"></li>
+                                <li class="w-14 h-20 bg-gray-400"></li>
+                                <li class="w-14 h-20 bg-gray-400"></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="flex items-stretch justify-center gap-x-10 lg:gap-x-5 bg-white sm:py-10">
+                        <div class="hidden sm:flex items-center justify-center">
+                            <button class="pre-book-prev">
+                                <img src="/assets/images/image/media/slide-prev.png" alt="">
+                            </button>
+                        </div>
+
+                        <div class="flex-1 overflow-x-hidden flex" style="max-width: 1040px; height: 736px;">
+                            <div class="swiper preBookSwiper w-full">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide h-full w-full flex items-center justify-center" style="width: 100%; background-color: #292A2D;">
+                                        <div class="flex flex-col justify-center items-center gap-y-3">
+                                            <div>
+                                                <img src="/assets/images/image/media/book.png" alt="">
+                                            </div>
+        
+                                            <p class="text-center text-white text-base font-semibold">
+                                                <span class="inline-block" style="color: #EE1762;" >바오로딸</span> 은 한 줄을 읽어도 <br>
+                                                마음에 힘이 되는 책을 만듭니다.
+                                            </p>
+                                        </div>
+                                    </div>
+        
+                                    <div class="swiper-slide h-full w-full flex items-center justify-center" style="width: 100%; background-color: #C7C7C7;">
+                                        1
+                                    </div>
+        
+                                    <div class="swiper-slide h-full w-full flex items-center justify-center" style="width: 100%; background-color: #C7C7C7;">
+                                        2
+                                    </div>
+        
+                                    <div class="swiper-slide h-full w-full flex items-center justify-center" style="width: 100%; background-color: #C7C7C7;">
+                                        3
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hidden sm:flex items-center justify-center">
+                            <button class="pre-book-next">
+                                <img src="/assets/images/image/media/slide-next.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center justify-center px-5 sm:px-8 py-2.5 sm:py-6 lg:py-14" style="background-color: #F7F7F8;">
+                        <div class="max-w-5xl" style="width: 1024px;">
+                            <div class="hidden sm:flex lg:hidden justify-center mb-10">
+                                <div class="flex lg:hidden items-center gap-x-6">
+                                    <div class="flex items-center gap-x-3">
+                                        <div class="w-6 h-6 flex items-center justify-center overflow-hidden">
+                                            <img class="w-full h-full" src="/assets/images/image/media/book-previous.png" alt="">
+                                        </div>
+                                        <div class="w-6 h-6 pre-book-prev flex items-center justify-center overflow-hidden">
+                                            <img class="w-full h-full" src="/assets/images/image/media/book-arrow-left.png" alt="">
+                                        </div>
+                                    </div>
+                
+                                    <div class="flex items-center gap-x-2">
+                                        <span class="inline-block text-sm font-normal py-1.5 px-4 bg-white rounded-lg">01</span>
+                                        <span class="inline-block text-sm font-normal text-gray-500">/ 20</span>
+                                    </div>
+                
+                                    <div class="flex items-center gap-x-3">
+                                        <div class="w-6 h-6 pre-book-next flex items-center justify-center overflow-hidden">
+                                            <img class="w-full h-full" src="/assets/images/image/media/book-arrow-right.png" alt="">
+                                        </div>
+                                        <div class="w-6 h-6 flex items-center justify-center overflow-hidden">
+                                            <img class="w-full h-full" src="/assets/images/image/media/book-next.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="w-full flex flex-row items-center justify-between">
+                                <div class="hidden sm:block">
+                                    <ul class="flex items-center gap-x-2">
+                                        <li class="rounded-lg border py-3 w-24 flex flex-col items-center justify-center gap-y-1 bg-white">
+                                            <div class="w-6 h-6">
+                                                <img src="/assets/images/image/media/book-left.png" alt="">
+                                            </div>
+                
+                                            <p class="text-xs font-medium text-center">왼쪽 크게보기</p>
+                                        </li>
+                                        <li class="rounded-lg border py-3 w-24 flex flex-col items-center justify-center gap-y-1 bg-white">
+                                            <div class="w-6 h-6">
+                                                <img src="/assets/images/image/media/book-right.png" alt="">
+                                            </div>
+                
+                                            <p class="text-xs font-medium text-center">오른쪽 크게보기</p>
+                                        </li>
+                                        <li class="rounded-lg border py-3 w-24 flex flex-col items-center justify-center gap-y-1 bg-white">
+                                            <div class="w-6 h-6">
+                                                <img src="/assets/images/image/media/book-small.png" alt="">
+                                            </div>
+                
+                                            <p class="text-xs font-medium text-center">기본 보기</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                
+                                <div class="flex sm:hidden lg:flex items-center gap-x-3 sm:gap-x-6">
+                                    <div class="flex items-center gap-x-3">
+                                        <div class="w-6 h-6 hidden sm:flex items-center justify-center overflow-hidden">
+                                            <img class="w-full h-full" src="/assets/images/image/media/book-previous.png" alt="">
+                                        </div>
+                                        <div class="w-6 h-6 pre-book-prev flex items-center justify-center overflow-hidden">
+                                            <img class="w-full h-full" src="/assets/images/image/media/book-arrow-left.png" alt="">
+                                        </div>
+                                    </div>
+                
+                                    <div class="flex items-center gap-x-2">
+                                        <span class="inline-block text-sm font-normal py-1.5 px-4 bg-white rounded-lg">01</span>
+                                        <span class="inline-block text-sm font-normal text-gray-500">/ 20</span>
+                                    </div>
+                
+                                    <div class="flex items-center gap-x-3">
+                                        <div class="w-6 h-6 pre-book-next flex items-center justify-center overflow-hidden">
+                                            <img class="w-full h-full" src="/assets/images/image/media/book-arrow-right.png" alt="">
+                                        </div>
+                                        <div class="w-6 h-6 hidden sm:flex items-center justify-center overflow-hidden">
+                                            <img class="w-full h-full" src="/assets/images/image/media/book-next.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="flex items-center gap-x-3 ">
+                                    <button onclick="toggle('#modal-pre-book')" class="text-13-l-18 font-semibold text-white py-2.5 sm:py-1.5 px-3 rounded" style="background-color: #EE1762;">장바구니</button>
+                
+                                    <div onclick="toggle('#modal-help')" class="hidden sm:flex items-center gap-x-1 cursor-pointer">
+                                        <label for="" class="text-sm font-normal text-gray-500 cursor-pointer">도움말</label>
+                                        <img src="/assets/images/image/media/help.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- modal help -->
+    <section id="modal-help" class="overflow-y-auto fixed top-0 left-0 w-screen min-h-screen flex items-center justify-center hidden" style="background-color: rgba(0, 0, 0, .3); z-index: 60;">
+        <div class="" style="max-width: 560px; width: 560px;">
+            <div class="p-8 rounded-lg bg-white space-y-6">
+                <div class="flex items-center justify-between">
+                    <p class="text-22-l-30 font-semibold">도움말</p>
+
+                    <button onclick="toggle('#modal-help')" class="w-6 h-6 flex items-center justify-center">
+                        <i class="fa-solid fa-x text-base"></i>
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-3 gap-y-6">
+                    <div class="space-y-3">
+                        <h4 class="text-base font-semibold">페이지 이동</h4>
+                        <div class="rounded-lg flex items-center justify-center" style="background-color: #F7F7F8; height: 50px;">
+                            <img src="/assets/images/image/media/hd1.png" alt="">
+                        </div>
+                        <p class="text-xs font-normal text-gray-400">
+                            미리보기 하단에 있는 다음의 아이콘을 클릭하거나 책의 본문을 클릭하면 페이지가 이동됩니다.
+                        </p>
+                    </div>
+
+                    <div class="space-y-3">
+                        <h4 class="text-base font-semibold">페이지 확대</h4>
+                        <div class="rounded-lg flex items-center justify-center" style="background-color: #F7F7F8; height: 50px;">
+                            <img src="/assets/images/image/media/hd2.png" alt="">
+                        </div>
+                        <p class="text-xs font-normal text-gray-400">
+                            미리보기가 하단에 있는 다음의 버튼을 클릭하거나 확대하고 싶은 페이지 버튼을 클릭하면 페이지가 확대됩니다.
+                        </p>
+                    </div>
+
+                    <div class="space-y-3">
+                        <h4 class="text-base font-semibold">페이지 축소</h4>
+                        <div class="rounded-lg flex items-center justify-center" style="background-color: #F7F7F8; height: 50px;">
+                            <img src="/assets/images/image/media/hd3.png" alt="">
+                        </div>
+                        <p class="text-xs font-normal text-gray-400">
+                            페이지가 확대된 상태에서 미리보기 하단에 있는 다음의 버튼을 클릭하거나 확대된 페이지 위에 마우스를 올려놓고 마우스 오른쪽 버튼을 한번 클릭하면 페이지가 축소됩니다.
+                        </p>
+                    </div>
+
+                    <div class="space-y-3">
+                        <h4 class="text-base font-semibold">확대 화면에서 이동</h4>
+                        <div class="rounded-lg flex items-center justify-center" style="background-color: #F7F7F8; height: 50px;">
+                            <img src="/assets/images/image/media/hd4.png" alt="">
+                        </div>
+                        <p class="text-xs font-normal text-gray-400">
+                            확대된 페이지 위에 마우스를 올려놓고 마우스 왼쪽 버튼을 클릭한 상태에서 드래그 하시면 원하는 방향으로 이동할 수 있습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
     <!-- go to top -->
     <div class="fixed bottom-48 right-6 block sm:hidden z-50">
@@ -1920,6 +2138,28 @@
             }
         }
 
+        var swiper = new Swiper(".preBookSwiper", {
+            //   direction: "vertical",
+            slidesPerView: 2,
+            navigation: {
+                nextEl: ".pre-book-next",
+                prevEl: ".pre-book-prev",
+            },
+            breakpoints: {
+                // >= 640px
+                1024: {
+                    direction: "horizontal",
+                    slidesPerView: 2,
+                },
+                640: {
+                    direction: "vertical",
+                    slidesPerView: 1,
+                },
+                320: {
+                    slidesPerView: 1,
+                }
+            }
+        });
     </script>
 </body>
 

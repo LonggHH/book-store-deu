@@ -19,6 +19,7 @@
 
     <link rel="stylesheet" href="../assets/css/util.css">
     <link rel="stylesheet" href="../assets/css/CO/co.css">
+    <link rel="stylesheet" href="../assets/css/CA/ca.css">
 
     <style>
         .star:hover i,
@@ -517,7 +518,7 @@
 
                                 <div class="py-4  border-t border-b">
                                     <div class="flex items-center gap-x-0 sm:gap-x-1 py-2 ">
-                                        <button class="flex-1 flex items-center justify-center gap-x-1" onclick="gotoPage('./CA-dvd-product-detail-music.html')">
+                                        <button class="flex-1 flex items-center justify-center gap-x-1" onclick="toggle('#modal-pre-listen')">
                                             <span class="hidden sm:inline-block text-15-l-24 font-medium whitespace-nowrap">미리듣기</span>
                                             <div class="w-6 h-6">
                                                 <i class="fa-solid fa-headphones text-gray-300"></i>
@@ -1281,6 +1282,166 @@
         </div>
     </section>
 
+    <section id="modal-pre-listen" class="overflow-y-auto fixed top-0 left-0 w-screen h-screen flex items-center justify-center hidden" style="background-color: rgba(0, 0, 0, .3); ; z-index: 55;">
+        <div class="container-layout">
+            <div id="content-modal-pre-listen" class="flex items-stretch flex-col md:flex-row overflow-y-auto" >
+                <div class="flex md:hidden items-center justify-between py-1.5 px-4" style="background-color: #292A2D;">
+                    <span class="inline-block text-13-l-18 font-semibold text-white py-1.5 px-4">로그인하세요</span>
+                    <span class="inline-block text-13-l-18 font-semibold text-white py-1.5 px-4">현재 1분 미리듣기만 가능합니다.</span>
+                </div>
+
+                <div class="frame-size-full-300 py-8 px-5 flex flex-col gap-y-6" style="background-color: #7f3228;">
+                    <div class="flex flex-col gap-y-5">
+                        <div class="flex items-center justify-center">
+                            <img style="width: 170px; height: 170px;" src="/assets/images/image/media/pacem.jpg" alt="">
+                        </div>
+
+                        <div class="space-y-1.5">
+                            <p class="text-base font-semibold text-center text-white overflow-hidden whitespace-nowrap">하나님의 시간이 최상의 시간 Gottes Zeit ist die allerbeste Zeit, BWV 106 (Actus Tragicus) </p>
+                            <p class="text-sm font-normal text-white text-center">김헌재</p>
+                        </div>
+
+                        <div class="flex flex-col gap-y-1.5">
+                            <input id="sound-time" type="range" min="0" value="0" max="100"  class="w-full cursor-pointer" style="height: 2px;">
+
+                            <div class="flex items-center justify-between">
+                                <span class="inline-block font-normal" style="font-size: 11px; line-height: 14px; color: #FFF;">00:00</span>
+                                <span class="inline-block font-normal" style="font-size: 11px; line-height: 14px; color: #FFFFFF80;">01:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div id="shuffle" class="cursor-pointer">
+                                <img src="/assets/images/image/media/shuffle-off.png" alt="">
+                            </div>
+                            <div id="sound-previous" class="cursor-pointer">
+                                <img src="/assets/images/image/media/previous.png" alt="">
+                            </div>
+                            <div id="play-pause" class="cursor-pointer">
+                                <img src="/assets/images/image/media/pause.png" alt="">
+                            </div>
+                            <div id="sound-next" class="cursor-pointer">
+                                <img src="/assets/images/image/media/next.png" alt="">
+                            </div>
+                            <div id="repeate" class="cursor-pointer">
+                                <img src="/assets/images/image/media/repeate-music-off.png" alt="">
+                            </div>
+                        </div>
+
+                        <div>
+                            <div id="sound-scope" class="h-9 flex items-center">
+                                <img id="sound-op" class="block cursor-pointer" src="/assets/images/image/media/sound-op.png" alt="">
+
+                                <div id="sound-manage" class="block hidden px-2 sm:p-2 rounded-full sm:rounded-lg bg-white" style="width: 100px;">
+                                    <div class="flex items-center h-5">
+                                        <div id="sound" class="w-5 h-5 overflow-hidden cursor-pointer">
+                                            <img class="w-full h-full" src="/assets/images/image/media/volume-high.png" alt="">
+                                        </div>
+                                        <div class="flex-1 flex items-center px-2">
+                                            <input id="volume" min="0" max="100" value="20" type="range" class="w-full" style="height: 4px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="frame-size-full-456 relative bg-white overflow-hidden" >
+                    <div class="hidden md:flex items-center justify-between py-1.5 px-4" style="background-color: #292A2D;">
+                        <span class="inline-block text-13-l-18 font-semibold text-white py-1.5 px-4">로그인하세요</span>
+                        <span class="inline-block text-13-l-18 font-semibold text-white py-1.5 px-4">현재 1분 미리듣기만 가능합니다.</span>
+                    </div>
+                    <div class="bg-white relative w-full">
+                        <ul id="music-tabs" class="flex items-center text-center">
+                            <!-- <li class="flex-1 cursor-pointer text-base font-medium py-2" style="background-color: white ;color: black;">재생 목록</li>
+                            <li class="flex-1 cursor-pointer text-base font-medium py-2" style="background-color: #F7F7F8; color: #171719;">앨범 보기</li>
+                            <li class="flex-1 cursor-pointer text-base font-medium py-2" style="background-color: #F7F7F8; color: #171719;">가사 보기</li> -->
+                        </ul>
+
+                        <div class="h-full">
+                            <div class="h-full relative">
+                                <ul id="list-item-playlist" class="item-1 px-4 overflow-y-auto"></ul>
+
+                                <div class="item-2 hidden">
+                                    <div class="py-3 px-6 flex gap-x-3 border-b">
+                                        <div>
+                                            <div class="flex items-center justify-center" style="width: 72px; height: 72px;">
+                                                <img src="/assets/images/image/media/pacem.jpg" alt="">
+                                            </div>
+
+                                            <button onclick="toggle('#modal-pre-listen')" class="w-full py-1.5 px-3 rounded text-13-l-18 font-semibold text-center text-white" style="background-color: #EE1762;">
+                                                구매하기
+                                            </button>
+                                        </div>
+
+                                        <div class="flex-1 space-y-1">
+                                            <h4 class="text-sm font-medium">PACEM (평화) - 기도와 명상을 위한 음악7</h4>
+
+                                            <div class="space-y-1">
+                                                <div class="flex flex-col md:flex-row md:items-center gap-y-1 gap-x-5">
+                                                    <div class="flex items-center gap-x-3">
+                                                        <span class="inline-block text-xs font-normal text-gray-400 w-12">아티스트</span>
+                                                        <span class="inline-block text-xs font-normal text-gray-400 ">김헌재</span>
+                                                    </div>
+
+                                                    <div class="flex items-center gap-x-3">
+                                                        <span class="inline-block text-xs font-normal text-gray-400 w-12">대표장르</span>
+                                                        <span class="inline-block text-xs font-normal text-gray-400 ">명상</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="flex items-center gap-x-3">
+                                                    <span class="inline-block text-xs font-normal text-gray-400 w-12">발매일</span>
+                                                    <span class="inline-block text-xs font-normal text-gray-400 ">2019.06.28</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="pt-3 px-4 space-y-3 overflow-hidden md:max-h-60">
+                                        <h4 class="text-sm font-semibold">앨범 상세정보</h4>
+
+                                        <p class="text-sm font-normal"><주여, 다신 종이 - 바이올린의 기도>(2008), <주님 들으소서-오보에의 기도>(2008), <나의 위로자시여-첼로의 기도>(2009), <축복 있기를-트리오의 기도>(2012), <그대를 지켜주시리라-색소폰의 기도>(2013), <기쁨과 평화 가득히-플루트의 기도>(2016)에 이은 기도와 명상을 위한 음악 시리즈 일곱번째 음반.</p>
+
+                                        <p class="text-sm font-normal"><주여, 다신 종이 - 바이올린의 기도>(2008), <주님 들으소서-오보에의 기도>(2008), <나의 위로자시여-첼로의 기도>(2009), <축복 있기를-트리오의 기도>(2012), <그대를 지켜주시리라-색소폰의 기도>(2013), <기쁨과 평화 가득히-플루트의 기도>(2016)에 이은 기도와 명상을 위한 음악 시리즈 일곱번째 음반.</p>                                        
+                                    </div>
+                                </div>
+
+                                <div class="item-3 hidden px-4 py-3">
+                                    <p class="text-14-l-22 font-normal">왜 슬퍼하느냐 왜 걱정하느냐 <br>
+                                        무얼 두려워하느냐 아무 염려 말아라 <br>
+                                        큰 어려움에도 큰 아픔 있어요 <br>
+                                        이젠 아무 걱정하지 마 내가 널 뭍들어 주리 <br>
+                                        내가 너와 항상 함께 하리라 내가 너를 지키리라 <br>
+                                        실망치 말고 나를 보아라 나는 너의 하느님이라 <br>
+                                        <간주> <br>
+                                        왜 슬퍼하느냐 왜 걱정하느냐 <br>
+                                        무얼 두려워하느냐
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item-1 md:absolute bottom-0 w-full left-0 py-3 px-4 bg-gray-100 flex items-center gap-x-3">
+                        <div class="w-5 h-5 flex items-center justify-center">
+                            <input id="all-item-clear" type="checkbox" name="clear-playlist">
+                        </div>
+                        <div onclick="clearPlayList()" class="cursor-pointer py-1 px-1.5 rounded border flex items-center gap-x-0.5 bg-white">
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="fa-solid fa-x text-xs"></i>
+                            </div>
+                            <span class="inline-block text-13-l-18 font-semibold">삭제</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <aside style="height: 44px;"></aside>
 
     <!-- bot -->
@@ -1794,6 +1955,185 @@
             }
         }
 
+        const modalPreListen = document.querySelector('#modal-pre-listen')
+        const contentModalPreListen = document.querySelector('#content-modal-pre-listen')
+        let isSoundOn = true
+        const sound = document.querySelector('#sound')
+        const volume = document.querySelector('#volume')
+        const soundOp = document.querySelector('#sound-op')
+        const soundManage = document.querySelector('#sound-manage')
+        let isShuffle = false
+        const shuffleEl = document.querySelector('#shuffle')
+        const defRepeateStatus = {off: 'off', on: 'on', one: 'one'}
+        let repeateStatus = defRepeateStatus.off
+        const repeateEL = document.querySelector('#repeate')
+        let isPlay = false
+        const playPauseEl = document.querySelector('#play-pause')
+
+        modalPreListen.addEventListener('click', (e) => {
+            if (!contentModalPreListen.contains(e.target)) {
+                modalPreListen.classList.add('hidden')
+            }
+        });
+
+        sound.addEventListener('click',() => {
+            isSoundOn = !isSoundOn
+            if (isSoundOn) {
+                sound.querySelector('img').src = '/assets/images/image/media/volume-high.png'
+            } else {
+                volume.value = 0
+                sound.querySelector('img').src = '/assets/images/image/media/volume-cross.png'
+            }
+        })
+
+        soundOp.addEventListener('click', () => {
+            soundOp.classList.add('hidden')
+            soundManage.classList.remove('hidden')
+        })
+
+        soundManage.addEventListener('click', (event) => {
+            event.stopPropagation();
+        });
+        document.addEventListener('click', (event) => {
+            if (!soundOp.contains(event.target)) {
+                soundManage.classList.add('hidden')
+                soundOp.classList.remove('hidden')
+            }
+        });
+
+        const listPlayList = document.querySelector('#list-item-playlist')
+        let playlist = [
+            {id: 1, active: false},
+            {id: 2, active: false},
+            {id: 3, active: false},
+            {id: 4, active: false},
+            {id: 5, active: false},
+        ]
+
+        function renderPlayList() {
+            let stringHTML = ''
+            playlist.forEach((el, i) => {
+                stringHTML += 
+                `                 
+                    <li  class="item-playlist flex items-center gap-x-3 py-3 border-b">
+                        <div class="w-5 h-5 flex items-center justify-center">
+                            <input onclick='changeChoicePlaylist(event, ${i})' type="checkbox" name="playlist" ${el.active ? 'checked': ''}>
+                        </div>
+
+                        <div class="flex-1 space-y-1">
+                            <h4 class="text-sm font-semibold ${el.active ? 'text-blue-500' :''}">하나님의 시간이 최상의 시간</h4>
+                            <p class="text-xs font-normal ${el.active ? 'text-gray-400' : 'text-gray-400'}">김헌재</p>
+                        </div>
+                    </li>
+                `
+            })
+            listPlayList.innerHTML = stringHTML
+        }
+        renderPlayList()
+
+        function changeChoicePlaylist(e, index) {
+            e.stopPropagation()
+            e.stopImmediatePropagation()
+            playlist[index].active = !playlist[index].active
+            renderPlayList()
+        }
+
+        function clearPlayList() {
+            const clearAll = document.querySelector('#all-item-clear')
+            if (clearAll.checked) {
+                playlist = playlist.filter((item) => !item.active).map(item => ({...item, active: false}))
+                clearAll.checked = false
+                renderPlayList()
+            }
+        }
+
+        let indexMenuTabChoice = 0
+        function renderMenuTab() {
+            const items = ['재생 목록', '앨범 보기', '가사 보기'];
+            const stringHTML = items.map((value, i) => `
+                <li onclick="changeTabChoose(event,${i})" 
+                    class="flex-1 cursor-pointer text-base font-medium py-2"
+                    style="background-color: ${indexMenuTabChoice === i ? 'white' : '#F7F7F8'}; 
+                        color: ${indexMenuTabChoice === i ? 'black' : '#171719'};">
+                    ${value}
+                </li>
+            `).join('');
+            document.querySelector('#music-tabs').innerHTML = stringHTML
+        }
+        renderMenuTab()
+
+        function changeTabChoose(e,index) {
+            e.stopPropagation()
+            e.stopImmediatePropagation()
+
+            indexMenuTabChoice = index
+            renderMenuTab()
+
+            const elIndexTab1 = document.querySelectorAll(`.item-1`)
+            const elIndexTab2 = document.querySelectorAll(`.item-2`)
+            const elIndexTab3 = document.querySelectorAll(`.item-3`)
+
+            elIndexTab1.forEach((el) => {
+                el.classList.add('hidden')
+            })
+            elIndexTab2.forEach((el) => {
+                el.classList.add('hidden')
+            })
+            elIndexTab3.forEach((el) => {
+                el.classList.add('hidden')
+            })
+
+            document.querySelectorAll(`.item-${index+1}`).forEach((el) => {el.classList.remove('hidden')})
+        }
+
+        shuffleEl.addEventListener('click', () => {
+            isShuffle = !isShuffle
+            if (!isShuffle) {
+                shuffleEl.querySelector('img').src = '/assets/images/image/media/shuffle-off.png'
+            } else {
+                shuffleEl.querySelector('img').src = '/assets/images/image/media/shuffle-on.png'
+            }
+        })
+
+        repeateEL.addEventListener('click', () => {
+            const img = repeateEL.querySelector('img')
+
+            switch(repeateStatus) {
+                case (defRepeateStatus.off): {
+                    repeateStatus = defRepeateStatus.on
+                    img.src = '/assets/images/image/media/repeate-music-on.png'
+                    break
+                }
+                case (defRepeateStatus.on): {
+                    repeateStatus = defRepeateStatus.one
+                    img.src = '/assets/images/image/media/repeate-one.png'
+                    break
+                }
+                case (defRepeateStatus.one): {
+                    repeateStatus = defRepeateStatus.off
+                    img.src = '/assets/images/image/media/repeate-music-off.png'
+                    break
+                }
+            }
+        })
+
+        playPauseEl.addEventListener('click', () => {
+            isPlay = !isPlay
+            if (isPlay) {
+                playPauseEl.querySelector('img').src = '/assets/images/image/media/play.png'
+            } else {
+                playPauseEl.querySelector('img').src = '/assets/images/image/media/pause.png'
+            }
+        })
+
+        document.querySelector('#sound-scope').addEventListener('mouseover', () => {
+            soundOp.classList.add('hidden')
+            soundManage.classList.remove('hidden')
+        })
+        document.querySelector('#sound-scope').addEventListener('mouseout', () => {
+            soundOp.classList.remove('hidden')
+            soundManage.classList.add('hidden')
+        })
     </script>
 </body>
 
