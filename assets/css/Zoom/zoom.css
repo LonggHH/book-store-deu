@@ -1,0 +1,56 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Vùng hiển thị ảnh phóng to */
+.main-image {
+    position: relative;
+    /* Kích thước hiển thị ảnh lớn */
+    /* width: 600px; */
+    /* height: 400px; */
+    width: 100%;
+    height: 100%;
+    border: 2px solid blue;
+    overflow: hidden;
+}
+
+.main-image img {
+    position: absolute;
+    /* Ảnh lớn để zoom */
+    /* width: 1200px;
+    height: 800px; */
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    transform-origin: top left;
+}
+
+/* Vùng ảnh nhỏ để điều khiển zoom */
+.zoom-preview {
+    position: relative;
+    /* Kích thước ảnh nhỏ */
+    /* width: 200px; */
+    /* height: 150px;*/
+    /* width: 112px; */
+    border: 2px solid gray;
+    overflow: hidden;
+}
+
+.zoom-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.zoom-area {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 2px solid red;
+    background-color: rgba(255, 0, 0, 0.2);
+    pointer-events: none;
+    display: none;
+}

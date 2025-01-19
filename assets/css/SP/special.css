@@ -1,0 +1,195 @@
+.frame-size-300604-6201260 {
+    width: 620px;
+    height: 1260px;
+}
+
+.text-4868-100140{
+    font-size: 100px;
+    line-height: 140px;
+}
+
+.text-6286-128180{
+    font-size: 128px;
+    line-height: 180px;
+}
+
+.text-1724-3650{
+    font-size: 36px;
+    line-height: 50px;
+}
+
+.frame-size-4426-9456 {
+    width: 94px;
+    height: 56px;
+}
+
+.w-44-93 {
+    width: 93px;
+}
+
+.w-172-356 {
+    width: 356px;
+}
+
+.mt-9-18{
+    margin-top: 72px;
+}
+
+.w-28-58 {
+    width: 58px;
+}
+
+.text-1216-2535 {
+    font-size: 25px;
+    line-height: 35px;
+}
+
+.text-2432-5066 {
+    font-size: 50px;
+    line-height: 66px;
+}
+
+.h-x-1480 {
+    height: 1480px;
+}
+
+.w-74-154 {
+    width: 154px;
+}
+
+.text-1114-2230 {
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.w-24-50 {
+    width: 50px;
+}
+
+.text-1624-3250 {
+    font-size: 32px;
+    line-height: 50px;
+}
+
+.sm-my-18 {
+    margin: 72px 0;
+}
+
+.w-full-1120px {
+    width: 1120px;
+}
+
+.text-1420-3042 {
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.w-55-114 {
+    width: 114px;
+}
+
+.text-3648-76100 {
+    font-size: 76px;
+    line-height: 100px;
+}
+
+@media (max-width: 640px) {
+    .frame-size-300604-6201260 {
+        width: 300px;
+        height: 604px;
+    }
+
+    .text-6286-128180{
+        font-size: 62px;
+        line-height: 86px;
+    }
+
+    .text-1724-3650{
+        font-size: 17px;
+        line-height: 24px;
+    }
+    
+    .frame-size-4426-9456 {
+        width: 44px;
+        height: 26px;
+    }
+
+    .w-44-93 {
+        width: 44px;
+    }
+
+    .w-172-356 {
+        width: 172px;
+    }
+
+    .mt-9-18{
+        margin-top: 36px;
+    }
+
+    .w-28-58 {
+        width: 28px;
+    }
+
+    .text-1216-2535 {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .text-2432-5066 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .h-x-1480 {
+       
+        height: 800px;
+    }
+
+    .w-300 {
+        width: 300px;
+    }
+
+    .w-74-154 {
+        width: 74px;
+    }
+
+    .text-1114-2230 {
+        font-size: 11px;
+        line-height: 14px;
+    }
+
+    .w-24-50 {
+        width: 24px;
+    }
+    
+    .text-1624-3250 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .sm-my-18 {
+        margin: 0;
+    }
+
+    .sm-bg-F7F7F8{
+        background-color: #F7F7F8;
+    }
+
+    .w-full-1120px {
+        width: 100%;
+    }
+
+    .text-1420-3042 {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .w-55-114 {
+        width: 55px;
+    }
+
+    .text-3648-76100 {
+        font-size: 36px;
+        line-height: 48px;
+    }
+}

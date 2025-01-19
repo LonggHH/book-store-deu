@@ -27,7 +27,7 @@ function renderHeaderCategory(listData) {
             }
             if (item.highlight) {
                 stringHtml +=
-                `<li class="py-3 sm:py-4 px-3.5 text-highlight text-highlight-dot"> <a class="inline-block h-6 text-base font-semibold" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="${item.link}">${item.name}</a> </li>`;
+                `<li class="py-3 sm:py-4 px-3.5 text-highlight text-highlight-dot"> <a class="inline-block h-6 text-base font-semibold" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="./SP-1.html">${item.name}</a> </li>`;
                 continue;
             }
             stringHtml +=

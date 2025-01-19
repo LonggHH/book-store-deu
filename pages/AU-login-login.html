@@ -44,7 +44,7 @@
 
                 <div class="px-5 py-5 sm:px-14 sm:py-12 shadow-sm">
                     <div class="sm:px-1 sm:py-0.5">
-                        <form class="pb-12">
+                        <form class="">
                             <div id="frame-user-id" class="px-4 py-2.5 rounded border mb-2">
                                 <input id="user-id" class="text-base w-full" type="text" placeholder="아이디를 입력해 주세요.">
                             </div>
@@ -95,7 +95,7 @@
                             </div>
 
                             <!-- chanel -->
-                            <div class="flex items-center justify-center gap-x-3 sm:gap-x-5 px-3 sm:px-0">
+                            <div class="flex items-center justify-center gap-x-3 sm:gap-x-5 px-3 sm:px-0 mb-12">
                                 <div class="relative">
                                     <a href="./AU-login-easy.html" class="cursor-pointer rounded-full overflow-hidden" style="width: 42px; height: 42px;">
                                         <img class="w-full h-full" src="../assets/images/icon/auth/naver.svg" alt="">
@@ -122,6 +122,8 @@
                                     <img class="w-full h-full" src="../assets/images/icon/auth/apple.svg" alt="">
                                 </a>
                             </div>
+
+                            <button type="button" onclick="handleOrderNoMember()" class="text-15-l-22 font-semibold py-2.5 text-center w-full rounded border">비회원 구매</button>                            
                         </form>
                     </div>
                 </div>
@@ -496,6 +498,11 @@
             }
         }
         readBenifitRank(0)
+
+        function handleOrderNoMember() {
+            localStorage.setItem('BS-no-member', JSON.stringify(false))
+            window.location.href = './CO-or-order-step-1-courier-receipt.html'
+        }
 
     </script>
 

@@ -19,6 +19,7 @@
 
     <link rel="stylesheet" href="../assets/css/util.css">
     <link rel="stylesheet" href="../assets/css/CO/co.css">
+    <link rel="stylesheet" href="../assets/css/Zoom/zoom.css">
 
     <style>
         .star:hover i,
@@ -119,7 +120,7 @@
                     <div>
                         <ul class="flex">
                             <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="../index.html">전체</a> </li>
-                            <li class="py-4 px-3.5 text-highlight text-highlight-dot"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="../index.html">스페셜</a> </li>
+                            <li class="py-4 px-3.5 text-highlight text-highlight-dot"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="./SP-1.html">스페셜</a> </li>
                             <li class="py-4 px-3.5 relative underline-active"> <a class="inline-block h-6 text-base font-semibold" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="./CA-book-main-category.html">도서</a> </li>
                             <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="./CA-sanctuary-main-category.html">성물</a> </li>
                             <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="./CA-good-main-category.html">굿즈</a> </li>
@@ -265,54 +266,75 @@
                                         </div>
                                     </div>
 
-                                    <div class="flex flex-wrap items-center gap-x-2 gap-y-3 w-full">
-                                        <div class="w-24 whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(0, 0, 0, 1);">성경</div>
-                                        <div class="w-24 whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">신학</div>
-                                        <div class="w-24 whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">전례</div>
-                                        <div class="w-24 whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">교리/성사</div>
-                                        <div class="w-24 whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">교회문헌</div>
-                                        <div class="w-24 whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">교회법</div>
-                                        <div class="w-24 whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">묵상/영성/강론</div>
-                                        <div class="w-24 whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">교회사</div>
-                                        <div class="w-24 whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">교부학</div>
-                                        <div class="w-24 whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">수도생활</div>
-                                        <div class="w-24 whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">성지</div>
-                                        <div class="w-24 whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">철학</div>
-                                        <div class="w-24 whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">종교</div>
-                                        <div class="w-24 whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">사회</div>
-                                        <div class="w-24 whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">예술/문화</div>
-                                        <div class="w-24 whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">가정/심리/교육</div>
-                                        <div class="w-24 whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">교회인물</div>
-                                        <div class="w-24 whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">문학</div>
-                                        <div class="w-24 whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">청소년</div>
-                                        <div class="w-24 whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">어린이</div>
-                                        <div class="w-24 whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">악보</div>
-                                        <div class="w-24 whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">기타</div>
+                                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-4 w-full">
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(0, 0, 0, 1);">성경</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">신학</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">전례</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">교리/성사</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">교회문헌</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">교회법</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">묵상/영성/강론</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">교회사</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">교부학</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">수도생활</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">성지</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">철학</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">종교</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">사회</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">예술/문화</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">가정/심리/교육</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">교회인물</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">문학</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">청소년</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">어린이</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">악보</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">기타</div>
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>
 
                         <div class="pl-5 md:px-5 py-5 mb-6" style="background-color: rgba(247, 247, 248, 1);">
-                            <div class="flex items-center md:justify-between flex-wrap gap-1 md:gap-2.5">
-                                <div class="cursor-pointer h-16 rounded-md flex items-center justify-center" style="width: 104px; background-color: rgba(141, 176, 253, 1);">
-                                    <a href="../index.html" class="text-white text-base font-medium text-center">이벤트</a>
+                            <div class="flex items-center md:justify-between flex-wrap gap-1 md:gap-2.5 overflow-x-auto custom-scroll">
+                                <div class="flex items-center gap-x-6 w-fit">
+                                    <div class="space-y-2" style="width: 140px">
+                                        <div class="flex items-center justify-center py-4 rounded-md" style="background-color: #74A2EF;">
+                                            <img src="../assets/images/image/common/t-1.png" alt="">
+                                        </div>
+                                        <p class="text-center text-base font-medium">이벤트</p>
+                                    </div>
+                                    <div class="space-y-2" style="width: 140px">
+                                        <div class="flex items-center justify-center py-4 rounded-md" style="background-color: #67CEE1;">
+                                            <img src="../assets/images/image/common/t-2.png" alt="">
+                                        </div>
+                                        <p class="text-center text-base font-medium">스페셜</p>
+                                    </div>
+                                    <div class="space-y-2" style="width: 140px">
+                                        <div class="flex items-center justify-center py-4 rounded-md" style="background-color: #F09E8D;">
+                                            <img src="../assets/images/image/common/t-3.png" alt="">
+                                        </div>
+                                        <p class="text-center text-base font-medium">이책의 한 문장</p>
+                                    </div>
+                                    <div class="space-y-2" style="width: 140px">
+                                        <div class="flex items-center justify-center py-4 rounded-md" style="background-color: #62BFBD;">
+                                            <img src="../assets/images/image/common/t-4.png" alt="">
+                                        </div>
+                                        <p class="text-center text-base font-medium">카드뉴스</p>
+                                    </div>
+                                    <div class="space-y-2" style="width: 140px">
+                                        <div class="flex items-center justify-center py-4 rounded-md" style="background-color: #F58FB2;">
+                                            <img src="../assets/images/image/common/t-5.png" alt="">
+                                        </div>
+                                        <p class="text-center text-base font-medium">유튜브</p>
+                                    </div>
+                                    <div class="space-y-2" style="width: 140px">
+                                        <div class="flex items-center justify-center py-4 rounded-md" style="background-color: #8696E1;">
+                                            <img src="../assets/images/image/common/t-6.png" alt="">
+                                        </div>
+                                        <p class="text-center text-base font-medium">주님과 함께</p>
+                                    </div>
                                 </div>
-                                <div class="cursor-pointer h-16 rounded-md flex items-center justify-center" style="width: 104px; background-color: rgba(141, 176, 253, 1);">
-                                    <a href="../index.html" class="text-white text-base font-medium text-center">스페셜</a>
-                                </div>
-                                <div class="cursor-pointer h-16 rounded-md flex items-center justify-center" style="width: 104px; background-color: rgba(141, 176, 253, 1);">
-                                    <a href="../index.html" class="text-white text-base font-medium text-center">이책의 <br> 한 문장</a>
-                                </div>
-                                <div class="cursor-pointer h-16 rounded-md flex items-center justify-center" style="width: 104px; background-color: rgba(141, 176, 253, 1);">
-                                    <a href="../index.html" class="text-white text-base font-medium text-center">카드뉴스</a>
-                                </div>
-                                <div class="cursor-pointer h-16 rounded-md flex items-center justify-center" style="width: 104px; background-color: rgba(141, 176, 253, 1);">
-                                    <a href="../index.html" class="text-white text-base font-medium text-center">유튜브</a>
-                                </div>
-                                <div class="cursor-pointer h-16 rounded-md flex items-center justify-center" style="width: 104px; background-color: rgba(141, 176, 253, 1);">
-                                    <a href="../index.html" class="text-white text-base font-medium text-center">주님과 함께</a>
-                                </div>                                  
                             </div>
                         </div>
                         
@@ -324,8 +346,8 @@
                                 </div>
 
                                 <div class="overflow-auto custom-scroll">
-                                    <div class="flex gap-2.5" style="width: calc(337px * 2 + 10px * 1);">
-                                        <div class="cursor-pointer flex gap-4" style="width: 337px;">
+                                    <div class="flex gap-2.5" style="width: 1000px;">
+                                        <div class="cursor-pointer flex gap-4 flex-1">
                                             <div class="scope-imgage border shadow-md" style="width: 102px; height: 150px;">
                                                 <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="">
                                             </div>
@@ -340,7 +362,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="cursor-pointer flex gap-4" style="width: 337px;">
+                                        <div class="cursor-pointer flex gap-4 flex-1">
                                             <div class="scope-imgage border shadow-md" style="width: 102px; height: 150px;">
                                                 <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="">
                                             </div>
@@ -398,7 +420,7 @@
                                                 <img src="../assets/images/image/header/paul.png" alt="">
                                             </div>
                                         </div>
-                                    </div>                                       
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -607,7 +629,7 @@
                                     <div class="px-5 sm:px-0 space-y-4 sm:space-y-5">
                                         <div class="py-3 sm:py-4 border-t border-b">
                                             <div class="flex items-center justify-between">
-                                                <div class="flex items-center gap-1.5">
+                                                <div class="flex items-center gap-1.5 cursor-pointer" onclick="toggle('#modal-mileage')">
                                                     <span class="inline-block text-15-l-22 font-medium">마일리지</span>
                                                     <div class="w-5 h-5 rounded-full bg-gray-300 flex items-center justify-center">
                                                         <i class="fa-solid fa-exclamation text-white"></i>
@@ -629,7 +651,7 @@
 
                                             <div class="pt-2 space-y-3">
                                                 <div class="flex items-center justify-between">
-                                                    <div class="flex items-center gap-1.5">
+                                                    <div class="flex items-center gap-1.5 cursor-pointer" onclick="toggle('#modal-ship')">
                                                         <span class="inline-block text-15-l-22 font-medium">배송비</span>
                                                         <div class="w-5 h-5 rounded-full bg-gray-300 flex items-center justify-center">
                                                             <i class="fa-solid fa-exclamation text-white"></i>
@@ -640,7 +662,7 @@
                                                 </div>
 
                                                 <div class="flex items-start justify-between">
-                                                    <div class="flex items-center gap-1.5">
+                                                    <div class="flex items-center gap-1.5 cursor-pointer" onclick="toggle('#modal-policy')">
                                                         <span class="inline-block text-15-l-22 font-medium whitespace-nowrap">배송안내</span>
                                                         <div class="w-5 h-5 rounded-full bg-gray-300 flex items-center justify-center">
                                                             <i class="fa-solid fa-exclamation text-white"></i>
@@ -649,13 +671,13 @@
 
                                                     <div class="space-y-2">
                                                         <div class="flex flex-col sm:flex-row items-center gap-2">
-                                                            <div class="bg-blue-200 py-0.5 rounded-full flex items-center justify-center gap-x-1 pl-3 pr-1 cursor-pointer" onclick="gotoPage('./MY-mi-address.html')">
+                                                            <div class="bg-blue-200 py-0.5 rounded-full flex items-center justify-center gap-x-1 pl-3 pr-1 cursor-pointer" onclick="toggle('#modal-address')">
                                                                 <span class="inline-block text-13-l-18 font-medium text-blue-500 whitespace-nowrap">지역변경</span>
                                                                 <div class="w-5 h-5 flex items-center justify-center">
                                                                     <i class="text-xs  fa-solid fa-chevron-right text-blue-500"></i>
                                                                 </div>
                                                             </div>
-                                                            <span class="inline-block text-sm font-normal text-gray-400 whitespace-nowrap">서울시 강북구 오현로 7길 34</span>
+                                                            <span id="address-delivery" class="inline-block text-sm font-normal text-gray-400 whitespace-nowrap">서울시 강북구 오현로 7길 34</span>
                                                         </div>
 
                                                         <div class="flex justify-end">
@@ -994,17 +1016,28 @@
                                                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque accusamus, sit omnis error accusantium nobis recusandae libero reiciendis quos possimus earum dolore! Quo voluptas delectus magni, laborum deserunt esse similique!
                                                 </p>
 
-                                                <div class="px-5 sm:px-0 flex items-center gap-1 cursor-pointer" onclick="displayComment('#icon-up-down-3', '#comment-1')">
-                                                    <span class="inline-block text-13-l-18 font-normal text-gray-400">더보기</span>
-                                                    <div class="h-5 w-5 rounded-full border flex items-center justify-center">
-                                                        <i id="icon-up-down-3" class="text-xs fa-solid fa-chevron-down text-gray-400"></i>
+                                                <div class="flex items-center justify-between">
+                                                    <div class="px-5 sm:px-0 flex items-center gap-1 cursor-pointer" onclick="displayComment('#icon-up-down-3', '#comment-1')">
+                                                        <span class="inline-block text-13-l-18 font-normal text-gray-400">더보기</span>
+                                                        <div class="h-5 w-5 rounded-full border flex items-center justify-center">
+                                                            <i id="icon-up-down-3" class="text-xs fa-solid fa-chevron-down text-gray-400"></i>
+                                                        </div>
                                                     </div>
+
+                                                    <button class="btn-delete-review text-13-l-18 font-semibold p-1.5 border rounded flex items-center gap-x-1 w-16">
+                                                        <img src="../assets/images/icon/common/icon-strash.svg" alt="">
+                                                        삭제
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="flex flex-col-reverse sm:flex-row justify-between gap-y-3 gap-x-5 flex-wrap pb-3 sm:pb-5 border-b">
                                             <div class="px-5 sm:px-0 flex gap-y-2 flex-row justify-between sm:justify-start sm:flex-col">
+                                                <div>
+                                                    <span class="inline-block uppercase text-13-l-18 font-medium py-0.5 px-1 rounded border w-fit" style="color: #EE1762; border-color: #EE1762;">best</span>
+                                                </div>
+                                                
                                                 <div class="flex items-center">
                                                     <div class="w-5 h-5 flex items-center justify-center">
                                                         <i class="text-base fa-solid fa-star text-blue-500"></i>
@@ -1478,8 +1511,8 @@
                             </button>
                         </div>
 
-                        <div class="flex-1 overflow-x-hidden flex" style="max-width: 1040px; height: 736px;">
-                            <div class="swiper preBookSwiper w-full">
+                        <div class="flex-1 overflow-x-hidden flex gap-x-28" style="max-width: 1040px; height: 736px;">
+                            <div class="relative swiper preBookSwiper w-full">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide h-full w-full flex items-center justify-center" style="width: 100%; background-color: #292A2D;">
                                         <div class="flex flex-col justify-center items-center gap-y-3">
@@ -1506,6 +1539,20 @@
                                         3
                                     </div>
                                 </div>
+
+                                <!-- main-image -->
+                                <div id="big-image-scope" class="hidden absolute top-0 left-0 bottom-0 right-0 bg-white" style="z-index: 60;">
+                                    <div class="main-image">
+                                        <img src="/assets/images/image/books/book1.png" class="w-full"
+                                            alt="Main Image">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- small-image -->
+                            <div id="small-image-scope" class='hidden w-28 h-40 bg-red-200 overflow-hidden zoom-preview'>
+                                <img class="w-full" src="/assets/images/image/books/book1.png" alt="">
+                                <div class="zoom-area"></div>
                             </div>
                         </div>
 
@@ -1550,7 +1597,7 @@
                             <div class="w-full flex flex-row items-center justify-between">
                                 <div class="hidden sm:block">
                                     <ul class="flex items-center gap-x-2">
-                                        <li class="rounded-lg border py-3 w-24 flex flex-col items-center justify-center gap-y-1 bg-white">
+                                        <li onclick="enlargeImage()" class="cursor-pointer rounded-lg border py-3 w-24 flex flex-col items-center justify-center gap-y-1 bg-white">
                                             <div class="w-6 h-6">
                                                 <img src="/assets/images/image/media/book-left.png" alt="">
                                             </div>
@@ -1564,7 +1611,7 @@
                 
                                             <p class="text-xs font-medium text-center">오른쪽 크게보기</p>
                                         </li>
-                                        <li class="rounded-lg border py-3 w-24 flex flex-col items-center justify-center gap-y-1 bg-white">
+                                        <li onclick="miniatureImage()" class="cursor-pointer rounded-lg border py-3 w-24 flex flex-col items-center justify-center gap-y-1 bg-white">
                                             <div class="w-6 h-6">
                                                 <img src="/assets/images/image/media/book-small.png" alt="">
                                             </div>
@@ -1671,6 +1718,488 @@
         </div>
     </section>
 
+    <!-- modal Mileage -->
+    <section id="modal-mileage" class="overflow-y-auto fixed top-0 left-0 w-screen min-h-screen flex items-center justify-center hidden" style="background-color: rgba(0, 0, 0, .3); z-index: 60;">
+        <div class="" style="max-width: 560px; width: 560px;">
+            <div class="p-8 rounded-lg bg-white space-y-6">
+                <div class="flex items-center justify-between">
+                    <p class="text-22-l-30 font-semibold">마일리지 안내</p>
+
+                    <button onclick="toggle('#modal-mileage')" class="w-6 h-6 flex items-center justify-center">
+                        <i class="fa-solid fa-x text-base"></i>
+                    </button>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="flex gap-x-1 text-15-l-22 font-normal text-gray-400">
+                       <span class="inline-block">1.</span>
+                       <p> 마일리지는 
+                            <span class="inline-block font-semibold" style="color: #FF4242;">구입금액의 3%</span> 
+                            <span class="inline-block font-semibold text-black">(일부 품목 제외)에 해당하는 금액을 적립</span>
+                            해 드립니다.
+                        </p>
+                    </div>
+                    
+                    <p class="text-15-l-22 font-normal text-gray-400">
+                        <span class="inline-block font-semibold text-black">- 해외카드로 결제할 겨우 적립금은 1%</span> 만 적립됩니다.
+                    </p>
+                </div>
+
+                <div class="space-y-4 text-15-l-22 font-normal text-gray-400">
+                    <div class="flex gap-x-1">
+                        <span class="inline-block">2.</span>
+                        <p>오프라인 바오로딸 서원에서 카드 발금 후, 카드번호를 인터넷서점에 등록하시면 마일리지가 통합되어 온. 오프라인에서 적립/사용이 가능하십니다.</p>
+                    </div>
+
+                    <ul class="list-disc pl-4 space-y-2">
+                        <li>마일리지는
+                            <span class="inline-block font-semibold" style="color: #FF4242;">1,000원 이상</span>
+                            <span class="inline-block font-semibold text-black">부터 사용</span>
+                            하실 수가 있습니다.
+                        </li>
+                        <li>마일리지는
+                            <span class="inline-block font-semibold text-black">최종적립일로부터</span>
+                            <span class="inline-block font-semibold" style="color: #FF4242;">2년 경과 시</span>
+                            <span class="inline-block font-semibold text-black">순차적으로 소멸</span>
+                            됩니다.
+                        </li>
+                        <li>마일리지
+                            <span class="inline-block font-semibold text-black">확인은 마이페이지 '나의 지갑’ 에서 가능</span>
+                            하실 수가 있습니다.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- modal ship -->
+    <section id="modal-ship" class="overflow-y-auto fixed top-0 left-0 w-screen min-h-screen flex items-center justify-center hidden" style="background-color: rgba(0, 0, 0, .3); z-index: 60;">
+        <div class="" style="max-width: 560px; width: 560px;">
+            <div class="p-8 rounded-lg bg-white space-y-6">
+                <div class="flex items-center justify-between">
+                    <p class="text-22-l-30 font-semibold">배송비 무료 안내</p>
+
+                    <button onclick="toggle('#modal-ship')" class="w-6 h-6 flex items-center justify-center">
+                        <i class="fa-solid fa-x text-base"></i>
+                    </button>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="flex gap-x-1 text-15-l-22 font-normal text-gray-400">
+                       <span class="inline-block">1.</span>
+                       <p> 모든 매체를
+                            <span class="font-semibold" style="color: #FF4242;">3만원 이상 구매</span> 
+                            <span class="font-semibold text-black">시 무료 배송</span>
+                        </p>
+                    </div>
+                    
+                    <ul class="list-disc pl-4 space-y-2 text-15-l-22 font-normal text-gray-400">
+                        <li>예외) 방문수령 서비스를 이용하여 주문하신 경우</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="flex gap-x-1 text-15-l-22 font-normal text-gray-400">
+                       <span class="inline-block">2.</span>
+                       <p>
+                            <span class="font-semibold" style="color: #FF4242;">우수/으뜸회원 무료배송 쿠폰을 이용</span>
+                            하여 주문하신 경우
+                            <span class="font-semibold text-black">무료배송</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="flex gap-x-1 text-15-l-22 font-normal text-gray-400">
+                       <span class="inline-block">3.</span>
+                       <p>
+                            <span class="font-semibold" style="color: #FF4242;">무료배송 이벤트 상품을 포함하여 주문하신 경우</span>
+                            에는 구매금액에 관계없이  
+                            <span class="font-semibold text-black">무료로 배송</span>
+                            해 드립니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- modal policy -->
+    <section id="modal-policy" class="overflow-y-auto fixed top-0 left-0 w-screen min-h-screen flex items-center justify-center hidden" style="background-color: rgba(0, 0, 0, .3); z-index: 60;">
+        <div class="" style="max-width: 560px; width: 560px;">
+            <div class="p-8 rounded-lg bg-white space-y-6">
+                <div class="flex items-center justify-between">
+                    <p class="text-22-l-30 font-semibold">예정일 안내 정책</p>
+
+                    <button onclick="toggle('#modal-policy')" class="w-6 h-6 flex items-center justify-center">
+                        <i class="fa-solid fa-x text-base"></i>
+                    </button>
+                </div>
+
+                <p class="text-15-l-22 font-normal text-gray-400">
+                    도착예정일은 출고예정일에서 택배사의 배송일(2~3일)이 더해진 날이며 연휴와 주말(토,일), 공휴일과 성바오로딸수도회 고유 휴일을 제외한 근무일 기준입니다.
+                </p>
+
+                <table class="w-full table-auto">
+                    <thead>
+                        <tr class="text-15-l-22 font-semibold text-center py-2 w-full text-gray-800" style="background-color: #FFF9ED;">
+                            <th class="py-2">출고 예정일</th>
+                            <th class="py-2">도착 예정일</th>
+                            <th class="py-2">비고</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center text-15-l-22 font-normal text-gray-400">
+                        <tr class="border-b">
+                            <td class="py-1.5">1일 이내</td>
+                            <td class="py-1.5">3~4일 이내</td>
+                            <td class="py-1.5" rowspan="4">
+                                <p>
+                                연휴와 토, 일, 공휴일 <br>
+                                성바오로딸수도회 <br>
+                                고유 휴일 제외
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="py-1.5 border-b">
+                            <td class="py-1.5">2일 이내</td>
+                            <td class="py-1.5">4~5일 이내</td>
+                        </tr>
+                        <tr class="py-1.5 border-b">
+                            <td class="py-1.5">3일 이내</td>
+                            <td class="py-1.5">5~6일 이내</td>
+                        </tr>
+                        <tr class="py-1.5 border-b">
+                            <td class="py-1.5">기타</td>
+                            <td class="py-1.5">7~10일 이내</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="space-y-4">
+                    <p class="text-base font-semibold" style="color: #FF4242;">유의하세요!</p>
+                    <p class="text-15-l-22 font-normal text-gray-400">
+                        일부 상품 품절 시 도착예정일이 늦어질 수 있습니다.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <p class="text-base font-semibold text-gray-900">
+                        기타 배송지역에 대한 도착예정일입니다.
+                    </p>
+
+                    <ul class="list-disc pl-4 space-y-2 text-15-l-22 font-normal text-gray-400">
+                        <li>수도권 지역: 출고예정일+2일</li>
+                        <li>수도권 외 지역 배송: 출고예정일+3일</li>
+                        <li>도서지역: 출고예정일+4일</li>
+                        <li>해외배송: 출고예정일+특급우편(EMS) 4-15일/일반항공 7-25일/선박 2-6개월</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- modal address -->
+    <section id="modal-address" class="overflow-y-auto fixed top-0 left-0 w-screen min-h-screen flex items-center justify-center hidden" style="background-color: rgba(0, 0, 0, .3); z-index: 60;">
+        <div class="" style="max-width: 560px; width: 560px;">
+            <div class="p-8 rounded-lg bg-white space-y-6 max-h-screen overflow-y-auto custom-scroll">
+                <div class="flex items-center justify-between">
+                    <p class="text-22-l-30 font-semibold">배송지역 변경</p>
+
+                    <button onclick="toggle('#modal-address')" class="w-6 h-6 flex items-center justify-center">
+                        <i class="fa-solid fa-x text-base"></i>
+                    </button>
+                </div>
+
+                <div class="flex items-center gap-x-3 py-2.5 px-4 rounded border">
+                    <input id="input-address" type="text" class="text-15-l-22 font-normal text-gray-400 w-full" placeholder="에) 오현로 7길 34">
+                    <button class="w-5 h-5">
+                        <img src="../assets/images/icon/common/search.svg" alt="">
+                    </button>
+                </div>
+
+                <div id="note-address" class="rounded-lg p-3 space-y-3" style="background-color: #F7F7F8;">
+                    <p class="text-sm font-semibold">도로명, 건물명, 또는 지번 중 편한 방법으로 검색하세요.</p>
+
+                    <ul class="list-disc pl-6 text-13-l-18 font-normal text-gray-400 space-y-2">
+                        <li>도로명 + 건물번호(예: 세종로 119)</li>
+                        <li>지역명(동/리) + 번지(예: 종로1)</li>
+                        <li>지역명(동/리) + 건물명(아파트명)</li>
+                    </ul>
+                </div>
+
+                <div id="list-address" class="space-y-3 hidden">
+                    <p class="text-18-l-26 font-semibold py-3 border-b">검색결과</p>
+
+                    <div class="space-y-1">
+                        <div onclick="handleChangeAddress(0)" class="flex items-center gap-x-3 p-3 cursor-pointer hover:bg-gray-100">
+                            <div class="flex-1 space-y-2">
+                                <div class="flex items-center gap-x-2">
+                                    <span class="inline-block text-blue-500 bg-blue-100 text-xs font-medium py-1 w-14 text-center rounded-full whitespace-nowrap">도로명</span>
+                                    <span class="content-address flex-1 inline-block text-sm font-normal">서울 특별시 00구 00로 00길00 (00동, 건물명)</span>
+                                </div>
+
+                                <div class="flex items-center gap-x-2">
+                                    <span class="inline-block text-gray-800 bg-gray-100 text-xs font-medium py-1 w-14 text-center rounded-full whitespace-nowrap">지번</span>
+                                    <span class="flex-1 inline-block text-sm font-normal text-gray-400">서울 특별시 00구 00로 00길00 (00동, 건물명)</span>
+                                </div>
+                            </div>
+                            <div class="w-24 text-sm font-medium text-right">
+                                000000
+                            </div>
+                        </div>
+                        <div onclick="handleChangeAddress(1)" class="flex items-center gap-x-3 p-3 cursor-pointer hover:bg-gray-100">
+                            <div class="flex-1 space-y-2">
+                                <div class="flex items-center gap-x-2">
+                                    <span class="inline-block text-blue-500 bg-blue-100 text-xs font-medium py-1 w-14 text-center rounded-full whitespace-nowrap">도로명</span>
+                                    <span class="content-address flex-1 inline-block text-sm font-normal">서울 특별시 11구 11로 00길11 (11동, 건물명)</span>
+                                </div>
+
+                                <div class="flex items-center gap-x-2">
+                                    <span class="inline-block text-gray-800 bg-gray-100 text-xs font-medium py-1 w-14 text-center rounded-full whitespace-nowrap">지번</span>
+                                    <span class="flex-1 inline-block text-sm font-normal text-gray-400">서울 특별시 00구 00로 00길00 (00동, 건물명)</span>
+                                </div>
+                            </div>
+                            <div class="w-24 text-sm font-medium text-right">
+                                000000
+                            </div>
+                        </div>
+                        <div onclick="handleChangeAddress(2)" class="flex items-center gap-x-3 p-3 cursor-pointer hover:bg-gray-100">
+                            <div class="flex-1 space-y-2">
+                                <div class="flex items-center gap-x-2">
+                                    <span class="inline-block text-blue-500 bg-blue-100 text-xs font-medium py-1 w-14 text-center rounded-full whitespace-nowrap">도로명</span>
+                                    <span class="content-address flex-1 inline-block text-sm font-normal">서울 특별시 22구 22로 22길22 (00동, 건물명)</span>
+                                </div>
+
+                                <div class="flex items-center gap-x-2">
+                                    <span class="inline-block text-gray-800 bg-gray-100 text-xs font-medium py-1 w-14 text-center rounded-full whitespace-nowrap">지번</span>
+                                    <span class="flex-1 inline-block text-sm font-normal text-gray-400">서울 특별시 00구 00로 00길00 (00동, 건물명)</span>
+                                </div>
+                            </div>
+                            <div class="w-24 text-sm font-medium text-right">
+                                000000
+                            </div>
+                        </div>
+                        <div onclick="handleChangeAddress(3)" class="flex items-center gap-x-3 p-3 cursor-pointer hover:bg-gray-100">
+                            <div class="flex-1 space-y-2">
+                                <div class="flex items-center gap-x-2">
+                                    <span class="inline-block text-blue-500 bg-blue-100 text-xs font-medium py-1 w-14 text-center rounded-full whitespace-nowrap">도로명</span>
+                                    <span class="content-address flex-1 inline-block text-sm font-normal">서울 특별시 33구 33로 33길33 (00동, 건물명)</span>
+                                </div>
+
+                                <div class="flex items-center gap-x-2">
+                                    <span class="inline-block text-gray-800 bg-gray-100 text-xs font-medium py-1 w-14 text-center rounded-full whitespace-nowrap">지번</span>
+                                    <span class="flex-1 inline-block text-sm font-normal text-gray-400">서울 특별시 00구 00로 00길00 (00동, 건물명)</span>
+                                </div>
+                            </div>
+                            <div class="w-24 text-sm font-medium text-right">
+                                000000
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-center">
+                        <div class="flex items-center">
+                            <button onclick="gotoSE('start')" class="p-1 sm:p-2">
+                                <img class="w-6 h-6" src="../assets/images/icon/common/prev-to-first.svg" alt="icon">
+                            </button>
+                            <button onclick="moveTenPage('minus')" class="p-1 sm:p-2">
+                                <img class="w-6 h-6" src="../assets/images/icon/common/prev.svg" alt="icon">
+                            </button>
+
+                            <div id="list-btn-pagi" class="flex items-center">
+                                <button class="p-1 sm:p-2">
+                                    <span
+                                        class="w-6 h-6 rounded-full bg-black text-white text-13-l-18 font-medium flex items-center justify-center">1</span>
+                                </button>
+                                <button class="p-1 sm:p-2">
+                                    <span
+                                        class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">2</span>
+                                </button>
+                                <button class="p-1 sm:p-2">
+                                    <span
+                                        class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">3</span>
+                                </button>
+                                <button class="p-1 sm:p-2">
+                                    <span
+                                        class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">4</span>
+                                </button>
+                                <button class="p-1 sm:p-2">
+                                    <span
+                                        class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">5</span>
+                                </button>
+                            </div>
+
+                            <button onclick="moveTenPage('plus')" class="p-1 sm:p-2">
+                                <img class="w-6 h-6" src="../assets/images/icon/common/next.svg" alt="icon">
+                            </button>
+                            <button onclick="gotoSE('end')" class="p-1 sm:p-2">
+                                <img class="w-6 h-6" src="../assets/images/icon/common/next-to-end.svg" alt="icon">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div id="login-address" class="flex gap-x-6">
+                    <div class="flex-1">
+                        <ul class="list-disc pl-6">
+                            <li class="text-13-l-18 font-normal text-gray-400">
+                                로그인하시면 나의 회원정보 주소나 최근 배송지 주소를 바로 확인하여 선택할 수 있습니다.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <button class="text-15-l-22 font-semibold text-white py-2.5 px-4 rounded" style="background-color: #2083FE;">회원 로그인</button>
+                    </div>
+                </div>
+
+                <div id="list-my-address" class="space-y-3 hidden">
+                    <div class="py-3 space-y-2 border-b">
+                        <p class="text-18-l-26 font-semibold">나의 주소록</p>
+                        
+                        <ul class="flex items-center gap-x-1 text-13-l-18 font-normal text-gray-400">
+                            <li class="p-1.5 cursor-pointer text-black font-semibold">최근 배송지</li>
+                            <li>
+                                <span class="h-2" style="width: 1px; background-color: #70737C14;"></span>
+                            </li>
+                            <li class="p-1.5 cursor-pointer">회원정보 주소</li>
+                            <li>
+                                <span class="h-2" style="width: 1px; background-color: #70737C14;"></span>
+                            </li>
+                            <li class="p-1.5 cursor-pointer">주소록</li>
+                        </ul>
+                    </div>
+
+                    <div class="space-y-1">
+                        <div onclick="handleChangeMyAddress(0)" class="flex items-center gap-x-3 p-3 cursor-pointer hover:bg-gray-100">
+                            <div class="flex-1 space-y-2">
+                                <div class="flex items-center gap-x-2">
+                                    <span class="inline-block text-blue-500 bg-blue-100 text-xs font-medium py-1 w-14 text-center rounded-full whitespace-nowrap">도로명</span>
+                                    <span class="content-my-address flex-1 inline-block text-sm font-normal">서울 특별시 00구 00로 00길00 (00동, 건물명)</span>
+                                </div>
+
+                                <div class="flex items-center gap-x-2">
+                                    <span class="inline-block text-gray-800 bg-gray-100 text-xs font-medium py-1 w-14 text-center rounded-full whitespace-nowrap">지번</span>
+                                    <span class="flex-1 inline-block text-sm font-normal text-gray-400">서울 특별시 00구 00로 00길00 (00동, 건물명)</span>
+                                </div>
+                            </div>
+                            <div class="w-24 text-sm font-medium text-right">
+                                000000
+                            </div>
+                        </div>
+                        <div onclick="handleChangeMyAddress(1)" class="flex items-center gap-x-3 p-3 cursor-pointer hover:bg-gray-100">
+                            <div class="flex-1 space-y-2">
+                                <div class="flex items-center gap-x-2">
+                                    <span class="inline-block text-blue-500 bg-blue-100 text-xs font-medium py-1 w-14 text-center rounded-full whitespace-nowrap">도로명</span>
+                                    <span class="content-my-address flex-1 inline-block text-sm font-normal">서울 특별시 00구 00로 00길00 (00동, 건물명)</span>
+                                </div>
+
+                                <div class="flex items-center gap-x-2">
+                                    <span class="inline-block text-gray-800 bg-gray-100 text-xs font-medium py-1 w-14 text-center rounded-full whitespace-nowrap">지번</span>
+                                    <span class="flex-1 inline-block text-sm font-normal text-gray-400">서울 특별시 00구 00로 00길00 (00동, 건물명)</span>
+                                </div>
+                            </div>
+                            <div class="w-24 text-sm font-medium text-right">
+                                000000
+                            </div>
+                        </div>
+                        <div onclick="handleChangeMyAddress(2)" class="flex items-center gap-x-3 p-3 cursor-pointer hover:bg-gray-100">
+                            <div class="flex-1 space-y-2">
+                                <div class="flex items-center gap-x-2">
+                                    <span class="inline-block text-blue-500 bg-blue-100 text-xs font-medium py-1 w-14 text-center rounded-full whitespace-nowrap">도로명</span>
+                                    <span class="content-my-address flex-1 inline-block text-sm font-normal">서울 특별시 00구 00로 00길00 (00동, 건물명)</span>
+                                </div>
+
+                                <div class="flex items-center gap-x-2">
+                                    <span class="inline-block text-gray-800 bg-gray-100 text-xs font-medium py-1 w-14 text-center rounded-full whitespace-nowrap">지번</span>
+                                    <span class="flex-1 inline-block text-sm font-normal text-gray-400">서울 특별시 00구 00로 00길00 (00동, 건물명)</span>
+                                </div>
+                            </div>
+                            <div class="w-24 text-sm font-medium text-right">
+                                000000
+                            </div>
+                        </div>
+                        <div onclick="handleChangeMyAddress(3)" class="flex items-center gap-x-3 p-3 cursor-pointer hover:bg-gray-100">
+                            <div class="flex-1 space-y-2">
+                                <div class="flex items-center gap-x-2">
+                                    <span class="inline-block text-blue-500 bg-blue-100 text-xs font-medium py-1 w-14 text-center rounded-full whitespace-nowrap">도로명</span>
+                                    <span class="content-my-address flex-1 inline-block text-sm font-normal">서울 특별시 00구 00로 00길00 (00동, 건물명)</span>
+                                </div>
+
+                                <div class="flex items-center gap-x-2">
+                                    <span class="inline-block text-gray-800 bg-gray-100 text-xs font-medium py-1 w-14 text-center rounded-full whitespace-nowrap">지번</span>
+                                    <span class="flex-1 inline-block text-sm font-normal text-gray-400">서울 특별시 00구 00로 00길00 (00동, 건물명)</span>
+                                </div>
+                            </div>
+                            <div class="w-24 text-sm font-medium text-right">
+                                000000
+                            </div>
+                        </div>
+                        <div onclick="handleChangeMyAddress(4)" class="flex items-center gap-x-3 p-3 cursor-pointer hover:bg-gray-100">
+                            <div class="flex-1 space-y-2">
+                                <div class="flex items-center gap-x-2">
+                                    <span class="inline-block text-blue-500 bg-blue-100 text-xs font-medium py-1 w-14 text-center rounded-full whitespace-nowrap">도로명</span>
+                                    <span class="content-my-address flex-1 inline-block text-sm font-normal">서울 특별시 00구 00로 00길00 (00동, 건물명)</span>
+                                </div>
+
+                                <div class="flex items-center gap-x-2">
+                                    <span class="inline-block text-gray-800 bg-gray-100 text-xs font-medium py-1 w-14 text-center rounded-full whitespace-nowrap">지번</span>
+                                    <span class="flex-1 inline-block text-sm font-normal text-gray-400">서울 특별시 00구 00로 00길00 (00동, 건물명)</span>
+                                </div>
+                            </div>
+                            <div class="w-24 text-sm font-medium text-right">
+                                000000
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-center">
+                        <div class="flex items-center">
+                            <button onclick="gotoSE('start')" class="p-1 sm:p-2">
+                                <img class="w-6 h-6" src="../assets/images/icon/common/prev-to-first.svg" alt="icon">
+                            </button>
+                            <button onclick="moveTenPage('minus')" class="p-1 sm:p-2">
+                                <img class="w-6 h-6" src="../assets/images/icon/common/prev.svg" alt="icon">
+                            </button>
+
+                            <div id="list-btn-pagi" class="flex items-center">
+                                <button class="p-1 sm:p-2">
+                                    <span
+                                        class="w-6 h-6 rounded-full bg-black text-white text-13-l-18 font-medium flex items-center justify-center">1</span>
+                                </button>
+                                <button class="p-1 sm:p-2">
+                                    <span
+                                        class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">2</span>
+                                </button>
+                                <button class="p-1 sm:p-2">
+                                    <span
+                                        class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">3</span>
+                                </button>
+                                <button class="p-1 sm:p-2">
+                                    <span
+                                        class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">4</span>
+                                </button>
+                                <button class="p-1 sm:p-2">
+                                    <span
+                                        class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">5</span>
+                                </button>
+                            </div>
+
+                            <button onclick="moveTenPage('plus')" class="p-1 sm:p-2">
+                                <img class="w-6 h-6" src="../assets/images/icon/common/next.svg" alt="icon">
+                            </button>
+                            <button onclick="gotoSE('end')" class="p-1 sm:p-2">
+                                <img class="w-6 h-6" src="../assets/images/icon/common/next-to-end.svg" alt="icon">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
     <!-- go to top -->
     <div class="fixed bottom-48 right-6 block sm:hidden z-50">
@@ -2160,6 +2689,117 @@
                 }
             }
         });
+
+
+        const bigImageScope = document.querySelector('#big-image-scope')
+        const smallImageScope = document.querySelector('#small-image-scope')
+        function enlargeImage() {
+            bigImageScope.classList.remove('hidden')
+            smallImageScope.classList.remove('hidden')
+        }
+
+        function miniatureImage() {
+            bigImageScope.classList.add('hidden')
+            smallImageScope.classList.add('hidden')
+        }
+
+        const mainImage = document.querySelector('.main-image img');
+        const zoomArea = document.querySelector('.zoom-area');
+        const zoomPreview = document.querySelector('.zoom-preview');
+        const previewImage = document.querySelector('.zoom-preview img');
+
+        zoomPreview.addEventListener('mousemove', (e) => {
+            const rect = zoomPreview.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            // Hiển thị zoom-area
+            zoomArea.style.display = 'block';
+
+            // Đặt vị trí zoom-area trong zoom-preview
+            const zoomAreaWidth = zoomArea.offsetWidth;
+            const zoomAreaHeight = zoomArea.offsetHeight;
+
+            const zoomAreaX = Math.max(0, Math.min(x - zoomAreaWidth / 2, rect.width - zoomAreaWidth));
+            const zoomAreaY = Math.max(0, Math.min(y - zoomAreaHeight / 2, rect.height - zoomAreaHeight));
+
+            zoomArea.style.left = `${zoomAreaX}px`;
+            zoomArea.style.top = `${zoomAreaY}px`;
+
+            // Tính tỷ lệ để di chuyển ảnh lớn trong main-image
+            const scaleX = (zoomAreaX / rect.width) * mainImage.naturalWidth;
+            const scaleY = (zoomAreaY / rect.height) * mainImage.naturalHeight;
+
+            mainImage.style.transform = `translate(-${scaleX}px, -${scaleY}px)`;
+        });
+
+        zoomPreview.addEventListener('mouseleave', () => {
+            zoomArea.style.display = 'none';
+        });
+
+        const reviewContent = JSON.parse(localStorage.getItem('book-store-review-edit'))
+        if (reviewContent) {
+            document.querySelector('textarea').value = reviewContent
+        }
+
+        function showBtnDelReview() {
+            const isLogin = JSON.parse(localStorage.getItem('BS-login')) || false
+    
+            const btnDels = document.querySelectorAll('.btn-delete-review')
+            if (isLogin) {
+                btnDels.forEach((btn) => {
+                    btn.classList.remove('hidden')
+                })
+            } else {
+                btnDels.forEach((btn) => {
+                    btn.classList.add('hidden')
+                })
+            }
+            
+        }
+        showBtnDelReview()
+
+        function handleChangeAddress(i) {
+            const addresses = document.querySelectorAll('.content-address')
+            const contentAddress = addresses[i].textContent.toString().trim()
+
+            document.querySelector('#address-delivery').textContent = contentAddress
+        }
+        
+        function handleChangeMyAddress(i) {
+            const addresses = document.querySelectorAll('.content-my-address')
+            const contentAddress = addresses[i].textContent.toString().trim()
+
+            document.querySelector('#address-delivery').textContent = contentAddress
+        }
+
+        const inputAddress = document.querySelector('#input-address')
+        const noteAddress = document.querySelector('#note-address')
+        const listAddress = document.querySelector('#list-address')
+        const loginAddress = document.querySelector('#login-address')
+        const listMyAddress = document.querySelector('#list-my-address')
+
+        inputAddress.addEventListener('input', () => {
+            if (inputAddress.value.length > 0) {
+                noteAddress.classList.add('hidden')
+                listAddress.classList.remove('hidden')
+            } else {
+                noteAddress.classList.remove('hidden')
+                listAddress.classList.add('hidden')
+            }
+        })
+
+        function showAddress() {
+            const isLogin = JSON.parse(localStorage.getItem('BS-login')) || false
+            if (isLogin) {
+                loginAddress.classList.add('hidden')
+                listMyAddress.classList.remove('hidden')
+            } else {
+                loginAddress.classList.remove('hidden')
+                listMyAddress.classList.add('hidden')
+            }
+        }
+        showAddress()
     </script>
 </body>
 
