@@ -257,7 +257,7 @@
                             <div class="w-full">
                                 <div class="w-full">
                                     <div class="flex items-center mb-4">
-                                        <h4 class="text-15-l-22 font-medium">도서</h4>
+                                        <h4 class="text-15-l-22 font-medium">도서 전체</h4>
                                         <div>
                                             <img src="../assets/images/icon/header/next-circle.svg" alt="icon">
                                         </div>
@@ -380,7 +380,7 @@
 
                         <div class="pl-5 mb-8">
                             <div class="overflow-auto custom-scroll-x">
-                                <div class="flex items-center gap-2.5" style="width: calc(300px * 3 + 10px * 2);">
+                                <div class="flex items-center gap-x-6" style="width: calc(300px * 3 + 24px * 2);">
                                     <div class="rounded-lg overflow-hidden"
                                         style="width: 300px; height: 88px; background-color: rgba(62, 81, 155, 1);">
                                         <div class="w-full h-full flex items-center justify-between px-8">
@@ -408,13 +408,12 @@
 
                                     <div class="rounded-lg overflow-hidden"
                                         style="width: 300px; height: 88px; background-color: rgba(62, 81, 155, 1);">
-                                        <div class="w-full h-full flex items-center justify-between px-8">
-                                            <div>
-                                                <span class="inline-block text-18-l-26 text-white">바오로딸 <br>
-                                                    콘텐츠</span>
+                                        <div class="w-full h-full flex justify-between px-8">
+                                            <div class="flex items-center">
+                                                <span class="inline-block text-18-l-26 text-white">기부나눔</span>
                                             </div>
-                                            <div>
-                                                <img src="../assets/images/image/header/paul.png" alt="">
+                                            <div class="flex">
+                                                <img class="w-20 h-20" src="../assets/images/image/header/heart.png" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -667,7 +666,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="flex items-center gap-x-5">
+                                    <div class="flex items-center gap-x-5 p-3 sm:p-0 rounded-xl sm:rounded-none bg-blue-50 sm:bg-transparent">
                                         <div class="flex-1 flex flex-col gap-y-1.5 sm:flex-row sm:items-center sm:w-28">
                                             <span class="inline-block text-xs font-normal whitespace-nowrap">마일리지</span>
                                             <span
@@ -699,31 +698,28 @@
 
                     <div class="sm:mt-16 sm:pt-2">
                         <div class="">
-                            <div class="p-5 sm:p-0 border-b sm:border-none">
+                            <div class="p-5 sm:p-0 sm:border-none">
                                 <div class="space-y-5 sm:space-y-6">
                                     <h4 class="text-1724-2230 font-semibold">마일리지 내역</h4>
 
                                     <div>
                                         <ul class="flex items-center gap-x-1">
-                                            <li class="p-1.5 cursor-pointer text-13-l-18 font-semibold">전체</li>
+                                            <li onclick="chooseTime(this, false)" class="time-item p-1.5 cursor-pointer text-13-l-18 font-semibold">전체</li>
                                             <span class="inline-block w-1-px bg-gray-400" style="height: 18px;"></span>
-                                            <li class="p-1.5 cursor-pointer text-13-l-18 font-normal text-gray-400">6개월
-                                                이내</li>
+                                            <li onclick="chooseTime(this, false)" class="time-item p-1.5 cursor-pointer text-13-l-18 font-normal text-gray-400">6개월 이내</li>
                                             <span class="inline-block w-1-px bg-gray-400" style="height: 18px;"></span>
-                                            <li class="p-1.5 cursor-pointer text-13-l-18 font-normal text-gray-400">1년
-                                                이내</li>
+                                            <li onclick="chooseTime(this, false)" class="time-item p-1.5 cursor-pointer text-13-l-18 font-normal text-gray-400">1년 이내</li>
                                             <span class="inline-block w-1-px bg-gray-400" style="height: 18px;"></span>
-                                            <li class="p-1.5 cursor-pointer text-13-l-18 font-normal text-gray-400">기간
-                                                조회</li>
+                                            <li onclick="chooseTime(this, true)" class="time-item p-1.5 cursor-pointer text-13-l-18 font-normal text-gray-400">기간 조회</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                             <div class="bg-black h-1-px mt-3 mb-4 hidden sm:block"></div>
 
-                            <div class="mt-5">
+                            <div id="time-scope" class="mt-5 hidden">
                                 <div class="space-y-2">
-                                    <ul class="flex items-center gap-x-1">
+                                    <ul class="hidden sm:flex items-center gap-x-1">
                                         <li class="p-1.5 cursor-pointer text-13-l-18 font-normal text-gray-400">전체</li>
                                         <span class="inline-block w-1-px bg-gray-400" style="height: 18px;"></span>
                                         <li class="p-1.5 cursor-pointer text-13-l-18 font-normal text-gray-400">6개월 이내
@@ -773,7 +769,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="w-full sm:w-auto rounded-md border py-1.5 px-2.5">
+                                        <div class="hidden sm:block w-full sm:w-auto rounded-md border py-1.5 px-2.5">
                                             <div class="flex items-center gap-x-2">
                                                 <input class="w-full text-15-l-22 font-normal" type="text"
                                                     placeholder="주문번호 검색">
@@ -1216,20 +1212,14 @@
             format: 'YYYY.MM.DD',
             container: document.getElementById('container-cal-start'),
             i18n: koreanTranslation,
-            // onOpen: function () {
-            //     const days = this.el.querySelectorAll('.pika-day');
-            //     for (let i = 0; i < days.length; i++) {
-            //         if (i % 7 === 0) {
-            //             days[i].style.color = "red"
-            //             days[i].classList.add('hover-text-white')
-            //         }
-            //     }
-            // },
             onSelect: function (date) {
                 const formattedDate = moment(date).format('YYYY.MM.DD');
                 document.getElementById('datepicker-start').value = formattedDate;
 
                 pickerEnd.setMinDate(date);
+                setTimeout(() => {
+                    pickerStart.show()
+                }, 101)
             }
         });
 
@@ -1239,22 +1229,30 @@
             format: 'YYYY.MM.DD',
             container: document.getElementById('container-cal-end'),
             i18n: koreanTranslation,
-            // onOpen: function () {
-            //     const days = this.el.querySelectorAll('.pika-day');
-            //     for (let i = 0; i < days.length; i++) {
-            //         if (i % 7 === 0) {
-            //             days[i].style.color = "red"
-            //             days[i].classList.add('hover-text-white')
-            //         }
-            //     }
-            // },
             onSelect: function (date) {
                 const formattedDate = moment(date).format('YYYY.MM.DD');
                 document.getElementById('datepicker-end').value = formattedDate;
 
                 pickerStart.setMaxDate(date);
+                setTimeout(() => {
+                    pickerEnd.show()
+                }, 101)
             }
         });
+
+        const timeScope = document.querySelector('#time-scope')
+
+        function chooseTime(item, active) {
+            const timeItems = document.querySelectorAll('.time-item')
+            timeItems.forEach((el) => {
+                el.classList.add('font-normal', 'text-gray-400')
+            })
+            item.classList.remove('font-normal', 'text-gray-400')
+            item.classList.add('font-semibold')
+
+            timeScope.classList.toggle('hidden', !active);
+        }
+
     </script>
 </body>
 

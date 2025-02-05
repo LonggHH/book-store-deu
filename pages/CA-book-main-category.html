@@ -249,7 +249,7 @@
                             <div class="w-full">
                                 <div class="w-full">
                                     <div class="flex items-center mb-4">
-                                        <h4 class="text-15-l-22 font-medium">도서</h4>
+                                        <h4 class="text-15-l-22 font-medium">도서 전체</h4>
                                         <div>
                                             <img src="../assets/images/icon/header/next-circle.svg" alt="icon">
                                         </div>
@@ -372,7 +372,7 @@
 
                         <div class="pl-5 mb-8">
                             <div class="overflow-auto custom-scroll-x">
-                                <div class="flex items-center gap-2.5" style="width: calc(300px * 3 + 10px * 2);">
+                                <div class="flex items-center gap-x-6" style="width: calc(300px * 3 + 24px * 2);">
                                     <div class="rounded-lg overflow-hidden"
                                         style="width: 300px; height: 88px; background-color: rgba(62, 81, 155, 1);">
                                         <div class="w-full h-full flex items-center justify-between px-8">
@@ -400,13 +400,12 @@
 
                                     <div class="rounded-lg overflow-hidden"
                                         style="width: 300px; height: 88px; background-color: rgba(62, 81, 155, 1);">
-                                        <div class="w-full h-full flex items-center justify-between px-8">
-                                            <div>
-                                                <span class="inline-block text-18-l-26 text-white">바오로딸 <br>
-                                                    콘텐츠</span>
+                                        <div class="w-full h-full flex justify-between px-8">
+                                            <div class="flex items-center">
+                                                <span class="inline-block text-18-l-26 text-white">기부나눔</span>
                                             </div>
-                                            <div>
-                                                <img src="../assets/images/image/header/paul.png" alt="">
+                                            <div class="flex">
+                                                <img class="w-20 h-20" src="../assets/images/image/header/heart.png" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -1373,10 +1372,10 @@
                             </div>
                                             
                             <div>
-                                <h4 class="text-base font-semibold mb-1">영원한 도움의 성모 매일기도</h4>
+                                <h4 class="text-base font-semibold mb-1 h-12 two-lines">영원한 도움의 성모 매일기도</h4>
                                 <div class="text-13-l-18 font-normal text-gray-400 mb-3">성바오로딸</div>
                                 <div class="flex items-center gap-1">
-                                    <span class="inline-block text-sm font-semibold text-red-500">10%</span>
+                                    <span class="inline-block text-sm font-semibold text-red-500 ${i == 2 || i == 3 ? 'hidden' : ''}">10%</span>
                                     <span class="inline-block text-sm font-semibold">12,600</span><span class="inline-block text-sm font-normal">원</span>
                                     <span class="hidden sm:inline-block text-11-l-14 font-normal ml-1 pl-1 border-l text-gray-400">100P</span>
                                 </div>
@@ -1404,17 +1403,19 @@
             Array(6).fill(null).forEach((e, i) => {
                 stringHTMl +=
                 `
-                    <div class="swiper-slide cursor-pointer" onclick="gotoPage('./CA-book-product-detail.html')">
+                    <div class="swiper-slide cursor-pointer h-full" onclick="gotoPage('./CA-book-product-detail.html')">
                         <div class="space-y-2 sm:space-y-3 frame-width-102-160">
                             <div class="frame-image-border-26 frame-image-size-102150-160236 overflow-hidden shadow-md border">
                                 <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="book">
                             </div>
                                             
                             <div>
-                                <h4 class="text-base font-semibold mb-1">영원한 도움의 성모 매일기도 영원한 도움의 성모 매일기도</h4>
+                                <h4 class="text-base font-semibold mb-1 h-12 two-lines">
+                                    ${i == 0 ? "영원한 도움의 성모 매일기도 영원한 도움의 성모 매일기도" : "영원한 도움의"}
+                                </h4>
                                 <div class="text-13-l-18 font-normal text-gray-400 mb-3">성바오로딸</div>
                                 <div class="flex items-center gap-1">
-                                    <span class="inline-block text-sm font-semibold text-red-500">10%</span>
+                                    <span class="inline-block text-sm font-semibold text-red-500 ${i == 2 || i == 3 ? 'hidden' : ''}">10%</span>
                                     <span class="inline-block text-sm font-semibold">12,600</span><span class="inline-block text-sm font-normal">원</span>
                                     <span class="hidden sm:inline-block text-11-l-14 font-normal ml-1 pl-1 border-l text-gray-400">100P</span>
                                 </div>
@@ -1462,9 +1463,8 @@
                                     <span class="inline-block text-13-l-18 text-gray-400">박지현, 신솔잎</span>
                                 </div>
 
-                                <p class="text-15-l-24 font-normal text-gray-500 truncate">
-                                    엄마와 딸이 함께하는 순례길이라는 것이 정겹고 부럽게 느껴지네요.<br>
-                                    서로 잘 알고 있다고 생각하지만 몰랐던 것을 알아가고 화해하는 과 생각하지만 몰랐던
+                                <p class="text-15-l-24 font-normal text-gray-500 truncate h-12">
+                                    ${i == 0 ? "엄마와 딸이 함께하는 순례길이라는 것이 정겹고 부럽게 느껴지네요.<br> 서로 잘 알고 있다고 생각하지만 몰랐던 것을 알아가고 화해하는 과 생각하지만 몰랐던" : "엄마와 딸이 함께하는 순례길이라는 것이"}
                                 </p>
                             </div>
 

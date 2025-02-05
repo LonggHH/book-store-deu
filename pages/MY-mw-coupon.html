@@ -239,7 +239,7 @@
                             <div class="w-full">
                                 <div class="w-full">
                                     <div class="flex items-center mb-4">
-                                        <h4 class="text-15-l-22 font-medium">도서</h4>
+                                        <h4 class="text-15-l-22 font-medium">도서 전체</h4>
                                         <div>
                                             <img src="../assets/images/icon/header/next-circle.svg" alt="icon">
                                         </div>
@@ -362,7 +362,7 @@
 
                         <div class="pl-5 mb-8">
                             <div class="overflow-auto custom-scroll-x">
-                                <div class="flex items-center gap-2.5" style="width: calc(300px * 3 + 10px * 2);">
+                                <div class="flex items-center gap-x-6" style="width: calc(300px * 3 + 24px * 2);">
                                     <div class="rounded-lg overflow-hidden"
                                         style="width: 300px; height: 88px; background-color: rgba(62, 81, 155, 1);">
                                         <div class="w-full h-full flex items-center justify-between px-8">
@@ -390,13 +390,12 @@
 
                                     <div class="rounded-lg overflow-hidden"
                                         style="width: 300px; height: 88px; background-color: rgba(62, 81, 155, 1);">
-                                        <div class="w-full h-full flex items-center justify-between px-8">
-                                            <div>
-                                                <span class="inline-block text-18-l-26 text-white">바오로딸 <br>
-                                                    콘텐츠</span>
+                                        <div class="w-full h-full flex justify-between px-8">
+                                            <div class="flex items-center">
+                                                <span class="inline-block text-18-l-26 text-white">기부나눔</span>
                                             </div>
-                                            <div>
-                                                <img src="../assets/images/image/header/paul.png" alt="">
+                                            <div class="flex">
+                                                <img class="w-20 h-20" src="../assets/images/image/header/heart.png" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -814,6 +813,29 @@
     <div class="h-2 bg-gray-100 mt-6 sm:hidden"></div>
     <div class="hidden sm:block" style="height: 72px;"></div>
 
+    <section>
+        <div id="modal-used" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+            <!-- Modal Content -->
+            <div class="bg-white sm:rounded-lg p-5 sm:p-8 space-y-6 overflow-hidden" style="width: 364px;">
+                <!-- Modal Header -->
+                <div class="flex items-center justify-center mb-6">
+                    <h3 class="text-1624-1826 font-semibold text-center">
+                        쿠폰을 사용했습니다
+                    </h3>                    
+                </div>
+               
+                <div class="space-y-2">
+                    <p class="text-xs font-normal text-gray-400 text-center">주문번호</p>
+                    <p class="text-xs font-normal text-gray-400 text-center">000000000000000000</p>
+                </div>
+
+                <div class="flex items-center gap-x-4">
+                    <button class="flex-1 text-15-l-22 font-semibold py-2.5 rounded  border" onclick="toggle('#modal-used')">취소</button>
+                    <button class="flex-1 text-15-l-22 font-semibold py-2.5 rounded bg-blue-400 text-white border border-blue-400" onclick="toggle('#modal-used')">해당 주문 보러가기</button>
+                </div>                
+            </div>
+        </div>
+    </section>
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
     <!-- go to top -->
     <div class="fixed bottom-24 right-6 block sm:hidden z-50">
@@ -1179,7 +1201,11 @@
                     </div>
 
                     <div class="border-t border-dashed py-2 text-center">
-                        <span class="${isShow ? 'relative z-20 cursor-pointer' : ''} inline-block text-xs font-medium py-0.5 px-2.5 bg-black text-white rounded-full">사용 완료</span>
+                        ${isShow ? 
+                            `<span class="relative z-20 cursor-pointer inline-block text-xs font-medium py-0.5 px-2.5 bg-black text-white rounded-full" onclick="toggle('#modal-used')">사용 완료</span>`
+                            :
+                            '<span class="inline-block text-xs font-medium py-0.5 px-2.5 bg-black text-white rounded-full">사용 완료</span>'
+                        }
                     </div>
 
                     <div class="absolute top-0 bottom-0 left-0 right-0 bg-white opacity-60"></div>

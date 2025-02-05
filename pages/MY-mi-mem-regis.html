@@ -254,7 +254,7 @@
                             <div class="w-full">
                                 <div class="w-full">
                                     <div class="flex items-center mb-4">
-                                        <h4 class="text-15-l-22 font-medium">도서</h4>
+                                        <h4 class="text-15-l-22 font-medium">도서 전체</h4>
                                         <div>
                                             <img src="../assets/images/icon/header/next-circle.svg" alt="icon">
                                         </div>
@@ -377,7 +377,7 @@
 
                         <div class="pl-5 mb-8">
                             <div class="overflow-auto custom-scroll-x">
-                                <div class="flex items-center gap-2.5" style="width: calc(300px * 3 + 10px * 2);">
+                                <div class="flex items-center gap-x-6" style="width: calc(300px * 3 + 24px * 2);">
                                     <div class="rounded-lg overflow-hidden"
                                         style="width: 300px; height: 88px; background-color: rgba(62, 81, 155, 1);">
                                         <div class="w-full h-full flex items-center justify-between px-8">
@@ -405,13 +405,12 @@
 
                                     <div class="rounded-lg overflow-hidden"
                                         style="width: 300px; height: 88px; background-color: rgba(62, 81, 155, 1);">
-                                        <div class="w-full h-full flex items-center justify-between px-8">
-                                            <div>
-                                                <span class="inline-block text-18-l-26 text-white">바오로딸 <br>
-                                                    콘텐츠</span>
+                                        <div class="w-full h-full flex justify-between px-8">
+                                            <div class="flex items-center">
+                                                <span class="inline-block text-18-l-26 text-white">기부나눔</span>
                                             </div>
-                                            <div>
-                                                <img src="../assets/images/image/header/paul.png" alt="">
+                                            <div class="flex">
+                                                <img class="w-20 h-20" src="../assets/images/image/header/heart.png" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -874,13 +873,13 @@
 
                                             <div class="flex items-center gap-x-4 sm:gap-x-12">
                                                 <div class="flex items-center gap-x-2">
-                                                    <input id="method-1" type="radio" name="method" checked
+                                                    <input id="method-1" type="radio" name="method" value="phone" checked onchange="changeAuthMethod(event)"
                                                         class="w-5 h-5 rounded-full">
                                                     <label for="method-1"
                                                         class="cursor-pointer text-15-l-22 font-normal whitespace-nowrap">휴대폰번호</label>
                                                 </div>
                                                 <div class="flex items-center gap-x-2">
-                                                    <input id="method-2" type="radio" name="method"
+                                                    <input id="method-2" type="radio" name="method" value="mail" onchange="changeAuthMethod(event)"
                                                         class="w-5 h-5 rounded-full">
                                                     <label for="method-2"
                                                         class="cursor-pointer text-15-l-22 font-normal whitespace-nowrap">이메일</label>
@@ -889,13 +888,13 @@
                                         </div>
                                         <!-- 2 -->
                                         <div class="w-full flex flex-col sm:flex-row sm:items-center gap-y-2 gap-x-5">
-                                            <label for="" class="text-sm font-semibold w-28">휴대폰 번호</label>
+                                            <label id="method-text" class="text-sm font-semibold w-28">휴대폰 번호</label>
 
                                             <div
                                                 class=" flex-1 flex flex-col sm:flex-row sm:items-center gap-y-2 gap-x-2.5">
                                                 <div
                                                     class="flex-1 h-10 py-2 px-4 flex items-center justify-center rounded border">
-                                                    <input type="text" class="w-full" id="input-phone">
+                                                    <input type="text" class="w-full" id="input-phone" placeholder="'-' 기호 없이 숫자만 입력" >
                                                 </div>
                                                 <div class="flex items-center justify-end sm:justify-normal">
                                                     <button id="btn-submit-phone"
@@ -915,8 +914,8 @@
                                             </div>
                                         </div>
                                         <!-- 4 -->
-                                        <div
-                                            class="w-full flex items-center justify-center gap-y-2 gap-x-2.5 whitespace-nowrap flex-wrap">
+                                        <div id="noti-code"
+                                            class="w-full flex items-center justify-center gap-y-2 gap-x-2.5 whitespace-nowrap flex-wrap hidden">
                                             <span class="inline-block text-sm font-normal text-gray-800">
                                                 인증번호 입력 후 아래</span>
                                             <span class="inline-block text-sm font-semibold text-blue-500">
@@ -1248,21 +1247,26 @@
             document.querySelectorAll('.frame-tab')[i].classList.remove('hidden')
         }
 
+        let method = 'phone'
+
         const inputPhoneEl = document.querySelector('#input-phone')
         const btnSubmitPhoneEl = document.querySelector('#btn-submit-phone')
         const timerElement = document.getElementById('text-timer');
         let countdownTime = 180; // 3 phút = 180 giây
         const inputOtpEl = document.querySelector('#input-otp')
         const btnSubmitFormEl = document.querySelector('#btn-submit-form')
+        const notiCode = document.querySelector('#noti-code')
         let interval
 
         inputPhoneEl.addEventListener('input', () => {
-            // Loại bỏ ký tự không phải là số
-            inputPhoneEl.value = inputPhoneEl.value.replace(/[^0-9]/g, '');
+            if (method === 'phone') {
+                // Loại bỏ ký tự không phải là số
+                inputPhoneEl.value = inputPhoneEl.value.replace(/[^0-9]/g, '');
 
-            // Giới hạn độ dài tối đa 15 ký tự
-            if (inputPhoneEl.value.length > 15) {
-                inputPhoneEl.value = inputPhoneEl.value.slice(0, 15);
+                // Giới hạn độ dài tối đa 15 ký tự
+                if (inputPhoneEl.value.length > 15) {
+                    inputPhoneEl.value = inputPhoneEl.value.slice(0, 15);
+                }
             }
         })
 
@@ -1277,6 +1281,7 @@
 
             if (inputPhoneEl.value.length > 5) {
                 btnSubmitPhoneEl.textContent = "인증번호 재전송"
+                notiCode.classList.remove('hidden')
                 timerElement.classList.remove('hidden')
                 startCountdown();
                 inputOtpEl.placeholder  = "000000"
@@ -1320,6 +1325,26 @@
             if (inputOtpEl.value.length !== 6) return
             toggle('#modal-err')
         })
+
+        const methodText  = document.querySelector('#method-text')
+
+        function changeAuthMethod(event) {
+            const value = event.target.value
+            switch (value) {
+                case 'phone':
+                    method = 'phone'
+                    methodText.innerHTML = '휴대폰번호'
+                    inputPhoneEl.placeholder = `'-' 기호 없이 숫자만 입력`
+                    break
+                case 'mail':
+                    method = 'mail'
+                    methodText.innerHTML = '이메일'
+                    inputPhoneEl.placeholder = ''
+                    break
+            }
+        }
+
+
     </script>
 </body>
 

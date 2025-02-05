@@ -25,7 +25,7 @@
         .active {
             background-color: #3b82f6;
             color: white;
-            width: 320px;
+            /* width: 320px; */
         }
 
         @media (max-width: 640px) {
@@ -255,7 +255,7 @@
                             <div class="w-full">
                                 <div class="w-full">
                                     <div class="flex items-center mb-4">
-                                        <h4 class="text-15-l-22 font-medium">도서</h4>
+                                        <h4 class="text-15-l-22 font-medium">도서 전체</h4>
                                         <div>
                                             <img src="../assets/images/icon/header/next-circle.svg" alt="icon">
                                         </div>
@@ -378,7 +378,7 @@
 
                         <div class="pl-5 mb-8">
                             <div class="overflow-auto custom-scroll-x">
-                                <div class="flex items-center gap-2.5" style="width: calc(300px * 3 + 10px * 2);">
+                                <div class="flex items-center gap-x-6" style="width: calc(300px * 3 + 24px * 2);">
                                     <div class="rounded-lg overflow-hidden"
                                         style="width: 300px; height: 88px; background-color: rgba(62, 81, 155, 1);">
                                         <div class="w-full h-full flex items-center justify-between px-8">
@@ -406,13 +406,12 @@
 
                                     <div class="rounded-lg overflow-hidden"
                                         style="width: 300px; height: 88px; background-color: rgba(62, 81, 155, 1);">
-                                        <div class="w-full h-full flex items-center justify-between px-8">
-                                            <div>
-                                                <span class="inline-block text-18-l-26 text-white">바오로딸 <br>
-                                                    콘텐츠</span>
+                                        <div class="w-full h-full flex justify-between px-8">
+                                            <div class="flex items-center">
+                                                <span class="inline-block text-18-l-26 text-white">기부나눔</span>
                                             </div>
-                                            <div>
-                                                <img src="../assets/images/image/header/paul.png" alt="">
+                                            <div class="flex">
+                                                <img class="w-20 h-20" src="../assets/images/image/header/heart.png" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -607,7 +606,7 @@
                                 <h4 class="text-2028-2230">역사</h4>
 
                                 <div class="overflow-x-auto custom-scroll">
-                                    <div id="list-year" class="flex items-center gap-x-2 w-max">
+                                    <div id="list-year" class="flex items-center sm:grid sm:grid-cols-4 gap-2 w-max sm:w-auto">
                                         <!-- <div class="rounded-md overflow-hidden w-max sm:w-20">
                                             <button onclick="setActive(this, 0)" class="year-item rounded-md bg-gray-50 text-gray-300 text-base font-semibold py-1.5 px-3 sm:px-5 sm:py-2.5 whitespace-nowrap">현재 ~ 2024</button>
                                         </div>
@@ -1268,8 +1267,8 @@
             dataTimeLine.forEach((time, i) => {
                 stringTimeLineHTML +=
                 `
-                    <div onclick="setActive(this, ${i})" class="btn-year-scope rounded-md overflow-hidden w-max sm:w-20">
-                        <button class="year-item rounded-md bg-gray-50 text-gray-300 text-base font-semibold py-1.5 px-3 sm:px-5 sm:py-2.5 whitespace-nowrap">${time.year}</button>
+                    <div onclick="setActive(this, ${i})" class="btn-year-scope rounded-md overflow-hidden w-28 sm:w-full">
+                        <button class="year-item rounded-md bg-gray-50 text-gray-300 text-base font-semibold py-1.5 px-3 sm:px-5 sm:py-2.5 whitespace-nowrap w-full">${time.year}</button>
                     </div>
                 `
             })
@@ -1278,14 +1277,11 @@
         renderTimeLine()
 
         function setActive(block, i) {
-            const blokcs = document.querySelectorAll('.btn-year-scope')
-            blokcs.forEach(btnScope => btnScope.classList.add('sm:w-20'))
             // Xóa lớp active khỏi tất cả các nút
             const buttons = document.querySelectorAll('.year-item');
             buttons.forEach(btn => btn.classList.remove('active'));
             
             // Thêm lớp active vào nút được click
-            block.classList.remove('sm:w-20')
             const button = block.querySelector('button')
             button.classList.add('active');
             
