@@ -131,3 +131,14 @@ function gotoOrder () {
         gotoPage('./AU-login-login.html')
     }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Tìm thẻ <a> có href="./CO-sh-shopping-cart.html"
+    let link = document.querySelector('a[href="./CO-sh-shopping-cart.html"]');
+
+    if (link) {
+      // Thay đổi href thành onclick
+      link.removeAttribute("href");
+      link.setAttribute("onclick", "gotoOrder()");
+    }
+  });
