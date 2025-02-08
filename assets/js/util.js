@@ -119,3 +119,15 @@ document.querySelectorAll('.toggle-menu-btn').forEach(button => {
 document.querySelector('header img[src="../assets/images/icon/header/home-cart.svg"]').addEventListener('click', () => {
     gotoPage('./CO-sh-shopping-cart-empty.html')
 })
+
+function gotoOrder () {
+    const isLogin = JSON.parse(localStorage.getItem('BS-login') || false)
+    
+    if (isLogin) {
+        localStorage.setItem('BS-check-order-no-member', JSON.stringify(false))
+        gotoPage('./CO-sh-shopping-cart.html')
+    } else {
+        localStorage.setItem('BS-check-order-no-member', JSON.stringify(true))
+        gotoPage('./AU-login-login.html')
+    }
+}

@@ -123,7 +123,8 @@
                                 </a>
                             </div>
 
-                            <button type="button" onclick="handleOrderNoMember()" class="text-15-l-22 font-semibold py-2.5 text-center w-full rounded border">비회원 구매</button>                            
+                            <button id="order-no-member" type="button" onclick="handleOrderNoMember()" class="text-15-l-22 font-semibold py-2.5 text-center w-full rounded border">비회원 구매</button>                            
+                            <button id="check-order-no-member" type="button" onclick="handleCheckOrderNoMember()" class="text-15-l-22 font-semibold py-2.5 text-center w-full rounded border">비회원 주문내역 조회</button>                            
                         </form>
                     </div>
                 </div>
@@ -503,6 +504,23 @@
             localStorage.setItem('BS-no-member', JSON.stringify(false))
             window.location.href = './CO-or-order-step-1-courier-receipt.html'
         }
+
+        function render() {
+            const isLogin = JSON.parse(localStorage.getItem('BS-login') || false)
+            const isCheckOrderNoMember = JSON.parse(localStorage.getItem('BS-check-order-no-member') || false)
+
+            const btnOrderNoMem = document.querySelector('#order-no-member')
+            const btnCheckOrderNoMem = document.querySelector('#check-order-no-member')
+            if (isCheckOrderNoMember) {
+                btnOrderNoMem.classList.add('hidden')
+                btnCheckOrderNoMem.classList.remove('hidden')
+            } else {
+                btnOrderNoMem.classList.remove('hidden')
+                btnCheckOrderNoMem.classList.add('hidden')
+            }
+        }
+        render()
+
 
     </script>
 

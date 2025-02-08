@@ -49,10 +49,24 @@
                             </div>
                             <p id="err-user-name" class="hidden text-xs text-red-400 mb-4">이름을 비워 둘 수 없습니다.</p>
 
-                            <div id="frame-user-info" class="px-4 py-2.5 rounded border mb-3">
-                                <input id="user-info" class="text-base w-full" type="text" placeholder="이메일 주소 또는 전화번호">
+                            <div>
+                                <div class="mb-2 flex items-center gap-x-6">
+                                    <div class="flex items-center gap-x-3">
+                                        <input onchange="handleChangeMethod('email')" checked name="method" id="method-email" method="phone" type="radio" class="w-5 h-5">
+                                        <label for="method-email" class="text-sm font-normal">이메일</label>
+                                    </div>
+                                    <div class="flex items-center gap-x-3">
+                                        <input onchange="handleChangeMethod('phone')" name="method" id="method-phone" method="phone" type="radio" class="w-5 h-5">
+                                        <label for="method-phone" class="text-sm font-normal">휴대폰 번호</label>
+                                    </div>
+                                </div>
+
+                                <div id="frame-user-info" class="px-4 py-2.5 rounded border mb-3">
+                                    <input id="user-info" class="text-base w-full" type="text" placeholder="이메일 주소 또는 전화번호">
+                                </div>
+                                <p id="err-user-info" class="hidden text-xs text-red-400 mb-4">정보를 비워 둘 수 없습니다.</p>
                             </div>
-                            <p id="err-user-info" class="hidden text-xs text-red-400 mb-4">정보를 비워 둘 수 없습니다.</p>
+                            
                            
                             <div id="frame-user-number" class="px-4 py-2.5 rounded border mb-3">
                                 <input id="user-number" class="text-base w-full" type="text" placeholder="주문번호">
@@ -87,17 +101,17 @@
                     <div class="flex items-center justify-center">
                         <div onclick="readBenifitRank(0)" class="cursor-pointer account-rank relative flex-1 py-2.5 flex items-center justify-center bg-white"
                             style="border-top-right-radius: 8px; border-top-left-radius: 8px;">
-                            <img src="../assets/images/icon/auth/member-bronze.svg" alt="">
+                            <img src="../assets/images/image/auth/member-bronze.png" alt="">
                             <div class="absolute top-0 left-0 right-0 bottom-0 z-10 hidden" style="background-color: rgb(128, 128, 128, 0.2);"></div>
                         </div>
                         <div onclick="readBenifitRank(1)" class="cursor-pointer account-rank relative flex-1 py-2.5 flex items-center justify-center overflow-hidden"
                             style="border-top-right-radius: 8px; border-top-left-radius: 8px;">
-                            <img src="../assets/images/icon/auth/member-silver.svg" alt="">
+                            <img src="../assets/images/image/auth/member-silver.png" alt="">
                             <div class="absolute top-0 left-0 right-0 bottom-0 z-10" style="background-color: rgb(128, 128, 128, 0.2);"></div>
                         </div>
                         <div onclick="readBenifitRank(2)" class="cursor-pointer account-rank relative flex-1 py-2.5 flex items-center justify-center overflow-hidden"
                             style="border-top-right-radius: 8px; border-top-left-radius: 8px;">
-                            <img src="../assets/images/icon/auth/member-gold.svg" alt="">
+                            <img src="../assets/images/image/auth/member-gold.png" alt="">
                             <div class="absolute top-0 left-0 right-0 bottom-0 z-10" style="background-color: rgb(128, 128, 128, 0.2);"></div>
                         </div>
                     </div>
@@ -268,7 +282,8 @@
 
             if (!checkDataEmpty) {
                 if (UName.value === '1' && UInfo.value === '1' && UNumber.value === '1') {                    
-                    localStorage.setItem('BS-login', JSON.stringify(true))
+                    localStorage.setItem('BS-login', JSON.stringify(true))                    
+                    window.location.href = './MY-oh-full-history.html'
                 } else {
                     mdIncorrect.classList.remove('hidden')
                 }
@@ -384,6 +399,9 @@
         }
         readBenifitRank(0)
 
+        function handleChangeMethod(method) {
+            UInfo.value = ''
+        }
     </script>
 
 </body>
