@@ -919,9 +919,9 @@ input[type="number"] {
     height: 150px;
   }
 
-  .width-full-433 {
+  /* .width-full-433 {
     width: 100%;
-  }
+  } */
 
   .width-580-1120 {
     width: 580px;
@@ -1216,5 +1216,11 @@ input[type="number"] {
   .xy-30-38 {
     width: 30px;
     height: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .width-full-433 {
+    width: 100%;
   }
 }
