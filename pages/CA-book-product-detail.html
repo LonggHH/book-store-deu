@@ -566,7 +566,7 @@
                                 </div>
                             </div>
 
-                            <div class="flex-1 flex flex-col justify-between">                                
+                            <div class="flex-1 flex flex-col justify-between">
                                 <div class="pb-6 flex-1 flex flex-col justify-between gap-y-4">
                                     <div>
                                         <div class="hidden sm:flex items-center justify-start mb-8">
@@ -686,13 +686,43 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>                                                
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="hidden sm:block py-4 border-t" style="height: 74px;"></div>
+                                <div class="hidden sm:block border-t"></div>
+
+                                <!-- chinh sua -->
+                                <div class="hidden sm:block">
+                                    <div class="w-full sm:w-auto">
+                                        <div id="frame-sc-pc" class="flex items-stretch justify-end gap-x-3 py-2.5 w-full sm:w-auto">
+                                            <div id="frame-sc-select-pc" class="flex-1 border rounded border-slate-600 flex items-center justify-center px-4">
+                                                <select name="" id="book-options-pc" class="outline-none w-full" onchange="handleChangeSelect(this)">
+                                                </select>
+                                            </div>
+                                            
+                                            <div id="frame-sc-pc-count" class="scope-change-quantity flex items-center space-x-4 p-1 border rounded" style="width: fit-content;">
+                                                <button id="bot-minus-pc"
+                                                    class="xy-30-38 flex items-center justify-center bg-gray-100 rounded">-</button>
+                                                <input id="count-pc" type="number" min="1" class="w-12 text-center outline-none" value="000" id="bot-quantity" />
+                                                <button id="bot-plus-pc"
+                                                    class="xy-30-38 flex items-center justify-center bg-gray-100 rounded">+</button>
+                                            </div>
+                                        </div>
+                
+                                        <div id="list-option-count-pc" class="py-2.5 space-y-1">
+                                            <!-- <div class="flex items-center justify-end gap-x-2.5 p-2.5 rounded-lg" style="background-color: #F7F7F8;">
+                                                <p class="flex-1 text-15-l-22 font-normal">옵션선택 1</p>
+                                                <p class="text-15-l-22 font-normal">00개</p>
+                                                <button class="w-5 h-5 flex items-center justify-center">
+                                                    <i class="fa-solid fa-x"></i>
+                                                </button>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1440,7 +1470,7 @@
                                 </select>
                             </div>
                             
-                            <div id="frame-sc-count" class="scope-change-quantity flex items-center space-x-4 p-1 border rounded" style="width: fit-content;">
+                            <div id="frame-sc-count" class="sm:hidden scope-change-quantity flex items-center space-x-4 p-1 border rounded" style="width: fit-content;">
                                 <button id="bot-minus"
                                     class="xy-30-38 flex items-center justify-center bg-gray-100 rounded">-</button>
                                 <input type="number" min="1" class="w-12 text-center outline-none" value="000" id="bot-quantity" />
@@ -1449,7 +1479,7 @@
                             </div>
                         </div>
 
-                        <div id="list-option-count" class="py-2.5 space-y-1">
+                        <div id="list-option-count" class="sm:hidden py-2.5 space-y-1">
                             <!-- <div class="flex items-center justify-end gap-x-2.5 p-2.5 rounded-lg" style="background-color: #F7F7F8;">
                                 <p class="flex-1 text-15-l-22 font-normal">옵션선택 1</p>
                                 <p class="text-15-l-22 font-normal">00개</p>
@@ -2639,6 +2669,7 @@
 
             quantity++
             botInputQuantity.value = quantity
+            document.querySelector('#count-pc').value = quantity
             document.querySelector('#total-price').innerHTML = (9000 * quantity).toLocaleString('en-US')
         })
         botBtnMinus.addEventListener('click', () => {
@@ -2656,6 +2687,7 @@
             quantity--
             if (quantity < 0) quantity = 0
             botInputQuantity.value = quantity
+            document.querySelector('#count-pc').value = quantity
             document.querySelector('#total-price').innerHTML = (9000 * quantity).toLocaleString('en-US')
         })
         const btnBotLike = document.querySelector('#bot-like')
@@ -2856,6 +2888,12 @@
                 document.querySelector('#frame-sc-count').classList.add('flex-1')
                 document.querySelector('#frame-sc-count input').classList.add('flex-1')
                 document.querySelector('#frame-sc-count input').classList.remove('w-12')
+
+                document.querySelector('#count-pc').classList.remove('w-12')
+                document.querySelector('#count-pc').classList.add('w-40')
+
+                document.querySelector('#frame-sc-select-pc').classList.add('hidden')
+                document.querySelector('#list-option-count-pc').classList.add('hidden')
                 return
             }
 
@@ -2863,6 +2901,7 @@
                 `<option value="${option.value}">${option.name}</option>`
             ))
             document.querySelector('#book-options').innerHTML = stringHTML
+            document.querySelector('#book-options-pc').innerHTML = stringHTML
         }
         renderOptions()
 
@@ -2888,9 +2927,12 @@
                 `
             )).join(' ')
             document.querySelector('#list-option-count').innerHTML = stringHTML
+            document.querySelector('#list-option-count-pc').innerHTML = stringHTML
+            console.log('thay doi')
 
             const index = selectCountValues.findIndex(el => el.optionId === selectedOptionId)
             document.querySelector('#bot-quantity').value = selectCountValues[index].count
+            document.querySelector('#count-pc').value = selectCountValues[index].count
         }
 
         function setOptionCount(optionId) {
@@ -2898,6 +2940,44 @@
             selectCountValues[index].count = 0
             renderOptionCount()
         }
+
+        // === 
+        document.querySelector('#bot-plus-pc').addEventListener('click', () => {
+            
+            if (hasOption) {
+                const index = selectCountValues.findIndex(el => el.optionId === selectedOptionId)
+                selectCountValues[index].count +=1
+                document.querySelector('#count-pc').value = selectCountValues[index].count
+                renderOptionCount()
+                return
+            }
+
+
+            quantity++
+            botInputQuantity.value = quantity
+            document.querySelector('#count-pc').value = quantity
+            document.querySelector('#total-price').innerHTML = (9000 * quantity).toLocaleString('en-US')
+        })
+
+        document.querySelector('#bot-minus-pc').addEventListener('click', () => {
+            
+            if (hasOption) {
+                const index = selectCountValues.findIndex(el => el.optionId === selectedOptionId)
+                if (selectCountValues[index].count > 0) {
+                    selectCountValues[index].count -=1
+                }
+
+                renderOptionCount()
+                return
+            }
+
+            quantity--
+            if (quantity < 0) quantity = 0
+            botInputQuantity.value = quantity
+            document.querySelector('#count-pc').value = quantity
+            document.querySelector('#total-price').innerHTML = (9000 * quantity).toLocaleString('en-US')
+        })
+
 
 
     </script>
