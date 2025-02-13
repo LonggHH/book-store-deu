@@ -1353,8 +1353,8 @@
 
     <aside style="height: 44px;"></aside>
     <!-- bot -->
-    <div id="matte" class="fixed top-0 left-0 w-screen h-screen bg-black opacity-60 z-50 hidden"></div>
-    <section class="fixed bottom-0 left-0 right-0 bg-white z-50" style="border-top-left-radius: 8px; border-top-right-radius: 8px;">
+    <div id="matte" class="fixed top-0 left-0 w-screen h-screen bg-black opacity-60 hidden" style="z-index: 100;"></div>
+    <section class="fixed bottom-0 left-0 right-0 bg-white" style="border-top-left-radius: 8px; border-top-right-radius: 8px; z-index: 100;">
         <div class="container-layout pt-2.5 pb-6">
             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-x-5 flex-wrap gap-y-2">
 
@@ -1364,8 +1364,8 @@
                     </button>
                 </div>
 
-                <div id="frame-top-edit-price" class="px-5 sm:px-0 flex-1 hidden sm:flex flex-row-reverse sm:flex-row items-center justify-between">
-                    <div class="flex flex-col sm:flex-row items-end sm:items-center gap-y-1 gap-x-6">
+                <div id="frame-top-edit-price" class="px-5 sm:px-0 flex-1 hidden sm:flex flex-col-reverse sm:flex-row items-center justify-between">
+                    <div class="flex sm:flex-row items-end sm:items-center gap-y-1 gap-x-6 justify-between sm:justify-normal w-full sm:w-auto">
                         <h4 class="text-1318-1624 font-normal text-gray-400 sm:text-black sm:font-semibold whitespace-nowrap">총 상품 금액</h4>
                         <div class="flex items-center gap-x-1">
                             <span class="inline-block text-2230-2838 font-semibold sm:font-bold" id="total-price">9,000</span>
@@ -1373,13 +1373,30 @@
                         </div>
                     </div>
     
-                    <div>
-                        <div class="scope-change-quantity flex items-center space-x-4 p-1 border rounded" style="width: fit-content;">
-                            <button id="bot-minus"
-                                class="xy-30-38 flex items-center justify-center bg-gray-100 rounded">-</button>
-                            <input type="number" min="1" class="w-12 text-center outline-none" value="000" id="bot-quantity" />
-                            <button id="bot-plus"
-                                class="xy-30-38 flex items-center justify-center bg-gray-100 rounded">+</button>
+                    <div class="w-full sm:w-auto">
+                        <div id="frame-sc" class="flex items-stretch justify-between gap-x-3 py-2.5 w-full sm:w-auto">
+                            <div id="frame-sc-select" class="sm:hidden border rounded border-slate-600 flex-1 flex items-center justify-center px-4">
+                                <select name="" id="book-options" class="outline-none w-full" onchange="handleChangeSelect(this)">
+                                </select>
+                            </div>
+                            
+                            <div id="frame-sc-count" class="scope-change-quantity flex items-center space-x-4 p-1 border rounded" style="width: fit-content;">
+                                <button id="bot-minus"
+                                    class="xy-30-38 flex items-center justify-center bg-gray-100 rounded">-</button>
+                                <input type="number" min="1" class="w-12 text-center outline-none" value="000" id="bot-quantity" />
+                                <button id="bot-plus"
+                                    class="xy-30-38 flex items-center justify-center bg-gray-100 rounded">+</button>
+                            </div>
+                        </div>
+
+                        <div id="list-option-count" class="py-2.5 space-y-1">
+                            <!-- <div class="flex items-center justify-end gap-x-2.5 p-2.5 rounded-lg" style="background-color: #F7F7F8;">
+                                <p class="flex-1 text-15-l-22 font-normal">옵션선택 1</p>
+                                <p class="text-15-l-22 font-normal">00개</p>
+                                <button class="w-5 h-5 flex items-center justify-center">
+                                    <i class="fa-solid fa-x"></i>
+                                </button>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -1805,16 +1822,38 @@
         const botInputQuantity = document.querySelector('#bot-quantity')
         
         botBtnPlus.addEventListener('click', () => {
+
+            if (hasOption) {
+                const index = selectCountValues.findIndex(el => el.optionId === selectedOptionId)
+                selectCountValues[index].count +=1
+
+                renderOptionCount()
+                return
+            }
+
             quantity++
             botInputQuantity.value = quantity
             document.querySelector('#total-price').innerHTML = (9000 * quantity).toLocaleString('en-US')
         })
+
         botBtnMinus.addEventListener('click', () => {
+
+            if (hasOption) {
+                const index = selectCountValues.findIndex(el => el.optionId === selectedOptionId)
+                if (selectCountValues[index].count > 0) {
+                    selectCountValues[index].count -=1
+                }
+
+                renderOptionCount()
+                return
+            }
+
             quantity--
             if (quantity < 0) quantity = 0
             botInputQuantity.value = quantity
             document.querySelector('#total-price').innerHTML = (9000 * quantity).toLocaleString('en-US')
         })
+
         const btnBotLike = document.querySelector('#bot-like')
         btnBotLike.addEventListener('click', () => {
             btnBotLike.querySelector('i').classList.toggle('text-red-500')
@@ -1858,6 +1897,68 @@
                 frameBtnFar.classList.add('hidden')
                 frameBtnIcon.classList.remove('hidden')
             }
+        }
+
+        // ========================================================
+        let hasOption = true
+        let selectOptionValues = [
+            { id: 1, name: '옵션선택 1', value: '1' },
+            { id: 2, name: '옵션선택 2', value: '2' },
+            { id: 3, name: '옵션선택 3', value: '3' },
+        ]
+
+        let selectCountValues = selectOptionValues.map((option) => ({optionId: option.id, count: 0, name: option.name}))
+        let selectedOptionId = 1
+
+        function renderOptions() {
+
+            if (!hasOption) {
+                document.querySelector('#frame-sc-select').classList.add('hidden')
+
+                document.querySelector('#frame-sc-count').classList.add('flex-1')
+                document.querySelector('#frame-sc-count input').classList.add('flex-1')
+                document.querySelector('#frame-sc-count input').classList.remove('w-12')
+                return
+            }
+
+            let stringHTML = selectOptionValues.map((option) => (
+                `<option value="${option.value}">${option.name}</option>`
+            ))
+            document.querySelector('#book-options').innerHTML = stringHTML
+        }
+        renderOptions()
+
+        function handleChangeSelect(selectElement) {
+            const selectedValue = selectElement.value
+            const option = selectOptionValues.find(el => el.value == selectedValue)
+            if (option && option.id) {
+                selectedOptionId = option.id
+                renderOptionCount()
+            }
+        }
+
+        function renderOptionCount() {
+            let stringHTML = selectCountValues.filter(el => el.count > 0).map((el) => (
+                `
+                    <div class="flex items-center justify-end gap-x-2.5 p-2.5 rounded-lg" style="background-color: #F7F7F8;">
+                        <p class="flex-1 text-15-l-22 font-normal">${el.name}</p>
+                        <p class="text-15-l-22 font-normal">${el.count}개</p>
+                        <button onclick="setOptionCount(${el.optionId})"  class="w-5 h-5 flex items-center justify-center">
+                            <i class="fa-solid fa-x"></i>
+                        </button>
+                    </div>
+                `
+            )).join(' ')
+            document.querySelector('#list-option-count').innerHTML = stringHTML
+
+            const index = selectCountValues.findIndex(el => el.optionId === selectedOptionId)
+            document.querySelector('#bot-quantity').value = selectCountValues[index].count
+        }
+
+        function setOptionCount(optionId) {
+            const index = selectCountValues.findIndex(el => el.optionId === optionId)
+            selectCountValues[index].count = 0
+            renderOptionCount()
         }
         
         

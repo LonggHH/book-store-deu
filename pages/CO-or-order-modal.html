@@ -58,9 +58,9 @@
 
 <body>
 
-    <section>
+    <!-- <section>
         <button class="py-1 px-3 rounded border bg-gray-500 text-white" onclick="toggleModal()">toggle modal</button>
-    </section>
+    </section> -->
 
     <!--배송지 추가 (1) -->
     <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
@@ -326,12 +326,136 @@
     </div>
 
     <!-- 상품권 등록 -->
+
+
+    <!-- modal biên lai đơn giản -->
+    <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+        <!-- Modal Content -->
+        <div class="bg-white sm:rounded-lg py-5 sm:p-8 overflow-y-auto h-full custom-scroll" style="width: 560px;">
+            <!-- Modal Header -->
+            <div class="flex items-center justify-between mb-6 px-5 sm:px-0">
+                <h3 class="text-2028-2230 font-semibold">간이영수증</h3>
+                <button class="cursor-pointer">
+                    <img class="w-6 h-6" src="../assets/images/icon/common/x.svg" alt="icon">
+                </button>
+            </div>
+
+            <!-- info List -->
+            <div class="sm:space-y-5">
+                <div class="flex items-center justify-between px-5 py-2 sm:p-0 border-t-8 sm:border-none border-gray-100">
+                    <div class="flex items-center justify-start">
+                        <div class="p-3 border rounded-full flex items-center gap-x-3"
+                            onmouseenter="toggleIcons(true)"
+                            onmouseleave="toggleIcons(false)"
+                        >
+                            <button class="relative w-7 h-7 flex items-center justify-center rounded-full hover:bg-gray-100">
+                                <img id="shareIcon" src="../assets/images/icon/category/share.svg" alt="">
+                                <span id="closeIcon" class="items-center justify-center w-7 h-7 rounded-full bg-gray-100 hidden">
+                                    <i class="fa-solid fa-x"></i>
+                                </span>
+                            </button>
+                            <div id="list-app-icon" class="items-center gap-x-3 hidden">
+                                <button class="w-7 h-7 flex items-center justify-center rounded-full hover:bg-gray-100">
+                                    <img class="" src="../assets/images/icon/category/link.svg" alt="">
+                                </button>
+                                <button class="w-7 h-7 flex items-center justify-center rounded-full hover:bg-gray-100">
+                                    <img class="" src="../assets/images/icon/category/talk.svg" alt="">
+                                </button>
+                                <button class="w-7 h-7 flex items-center justify-center rounded-full hover:bg-gray-100">
+                                    <img class="" src="../assets/images/icon/category/instagram.svg" alt="">
+                                </button>
+                                <button class="w-7 h-7 flex items-center justify-center rounded-full hover:bg-gray-100">
+                                    <img class="" src="../assets/images/icon/category/x.svg" alt="">
+                                </button>
+                                <button class="w-7 h-7 flex items-center justify-center rounded-full hover:bg-gray-100">
+                                    <img class="" src="../assets/images/icon/category/facebook.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="text-13-l-18 font-semibold py-1.5 px-3 rounded-lg border whitespace-nowrap">프린트</button>
+                </div>
+
+                <div class="space-y-5 px-5 sm:px-0 py-3 sm:py-0">
+                    <div class="space-y-2">
+                        <h4 class="text-17-l-24 font-medium py-2 border-b">결제정보</h4>
+
+                        <ul class="space-y-2">
+                            <li class="flex items-start justify-between">
+                                <span class="inline-block text-sm font-normal">카드종류</span>
+                                <span class="inline-block text-15-l-22 font-medium w-1/2 text-right">국민은행카드</span>
+                            </li>
+                            <li class="flex items-start justify-between">
+                                <span class="inline-block text-sm font-normal">거래종류</span>
+                                <span class="inline-block text-15-l-22 font-medium w-1/2 text-right"> 신용거래</span>
+                            </li>
+                            <li class="flex items-start justify-between">
+                                <span class="inline-block text-sm font-normal">할부개월</span>
+                                <span class="inline-block text-15-l-22 font-medium w-1/2 text-right">일시불</span>
+                            </li>
+                            <li class="flex items-start justify-between">
+                                <span class="inline-block text-sm font-normal">카드번호</span>
+                                <span class="inline-block text-15-l-22 font-medium w-1/2 text-right">000000******000*</span>
+                            </li>
+                            <li class="flex items-start justify-between">
+                                <span class="inline-block text-sm font-normal">거래일시</span>
+                                <span class="inline-block text-15-l-22 font-medium w-1/2 text-right">2025.01.01 00:00:00</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="space-y-2">
+                        <h4 class="text-17-l-24 font-medium py-2 border-b">구매정보</h4>
+
+                        <ul class="space-y-2">
+                            <li class="flex items-start justify-between">
+                                <span class="inline-block text-sm font-normal">주문번호</span>
+                                <span class="inline-block text-15-l-22 font-medium w-1/2 text-right">00000-000000</span>
+                            </li>
+                            <li class="flex items-start justify-between">
+                                <span class="inline-block text-sm font-normal">구매상품</span>
+                                <span class="inline-block text-15-l-22 font-medium w-1/2 text-right">상품이름 및 품명 상품이름 및 품명 상품이름 및 품명 상품이름 및 품명 상품이름 및 품명 외 2개</span>
+                            </li>
+                            <li class="flex items-start justify-between">
+                                <span class="inline-block text-sm font-normal">과세금액</span>
+                                <span class="inline-block text-15-l-22 font-medium w-1/2 text-right">000원</span>
+                            </li>
+                            <li class="flex items-start justify-between">
+                                <span class="inline-block text-sm font-normal">비과세금액</span>
+                                <span class="inline-block text-15-l-22 font-medium w-1/2 text-right">000원</span>
+                            </li>
+                            <li class="flex items-start justify-between">
+                                <span class="inline-block text-sm font-normal">부가세</span>
+                                <span class="inline-block text-15-l-22 font-medium w-1/2 text-right">000원</span>
+                            </li>
+                            <li class="flex items-start justify-between">
+                                <span class="inline-block text-sm font-normal">합계금액</span>
+                                <span class="inline-block text-15-l-22 font-medium w-1/2 text-right text-red-500">000원</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
     <script>
         function toggleModal() {
             document.getElementById('modal').classList.toggle('hidden')
         }
+
+        function toggleIcons(isHover) {
+            document.querySelector("#shareIcon").classList.toggle("hidden", isHover);
+            
+            document.querySelector("#closeIcon").classList.toggle("hidden", !isHover);
+            document.querySelector("#closeIcon").classList.toggle("flex", isHover);
+
+            document.querySelector("#list-app-icon").classList.toggle("hidden", !isHover);
+            document.querySelector("#list-app-icon").classList.toggle("flex", isHover);
+        }
+
     </script>
 </body>
 

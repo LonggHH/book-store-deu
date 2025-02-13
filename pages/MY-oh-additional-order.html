@@ -568,523 +568,466 @@
 
                 <!-- start main -->
                 <main class="flex-1 overflow-x-auto custom-scroll">
-                    <!-- select -->
-                    <div class="p-5 sm:p-0 space-y-5 sm:space-y-6 border-b sm:border-black sm:pb-3">
-                        <h4 class="text-1724-2230 font-semibold">주문/배송 조회</h4>
 
-                        <div class="space-y-2">
-                            <div class="flex flex-col gap-y-2 sm:flex-row sm:items-center justify-between">
-                                <ul class="flex items-center gap-x-1">
-                                    <li class="cursor-pointer p-1.5 text-13-l-18 font-semibold">전체</li>
-                                    <span class="inline-block w-1-px bg-gray-100" style="height: 18px;"></span>
-                                    <li class="cursor-pointer p-1.5 text-13-l-18 font-normal">6개월 이내</li>
-                                    <span class="inline-block w-1-px bg-gray-100" style="height: 18px;"></span>
-                                    <li class="cursor-pointer p-1.5 text-13-l-18 font-normal">1년 이내</li>
-                                    <span class="inline-block w-1-px bg-gray-100" style="height: 18px;"></span>
-                                    <li class="cursor-pointer p-1.5 text-13-l-18 font-normal">기간 조회</li>
-                                </ul>
-
-                                <div class="flex items-center gap-x-2 py-1.5 px-2.5 rounded-md border">
-                                    <input class="flex-1 inline-block text-15-l-22 font-normal text-gray-400" type="text" placeholder="주문번호 검색">
-                                    <div class="w-4 h-4 overflow-hidden flex items-center justify-center cursor-pointer">
-                                        <i class="fa-solid fa-magnifying-glass text-gray-700"></i>
+                    <div id="modal-order-detail" class="">
+                        <!-- Modal Content -->
+                        <div class="bg-white sm:rounded-lg py-5 sm:p-8 h-full overflow-y-auto custom-scroll">
+                            <!-- Modal Header -->
+                            <div class="px-5 sm:px-0 flex items-center justify-between mb-6 sm:pb-3 sm:border-b border-black">
+                                <h3 class="text-2028-2230 font-semibold">주문 상세 보기</h3>
+                            </div>
+                            <!-- content -->
+                            <div class="px-5 sm:px-0 space-y-6">
+                                <div class="flex items-center justify-between flex-wrap gap-y-2.5 py-2.5 px-3 bg-gray-100 rounded-lg">
+                                    <div class="flex items-start gap-x-6">
+                                        <div class="flex flex-col sm:flex-row sm:items-center gap-2 ">
+                                            <span class="inline-block text-sm font-medium text-gray-400 whitespace-nowrap">주문 일자</span>
+                                            <span class="inline-block text-sm font-medium whitespace-nowrap">2024.09.09</span>
+                                        </div>
+                                       
+                                        <div class="flex flex-col sm:flex-row sm:items-center gap-2 ">
+                                            <span class="inline-block text-sm font-medium text-gray-400 whitespace-nowrap">주문번호</span>
+                                            <span class="inline-block text-sm font-medium whitespace-nowrap">000-000-000-000</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="flex items-center gap-x-2 bg-gray-100 rounded-lg p-1">
-                                <button class="filter-btn flex-1 whitespace-nowrap text-sm font-medium text-gray-400 py-1.5 rounded-lg bg-white text-black shadow-md">전체</button>
-                                <button class="filter-btn flex-1 whitespace-nowrap text-sm font-medium text-gray-400 py-1.5">미입금</button>
-                                <button class="filter-btn flex-1 whitespace-nowrap text-sm font-medium text-gray-400 py-1.5">배송중</button>
-                                <button class="filter-btn flex-1 whitespace-nowrap text-sm font-medium text-gray-400 py-1.5">배송완료</button>
-                            </div>
-                        </div>
-                    </div>
+                            <!-- start + -->
+                            <div class="my-5 sm:my-6 space-y-5 sm:space-y-8">
+                                <div class="sm:space-y-3">
+                                    <div class="px-5 sm:px-0 mb-6 pb-5 sm:pb-3 border-b">
+                                        <h4 class="text-1724-1826 font-semibold">장바구니 상품</h4>
+                                    </div>
 
-                    <!-- k -->
-                    <div id="content-history"  class="p-5 sm:p-0 space-y-5">
-                        <div class="space-y-5">
-                            <!-- khung 1 -->
-                            <div class="space-y-3 sm:space-y-6 sm:pb-3">
-                                <div class="py-1.5 sm:py-4 sm:border-t sm:border-b flex items-center gap-x-6">
-                                    <div class="flex sm:hidden items-center justify-start flex-1">
-                                        <span class="inline-block text-xs font-medium">입금전</span>
-                                    </div>
-                                    <div class="flex items-center gap-x-2">
-                                        <span class="hidden sm:inline-block text-sm font-normal sm:font-medium sm:text-gray-400">주문 일자</span>
-                                        <span class="inline-block text-sm font-normal sm:font-medium">2024.09.09</span>
-                                    </div>
-                                    <div class="flex items-center gap-x-2">
-                                        <span class="hidden sm:inline-block text-sm font-normal sm:font-medium sm:text-gray-400">주문번호</span>
-                                        <span class="inline-block text-sm font-normal sm:font-medium">000-000-000-000</span>
+                                    <div class="px-5 sm:px-0 space-y-6">
+                                        <div class="flex items-center space-x-2">
+                                            <input id="book" type="checkbox" class="form-checkbox text-gray-600 rounded-full" checked hidden>
+                                            <label for="book" id="item-all-book-1" class="flex items-center gap-2 cursor-pointer">
+                                                <img class="item-choose-book w-6 h-6" src="../assets/images/icon/common/check-black.svg" alt="icon">
+                                                <span class="inline-block text-1420-1724 font-semibold py-1 px-3 border rounded-full">도서</span>
+                                            </label>
+                                        </div>
+
+
+                                        <div id="list-book" class="space-y-6">
+                                            <!-- start item -->
+                                            
+                                            <!-- end item -->
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- book -->
-                                <div class="space-y-4">
 
-                                    <div class="flex flex-col sm:flex-row gap-y-3">
-                                        <div class="flex-1 flex items-center justify-between">
-                                            <div class="flex gap-x-5">
+                                <div>
+                                    <div class="px-5 sm:px-0 space-y-6">
+                                        <!-- Chọn toàn bộ -->
+                                        <div class="flex items-center space-x-2">
+                                            <input id="sanctuary" type="checkbox" class="form-checkbox text-gray-600 rounded-full" checked
+                                                hidden>
+                                            <label id="item-all-book-2" for="sanctuary" class="flex items-center gap-2 cursor-pointer">
+                                                <img class="item-choose-book w-6 h-6" src="../assets/images/icon/common/check-black.svg" alt="icon">
+                                                <span class="inline-block text-1420-1724 font-semibold py-1 px-3 border rounded-full">성물</span>
+                                            </label>
+                                        </div>
+                        
+                                        <!-- Các sản phẩm -->
+                                        <div id="list-sanctuary" class="flex flex-wrap gap-y-5 justify-between">
+                                            <!-- start item 1-->
+                                            <div class="relative flex flex-col sm:flex-row items-stretch gap-3 sm:gap-5 w-full sm:w-auto">
+                                                <div>
+                                                    <input id="sanctuary-1" type="checkbox" checked hidden>
+                                                    <label for="sanctuary-1" class="flex items-center gap-2 cursor-pointer">
+                                                        <img class="item-choose-book w-6 h-6" src="../assets/images/icon/common/check-white.svg" alt="icon">
+                                                        <h4 class="block sm:hidden text-base font-semibold">책 제목</h4>
+                                                    </label>
+                                                </div>
+                        
+                                                <div class="flex-1 flex items-stretch gap-5">
+                                                    <div class="relative frame-size-7070-160160">
+                                                        <div class="relative frame-size-7070-160160 rounded-lg shadow-md border overflow-hidden">
+                                                            <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png"
+                                                                alt="img">
+                                                            <div class="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center gap-3"
+                                                                style="background-color: rgba(0, 0, 0, 0.4);">
+                                                                <div
+                                                                    class="w-5 sm:w-8 h-5 sm:h-8 border-2 border-white rounded-full flex items-center justify-center">
+                                                                    <i class="fa-solid fa-exclamation text-white"></i>
+                                                                </div>
+                                                                <span class="hidden sm:block text-base font-semibold text-white">품절</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex-1">
+                                                        <div class="flex flex-col justify-between h-full">
+                                                            <div class="flex flex-col gap-3 mb-3 sm:mb-0">
+
+                                                                <h4 class="hidden sm:block text-base font-semibold">책 제목</h4>
+
+                                                                <div class="flex items-baseline">
+                                                                    <span class="inline-block text-sm font-semibold text-red-500">10%</span>
+                                                                    <span class="ml-1">
+                                                                        <span class="inline-block text-sm font-semibold">12,000</span><span
+                                                                            class="inline-block text-sm font-normal">원</span>
+                                                                    </span>
+                                                                    <span
+                                                                        class="inline-block text-sm line-through font-normal text-gray-400 ml-3">12,000원</span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="">
+                                                                <div class="opacity-0 flex sm:space-x-4">
+                                                                    <div class="scope-change-quantity flex items-center space-x-4 p-1 border rounded"
+                                                                        style="width: fit-content;">
+                                                                        <button
+                                                                            class="xy-30-px flex items-center justify-center bg-gray-100 rounded">-</button>
+                                                                        <input type="number" min="1" class="w-12 text-center outline-none"
+                                                                            value="000" />
+                                                                        <button
+                                                                            class="xy-30-px flex items-center justify-center bg-gray-100 rounded">+</button>
+                                                                    </div>
+
+                                                                    <div class="flex items-center gap-0.5">
+                                                                        <span class="text-money text-1624-2230 font-semibold">12,000</span>
+                                                                        <span class="text-sm font-normal">원</span>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="flex flex-col-reverse justify-start gap-3 sm:gap-0 sm:flex-row sm:items-center sm:space-x-4">
+                                                                    <div class="scope-change-quantity flex items-center space-x-4 p-1 border rounded bg-gray-100"
+                                                                        style="width: fit-content; color: rgba(55, 56, 60, 0.16);">
+                                                                        <button disabled
+                                                                            class="xy-30-px flex items-center justify-center bg-gray-100 rounded">-</button>
+                                                                        <input type="number" min="1" class="w-12 text-center outline-none bg-gray-100" disabled
+                                                                            value="000" />
+                                                                        <button disabled
+                                                                            class="xy-30-px flex items-center justify-center bg-gray-100 rounded">+</button>
+                                                                    </div>
+                            
+                                                                    <div class="flex items-center gap-0.5">
+                                                                        <span class="text-money text-1624-2230 font-semibold" style="color: rgba(55, 56, 60, 0.16);">12,000</span>
+                                                                        <span class="text-sm font-normal" style="color: rgba(55, 56, 60, 0.16);">원</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- end item 1 -->
+                                            
+                                            <!-- start item 2 -->
+                                            <div class="relative flex flex-col sm:flex-row items-stretch gap-3 sm:gap-5 w-full">
+                                                <div>
+                                                    <input id="sanctuary-1" type="checkbox" checked hidden>
+                                                    <label for="sanctuary-1" class="flex items-center gap-2 cursor-pointer">
+                                                        <img class="item-book-2 item-choose-book w-6 h-6" src="../assets/images/icon/common/check-black.svg" alt="icon">
+                                                        <h4 class="block sm:hidden text-base font-semibold">책 제목</h4>
+                                                    </label>
+                                                </div>
+                        
+                                                <div class="flex-1 flex items-stretch gap-5">
+                                                    <div class="relative frame-size-7070-160160">
+                                                        <div class="relative frame-size-7070-160160 rounded-lg shadow-md border overflow-hidden">
+                                                            <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png"
+                                                                alt="img">
+                                                            <div onclick="likeBook(this)" class="absolute bottom-3 right-3 z-20 w-9 h-9 rounded-full hidden sm:flex items-center justify-center cursor-pointer"
+                                                                style="background-color: rgba(0, 0, 0, 0.16);">
+                                                                <i class="fa-solid fa-heart text-white"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex-1">
+                                                        <div class="flex flex-col justify-between h-full">
+                                                            <div class="flex flex-col gap-3 mb-3 sm:mb-0">
+                                                                <h4 class="hidden sm:block text-base font-semibold">책 제목</h4>
+
+                                                                <div class="flex items-baseline">
+                                                                    <span class="inline-block text-sm font-semibold text-red-500">10%</span>
+                                                                    <span class="ml-1">
+                                                                        <span class="inline-block text-sm font-semibold">12,000</span><span
+                                                                            class="inline-block text-sm font-normal">원</span>
+                                                                    </span>
+                                                                    <span
+                                                                        class="inline-block text-sm line-through font-normal text-gray-400 ml-3">12,000원</span>
+                                                                </div>
+                        
+                                                                <div class="sm:border sm:rounded-lg sm:overflow-hidden sm:py-2 sm:px-3">
+                                                                    <select id="" name=""
+                                                                        class="py-1 px-3 w-28 bg-gray-200 appearance-none sm:py-0 sm:px-0 sm:bg-white sm:appearance-auto
+                                                                            rounded text-sm font-normal outline-none cursor-pointer sm:w-full">
+                                                                        <option value="">옵션명</option>
+                                                                        <option value="">옵션명-1</option>
+                                                                        <option value="">옵션명-2</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                        
+                                                            <div class="flex flex-col-reverse justify-start gap-3 sm:gap-0 sm:flex-row sm:items-center sm:space-x-4">
+                                                                <div class="scope-change-quantity flex items-center space-x-4 p-1 border rounded"
+                                                                    style="width: fit-content;">
+                                                                    <button
+                                                                        class="xy-30-px flex items-center justify-center bg-gray-100 rounded">-</button>
+                                                                    <input type="number" min="1" class="w-12 text-center outline-none"
+                                                                        value="000" />
+                                                                    <button
+                                                                        class="xy-30-px flex items-center justify-center bg-gray-100 rounded">+</button>
+                                                                </div>
+                        
+                                                                <div class="flex items-center gap-0.5">
+                                                                    <span class="text-money text-1624-2230 font-semibold">12,000</span>
+                                                                    <span class="text-sm font-normal">원</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- end item 2-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="px-5 sm:px-0 border-t-8 border-gray-200 sm:border-none">
+                                <div class="mb-8 sm:mb-6">
+                                    <h2 class="text-1724-1826 font-semibold py-3 sm:border-b mb-3">추가 주문</h2>
+                
+                                    <div class="flex flex-col gap-y-3">
+                                        <div class="flex items-center justify-between flex-wrap gap-y-1">
+                                            <span class="text-gray-500 inline-block text-15-l-22 font-medium">상품수</span>
+                                            <div class="flex items-center gap-1">
+                                                <span class="inline-block text-xs font-medium py-0.5 px-2 border rounded-full" style="color: rgba(255, 146, 0, 1); border-color: rgba(255, 146, 0, 1);">추가</span>
+                                                <span class="text-15-l-22 font-normal inline-block">2개</span>
+                                            </div>
+                                        </div>                        
+                                        <div class="flex items-center justify-between flex-wrap gap-y-1">
+                                            <span class="text-gray-500 inline-block text-15-l-22 font-medium">선택한 상품 주문금액</span>
+                                            <div class="flex items-center gap-1">                                
+                                                <span class="text-15-l-22 font-normal inline-block">95,400원</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center justify-between flex-wrap gap-y-1">
+                                            <span class="text-gray-500 inline-block text-15-l-22 font-medium">총 배송비</span>
+                                            <div class="flex items-center gap-1">
+                                                <span class="inline-block text-xs font-medium py-0.5 px-2 border rounded-full" style="color: rgba(0, 191, 64, 1); border-color: rgba(0, 191, 64, 1);">합배송할인</span>
+                                                <span class="inline-block text-15-l-22 font-normal text-gray-400 line-through">3,000원</span>
+                                                <img class="w-5 h-5" src="../assets/images/icon/cart/play.svg" alt="icon">
+                                                <span class="text-15-l-22 font-normal inline-block">0원</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center justify-between flex-wrap gap-y-1">
+                                            <span class="text-gray-500 inline-block text-15-l-22 font-medium">할인금액</span>
+                                            <div class="flex items-center gap-1">                                
+                                                <span class="text-15-l-22 font-normal inline-block">5,000원</span>
+                                            </div>
+                                        </div>                  
+                                        <div class="flex items-center justify-between flex-wrap gap-y-1">
+                                            <span class="text-gray-500 inline-block text-15-l-22 font-medium">예상 마일리지</span>
+                                            <div class="flex items-center gap-1">                                
+                                                <span class="text-15-l-22 font-normal inline-block">5,000원</span>
+                                            </div>
+                                        </div>                  
+                                    </div>
+                                </div>
+
+                                <div class="mb-8 sm:mb-6 flex items-center justify-between">
+                                    <span class="inline-block text-15-l-22 font-medium">최종 결제 금액</span>
+                
+                                    <div class="flex items-center gap-x-6">
+                                        <div class="flex items-center gap-0.5">
+                                            <span class="inline-block text-22-l-30 font-normal">4</span>
+                                            <span class="inline-block text-15-l-22 font-normal">개</span>
+                                        </div>
+                                        <div class="w-1-px h-3" style="background-color: rgba(112, 115, 124, 0.16);"></div>
+                                        <div class="flex items-center gap-0.5">
+                                            <span class="inline-block text-22-l-30 font-normal">93,400</span>
+                                            <span class="inline-block text-15-l-22 font-normal">원</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex justify-between space-x-2 py-2.5 sm:py-0">
+                                    <button onclick="gotoPage('./CO-or-order-step-0.html')"
+                                        class="flex-1 whitespace-nowrap py-2 text-15-l-22 font-semibold text-white rounded"
+                                        style="background-color: rgba(238, 23, 98, 1); border-color: rgba(238, 23, 98, 1);">
+                                        주문하기</button>
+                                </div>
+                            </div>
+                            <!-- end + -->
+            
+                            <div class="mt-6 sm:space-y-3 border-t-8 border-gray-200 sm:border-none">
+                                <h4 class="text-1724-1826 font-semibold p-5 sm:p-0 border-b sm:py-3">구매 상품 정보</h4>
+            
+                                <div class="p-5 sm:p-0 space-y-5">
+
+                                    <button class="text-base font-semibold flex items-center justify-center gap-x-2.5 bg-black text-white w-full py-2.5 rounded-lg">
+                                        <img class="w-5 h-5" src="../assets/images/icon/my-page/before-deposit.svg" alt="">
+                                        <span>입금/발송전</span>
+                                    </button>
+
+                                    <div class="space-y-5 sm:space-y-8">
+                                        <div class="">
+                                            <div class="flex items-center gap-x-5">
                                                 <div class="frame-size-70108-102108">
-                                                    <div class="scope-imgage-super-small border shadow-md overflow-hidden h-full" style="width: 70px;">
-                                                        <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="">                                                    
+                                                    <div class="h-full scope-imgage-super-small border shadow-md" style="width: 70px;">
+                                                        <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="">
                                                     </div>
                                                 </div>
-    
-                                                <div class=" flex flex-col justify-between">
-                                                    <div class="space-y-3">
-                                                        <h4 class="text-1522-1624 font-semibold">상품명 표기</h4>
-                                                        <div class="flex items-center gap-x-3">
+                
+                                                <div class="space-y-3">
+                                                    <h4 class="text-1522-1624 font-semibold">상품명 표기</h4>
+                                                    <div class="flex items-center gap-x-3">
+                                                        <div class="flex items-center gap-x-1">
+                                                            <span class="inline-block text-sm font-semibold text-red-500">10%</span>
                                                             <div class="flex items-center gap-x-0.5">
-                                                                <span class="inline-block text-sm font-normal sm:font-semibold">24,000</span>
+                                                                <span class="inline-block text-sm font-semibold">12,000</span>
                                                                 <span class="inline-block text-sm font-normal">원</span>
                                                             </div>
-                                                            <span class="inline-block text-sm font-normal">/</span>
-                                                            <div class="flex items-center gap-x-0.5">
-                                                                <span class="inline-block text-sm font-normal sm:font-semibold">2</span>
-                                                                <span class="inline-block text-sm font-normal">개</span>
-                                                            </div>
                                                         </div>
+                                                        <span class="text-sm font-normal text-gray-400 line-through">12,000원</span>
                                                     </div>
-    
-                                                    <div class="flex items-center gap-x-0.5 py-1.5 cursor-pointer" onclick="gotoPage('./MY-oh-full-history-detail.html')">
-                                                        <span class="inline-block text-13-l-18 font-semibold text-blue-400">주문 상세 보기</span>
-                                                        <div class="w-5 h-5 flex items-center justify-center">
-                                                            <i class="text-xs fa-solid fa-chevron-right text-blue-400"></i>
+                                                    <div class="flex items-center justify-between">
+                                                        <div class="flex items-center gap-x-0.5">
+                                                            <span class="inline-block text-sm font-semibold">2</span>
+                                                            <span class="inline-block text-sm font-normal">개</span>
+                                                        </div>
+                                                        <div class="flex items-center gap-x-0.5">
+                                                            <span class="inline-block text-base font-semibold">24,000</span>
+                                                            <span class="inline-block text-sm font-normal">원</span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-    
-                                            <div class="rounded-full bg-blue-100 hidden sm:flex items-center justify-center" style="width: 90px; height: 90px;">
-                                                <div class="flex flex-col gap-y-1 items-center justify-center">
-                                                    <img src="../assets/images/icon/my-page/desktop-clock.svg" alt="">
-                                                    <span class="inline-block text-xs font-medium">입금전</span>
-                                                </div>
-                                            </div>
                                         </div>
-    
-                                        <div class="flex items-center sm:items-stretch flex-row sm:flex-col gap-y-1 gap-x-1.5 sm:px-8">
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap" onclick="gotoPage('./CS-11-inquiry.html')">1:1 문의</button>
-                                            <div class="w-1-px h-5 bg-gray-400 block sm:hidden"></div>
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap" onclick="gotoPage('./CO-or-order-step-1-courier-receipt.html')">배송정보 변경</button>
-                                            <div class="w-1-px h-5 bg-gray-400 block sm:hidden"></div>
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap" onclick="gotoPage('./MY-oh-additional-order.html')">추가주문</button>
-                                            <div class="w-1-px h-5 bg-gray-400 block sm:hidden"></div>
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap">주문취소</button>                                            
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            
-                            <div class="h-1-px w-full border-b block sm:hidden"></div>
-
-                             <!-- khung 2 -->
-                             <div class="space-y-3 sm:space-y-6 sm:pb-3">
-                                <div class="py-1.5 sm:py-4 sm:border-t sm:border-b flex items-center gap-x-6">
-                                    <div class="flex sm:hidden items-center justify-start flex-1">
-                                        <span class="inline-block text-xs font-medium">입금/발송 전</span>
-                                    </div>
-                                    <div class="flex items-center gap-x-2">
-                                        <span class="hidden sm:inline-block text-sm font-normal sm:font-medium sm:text-gray-400">주문 일자</span>
-                                        <span class="inline-block text-sm font-normal sm:font-medium">2024.09.09</span>
-                                    </div>
-                                    <div class="flex items-center gap-x-2">
-                                        <span class="hidden sm:inline-block text-sm font-normal sm:font-medium sm:text-gray-400">주문번호</span>
-                                        <span class="inline-block text-sm font-normal sm:font-medium">000-000-000-000</span>
-                                    </div>
-                                </div>
-                                <!-- book -->
-                                <div class="space-y-4">
-
-                                    <div class="flex flex-col sm:flex-row gap-y-3">
-                                        <div class="flex-1 flex items-center justify-between">
-                                            <div class="flex gap-x-5">
+                
+                                        <hr class="block sm:hidden my-5">
+                
+                                        <div class="">
+                                            <div class="flex items-center gap-x-5">
                                                 <div class="frame-size-70108-102108">
-                                                    <div class="scope-imgage-super-small border shadow-md overflow-hidden h-full" style="width: 70px;">
-                                                        <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="">                                                    
+                                                    <div class="rounded-lg border shadow-md frame-size-70108-7070">
+                                                        <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="">
                                                     </div>
                                                 </div>
-    
-                                                <div class=" flex flex-col justify-between">
-                                                    <div class="space-y-3">
-                                                        <h4 class="text-1522-1624 font-semibold">상품명 표기</h4>
-                                                        <div class="flex items-center gap-x-3">
+                
+                                                <div class="space-y-2">
+                                                    <h4 class="text-1522-1624 font-semibold">상품명 표기</h4>
+                                                    <div class="flex items-center gap-x-3">
+                                                        <div class="flex items-center gap-x-1">
+                                                            <span class="inline-block text-sm font-semibold text-red-500">10%</span>
                                                             <div class="flex items-center gap-x-0.5">
-                                                                <span class="inline-block text-sm font-normal sm:font-semibold">24,000</span>
+                                                                <span class="inline-block text-sm font-semibold">12,000</span>
                                                                 <span class="inline-block text-sm font-normal">원</span>
                                                             </div>
-                                                            <span class="inline-block text-sm font-normal">/</span>
-                                                            <div class="flex items-center gap-x-0.5">
-                                                                <span class="inline-block text-sm font-normal sm:font-semibold">2</span>
-                                                                <span class="inline-block text-sm font-normal">개</span>
-                                                            </div>
                                                         </div>
+                                                        <span class="text-sm font-normal text-gray-400 line-through">12,000원</span>
                                                     </div>
-    
-                                                    <div class="flex items-center gap-x-0.5 py-1.5 cursor-pointer" onclick="gotoPage('./MY-oh-full-history-detail.html')">
-                                                        <span class="inline-block text-13-l-18 font-semibold text-blue-400">주문 상세 보기</span>
-                                                        <div class="w-5 h-5 flex items-center justify-center">
-                                                            <i class="text-xs fa-solid fa-chevron-right text-blue-400"></i>
+                                                    <div class="rounded bg-gray-100 text-sm font-normal py-1 px-3">
+                                                        옵션명
+                                                    </div>
+                                                    <div class="flex items-center justify-between">
+                                                        <div class="flex items-center gap-x-0.5">
+                                                            <span class="inline-block text-sm font-semibold">2</span>
+                                                            <span class="inline-block text-sm font-normal">개</span>
+                                                        </div>
+                                                        <div class="flex items-center gap-x-0.5">
+                                                            <span class="inline-block text-base font-semibold">24,000</span>
+                                                            <span class="inline-block text-sm font-normal">원</span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-    
-                                            <div class="rounded-full bg-blue-100 hidden sm:flex items-center justify-center" style="width: 90px; height: 90px;">
-                                                <div class="flex flex-col gap-y-1 items-center justify-center">
-                                                    <img src="../assets/images/icon/my-page/before-deposit.svg" alt="">
-                                                    <span class="inline-block text-xs font-medium">입금/발송전</span>
-                                                </div>
-                                            </div>
-                                        </div>
-    
-                                        <div class="flex items-center sm:items-stretch flex-row sm:flex-col gap-y-1 gap-x-1.5 sm:px-8">
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap" onclick="gotoPage('./CS-11-inquiry.html')">1:1 문의</button>
-                                            <div class="w-1-px h-5 bg-gray-400 block sm:hidden"></div>
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap" onclick="gotoPage('./CO-or-order-step-1-courier-receipt.html')">배송정보 변경</button>
-                                            <div class="w-1-px h-5 bg-gray-400 block sm:hidden"></div>
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap" onclick="gotoPage('./MY-oh-additional-order.html')">추가주문</button>
-                                            <div class="w-1-px h-5 bg-gray-400 block sm:hidden"></div>
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap">주문취소</button>                                            
                                         </div>
                                     </div>
-
                                 </div>
-
                             </div>
                             
-                            <div class="h-1-px w-full border-b block sm:hidden"></div>
-                            
-                            
-                            <!-- khung 3 -->
-                            <div class="space-y-3 sm:space-y-6 sm:pb-3">
-                                <!-- time -->
-                                <div class="py-1.5 sm:py-4 sm:border-t sm:border-b flex items-center gap-x-6">
-                                    <div class="flex sm:hidden items-center justify-start flex-1">
-                                        <span class="inline-block text-xs font-medium">상품 준비중</span>
-                                    </div>
-                                    <div class="flex items-center gap-x-2">
-                                        <span class="hidden sm:inline-block text-sm font-normal sm:font-medium sm:text-gray-400">주문 일자</span>
-                                        <span class="inline-block text-sm font-normal sm:font-medium">2024.09.09</span>
-                                    </div>
-                                    <div class="flex items-center gap-x-2">
-                                        <span class="hidden sm:inline-block text-sm font-normal sm:font-medium sm:text-gray-400">주문번호</span>
-                                        <span class="inline-block text-sm font-normal sm:font-medium">000-000-000-000</span>
-                                    </div>
-                                </div>
-                                <!-- content -->
-                                <div class="space-y-4">
-                                    <!-- 1 -->
-                                    <div class="flex flex-col sm:flex-row gap-y-3">
-                                        <div class="flex-1 flex items-center justify-between">
-                                            <div class="flex gap-x-5">
-                                                <div class="frame-size-70108-102108 scope-imgage-super-small border shadow-md overflow-hidden h-full">
-                                                    <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="">
-                                                </div>
-    
-                                                <div class=" flex flex-col justify-between">
-                                                    <div class="space-y-3">
-                                                        <h4 class="text-1522-1624 font-semibold">상품명 표기</h4>
-                                                        <div class="flex items-center gap-x-3">
-                                                            <div class="flex items-center gap-x-0.5">
-                                                                <span class="inline-block text-sm font-normal sm:font-semibold">24,000</span>
-                                                                <span class="inline-block text-sm font-normal">원</span>
-                                                            </div>
-                                                            <span class="inline-block text-sm font-normal">/</span>
-                                                            <div class="flex items-center gap-x-0.5">
-                                                                <span class="inline-block text-sm font-normal sm:font-semibold">2</span>
-                                                                <span class="inline-block text-sm font-normal">개</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-    
-                                                    <div class="flex items-center gap-x-0.5 py-1.5 cursor-pointer" onclick="gotoPage('./MY-oh-full-history-detail.html')">
-                                                        <span class="inline-block text-13-l-18 font-semibold text-blue-400">주문 상세 보기</span>
-                                                        <div class="w-5 h-5 flex items-center justify-center">
-                                                            <i class="text-xs fa-solid fa-chevron-right text-blue-400"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-    
-                                            <div class="rounded-full bg-blue-100 hidden sm:flex items-center justify-center" style="width: 90px; height: 90px;">
-                                                <div class="flex flex-col gap-y-1 items-center justify-center">
-                                                    <img src="../assets/images/icon/my-page/packaging.svg" alt="">
-                                                    <span class="inline-block text-xs font-medium">상품 준비중</span>
-                                                </div>
-                                            </div>
-                                        </div>
-    
-                                        <div class="flex items-center sm:items-stretch flex-row sm:flex-col gap-y-1 gap-x-1.5 sm:px-8">
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap" onclick="gotoPage('./CS-11-inquiry.html')">1:1 문의</button>
-                                            <div class="w-1-px h-5 bg-gray-400 block sm:hidden"></div>
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap" onclick="gotoPage('./MY-oh-additional-order.html')">추가주문</button>
-                                            <div class="w-1-px h-5 bg-gray-400 block sm:hidden"></div>
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap">주문취소</button>                                            
+                            <div class="h-2 bg-gray-100 block sm:hidden"></div>
+            
+                            <div class="p-5 sm:p-0 sm:mt-6 space-y-5 sm:space-y-3">
+                                <h4 class="text-1724-1826 font-semibold sm:border-b sm:py-3">배송지 정보</h4>
+            
+                                <div class="space-y-5 sm:space-y-3">
+                                    <div class="flex flex-col sm:flex-row sm:items-center gap-x-6 gap-y-1">
+                                        <span class="inline-block text-15-l-22 font-medium text-gray-400 whitespace-nowrap">주문자</span>
+                                        <div class="flex items-center gap-x-3">
+                                            <span class="inline-block text-15-l-22 font-medium whitespace-nowrap">주문자</span>
+                                            <span class="inline-block text-15-l-22 font-medium whitespace-nowrap">010-0000-0000</span>
                                         </div>
                                     </div>
-                                   
-                                </div>
-                            </div>
-                            <div class="h-1-px w-full border-b block sm:hidden"></div>
-
-                            <!-- khung 4 -->
-                            <div class="space-y-3 sm:space-y-6 sm:pb-3">
-                                <!-- time -->
-                                <div class="py-1.5 sm:py-4 sm:border-t sm:border-b flex items-center gap-x-6">
-                                    <div class="flex sm:hidden items-center justify-start flex-1">
-                                        <span class="inline-block text-xs font-medium">발송완료</span>
-                                    </div>
-                                    <div class="flex items-center gap-x-2">
-                                        <span class="hidden sm:inline-block text-sm font-normal sm:font-medium sm:text-gray-400">주문 일자</span>
-                                        <span class="inline-block text-sm font-normal sm:font-medium">2024.09.09</span>
-                                    </div>
-                                    <div class="flex items-center gap-x-2">
-                                        <span class="hidden sm:inline-block text-sm font-normal sm:font-medium sm:text-gray-400">주문번호</span>
-                                        <span class="inline-block text-sm font-normal sm:font-medium">000-000-000-000</span>
-                                    </div>
-                                </div>
-                                <!-- content -->
-                                <div class="space-y-4">
-                                    <!-- 1 -->
-                                    <div class="flex flex-col sm:flex-row gap-y-3">
-                                        <div class="flex-1 flex items-center justify-between">
-                                            <div class="flex gap-x-5">
-                                                <div class="frame-size-70108-102108 scope-imgage-super-small border shadow-md overflow-hidden h-full">
-                                                    <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="">
-                                                </div>
-    
-                                                <div class=" flex flex-col justify-between">
-                                                    <div class="space-y-3">
-                                                        <h4 class="text-1522-1624 font-semibold">상품명 표기</h4>
-                                                        <div class="flex items-center gap-x-3">
-                                                            <div class="flex items-center gap-x-0.5">
-                                                                <span class="inline-block text-sm font-normal sm:font-semibold">24,000</span>
-                                                                <span class="inline-block text-sm font-normal">원</span>
-                                                            </div>
-                                                            <span class="inline-block text-sm font-normal">/</span>
-                                                            <div class="flex items-center gap-x-0.5">
-                                                                <span class="inline-block text-sm font-normal sm:font-semibold">2</span>
-                                                                <span class="inline-block text-sm font-normal">개</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-    
-                                                    <div class="flex items-center gap-x-0.5 py-1.5 cursor-pointer" onclick="gotoPage('./MY-oh-full-history-detail.html')">
-                                                        <span class="inline-block text-13-l-18 font-semibold text-blue-400">주문 상세 보기</span>
-                                                        <div class="w-5 h-5 flex items-center justify-center">
-                                                            <i class="text-xs fa-solid fa-chevron-right text-blue-400"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-    
-                                            <div class="rounded-full bg-blue-100 hidden sm:flex items-center justify-center" style="width: 90px; height: 90px;">
-                                                <div class="flex flex-col gap-y-1 items-center justify-center">
-                                                    <img src="../assets/images/icon/my-page/preparing-shipment.svg" alt="">
-                                                    <span class="inline-block text-xs font-medium">발송완료</span>
-                                                </div>
-                                            </div>
-                                        </div>
-    
-                                        <div class="flex items-center sm:items-stretch flex-row sm:flex-col gap-y-1 gap-x-1.5 sm:px-8">
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap" onclick="gotoPage('./CS-11-inquiry.html')">1:1 문의</button>
-                                            <div class="w-1-px h-5 bg-gray-400 block sm:hidden"></div>
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap">배송조회</button>
-                                            <div class="w-1-px h-5 bg-gray-400 block sm:hidden"></div>
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap">교환/반품</button>                                            
-                                        </div>
-                                    </div>
-                                   
-                                </div>
-                            </div>
-                            <div class="h-1-px w-full border-b block sm:hidden"></div>
-
-                            <!-- khung 5 -->
-                            <div class="space-y-3 sm:space-y-6 sm:pb-3">
-                                <!-- time -->
-                                <div class="py-1.5 sm:py-4 sm:border-t sm:border-b flex items-center gap-x-6">
-                                    <div class="flex sm:hidden items-center justify-start flex-1">
-                                        <span class="inline-block text-xs font-medium">배송완료</span>
-                                    </div>
-                                    <div class="flex items-center gap-x-2">
-                                        <span class="hidden sm:inline-block text-sm font-normal sm:font-medium sm:text-gray-400">주문 일자</span>
-                                        <span class="inline-block text-sm font-normal sm:font-medium">2024.09.09</span>
-                                    </div>
-                                    <div class="flex items-center gap-x-2">
-                                        <span class="hidden sm:inline-block text-sm font-normal sm:font-medium sm:text-gray-400">주문번호</span>
-                                        <span class="inline-block text-sm font-normal sm:font-medium">000-000-000-000</span>
-                                    </div>
-                                </div>
-                                <!-- content -->
-                                <div class="space-y-4">
-                                    <!-- 1 -->
-                                    <div class="flex flex-col sm:flex-row gap-y-3">
-                                        <div class="flex-1 flex items-center justify-between">
-                                            <div class="flex gap-x-5">
-                                                <div class="frame-size-70108-102108 scope-imgage-super-small border shadow-md overflow-hidden h-full">
-                                                    <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="">
-                                                </div>
-    
-                                                <div class=" flex flex-col justify-between">
-                                                    <div class="space-y-3">
-                                                        <h4 class="text-1522-1624 font-semibold">상품명 표기</h4>
-                                                        <div class="flex items-center gap-x-3">
-                                                            <div class="flex items-center gap-x-0.5">
-                                                                <span class="inline-block text-sm font-normal sm:font-semibold">24,000</span>
-                                                                <span class="inline-block text-sm font-normal">원</span>
-                                                            </div>
-                                                            <span class="inline-block text-sm font-normal">/</span>
-                                                            <div class="flex items-center gap-x-0.5">
-                                                                <span class="inline-block text-sm font-normal sm:font-semibold">2</span>
-                                                                <span class="inline-block text-sm font-normal">개</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-    
-                                                    <div class="flex items-center gap-x-0.5 py-1.5 cursor-pointer" onclick="gotoPage('./MY-oh-full-history-detail.html')">
-                                                        <span class="inline-block text-13-l-18 font-semibold text-blue-400">주문 상세 보기</span>
-                                                        <div class="w-5 h-5 flex items-center justify-center">
-                                                            <i class="text-xs fa-solid fa-chevron-right text-blue-400"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-    
-                                            <div class="rounded-full bg-blue-100 hidden sm:flex items-center justify-center" style="width: 90px; height: 90px;">
-                                                <div class="flex flex-col gap-y-1 items-center justify-center">
-                                                    <img src="../assets/images/icon/my-page/completion-delivery.svg" alt="">
-                                                    <span class="inline-block text-xs font-medium">배송완료</span>
-                                                </div>
-                                            </div>
-                                        </div>
-    
-                                        <div class="flex items-center sm:items-stretch flex-row sm:flex-col gap-y-1 gap-x-1.5 sm:px-8">
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap" onclick="gotoPage('./CS-11-inquiry.html')">1:1 문의</button>
-                                            <div class="w-1-px h-5 bg-gray-400 block sm:hidden"></div>
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap">배송조회</button>
-                                            <div class="w-1-px h-5 bg-gray-400 block sm:hidden"></div>
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap">리뷰쓰기</button>
-                                            <div class="w-1-px h-5 bg-gray-400 block sm:hidden"></div>
-                                            <button class="text-13-l-18 font-semibold py-1.5 flex-1 sm:w-full sm:px-7 sm:rounded sm:border whitespace-nowrap">교환/반품</button>                                            
+                                    
+                                    <div class="flex flex-col sm:flex-row sm:items-center gap-x-6 gap-y-1">
+                                        <span class="inline-block text-15-l-22 font-medium text-gray-400 whitespace-nowrap">주소</span>
+                                        <div class="flex items-center gap-x-3">                                
+                                            <span class="inline-block text-15-l-22 font-medium whitespace-nowrap">서울특별시 성북구 00동 00동 00호 (00000)</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-                        </div>
-
-                       <button class="w-full text-1522-1624 font-semibold py-2 sm:py-3 text-center rounded border hover:bg-gray-50">
-                            더보기
-                       </button>
-                    </div>
-
-                    <div id="no-content-history" class="space-y-2.5 hidden">
-                        <div class="flex items-center justify-center flex-col py-10">
-                            <div>
-                                <img src="../assets/images/image/service/no-history.png" alt="">
+            
+                            <div class="p-5 sm:p-0 sm:mt-6 space-y-5 sm:space-y-3">
+                                <div class="sm:border-b sm:py-3 flex items-center justify-between">
+                                    <h4 class="text-1724-1826 font-semibold">배송지 정보</h4>
+            
+                                    <button class="text-13-l-18 font-medium text-gray-600 py-1 px-3 rounded-full border">택배 수령</button>
+                                </div>
+            
+                                <div class="space-y-3">
+                                    <div class="text-red-500 flex items-center justify-between">
+                                        <span class="inline-block text-15-l-22 font-medium">주문금액</span>
+                                        <span class="inline-block text-15-l-22 font-semibold">총 100,000원</span>
+                                    </div>
+            
+                                    <div class="flex items-stretch gap-x-3">
+                                        <div class="w-1 bg-gray-200"></div>
+            
+                                        <div class="flex-1 space-y-2">
+                                            <div class="flex items-center justify-between w-full">
+                                                <span class="w-20 inline-block text-13-l-18 font-normal text-gray-400">상품금액</span>
+                                                <span class="flex-1 inline-block text-sm font-medium text-gray-400 text-right">00,000원</span>
+                                            </div>
+                                            <div class="flex items-center justify-between w-full">
+                                                <span class="w-20 inline-block text-13-l-18 font-normal text-gray-400">마일리지 사용</span>
+                                                <span class="flex-1 inline-block text-sm font-medium text-gray-400 text-right">00,000원</span>
+                                            </div>
+                                            <div class="flex items-center justify-between w-full">
+                                                <span class="w-20 inline-block text-13-l-18 font-normal text-gray-400">예치금 사용</span>
+                                                <span class="flex-1 inline-block text-sm font-medium text-gray-400 text-right">00,000원</span>
+                                            </div>
+                                            <div class="flex items-center justify-between w-full">
+                                                <span class="w-20 inline-block text-13-l-18 font-normal text-gray-400">쿠폰할인</span>
+                                                <span class="flex-1 inline-block text-sm font-medium text-gray-400 text-right">00,000원</span>
+                                            </div>
+                                            <div class="flex items-center justify-between w-full">
+                                                <span class="w-20 inline-block text-13-l-18 font-normal text-gray-400">배송비</span>
+                                                <span class="flex-1 inline-block text-sm font-medium text-gray-400 text-right">00,000원</span>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <hr class="my-5 sm:my-3">
+            
+                                    <div class="flex items-center justify-between w-full">
+                                        <span class="w-20 inline-block text-15-l-22 font-medium text-gray-700">결제수단</span>
+                                        <span class="flex-1 inline-block text-15-l-22 font-semibold text-right">카드결제</span>
+                                    </div>
+            
+                                    <hr class="my-5 sm:my-3">
+            
+                                    <div class="flex items-center justify-between w-full">
+                                        <span class="w-20 inline-block text-15-l-22 font-medium text-gray-700">적립</span>
+                                        <span class="flex-1 inline-block text-15-l-22 font-semibold text-right">12,000점</span>
+                                    </div>
+            
+                                </div>
                             </div>
-                            <p class="text-sm font-medium text-gray-400">주문 내역이 없습니다</p>
+            
+                            <div class="h-40"></div>
                         </div>
                     </div>
-
-                    <!-- bot -->
-                    <div class="h-2 bg-gray-100 mt-6 sm:hidden"></div>
-
-                    <div class="sm:mt-16 sm:pt-2">
-                        <div class="sm:space-y-6">
-                            <div class="p-5 sm:p-0 sm:pb-3 border-b sm:border-black">
-                                <h4 class="text-1724-2230 font-semibold">주문/배송 조회</h4>
-                            </div>
-
-                            <div class="hidden sm:flex items-start gap-x-6 justify-between overflow-x-auto custom-scroll">
-                                <div class="flex flex-col gap-y-1.5 items-center justify-center flex-1">
-                                    <div class="flex flex-col gap-y-1 items-center justify-center bg-blue-100 rounded-full" style="width: 90px; height: 90px;">                                       
-                                        <img src="../assets/images/icon/my-page/desktop-clock.svg" alt="">
-                                        <span class="inline-block text-xs font-medium">입금전</span>                                        
-                                    </div>
-                                    <div class="w-1-px h-3 bg-gray-400"></div>
-                                    <h5 class="text-11-l-14 font-normal text-gray-500 text-center">입금 전 상태</h5>
-                                </div>
-                                
-                                <div class="flex flex-col gap-y-1.5 items-center justify-center flex-1">
-                                    <div class="flex flex-col gap-y-1 items-center justify-center bg-blue-100 rounded-full" style="width: 90px; height: 90px;">                                       
-                                        <img src="../assets/images/icon/my-page/before-deposit.svg" alt="">
-                                        <span class="inline-block text-xs font-medium">입금/발송전</span>                                        
-                                    </div>
-                                    <div class="w-1-px h-3 bg-gray-400"></div>
-                                    <h5 class="text-11-l-14 font-normal text-gray-500 text-center">입금 확인 완료</h5>
-                                </div>
-
-                                <div class="flex flex-col gap-y-1.5 items-center justify-center flex-1">
-                                    <div class="flex flex-col gap-y-1 items-center justify-center bg-blue-100 rounded-full" style="width: 90px; height: 90px;">                                       
-                                        <img src="../assets/images/icon/my-page/packaging.svg" alt="">
-                                        <span class="inline-block text-xs font-medium">상품 준비중</span>                                        
-                                    </div>
-                                    <div class="w-1-px h-3 bg-gray-400"></div>
-                                    <h5 class="text-11-l-14 font-normal text-gray-500 text-center">
-                                        주문 상품 <br>
-                                        준비 및 패키징
-                                    </h5>
-                                </div>
-
-                                <div class="flex flex-col gap-y-1.5 items-center justify-center flex-1">
-                                    <div class="flex flex-col gap-y-1 items-center justify-center bg-blue-100 rounded-full" style="width: 90px; height: 90px;">                                       
-                                        <img src="../assets/images/icon/my-page/preparing-shipment.svg" alt="">
-                                        <span class="inline-block text-xs font-medium">발송 준비중</span>                                        
-                                    </div>
-                                    <div class="w-1-px h-3 bg-gray-400"></div>
-                                    <h5 class="text-11-l-14 font-normal text-gray-500 text-center">준비 상품 패키징</h5>
-                                </div>
-
-                                <div class="flex flex-col gap-y-1.5 items-center justify-center flex-1">
-                                    <div class="flex flex-col gap-y-1 items-center justify-center bg-blue-100 rounded-full" style="width: 90px; height: 90px;">                                       
-                                        <img src="../assets/images/icon/my-page/shipment-completion.svg" alt="">
-                                        <span class="inline-block text-xs font-medium">발송완료</span>                                        
-                                    </div>
-                                    <div class="w-1-px h-3 bg-gray-400"></div>
-                                    <h5 class="text-11-l-14 font-normal text-gray-500 text-center">
-                                        주문 상품 <br>
-                                        택배사로 전달
-                                    </h5>
-                                </div>
-
-                                <div class="flex flex-col gap-y-1.5 items-center justify-center flex-1">
-                                    <div class="flex flex-col gap-y-1 items-center justify-center bg-blue-100 rounded-full" style="width: 90px; height: 90px;">                                       
-                                        <img src="../assets/images/icon/my-page/during-delivery.svg" alt="">
-                                        <span class="inline-block text-xs font-medium">배송중</span>                                        
-                                    </div>
-                                    <div class="w-1-px h-3 bg-gray-400"></div>
-                                    <h5 class="text-11-l-14 font-normal text-gray-500 text-center">상품 배송중</h5>
-                                </div>
-
-                                <div class="flex flex-col gap-y-1.5 items-center justify-center flex-1">
-                                    <div class="flex flex-col gap-y-1 items-center justify-center bg-blue-100 rounded-full" style="width: 90px; height: 90px;">                                       
-                                        <img src="../assets/images/icon/my-page/completion-delivery.svg" alt="">
-                                        <span class="inline-block text-xs font-medium">배송완료</span>                                        
-                                    </div>
-                                    <div class="w-1-px h-3 bg-gray-400"></div>
-                                    <h5 class="text-11-l-14 font-normal text-gray-500 text-center">
-                                        상품이 주문자에게 <br>
-                                        전달 완료
-                                    </h5>
-                                </div>
-                            </div>
-
-                            <hr class="hidden sm:block">
-
-                            <div class="p-5 sm:p-0">
-                                <ul class="list-disc pl-5 space-y-2 text-gray-600">
-                                    <li>주문/배송 현황은 주문 상태 란을 보시면 됩니다.</li>
-                                    <li>‘상품준비중’ 상태까지 주문 정보 수정(주문 취소, 추가주문)이 가능합니다.</li>
-                                    <li>상세한 주문 내역을 보시려면 주문 상세보기를 클릭하세요.</li>
-                                </ul>                                  
-                            </div>
-                        </div>
-                    </div>
+                   
                 </main>
                 <!-- start main -->
             
@@ -1096,224 +1039,6 @@
     <div class="hidden sm:block" style="height: 72px;"></div>
 
     <section>
-
-        <!-- modal 1 -->
-        <div id="modal-order-detail" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50  hidden">
-            <!-- Modal Content -->
-            <div class="bg-white sm:rounded-lg py-5 sm:p-8 h-full overflow-y-auto custom-scroll" style="width: 560px;">
-                <!-- Modal Header -->
-                <div class="px-5 sm:px-0 flex items-center justify-between mb-6">
-                    <h3 class="text-2028-2230 font-semibold">주문 상세 보기</h3>
-                    <button class="cursor-pointer" onclick="toggle('#modal-order-detail')">
-                        <img class="w-6 h-6" src="../assets/images/icon/common/x.svg" alt="icon">
-                    </button>
-                </div>
-                <!-- content -->
-                <div class="px-5 sm:px-0 space-y-6">
-                    <div class="flex items-center justify-between flex-wrap gap-y-2.5 py-2.5 px-3 bg-gray-100 rounded-lg">
-                        <div class="flex items-start gap-x-6">
-                            <div class="flex flex-col sm:flex-row sm:items-center gap-2 ">
-                                <span class="inline-block text-sm font-medium text-gray-400 whitespace-nowrap">주문 일자</span>
-                                <span class="inline-block text-sm font-medium whitespace-nowrap">2024.09.09</span>
-                            </div>
-                           
-                            <div class="flex flex-col sm:flex-row sm:items-center gap-2 ">
-                                <span class="inline-block text-sm font-medium text-gray-400 whitespace-nowrap">주문번호</span>
-                                <span class="inline-block text-sm font-medium whitespace-nowrap">000-000-000-000</span>
-                            </div>
-                        </div>
-                        
-                        <div class="flex-1 flex justify-end cursor-pointer" onclick="toggle('#modal-receipt')">
-                            <button class="text-13-l-18 font-semibold py-1.5 text-center w-24 rounded border bg-white">
-                                영수증
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <button class="text-base font-semibold flex items-center justify-center gap-x-2.5 bg-black text-white w-full py-2.5 rounded-lg">
-                        <img class="w-6 h-6" src="../assets/images/icon/my-page/deli-comp-tran.svg" alt="">
-                        배송 완료
-                    </button>                    
-                </div>
-
-                <div class="mt-6 sm:space-y-3">
-                    <h4 class="text-1724-1826 font-semibold p-5 sm:p-0 border-b sm:py-3">구매 상품 정보</h4>
-
-                    <div class="p-5 sm:p-0">
-                        <div class="flex flex-col sm:flex-row items-center justify-between gap-y-5">
-                            <div class="flex items-center gap-x-5">
-                                <div class="frame-size-70108-102108">
-                                    <div class="h-full scope-imgage-super-small border shadow-md" style="width: 70px;">
-                                        <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="">
-                                    </div>
-                                </div>
-
-                                <div class="space-y-3">
-                                    <h4 class="text-1522-1624 font-semibold">상품명 표기</h4>
-                                    <div class="flex items-center gap-x-3">
-                                        <div class="flex items-center gap-x-1">
-                                            <span class="inline-block text-sm font-semibold text-red-500">10%</span>
-                                            <div class="flex items-center gap-x-0.5">
-                                                <span class="inline-block text-sm font-semibold">12,000</span>
-                                                <span class="inline-block text-sm font-normal">원</span>
-                                            </div>
-                                        </div>
-                                        <span class="text-sm font-normal text-gray-400 line-through">12,000원</span>
-                                    </div>
-                                    <div class="flex items-center justify-between">
-                                        <div class="flex items-center gap-x-0.5">
-                                            <span class="inline-block text-sm font-semibold">2</span>
-                                            <span class="inline-block text-sm font-normal">개</span>
-                                        </div>
-                                        <div class="flex items-center gap-x-0.5">
-                                            <span class="inline-block text-base font-semibold">24,000</span>
-                                            <span class="inline-block text-sm font-normal">원</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex flex-row gap-x-1.5 items-center sm:items-start sm:flex-col gap-y-1.5 sm:py-9 sm:px-10">
-                                <button class="flex-1 text-13-l-18 font-semibold py-1.5 w-28 text-center sm:rounded sm:border">리뷰쓰기</button>
-                                <span class="inline-block w-1-px h-5 bg-gray-200 sm:hidden"></span>
-                                <button class="flex-1 text-13-l-18 font-semibold py-1.5 w-28 text-center sm:rounded sm:border">재구매</button>
-                            </div>
-                        </div>
-
-                        <hr class="block sm:hidden my-5">
-
-                        <div class="flex flex-col sm:flex-row items-center justify-between gap-y-5">
-                            <div class="flex items-center gap-x-5">
-                                <div class="frame-size-70108-102108">
-                                    <div class="rounded-lg border shadow-md frame-size-70108-7070">
-                                        <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="">
-                                    </div>
-                                </div>
-
-                                <div class="space-y-2">
-                                    <h4 class="text-1522-1624 font-semibold">상품명 표기</h4>
-                                    <div class="flex items-center gap-x-3">
-                                        <div class="flex items-center gap-x-1">
-                                            <span class="inline-block text-sm font-semibold text-red-500">10%</span>
-                                            <div class="flex items-center gap-x-0.5">
-                                                <span class="inline-block text-sm font-semibold">12,000</span>
-                                                <span class="inline-block text-sm font-normal">원</span>
-                                            </div>
-                                        </div>
-                                        <span class="text-sm font-normal text-gray-400 line-through">12,000원</span>
-                                    </div>
-                                    <div class="rounded bg-gray-100 text-sm font-normal py-1 px-3">
-                                        옵션명
-                                    </div>
-                                    <div class="flex items-center justify-between">
-                                        <div class="flex items-center gap-x-0.5">
-                                            <span class="inline-block text-sm font-semibold">2</span>
-                                            <span class="inline-block text-sm font-normal">개</span>
-                                        </div>
-                                        <div class="flex items-center gap-x-0.5">
-                                            <span class="inline-block text-base font-semibold">24,000</span>
-                                            <span class="inline-block text-sm font-normal">원</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex flex-row gap-x-1.5 items-center sm:items-start sm:flex-col gap-y-1.5 sm:py-9 sm:px-10">
-                                <button class="flex-1 text-13-l-18 font-semibold py-1.5 w-28 text-center sm:rounded sm:border">리뷰쓰기</button>
-                                <span class="inline-block w-1-px h-5 bg-gray-200 sm:hidden"></span>
-                                <button class="flex-1 text-13-l-18 font-semibold py-1.5 w-28 text-center sm:rounded sm:border">재구매</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                
-                <div class="h-2 bg-gray-100 block sm:hidden"></div>
-
-                <div class="p-5 sm:p-0 sm:mt-6 space-y-5 sm:space-y-3">
-                    <h4 class="text-1724-1826 font-semibold sm:border-b sm:py-3">배송지 정보</h4>
-
-                    <div class="space-y-5 sm:space-y-3">
-                        <div class="flex flex-col sm:flex-row sm:items-center gap-x-6 gap-y-1">
-                            <span class="inline-block text-15-l-22 font-medium text-gray-400 whitespace-nowrap">주문자</span>
-                            <div class="flex items-center gap-x-3">
-                                <span class="inline-block text-15-l-22 font-medium whitespace-nowrap">주문자</span>
-                                <span class="inline-block text-15-l-22 font-medium whitespace-nowrap">010-0000-0000</span>
-                            </div>
-                        </div>
-                        
-                        <div class="flex flex-col sm:flex-row sm:items-center gap-x-6 gap-y-1">
-                            <span class="inline-block text-15-l-22 font-medium text-gray-400 whitespace-nowrap">주소</span>
-                            <div class="flex items-center gap-x-3">                                
-                                <span class="inline-block text-15-l-22 font-medium whitespace-nowrap">서울특별시 성북구 00동 00동 00호 (00000)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-5 sm:p-0 sm:mt-6 space-y-5 sm:space-y-3">
-                    <div class="sm:border-b sm:py-3 flex items-center justify-between">
-                        <h4 class="text-1724-1826 font-semibold">배송지 정보</h4>
-
-                        <button class="text-13-l-18 font-medium text-gray-600 py-1 px-3 rounded-full border">택배 수령</button>
-                    </div>
-
-                    <div class="space-y-3">
-                        <div class="text-red-500 flex items-center justify-between">
-                            <span class="inline-block text-15-l-22 font-medium">주문금액</span>
-                            <span class="inline-block text-15-l-22 font-semibold">총 100,000원</span>
-                        </div>
-
-                        <div class="flex items-stretch gap-x-3">
-                            <div class="w-1 bg-gray-200"></div>
-
-                            <div class="flex-1 space-y-2">
-                                <div class="flex items-center justify-between w-full">
-                                    <span class="w-20 inline-block text-13-l-18 font-normal text-gray-400">상품금액</span>
-                                    <span class="flex-1 inline-block text-sm font-medium text-gray-400 text-right">00,000원</span>
-                                </div>
-                                <div class="flex items-center justify-between w-full">
-                                    <span class="w-20 inline-block text-13-l-18 font-normal text-gray-400">마일리지 사용</span>
-                                    <span class="flex-1 inline-block text-sm font-medium text-gray-400 text-right">00,000원</span>
-                                </div>
-                                <div class="flex items-center justify-between w-full">
-                                    <span class="w-20 inline-block text-13-l-18 font-normal text-gray-400">예치금 사용</span>
-                                    <span class="flex-1 inline-block text-sm font-medium text-gray-400 text-right">00,000원</span>
-                                </div>
-                                <div class="flex items-center justify-between w-full">
-                                    <span class="w-20 inline-block text-13-l-18 font-normal text-gray-400">쿠폰할인</span>
-                                    <span class="flex-1 inline-block text-sm font-medium text-gray-400 text-right">00,000원</span>
-                                </div>
-                                <div class="flex items-center justify-between w-full">
-                                    <span class="w-20 inline-block text-13-l-18 font-normal text-gray-400">배송비</span>
-                                    <span class="flex-1 inline-block text-sm font-medium text-gray-400 text-right">00,000원</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <hr class="my-5 sm:my-3">
-
-                        <div class="flex items-center justify-between w-full">
-                            <span class="w-20 inline-block text-15-l-22 font-medium text-gray-700">결제수단</span>
-                            <span class="flex-1 inline-block text-15-l-22 font-semibold text-right">카드결제</span>
-                        </div>
-
-                        <hr class="my-5 sm:my-3">
-
-                        <div class="flex items-center justify-between w-full">
-                            <span class="w-20 inline-block text-15-l-22 font-medium text-gray-700">적립</span>
-                            <span class="flex-1 inline-block text-15-l-22 font-semibold text-right">12,000점</span>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="h-40"></div>
-            </div>
-        </div>
-        
-        
         <!-- modal 2 -->
         <div id="modal-receipt" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
             <!-- Modal Content -->
@@ -1418,9 +1143,7 @@
                 <div class="h-40"></div>
             </div>
         </div>
-
     </section>
-
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
     <!-- go to top -->
     <div class="fixed bottom-24 right-6 block sm:hidden z-50">
@@ -1654,27 +1377,214 @@
     <script src="../assets/js/common.js"></script>
 
     <script>
-        document.querySelectorAll('.filter-btn').forEach((button, i) => {
-            button.addEventListener('click', () => {
-                // Xóa lớp active từ tất cả các nút
-                document.querySelectorAll('.filter-btn').forEach(btn =>{
-                    btn.classList.remove('rounded-lg', 'bg-white', 'text-black', 'shadow-md')
-                    btn.classList.add('text-gray-400')
-                });
-                
-                // Thêm lớp active vào nút được chọn
-                button.classList.add('rounded-lg', 'bg-white', 'text-black', 'shadow-md');
-                button.classList.remove('text-gray-400');
+       function renderListBook() {
+            let stringHTMl = "";
+            Array(2).fill(null).forEach(() => {
+                stringHTMl +=
+                    `
+                    <div class="relative flex flex-col sm:flex-row items-stretch gap-3 sm:gap-5 w-full sm:w-auto">
+                        <div>
+                            <input id="book-1" type="checkbox" checked hidden>
+                            <label for="book-1" class="flex items-center gap-2 cursor-pointer">
+                                <img class="item-book-1 item-choose-book w-6 h-6" src="../assets/images/icon/common/check-black.svg" alt="icon">
+                                <h4 class="block sm:hidden text-base font-semibold">책 제목</h4>
+                            </label>
+                        </div>
 
-                if (i !== 0) {
-                    document.querySelector('#content-history').classList.add('hidden')
-                    document.querySelector('#no-content-history').classList.remove('hidden')
+                        <div class="flex-1 flex items-stretch gap-5">
+                            <!-- Sách Hình ảnh -->
+                            <div class="relative frame-size-70108-160150">
+                                <div class="relative image-size-70108-102150 scope-imgage shadow-md border">
+                                    <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png"
+                                        alt="img">
+                                    <div onclick="likeBook(this)" class="absolute bottom-1 right-1 z-20 w-9 h-9 rounded-full hidden sm:flex items-center justify-center cursor-pointer"
+                                        style="background-color: rgba(0, 0, 0, 0.16);">
+                                        <i class="fa-solid fa-heart text-white"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Thông tin Sách -->
+                            <div class="flex-1">
+                                <div class="flex flex-col justify-between h-full">
+                                    <div class="flex flex-col gap-3">
+                                        <!-- Tiêu đề sách -->
+                                        <h4 class="hidden sm:block text-base font-semibold pr-8">책 제목 책</h4>
+                                        <!-- Giá và Giảm giá -->
+                                        <div class="flex items-baseline">
+                                            <span class="inline-block text-sm font-semibold text-red-500">10%</span>
+                                            <span class="ml-1">
+                                                <span class="inline-block text-sm font-semibold">12,000</span><span
+                                                    class="inline-block text-sm font-normal">원</span>
+                                            </span>
+                                            <span
+                                                class="inline-block text-sm line-through font-normal text-gray-400 ml-3">12,000원</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Bộ điều khiển số lượng và Giá tổng cộng -->
+                                    <div class="flex flex-col-reverse justify-start gap-3 sm:gap-0 sm:flex-row sm:items-center sm:space-x-4">
+                                        <!-- Điều khiển số lượng -->
+                                        <div class="scope-change-quantity flex items-center space-x-4 p-1 border rounded" style="width: fit-content;">
+                                            <button
+                                                class="xy-30-px flex items-center justify-center bg-gray-100 rounded">-</button>
+                                            <input type="number" min="1" class="w-12 text-center outline-none" value="000" />
+                                            <button
+                                                class="xy-30-px flex items-center justify-center bg-gray-100 rounded">+</button>
+                                        </div>
+
+                                        <!-- Giá tổng cộng -->
+                                        <div class="flex items-center gap-0.5">
+                                            <span class="text-money text-1624-2230 font-semibold">12,000</span>
+                                            <span class="text-sm font-normal">원</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            })
+            document.querySelector('#list-book').innerHTML = stringHTMl;
+        }
+        renderListBook()
+
+        //===
+        
+        function toggleAccordion(thisEl,acId) {
+            const radioAc = document.getElementById(`radio-${acId}`)
+            const iconAc = document.getElementById(`icon-${acId}`)
+            const ac = document.getElementById(acId)
+
+            radioAc.checked = !radioAc.checked
+            if (radioAc.checked) {
+                iconAc.classList.add('fa-chevron-up')
+                iconAc.classList.remove('fa-chevron-down')
+
+                ac.classList.remove('hidden')
+                thisEl.classList.add('border-b')
+            } else {
+                iconAc.classList.add('fa-chevron-down')
+                iconAc.classList.remove('fa-chevron-up')
+
+                ac.classList.add('hidden')
+                thisEl.classList.remove('border-b')
+            }    
+        }
+
+        function togglePopup() {
+            document.getElementById('popup').classList.toggle('hidden');
+        }
+
+        
+        let isChooseAllBook = false
+     
+        function toggleAllBook() {
+            isChooseAllBook = !isChooseAllBook
+            if (isChooseAllBook) {
+                document.querySelectorAll('.item-choose-book').forEach((item) => {
+                    item.src = '../assets/images/icon/common/check-black.svg'
+                })
+
+            } else {
+                document.querySelectorAll('.item-choose-book').forEach((item) => {
+                    item.src = '../assets/images/icon/common/check-white.svg'
+                })
+            }
+        }
+        
+        const itemAllBook1 = document.querySelector('#item-all-book-1')        
+        const itemBook1 = document.querySelectorAll('.item-book-1')
+
+        itemAllBook1.addEventListener('click', () => {
+            console.log(itemAllBook1.querySelector('img').src)
+            if (itemAllBook1.querySelector('img').src.includes('white')){
+                itemAllBook1.querySelector('img').src = '../assets/images/icon/common/check-black.svg'
+                itemBook1.forEach(item => {
+                    item.src = '../assets/images/icon/common/check-black.svg'
+                })
+            } else {
+                itemAllBook1.querySelector('img').src = '../assets/images/icon/common/check-white.svg'
+                isChooseAllBook = false
+                itemBook1.forEach(item => {
+                    item.src = '../assets/images/icon/common/check-white.svg'
+                })
+            }
+        })
+        itemBook1.forEach((el) => {
+            el.addEventListener('click', () => {
+                if (el.src.includes('white')) {
+                    el.src = '../assets/images/icon/common/check-black.svg'
                 } else {
-                    document.querySelector('#content-history').classList.remove('hidden')
-                    document.querySelector('#no-content-history').classList.add('hidden')
+                    el.src = '../assets/images/icon/common/check-white.svg'
+                    itemAllBook1.querySelector('img').src = '../assets/images/icon/common/check-white.svg'
+                    isChooseAllBook = false
                 }
-            });
-        });
+            })
+        })
+
+        const itemAllBook2 = document.querySelector('#item-all-book-2')
+        const itemBook2 = document.querySelectorAll('.item-book-2')
+
+        itemAllBook2.addEventListener('click', () => {
+            console.log(itemAllBook2.querySelector('img').src)
+            if (itemAllBook2.querySelector('img').src.includes('white')){
+                itemAllBook2.querySelector('img').src = '../assets/images/icon/common/check-black.svg'
+                itemBook2.forEach(item => {
+                    item.src = '../assets/images/icon/common/check-black.svg'
+                })
+            } else {
+                itemAllBook2.querySelector('img').src = '../assets/images/icon/common/check-white.svg'
+                isChooseAllBook = false
+                itemBook2.forEach(item => {
+                    item.src = '../assets/images/icon/common/check-white.svg'
+                })
+            }
+        })
+        itemBook2.forEach((el) => {
+            el.addEventListener('click', () => {
+                if (el.src.includes('white')) {
+                    el.src = '../assets/images/icon/common/check-black.svg'
+                } else {
+                    el.src = '../assets/images/icon/common/check-white.svg'
+                    itemAllBook2.querySelector('img').src = '../assets/images/icon/common/check-white.svg'
+                    isChooseAllBook = false
+                }
+            })
+        })
+    
+        function likeBook(btn) {
+            btn.querySelector('i').classList.toggle('text-red-500')
+            btn.querySelector('i').classList.toggle('text-white')
+        }
+
+        const textMoneys = document.querySelectorAll('.text-money')
+        document.querySelectorAll('.scope-change-quantity').forEach((scope, i) => {
+            const buttons = scope.querySelectorAll('button')
+            const inputQuantity = scope.querySelector('input')
+
+            buttons[0].addEventListener('click', () => {
+                const value = Number(inputQuantity.value) - 1
+                if (value > 0) {
+                    inputQuantity.value = Number(inputQuantity.value) - 1
+                    textMoneys[i].innerHTML = (inputQuantity.value * 12000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                }
+            })
+            
+            buttons[1].addEventListener('click', () => {                                
+                inputQuantity.value = Number(inputQuantity.value) + 1
+                textMoneys[i].innerHTML = (inputQuantity.value * 12000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+            })
+        })
+
+        function handleOrder() {
+            const isLogin = JSON.parse(localStorage.getItem('BS-login')) || false
+
+            if (isLogin) {
+                toggle('#modal-ship')
+            } else {
+                gotoPage('./AU-login-login.html')
+            }
+        }
     </script>
 </body>
 </html>

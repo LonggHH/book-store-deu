@@ -507,9 +507,9 @@
                 <main class="">
 
                     <div id="bk-profile">
-                        <div class="flex items-stretch flex-col md:flex-row gap-x-5 gap-y-12">
+                        <div class="flex items-stretch flex-col lg:flex-row gap-x-5">
                             <!-- imga -->
-                            <div class="flex flex-col justify-between gap-y-3 pb-24 border-b">
+                            <div class="flex flex-col justify-between gap-y-3 pb-14 sm:pb-5 lg:pb-24 border-b">
                                 <div class="flex-1 flex flex-col justify-between">
                                     <div class="sm:pt-0.5">
                                         <div class="px-10 pt-8 sm:py-5">
@@ -543,8 +543,8 @@
                                 <div class="flex-1 flex flex-col gap-y-8">
 
                                     <div>
-                                        <div class="hidden sm:flex items-center justify-start mb-8">
-                                            <div class="p-3 border rounded-full flex items-center gap-x-3"
+                                        <div class="flex items-center justify-start mb-8">
+                                            <div class="p-3 border lg:rounded-full flex items-center justify-center lg:justify-normal gap-x-3 w-full lg:w-auto"
                                                 onmouseenter="toggleIcons(true)"
                                                 onmouseleave="toggleIcons(false)"
                                             >
@@ -574,13 +574,13 @@
                                             </div>
                                         </div>
     
-                                        <div class="px-5 sm:px-0">
+                                        <div class="px-5 sm:px-8 lg:px-0">
                                             <div class="space-y-5">
                                                 <div class="space-y-3">
                                                     <h4 class="text-2028-2838 font-bold">Songs From Taizé, Vol.1 생명의 샘물</h4>
                                                     <div class="space-y-2 sm:w-96">
                                                         <div class="flex items-center justify-between gap-x-3">
-                                                            <p class="flex-1 text-sm font-normal text-gray-400">떼제 손발이</p>
+                                                            <p class="lg:flex-1 text-sm font-normal text-gray-400">떼제 손발이</p>
                                                             <span class="inline-block text-gray-200">|</span>
                                                             <p class="flex-1 text-sm font-normal text-gray-400">전례음악, 전례음악/떼제성가</p>                                                    
                                                         </div>
@@ -594,29 +594,29 @@
                                     </div>
 
 
-                                    <div class="">
-                                        <div class="flex items-center gap-3 flex-wrap">
-                                            <button class="py-2 px-3 rounded border flex items-center gap-x-1 whitespace-nowrap hover:shadow-md" onclick="gotoPage('https://www.genie.co.kr/')">
+                                    <div class="px-5 sm:px-8 lg:px-0">
+                                        <div class="flex flex-col lg:flex-row items-center gap-3 flex-wrap gap-y-3">
+                                            <button class="py-2 px-3 rounded border flex items-center gap-x-1 whitespace-nowrap hover:shadow-md w-full lg:w-auto justify-center" onclick="gotoPage('https://www.genie.co.kr/')">
                                                 <img class="w-6 h-6" src="../assets/images/icon/category/dvd-g.svg" alt="">
                                                 <span class="inline-block text-xs text-gray-400">|</span>
                                                 <span class="inline-block text-15-l-22 font-semibold">지니뮤직</span>
                                             </button>
-                                            <button class="py-2 px-3 rounded border flex items-center gap-x-1 whitespace-nowrap hover:shadow-md" onclick="gotoPage('https://music.bugs.co.kr/')">
+                                            <button class="py-2 px-3 rounded border flex items-center gap-x-1 whitespace-nowrap hover:shadow-md w-full lg:w-auto justify-center" onclick="gotoPage('https://music.bugs.co.kr/')">
                                                 <img class="w-6 h-6" src="../assets/images/icon/category/dvd-b.svg" alt="">
                                                 <span class="inline-block text-xs text-gray-400">|</span>
                                                 <span class="inline-block text-15-l-22 font-semibold">벅스</span>
                                             </button>
-                                            <button class="py-2 px-3 rounded border flex items-center gap-x-1 whitespace-nowrap hover:shadow-md">
+                                            <button class="py-2 px-3 rounded border flex items-center gap-x-1 whitespace-nowrap hover:shadow-md w-full lg:w-auto justify-center">
                                                 <img class="w-6 h-6" src="../assets/images/icon/category/dvd-f.svg" alt="">
                                                 <span class="inline-block text-xs text-gray-400">|</span>
                                                 <span class="inline-block text-15-l-22 font-semibold">FLO</span>
                                             </button>
-                                            <button class="py-2 px-3 rounded border flex items-center gap-x-1 whitespace-nowrap hover:shadow-md" onclick="gotoPage('https://www.melon.com/')">
+                                            <button class="py-2 px-3 rounded border flex items-center gap-x-1 whitespace-nowrap hover:shadow-md w-full lg:w-auto justify-center" onclick="gotoPage('https://www.melon.com/')">
                                                 <img class="w-6 h-6" src="../assets/images/icon/category/dvd-o.svg" alt="">
                                                 <span class="inline-block text-xs text-gray-400">|</span>
                                                 <span class="inline-block text-15-l-22 font-semibold">멜론</span>
                                             </button>
-                                            <button class="py-2 px-3 rounded border flex items-center gap-x-1 whitespace-nowrap hover:shadow-md">
+                                            <button class="py-2 px-3 rounded border flex items-center gap-x-1 whitespace-nowrap hover:shadow-md w-full lg:w-auto justify-center">
                                                 <img class="w-6 h-6" src="../assets/images/icon/category/dvd-v.svg" alt="">
                                                 <span class="inline-block text-xs text-gray-400">|</span>
                                                 <span class="inline-block text-15-l-22 font-semibold">VIBE</span>
@@ -649,23 +649,26 @@
                                         <h4 class="text-1724-2230 font-semibold mb-2.5 sm:mb-5 pb-3 border-b border-black">책소개</h4>                                        
 
                                         <div>
-                                            <div class="overflow-x-auto custom-scroll">
+                                            <div class="">
                                                 <div class="">
-                                                    <table class="">
-                                                        <thead>
-                                                            <tr class=" text-gray-500 uppercase text-15-l-22">
-                                                                <th class="min-w-20 px-2.5 text-center pb-5 border-b">곡</th>
-                                                                <th class="min-w-20 px-2.5 text-center pb-5 border-b">아티스트</th>
-                                                                <th class="px-2.5 text-center pb-5 border-b">앨범</th>
-                                                                <th class="px-2.5 text-center pb-5 border-b "></th>
+                                                    <!-- <table class="w-full">
+                                                        <thead class="hidden lg:block">
+                                                            <tr class="w-full text-gray-500 uppercase text-15-l-22">
+                                                                <th class="w-auto text-center pb-5 border-b">곡</th>
+                                                                <th class="w-32 text-center pb-5 border-b">아티스트</th>
+                                                                <th class="w-32 text-center pb-5 border-b">앨범</th>
+                                                                <th class="px-2.5 text-center pb-5 border-b w-24"></th>
                                                             </tr>
                                                         </thead>
-                                                        <tbody class="text-gray-700 text-sm font-light">
-                                                            <!-- Row 1 -->
+                                                        <tbody class="text-gray-700 text-sm font-normal">
                                                             <tr class="border-b border-gray-200 hover:bg-gray-100">
-                                                                <td class="py-5 px-2.5 text-left whitespace-nowrap">주 찬미하여라 (Laudate Dominum)</td>
-                                                                <td class="py-5 px-2.5 text-center whitespace-nowrap">떼제 손붙이</td>
-                                                                <td class="py-5 px-2.5 text-center whitespace-normal">Songs From Taizé, Vol.1 생명의 샘물</td>
+                                                                <td class="py-5">
+                                                                    <p class="two-lines">
+                                                                        사랑의 날개 노래선교단 5집-일어나 비추어라사랑의 날개 노래선교단 5집-일어나 비추어라 사랑의 날개 노래선교단 5집-일어나 비추어라 thừa
+                                                                    </p>
+                                                                </td>
+                                                                <td class="py-5 text-center whitespace-nowrap">떼제 손발이</td>
+                                                                <td class="py-5 text-center whitespace-normal">Songs From Taizé, Vol.1 생명의 샘물</td>
                                                                 <td class="py-5 px-2.5 text-center ">
                                                                     <span class="flex items-center gap-x-2">
                                                                         <a target="_blank" href="https://www.genie.co.kr/" class="w-8 h-8 rounded-full cursor-pointer hover:shadow-md">
@@ -690,38 +693,107 @@
                                                                     </span>
                                                                 </td>
                                                             </tr>
-
-                                                            <!-- Row 2 -->
-                                                            <tr class="border-b border-gray-200 hover:bg-gray-100">
-                                                                <td class="py-5 px-2.5 text-left whitespace-nowrap">생명의 샘물(De noche)</td>
-                                                                <td class="py-5 px-2.5 text-center whitespace-nowrap">떼제 손붙이</td>
-                                                                <td class="py-5 px-2.5 text-center whitespace-normal">Songs From Taizé, Vol.1 생명의 샘물</td>
-                                                                <td class="py-5 px-2.5 text-center ">
-                                                                    <span class="flex items-center gap-x-2">
-                                                                        <div class="w-8 h-8 rounded-full cursor-pointer hover:shadow-md">
-                                                                            <img src="../assets/images/icon/category/dvd-g.svg" alt="">
-                                                                        </div>
-                                                                        <span class="inline-block text-xs font-normal text-gray-400">|</span>
-                                                                        <div class="w-8 h-8 rounded-full cursor-pointer hover:shadow-md">
-                                                                            <img src="../assets/images/icon/category/dvd-v.svg" alt="">
-                                                                        </div>                                                                        
-                                                                        <span class="inline-block text-xs font-normal text-gray-400">|</span>
-                                                                        <div class="w-8 h-8 rounded-full cursor-pointer hover:shadow-md">
-                                                                            <img src="../assets/images/icon/category/dvd-b.svg" alt="">
-                                                                        </div>                                                                        
-                                                                        <span class="inline-block text-xs font-normal text-gray-400">|</span>
-                                                                        <div class="w-8 h-8 rounded-full cursor-pointer hover:shadow-md">
-                                                                            <img src="../assets/images/icon/category/dvd-f.svg" alt="">
-                                                                        </div>                                                                        
-                                                                        <span class="inline-block text-xs font-normal text-gray-400">|</span>
-                                                                        <div class="w-8 h-8 rounded-full cursor-pointer hover:shadow-md">
-                                                                            <img src="../assets/images/icon/category/dvd-o.svg" alt="">
-                                                                        </div>
-                                                                    </span>
-                                                                </td>
-                                                            </tr>                                                            
                                                         </tbody>
-                                                    </table>
+                                                    </table> -->
+
+                                                    <div>
+                                                        <ul class="hidden lg:flex items-center text-gray-500 uppercase text-15-l-22 border-b">
+                                                            <li class="flex-1 text-center pb-5">곡</li>
+                                                            <li class="w-32 text-center pb-5">아티스트</li>
+                                                            <li class="w-32 text-center pb-5">앨범</li>
+                                                            <li class="invisible text-center pb-5 px-2.5">
+                                                                <span class="flex items-center gap-x-2">
+                                                                    <a target="_blank" href="https://www.genie.co.kr/" class="w-8 h-8 rounded-full cursor-pointer hover:shadow-md">
+                                                                        <img src="../assets/images/icon/category/dvd-g.svg" alt="">
+                                                                    </a>
+                                                                    <span class="inline-block text-xs font-normal text-gray-400">|</span>
+                                                                    <a href="#" class="w-8 h-8 rounded-full cursor-pointer hover:shadow-md">
+                                                                        <img src="../assets/images/icon/category/dvd-v.svg" alt="">
+                                                                    </a>                                                                        
+                                                                    <span class="inline-block text-xs font-normal text-gray-400">|</span>
+                                                                    <a target="_blank" href="https://music.bugs.co.kr/" class="w-8 h-8 rounded-full cursor-pointer hover:shadow-md">
+                                                                        <img src="../assets/images/icon/category/dvd-b.svg" alt="">
+                                                                    </a>                                                                        
+                                                                    <span class="inline-block text-xs font-normal text-gray-400">|</span>
+                                                                    <a href="#" class="w-8 h-8 rounded-full cursor-pointer hover:shadow-md">
+                                                                        <img src="../assets/images/icon/category/dvd-f.svg" alt="">
+                                                                    </a>                                                                        
+                                                                    <span class="inline-block text-xs font-normal text-gray-400">|</span>
+                                                                    <a target="_blank" href="https://www.melon.com/" class="w-8 h-8 rounded-full cursor-pointer hover:shadow-md">
+                                                                        <img src="../assets/images/icon/category/dvd-o.svg" alt="">
+                                                                    </a>
+                                                                </span>
+                                                            </li>
+                                                        </ul>
+
+                                                        <div class="text-gray-700 text-sm font-normal">
+                                                            <ul class="flex flex-col sm:flex-row border-b border-gray-200 hover:bg-gray-100 py-3 sm:py-0 gap-y-5">
+                                                                <li class="py-0 sm:py-5 flex-1">
+                                                                    <p class="two-lines">
+                                                                        사랑의 날개 노래선교단 5집-일어나 비추어라사랑의 날개 노래선교단 5집-일어나 비추어라 사랑의 날개 노래선교단 5집-일어나 비추어라 thừa
+                                                                    </p>
+                                                                </li>
+                                                                <li class="hidden lg:block w-32 py-5 text-center whitespace-nowrap">떼제 손발이</li>
+                                                                <li class="hidden lg:block w-32 py-5 text-center whitespace-normal">Songs From Taizé, Vol.1 생명의 샘물</li>
+                                                                <li class="sm:py-5 px-2.5 text-center">
+                                                                    <span class="flex items-center gap-x-2">
+                                                                        <a target="_blank" href="https://www.genie.co.kr/" class="w-8 h-8 rounded-full cursor-pointer hover:shadow-md">
+                                                                            <img src="../assets/images/icon/category/dvd-g.svg" alt="">
+                                                                        </a>
+                                                                        <span class="inline-block text-xs font-normal text-gray-400">|</span>
+                                                                        <a href="#" class="w-8 h-8 rounded-full cursor-pointer hover:shadow-md">
+                                                                            <img src="../assets/images/icon/category/dvd-v.svg" alt="">
+                                                                        </a>                                                                        
+                                                                        <span class="inline-block text-xs font-normal text-gray-400">|</span>
+                                                                        <a target="_blank" href="https://music.bugs.co.kr/" class="w-8 h-8 rounded-full cursor-pointer hover:shadow-md">
+                                                                            <img src="../assets/images/icon/category/dvd-b.svg" alt="">
+                                                                        </a>                                                                        
+                                                                        <span class="inline-block text-xs font-normal text-gray-400">|</span>
+                                                                        <a href="#" class="w-8 h-8 rounded-full cursor-pointer hover:shadow-md">
+                                                                            <img src="../assets/images/icon/category/dvd-f.svg" alt="">
+                                                                        </a>                                                                        
+                                                                        <span class="inline-block text-xs font-normal text-gray-400">|</span>
+                                                                        <a target="_blank" href="https://www.melon.com/" class="w-8 h-8 rounded-full cursor-pointer hover:shadow-md">
+                                                                            <img src="../assets/images/icon/category/dvd-o.svg" alt="">
+                                                                        </a>
+                                                                    </span>
+                                                                </li>
+                                                            </ul>
+
+                                                            <ul class="flex flex-col sm:flex-row border-b border-gray-200 hover:bg-gray-100 py-3 sm:py-0 gap-y-5">
+                                                                <li class="py-0 sm:py-5 flex-1">
+                                                                    <p class="two-lines">
+                                                                        사랑의 날개 노래선교단 5집-일어나 비추어라사랑의 날개 노래선교단 5집-일어나 비추어라 사랑의 날개 노래선교단 5집-일어나 비추어라 thừa
+                                                                    </p>
+                                                                </li>
+                                                                <li class="hidden lg:block w-32 py-5 text-center whitespace-nowrap">떼제 손발이</li>
+                                                                <li class="hidden lg:block w-32 py-5 text-center whitespace-normal">Songs From Taizé, Vol.1 생명의 샘물</li>
+                                                                <li class="sm:py-5 px-2.5 text-center">
+                                                                    <span class="flex items-center gap-x-2">
+                                                                        <a target="_blank" href="https://www.genie.co.kr/" class="w-8 h-8 rounded-full cursor-pointer hover:shadow-md">
+                                                                            <img src="../assets/images/icon/category/dvd-g.svg" alt="">
+                                                                        </a>
+                                                                        <span class="inline-block text-xs font-normal text-gray-400">|</span>
+                                                                        <a href="#" class="w-8 h-8 rounded-full cursor-pointer hover:shadow-md">
+                                                                            <img src="../assets/images/icon/category/dvd-v.svg" alt="">
+                                                                        </a>                                                                        
+                                                                        <span class="inline-block text-xs font-normal text-gray-400">|</span>
+                                                                        <a target="_blank" href="https://music.bugs.co.kr/" class="w-8 h-8 rounded-full cursor-pointer hover:shadow-md">
+                                                                            <img src="../assets/images/icon/category/dvd-b.svg" alt="">
+                                                                        </a>                                                                        
+                                                                        <span class="inline-block text-xs font-normal text-gray-400">|</span>
+                                                                        <a href="#" class="w-8 h-8 rounded-full cursor-pointer hover:shadow-md">
+                                                                            <img src="../assets/images/icon/category/dvd-f.svg" alt="">
+                                                                        </a>                                                                        
+                                                                        <span class="inline-block text-xs font-normal text-gray-400">|</span>
+                                                                        <a target="_blank" href="https://www.melon.com/" class="w-8 h-8 rounded-full cursor-pointer hover:shadow-md">
+                                                                            <img src="../assets/images/icon/category/dvd-o.svg" alt="">
+                                                                        </a>
+                                                                    </span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -744,63 +816,86 @@
                                         </p>                                                                              
                                     </div>                                                                        
                                    
-                                </div>                                
+                                </div>
                             </div>
     
-                            <!-- ... event.. card new... -->
-                            <article class="space-y-8 sm:space-y-10">
-                                <!-- slide event -->
-                                <div class="px-5 sm:px-0 overflow-hidden">
-                                    <h4 class="text-1724-2230 font-semibold mb-2.5 sm:mb-5">이벤트</h4>
-        
-                                    <div id="event" class="">
-                                        <div id="eventSwiper" class="swiper frame-slide-size-320166-250150 rounded-lg overflow-hidden">
-                                            <div class="swiper-wrapper">
+                        </div>
+
+                        <!-- ... event.. card new... -->
+                        <article class="space-y-8 sm:space-y-10">
+                            <!-- slide event -->
+                            <div class="px-5 sm:px-0 overflow-hidden">
+                                <h4 class="text-1724-2230 font-semibold mb-2.5 sm:mb-5">이벤트</h4>
     
-                                                <div class="swiper-slide cursor-pointer">
-                                                    <div class="frame-width-250-320 overflow-hidden">
-                                                        <div class="frame-slide-size-320166-250150 rounded-lg border overflow-hidden">
-                                                            <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="event">
-                                                        </div>
+                                <div id="event" class="">
+                                    <div id="eventSwiper" class="swiper rounded-lg overflow-hidden w-full">
+                                        <div class="swiper-wrapper">
+
+                                            <div class="swiper-slide cursor-pointer w-80 sm:w-64">
+                                                <div class="frame-width-250-320 overflow-hidden">
+                                                    <div class="frame-slide-size-320166-250150 rounded-lg border overflow-hidden">
+                                                        <img class="w-full h-full" src="../assets/images/image/books/book1.png" alt="event">
                                                     </div>
                                                 </div>
-                                                
-                                                <div class="swiper-slide cursor-pointer">
-                                                    <div class="frame-width-250-320 overflow-hidden">
-                                                        <div class="frame-slide-size-320166-250150 rounded-lg border overflow-hidden">
-                                                            <img class="w-full h-full" src="../assets/images/image/books/book1.png" alt="event">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                                                            
                                             </div>
+
+                                            <div class="swiper-slide cursor-pointer w-80 sm:w-64">
+                                                <div class="frame-width-250-320 overflow-hidden">
+                                                    <div class="frame-slide-size-320166-250150 rounded-lg border overflow-hidden">
+                                                        <img class="w-full h-full" src="../assets/images/image/books/book2.png" alt="event">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="swiper-slide cursor-pointer w-80 sm:w-64">
+                                                <div class="frame-width-250-320 overflow-hidden">
+                                                    <div class="frame-slide-size-320166-250150 rounded-lg border overflow-hidden">
+                                                        <img class="w-full h-full" src="../assets/images/image/books/book3.png" alt="event">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="swiper-slide cursor-pointer w-80 sm:w-64">
+                                                <div class="frame-width-250-320 overflow-hidden">
+                                                    <div class="frame-slide-size-320166-250150 rounded-lg border overflow-hidden">
+                                                        <img class="w-full h-full" src="../assets/images/image/books/book4.png" alt="event">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="swiper-slide cursor-pointer w-80 sm:w-64">
+                                                <div class="frame-width-250-320 overflow-hidden">
+                                                    <div class="frame-slide-size-320166-250150 rounded-lg border overflow-hidden">
+                                                        <img class="w-full h-full" src="../assets/images/image/books/book5.png" alt="event">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                                                        
                                         </div>
-                                        <!-- navi -->
-                                        <div class="hidden sm:flex justify-end">
-                                            <div class="p-2">
-                                                <button id="event-swiper-button-prev" class="w-6 h-6 rounded-full border bg-white flex items-center justify-center">
-                                                    <i class="text-xs fa-solid fa-chevron-left"></i>
-                                                </button>
-                                            </div>
-                                            <div class="p-2">
-                                                <button id="event-swiper-button-next" class="w-6 h-6 rounded-full border bg-white flex items-center justify-center">
-                                                    <i class="text-xs fa-solid fa-chevron-right"></i>
-                                                </button>
-                                            </div>
+                                    </div>
+                                    <!-- navi -->
+                                    <div class="flex justify-end">
+                                        <div class="p-2">
+                                            <button id="event-swiper-button-prev" class="w-6 h-6 rounded-full border bg-white flex items-center justify-center">
+                                                <i class="text-xs fa-solid fa-chevron-left"></i>
+                                            </button>
+                                        </div>
+                                        <div class="p-2">
+                                            <button id="event-swiper-button-next" class="w-6 h-6 rounded-full border bg-white flex items-center justify-center">
+                                                <i class="text-xs fa-solid fa-chevron-right"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
 
-                            </article>
-                        </div>
+                        </article>
                     </section>
                     
                     <section class="mt-8">
                         <div class="container-layout mobi-px">
-                            <div class="space-y-8">
-                                <div class="relative overflow-hidden rounded-lg frame-height-160-270" 
-                                    
-                                >
+                            <div class="space-y-3 lg:space-y-8">
+                                <div class="relative overflow-hidden rounded-lg frame-height-160-270">
                                     <div 
                                         class="absolute top-0 left-0 z-0 flex items-center justify-center  py-8 w-full h-full"                                 
                                         style="                                         
@@ -829,8 +924,33 @@
                                     </div>
                                 </div>
 
-                                <div class="rounded-lg bg-gray-100 py-8">
+                                <div class="relative overflow-hidden rounded-lg frame-height-160-270">
+                                    <div 
+                                        class="absolute top-0 left-0 z-0 flex items-center justify-center  py-8 w-full h-full"                                 
+                                        style="                                         
+                                            overflow: hidden;
+                                            background-color: rgba(0, 57, 26, 1);
+                                            background-image: linear-gradient(to right,rgba(0, 57, 26, 0.8), rgba(0, 57, 26, 0.8)), url('../assets/images/banner/oratio.png');
+                                            background-repeat: no-repeat;
+                                            background-size: 100% auto;
+                                            background-position: center;
+                                            filter: blur(10px);
+                                        "
+                                    ></div>
 
+                                    <div class="absolute z-10 top-0 bottom-0 right-0 left-0 flex items-center justify-center">
+                                        <div class="flex items-center justify-center gap-x-5 sm:gap-x-12">                                        
+                                            <div class="frame-image-size-102102-196196 rounded-lg overflow-hidden">
+                                                <img class="w-full h-full" src="../assets/images/banner/oratio.png" alt="oratio">
+                                            </div>
+
+                                            <div class="space-y-3">
+                                                <p class="text-13-l-18 font-medium text-white rounded-sm py-0.5 px-2" style="background-color: #00000033;">이영화</p>
+                                                <h3 class="text-28-l-38 font-bold text-white">오라시오</h3>
+                                                <h4 class="text-13-l-18 font-medium text-white">전례음악/성음악</h4>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1079,12 +1199,21 @@
     <script>       
     
         var eventSwiper = new Swiper("#eventSwiper", {
-            slidesPerView: 1,
+            slidesPerView: 'auto',
+            spaceBetween: 24,
             loop: true,
             navigation: {
                 nextEl: "#event-swiper-button-next",
                 prevEl: "#event-swiper-button-prev",
-            },             
+            },
+            breakpoints: {
+                10: { // Khi màn hình ≥ 640px
+                    spaceBetween: 12
+                },
+                1024: { // Khi màn hình ≥ 1024px            
+                    spaceBetween: 24
+                }
+            }
         })
         
         var swiper = new Swiper("#image-book-swipper", {
