@@ -44,7 +44,7 @@
             transition: all 0.5s linear;
             overflow: hidden;
 
-            background-size: 1020px 400px;
+            background-size: 1020px 420px;
         }
 
         .container-custom-slide .slide .item:nth-child(1),
@@ -84,6 +84,10 @@
             opacity: 1;
         }
 
+        .height-slide-banner {
+            height: 420px;
+        }
+
         @media (max-width: 425px) {
 
 
@@ -100,6 +104,20 @@
             }
 
             /* custom slide */
+
+            .container-custom-slide {
+                border-radius: 0px;
+            }
+
+            .container-custom-slide .slide .item {
+              
+                border-radius: 0px;
+                /* background-size: 1020px 420px; */
+            }
+
+            .height-slide-banner {
+                height: 200px;
+            }
         }
     </style>
 </head>
@@ -205,7 +223,7 @@
                         <ul class="flex">
                             <li class="py-4 px-3.5 relative underline-active"> <a
                                     class="inline-block h-6 text-base font-semibold"
-                                    style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="#">전체</a> </li>
+                                    style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="#">홈</a> </li>
                             <li class="py-4 px-3.5 text-highlight text-highlight-dot"> <a
                                     class="inline-block h-6 text-base font-medium"
                                     style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="./pages/SP-1.html">스페셜</a> </li>
@@ -240,14 +258,23 @@
     </header>
 
     <section id="toggle-menu" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 z-50 hidden">
-        <div class="h-20 sm:h-60 w-full"></div>
+        <div class="h-0 sm:h-60 w-full"></div>
 
         <div id="content-toggle-menu" class="container-layout relative w-full">
             <div class="absolute top-0 right-0 lg:right-12 w-full">
-                <div class="absolute top-0 right-0 toggle-menu-size bg-white border overflow-hidden rounded-xl py-6 md:pr-2.5">
+                <div class="absolute top-0 right-0 toggle-menu-size bg-white sm:border overflow-hidden sm:rounded-xl py-6 md:pr-2.5">
                     <div class="w-full h-full overflow-y-auto overflow-x-hidden header-toggle-menu-custom-scroll md:pr-2">
+
+                        <div class="flex p-6 sm:hidden items-center justify-between">
+                            <span class="inline-block text-20-l-28 font-semibold ">전체 메뉴</span>
+
+                            <button onclick="toggle('#toggle-menu')" class="w-6 h-6 flex items-center justify-center">
+                                <i class="fa-solid fa-xmark text-lg"></i>
+                            </button>
+                        </div>
+
                         <div class="w-full pl-5 md:px-5 mb-6 pr-2 md:pr-0">
-                            <div class="mb-8">                              
+                            <div class="mb-8">
                                 <div class="overflow-hidden rounded-lg "
                                     style="background: linear-gradient(to right, #0C98E7, #B956EA, #F03964); padding: 1px; ">
                                     <div
@@ -290,14 +317,14 @@
                                             <div class="flex items-center gap-4">
                                                 <div class="flex items-center gap-2">
                                                     <div>
-                                                        <img src="./assets/images/icon/header/chat.svg" alt="icon">
+                                                        <img class="w-6 h-6" src="./assets/images/icon/header/chat.svg" alt="icon">
                                                     </div>
                                                     <p class="text-xs font-normal">카카오 연동</p>
                                                 </div>
 
                                                 <div class="flex items-center gap-2">
                                                     <div>
-                                                        <img src="./assets/images/icon/header/dot-grey.svg" alt="icon">
+                                                        <img class="w-6 h-6" src="./assets/images/image/auth/member-bronze.png" alt="icon">
                                                     </div>
                                                     <p class="text-xs font-normal">등급</p>
                                                 </div>
@@ -538,7 +565,7 @@
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
 
     <!-- event side -->
-    <aside class="hidden xl:block" style="position: fixed; top: 320px; left: calc(50vw + 600px) ; width: 100px;">
+    <aside class="xl:block" style="position: fixed; top: 320px; left: calc(50vw + 600px) ; width: 100px;">
         <div class="space-y-4">
             <div class="rounded-md border p-2.5 flex flex-col items-center gap-y-2 bg-white">
                 <h4 class="text-xs font-medium cursor-pointer" onclick="gotoPage('./pages/P-event.html')">이벤트</h4>
@@ -592,8 +619,8 @@
     <!-- banner slide -->
     <section class="mt-6">
         <div class="container-layout">
-            <div id="frame-banner" class="mobi-px">
-                <div id="frame-boss" style="max-width: 1120px; height: 400px;">
+            <div id="frame-banner" class="">
+                <div id="frame-boss" class="height-slide-banner" style="max-width: 1120px;">
                     <div class="container-custom-slide">
                         <!-- slide -->
                         <div class="slide">
@@ -632,17 +659,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- dots -->
-                <div class="relative block hidden mt-3">
-                    <ul class="w-full space-x-1 flex justify-center" style="color: #333;">
-                        <li class="w-5 h-2 rounded-2xl transition duration-500 bg-gray-800"></li>
-                        <li class="w-2 h-2 rounded-2xl transition duration-500 bg-gray-300"></li>
-                        <li class="w-2 h-2 rounded-2xl transition duration-500 bg-gray-300"></li>
-                        <li class="w-2 h-2 rounded-2xl transition duration-500 bg-gray-300"></li>
-                        <li class="w-2 h-2 rounded-2xl transition duration-500 bg-gray-300"></li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -699,9 +715,9 @@
 
 
     <!-- slide -->
-    <section style="background-color: rgba(255, 249, 237, 1);">
+    <section class="" style="background-color: rgba(255, 249, 237, 1);">
         <div class="container-layout">
-            <div class="px-5 sm:px-0 space-y-5 sm:space-y-8 py-12 sm:py-14">
+            <div class="px-5 lg:px-0 space-y-5 sm:space-y-8 py-12 sm:py-14">
                 <h4 class="text-2028-2838 font-semibold">바오로딸 <span
                         class="inline-block text-2028-2838 font-semibold text-highlight">추천</span> </h4>
 
@@ -720,8 +736,6 @@
                             <div class="space-y-12">
                                 <div>
                                     <h4 class="text-22-30 font-semibold">하느님을 찾는 아이들</h4>
-                                    <p class="text-sm font-normal text-gray-400 mb-6 sm:mb-0">플란체스코 리에라 ∙ 실비아 오리아나 콜롬보
-                                    </p>
                                     <p>
                                         <span class="inline-block text-base font-semibold text-red-500">10%</span>
                                         <span class="inline-block text-base font-semibold">9,000<span
@@ -740,7 +754,17 @@
                         <p class="text-sm font-medium sm:hidden">아이들과 함께 읽으며 재미있게 이야기를 풀어가는 그림동화</p>
                     </div>
 
-                    <div class="hidden sm:block">
+                    <div class="relative block sm:hidden">
+                        <ul class="w-full space-x-1 flex justify-center" style="color: #333;">
+                            <li class="w-5 h-2 rounded-2xl transition duration-500 bg-gray-800"></li>
+                            <li class="w-2 h-2 rounded-2xl transition duration-500 bg-gray-300"></li>
+                            <li class="w-2 h-2 rounded-2xl transition duration-500 bg-gray-300"></li>
+                            <li class="w-2 h-2 rounded-2xl transition duration-500 bg-gray-300"></li>
+                            <li class="w-2 h-2 rounded-2xl transition duration-500 bg-gray-300"></li>
+                        </ul>
+                    </div>
+
+                    <div class="hidden lg:block">
                         <!-- new swiper -->
                         <div class="overflow-x-hidden">
                             <div id="recommentSwiper" class="swiper" style="width: 460px; height: 230px;">
@@ -765,7 +789,7 @@
                     </div>
 
                     <!-- button navigation -->
-                    <div class="hidden absolute left-0 right-0 z-10 sm:flex justify-between items-center"
+                    <div class="hidden absolute left-0 right-0 z-10 lg:flex justify-between items-center"
                         style="top: calc(50% - 20px);">
                         <button id="recomment-swiper-button-prev"
                             class="w-10 h-10 bg-white rounded-full border shadow transform lg:-translate-x-16">
@@ -878,11 +902,11 @@
                             <button class="text-base py-1.5 px-3.5 font-medium rounded-full">굿즈</button>
                         </div>
 
-                        <div class="flex items-center gap-1 py-1 cursor-pointer"
+                        <!-- <div class="flex items-center gap-1 py-1 cursor-pointer"
                             onclick="gotoPage('./pages/CA-book-main-category.html')">
                             <span class="inline-block text-sm sm:text-base font-semibold text-gray-400">더보기</span>
                             <img src="./assets/images/icon/common/plus-gray.svg" alt="+">
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -895,7 +919,7 @@
                                 <div id="bestSwiper" class="swiper main-best-slide-size">
                                     <div class="swiper-wrapper">
 
-                                        <!-- <div class="swiper-slide">
+                                        <div class="swiper-slide">
                                             <div class="flex gap-4">
                                                 <div class="frame-image-border-24-26 image-size-70108-102150 overflow-hidden shadow-md border">
                                                     <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="book">
@@ -917,14 +941,14 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div> -->
+                                        </div>
 
                                     </div>
                                 </div>
                             </div>
 
                             <!-- button navigation -->
-                            <div class="absolute left-0 right-0 z-10 hidden sm:flex justify-between items-center"
+                            <!-- <div class="absolute left-0 right-0 z-10 hidden sm:flex justify-between items-center"
                                 style="top: calc(50% - 20px);">
                                 <button id="best-swiper-button-prev"
                                     class="w-10 h-10 bg-white rounded-full border shadow transform lg:-translate-x-16">
@@ -934,7 +958,7 @@
                                     class="w-10 h-10 bg-white rounded-full border shadow transform lg:translate-x-16">
                                     <i class="text-gray-600 fa-solid fa-chevron-right"></i>
                                 </button>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <!-- end slide -->
@@ -1041,43 +1065,50 @@
     <!-- slide -->
     <div class="h-12 sm:h-24"></div>
     <section>
-        <div class="container-layout">
+        <div class="container-layout px-5 sm:px-0">
             <div id="frame-sentence" class="relative">
-                <div class="flex items-center gap-x-5 flex-wrap gap-y-5">
-                    <div class="flex-1 space-y-5 sm:space-y-14">
-                        <div class="flex items-center gap-x-1">
-                            <h4 class="text-2028-2838 font-semibold whitespace-nowrap">이 책의 한 문장</h4>
-                            <img src="./assets/images/icon/main/one.svg" alt="">
-                        </div>
-
-                        <div>
-                            <div class="flex items-end gap-x-5">
-                                <div class="sm:hidden scope-imgage-small border shadow cursor-pointer"
-                                    style="width: 102px; height: 150px;"
-                                    onclick="gotoPage('./pages/CA-book-product-detail.html')">
-                                    <img id="sentence-img" class="w-full h-full"
-                                        src="./assets/images/image/books/book1.png" alt="">
-                                </div>
-                                <div>
-                                    <h4 class="text-1624-2230 font-semibold">책 제목</h4>
-                                    <p class="text-13-l-18 font-normal text-gray-400">성바오로딸</p>
+                <div class="flex flex-col lg:flex-row items-stretch gap-x-5 flex-wrap gap-y-5">
+                    <div class="sm:flex-1 flex items-stretch justify-between gap-x-5">
+                        <div class="sm:flex-1 flex flex-col justify-between">
+                            <div class="flex items-center gap-x-1">
+                                <h4 class="text-2028-2838 font-semibold whitespace-nowrap">이 책의 한 문장</h4>
+                                <img src="./assets/images/icon/main/one.svg" alt="">
+                            </div>
+    
+                            <div class="space-y-6">
+                                <div class="flex items-end gap-x-5">
+                                    <div class="sm:hidden scope-imgage-small border shadow cursor-pointer"
+                                        style="width: 102px; height: 150px;"
+                                        onclick="gotoPage('./pages/CA-book-product-detail.html')">
+                                        <img id="sentence-img" class="w-full h-full"
+                                            src="./assets/images/image/books/book1.png" alt="">
+                                    </div>
                                     <div>
-                                        <span class="inline-block text-base font-semibold text-red-500">10%</span>
-                                        <span class="inline-block text-base font-semibold">12,000 <span
+                                        <h4 class="text-1624-2230 font-semibold">책 제목</h4>
+                                        <!-- <p class="text-13-l-18 font-normal text-gray-400">성바오로딸</p> -->
+                                        <div>
+                                            <span class="inline-block text-base font-semibold text-red-500">10%</span>
+                                            <span class="inline-block text-base font-semibold">12,000 <span
                                                 class="inline-block text-base font-normal">원</span></span>
+                                        </div>
                                     </div>
                                 </div>
+                                <p class="text-17-l-24 font-medium text-gray-800 three-lines">
+                                    주님, 일상을 거룩하게 산다는 것이 무슨 뜻입니까?제 안에 하루를 거룩하게 살고 싶은 갈망을 일으켜 주십시오.
+                                    제 안에 하루를 거룩하게 살고 싶은 갈망을 일으켜 주십시오.
+                                </p>
                             </div>
-                            <div class="my-6">
-                                <img src="./assets/images/icon/main/chat.svg" alt="">
-                            </div>
-                            <p class="text-17-l-24 font-medium text-gray-800">
-                                주님, 일상을 거룩하게 산다는 것이 무슨 뜻입니까?제 안에 하루를 거룩하게 살고 싶은 갈망을 일으켜 주십시오.
-                            </p>
+                        </div>
+
+                        <div class="hidden sm:block lg:hidden  scope-imgage-small border shadow cursor-pointer"
+                            style="width: 196px; height: 290px;"
+                            onclick="gotoPage('./pages/CA-book-product-detail.html')">
+                            <img id="sentence-img-second" class="w-full h-full"
+                                src="./assets/images/image/books/book1.png" alt="">
                         </div>
                     </div>
 
-                    <div id="sentence" class="relative overflow-hidden h-108-290" style="width: 684px;">
+                    <div id="sentence" class="relative overflow-hidden h-108-290 main-sentence-width">
                         <div class="container relative">
 
                             <div class="sentence-slide">
@@ -1114,7 +1145,7 @@
                 </div>
 
                 <!-- button navigation -->
-                <div class="absolute left-0 right-0 z-10 hidden sm:flex justify-between items-center"
+                <div class="absolute left-0 right-0 z-10 hidden lg:flex justify-between items-center"
                     style="top: calc(50% - 20px);">
                     <button id="prev"
                         class="w-10 h-10 bg-white rounded-full border shadow transform lg:-translate-x-16">
@@ -1264,8 +1295,8 @@
     <div class="h-12 sm:h-24"></div>
     <section>
         <div class="container-layout">
-            <div class="flex flex-col lg:flex-row items-start sm:justify-between gap-y-12">
-                <div class="space-y-5 sm:space-y-8">
+            <div class="flex flex-col lg:flex-row items-start sm:justify-between gap-y-12 gap-x-9">
+                <div class="flex-1 space-y-5 sm:space-y-8">
                     <div class="px-5 sm:px-0 flex items-center gap-x-1">
                         <h4 class="text-2028-2838 font-semibold">카드뉴스</h4>
                         <img src="./assets/images/icon/main/news.svg" alt="">
@@ -1305,14 +1336,13 @@
                             </div>
 
                             <!-- button navigation -->
-                            <div class="absolute left-0 right-0 z-10 hidden sm:flex justify-between items-center"
-                                style="top: calc(50% - 20px);">
+                            <div class="hidden lg:flex justify-end items-center gap-x-6 mt-4">
                                 <button id="news-swiper-button-prev"
-                                    class="w-10 h-10 bg-white rounded-full border shadow transform -translate-x-16">
+                                    class="w-10 h-10 bg-white rounded-full border shadow">
                                     <i class="text-gray-600 fa-solid fa-chevron-left"></i>
                                 </button>
                                 <button id="news-swiper-button-next"
-                                    class="w-10 h-10 bg-white rounded-full border shadow transform translate-x-16">
+                                    class="w-10 h-10 bg-white rounded-full border shadow">
                                     <i class="text-gray-600 fa-solid fa-chevron-right"></i>
                                 </button>
                             </div>
@@ -1320,17 +1350,21 @@
                     </div>
                 </div>
 
-                <div class="space-y-5 sm:space-y-8 width-full-433">
+                <div class="flex-1 space-y-5 sm:space-y-8">
                     <h4 class="px-5 sm:px-0 text-2028-2838 font-semibold">주님과 함께</h4>
 
-                    <div class="rounded-lg overflow-hidden border">
-                        <div class="overflow-hidden flex items-end justify-center h-150-200">
-                            <img src="./assets/images/image/common/main-1.png" alt="">
+                    <div class="px-5 md:px-0 flex items-center gap-x-5">
+                        <div class="">
+                            <div class="size-160160-250250 rounded-lg overflow-hidden"
+                                style="background-color: rgba(0, 166, 146, 1);">
+
+                            </div>
                         </div>
 
-                        <div class="flex items-center justify-between py-3 px-5">
-                            <span class="inline-block text-base font-medium">20024.08.26</span>
-                            <span class="inline-block text-base font-medium">박향숙 수녀</span>
+                        <div class="">
+                            <div class="size-160160-250250 rounded-lg overflow-hidden"
+                                style="background-color: rgba(0, 166, 146, 1);">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1744,7 +1778,6 @@
                                             
                             <div>
                                 <h4 class="text-base font-semibold mb-1 two-lines">영원한 도움의 성모 매일기도 영원한 도움의 성모 매일기도</h4>
-                                <div class="text-13-l-18 font-normal text-gray-400 mb-3">성바오로딸</div>
                                 <div class="flex items-center gap-1">
                                     <span class="inline-block text-sm font-semibold text-red-500">10%</span>
                                     <span class="inline-block text-sm font-semibold">12,600</span><span class="inline-block text-sm font-normal">원</span>
@@ -1790,7 +1823,6 @@
 
                                 <div class="flex-1 space-y-1 sm:space-y-1.5">
                                     <h4 class="text-base font-semibold">영원한 도움의 성모 매일기도 영원한 도움의 성모 매일기도</h4>
-                                    <span class="text-13-l-18 font-normal text-gray-400">지은이</span>
                                     <div class="hidden sm:block">
                                         <span class="inline-block text-sm font-semibold text-red-500">10%</span>
                                         <span class="inline-block text-sm font-semibold">12,600</span><span class="inline-block text-sm font-normal">원</span>                            
@@ -1806,9 +1838,9 @@
             var bestSwiper = new Swiper("#bestSwiper", {
                 slidesPerView: 2,
                 grid: {
-                    rows: 3,
+                    rows: 4,
                 },
-                loop: true,
+                // loop: true,
                 spaceBetween: 20,
                 navigation: {
                     nextEl: "#best-swiper-button-next",
@@ -1856,13 +1888,8 @@
                                 <div style="font-size: 15px; line-height: 22px;" class="font-medium">5</div>
                             </div>
                             <div>
-                                <p style="font-size: 15px; line-height: 24px; font-weight: 400; color: rgba(46, 47, 51, 0.88);
-                                display: -webkit-box;
-                                -webkit-box-orient: vertical;
-                                -webkit-line-clamp: 4;
-                                overflow: hidden;
-                                text-overflow: ellipsis;"
-                                class="four-lines h-24"
+                                <p style="font-size: 15px; line-height: 24px; font-weight: 400; color: rgba(46, 47, 51, 0.88);"
+                                    class="two-lines h-12"
                                 >
                                     ${i === 1 ? "성서를 읽다보면 처음에는 열심히 읽어보려고 애 쓰지만 어느새 깨알 같은 글씨에 눈도 아프고 졸음이 솔솔 밀려온다. 그러다가 에이 하고 덮기도 하고 말이다. 말씀은 봐야겠는데, 쉽지가 않고 그렇다고 덮" : " 쉽지가 않고 그렇다고 덮"}
                                 </p>
@@ -1969,7 +1996,6 @@
 
                             <div class="space-y-1" style="width: 102px;">
                                 <h4 class="text-15-l-22 font-medium">우리 아이도 신앙을 가지면 좋겠다</h4>
-                                <p class="text-13-l-18 font-normal text-gray-400">저자</p>
                             </div>
                         </div>
                     </div>
@@ -2020,6 +2046,7 @@
             sentenceIndex++
             if (sentenceIndex > 9) sentenceIndex = 1
             document.querySelector('#sentence-img').src = `./assets/images/image/books/book${sentenceIndex}.png`
+            document.querySelector('#sentence-img-second').src = `./assets/images/image/books/book${sentenceIndex}.png`
         })
 
         prevSentence.addEventListener('click', function () {
@@ -2029,6 +2056,7 @@
             sentenceIndex--
             if (sentenceIndex < 1) sentenceIndex = 9
             document.querySelector('#sentence-img').src = `./assets/images/image/books/book${sentenceIndex}.png`
+            document.querySelector('#sentence-img-second').src = `./assets/images/image/books/book${sentenceIndex}.png`
         })
 
         const intervalId = setInterval(() => {
@@ -2038,6 +2066,7 @@
             sentenceIndex++
             if (sentenceIndex > 9) sentenceIndex = 1
             document.querySelector('#sentence-img').src = `./assets/images/image/books/book${sentenceIndex}.png`
+            document.querySelector('#sentence-img-second').src = `./assets/images/image/books/book${sentenceIndex}.png`
         }, 5000);
 
        

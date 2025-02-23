@@ -93,9 +93,9 @@
                     <!-- input search ^^^^ -->
 
                     <div class="gap-3 hidden sm:flex">
-                        <div class="cursor-pointer">
-                            <img style="width: 48px !important; height: 48px !important;"
-                                src="../assets/images/icon/header/home-cart.svg" alt="icon" />
+                        <div class="cursor-pointer relative w-12 h-12">
+                            <img style="width: 48px !important; height: 48px !important;" src="../assets/images/icon/header/home-cart.svg" alt="icon" />
+                            <div class="text-9-l-11 text-white p-0.5 rounded-full bg-red-400 absolute bottom-0 right-0">9,999</div>
                         </div>
                         <div class="cursor-pointer">
                             <img id="icon-acc-login" style="width: 56px !important; height: 56px !important;"
@@ -136,12 +136,21 @@
     </header>
 
     <section id="toggle-menu" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 z-50 hidden">
-        <div class="h-20 sm:h-60 w-full"></div>
+        <div class="h-0 sm:h-60 w-full"></div>
 
         <div id="content-toggle-menu" class="container-layout relative w-full">
             <div class="absolute top-0 right-0 lg:right-12 w-full">
-                <div class="absolute top-0 right-0 toggle-menu-size bg-white border overflow-hidden rounded-xl py-6 md:pr-2.5">
+                <div class="absolute top-0 right-0 toggle-menu-size bg-white sm:border overflow-hidden sm:rounded-xl py-6 md:pr-2.5">
                     <div class="w-full h-full overflow-y-auto overflow-x-hidden header-toggle-menu-custom-scroll md:pr-2">
+
+                        <div class="flex p-6 sm:hidden items-center justify-between">
+                            <span class="inline-block text-20-l-28 font-semibold ">전체 메뉴</span>
+
+                            <button onclick="toggle('#toggle-menu')" class="w-6 h-6 flex items-center justify-center">
+                                <i class="fa-solid fa-xmark text-lg"></i>
+                            </button>
+                        </div>
+
                         <div class="w-full pl-5 md:px-5 mb-6 pr-2 md:pr-0">
                             <div class="mb-8">                              
                                 <div class="overflow-hidden rounded-lg "
@@ -718,32 +727,31 @@
                             <div class="bg-black h-1-px mt-3 mb-4 hidden sm:block"></div>
 
                             <div id="time-scope" class="mt-5 hidden">
-                                <div class="space-y-2">
+                                <div class="flex items-center gap-2 flex-wrap">
                                     <ul class="hidden sm:flex items-center gap-x-1">
-                                        <li class="p-1.5 cursor-pointer text-13-l-18 font-normal text-gray-400">전체</li>
+                                        <li class="p-1.5 cursor-pointer text-13-l-18 font-normal text-gray-400 whitespace-nowrap">전체</li>
                                         <span class="inline-block w-1-px bg-gray-400" style="height: 18px;"></span>
-                                        <li class="p-1.5 cursor-pointer text-13-l-18 font-normal text-gray-400">6개월 이내
+                                        <li class="p-1.5 cursor-pointer text-13-l-18 font-normal text-gray-400 whitespace-nowrap">6개월 이내
                                         </li>
                                         <span class="inline-block w-1-px bg-gray-400" style="height: 18px;"></span>
-                                        <li class="p-1.5 cursor-pointer text-13-l-18 font-normal text-gray-400">1년 이내
+                                        <li class="p-1.5 cursor-pointer text-13-l-18 font-normal text-gray-400 whitespace-nowrap">1년 이내
                                         </li>
                                         <span class="inline-block w-1-px bg-gray-400" style="height: 18px;"></span>
-                                        <li class="p-1.5 cursor-pointer text-13-l-18 font-semibold">기간 조회</li>
+                                        <li class="p-1.5 cursor-pointer text-13-l-18 font-semibold whitespace-nowrap">기간 조회</li>
                                     </ul>
                                     <!-- daypicker -->
-                                    <div
-                                        class="flex flex-col sm:flex-row items-center justify-between gap-y-5 px-5 sm:px-0 border-b-2 pb-3">
-                                        <div class="flex items-center gap-x-1">
-                                            <div
-                                                class="relative py-1.5 px-2.5 rounded-md border flex items-center gap-x-2">
+                                    <div class="flex-1 flex flex-col sm:flex-row items-center justify-between gap-y-5 px-5 sm:px-0">
+                                        <div class="flex items-center gap-x-1 rounded-md bg-gray-100 px-2.5">
+                                            <div class="relative py-1.5 flex items-center gap-x-0">
                                                 <div class="flex-1">
                                                     <input id="datepicker-start" type="text" placeholder="2024.10.06"
-                                                        readonly disabled
-                                                        class="text-15-l-22 font-normal text-gray-400 flex-1 w-full sm:w-24 bg-transparent">
+                                                        readonly disabled hidden
+                                                        class="text-15-l-22 font-normal text-gray-400 flex-1 w-full sm:w-24 bg-transparent hidden">
                                                 </div>
                                                 <button id="trigger-pikaday-start"
-                                                    class="w-6 h-6 flex items-center justify-center cursor-pointer">
-                                                    <img src="../assets/images/icon/my-page/calendar-month.svg" alt="">
+                                                    class="w-20 h-6 flex items-center justify-center cursor-pointer">
+                                                    <!-- <img src="../assets/images/icon/my-page/calendar-month.svg" alt=""> -->
+                                                    2024.10.06
                                                 </button>
 
                                                 <div id="container-cal-start" class="absolute left-0"
@@ -752,16 +760,16 @@
 
                                             <div>~</div>
 
-                                            <div
-                                                class="relative py-1.5 px-2.5 rounded-md border flex items-center gap-x-2">
+                                            <div class="relative py-1.5 flex items-center gap-x-0">
                                                 <div class="flex-1">
                                                     <input id="datepicker-end" type="text" placeholder="2024.10.06"
-                                                        readonly disabled
-                                                        class="text-15-l-22 font-normal text-gray-400 flex-1 w-full sm:w-24 bg-transparent">
+                                                        readonly disabled hidden
+                                                        class="text-15-l-22 font-normal text-gray-400 flex-1 w-full sm:w-24 bg-transparent hidden">
                                                 </div>
                                                 <button id="trigger-pikaday-end"
-                                                    class="w-6 h-6 flex items-center justify-center cursor-pointer">
-                                                    <img src="../assets/images/icon/my-page/calendar-month.svg" alt="">
+                                                    class="w-20 h-6 flex items-center justify-center cursor-pointer">
+                                                    <!-- <img src="../assets/images/icon/my-page/calendar-month.svg" alt=""> -->
+                                                    2024.10.06
                                                 </button>
 
                                                 <div id="container-cal-end" class="absolute -left-32"
@@ -1214,8 +1222,8 @@
             i18n: koreanTranslation,
             onSelect: function (date) {
                 const formattedDate = moment(date).format('YYYY.MM.DD');
-                document.getElementById('datepicker-start').value = formattedDate;
-
+                // document.getElementById('datepicker-start').value = formattedDate;
+                document.getElementById('trigger-pikaday-start').innerHTML = formattedDate
                 pickerEnd.setMinDate(date);
                 setTimeout(() => {
                     pickerStart.show()
@@ -1231,7 +1239,8 @@
             i18n: koreanTranslation,
             onSelect: function (date) {
                 const formattedDate = moment(date).format('YYYY.MM.DD');
-                document.getElementById('datepicker-end').value = formattedDate;
+                // document.getElementById('datepicker-end').value = formattedDate;
+                document.getElementById('trigger-pikaday-end').innerHTML = formattedDate
 
                 pickerStart.setMaxDate(date);
                 setTimeout(() => {

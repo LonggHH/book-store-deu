@@ -78,8 +78,9 @@
                     <!-- input search ^^^^ -->
 
                     <div class="gap-3 hidden sm:flex">
-                        <div class="cursor-pointer">
+                        <div class="cursor-pointer relative w-12 h-12">
                             <img style="width: 48px !important; height: 48px !important;" src="../assets/images/icon/header/home-cart.svg" alt="icon" />
+                            <div class="text-9-l-11 text-white p-0.5 rounded-full bg-red-400 absolute bottom-0 right-0">9,999</div>
                         </div>
                         <div class="cursor-pointer">
                             <img id="icon-acc-login" style="width: 56px !important; height: 56px !important;" src="../assets/images/icon/header/my-home-account.svg" alt="icon" />
@@ -127,12 +128,21 @@
     </header>
 
     <section id="toggle-menu" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 z-50 hidden">
-        <div class="h-20 sm:h-60 w-full"></div>
+        <div class="h-0 sm:h-60 w-full"></div>
 
         <div id="content-toggle-menu" class="container-layout relative w-full">
             <div class="absolute top-0 right-0 lg:right-12 w-full">
-                <div class="absolute top-0 right-0 toggle-menu-size bg-white border overflow-hidden rounded-xl py-6 md:pr-2.5">
+                <div class="absolute top-0 right-0 toggle-menu-size bg-white sm:border overflow-hidden sm:rounded-xl py-6 md:pr-2.5">
                     <div class="w-full h-full overflow-y-auto overflow-x-hidden header-toggle-menu-custom-scroll md:pr-2">
+
+                        <div class="flex p-6 sm:hidden items-center justify-between">
+                            <span class="inline-block text-20-l-28 font-semibold ">전체 메뉴</span>
+
+                            <button onclick="toggle('#toggle-menu')" class="w-6 h-6 flex items-center justify-center">
+                                <i class="fa-solid fa-xmark text-lg"></i>
+                            </button>
+                        </div>
+
                         <div class="w-full pl-5 md:px-5 mb-6 pr-2 md:pr-0">
                             <div class="mb-8">                              
                                 <div class="overflow-hidden rounded-lg "
@@ -427,7 +437,7 @@
 
     <!-- breadcrumb -->
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
-    <section class="sm:mt-6 sm:mb-8">
+    <section class="sm:mt-6 sm:mb-8 sm:hidden">
         <div class="container-layout mobi-px py-2 sm:py-0 bg-gray-100 sm:bg-white">
             <div class="flex items-center gap-2 sm:py-1">
                 <div>
@@ -487,7 +497,7 @@
     <!-- main category -->
 
 
-    <section class="mt-5 sm:mt-0">
+    <section class="mt-5 sm:mt-6">
         <div class="container-layout">
             <div class="flex items-start relative justify-between flex-wrap gap-side-menu-main-content">
 
@@ -561,6 +571,65 @@
                 <!-- start main (+class: frame-main-size) -->
                 <main class="flex-1 space-y-2 sm:space-y-3.5 overflow-hidden">
                     
+                    <section class="sm:mb-6 hidden lg:block border-b" style="padding-bottom: 17px;">
+                        <div class="container-layout mobi-px py-2 sm:py-0 bg-gray-100 sm:bg-white">
+
+                            <div class="flex items-center gap-2 sm:py-1 relative">
+                                <div>
+                                    <a href="../index.html">
+                                        <img src="../assets/images/icon/category/breadcrumb-home.svg" alt="icon">                        
+                                    </a>
+                                </div>
+                                <div>
+                                    <span class="text-gray-400 inline-block text-13-l-18 font-normal">/</span>
+                                </div>
+                                <div class="flex items-center gap-1 relative cursor-pointer breadcrumb-main-category-menu">
+                                    <span class="text-gray-400 inline-block text-13-l-18 font-normal">도서</span>
+                                    <img class="icon-down" src="../assets/images/icon/category/breadcrumb-down.svg" alt="icon">
+                                    <img class="icon-up hidden" src="../assets/images/icon/category/breadcrumb-up.svg" alt="icon">
+                
+                                    <div class="absolute z-10 top-7 left-0 hidden breadcrumb-sub-menu">
+                                        <ul class="py-1 border rounded-lg bg-white">
+                                            <li class="py-1 px-2.5 w-full">
+                                                <a href="./CA-book-main-category.html" class="text-13-18 font-normal text-black whitespace-nowrap hover:text-gray-600">도서</a>
+                                            </li>
+                                            <li class="py-1 px-2.5 w-full">
+                                                <a href="./CA-sanctuary-main-category.html" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">성물</a>
+                                            </li>
+                                            <li class="py-1 px-2.5 w-full">
+                                                <a href="./CA-good-main-category.html" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">굿즈</a>
+                                            </li>
+                                            <li class="py-1 px-2.5 w-full">
+                                                <a href="./CA-pick-main-category.html" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">바오로딸 Pick</a>
+                                            </li>
+                                            <li class="py-1 px-2.5 w-full">
+                                                <a href="./CA-ebook-main-category.html" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">ebook</a>
+                                            </li>
+                                            <li class="py-1 px-2.5 w-full">
+                                                <a href="./CA-dvd-main-category.html" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">음반/뮤직/DVD</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>            
+                                <div>
+                                    <span class="text-13-18 font-normal text-gray-400 whitespace-nowrap">/</span>
+                                </div>
+                                <div class="flex items-center gap-1 breadcrumb-main-category-menu relative" onclick="handleOpenSubNavigation('sub')">
+                                    <span class="text-13-18 font-normal text-gray-400 whitespace-nowrap">대분류</span>
+                                    <img class="icon-down" src="../assets/images/icon/category/breadcrumb-down.svg" alt="icon">
+                                    <img class="icon-up hidden" src="../assets/images/icon/category/breadcrumb-up.svg" alt="icon">
+                                </div>               
+                                <div>
+                                    <span class="text-13-18 font-normal text-gray-400 whitespace-nowrap">/</span>
+                                </div>
+                                <div class="flex items-center gap-1 cursor-pointer" onclick="handleOpenSubNavigation('child')">
+                                    <span class="text-13-18 font-normal text-gray-400 whitespace-nowrap">중분류</span>
+                                    <img src="../assets/images/icon/category/breadcrumb-down.svg" alt="icon">
+                                </div>               
+                            </div>
+                        </div>
+                    </section>
+
                     <div class="px-5 sm:px-0">
                         <div class="flex items-center justify-between pb-2 border-b border-black">
                             <div class="flex items-center gap-1">
@@ -648,13 +717,13 @@
 
                     <div class="h-1-px"></div>
 
-                    <div id="btn-more" class="" onclick="moreBook()">
+                    <div id="btn-more" class="hidden" onclick="moreBook()">
                         <button class="w-full text-1522-1624 font-semibold py-2 sm:py-3 text-center rounded border">
                             더보기
                         </button>
                     </div>
 
-                    <div id="frame-pagi" class="flex items-center justify-center pt-2.5 hidden">
+                    <div id="frame-pagi" class="flex items-center justify-center pt-2.5">
                         <div class="flex items-center">
                             <button onclick="gotoSE('start')" class="p-1 sm:p-2">
                                 <img class="w-6 h-6" src="../assets/images/icon/common/prev-to-first.svg"
@@ -1225,7 +1294,10 @@
                     stringSbMenu +=
                     `
                         <li class="">
-                            <button class="toggle-menu-btn w-full text-left text-sm leading-5 font-semibold cursor-pointer p-2">대분류</button>
+                            <button class="toggle-menu-btn w-full text-left text-sm leading-5 font-semibold cursor-pointer p-2 flex items-center justify-between">
+                                <span class="inline-block">대분류</span>
+                                <i class="fa-solid fa-chevron-down text-gray-400 font-normal"></i>  
+                            </button>
                             <ul class="p-2 border-b  ${i === 0 && y === 0 ?'' : 'hidden'}">
                                 <li class="flex items-center justify-between py-1.5 cursor-pointer" onclick="gotoPage('./CA-dvd-middle-category.html')">
                                     <span class="text-base font-normal">중분류</span>
@@ -1260,7 +1332,7 @@
             })
             document.querySelector('#left-menu').innerHTML = stringHTML
 
-            document.querySelectorAll('.toggle-menu-btn').forEach(button => {
+            document.querySelectorAll('.toggle-menu-btn').forEach((button,i) => {
                 button.addEventListener('click', () => {
                     // Ẩn tất cả menu con
                     document.querySelectorAll('.toggle-menu-btn + ul').forEach(menu => {
@@ -1274,6 +1346,16 @@
                         menu.classList.toggle('hidden');
                         menu.classList.toggle('visible');
                     }
+
+                    //
+                    document.querySelectorAll('.toggle-menu-btn').forEach((button, y) => {
+                        if (i !== y) {
+                            button.querySelector('i').classList.remove('fa-chevron-up')
+                            button.querySelector('i').classList.add('fa-chevron-down')
+                        }
+                    })
+                    button.querySelector('i').classList.remove('fa-chevron-down')
+                    button.querySelector('i').classList.add('fa-chevron-up')
                 });
             });
         }
@@ -1284,8 +1366,8 @@
             block.querySelector('i').classList.toggle('text-red-400')
         }
 
-        const gridButton = document.getElementById('gridButton');
-        const listButton = document.getElementById('listButton');
+        // const gridButton = document.getElementById('gridButton');
+        // const listButton = document.getElementById('listButton');
 
         function chooseBookItem(icon) {
             console.log(icon)
@@ -1296,46 +1378,46 @@
             }
         }
 
-        gridButton.addEventListener('click', () => {
-            // Toggle between active states
-            gridButton.classList.add('bg-white', 'shadow-md');
-            listButton.classList.remove('bg-white', 'shadow-md');
+        // gridButton.addEventListener('click', () => {
+        //     // Toggle between active states
+        //     gridButton.classList.add('bg-white', 'shadow-md');
+        //     listButton.classList.remove('bg-white', 'shadow-md');
 
-            gridButton.querySelectorAll('span').forEach(el => {
-                el.classList.remove('bg-gray-400')
-                el.classList.add('bg-gray-800')
-            })
+        //     gridButton.querySelectorAll('span').forEach(el => {
+        //         el.classList.remove('bg-gray-400')
+        //         el.classList.add('bg-gray-800')
+        //     })
 
-            listButton.querySelectorAll('span').forEach(el => {
-                el.classList.add('bg-gray-400')
-                el.classList.remove('bg-gray-800')
-            })
-
-            
-            displayBook = typeDisplayBook.grid
-            renderListBookGridView()
-        });
-
-        listButton.addEventListener('click', () => {
-            // Toggle between active states
-            listButton.classList.add('bg-white', 'shadow-md');
-            gridButton.classList.remove('bg-white', 'shadow-md');
-
-
-            gridButton.querySelectorAll('span').forEach(el => {
-                el.classList.add('bg-gray-400')
-                el.classList.remove('bg-gray-800')
-            })
-
-            listButton.querySelectorAll('span').forEach(el => {
-                el.classList.remove('bg-gray-400')
-                el.classList.add('bg-gray-800')
-            })
+        //     listButton.querySelectorAll('span').forEach(el => {
+        //         el.classList.add('bg-gray-400')
+        //         el.classList.remove('bg-gray-800')
+        //     })
 
             
-            displayBook = typeDisplayBook.list
-            renderListBookListView()
-        });
+        //     displayBook = typeDisplayBook.grid
+        //     renderListBookGridView()
+        // });
+
+        // listButton.addEventListener('click', () => {
+        //     // Toggle between active states
+        //     listButton.classList.add('bg-white', 'shadow-md');
+        //     gridButton.classList.remove('bg-white', 'shadow-md');
+
+
+        //     gridButton.querySelectorAll('span').forEach(el => {
+        //         el.classList.add('bg-gray-400')
+        //         el.classList.remove('bg-gray-800')
+        //     })
+
+        //     listButton.querySelectorAll('span').forEach(el => {
+        //         el.classList.remove('bg-gray-400')
+        //         el.classList.add('bg-gray-800')
+        //     })
+
+            
+        //     displayBook = typeDisplayBook.list
+        //     renderListBookListView()
+        // });
 
 
         function moreBook() {

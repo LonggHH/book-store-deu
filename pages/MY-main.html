@@ -78,8 +78,9 @@
                     <!-- input search ^^^^ -->
 
                     <div class="gap-3 hidden sm:flex">
-                        <div class="cursor-pointer">
+                        <div class="cursor-pointer relative w-12 h-12">
                             <img style="width: 48px !important; height: 48px !important;" src="../assets/images/icon/header/home-cart.svg" alt="icon" />
+                            <div class="text-9-l-11 text-white p-0.5 rounded-full bg-red-400 absolute bottom-0 right-0">9,999</div>
                         </div>
                         <div class="cursor-pointer">
                             <img id="icon-acc-login" style="width: 56px !important; height: 56px !important;" src="../assets/images/icon/header/my-home-account.svg" alt="icon" />
@@ -118,12 +119,21 @@
     </header>
 
     <section id="toggle-menu" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 z-50 hidden">
-        <div class="h-20 sm:h-60 w-full"></div>
+        <div class="h-0 sm:h-60 w-full"></div>
 
         <div id="content-toggle-menu" class="container-layout relative w-full">
             <div class="absolute top-0 right-0 lg:right-12 w-full">
-                <div class="absolute top-0 right-0 toggle-menu-size bg-white border overflow-hidden rounded-xl py-6 md:pr-2.5">
+                <div class="absolute top-0 right-0 toggle-menu-size bg-white sm:border overflow-hidden sm:rounded-xl py-6 md:pr-2.5">
                     <div class="w-full h-full overflow-y-auto overflow-x-hidden header-toggle-menu-custom-scroll md:pr-2">
+
+                        <div class="flex p-6 sm:hidden items-center justify-between">
+                            <span class="inline-block text-20-l-28 font-semibold ">전체 메뉴</span>
+
+                            <button onclick="toggle('#toggle-menu')" class="w-6 h-6 flex items-center justify-center">
+                                <i class="fa-solid fa-xmark text-lg"></i>
+                            </button>
+                        </div>
+
                         <div class="w-full pl-5 md:px-5 mb-6 pr-2 md:pr-0">
                             <div class="mb-8">                              
                                 <div class="overflow-hidden rounded-lg "
@@ -418,7 +428,7 @@
 
     <!-- breadcrumb -->
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
-    <section class="sm:mt-6 sm:mb-8">
+    <section class="sm:mt-6 sm:mb-8 sm:hidden">
         <div class="container-layout mobi-px py-2 sm:py-0 bg-gray-100 sm:bg-white">
             <div class="flex items-center gap-2 sm:py-1">
                 <div>
@@ -457,10 +467,38 @@
                 <div>
                     <span class="text-13-18 font-normal text-gray-400 whitespace-nowrap">/</span>
                 </div>
-                <div class="flex items-center gap-1">
+                <div class="flex items-center gap-1 cursor-pointer" onclick="handleOpenSubNavigation('sub')">
                     <span class="text-13-18 font-normal text-gray-400 whitespace-nowrap">전체</span>
                     <img src="../assets/images/icon/category/breadcrumb-down.svg" alt="icon">
                 </div>
+            </div>
+        </div>
+
+        <div id="sub-navigation" class="container-layout mobi-px py-2 sm:py-0 bg-gray-100 sm:bg-white hidden">
+            <div id="list-sub-navigation" class="bg-white">
+            
+                <!-- <div>
+                    <div class="flex items-center justify-center">
+                        <div class="flex-1 pl-3 p-2 flex items-center justify-between cursor-pointer item-submenu-i">
+                            <div class="text-sm font-medium ">대분류</div>
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="fa-solid fa-plus text-gray-400"></i>
+                            </div>
+                        </div>
+
+                        <div class="flex-1 pl-3 p-2 flex items-center justify-between cursor-pointer item-submenu-i">
+                            <div class="text-sm font-medium ">대분류</div>
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="fa-solid fa-minus text-gray-400"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="list-sub-navigation-child" class="grid grid-cols-2">
+                        <div class="text-sm font-normal py-2 px-3 bg-blue-100">중분류</div>
+                    </div>
+                </div> -->
+
             </div>
         </div>
     </section>
@@ -468,14 +506,14 @@
 
     <!-- main category -->
 
-    <section class="">
+    <section class="sm:mt-6">
         <div class="container-layout">
             <div class="flex items-start relative justify-between flex-wrap gap-x-5">
 
                 <nav class="hidden md:block w-40">
                     <div class="space-y-3">                    
                         <div class="space-y-8">
-                            <div class="space-y-3">
+                            <div class="space-y-3 pb-3 border-b border-black">
                                 <h3 class="text-28-l-38 font-bold cursor-pointer" onclick="gotoPage('./MY-main.html')">마이페이지</h3>
                             </div>
 
@@ -567,6 +605,83 @@
 
                 <!-- start main -->
                 <main class=" cs-main-size">
+
+                    <section class="hidden sm:block" style="padding-bottom: 17px;">
+                        <div class="container-layout mobi-px py-2 sm:py-0 bg-gray-100 sm:bg-white">
+                            <div class="flex items-center gap-2 sm:py-1">
+                                <div>
+                                    <img src="../assets/images/icon/category/breadcrumb-home.svg" alt="icon">
+                                </div>
+                                <div>
+                                    <span class="text-13-18 font-normal text-gray-400 whitespace-nowrap">/</span>
+                                </div>
+                                <div class="flex items-center gap-1 relative cursor-pointer breadcrumb-main-category-menu">
+                                    <span class="text-13-18 font-normal text-gray-400 whitespace-nowrap">마이페이지</span>
+                                    <img class="icon-down" src="../assets/images/icon/category/breadcrumb-down.svg" alt="icon">
+                                    <img class="icon-up hidden" src="../assets/images/icon/category/breadcrumb-up.svg" alt="icon">
+                                    <div class="absolute z-10 top-7 left-0 hidden breadcrumb-sub-menu">
+                                        <ul class="py-1 border rounded-lg bg-white">
+                                            <li class="py-1 px-2.5 w-full">
+                                                <a href="#" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">도서</a>
+                                            </li>
+                                            <li class="py-1 px-2.5 w-full">
+                                                <a href="#" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">성물</a>
+                                            </li>
+                                            <li class="py-1 px-2.5 w-full">
+                                                <a href="#" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">굿즈</a>
+                                            </li>
+                                            <li class="py-1 px-2.5 w-full">
+                                                <a href="#" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">바오로딸 Pick</a>
+                                            </li>
+                                            <li class="py-1 px-2.5 w-full">
+                                                <a href="#" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">ebook</a>
+                                            </li>
+                                            <li class="py-1 px-2.5 w-full">
+                                                <a href="#" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">음반/뮤직/DVD</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>            
+                                <div>
+                                    <span class="text-13-18 font-normal text-gray-400 whitespace-nowrap">/</span>
+                                </div>
+                                <div class="flex items-center gap-1 cursor-pointer" onclick="handleOpenSubNavigation('sub')">
+                                    <span class="text-13-18 font-normal text-gray-400 whitespace-nowrap">전체</span>
+                                    <img src="../assets/images/icon/category/breadcrumb-down.svg" alt="icon">
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div id="sub-navigation" class="container-layout mobi-px py-2 sm:py-0 bg-gray-100 sm:bg-white hidden">
+                            <div id="list-sub-navigation" class="bg-white">
+                            
+                                <!-- <div>
+                                    <div class="flex items-center justify-center">
+                                        <div class="flex-1 pl-3 p-2 flex items-center justify-between cursor-pointer item-submenu-i">
+                                            <div class="text-sm font-medium ">대분류</div>
+                                            <div class="w-5 h-5 flex items-center justify-center">
+                                                <i class="fa-solid fa-plus text-gray-400"></i>
+                                            </div>
+                                        </div>
+                
+                                        <div class="flex-1 pl-3 p-2 flex items-center justify-between cursor-pointer item-submenu-i">
+                                            <div class="text-sm font-medium ">대분류</div>
+                                            <div class="w-5 h-5 flex items-center justify-center">
+                                                <i class="fa-solid fa-minus text-gray-400"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                
+                                    <div id="list-sub-navigation-child" class="grid grid-cols-2">
+                                        <div class="text-sm font-normal py-2 px-3 bg-blue-100">중분류</div>
+                                    </div>
+                                </div> -->
+                
+                            </div>
+                        </div>
+                    </section>
+                    
+
                     <div class="overflow-hidden border-bl-br-8-px sm:shadow-md sm:mb-9">
                         <div class="py-8 px-5 sm:py-6 sm:px-8 flex flex-col gap-y-5 sm:flex-row sm:items-center justify-between bg-white-blue-10">
                             <div class="flex items-center justify-between">
@@ -592,8 +707,8 @@
                                 </div>
 
                                 <div class="flex flex-col gap-y-2 sm:hidden">
-                                    <button class="text-13-l-18 font-semibold py-1 px-5 border rounded-full">장바구니</button>
-                                    <button class="text-13-l-18 font-semibold py-1 px-5 border rounded-full">찜 목록</button>
+                                    <button class="text-13-l-18 font-semibold py-1 px-5 border rounded-full">장바구니 <span class="text-gray-200">|</span> <span class="inline-block font-normal">9,9999</span></button>
+                                    <button class="text-13-l-18 font-semibold py-1 px-5 border rounded-full">찜 목록 <span class="text-gray-200">|</span> <span class="inline-block font-normal">9,9999</span></button>
                                 </div>
                             </div>
 
@@ -603,8 +718,8 @@
                                 <div class="sm:space-y-3">
                                     <div class="hidden sm:flex items-center justify-end">
                                         <div class="hidden sm:flex gap-x-2">
-                                            <button class="text-13-l-18 font-semibold py-1 px-5 border rounded-full" onclick="gotoPage('./CO-sh-shopping-cart.html')">장바구니</button>
-                                            <button class="text-13-l-18 font-semibold py-1 px-5 border rounded-full" onclick="gotoPage('./CO-wl-wishlist.html')">찜 목록</button>
+                                            <button class="text-13-l-18 font-semibold py-1 px-5 border rounded-full" onclick="gotoPage('./CO-sh-shopping-cart.html')">장바구니 <span class="text-gray-200">|</span> <span class="inline-block font-normal">9,9999</span></button>
+                                            <button class="text-13-l-18 font-semibold py-1 px-5 border rounded-full" onclick="gotoPage('./CO-wl-wishlist.html')">찜 목록 <span class="text-gray-200">|</span> <span class="inline-block font-normal">9,9999</span></button>
                                         </div>
                                     </div>
 
@@ -1464,6 +1579,101 @@
                 }
             })
         })
+
+        let navigations = [
+            {
+                id: 1, 
+                name: '주문 내역', 
+                open: false, 
+                sub: [
+                    {id: 1, name: '전체 주문 내역'},
+                    {id: 1, name: '방문수령 주문 내역'},
+                    {id: 1, name: '교환/반품 주문 내역'},
+                    {id: 1, name: '주문 취소 내역'},
+                ]
+            },
+            {id: 2, name: '나의 지갑', open: false, sub: [{id: 1, name: '중분류'}]},
+            {id: 3, name: '바오로딸 활동', open: false, sub: [{id: 1, name: '중분류'}]},
+            {id: 4, name: '회원 정보', open: false, sub: [{id: 1, name: '중분류'}]},
+        ]
+        function renderListMenuNavigation() {
+            let stringHTML = ''
+            for (let i = 0; i < navigations.length; i++) {
+                stringHTML +=
+                `
+                    <div>
+                        <div class="">
+                            <div onclick="handleOpenSubNavigation('sub-child', ${i}, ${i}, this)" class="flex-1 pl-3 p-2 flex items-center justify-between cursor-pointer item-submenu-i navigation-child navigation-child-${i} ${navigations[i].open ? 'bg-blue-400' : ''}">
+                                <div class="text-sm font-medium ">${navigations[i].name}</div>
+                                <div class="w-5 h-5 flex items-center justify-center">
+                                    <i class="fa-solid ${navigations[i].open ? 'fa-minus' : 'fa-plus'}  text-gray-400"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        ${(navigations[i].open) ?
+                           `<div class="list-sub-navigation-child list-sub-navigation-child-${i}">
+                                ${navigations[i].sub
+                                    .map((el) => 
+                                        `<div class="text-sm font-normal py-2 px-3 bg-blue-100 cursor-pointer">${el.name}</div>`
+                                    )
+                                    .join('')}
+                            </div>` : ''
+                        }
+                    </div>
+                `
+            }
+            document.querySelector('#list-sub-navigation').innerHTML = stringHTML
+        }
+        renderListMenuNavigation()
+
+        function handleOpenSubNavigation(type, i, indexIcon, el) {
+
+            if (window.innerWidth > 640) {
+                return
+                // Thực hiện hành động của bạn ở đây
+            }
+
+            switch (type) {
+                case 'sub':
+                    toggle('#sub-navigation')
+                    break
+                case 'sub-child':
+
+                    const list = document.querySelectorAll('.list-sub-navigation-child')
+                    list.forEach((el) => {
+                        el.innerHTML = ''
+                    })
+
+                    navigations = navigations.map((item, idx) => {
+                        if (idx === indexIcon) {
+                            return {
+                                ...item
+                            }
+                        } else {
+                            return {
+                                ...item,
+                                open: false
+                            }
+                        }
+                    })
+                    navigations[indexIcon].open = !navigations[indexIcon].open
+                    renderListMenuNavigation()
+
+                    // if (navigations[indexIcon].open) {
+                    //     let stringHTML = ''
+                    //     Array(8).fill(null).map(() => {
+                    //         stringHTML += `
+                    //             <div class="text-sm font-normal py-2 px-3 bg-blue-100 cursor-pointer">중분류</div>
+                    //         `
+                    //     })
+                    //     document.querySelector(`.list-sub-navigation-child-${i}`).innerHTML = stringHTML
+                    // }
+
+                    break;
+            }
+        }
+
     </script>
 </body>
 </html>

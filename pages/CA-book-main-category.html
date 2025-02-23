@@ -79,8 +79,9 @@
                     <!-- input search ^^^^ -->
 
                     <div class="gap-3 hidden sm:flex">
-                        <div class="cursor-pointer">
+                        <div class="cursor-pointer relative w-12 h-12">
                             <img style="width: 48px !important; height: 48px !important;" src="../assets/images/icon/header/home-cart.svg" alt="icon" />
+                            <div class="text-9-l-11 text-white p-0.5 rounded-full bg-red-400 absolute bottom-0 right-0">9,999</div>
                         </div>
                         <div class="cursor-pointer">
                             <img id="icon-acc-login" style="width: 56px !important; height: 56px !important;" src="../assets/images/icon/header/my-home-account.svg" alt="icon" />
@@ -128,12 +129,21 @@
     </header>
 
     <section id="toggle-menu" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 z-50 hidden">
-        <div class="h-20 sm:h-60 w-full"></div>
+        <div class="h-0 sm:h-60 w-full"></div>
 
         <div id="content-toggle-menu" class="container-layout relative w-full">
             <div class="absolute top-0 right-0 lg:right-12 w-full">
-                <div class="absolute top-0 right-0 toggle-menu-size bg-white border overflow-hidden rounded-xl py-6 md:pr-2.5">
+                <div class="absolute top-0 right-0 toggle-menu-size bg-white sm:border overflow-hidden sm:rounded-xl py-6 md:pr-2.5">
                     <div class="w-full h-full overflow-y-auto overflow-x-hidden header-toggle-menu-custom-scroll md:pr-2">
+
+                        <div class="flex p-6 sm:hidden items-center justify-between">
+                            <span class="inline-block text-20-l-28 font-semibold ">전체 메뉴</span>
+
+                            <button onclick="toggle('#toggle-menu')" class="w-6 h-6 flex items-center justify-center">
+                                <i class="fa-solid fa-xmark text-lg"></i>
+                            </button>
+                        </div>
+
                         <div class="w-full pl-5 md:px-5 mb-6 pr-2 md:pr-0">
                             <div class="mb-8">                              
                                 <div class="overflow-hidden rounded-lg "
@@ -533,8 +543,8 @@
 
                 <main class="flex-1 space-y-12-18 frame-main-size">
                     <!-- banner slide -->
-                    <div id="frame-banner" class="mobi-px">
-                        <div id="frame-boss" style="max-width: 940px; height: 340px;">
+                    <div id="frame-banner" class="">
+                        <div id="frame-boss" class="height-200-340" style="max-width: 940px;">
                             <div class="container-custom-slide">
                                 <!-- slide -->
                                 <div class="slide">
@@ -674,10 +684,10 @@
                         <div class="mobi-px flex items-center justify-between">
                             <h3 class="text-2028-2230 font-semibold">BEST</h3>
 
-                            <div class="flex items-center gap-1 py-1 cursor-pointer" onclick="gotoPage('./CA-book-best.html')">
+                            <!-- <div class="flex items-center gap-1 py-1 cursor-pointer" onclick="gotoPage('./CA-book-best.html')">
                                 <span class="inline-block text-sm sm:text-base font-semibold text-gray-400">더보기</span>
                                 <img src="../assets/images/icon/common/plus-gray.svg" alt="+">
-                            </div>
+                            </div> -->
                         </div>
 
                         <!-- start slide -->
@@ -717,14 +727,14 @@
                                 </div>
 
                                 <!-- button navigation -->
-                                <div class="absolute left-0 right-0 z-10 flex justify-between items-center" style="top: calc(50% - 20px);">
+                                <!-- <div class="absolute left-0 right-0 z-10 flex justify-between items-center" style="top: calc(50% - 20px);">
                                     <button id="best-swiper-button-prev" class="w-10 h-10 bg-white rounded-full border shadow transform -translate-x-16">
                                         <i class="text-gray-600 fa-solid fa-chevron-left"></i>
                                     </button>
                                     <button id="best-swiper-button-next" class="w-10 h-10 bg-white rounded-full border shadow transform translate-x-16">
                                         <i class="text-gray-600 fa-solid fa-chevron-right"></i>
                                     </button>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <!-- end slide -->
@@ -1348,9 +1358,9 @@
             var bestSwiper = new Swiper("#bestSwiper", {
                 slidesPerView: 2,
                 grid: {
-                    rows: 3,
+                    rows: 4,
                 },
-                loop: true,
+                // loop: true,
                 spaceBetween: 20,
                 navigation: {
                     nextEl: "#best-swiper-button-next",

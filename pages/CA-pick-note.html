@@ -78,8 +78,9 @@
                     <!-- input search ^^^^ -->
 
                     <div class="gap-3 hidden sm:flex">
-                        <div class="cursor-pointer">
+                        <div class="cursor-pointer relative w-12 h-12">
                             <img style="width: 48px !important; height: 48px !important;" src="../assets/images/icon/header/home-cart.svg" alt="icon" />
+                            <div class="text-9-l-11 text-white p-0.5 rounded-full bg-red-400 absolute bottom-0 right-0">9,999</div>
                         </div>
                         <div class="cursor-pointer">
                             <img id="icon-acc-login" style="width: 56px !important; height: 56px !important;" src="../assets/images/icon/header/my-home-account.svg" alt="icon" />
@@ -127,12 +128,21 @@
     </header>
 
     <section id="toggle-menu" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 z-50 hidden">
-        <div class="h-20 sm:h-60 w-full"></div>
+        <div class="h-0 sm:h-60 w-full"></div>
 
         <div id="content-toggle-menu" class="container-layout relative w-full">
             <div class="absolute top-0 right-0 lg:right-12 w-full">
-                <div class="absolute top-0 right-0 toggle-menu-size bg-white border overflow-hidden rounded-xl py-6 md:pr-2.5">
+                <div class="absolute top-0 right-0 toggle-menu-size bg-white sm:border overflow-hidden sm:rounded-xl py-6 md:pr-2.5">
                     <div class="w-full h-full overflow-y-auto overflow-x-hidden header-toggle-menu-custom-scroll md:pr-2">
+
+                        <div class="flex p-6 sm:hidden items-center justify-between">
+                            <span class="inline-block text-20-l-28 font-semibold ">전체 메뉴</span>
+
+                            <button onclick="toggle('#toggle-menu')" class="w-6 h-6 flex items-center justify-center">
+                                <i class="fa-solid fa-xmark text-lg"></i>
+                            </button>
+                        </div>
+
                         <div class="w-full pl-5 md:px-5 mb-6 pr-2 md:pr-0">
                             <div class="mb-8">                              
                                 <div class="overflow-hidden rounded-lg "
@@ -427,7 +437,7 @@
 
     <!-- breadcrumb -->
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
-    <section class="sm:mt-6 sm:mb-8">
+    <section class="sm:mt-6 sm:mb-8 sm:hidden">
         <div class="container-layout mobi-px py-2 sm:py-0 bg-gray-100 sm:bg-white">
             <div class="flex items-center gap-2 sm:py-1">
                 <div>
@@ -480,7 +490,7 @@
     <!-- main category -->
 
 
-    <section class="mt-5 sm:mt-0">
+    <section class="mt-5 sm:mt-6">
         <div class="container-layout">
             <div class="flex items-start relative justify-between flex-wrap gap-side-menu-main-content">
 
@@ -533,6 +543,55 @@
                 <!-- start main (+class: frame-main-size) -->
                 <main class="flex-1 overflow-hidden">
                     
+                    <section class="hidden sm:block" style="padding-bottom: 17px;">
+                        <div class="container-layout mobi-px py-2 sm:py-0 bg-gray-100 sm:bg-white">
+                            <div class="flex items-center gap-2 sm:py-1">
+                                <div>
+                                    <a href="../index.html">
+                                        <img src="../assets/images/icon/category/breadcrumb-home.svg" alt="icon">                        
+                                    </a>
+                                </div>
+                                <div>
+                                    <span class="text-gray-400 inline-block text-13-l-18 font-normal">/</span>
+                                </div>
+                                <div class="flex items-center gap-1 relative cursor-pointer breadcrumb-main-category-menu">
+                                    <span class="text-gray-400 inline-block text-13-l-18 font-normal">바오로딸 Pick</span>
+                                    <img class="icon-down" src="../assets/images/icon/category/breadcrumb-down.svg" alt="icon">
+                                    <img class="icon-up hidden" src="../assets/images/icon/category/breadcrumb-up.svg" alt="icon">
+                                    <div class="absolute z-10 top-7 left-0 hidden breadcrumb-sub-menu">
+                                        <ul class="py-1 border rounded-lg bg-white">
+                                            <li class="py-1 px-2.5 w-full">
+                                                <a href="./CA-book-main-category.html" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">도서</a>
+                                            </li>
+                                            <li class="py-1 px-2.5 w-full">
+                                                <a href="./CA-sanctuary-main-category.html" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">성물</a>
+                                            </li>
+                                            <li class="py-1 px-2.5 w-full">
+                                                <a href="./CA-good-main-category.html" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">굿즈</a>
+                                            </li>
+                                            <li class="py-1 px-2.5 w-full">
+                                                <a href="./CA-pick-main-category.html" class="text-13-18 font-normal text-black whitespace-nowrap hover:text-gray-600">바오로딸 Pick</a>
+                                            </li>
+                                            <li class="py-1 px-2.5 w-full">
+                                                <a href="./CA-ebook-main-category.html" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">ebook</a>
+                                            </li>
+                                            <li class="py-1 px-2.5 w-full">
+                                                <a href="./CA-dvd-main-category.html" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">음반/뮤직/DVD</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>            
+                                <div>
+                                    <span class="text-gray-400 inline-block text-13-l-18 font-normal">/</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <span class="text-gray-400 inline-block text-13-l-18 font-normal">수도자의 독서노트</span>
+                                    <img src="../assets/images/icon/category/breadcrumb-down.svg" alt="icon">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
                     <div class="mb-5 sm:mb-8">
                         <div class="relative rounded-lg overflow-hidden flex items-center justify-start py-8 sm:pt-10 sm:pb-11" style="background-color: rgba(194, 99, 101, 1);">
                             

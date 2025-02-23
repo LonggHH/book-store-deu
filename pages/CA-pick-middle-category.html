@@ -77,8 +77,9 @@
                     <!-- input search ^^^^ -->
 
                     <div class="gap-3 hidden sm:flex">
-                        <div class="cursor-pointer">
+                        <div class="cursor-pointer relative w-12 h-12">
                             <img style="width: 48px !important; height: 48px !important;" src="../assets/images/icon/header/home-cart.svg" alt="icon" />
+                            <div class="text-9-l-11 text-white p-0.5 rounded-full bg-red-400 absolute bottom-0 right-0">9,999</div>
                         </div>
                         <div class="cursor-pointer">
                             <img id="icon-acc-login" style="width: 56px !important; height: 56px !important;" src="../assets/images/icon/header/my-home-account.svg" alt="icon" />
@@ -126,11 +127,20 @@
     </header>
 
     <section id="toggle-menu" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 z-50 hidden">
-        <div class="h-20 sm:h-60 w-full"></div>
+        <div class="h-0 sm:h-60 w-full"></div>
 
         <div id="content-toggle-menu" class="container-layout relative w-full">
             <div class="absolute top-0 right-0 lg:right-12 w-full">
-                <div class="absolute top-0 right-0 toggle-menu-size bg-white border overflow-hidden rounded-xl py-6 md:pr-2.5">
+                <div class="absolute top-0 right-0 toggle-menu-size bg-white sm:border overflow-hidden sm:rounded-xl py-6 md:pr-2.5">
+
+                    <div class="flex p-6 sm:hidden items-center justify-between">
+                        <span class="inline-block text-20-l-28 font-semibold ">전체 메뉴</span>
+
+                        <button onclick="toggle('#toggle-menu')" class="w-6 h-6 flex items-center justify-center">
+                            <i class="fa-solid fa-xmark text-lg"></i>
+                        </button>
+                    </div>
+
                     <div class="w-full h-full overflow-y-auto overflow-x-hidden header-toggle-menu-custom-scroll md:pr-2">
                         <div class="w-full pl-5 md:px-5 mb-6 pr-2 md:pr-0">
                             <div class="mb-8">                              
@@ -426,7 +436,7 @@
 
     <!-- breadcrumb -->
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
-    <section class="sm:mt-6 sm:mb-8">
+    <section class="sm:mt-6 sm:mb-8 sm:hidden">
         <div class="container-layout mobi-px py-2 sm:py-0 bg-gray-100 sm:bg-white">
             <div class="flex items-center gap-2 sm:py-1">
                 <div>
@@ -486,7 +496,7 @@
     <!-- main category -->
 
 
-    <section class="mt-5 sm:mt-0">
+    <section class="mt-5 sm:mt-6">
         <div class="container-layout">
             <div class="flex items-start relative justify-between flex-wrap gap-side-menu-main-content">
 
@@ -536,22 +546,83 @@
                 <!-- start main (+class: frame-main-size) -->
                 <main class="flex-1 space-y-2 sm:space-y-3.5 overflow-hidden">
                     
+
+                    <section class="sm:mb-6 hidden lg:block border-b" style="padding-bottom: 17px;">
+                        <div class="container-layout mobi-px py-2 sm:py-0 bg-gray-100 sm:bg-white">
+
+                            <div class="flex items-center gap-2 sm:py-1 relative">
+                                <div>
+                                    <a href="../index.html">
+                                        <img src="../assets/images/icon/category/breadcrumb-home.svg" alt="icon">                        
+                                    </a>
+                                </div>
+                                <div>
+                                    <span class="text-gray-400 inline-block text-13-l-18 font-normal">/</span>
+                                </div>
+                                <div class="flex items-center gap-1 relative cursor-pointer breadcrumb-main-category-menu">
+                                    <span class="text-gray-400 inline-block text-13-l-18 font-normal">도서</span>
+                                    <img class="icon-down" src="../assets/images/icon/category/breadcrumb-down.svg" alt="icon">
+                                    <img class="icon-up hidden" src="../assets/images/icon/category/breadcrumb-up.svg" alt="icon">
+                
+                                    <div class="absolute z-10 top-7 left-0 hidden breadcrumb-sub-menu">
+                                        <ul class="py-1 border rounded-lg bg-white">
+                                            <li class="py-1 px-2.5 w-full">
+                                                <a href="./CA-book-main-category.html" class="text-13-18 font-normal text-black whitespace-nowrap hover:text-gray-600">도서</a>
+                                            </li>
+                                            <li class="py-1 px-2.5 w-full">
+                                                <a href="./CA-sanctuary-main-category.html" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">성물</a>
+                                            </li>
+                                            <li class="py-1 px-2.5 w-full">
+                                                <a href="./CA-good-main-category.html" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">굿즈</a>
+                                            </li>
+                                            <li class="py-1 px-2.5 w-full">
+                                                <a href="./CA-pick-main-category.html" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">바오로딸 Pick</a>
+                                            </li>
+                                            <li class="py-1 px-2.5 w-full">
+                                                <a href="./CA-ebook-main-category.html" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">ebook</a>
+                                            </li>
+                                            <li class="py-1 px-2.5 w-full">
+                                                <a href="./CA-dvd-main-category.html" class="text-13-18 font-normal text-gray-400 whitespace-nowrap hover:text-gray-600">음반/뮤직/DVD</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>            
+                                <div>
+                                    <span class="text-13-18 font-normal text-gray-400 whitespace-nowrap">/</span>
+                                </div>
+                                <div class="flex items-center gap-1 breadcrumb-main-category-menu relative" onclick="handleOpenSubNavigation('sub')">
+                                    <span class="text-13-18 font-normal text-gray-400 whitespace-nowrap">대분류</span>
+                                    <img class="icon-down" src="../assets/images/icon/category/breadcrumb-down.svg" alt="icon">
+                                    <img class="icon-up hidden" src="../assets/images/icon/category/breadcrumb-up.svg" alt="icon">
+                                </div>               
+                                <div>
+                                    <span class="text-13-18 font-normal text-gray-400 whitespace-nowrap">/</span>
+                                </div>
+                                <div class="flex items-center gap-1 cursor-pointer" onclick="handleOpenSubNavigation('child')">
+                                    <span class="text-13-18 font-normal text-gray-400 whitespace-nowrap">중분류</span>
+                                    <img src="../assets/images/icon/category/breadcrumb-down.svg" alt="icon">
+                                </div>               
+                            </div>
+                        </div>
+                    </section>
+
+
                     <div class="pb-5">
-                        <div class="relative rounded-lg overflow-hidden flex items-center justify-start sm:justify-center pt-8 pb-9" style="background-color: rgba(99, 115, 194, 1);">
+                        <div class="relative rounded-lg overflow-hidden flex items-center justify-start sm:justify-center pt-8 pb-9" style="background-color: rgba(236, 155, 155, 1);">
                             <div class="flex flex-col items-center gap-1 text-white">
-                                <p class="text-base font-semibold">전례 Pick</p>
-                                <p class="text-22-l-30 font-semibold">내 마음아, 주님을 찬미하라</p>
-                                <p class="text-xs font-normal text-gray-200">하느님께 한걸음 더 다가가려는 분에게</p>
+                                <p class="text-base font-semibold">어린이</p>
+                                <p class="text-22-l-30 font-semibold">사랑과 희망이 가득한 이야기</p>
+                                <p class="text-xs font-normal text-gray-200">어린이들을 위한 따뜻한 서적을 추천합니다.</p>
                             </div>
                             <div class="absolute h-full top-0 left-0 right-0">
                                 <div class="w-full h-full flex items-center justify-end pr-5 sm:pr-11">
                                     <div class="flex items-center h-full">                                        
 
                                         <div class="relative ">
-                                            <img src="../assets/images/banner/middle-pick-cup.png" alt="">
+                                            <img src="../assets/images/banner/middle-pick-thanh-gia.png" alt="">
                                         </div>
                                         <div class="h-full flex flex-col justify-end" style="margin-left: -100px;">
-                                            <img src="../assets/images/banner/middle-pick-banner-1.png" alt="">
+                                            <img src="../assets/images/banner/middle-pick-banner-2.png" alt="">
                                         </div>
 
                                     </div>
@@ -563,8 +634,8 @@
                     <div class="px-5 sm:px-0">
                         <div class="flex items-center justify-between pb-2 border-b border-black">
                             <div class="flex items-center gap-1">
-                                <h4 class="text-1724-1826 font-semibold whitespace-nowrap">중분류</h4>
-                                <h4 class="text-1318-1624 font-normal text-gray-400 whitespace-nowrap">에 관한 상품 18 개 있습니다</h4>
+                                <h4 class="text-1724-1826 font-semibold whitespace-nowrap">어린이</h4>
+                                <h4 class="text-1318-1624 font-normal text-gray-400 whitespace-nowrap">에 관한 상품 234 개 있습니다</h4>
                             </div>
     
                             <div
@@ -647,13 +718,13 @@
                         </div>
                     </div>                    
 
-                    <div id="btn-more" class="" onclick="moreBook()">
+                    <div id="btn-more" class="hidden" onclick="moreBook()">
                         <button class="w-full text-1522-1624 font-semibold py-2 sm:py-3 text-center rounded border">
                             더보기
                         </button>
                     </div>
 
-                    <div id="frame-pagi" class="flex items-center justify-center pt-2.5 hidden">
+                    <div id="frame-pagi" class="flex items-center justify-center pt-2.5">
                         <div class="flex items-center">
                             <button onclick="gotoSE('start')" class="p-1 sm:p-2">
                                 <img class="w-6 h-6" src="../assets/images/icon/common/prev-to-first.svg"
@@ -1368,21 +1439,24 @@
                 stringHTML +=
                 `
                     <li class="">
-                        <button class="toggle-menu-btn w-full text-left text-sm leading-5 font-semibold cursor-pointer p-2">${el}</button>
+                        <button class="toggle-menu-btn w-full text-left text-sm leading-5 font-semibold cursor-pointer p-2 flex items-center justify-between">
+                            <span class="inline-block">${el}</span>
+                            <i class="fa-solid fa-chevron-down text-gray-400 font-normal"></i>  
+                        </button>
                         <ul class="${i === 0 ? '' : 'hidden'} p-2 border-b">
                             <li class="flex items-center justify-between py-1.5 cursor-pointer" onclick="gotoPage('./CA-pick-middle-category.html')">
                                 <span class="text-base font-normal">중분류</span>
                                 <img class="${i === 0 ? '' : 'hidden'}" src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg" alt=">">
                             </li>
-                            <li class="flex items-center justify-between py-1.5 cursor-pointer" onclick="gotoPage('./CA-pick-middle-category.html')">
+                            <li class="flex items-center justify-between py-1.5 cursor-pointer" onclick="gotoPage('./CA-pick-middle-category-brand-hall.html')">
                                 <span class="text-base font-normal text-gray-500">중분류</span>
                                 <img class="hidden" src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg" alt=">">
                             </li>
-                            <li class="flex items-center justify-between py-1.5 cursor-pointer" onclick="gotoPage('./CA-pick-middle-category.html')">
+                            <li class="flex items-center justify-between py-1.5 cursor-pointer" onclick="gotoPage('./CA-pick-middle-category-brand-hall.html')">
                                 <span class="text-base font-normal text-gray-500">중분류</span>
                                 <img class="hidden" src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg" alt=">">
                             </li>
-                            <li class="flex items-center justify-between py-1.5 cursor-pointer" onclick="gotoPage('./CA-pick-middle-category.html')">
+                            <li class="flex items-center justify-between py-1.5 cursor-pointer" onclick="gotoPage('./CA-pick-middle-category-brand-hall.html')">
                                 <span class="text-base font-normal text-gray-500">중분류</span>
                                 <img class="hidden" src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg" alt=">">
                             </li>
@@ -1392,7 +1466,7 @@
             })
             document.querySelector('#left-menu').innerHTML = stringHTML
 
-            document.querySelectorAll('.toggle-menu-btn').forEach(button => {
+            document.querySelectorAll('.toggle-menu-btn').forEach((button, i) => {
                 button.addEventListener('click', () => {
                     // Ẩn tất cả menu con
                     document.querySelectorAll('.toggle-menu-btn + ul').forEach(menu => {
@@ -1406,6 +1480,16 @@
                         menu.classList.toggle('hidden');
                         menu.classList.toggle('visible');
                     }
+
+                    //
+                    document.querySelectorAll('.toggle-menu-btn').forEach((button, y) => {
+                        if (i !== y) {
+                            button.querySelector('i').classList.remove('fa-chevron-up')
+                            button.querySelector('i').classList.add('fa-chevron-down')
+                        }
+                    })
+                    button.querySelector('i').classList.remove('fa-chevron-down')
+                    button.querySelector('i').classList.add('fa-chevron-up')
                 });
             });
         }

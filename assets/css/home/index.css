@@ -74,6 +74,34 @@
   }
 }
 
+@media (max-width: 1024px) {
+  #sentence .sentence-slide .sentence-item:nth-child(1),
+  #sentence .sentence-slide .sentence-item:nth-child(2) {
+    width: 102px;
+    height: 150px;
+  }
+
+  #sentence .sentence-slide .sentence-item:nth-child(3) {
+    left: calc(102px + 20px);
+  }
+  #sentence .sentence-slide .sentence-item:nth-child(4) {
+    left: calc(102px + 20px + 102px * 1 + 20px);
+  }
+  #sentence .sentence-slide .sentence-item:nth-child(5) {
+    left: calc(102px + 20px + 102px * 2 + 40px);
+  }
+
+  #sentence .sentence-slide .sentence-item:nth-child(6) {
+    left: calc(102px + 20px + 102px * 3 + 60px);
+  }
+
+  /* here n = 0, 1, 2, 3,... */
+  #sentence .sentence-slide .sentence-item:nth-child(n + 7) {
+    left: calc(102px + 20px + 102px * 4 + 80px);
+    opacity: 0;
+  }
+}
+
 @media (max-width: 640px) {
   #sentence .sentence-slide .sentence-item:nth-child(1),
   #sentence .sentence-slide .sentence-item:nth-child(2) {
