@@ -1,7 +1,7 @@
 {
     "home": {
         "headerCategory": [
-             {"id": 1, "name": "전체", "active": true, "highlight": false, "link": "../index.html"},
+             {"id": 1, "name": "홈", "active": true, "highlight": false, "link": "../index.html"},
              {"id": 2, "name": "스페셜", "active": false, "highlight": true, "link": "../index.html"},
              {"id": 3, "name": "도서", "active": false, "highlight": false, "link": "./CA-book-main-category.html"},
              {"id": 4, "name": "성물", "active": false, "highlight": false, "link": "./CA-sanctuary-main-category.html"},
@@ -9,6 +9,6 @@
              {"id": 6, "name": "바오로딸 Pick", "active": false, "highlight": false, "link": "./CA-pick-main-category.html"},
              {"id": 7, "name": "ebook", "active": false, "highlight": false, "link": "./CA-ebook-main-category.html"},
              {"id": 8, "name": "음반/뮤직/DVD", "active": false, "highlight": false, "link": "./CA-dvd-main-category.html"}
-        ]            
+        ]
     }
 }

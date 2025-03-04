@@ -25,7 +25,7 @@ function throttle(func, delay) {
 // Hàm xử lý cho nút next
 function handleNext(frameId) {
     let items = document.querySelectorAll(`#${frameId} .item`);
-    document.querySelector('.slide').appendChild(items[0]);    
+    document.querySelector('.slide').appendChild(items[0]);
 }
 
 // Hàm xử lý cho nút prev
@@ -53,7 +53,7 @@ function renderIconAccLogin() {
 
         document.querySelector('#btn-logout').classList.add('hidden')
         document.querySelector('#icon-acc-login').addEventListener('click', () => gotoPage('./AU-login-login.html'))
-    }    
+    }
 }
 renderIconAccLogin()
 
@@ -72,11 +72,11 @@ function scrollToTop() {
 
 function handleChangeTextSearch() {
     const frameHeaderSearch = document.querySelector('#frame-header-search')
-    const headerSearchResult = document.querySelector('#header-search-result')    
+    const headerSearchResult = document.querySelector('#header-search-result')
     const textSearch = document.querySelector('#header-input-search').value
 
     if (textSearch.trim().length !== 0) {
-        frameHeaderSearch.style.background = "white"        
+        frameHeaderSearch.style.background = "white"
         frameHeaderSearch.classList.add('border')
         frameHeaderSearch.classList.remove('rounded-full')
         frameHeaderSearch.classList.add('border-tl-tr-24-px')
@@ -90,7 +90,6 @@ function handleChangeTextSearch() {
 
         headerSearchResult.classList.add('hidden')
     }
-    
 }
 
 function closeHeaderSearchResult() {
@@ -122,7 +121,7 @@ document.querySelector('header img[src="../assets/images/icon/header/home-cart.s
 
 function gotoOrder () {
     const isLogin = JSON.parse(localStorage.getItem('BS-login') || false)
-    
+
     if (isLogin) {
         localStorage.setItem('BS-check-order-no-member', JSON.stringify(false))
         gotoPage('./CO-sh-shopping-cart.html')
@@ -141,4 +140,12 @@ document.addEventListener("DOMContentLoaded", function () {
       link.removeAttribute("href");
       link.setAttribute("onclick", "gotoOrder()");
     }
-  });
+})
+
+function copyToClipboard(content) {
+    navigator.clipboard.writeText(content).then(() => {
+        alert("Copy: " + content);
+    }).catch(err => {
+        console.error("Lỗi sao chép: ", err);
+    });
+}

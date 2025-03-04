@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>스페셜 - 1</title>
+    <title>카테고리 메인 / 이벤트</title>
 
     <!-- Link Font -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
@@ -19,7 +19,7 @@
 
     <link rel="stylesheet" href="../assets/css/util.css">
     <link rel="stylesheet" href="../assets/css/icons.css">
-    <link rel="stylesheet" href="../assets/css/SP/special.css">
+
 </head>
 
 <body>
@@ -135,17 +135,14 @@
             <div class="container-layout overflow-hidden">
                 <div class="flex justify-between overflow-auto custom-scroll">
                     <div>
-                        <!-- id="header-list-category" -->
                         <ul class="flex">
                             <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
                                     style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
                                     href="../index.html">전체</a> </li>
-                            <li class="py-4 px-3.5 text-highlight text-highlight-dot relative">
-                                <a class="inline-block h-6 text-base font-medium"
+                            <li class="py-4 px-3.5 text-highlight text-highlight-dot"> <a
+                                    class="inline-block h-6 text-base font-medium"
                                     style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
-                                    href="./SP-1.html">스페셜</a>
-                                <div class="absolute bottom-0 left-0 right-0 z-10 bg-black" style="height: 2px;"></div>
-                            </li>
+                                    href="./SP-1.html">스페셜</a> </li>
                             <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
                                     style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
                                     href="./CA-book-main-category.html">도서</a> </li>
@@ -558,7 +555,7 @@
 
     <!-- breadcrumb -->
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
-    <section class="sm:mt-6 sm:mb-8">
+    <section class="sm:my-6">
         <div class="container-layout mobi-px py-2 sm:py-0 bg-gray-100 sm:bg-white">
             <div class="flex items-center gap-2 sm:py-1">
                 <div>
@@ -570,9 +567,10 @@
                     <span class="text-gray-400 inline-block text-13-l-18 font-normal">/</span>
                 </div>
                 <div class="flex items-center gap-1 relative cursor-pointer breadcrumb-main-category-menu">
-                    <span class="text-gray-400 inline-block text-13-l-18 font-normal">스페셜</span>
+                    <span class="text-gray-400 inline-block text-13-l-18 font-normal">이벤트</span>
                     <img class="icon-down" src="../assets/images/icon/category/breadcrumb-down.svg" alt="icon">
                     <img class="icon-up hidden" src="../assets/images/icon/category/breadcrumb-up.svg" alt="icon">
+
                     <div class="absolute z-10 top-7 left-0 hidden breadcrumb-sub-menu">
                         <ul class="py-1 border rounded-lg bg-white">
                             <li class="py-1 px-2.5 w-full">
@@ -608,414 +606,390 @@
     </section>
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
 
-    <!-- main category -->
-    <section>
+
+    <section class="">
         <div class="container-layout">
-            <div class="w-full flex items-center justify-center">
-                <div class="w-full flex items-center justify-center">
-                    <div class="w-full flex flex-col items-center">
-                        <div class="w-full bg-blue-200 flex justify-center">
-                            <div class="pt-6 sm:pt-14" style="max-width: 750px;">
+            <div class="">
 
-                                <div class="text-center">
-                                    <div class="flex justify-center">
-                                        <div
-                                            class="text-1624-3250 font-medium py-1 sm:py-2 px-2.5 sm:px-5 rounded-full border sm:border-2 border-black">
-                                            SPECIAL OPEN</div>
-                                    </div>
+                <div class="px-5 py-6 sm:px-0 sm:py-0 flex items-center gap-x-6">
+                    <h4 class="text-2028-2838 font-medium cursor-pointer" onclick="gotoPage('./P-event.html')">이벤트</h4>
+                    <h4 class="text-2028-2838 font-medium text-gray-400">|</h4>
+                    <h4 class="text-2028-2838 font-medium text-gray-400 cursor-pointer"
+                        onclick="gotoPage('./P-event-2.html')">출석 체크</h4>
+                </div>
 
-                                    <p class="text-3648-76100 font-bold clear-start mb-1 sm:mb-2 mt-4 sm:mt-8">2025 새로운
-                                        바오로딸</p>
+                <div class="hidden sm:block" style="height: 72px;"></div>
+                <div class="sm:space-y-8">
+                    <div
+                        class="px-5 sm:px-0 py-3 flex flex-col sm:flex-row items-start sm:items-center gap-y-3 gap-x-2.5 border-b">
+                        <p class="inline-block text-11-l-14 font-medium py-1 px-3 rounded-full w-fit"
+                            style="background-color: rgba(253, 228, 236, 1);">진행중</p>
 
-                                    <p class="text-1420-3042 font-normal">2025년 새로운 인터넷 서점 바오로딸이 오픈되었습니다!</p>
-                                </div>
+                        <p class="text-1826-2230 font-semibold">
+                            <span class="hidden sm:inline-block">
+                                이벤트 제목
+                            </span>
+                            <span class="inline-block sm:hidden">
+                                이벤트 제목은 길어 질수 있습니다. 이벤트 제목은 길어 질수 있습니다.
+                            </span>
+                        </p>
+                    </div>
 
-                                <div class="flex items-center justify-center mt-16 sm:mt-32">
-                                    <div class="relative w-172-356 pb-12 sm:pb-24">
-                                        <img class="w-full h-full relative z-10"
-                                            src="../assets/images/image/special/book-6.png" alt="">
+                    <div class="flex items-center justify-center sm:px-32">
+                        <div class="w-full bg-gray-200" style="height: 992px;"></div>
+                    </div>
+                </div>
 
-                                        <div class="absolute -top-4 -left-4 sm:-top-10 sm:-left-8 w-44-93 z-10">
-                                            <img src="../assets/images/image/special/book-1.png" alt="">
-                                        </div>
-                                        <div class="absolute bottom-4 sm:bottom-8 right-0 w-55-114">
-                                            <img src="../assets/images/image/special/book-3.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
+
+                <div class="hidden sm:block" style="height: 72px;"></div>
+                <div>
+                    <div class="space-y-4 sm:space-y-6 py-6 px-5 sm:p-0">
+                        <p class="text-1826-2230 font-semibold">댓글</p>
+
+                        <div class="space-y-4 sm:space-y-2">
+                            <div class="relative">
+                                <textarea id="review" maxlength="3000"
+                                    class="text-15-l-24 font-normal text-gray-400 p-5 rounded-lg border w-full outline-none resize-none h-52 sm:h-24"
+                                    placeholder="주제와 무관하거나 악의적인 의도 등의 글은 사전 고지 없이 임의로 삭제될 수 있습니다.내용은 10자 이상, 최대 3000자까지 작성이 가능합니다."></textarea>
+                                <div class="text-xs font-normal text-gray-400 absolute bottom-5 right-5"><span
+                                        id="review-content-length">0</span>/3000</div>
+                            </div>
+                            <div class="flex justify-end">
+                                <button class="w-full text-15-l-22 font-semibold py-2.5 sm:w-24 rounded"
+                                    style="background-color: #F4F4F5;">등록</button>
                             </div>
                         </div>
 
-                        <div class="px-8 sm:px-0 mt-6 sm:mt-14 w-full pb-8 sm:pb-32" style="max-width: 750px;">
-                            <div class="w-full">
+                        <hr>
 
-                                <div class="space-y-2">
-                                    <p class="text-2432-5066 text-center font-bold">새로운 해, 새로운 모습으로!</p>
-                                    <p class="text-1420-3042 text-center text-gray-400 font-normal">
-                                        새로운 바오로딸 온라인 서점에서 <br>
-                                        다양한 이벤트 혜택을 받아보세요!
-                                    </p>
-                                </div>
+                        <div class="space-y-5">
+                            <!-- review -->
+                            <div class="space-y-5">
+                                <!-- 1 -->
+                                <div class="pb-3 sm:pb-5 border-b flex flex-col gap-y-3 sm:gap-x-24 sm:pl-5">
+                                    <div class="sm:w-32 flex justify-between sm:justify-start flex-col gap-y-2">
+                                        <p class="text-13-l-18 font-medium">홍길*</p>
+                                        <p class="text-xs font-normal text-gray-400">2024.09.10</p>
+                                    </div>
 
-                                <div class="mt-6 sm:mt-14 flex justify-center">
-                                    <div class="w-172-356">
-                                        <img class="w-full h-full" src="../assets/images/image/special/book-5.png"
-                                            alt="">
+                                    <div>
+                                        <p id="comment-1" class="text-15-l-24 font-normal two-lines h-12">
+                                            매일 하고 있는 가족기도서로 우선 쓰고 있습니다. 딱이라는 생각도 들었고, 다른 사람이 문의 올린글의 답변에서 가족기도용으로 추천하신 것
+                                            중
+                                            성체조배책이 있어서요.
+                                        </p>
+
+                                        <div class="flex items-center gap-1 cursor-pointer"
+                                            onclick="displayComment('#icon-comment-1', '#comment-1')">
+                                            <span class="inline-block text-13-l-18 font-normal text-gray-400">더보기</span>
+                                            <div class="h-5 w-5 rounded-full border flex items-center justify-center">
+                                                <i id="icon-comment-1"
+                                                    class="text-xs fa-solid fa-chevron-down text-gray-400"></i>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="space-y-1 sm:space-y-2 mt-10 sm:mt-20">
-                                    <p class="text-2432-5066 font-bold text-center">NEW BOOKS</p>
-                                    <p class="text-1420-3042 font-normal text-center text-gray-400 py-1 sm:py-2">따끈따끈한
-                                        신간을 둘러보세요!</p>
-                                </div>
+                                <div class="pb-3 sm:pb-5 border-b flex flex-col gap-y-3 sm:gap-x-24 sm:pl-5">
+                                    <div class="sm:w-32 flex justify-between sm:justify-start flex-col gap-y-2">
+                                        <p class="text-13-l-18 font-medium">홍길*</p>
+                                        <p class="text-xs font-normal text-gray-400">2024.09.10</p>
+                                    </div>
 
-                                <div class="relative w-full mb-2 sm:mb-4 mt-9 sm:mt-16">
-                                    <p class="text-1724-3650 font-semibold text-center">궁금해요, 기도!</p>
+                                    <div>
+                                        <p id="comment-1" class="text-15-l-24 font-normal two-lines h-12">
+                                            매일 하고 있는 가족기도서로 우선 쓰고 있습니다. 딱이라는 생각도 들었고, 다른 사람이 문의 올린글의 답변에서 가족기도용으로 추천하신 것
+                                            중
+                                            성체조배책이 있어서요.
+                                        </p>
 
-                                    <div class="relative flex gap-x-4 sm:gap-x-7">
-                                        <div class="w-74-154 overflow-hidden shadow-md rounded border relative z-10">
-                                            <img class="w-full h-full" src="../assets/images/image/special/book-4.png"
-                                                alt="">
-                                        </div>
-
-                                        <p class="flex-1 text-1114-2230 font-normal text-gray-400">신앙생활을 하는 사람이면 누구나 한
-                                            번쯤은
-                                            해보았을 법한 기도에 관한 질문과 고민을
-                                            단순하고 명쾌하게 풀어주면서 독자를 잔잔히 위로하는 책이다.</p>
-
-                                        <div class="absolute bottom-0 left-0 w-full flex items-center justify-end gap-x-2 sm:gap-x-4 py-2 px-6 sm:py-4 sm:px-12 rounded-full bg-white border"
-                                            style="border-color: #2083FE;">
-                                            <span class="inline-block text-1624-3250 font-semibold"
-                                                style="color: #2083FE;">보러가기</span>
-                                            <div class="w-24-50 overflow-hidden">
-                                                <img class="w-full h-full" src="../assets/images/image/special/east.png"
-                                                    alt="">
+                                        <div class="flex items-center gap-1 cursor-pointer"
+                                            onclick="displayComment('#icon-comment-1', '#comment-1')">
+                                            <span class="inline-block text-13-l-18 font-normal text-gray-400">더보기</span>
+                                            <div class="h-5 w-5 rounded-full border flex items-center justify-center">
+                                                <i id="icon-comment-1"
+                                                    class="text-xs fa-solid fa-chevron-down text-gray-400"></i>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- pagi -->
+                            <div class="flex items-center justify-center pt-2.5">
+                                <div class="flex items-center">
+                                    <button class="p-1 sm:p-2">
+                                        <img class="w-6 h-6" src="../assets/images/icon/common/prev-to-first.svg"
+                                            alt="icon">
+                                    </button>
+                                    <button class="p-1 sm:p-2">
+                                        <img class="w-6 h-6" src="../assets/images/icon/common/prev.svg" alt="icon">
+                                    </button>
+
+                                    <div id="list-btn-pagi" class="flex items-center">
+                                        <button class="p-1 sm:p-2">
+                                            <span
+                                                class="w-6 h-6 rounded-full bg-black text-white text-13-l-18 font-medium flex items-center justify-center">1</span>
+                                        </button>
+                                        <button class="p-1 sm:p-2">
+                                            <span
+                                                class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">2</span>
+                                        </button>
+                                        <button class="p-1 sm:p-2">
+                                            <span
+                                                class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">3</span>
+                                        </button>
+                                        <button class="p-1 sm:p-2">
+                                            <span
+                                                class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">4</span>
+                                        </button>
+                                        <button class="p-1 sm:p-2">
+                                            <span
+                                                class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">5</span>
+                                        </button>
+                                    </div>
+
+                                    <button class="p-1 sm:p-2">
+                                        <img class="w-6 h-6" src="../assets/images/icon/common/next.svg" alt="icon">
+                                    </button>
+                                    <button class="p-1 sm:p-2">
+                                        <img class="w-6 h-6" src="../assets/images/icon/common/next-to-end.svg"
+                                            alt="icon">
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="sm-my-18 space-y-3 py-6 px-5 sm:px-10">
-                <p class="text-22-l-30 font-semibold">관련 상품</p>
+                <div class="hidden sm:block" style="height: 72px;"></div>
+                <div class="py-6 px-5 sm:p-0 space-y-6 sm:space-y-3.5">
+                    <div class="text-1826-2230 font-semibold py-3 border-b">추천 상품</div>
 
-                <div class="relative py-8 px-5 sm:px-0 rounded-xl sm-bg-F7F7F8">
-                    <div class="overflow-x-auto">
-                        <div class="swiper mySwiper w-full">
-                            <div class="swiper-wrapper w-fit">
-                                <!-- 1 -->
-                                <div class="swiper-slide frame-width-102-160 space-y-2 sm:space-y-3">
-                                    <div
-                                        class="frame-image-size-102150-160236 border scope-imgage shadow-md overflow-hidden">
-                                        <img class="w-full h-full" src="../assets/images/image/books/book1.png" alt="">
-                                    </div>
-                                    <div class="space-y-3 cursor-pointer"
-                                        onclick="gotoPage('./CA-book-product-detail.html')">
-                                        <div class="space-y-1">
-                                            <p class="text-base font-semibold">책 제목</p>
-                                            <p class="text-13-l-18 font-normal text-gray-400">성바오로딸</p>
-                                        </div>
-                                        <p class="text-sm font-normal">
-                                            <span class="font-semibold" style="color: #EE1762;">10%</span>
-                                            <strong class="font-semibold">12,000</strong>
-                                            원
-                                        </p>
-                                    </div>
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 cursor-pointer" onclick="toggleAllBook()">
+                                <img id="icon-choose-all-book" src="../assets/images/icon/common/check-white.svg"
+                                    alt="check">
+                                <span class="text-13-l-18 font-semibold inline-block">전체 선택</span>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <div class="cursor-pointer">
+                                    <span class="text-13-l-18 font-normal inline-block text-gray-500">선택한 상품을</span>
                                 </div>
-                                <div class="swiper-slide frame-width-102-160 space-y-2 sm:space-y-3">
-                                    <div
-                                        class="frame-image-size-102150-160236 border scope-imgage shadow-md overflow-hidden">
-                                        <img class="w-full h-full" src="../assets/images/image/books/book1.png" alt="">
-                                    </div>
-                                    <div class="space-y-3 cursor-pointer"
-                                        onclick="gotoPage('./CA-book-product-detail.html')">
-                                        <div class="space-y-1">
-                                            <p class="text-base font-semibold">책 제목</p>
-                                            <p class="text-13-l-18 font-normal text-gray-400">성바오로딸</p>
-                                        </div>
-                                        <p class="text-sm font-normal">
-                                            <span class="font-semibold" style="color: #EE1762;">10%</span>
-                                            <strong class="font-semibold">12,000</strong>
-                                            원
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide frame-width-102-160 space-y-2 sm:space-y-3">
-                                    <div
-                                        class="frame-image-size-102150-160236 border scope-imgage shadow-md overflow-hidden">
-                                        <img class="w-full h-full" src="../assets/images/image/books/book1.png" alt="">
-                                    </div>
-                                    <div class="space-y-3 cursor-pointer"
-                                        onclick="gotoPage('./CA-book-product-detail.html')">
-                                        <div class="space-y-1">
-                                            <p class="text-base font-semibold">책 제목</p>
-                                            <p class="text-13-l-18 font-normal text-gray-400">성바오로딸</p>
-                                        </div>
-                                        <p class="text-sm font-normal">
-                                            <span class="font-semibold" style="color: #EE1762;">10%</span>
-                                            <strong class="font-semibold">12,000</strong>
-                                            원
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide frame-width-102-160 space-y-2 sm:space-y-3">
-                                    <div
-                                        class="frame-image-size-102150-160236 border scope-imgage shadow-md overflow-hidden">
-                                        <img class="w-full h-full" src="../assets/images/image/books/book1.png" alt="">
-                                    </div>
-                                    <div class="space-y-3 cursor-pointer"
-                                        onclick="gotoPage('./CA-book-product-detail.html')">
-                                        <div class="space-y-1">
-                                            <p class="text-base font-semibold">책 제목</p>
-                                            <p class="text-13-l-18 font-normal text-gray-400">성바오로딸</p>
-                                        </div>
-                                        <p class="text-sm font-normal">
-                                            <span class="font-semibold" style="color: #EE1762;">10%</span>
-                                            <strong class="font-semibold">12,000</strong>
-                                            원
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide frame-width-102-160 space-y-2 sm:space-y-3">
-                                    <div
-                                        class="frame-image-size-102150-160236 border scope-imgage shadow-md overflow-hidden">
-                                        <img class="w-full h-full" src="../assets/images/image/books/book1.png" alt="">
-                                    </div>
-                                    <div class="space-y-3 cursor-pointer"
-                                        onclick="gotoPage('./CA-book-product-detail.html')">
-                                        <div class="space-y-1">
-                                            <p class="text-base font-semibold">책 제목</p>
-                                            <p class="text-13-l-18 font-normal text-gray-400">성바오로딸</p>
-                                        </div>
-                                        <p class="text-sm font-normal">
-                                            <span class="font-semibold" style="color: #EE1762;">10%</span>
-                                            <strong class="font-semibold">12,000</strong>
-                                            원
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide frame-width-102-160 space-y-2 sm:space-y-3">
-                                    <div
-                                        class="frame-image-size-102150-160236 border scope-imgage shadow-md overflow-hidden">
-                                        <img class="w-full h-full" src="../assets/images/image/books/book1.png" alt="">
-                                    </div>
-                                    <div class="space-y-3 cursor-pointer"
-                                        onclick="gotoPage('./CA-book-product-detail.html')">
-                                        <div class="space-y-1">
-                                            <p class="text-base font-semibold">책 제목</p>
-                                            <p class="text-13-l-18 font-normal text-gray-400">성바오로딸</p>
-                                        </div>
-                                        <p class="text-sm font-normal">
-                                            <span class="font-semibold" style="color: #EE1762;">10%</span>
-                                            <strong class="font-semibold">12,000</strong>
-                                            원
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide frame-width-102-160 space-y-2 sm:space-y-3">
-                                    <div
-                                        class="frame-image-size-102150-160236 border scope-imgage shadow-md overflow-hidden">
-                                        <img class="w-full h-full" src="../assets/images/image/books/book1.png" alt="">
-                                    </div>
-                                    <div class="space-y-3 cursor-pointer"
-                                        onclick="gotoPage('./CA-book-product-detail.html')">
-                                        <div class="space-y-1">
-                                            <p class="text-base font-semibold">책 제목</p>
-                                            <p class="text-13-l-18 font-normal text-gray-400">성바오로딸</p>
-                                        </div>
-                                        <p class="text-sm font-normal">
-                                            <span class="font-semibold" style="color: #EE1762;">10%</span>
-                                            <strong class="font-semibold">12,000</strong>
-                                            원
-                                        </p>
+
+                                <div class="p-1.5 rounded border cursor-pointer">
+                                    <div class="w-5 h-5 flex items-center justify-center"
+                                        onclick="loveAllBookChoose(this)">
+                                        <i class="fa-solid fa-heart text-gray-400"></i>
                                     </div>
                                 </div>
 
+                                <div class="flex items-center justify-center gap-0.5 rounded border py-1.5 px-2 cursor-pointer"
+                                    onclick="gotoPage('./CO-sh-shopping-cart.html')">
+                                    <div class="w-5 h-5 flex items-center justify-center">
+                                        <img src="../assets/images/icon/category/middle-cart.svg" alt="">
+                                    </div>
+                                    <span class="text-13-l-18 font-semibold hidden sm:inline-block">장바구니</span>
+                                </div>
+
+                                <div
+                                    class="flex items-center justify-center gap-0.5 rounded border py-1.5 px-2 cursor-pointer">
+                                    <div class="w-5 h-5 flex items-center justify-center">
+                                        <img src="../assets/images/icon/category/middle-excel.svg" alt="">
+                                    </div>
+                                    <span class="text-13-l-18 font-semibold hidden sm:inline-block">엑셀 다운로드</span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
+                    <div>
+                        <div id="list-book-grid" class="flex flex-wrap gap-x-2 sm:gap-x-8 gap-y-6"></div>
+                    </div>
 
-                    <div class="absolute left-0 right-0 z-10 hidden sm:flex justify-between items-center"
-                        style="top: calc(50% - 20px);">
-                        <button id="my-button-prev"
-                            class="w-10 h-10 bg-white rounded-full border shadow transform md:-translate-x-16"
-                            tabindex="0" aria-label="Previous slide" aria-controls="swiper-wrapper-35a94c8282caee08">
-                            <i class="text-gray-600 fa-solid fa-chevron-left"></i>
-                        </button>
-                        <button id="my-button-next"
-                            class="w-10 h-10 bg-white rounded-full border shadow transform md:translate-x-16"
-                            tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-35a94c8282caee08">
-                            <i class="text-gray-600 fa-solid fa-chevron-right"></i>
+                </div>
+
+                <div class="hidden sm:block" style="height: 72px;"></div>
+                <div class="py-6 px-5 sm:p-0 space-y-3.5">
+                    <div class="text-1826-2230 font-semibold py-3 border-b">이벤트 신청</div>
+
+                    <div class="rounded-xl p-3 sm:sp-5 sm:px-12 space-y-5"
+                        style="background-color: rgba(255, 249, 237, 1);">
+                        <div class="flex items-center gap-x-5">
+                            <label class="inline-block w-14">이름</label>
+                            <div class="rounded border py-2.5 px-4 flex-1 bg-white">
+                                <input type="text" class="w-full">
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-x-5">
+                            <label class="inline-block w-14">휴대전화</label>
+                            <div class="flex items-center gap-x-2 flex-1">
+                                <div class="rounded border py-2.5 px-4 flex-1 bg-white">
+                                    <input type="text" class="w-full">
+                                </div>
+                                <span>-</span>
+                                <div class="rounded border py-2.5 px-4 flex-1 bg-white">
+                                    <input type="text" class="w-full">
+                                </div>
+                                <span>-</span>
+                                <div class="rounded border py-2.5 px-4 flex-1 bg-white">
+                                    <input type="text" class="w-full">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3.5">
+                        <div class="text-base font-semibold">개인정보수집 동의</div>
+
+                        <div class="flex items-center gap-x-3">
+                            <div class="w-6 h-6">
+                                <input type="text" hidden>
+                                <img class="w-full h-full" src="../assets/images/icon/common/check-white.svg" alt="">
+                            </div>
+                            <div class="text-sm font-normal">동의합니다</div>
+                        </div>
+
+                        <div class="py-5 text-center rounded-xl bg-gray-100 text-sm font-normal">
+                            수집되는 개인정보는 시사회 진행을 위하여 시사회 진행업체에 전달되며, <br>
+                            개인정보는 다른 용도로 사용되지 아니하고 시사회 완료 후 삭제됩니다.
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button class="text-15-l-22 font-semibold text-white py-3 px-12 rounded"
+                            style="background-color: rgba(32, 131, 254, 1);">
+                            신청하기
                         </button>
                     </div>
                 </div>
-            </div>
 
-            <div class="sm-my-18 space-y-4 sm:space-y-6 py-6 px-5 sm:py-0 sm:px-10">
-                <p class="text-22-l-30 font-semibold">댓글</p>
+                <div class="hidden sm:block" style="height: 72px;"></div>
+                <div class="cs-main-size">
+                    <div class="">
+                        <div class="flex items-center justify-between p-5 sm:p-0 sm:pb-3 border-b">
+                            <h4 class="text-1826-2230 font-semibold">종료된 이벤트</h4>
+                            <!-- <button class="px-4 hidden" id="btn-toggle-table-event">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button> -->
+                        </div>
 
-                <div class="space-y-4 sm:space-y-2">
-                    <div class="relative">
-                        <textarea id="review" maxlength="3000"
-                            class="text-15-l-24 font-normal text-gray-400 p-5 rounded-lg border w-full outline-none resize-none h-52 sm:h-24"
-                            placeholder="주제와 무관하거나 악의적인 의도, 해당 상품과 관련이 없는 문의성(배송문의, 결제문의 등) 등의 글은 사전 고지 없이 임의로 삭제될 수 있습니다. 내용은 10자 이상, 최대 3000자까지 작성이 가능합니다."></textarea>
-                        <div class="text-xs font-normal text-gray-400 absolute bottom-5 right-5"><span
-                                id="review-content-length">0</span>/3000</div>
-                    </div>
-                    <div class="flex justify-end">
-                        <button class="w-full text-15-l-22 font-semibold py-2.5 sm:w-24 rounded"
-                            style="background-color: #F4F4F5;">등록</button>
-                    </div>
-                </div>
-
-                <hr>
-
-                <div class="space-y-5">
-                    <!-- review -->
-                    <div class="space-y-5">
-                        <!-- 1 -->
-                        <div
-                            class="pb-3 sm:pb-5 border-b flex flex-col-reverse gap-y-3 sm:flex-row sm:gap-x-24 sm:pl-5">
-                            <div class="sm:w-32 flex flex-row justify-between sm:justify-start sm:flex-col gap-y-2">
-                                <p class="text-13-l-18 font-medium">홍길*</p>
-                                <p class="text-xs font-normal text-gray-400">2024.09.10</p>
+                        <div id="table-event" class="px-5 sm:p-0 mt-5 sm:mt-0">
+                            <div class="hidden sm:flex items-center p-5 gap-x-5 border-b">
+                                <div class="w-7 pr-2.5 text-15-l-22 font-medium text-gray-400">NO</div>
+                                <div class="flex-1 text-15-l-22 font-medium text-gray-400">제목</div>
+                                <div class="w-24 text-15-l-22 font-medium text-gray-400 text-center">조회수</div>
+                                <div class="w-24 text-15-l-22 font-medium text-gray-400 text-center">종료일</div>
                             </div>
 
-                            <div>
-                                <p id="comment-1" class="text-15-l-24 font-normal two-lines">
-                                    매일 하고 있는 가족기도서로 우선 쓰고 있습니다. 딱이라는 생각도 들었고, 다른 사람이 문의 올린글의 답변에서 가족기도용으로 추천하신 것 중
-                                    성체조배책이 있어서요.
-                                </p>
-
-                                <div class="flex items-center gap-1 cursor-pointer"
-                                    onclick="displayComment('#icon-comment-1', '#comment-1')">
-                                    <span class="inline-block text-13-l-18 font-normal text-gray-400">더보기</span>
-                                    <div class="h-5 w-5 rounded-full border flex items-center justify-center">
-                                        <i id="icon-comment-1"
-                                            class="text-xs fa-solid fa-chevron-down text-gray-400"></i>
+                            <div class="mb-3">
+                                <div>
+                                    <div class="hidden sm:flex items-center gap-x-5 p-5 border-b">
+                                        <div class="w-7 pr-2.5 text-15-l-22 font-medium text-gray-400">00</div>
+                                        <div class="flex-1 text-15-l-22 font-medium text-gray-400">이벤트명</div>
+                                        <div class="w-24 text-15-l-22 font-medium text-gray-400 text-center">000000
+                                        </div>
+                                        <div class="w-24 text-15-l-22 font-medium text-gray-400 text-center">2024-00-00
+                                        </div>
                                     </div>
+
+                                    <div class="sm:hidden space-y-5">
+                                        <p class="text-base font-medium two-lines h-12">이벤트명은 길어질수 있습니다. 이벤트명은 길어질수
+                                            있습니다. 이벤트명은 길어질수 있습니다.이벤트명은 길어질수 있습니다.</p>
+                                        <div class="flex items-center justify-between">
+                                            <div class="w-24 text-15-l-22 font-medium text-gray-400">
+                                                000000
+                                            </div>
+                                            <div class="w-24 text-15-l-22 font-medium text-gray-400 text-right">
+                                                2024-00-00
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr class="sm:hidden my-5">
+
+                                <div>
+                                    <div class="hidden sm:flex items-center gap-x-5 p-5 border-b">
+                                        <div class="w-7 pr-2.5 text-15-l-22 font-medium text-gray-400">00</div>
+                                        <div class="flex-1 text-15-l-22 font-medium text-gray-400">이벤트명</div>
+                                        <div class="w-24 text-15-l-22 font-medium text-gray-400 text-center">000000
+                                        </div>
+                                        <div class="w-24 text-15-l-22 font-medium text-gray-400 text-center">2024-00-00
+                                        </div>
+                                    </div>
+
+                                    <div class="sm:hidden space-y-5">
+                                        <p class="text-base font-medium two-lines h-12">이벤트명은 길어질수 있습니다. 이벤트명은 길어질수
+                                            있습니다. 이벤트명은 길어질수 있습니다.이벤트명은 길어질수 있습니다.</p>
+                                        <div class="flex items-center justify-between">
+                                            <div class="w-24 text-15-l-22 font-medium text-gray-400">
+                                                000000
+                                            </div>
+                                            <div class="w-24 text-15-l-22 font-medium text-gray-400 text-right">
+                                                2024-00-00
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div id="frame-pagi" class="flex items-center justify-center">
+                                <div class="flex items-center">
+                                    <button onclick="gotoSE('start')" class="p-1 sm:p-2">
+                                        <img class="w-6 h-6" src="../assets/images/icon/common/prev-to-first.svg"
+                                            alt="icon">
+                                    </button>
+                                    <button onclick="moveTenPage('minus')" class="p-1 sm:p-2">
+                                        <img class="w-6 h-6" src="../assets/images/icon/common/prev.svg" alt="icon">
+                                    </button>
+
+                                    <div id="list-btn-pagi" class="flex items-center">
+                                        <button class="p-1 sm:p-2">
+                                            <span
+                                                class="w-6 h-6 rounded-full bg-black text-white text-13-l-18 font-medium flex items-center justify-center">1</span>
+                                        </button>
+                                        <button class="p-1 sm:p-2">
+                                            <span
+                                                class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">2</span>
+                                        </button>
+                                        <button class="p-1 sm:p-2">
+                                            <span
+                                                class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">3</span>
+                                        </button>
+                                        <button class="p-1 sm:p-2">
+                                            <span
+                                                class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">4</span>
+                                        </button>
+                                        <button class="p-1 sm:p-2">
+                                            <span
+                                                class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">5</span>
+                                        </button>
+                                    </div>
+
+                                    <button onclick="moveTenPage('plus')" class="p-1 sm:p-2">
+                                        <img class="w-6 h-6" src="../assets/images/icon/common/next.svg" alt="icon">
+                                    </button>
+                                    <button onclick="gotoSE('end')" class="p-1 sm:p-2">
+                                        <img class="w-6 h-6" src="../assets/images/icon/common/next-to-end.svg"
+                                            alt="icon">
+                                    </button>
                                 </div>
                             </div>
                         </div>
-                        <!-- 2 -->
-                        <div
-                            class="pb-3 sm:pb-5 border-b flex flex-col-reverse gap-y-3 sm:flex-row sm:gap-x-24 sm:pl-5">
-                            <div class="sm:w-32 flex flex-row justify-between sm:justify-start sm:flex-col gap-y-2">
-                                <p class="text-13-l-18 font-medium">홍길*</p>
-                                <p class="text-xs font-normal text-gray-400">2024.09.10</p>
-                            </div>
-
-                            <div>
-                                <p id="comment-2" class="text-15-l-24 font-normal two-lines">
-                                    매일 하고 있는 가족기도서로 우선 쓰고 있습니다. 딱이라는 생각도 들었고, 다른 사람이 문의 올린글의 답변에서 가족기도용으로 추천하신 것 중
-                                    성체조배책이 있어서요.
-                                </p>
-
-                                <div class="flex items-center gap-1 cursor-pointer"
-                                    onclick="displayComment('#icon-comment-2', '#comment-2')">
-                                    <span class="inline-block text-13-l-18 font-normal text-gray-400">더보기</span>
-                                    <div class="h-5 w-5 rounded-full border flex items-center justify-center">
-                                        <i id="icon-comment-2"
-                                            class="text-xs fa-solid fa-chevron-down text-gray-400"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 3 -->
-                        <div
-                            class="pb-3 sm:pb-5 border-b flex flex-col-reverse gap-y-3 sm:flex-row sm:gap-x-24 sm:pl-5">
-                            <div class="sm:w-32 flex flex-row justify-between sm:justify-start sm:flex-col gap-y-2">
-                                <p class="text-13-l-18 font-medium">홍길*</p>
-                                <p class="text-xs font-normal text-gray-400">2024.09.10</p>
-                            </div>
-
-                            <div>
-                                <p id="comment-3" class="text-15-l-24 font-normal two-lines">
-                                    매일 하고 있는 가족기도서로 우선 쓰고 있습니다. 딱이라는 생각도 들었고, 다른 사람이 문의 올린글의 답변에서 가족기도용으로 추천하신 것 중
-                                    성체조배책이 있어서요.
-                                </p>
-
-                                <div class="flex items-center gap-1 cursor-pointer"
-                                    onclick="displayComment('#icon-comment-3', '#comment-3')">
-                                    <span class="inline-block text-13-l-18 font-normal text-gray-400">더보기</span>
-                                    <div class="h-5 w-5 rounded-full border flex items-center justify-center">
-                                        <i id="icon-comment-3"
-                                            class="text-xs fa-solid fa-chevron-down text-gray-400"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                    <!-- pagi -->
-                    <div class="flex items-center justify-center pt-2.5">
-                        <div class="flex items-center">
-                            <button class="p-1 sm:p-2">
-                                <img class="w-6 h-6" src="../assets/images/icon/common/prev-to-first.svg" alt="icon">
-                            </button>
-                            <button class="p-1 sm:p-2">
-                                <img class="w-6 h-6" src="../assets/images/icon/common/prev.svg" alt="icon">
-                            </button>
 
-                            <div id="list-btn-pagi" class="flex items-center">
-                                <button class="p-1 sm:p-2">
-                                    <span
-                                        class="w-6 h-6 rounded-full bg-black text-white text-13-l-18 font-medium flex items-center justify-center">1</span>
-                                </button>
-                                <button class="p-1 sm:p-2">
-                                    <span
-                                        class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">2</span>
-                                </button>
-                                <button class="p-1 sm:p-2">
-                                    <span
-                                        class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">3</span>
-                                </button>
-                                <button class="p-1 sm:p-2">
-                                    <span
-                                        class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">4</span>
-                                </button>
-                                <button class="p-1 sm:p-2">
-                                    <span
-                                        class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">5</span>
-                                </button>
-                            </div>
-
-                            <button class="p-1 sm:p-2">
-                                <img class="w-6 h-6" src="../assets/images/icon/common/next.svg" alt="icon">
-                            </button>
-                            <button class="p-1 sm:p-2">
-                                <img class="w-6 h-6" src="../assets/images/icon/common/next-to-end.svg" alt="icon">
-                            </button>
-                        </div>
-                    </div>
                 </div>
             </div>
 
-            <div class="sm-my-18 py-6 px-5 sm:p-0">
-                <div class="rounded-lg p-5 sm:py-8 sm:px-6 space-y-4" style="background-color: #FFF9ED;">
-                    <div class="flex items-center gap-x-2">
-                        <img class="w-6 h-6" src="../assets/images/image/special/note.png" alt="">
-                        <span class="inline-block text-base font-semibold">유의사항</span>
-                    </div>
-
-                    <ul class="list-decimal pl-5">
-                        <li>-</li>
-                        <li>-</li>
-                        <li>-</li>
-                        <li>-</li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </section>
 
-
     <aside style="height: 72px;"></aside>
+
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
     <!-- go to top -->
     <div class="fixed bottom-24 right-6 block sm:hidden z-50">
@@ -1282,31 +1256,107 @@
         </div>
     </footer>
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script src="../assets/js/util.js"></script>
     <script src="../assets/js/common.js"></script>
 
     <script>
-        function displayComment(iconId, blockId) {
-            document.querySelector(blockId).classList.toggle('two-lines')
-            document.querySelector(iconId).classList.toggle('fa-chevron-down')
-            document.querySelector(iconId).classList.toggle('fa-chevron-up')
+        // const btnToggle = document.querySelector('#btn-toggle-table-event')
+        // btnToggle.addEventListener('click', () => {
+        //     btnToggle.querySelector('i').classList.toggle('fa-chevron-down')
+        //     btnToggle.querySelector('i').classList.toggle('fa-chevron-up')
+
+        //     document.querySelector('#table-event').classList.toggle('hidden')
+        // })
+
+        function renderListBookGridView() {
+            let stringHTML = ""
+            document.querySelector('#list-book-grid').innerHTML = ''
+
+            Array(6).fill(null).forEach((e, i) => {
+                stringHTML +=
+                    `
+                    <div class="space-y-3 frame-width-102-160">
+                        <div class="flex justify-between">
+                            <img onclick="chooseBookItem(this)" class='cursor-pointer item-choose-book' src="../assets/images/icon/common/check-white.svg" alt="o">
+                        </div>
+
+                        <div class="space-y-3">
+                            <div class="relative frame-image-border-26 frame-image-size-102150-160236 overflow-hidden shadow-md border">
+                                <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="book">
+                                <div onclick="likeBook(this)" class="cursor-pointer absolute bottom-1 right-1 sm:bottom-3 sm:right-3 z-10 w-9 h-9 rounded-full flex items-center justify-center"
+                                    style="background-color: rgba(0, 0, 0, 0.16);">
+                                    <i class="fa-solid fa-heart text-white text-xl"></i>
+                                    <input type="checkbox" name="" id="item-book-${i}" hidden>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 class="text-base font-semibold truncate mb-1 cursor-pointer" onclick="gotoPage('./CA-book-product-detail.html')">책 제목</h4>
+                                <p class="text-13-l-18 font-normal text-gray-400 mb-3">저자 ∙ 바오로딸</p>
+                                <div class="flex items-center gap-1">
+                                    <span class="inline-block text-sm font-semibold text-red-500">10%</span>
+                                    <span class="ml-1 whitespace-nowrap flex items-center">
+                                        <span class="inline-block text-sm font-semibold">12,000</span>
+                                        <span class="inline-block text-sm font-normal">원</span>
+                                    </span>
+                                    <span class="hidden sm:inline-block text-11-l-14 font-normal text-gray-400">| 100P</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between gap-2">
+                                ${i % 3 == 0 ?
+                        `
+                                    <div class="py-1.5 rounded flex-1 flex items-center justify-center bg-pink-100 cursor-pointer" onclick="toggle('#modal-option-book')">
+                                        <span class="inline-block text-13-l-18 font-semibold text-pink-600">바로구매</span>
+                                    </div>
+                                `
+                        :
+                        `
+                                    <div class="py-1.5 rounded flex-1 flex items-center justify-center bg-pink-100 cursor-pointer" onclick="gotoPage('./CO-or-order-step-0.html')">
+                                        <span class="inline-block text-13-l-18 font-semibold text-pink-600">바로구매</span>
+                                    </div>
+                                `
+                    }
+
+                                <div class="hidden sm:block rounded border p-1 cursor-pointer" onclick="toggle('#modal-push-to-card')">
+                                    <img src="../assets/images/icon/category/middle-cart.svg" alt="icon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            })
+            document.querySelector('#list-book-grid').innerHTML = stringHTML
         }
+        renderListBookGridView()
 
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: "auto",
-            spaceBetween: 16,
-            navigation: {
-                nextEl: "#my-button-next",
-                prevEl: "#my-button-prev",
-            },
-        });
+        function chooseBookItem(icon) {
+            if (icon.src.includes('white')) {
+                icon.src = '../assets/images/icon/common/check-black.svg'
+            } else {
+                icon.src = '../assets/images/icon/common/check-white.svg'
+            }
+        }
+        let isChooseAllBook = false
+        const iconChooseAllBook = document.querySelector('#icon-choose-all-book')
+        function toggleAllBook() {
+            isChooseAllBook = !isChooseAllBook
+            if (isChooseAllBook) {
+                iconChooseAllBook.src = '../assets/images/icon/common/check-black.svg'
+                document.querySelectorAll('.item-choose-book').forEach((item) => {
+                    item.src = '../assets/images/icon/common/check-black.svg'
+                })
 
-        document.querySelector('#review').addEventListener('input', () => {
-            document.querySelector('#review-content-length').innerHTML = document.querySelector('#review').value.length
-        })
-
+            } else {
+                iconChooseAllBook.src = '../assets/images/icon/common/check-white.svg'
+                document.querySelectorAll('.item-choose-book').forEach((item) => {
+                    item.src = '../assets/images/icon/common/check-white.svg'
+                })
+            }
+        }
     </script>
+
 </body>
 
 </html>

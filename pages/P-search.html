@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,10 +21,12 @@
     <link rel="stylesheet" href="../assets/css/CO/co.css">
     <link rel="stylesheet" href="../assets/css/icons.css">
 </head>
+
 <body>
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
     <header>
-        <section class="hidden sm:block h-16 overflow-hidden pt-2" style="background: linear-gradient(to right, #2e3d4e, #241d36);">
+        <section class="hidden sm:block h-16 overflow-hidden pt-2"
+            style="background: linear-gradient(to right, #2e3d4e, #241d36);">
             <div class="container-layout h-16 flex items-center justify-center">
                 <img style="width: 280px; height: 72px;" src="../assets/images/banner/promo-banner.svg" alt="icon">
             </div>
@@ -43,33 +46,40 @@
         <section>
             <div class="container-layout py-2 mobi-px sm:py-8 utility-layout">
                 <div class="flex items-center justify-between gap-0 ">
-                    <div class="cursor-pointer header-logo overflow-hidden">
-                        <a href="../index.html">
-                            <img class="header-logo" src="../assets/images/logo/Logo.svg" alt="Logo" />
-                        </a>
+                    <div class="cursor-pointer header-logo overflow-hidden" onclick="gotoPage('/index.html')">
+                        <img class="header-logo" src="../assets/images/logo/Logo.svg" alt="Logo" />
                     </div>
                     <!-- input search vvvvvv -->
                     <div class="flex-1 hidden sm:block max-w-xl">
-                        <div id="frame-header-search" class="rounded-full relative" style="background: linear-gradient(to right, #0C98E7, #B956EA, #F03964); padding: 1px; ">
+                        <div id="frame-header-search" class="rounded-full relative"
+                            style="background: linear-gradient(to right, #0C98E7, #B956EA, #F03964); padding: 1px; ">
                             <div
                                 class="bg-white flex justify-between items-center h-full overflow-hidden px-5 py-3 rounded-full">
                                 <div class="text-base font-normal flex-1 flex">
-                                    <input id="header-input-search" oninput="handleChangeTextSearch()" type="text" placeholder="하루 10분 주님과 단 둘이" class="flex-1 pr-4">
+                                    <input id="header-input-search" oninput="handleChangeTextSearch()" type="text"
+                                        placeholder="하루 10분 주님과 단 둘이" class="flex-1 pr-4">
                                 </div>
-                                <div class="pl-6 border-l cursor-pointer" style="border-color: rgba(112, 115, 124, 0.22);" onclick="gotoPage('./P-search.html')" >
+                                <div class="pl-6 border-l cursor-pointer"
+                                    style="border-color: rgba(112, 115, 124, 0.22);"
+                                    onclick="gotoPage('./P-search.html')">
                                     <img src="../assets/images/icon/header/home-search.svg" alt="icon">
                                 </div>
                             </div>
                             <!-- result -->
                             <div id="header-search-result" class="overflow-hidden hidden" style="height: 0px;">
-                                <div class="absolute top-full left-0 right-0 z-50 bg-white border shadow-md border-bl-br-24-px">
+                                <div
+                                    class="absolute top-full left-0 right-0 z-50 bg-white border shadow-md border-bl-br-24-px">
                                     <ul class="">
-                                        <li class="text-15-l-22 font-normal py-3 px-5 truncate hover:bg-gray-100 cursor-pointer" onclick="gotoPage('./P-search.html')">하루 10분 성모님 손잡고</li>
-                                        <li class="text-15-l-22 font-normal py-3 px-5 truncate hover:bg-gray-100 cursor-pointer" onclick="gotoPage('./P-search.html')">하루 10분 성모님 손잡고</li>
-                                        <li class="text-15-l-22 font-normal py-3 px-5 truncate hover:bg-gray-100 cursor-pointer" onclick="gotoPage('./P-search.html')">하루 10분 성모님 손잡고</li>
+                                        <li class="text-15-l-22 font-normal py-3 px-5 truncate hover:bg-gray-100 cursor-pointer"
+                                            onclick="gotoPage('./P-search.html')">하루 10분 성모님 손잡고</li>
+                                        <li class="text-15-l-22 font-normal py-3 px-5 truncate hover:bg-gray-100 cursor-pointer"
+                                            onclick="gotoPage('./P-search.html')">하루 10분 성모님 손잡고</li>
+                                        <li class="text-15-l-22 font-normal py-3 px-5 truncate hover:bg-gray-100 cursor-pointer"
+                                            onclick="gotoPage('./P-search.html')">하루 10분 성모님 손잡고</li>
                                     </ul>
                                     <div class="py-1 px-5 flex justify-end border-t">
-                                        <button onclick="closeHeaderSearchResult()" class="text-13-l-18 py-1.5 px-2 rounded hover:bg-gray-100">닫기</button>
+                                        <button onclick="closeHeaderSearchResult()"
+                                            class="text-13-l-18 py-1.5 px-2 rounded hover:bg-gray-100">닫기</button>
                                     </div>
                                 </div>
                             </div>
@@ -77,25 +87,44 @@
                     </div>
                     <!-- input search ^^^^ -->
 
+                    <div class="sm:hidden mx-4 max-w-32 flex-1">
+                        <div class="py-2 px-3 flex items-center rounded-full gap-x-2"
+                            style="background-color: rgba(247, 247, 248, 1);">
+                            <input type="text" class="text-base font-normal w-full bg-transparent"
+                                placeholder="하루 10분 주...">
+                            <button class="w-5 h-5 flex items-center justify-center">
+                                <img class="w-full h-full" src="../assets/images/icon/main/icon-search.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+
                     <div class="gap-3 hidden sm:flex">
                         <div class="cursor-pointer relative w-12 h-12">
-                            <img style="width: 48px !important; height: 48px !important;" src="../assets/images/icon/header/home-cart.svg" alt="icon" />
-                            <div class="text-9-l-11 text-white p-0.5 rounded-full bg-red-400 absolute bottom-0 right-0">9,999</div>
+                            <img style="width: 48px !important; height: 48px !important;"
+                                src="../assets/images/icon/header/home-cart.svg" alt="icon" />
+                            <div class="text-9-l-11 text-white p-0.5 rounded-full bg-red-400 absolute bottom-0 right-0">
+                                9,999</div>
                         </div>
                         <div class="cursor-pointer">
-                            <img id="icon-acc-login" style="width: 56px !important; height: 56px !important;" src="../assets/images/icon/header/my-home-account.svg" alt="icon" />
+                            <img id="icon-acc-login" style="width: 56px !important; height: 56px !important;"
+                                src="../assets/images/icon/header/my-home-account.svg" alt="icon" />
                         </div>
                     </div>
 
                     <div class="flex sm:hidden gap-5 items-center">
-                        <div class="text-xs font-semibold py-2 px-4 rounded-full text-white bg-header-highlight">
+                        <div
+                            class="text-xs font-semibold py-2 px-4 rounded-full text-white bg-header-highlight whitespace-nowrap">
                             로그인
                         </div>
-                        <div>
-                            <img  src="../assets/images/icon/header/shopping-bag.svg" alt="">
+                        <div class="relative">
+                            <img class="w-6 h-6" src="../assets/images/icon/header/shopping-bag.svg" alt="">
+                            <div class="text-white p-0.5 rounded-full absolute bottom-0 left-3"
+                                style="background-color: rgba(238, 23, 98, 1); font-size: 8px; line-height: 10px;">
+                                9,999</div>
                         </div>
-                        <div>
-                            <img id="btn-toggle-menu-m" src="../assets/images/icon/header/menu.svg" alt="">
+                        <div class="w-6 h-6">
+                            <img class="w-6 h-6" id="btn-toggle-menu-m" src="../assets/images/icon/header/menu.svg"
+                                alt="">
                         </div>
                     </div>
                 </div>
@@ -107,19 +136,37 @@
                 <div class="flex justify-between overflow-auto custom-scroll">
                     <div>
                         <ul class="flex">
-                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="../index.html">전체</a> </li>
-                            <li class="py-4 px-3.5 text-highlight text-highlight-dot"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="./SP-1.html">스페셜</a> </li>
-                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="./CA-book-main-category.html">도서</a> </li>
-                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="./CA-sanctuary-main-category.html">성물</a> </li>
-                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="./CA-good-main-category.html">굿즈</a> </li>
-                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="./CA-pick-main-category.html">바오로딸 Pick</a> </li>
-                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="./CA-ebook-main-category.html">ebook</a> </li>
-                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium" style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="./CA-dvd-main-category.html">음반/뮤직/DVD</a> </li>
+                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
+                                    style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
+                                    href="../index.html">전체</a> </li>
+                            <li class="py-4 px-3.5 text-highlight text-highlight-dot"> <a
+                                    class="inline-block h-6 text-base font-medium"
+                                    style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
+                                    href="./SP-1.html">스페셜</a> </li>
+                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
+                                    style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
+                                    href="./CA-book-main-category.html">도서</a> </li>
+                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
+                                    style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
+                                    href="./CA-sanctuary-main-category.html">성물</a> </li>
+                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
+                                    style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
+                                    href="./CA-good-main-category.html">굿즈</a> </li>
+                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
+                                    style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
+                                    href="./CA-pick-main-category.html">바오로딸 Pick</a> </li>
+                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
+                                    style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
+                                    href="./CA-ebook-main-category.html">ebook</a> </li>
+                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
+                                    style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
+                                    href="./CA-dvd-main-category.html">음반/뮤직/DVD</a> </li>
                         </ul>
                     </div>
                     <div class="hidden sm:flex gap-2 items-center">
                         <span class="text-base font-semibold hidden sm:block" style="white-space: nowrap;">전체 메뉴</span>
-                        <img class="cursor-pointer" id="btn-toggle-menu-l" src="../assets/images/icon/header/home-hbg-menu.svg" alt="icon">
+                        <img class="cursor-pointer" id="btn-toggle-menu-l"
+                            src="../assets/images/icon/header/home-hbg-menu.svg" alt="icon">
                     </div>
                 </div>
             </div>
@@ -131,8 +178,10 @@
 
         <div id="content-toggle-menu" class="container-layout relative w-full">
             <div class="absolute top-0 right-0 lg:right-12 w-full">
-                <div class="absolute top-0 right-0 toggle-menu-size bg-white sm:border overflow-hidden sm:rounded-xl py-6 md:pr-2.5">
-                    <div class="w-full h-full overflow-y-auto overflow-x-hidden header-toggle-menu-custom-scroll md:pr-2">
+                <div
+                    class="absolute top-0 right-0 toggle-menu-size bg-white sm:border overflow-hidden sm:rounded-xl py-6 md:pr-2.5">
+                    <div
+                        class="w-full h-full overflow-y-auto overflow-x-hidden header-toggle-menu-custom-scroll md:pr-2">
 
                         <div class="flex p-6 sm:hidden items-center justify-between">
                             <span class="inline-block text-20-l-28 font-semibold ">전체 메뉴</span>
@@ -143,7 +192,7 @@
                         </div>
 
                         <div class="w-full pl-5 md:px-5 mb-6 pr-2 md:pr-0">
-                            <div class="mb-8">                              
+                            <div class="mb-8">
                                 <div class="overflow-hidden rounded-lg "
                                     style="background: linear-gradient(to right, #0C98E7, #B956EA, #F03964); padding: 1px; ">
                                     <div
@@ -151,7 +200,9 @@
                                         <div class="flex text-base font-normal flex-1">
                                             <input class="w-full pr-4" type="text" placeholder="하루 10분 주님과 단 둘이">
                                         </div>
-                                        <div class="pl-4 border-l" style="border-color: rgba(112, 115, 124, 0.22); cursor: pointer;" onclick="gotoPage('./P-search.html')">
+                                        <div class="pl-4 border-l"
+                                            style="border-color: rgba(112, 115, 124, 0.22); cursor: pointer;"
+                                            onclick="gotoPage('./pages/P-search.html')">
                                             <img src="../assets/images/icon/header/home-search.svg" alt="icon">
                                         </div>
                                     </div>
@@ -161,16 +212,19 @@
                             <div id="toggle-menu-overview-no-login" class="mb-8 hidden">
                                 <div class="rounded-xl p-4" style="background-color: rgba(255, 249, 237, 1);">
                                     <div class="mb-2">
-                                        <div class="flex items-center mb-1 cursor-pointer" onclick="gotoPage('./AU-login-login.html')">
+                                        <div class="flex items-center mb-1 cursor-pointer"
+                                            onclick="gotoPage('./pages/AU-login-login.html')">
                                             <h4 class="text-18-l-26 font-semibold">로그인</h4>
                                             <div>
                                                 <img src="../assets/images/icon/header/next.svg" alt="icon">
                                             </div>
                                         </div>
-                                        <p class="text-sm font-normal" style="color: rgba(55, 56, 60, 0.6);">로그인을 하셔서 내 정보를 확인해 주세요</p>
+                                        <p class="text-sm font-normal" style="color: rgba(55, 56, 60, 0.6);">로그인을 하셔서 내
+                                            정보를 확인해 주세요</p>
                                     </div>
 
-                                    <div class="text-xs font-normal bg-white py-2 text-center rounded-full" style="color: rgba(46, 47, 51, 0.88);">회원가입을 통해 다양한 혜택을 받으세요</div>
+                                    <div class="text-xs font-normal bg-white py-2 text-center rounded-full"
+                                        style="color: rgba(46, 47, 51, 0.88);">회원가입을 통해 다양한 혜택을 받으세요</div>
                                 </div>
                             </div>
 
@@ -186,14 +240,17 @@
                                             <div class="flex items-center gap-4">
                                                 <div class="flex items-center gap-2">
                                                     <div>
-                                                        <img src="../assets/images/icon/header/chat.svg" alt="icon">
+                                                        <img class="w-6 h-6" src="../assets/images/icon/header/chat.svg"
+                                                            alt="icon">
                                                     </div>
                                                     <p class="text-xs font-normal">카카오 연동</p>
                                                 </div>
 
                                                 <div class="flex items-center gap-2">
                                                     <div>
-                                                        <img src="../assets/images/icon/header/dot-grey.svg" alt="icon">
+                                                        <img class="w-6 h-6"
+                                                            src="../assets/images/image/auth/member-bronze.png"
+                                                            alt="icon">
                                                     </div>
                                                     <p class="text-xs font-normal">등급</p>
                                                 </div>
@@ -203,23 +260,41 @@
                                         <div class="rounded-xl bg-white py-3 px-2">
                                             <div>
                                                 <div class="flex items-center justify-between">
-                                                    <div class="flex flex-col items-center justify-center gap-0.5 menu-item-size cursor-pointer" onclick="gotoPage('./CO-sh-shopping-cart.html')">
-                                                        <img src="../assets/images/icon/header/cart.svg" alt="icon">
+                                                    <div class="flex flex-col items-center justify-center gap-0.5 menu-item-size cursor-pointer"
+                                                        onclick="gotoPage('./pages/CO-sh-shopping-cart.html')">
+                                                        <div class="relative">
+                                                            <img src="../assets/images/icon/header/cart.svg" alt="icon">
+                                                            <div class="text-white p-0.5 rounded-full absolute bottom-0 left-3"
+                                                                style="background-color: rgba(238, 23, 98, 1); font-size: 8px; line-height: 10px;">
+                                                                9,999</div>
+                                                        </div>
                                                         <p class="text-15-l-22 font-medium hidden sm:block">장바구니</p>
                                                     </div>
-                                                    <div style="width: 1px; background-color: rgba(112, 115, 124, 0.16);" class="h-5"></div>
-                                                    <div class="flex flex-col items-center justify-center gap-0.5 menu-item-size cursor-pointer" onclick="gotoPage('./MY-mw-deposit.html')">
+                                                    <div style="width: 1px; background-color: rgba(112, 115, 124, 0.16);"
+                                                        class="h-5"></div>
+                                                    <div class="flex flex-col items-center justify-center gap-0.5 menu-item-size cursor-pointer"
+                                                        onclick="gotoPage('./pages/MY-mw-deposit.html')">
                                                         <img src="../assets/images/icon/header/wallet.svg" alt="icon">
                                                         <p class="text-15-l-22 font-medium hidden sm:block">나의지갑</p>
                                                     </div>
-                                                    <div style="width: 1px; background-color: rgba(112, 115, 124, 0.16);" class="h-5"></div>
-                                                    <div class="flex flex-col items-center justify-center gap-0.5 menu-item-size cursor-pointer" onclick="gotoPage('./CO-or-order-step-0.html')">
+                                                    <div style="width: 1px; background-color: rgba(112, 115, 124, 0.16);"
+                                                        class="h-5"></div>
+                                                    <div class="flex flex-col items-center justify-center gap-0.5 menu-item-size cursor-pointer"
+                                                        onclick="gotoPage('./pages/CO-or-order-step-0.html')">
                                                         <img src="../assets/images/icon/header/order.svg" alt="icon">
                                                         <p class="text-15-l-22 font-medium hidden sm:block">주문/배송</p>
                                                     </div>
-                                                    <div style="width: 1px; background-color: rgba(112, 115, 124, 0.16);" class="h-5"></div>
-                                                    <div class="flex flex-col items-center justify-center gap-0.5 menu-item-size cursor-pointer" onclick="gotoPage('./CO-wl-wishlist.html')">
-                                                        <img src="../assets/images/icon/header/heart.svg" alt="icon">
+                                                    <div style="width: 1px; background-color: rgba(112, 115, 124, 0.16);"
+                                                        class="h-5"></div>
+                                                    <div class="flex flex-col items-center justify-center gap-0.5 menu-item-size cursor-pointer"
+                                                        onclick="gotoPage('./pages/CO-wl-wishlist.html')">
+                                                        <div class="relative">
+                                                            <img src="../assets/images/icon/header/heart.svg"
+                                                                alt="icon">
+                                                            <div class="text-white p-0.5 rounded-full absolute bottom-0 left-3"
+                                                                style="background-color: rgba(238, 23, 98, 1); font-size: 8px; line-height: 10px;">
+                                                                9,999</div>
+                                                        </div>
                                                         <p class="text-15-l-22 font-medium hidden sm:block">찜목록</p>
                                                     </div>
                                                 </div>
@@ -233,22 +308,28 @@
                                 <div class="overflow-x-auto custom-scroll">
                                     <ul class="flex items-center border-b">
                                         <li class="p-2.5 border-b-2" style="border-color: rgba(32, 131, 254, 1);">
-                                            <a href="#" class="text-15-l-22 font-medium inline-block whitespace-nowrap" style="height: 22px; color: rgba(32, 131, 254, 1);">도서</a>
+                                            <a href="#" class="text-15-l-22 font-medium inline-block whitespace-nowrap"
+                                                style="height: 22px; color: rgba(32, 131, 254, 1);">도서</a>
                                         </li>
                                         <li class="p-2.5">
-                                            <a href="#" class="text-15-l-22 font-medium inline-block whitespace-nowrap" style="height: 22px;">성물</a>
+                                            <a href="#" class="text-15-l-22 font-medium inline-block whitespace-nowrap"
+                                                style="height: 22px;">성물</a>
                                         </li>
                                         <li class="p-2.5">
-                                            <a href="#" class="text-15-l-22 font-medium inline-block whitespace-nowrap" style="height: 22px;">굿즈</a>
+                                            <a href="#" class="text-15-l-22 font-medium inline-block whitespace-nowrap"
+                                                style="height: 22px;">굿즈</a>
                                         </li>
                                         <li class="p-2.5">
-                                            <a href="#" class="text-15-l-22 font-medium inline-block whitespace-nowrap" style="height: 22px;">바오로딸 Pick</a>
+                                            <a href="#" class="text-15-l-22 font-medium inline-block whitespace-nowrap"
+                                                style="height: 22px;">바오로딸 Pick</a>
                                         </li>
                                         <li class="p-2.5">
-                                            <a href="#" class="text-15-l-22 font-medium inline-block whitespace-nowrap" style="height: 22px;">ebook</a>
+                                            <a href="#" class="text-15-l-22 font-medium inline-block whitespace-nowrap"
+                                                style="height: 22px;">ebook</a>
                                         </li>
                                         <li class="p-2.5">
-                                            <a href="#" class="text-15-l-22 font-medium inline-block whitespace-nowrap" style="height: 22px;">음반/뮤직/DVD</a>
+                                            <a href="#" class="text-15-l-22 font-medium inline-block whitespace-nowrap"
+                                                style="height: 22px;">음반/뮤직/DVD</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -264,77 +345,106 @@
                                     </div>
 
                                     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-4 w-full">
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(0, 0, 0, 1);">성경</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">신학</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">전례</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">교리/성사</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">교회문헌</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">교회법</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">묵상/영성/강론</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">교회사</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">교부학</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">수도생활</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">성지</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">철학</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">종교</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">사회</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">예술/문화</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">가정/심리/교육</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">교회인물</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">문학</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">청소년</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">어린이</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">악보</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">기타</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(0, 0, 0, 1);">성경</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">신학</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">전례</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">교리/성사</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">교회문헌</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">교회법</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">묵상/영성/강론</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">교회사</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">교부학</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">수도생활</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">성지</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">철학</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">종교</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">사회</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">예술/문화</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">가정/심리/교육</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">교회인물</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">문학</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">청소년</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">어린이</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">악보</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">기타</div>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </div>
 
                         <div class="pl-5 md:px-5 py-5 mb-6" style="background-color: rgba(247, 247, 248, 1);">
-                            <div class="flex items-center md:justify-between flex-wrap gap-1 md:gap-2.5 overflow-x-auto custom-scroll">
-                                <div class="flex items-center gap-x-6 w-fit">
-                                    <div class="space-y-2" style="width: 140px">
-                                        <div class="flex items-center justify-center py-4 rounded-md" style="background-color: #74A2EF;">
+                            <div
+                                class="flex items-center md:justify-between flex-wrap gap-1 md:gap-2.5 overflow-x-auto custom-scroll">
+                                <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2.5 sm:gap-6 w-full">
+                                    <div class="space-y-2 w-100-140">
+                                        <div class="flex items-center justify-center py-4 rounded-md"
+                                            style="background-color: #74A2EF;">
                                             <img src="../assets/images/image/common/t-1.png" alt="">
                                         </div>
-                                        <p class="text-center text-base font-medium">이벤트</p>
+                                        <p class="text-center text-base font-medium whitespace-nowrap">이벤트</p>
                                     </div>
-                                    <div class="space-y-2" style="width: 140px">
-                                        <div class="flex items-center justify-center py-4 rounded-md" style="background-color: #67CEE1;">
+                                    <div class="space-y-2 w-100-140">
+                                        <div class="flex items-center justify-center py-4 rounded-md"
+                                            style="background-color: #67CEE1;">
                                             <img src="../assets/images/image/common/t-2.png" alt="">
                                         </div>
-                                        <p class="text-center text-base font-medium">스페셜</p>
+                                        <p class="text-center text-base font-medium whitespace-nowrap">스페셜</p>
                                     </div>
-                                    <div class="space-y-2" style="width: 140px">
-                                        <div class="flex items-center justify-center py-4 rounded-md" style="background-color: #F09E8D;">
+                                    <div class="space-y-2 w-100-140">
+                                        <div class="flex items-center justify-center py-4 rounded-md"
+                                            style="background-color: #F09E8D;">
                                             <img src="../assets/images/image/common/t-3.png" alt="">
                                         </div>
-                                        <p class="text-center text-base font-medium">이책의 한 문장</p>
+                                        <p class="text-center text-base font-medium whitespace-nowrap">이책의 한 문장</p>
                                     </div>
-                                    <div class="space-y-2" style="width: 140px">
-                                        <div class="flex items-center justify-center py-4 rounded-md" style="background-color: #62BFBD;">
+                                    <div class="space-y-2 w-100-140">
+                                        <div class="flex items-center justify-center py-4 rounded-md"
+                                            style="background-color: #62BFBD;">
                                             <img src="../assets/images/image/common/t-4.png" alt="">
                                         </div>
-                                        <p class="text-center text-base font-medium">카드뉴스</p>
+                                        <p class="text-center text-base font-medium whitespace-nowrap">카드뉴스</p>
                                     </div>
-                                    <div class="space-y-2" style="width: 140px">
-                                        <div class="flex items-center justify-center py-4 rounded-md" style="background-color: #F58FB2;">
+                                    <div class="space-y-2 w-100-140">
+                                        <div class="flex items-center justify-center py-4 rounded-md"
+                                            style="background-color: #F58FB2;">
                                             <img src="../assets/images/image/common/t-5.png" alt="">
                                         </div>
-                                        <p class="text-center text-base font-medium">유튜브</p>
+                                        <p class="text-center text-base font-medium whitespace-nowrap">유튜브</p>
                                     </div>
-                                    <div class="space-y-2" style="width: 140px">
-                                        <div class="flex items-center justify-center py-4 rounded-md" style="background-color: #8696E1;">
+                                    <div class="space-y-2 w-100-140">
+                                        <div class="flex items-center justify-center py-4 rounded-md"
+                                            style="background-color: #8696E1;">
                                             <img src="../assets/images/image/common/t-6.png" alt="">
                                         </div>
-                                        <p class="text-center text-base font-medium">주님과 함께</p>
+                                        <p class="text-center text-base font-medium whitespace-nowrap">주님과 함께</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="px-5 mb-8">
                             <div>
                                 <div class="flex gap-0.5 mb-3">
@@ -345,12 +455,15 @@
                                 <div class="overflow-auto custom-scroll">
                                     <div class="flex gap-2.5" style="width: 1000px;">
                                         <div class="cursor-pointer flex gap-4 flex-1">
-                                            <div class="scope-imgage border shadow-md" style="width: 102px; height: 150px;">
-                                                <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="">
+                                            <div class="scope-imgage border shadow-md"
+                                                style="width: 102px; height: 150px;">
+                                                <img class="w-full h-full"
+                                                    src="../assets/images/image/books/book-error-small-x.png" alt="">
                                             </div>
                                             <div class="flex flex-col gap-1.5">
                                                 <h3 class="text-base font-semibold">수험생을 위한 묵주의 9일기도</h3>
-                                                <p class="text-13-l-18 font-normal" style="color: rgba(55, 56, 60, 0.6);">김옥순 수녀</p>
+                                                <p class="text-13-l-18 font-normal"
+                                                    style="color: rgba(55, 56, 60, 0.6);">김옥순 수녀</p>
                                                 <div class="text-sm font-semibold flex items-center gap-0.5">
                                                     <p style="color: rgba(238, 23, 98, 1);">10%</p>
                                                     <p>12,600</p>
@@ -360,12 +473,15 @@
                                         </div>
 
                                         <div class="cursor-pointer flex gap-4 flex-1">
-                                            <div class="scope-imgage border shadow-md" style="width: 102px; height: 150px;">
-                                                <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="">
+                                            <div class="scope-imgage border shadow-md"
+                                                style="width: 102px; height: 150px;">
+                                                <img class="w-full h-full"
+                                                    src="../assets/images/image/books/book-error-small-x.png" alt="">
                                             </div>
                                             <div class="flex flex-col gap-1.5">
                                                 <h3 class="text-base font-semibold">수험생을 위한 묵주의 9일기도</h3>
-                                                <p class="text-13-l-18 font-normal" style="color: rgba(55, 56, 60, 0.6);">김옥순 수녀</p>
+                                                <p class="text-13-l-18 font-normal"
+                                                    style="color: rgba(55, 56, 60, 0.6);">김옥순 수녀</p>
                                                 <div class="text-sm font-semibold flex items-center gap-0.5">
                                                     <p style="color: rgba(238, 23, 98, 1);">10%</p>
                                                     <p>12,600</p>
@@ -380,9 +496,9 @@
 
                         <div class="pl-5 mb-8">
                             <div class="overflow-auto custom-scroll-x">
-                                <div class="flex items-center gap-x-6" style="width: calc(300px * 3 + 24px * 2);">
+                                <div class="flex items-center gap-x-6" style="width: calc(325px * 3 + 24px * 2);">
                                     <div class="rounded-lg overflow-hidden"
-                                        style="width: 300px; height: 88px; background-color: rgba(62, 81, 155, 1);">
+                                        style="width: 325px; height: 88px; background-color: rgba(62, 81, 155, 1);">
                                         <div class="w-full h-full flex items-center justify-between px-8">
                                             <div>
                                                 <span class="inline-block text-18-l-26 text-white">수도자의 <br>
@@ -395,10 +511,11 @@
                                     </div>
 
                                     <div class="rounded-lg overflow-hidden"
-                                        style="width: 300px; height: 88px; background-color: rgba(62, 81, 155, 1);">
+                                        style="width: 325px; height: 88px; background-color: rgba(62, 81, 155, 1);">
                                         <div class="w-full h-full flex items-center justify-between px-8">
                                             <div>
-                                                <span class="inline-block text-18-l-26 text-white">이 책 <br> 너무 좋은데</span>
+                                                <span class="inline-block text-18-l-26 text-white">이 책 <br> 너무
+                                                    좋은데</span>
                                             </div>
                                             <div class="flex items-end h-full">
                                                 <img src="../assets/images/image/header/hand.png" alt="">
@@ -407,27 +524,29 @@
                                     </div>
 
                                     <div class="rounded-lg overflow-hidden"
-                                        style="width: 300px; height: 88px; background-color: rgba(62, 81, 155, 1);">
+                                        style="width: 325px; height: 88px; background-color: rgba(62, 81, 155, 1);">
                                         <div class="w-full h-full flex justify-between px-8">
                                             <div class="flex items-center">
                                                 <span class="inline-block text-18-l-26 text-white">기부나눔</span>
                                             </div>
                                             <div class="flex">
-                                                <img class="w-20 h-20" src="../assets/images/image/header/heart.png" alt="">
+                                                <img class="w-20 h-20" src="../assets/images/image/header/heart.png"
+                                                    alt="">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="text-center">
-                            <button id="btn-logout" onclick="logout()" class="text-base font-semibold py-1.5 px-4 cursor-pointer hover:bg-gray-100 rounded">로그아웃</button>
+                            <button id="btn-logout" onclick="logout()"
+                                class="text-base font-semibold py-1.5 px-4 cursor-pointer hover:bg-gray-100 rounded">로그아웃</button>
                         </div>
-                        
+
                         <div class="h-20"></div>
                     </div>
-                </div>            
+                </div>
             </div>
         </div>
     </section>
@@ -436,200 +555,251 @@
 
     <section class="">
         <div class="container-layout">
-           
-            <div class="px-5 sm:px-0 text-2028-2838 font-bold flex items-center gap-x-1 py-6 sm:mt-12 sm:mb-8">                
-                <h4> <span class="inline-block text-blue-500 text-2028-2838 font-bold">‘검색’</span> 검색결과 총 1,000 개의 상품을 찾았습니다.</h4>
+
+            <div class="px-5 sm:px-0 text-2028-2838 font-bold hidden sm:flex items-center gap-x-1 sm:mt-6 sm:mb-8">
+                <h4> <span class="inline-block text-blue-500 text-2028-2838 font-bold">‘검색’</span> 검색결과 총 1,000 개의 상품을
+                    찾았습니다.</h4>
             </div>
-            
-            <div class="rounded-lg border" style="background-color: rgba(247, 247, 248, 1);">
-                <div class="p-5 sm:py-6 sm:px-16 space-y-4">
-                    <div class="flex flex-col sm:flex-row sm:items-center gap-x-14">
+
+            <div class="mx-5 my-6 sm:my-0 sm:mx-0 rounded-lg border" style="background-color: rgba(247, 247, 248, 1);">
+                <div class="py-5 px-6">
+
+                    <div class="flex items-center justify-between"
+                        onclick="handleToggleMenuSearch(this, '#menu-search')">
                         <label for="" class="text-base font-normal whitespace-nowrap">결과 내 재검색하기</label>
 
-                        <div class="flex-1 flex items-center gap-x-3">
-                            <div class="py-2.5 px-4 rounded border flex-1 bg-white">
-                                <input type="text" class="w-full text-15-l-22 font-normal" placeholder="반드시 포함하는 단어(+)">
-                            </div>
-                            <div class="py-2.5 px-4 rounded border flex-1 bg-white">
-                                <input type="text" class="w-full text-15-l-22 font-normal" placeholder="제외하는 단어(-)">
-                            </div>
-                        </div>
+                        <button id="btn-toggle-menu-search">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
                     </div>
 
-                    <div class="space-y-2">
-                        <div class="flex items-center gap-x-2 cursor-pointer" id="toggle-1">
-                            <label for="" class="text-base font-normal cursor-pointer">필터</label>
-                            <i id="icon-toggle-1" class="fa-solid fa-chevron-down"></i>
+                    <div id="menu-search" class="space-y-4 hidden md:px-12">
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-x-14">
+                            <div class="flex-1 flex items-center gap-x-3">
+                                <div class="py-2.5 px-4 rounded border flex-1 bg-white">
+                                    <input type="text" class="w-full text-15-l-22 font-normal"
+                                        placeholder="반드시 포함하는 단어(+)">
+                                </div>
+                                <div class="py-2.5 px-4 rounded border flex-1 bg-white">
+                                    <input type="text" class="w-full text-15-l-22 font-normal" placeholder="제외하는 단어(-)">
+                                </div>
+                            </div>
                         </div>
 
-                        <div id="scope-filter" class="rounded-lg bg-white py-5 px-6 space-y-6 sm:space-y-3">
-                            <div class="flex flex-col sm:flex-row sm:items-center gap-y-4 gap-x-6">
-                                <label class="text-base font-normal w-24 whitespace-nowrap">카테고리</label>
-
-                                <div>
-                                    <ul class="flex flex-col sm:flex-row sm:items-center gap-y-3 gap-x-6">
-                                        <li class="flex items-center gap-x-2 cursor-pointer">
-                                            <img src="../assets/images/icon/common/check-white.svg" class="item-check" alt="">
-                                            <span class="inline-block text-13-l-18 font-semibold whitespace-nowrap">도서</span>
-                                        </li>
-                                        <li class="flex items-center gap-x-2 cursor-pointer">
-                                            <img src="../assets/images/icon/common/check-white.svg" class="item-check" alt="">
-                                            <span class="inline-block text-13-l-18 font-semibold whitespace-nowrap">성물</span>
-                                        </li>
-                                        <li class="flex items-center gap-x-2 cursor-pointer">
-                                            <img src="../assets/images/icon/common/check-white.svg" class="item-check" alt="">
-                                            <span class="inline-block text-13-l-18 font-semibold whitespace-nowrap">굿즈</span>
-                                        </li>
-                                        <li class="flex items-center gap-x-2 cursor-pointer">
-                                            <img src="../assets/images/icon/common/check-white.svg" class="item-check" alt="">
-                                            <span class="inline-block text-13-l-18 font-semibold whitespace-nowrap">ebook</span>
-                                        </li>
-                                        <li class="flex items-center gap-x-2 cursor-pointer">
-                                            <img src="../assets/images/icon/common/check-white.svg" class="item-check" alt="">
-                                            <span class="inline-block text-13-l-18 font-semibold whitespace-nowrap">음악 / DVD /  뮤직</span>
-                                        </li>
-                                    </ul>
-                                </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-x-2" id="toggle-1">
+                                <label for="" class="text-base font-normal">필터</label>
                             </div>
 
-                            <div class="flex flex-col sm:flex-row sm:items-center gap-y-4 gap-x-6">
-                                <label class="text-base font-normal w-24 whitespace-nowrap">검색 조건</label>
+                            <div id="scope-filter" class="rounded-lg bg-white py-5 px-6 space-y-6 sm:space-y-3">
+                                <div class="flex flex-col sm:flex-row sm:items-center gap-y-4 gap-x-6">
+                                    <label class="text-base font-normal w-24 whitespace-nowrap">카테고리</label>
 
-                                <div>
-                                    <ul class="flex flex-col sm:flex-row flex-wrap sm:items-center gap-y-3 gap-x-6">
-                                        <li class="flex items-center gap-x-2 cursor-pointer">
-                                            <img src="../assets/images/icon/common/check-white.svg" class="item-check" alt="">
-                                            <span class="inline-block text-13-l-18 font-semibold whitespace-nowrap">상품명</span>
-                                        </li>
-                                        <li class="flex items-center gap-x-2 cursor-pointer">
-                                            <img src="../assets/images/icon/common/check-white.svg" class="item-check" alt="">
-                                            <span class="inline-block text-13-l-18 font-semibold whitespace-nowrap">상품코드</span>
-                                        </li>
-                                        <li class="flex items-center gap-x-2 cursor-pointer">
-                                            <img src="../assets/images/icon/common/check-white.svg" class="item-check" alt="">
-                                            <span class="inline-block text-13-l-18 font-semibold whitespace-nowrap">출판사 / 제조사</span>
-                                        </li>
-                                        <li class="flex items-center gap-x-2 cursor-pointer">
-                                            <img src="../assets/images/icon/common/check-white.svg" class="item-check" alt="">
-                                            <span class="inline-block text-13-l-18 font-semibold whitespace-nowrap"> 저자 / 역자</span>
-                                        </li>
-                                        <li class="flex items-center gap-x-2 cursor-pointer">
-                                            <img src="../assets/images/icon/common/check-white.svg" class="item-check" alt="">
-                                            <span class="inline-block text-13-l-18 font-semibold whitespace-nowrap">제목</span>
-                                        </li>
-                                        <li class="flex items-center gap-x-2 cursor-pointer">
-                                            <img src="../assets/images/icon/common/check-white.svg" class="item-check" alt="">
-                                            <span class="inline-block text-13-l-18 font-semibold whitespace-nowrap">주제어</span>
-                                        </li>
-                                        <li class="flex items-center gap-x-2 cursor-pointer">
-                                            <img src="../assets/images/icon/common/check-white.svg" class="item-check" alt="">
-                                            <span class="inline-block text-13-l-18 font-semibold whitespace-nowrap">목차</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="flex flex-col sm:flex-row sm:items-center gap-x-6">
-                                <label class="text-base font-normal w-24">가격</label>
-
-                                <div class="flex items-center gap-x-2">
-                                    <div class="py-2.5 px-4 rounded border w-24">
-                                        <input type="number" placeholder="최소가격" class="w-full text-15-l-22 font-normal">
-                                    </div>
-                                    <span class="inline-block text-base font-normal">~</span>
-                                    <div class="py-2.5 px-4 rounded border w-24">
-                                        <input type="number" placeholder="최대가격" class="w-full text-15-l-22 font-normal">
+                                    <div>
+                                        <ul class="flex flex-col sm:flex-row sm:items-center gap-y-3 gap-x-6">
+                                            <li class="flex items-center gap-x-2 cursor-pointer">
+                                                <img src="../assets/images/icon/common/check-white.svg"
+                                                    class="item-check" alt="">
+                                                <span
+                                                    class="inline-block text-13-l-18 font-semibold whitespace-nowrap">도서</span>
+                                            </li>
+                                            <li class="flex items-center gap-x-2 cursor-pointer">
+                                                <img src="../assets/images/icon/common/check-white.svg"
+                                                    class="item-check" alt="">
+                                                <span
+                                                    class="inline-block text-13-l-18 font-semibold whitespace-nowrap">성물</span>
+                                            </li>
+                                            <li class="flex items-center gap-x-2 cursor-pointer">
+                                                <img src="../assets/images/icon/common/check-white.svg"
+                                                    class="item-check" alt="">
+                                                <span
+                                                    class="inline-block text-13-l-18 font-semibold whitespace-nowrap">굿즈</span>
+                                            </li>
+                                            <li class="flex items-center gap-x-2 cursor-pointer">
+                                                <img src="../assets/images/icon/common/check-white.svg"
+                                                    class="item-check" alt="">
+                                                <span
+                                                    class="inline-block text-13-l-18 font-semibold whitespace-nowrap">ebook</span>
+                                            </li>
+                                            <li class="flex items-center gap-x-2 cursor-pointer">
+                                                <img src="../assets/images/icon/common/check-white.svg"
+                                                    class="item-check" alt="">
+                                                <span
+                                                    class="inline-block text-13-l-18 font-semibold whitespace-nowrap">음악
+                                                    /
+                                                    DVD / 뮤직</span>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="flex flex-col sm:flex-row sm:items-center gap-x-6">
-                                <label class="text-base font-normal w-24 whitespace-nowrap">발매연도</label>
+                                <div class="flex flex-col sm:flex-row sm:items-center gap-y-4 gap-x-6">
+                                    <label class="text-base font-normal w-24 whitespace-nowrap">검색 조건</label>
 
-                                <div class="flex items-center gap-x-2">
-                                    <div class="py-2.5 px-4 rounded border w-24">
-                                        <input type="number" placeholder="발매연도" class="w-full text-15-l-22 font-normal">
+                                    <div>
+                                        <ul class="flex flex-col sm:flex-row flex-wrap sm:items-center gap-y-3 gap-x-6">
+                                            <li class="flex items-center gap-x-2 cursor-pointer">
+                                                <img src="../assets/images/icon/common/check-white.svg"
+                                                    class="item-check" alt="">
+                                                <span
+                                                    class="inline-block text-13-l-18 font-semibold whitespace-nowrap">상품명</span>
+                                            </li>
+                                            <li class="flex items-center gap-x-2 cursor-pointer">
+                                                <img src="../assets/images/icon/common/check-white.svg"
+                                                    class="item-check" alt="">
+                                                <span
+                                                    class="inline-block text-13-l-18 font-semibold whitespace-nowrap">상품코드</span>
+                                            </li>
+                                            <li class="flex items-center gap-x-2 cursor-pointer">
+                                                <img src="../assets/images/icon/common/check-white.svg"
+                                                    class="item-check" alt="">
+                                                <span
+                                                    class="inline-block text-13-l-18 font-semibold whitespace-nowrap">출판사
+                                                    / 제조사</span>
+                                            </li>
+                                            <li class="flex items-center gap-x-2 cursor-pointer">
+                                                <img src="../assets/images/icon/common/check-white.svg"
+                                                    class="item-check" alt="">
+                                                <span class="inline-block text-13-l-18 font-semibold whitespace-nowrap">
+                                                    저자
+                                                    / 역자</span>
+                                            </li>
+                                            <li class="flex items-center gap-x-2 cursor-pointer">
+                                                <img src="../assets/images/icon/common/check-white.svg"
+                                                    class="item-check" alt="">
+                                                <span
+                                                    class="inline-block text-13-l-18 font-semibold whitespace-nowrap">제목</span>
+                                            </li>
+                                            <li class="flex items-center gap-x-2 cursor-pointer">
+                                                <img src="../assets/images/icon/common/check-white.svg"
+                                                    class="item-check" alt="">
+                                                <span
+                                                    class="inline-block text-13-l-18 font-semibold whitespace-nowrap">주제어</span>
+                                            </li>
+                                            <li class="flex items-center gap-x-2 cursor-pointer">
+                                                <img src="../assets/images/icon/common/check-white.svg"
+                                                    class="item-check" alt="">
+                                                <span
+                                                    class="inline-block text-13-l-18 font-semibold whitespace-nowrap">목차</span>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <span class="inline-block text-base font-normal">~</span>
-                                    <div class="py-2.5 px-4 rounded border w-24">
-                                        <input type="number" placeholder="발매연도" class="w-full text-15-l-22 font-normal">
+                                </div>
+
+                                <div class="flex flex-col sm:flex-row sm:items-center gap-x-6">
+                                    <label class="text-base font-normal w-24">가격</label>
+
+                                    <div class="flex items-center gap-x-2">
+                                        <div class="py-2.5 px-4 rounded border w-24">
+                                            <input type="number" placeholder="최소가격"
+                                                class="w-full text-15-l-22 font-normal">
+                                        </div>
+                                        <span class="inline-block text-base font-normal">~</span>
+                                        <div class="py-2.5 px-4 rounded border w-24">
+                                            <input type="number" placeholder="최대가격"
+                                                class="w-full text-15-l-22 font-normal">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col sm:flex-row sm:items-center gap-x-6">
+                                    <label class="text-base font-normal w-24 whitespace-nowrap">발매연도</label>
+
+                                    <div class="flex items-center gap-x-2">
+                                        <div class="py-2.5 px-4 rounded border w-24">
+                                            <input type="number" placeholder="발매연도"
+                                                class="w-full text-15-l-22 font-normal">
+                                        </div>
+                                        <span class="inline-block text-base font-normal">~</span>
+                                        <div class="py-2.5 px-4 rounded border w-24">
+                                            <input type="number" placeholder="발매연도"
+                                                class="w-full text-15-l-22 font-normal">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-x-6">
+                                    <label class="text-base font-normal w-24">모든 조건 만족</label>
+
+                                    <div class="flex items-center gap-x-2">
+                                        <div id="toggle-send-email-2" class="cursor-pointer">
+                                            <i class="text-blue-500 text-3xl fa-solid fa-toggle-on text-gray-400"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            
-                            <div class="flex items-center gap-x-6">
-                                <label class="text-base font-normal w-24">모든 조건 만족</label>
+                        </div>
 
-                                <div class="flex items-center gap-x-2">
-                                    <div id="toggle-send-email-2" class="cursor-pointer" >
-                                        <i class="text-blue-500 text-3xl fa-solid fa-toggle-on text-gray-400"></i>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="flex items-center justify-end">
+                            <button
+                                class="text-15-l-22 font-semibold py-2.5 px-7 bg-blue-500 text-white rounded w-full">검색</button>
                         </div>
                     </div>
-                </div>
-                <hr>
-                <div class="py-3 px-6 flex items-center justify-end">
-                    <button class="text-15-l-22 font-semibold py-2.5 px-7 bg-blue-500 text-white rounded">검색</button>
                 </div>
             </div>
 
-            <div class="my-8 overflow-x-auto custom-scroll-x bg-gray-100">
+            <div class="ml-5 sm:ml-0 my-8 overflow-x-auto custom-scroll-x bg-gray-100">
                 <ul class="flex items-center gap-x-3 sm:gap-x-0  whitespace-nowrap w-fit" id="toggle-buttons">
-                    <li class="sm:flex-1 px-4 sm:px-0 bg-white border-black border-l border-r border-t" style="border-top-left-radius: 6px; border-top-right-radius: 6px;">
+                    <li class="sm:flex-1 px-4 sm:px-0 bg-white border-black border-l border-r border-t"
+                        style="border-top-left-radius: 6px; border-top-right-radius: 6px;">
                         <button class="w-full text-base font-semibold py-1.5">전체</button>
                     </li>
                     <li class="sm:flex-1 px-4 sm:px-0">
                         <button class="w-full text-base font-semibold py-1.5 text-gray-400 ">도서</button>
-                    </li>                    
+                    </li>
                     <li class="sm:flex-1 px-4 sm:px-0">
                         <button class="w-full text-base font-semibold py-1.5 text-gray-400">성물</button>
-                    </li>                    
+                    </li>
                     <li class="sm:flex-1 px-4 sm:px-0">
                         <button class="w-full text-base font-semibold py-1.5 text-gray-400">굿즈</button>
-                    </li>                    
+                    </li>
                     <li class="sm:flex-1 px-4 sm:px-0">
                         <button class="w-full text-base font-semibold py-1.5 text-gray-400">ebook</button>
-                    </li>                    
+                    </li>
                     <li class="sm:flex-1 px-4 sm:px-0">
                         <button class="w-full text-base font-semibold py-1.5 text-gray-400">음반/뮤직/DVD</button>
-                    </li>                    
+                    </li>
                 </ul>
             </div>
 
             <div class="flex items-start relative justify-between flex-wrap gap-x-5">
 
                 <div class="hidden md:block w-40 space-y-5">
-                   <div class="flex justify-between">
+                    <div class="flex justify-between">
                         <span class="inline-block text-18-l-26 font-semibold">필터</span>
 
-                        <button class="text-13-l-18 font-semibold py-1.5 px-4 border rounded" onclick="window.location.reload()">초기화</button>
-                   </div>
+                        <button class="text-13-l-18 font-semibold py-1.5 px-4 border rounded"
+                            onclick="window.location.reload()">초기화</button>
+                    </div>
 
-                   <div class="rounded-lg border">
+                    <div class="rounded-lg border">
                         <div class="p-4 space-y-8">
                             <h5 class="text-base font-semibold">검색 조건</h5>
 
                             <ul class="space-y-2">
                                 <li class="flex items-center gap-x-2">
-                                    <img class="item-check cursor-pointer" src="../assets/images/icon/common/check-white.svg" alt="">
+                                    <img class="item-check cursor-pointer"
+                                        src="../assets/images/icon/common/check-white.svg" alt="">
                                     <span class="inline-block text-13-l-18 font-semibold">제목</span>
                                 </li>
                                 <li class="flex items-center gap-x-2">
-                                    <img class="item-check cursor-pointer" src="../assets/images/icon/common/check-white.svg" alt="">
+                                    <img class="item-check cursor-pointer"
+                                        src="../assets/images/icon/common/check-white.svg" alt="">
                                     <span class="inline-block text-13-l-18 font-semibold">저자/역자</span>
                                 </li>
                                 <li class="flex items-center gap-x-2">
-                                    <img class="item-check cursor-pointer" src="../assets/images/icon/common/check-white.svg" alt="">
+                                    <img class="item-check cursor-pointer"
+                                        src="../assets/images/icon/common/check-white.svg" alt="">
                                     <span class="inline-block text-13-l-18 font-semibold">주제어</span>
                                 </li>
                                 <li class="flex items-center gap-x-2">
-                                    <img class="item-check cursor-pointer" src="../assets/images/icon/common/check-white.svg" alt="">
+                                    <img class="item-check cursor-pointer"
+                                        src="../assets/images/icon/common/check-white.svg" alt="">
                                     <span class="inline-block text-13-l-18 font-semibold">목차</span>
                                 </li>
                                 <li class="flex items-center gap-x-2">
-                                    <img class="item-check cursor-pointer" src="../assets/images/icon/common/check-white.svg" alt="">
+                                    <img class="item-check cursor-pointer"
+                                        src="../assets/images/icon/common/check-white.svg" alt="">
                                     <span class="inline-block text-13-l-18 font-semibold">출판사/제조사</span>
                                 </li>
                             </ul>
@@ -647,11 +817,12 @@
                                     <div class="py-2.5 px-4 rounded border">
                                         <input type="number" placeholder="최대가격" class="w-full text-15-l-22 font-normal">
                                     </div>
-                                    <button class="text-13-l-18 font-semibold text-blue-500 rounded border border-blue-500 py-1.5 px-4 hover:bg-blue-100">
+                                    <button
+                                        class="text-13-l-18 font-semibold text-blue-500 rounded border border-blue-500 py-1.5 px-4 hover:bg-blue-100">
                                         적용
                                     </button>
                                 </div>
-                            </div>                            
+                            </div>
                         </div>
                         <hr>
                         <div class="p-4 space-y-8">
@@ -666,25 +837,28 @@
                                     <div class="py-2.5 px-4 rounded border">
                                         <input type="number" placeholder="최대가격" class="w-full text-15-l-22 font-normal">
                                     </div>
-                                    <button class="text-13-l-18 font-semibold text-blue-500 rounded border border-blue-500 py-1.5 px-4 hover:bg-blue-100">
+                                    <button
+                                        class="text-13-l-18 font-semibold text-blue-500 rounded border border-blue-500 py-1.5 px-4 hover:bg-blue-100">
                                         적용
                                     </button>
                                 </div>
-                            </div>                            
+                            </div>
                         </div>
-                   </div>
+                    </div>
 
-                   <div class="space-y-3.5">
+                    <div class="space-y-3.5">
                         <div class="space-y-2">
                             <div class="flex items-center gap-x-3 py-2.5 px-4 rounded border">
                                 <div class="flex-1">
                                     <input type="text" class="text-15-l-22 font-normal w-full" placeholder="검색어 입력">
                                 </div>
-                                <img class="cursor-pointer" src="../assets/images/icon/header/home-search.svg" alt="icon">
+                                <img class="cursor-pointer" src="../assets/images/icon/header/home-search.svg"
+                                    alt="icon">
                             </div>
 
                             <div class="flex items-center gap-x-2">
-                                <img class="item-check cursor-pointer" src="../assets/images/icon/common/check-black.svg" alt="">
+                                <img class="item-check cursor-pointer"
+                                    src="../assets/images/icon/common/check-black.svg" alt="">
                                 <span class="inline-block text-13-l-18 font-normal">검색 결과내 재검색하기</span>
                             </div>
                         </div>
@@ -697,7 +871,7 @@
                                 <input type="text" class="w-full text-15-l-22 font-normal" placeholder="제외하는 단어(-)">
                             </div>
                         </div>
-                   </div>
+                    </div>
                 </div>
 
                 <!-- start main -->
@@ -706,21 +880,20 @@
                     <div class="px-5 sm:px-0">
                         <div class="flex items-center justify-between pb-2 border-b border-black">
                             <div class="flex items-center gap-1">
-                                
+
                             </div>
-    
-                            <div
-                                class="flex items-center gap-2 sm:p-1 rounded-lg sm:bg-gray-100">
-    
+
+                            <div class="flex items-center gap-2 sm:p-1 rounded-lg sm:bg-gray-100">
+
                                 <button id="gridButton" class="py-1.5 px-2 rounded-lg bg-white shadow-md">
                                     <i class="w-6 h-6 icon-grid-2_2">
                                         <span class="bg-gray-800"></span>
                                         <span class="bg-gray-800"></span>
                                         <span class="bg-gray-800"></span>
                                         <span class="bg-gray-800"></span>
-                                    </i>                                
+                                    </i>
                                 </button>
-    
+
                                 <button id="listButton" class="py-1.5 px-2 rounded-lg">
                                     <i class="icon-bars text-gray-400">
                                         <span class="bg-gray-400"></span>
@@ -729,26 +902,33 @@
                                     </i>
                                 </button>
                             </div>
-                        </div>                        
+                        </div>
                     </div>
                     <!-- sort -->
                     <div class="pl-5 sm:px-0 overflow-auto custom-scroll">
                         <ul class="flex items-center gap-0.5">
-                            <li class="whitespace-nowrap text-13-l-18 font-medium cursor-pointer sm:font-semibold p-1.5 text-blue-400">추천순</li>
+                            <li
+                                class="whitespace-nowrap text-13-l-18 font-medium cursor-pointer sm:font-semibold p-1.5 text-blue-400">
+                                추천순</li>
                             <span class="w-1-px h-4 bg-gray-200"></span>
-                            <li class="whitespace-nowrap text-13-l-18 font-medium cursor-pointer sm:font-normal p-1.5">최신등록순</li>
+                            <li class="whitespace-nowrap text-13-l-18 font-medium cursor-pointer sm:font-normal p-1.5">
+                                최신등록순</li>
                             <span class="w-1-px h-4 bg-gray-200"></span>
-                            <li class="whitespace-nowrap text-13-l-18 font-medium cursor-pointer sm:font-normal p-1.5">낮은 가격순</li>
+                            <li class="whitespace-nowrap text-13-l-18 font-medium cursor-pointer sm:font-normal p-1.5">
+                                낮은 가격순</li>
                             <span class="w-1-px h-4 bg-gray-200"></span>
-                            <li class="whitespace-nowrap text-13-l-18 font-medium cursor-pointer sm:font-normal p-1.5">높은 가격순</li>
+                            <li class="whitespace-nowrap text-13-l-18 font-medium cursor-pointer sm:font-normal p-1.5">
+                                높은 가격순</li>
                             <span class="w-1-px h-4 bg-gray-200"></span>
-                            <li class="whitespace-nowrap text-13-l-18 font-medium cursor-pointer sm:font-normal p-1.5">최근 판매량</li>
+                            <li class="whitespace-nowrap text-13-l-18 font-medium cursor-pointer sm:font-normal p-1.5">
+                                최근 판매량</li>
                         </ul>
                     </div>
                     <!-- action -->
                     <div class="px-5 sm:px-0 flex items-center justify-between">
                         <div class="flex items-center gap-2 cursor-pointer" onclick="toggleAllBook()">
-                            <img id="icon-choose-all-book" src="../assets/images/icon/common/check-white.svg" alt="check">
+                            <img id="icon-choose-all-book" src="../assets/images/icon/common/check-white.svg"
+                                alt="check">
                             <span class="text-13-l-18 font-semibold inline-block">전체 선택</span>
                         </div>
 
@@ -763,14 +943,16 @@
                                 </div>
                             </div>
 
-                            <div class="flex items-center justify-center gap-0.5 rounded border py-1.5 px-2 cursor-pointer" onclick="gotoPage('./CO-sh-shopping-cart.html')">
+                            <div class="flex items-center justify-center gap-0.5 rounded border py-1.5 px-2 cursor-pointer"
+                                onclick="gotoPage('./CO-sh-shopping-cart.html')">
                                 <div class="w-5 h-5 flex items-center justify-center">
                                     <img src="../assets/images/icon/category/middle-cart.svg" alt="">
                                 </div>
                                 <span class="text-13-l-18 font-semibold hidden sm:inline-block">장바구니</span>
                             </div>
 
-                            <div class="flex items-center justify-center gap-0.5 rounded border py-1.5 px-2 cursor-pointer">
+                            <div
+                                class="flex items-center justify-center gap-0.5 rounded border py-1.5 px-2 cursor-pointer">
                                 <div class="w-5 h-5 flex items-center justify-center">
                                     <img src="../assets/images/icon/category/middle-excel.svg" alt="">
                                 </div>
@@ -782,22 +964,21 @@
                     <div class="px-5 sm:px-0">
                         <div class="border-t border-b py-6">
                             <div id="list-book-grid" class="flex flex-wrap gap-x-2 sm:gap-x-8 gap-y-6"></div>
-                            
+
                             <div id="list-book-list" class="space-y-9 sm:space-y-6"></div>
                         </div>
                     </div>
 
-                    <div id="btn-more" class="" onclick="moreBook()">
+                    <div id="btn-more" class="hidden" onclick="moreBook()">
                         <button class="w-full text-1522-1624 font-semibold py-2 sm:py-3 text-center rounded border">
                             더보기
                         </button>
                     </div>
 
-                    <div id="frame-pagi" class="flex items-center justify-center pt-2.5 hidden">
+                    <div id="frame-pagi" class="flex items-center justify-center pt-2.5">
                         <div class="flex items-center">
                             <button onclick="gotoSE('start')" class="p-1 sm:p-2">
-                                <img class="w-6 h-6" src="../assets/images/icon/common/prev-to-first.svg"
-                                    alt="icon">
+                                <img class="w-6 h-6" src="../assets/images/icon/common/prev-to-first.svg" alt="icon">
                             </button>
                             <button onclick="moveTenPage('minus')" class="p-1 sm:p-2">
                                 <img class="w-6 h-6" src="../assets/images/icon/common/prev.svg" alt="icon">
@@ -843,24 +1024,23 @@
 
     <div class="h-52"></div>
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
-   
+
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
 
     <script src="../assets/js/util.js"></script>
     <script src="../assets/js/common.js"></script>
     <script>
         // Lấy phần tử mũi tên và phần tử chứa
-        const toggleButton = document.getElementById('toggle-1');
-        const icon = document.getElementById('icon-toggle-1');
+        // const toggleButton = document.getElementById('toggle-1');
+        // const icon = document.getElementById('icon-toggle-1');
 
         // Thêm sự kiện click vào button
-        toggleButton.addEventListener('click', () => {
-            // Toggle lớp 'rotate-180' để quay mũi tên 180 độ
-            icon.classList.toggle('fa-chevron-down')
-            icon.classList.toggle('fa-chevron-up')
+        // toggleButton.addEventListener('click', () => {
+        //     icon.classList.toggle('fa-chevron-down')
+        //     icon.classList.toggle('fa-chevron-up')
 
-            document.querySelector('#scope-filter').classList.toggle('hidden')
-        });
+        //     document.querySelector('#scope-filter').classList.toggle('hidden')
+        // });
 
         let status = true
         const frameToggleSendMail2 = document.querySelector('#toggle-send-email-2')
@@ -909,13 +1089,13 @@
         const typeDisplayBook = {
             grid: 'grid',
             list: 'list'
-        }        
+        }
         let quantityBook = 4;
         let totalPage = 1;
         const pagePerSet = 5;
         let currentSet = 1;
         let currentPage = 1;
-        
+
         let displayMode = true;
         let displayBook = typeDisplayBook.grid
 
@@ -936,7 +1116,7 @@
                     item.src = '../assets/images/icon/common/check-white.svg'
                 })
             }
-        }        
+        }
 
         function renderListBookGridView() {
             let stringHTML = ""
@@ -946,12 +1126,12 @@
             if (quantity > 12) quantity = 12
             Array(quantity).fill(null).forEach((e, i) => {
                 stringHTML +=
-                `
+                    `
                     <div class="space-y-3 frame-width-102-160">
                         <div>
                             <img onclick="chooseBookItem(this)" class='cursor-pointer item-choose-book' src="../assets/images/icon/common/check-white.svg" alt="o">
                         </div>
-        
+
                         <div class="space-y-3">
                             <div class="relative frame-image-border-26 frame-image-size-102150-160236 overflow-hidden shadow-md border">
                                 <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="book">
@@ -960,10 +1140,10 @@
                                     <i class="fa-solid fa-heart text-white text-xl"></i>
                                 </div>
                             </div>
-                            
-                            <div>                                        
+
+                            <div>
                                 <h4 class="text-base font-semibold truncate mb-1 cursor-pointer" onclick="gotoPage('./CA-book-product-detail.html')">책 제목</h4>
-                                <p class="text-13-l-18 font-normal text-gray-400 mb-3">저자 ∙ 바오로딸</p>                                        
+                                <p class="text-13-l-18 font-normal text-gray-400 mb-3">저자 ∙ 바오로딸</p>
                                 <div class="flex items-center gap-1">
                                     <span class="inline-block text-sm font-semibold text-red-500">10%</span>
                                     <span class="ml-1 whitespace-nowrap flex items-center">
@@ -973,7 +1153,7 @@
                                     <span class="hidden sm:inline-block text-11-l-14 font-normal text-gray-400">| 100P</span>
                                 </div>
                             </div>
-            
+
                             <div class="flex items-center justify-between gap-2">
                                 <div class="py-1.5 rounded flex-1 flex items-center justify-center bg-pink-100 cursor-pointer" onclick="gotoPage('./CO-sh-shopping-cart.html')">
                                     <span class="inline-block text-13-l-18 font-semibold text-pink-600">바로구매</span>
@@ -999,12 +1179,12 @@
             if (quantity > 12) quantity = 12
             Array(quantityBook).fill(null).forEach((e, i) => {
                 stringHTML +=
-                `
+                    `
                     <div class="flex-1 flex gap-3">
                         <div class="w-6 h-6">
                             <img onclick="chooseBookItem(this)" class='cursor-pointer item-choose-book' src="../assets/images/icon/common/check-white.svg" alt="o">
                         </div>
-        
+
                         <div class="flex-1 flex flex-col sm:flex-row gap-x-5 gap-y-3 items-start">
                             <div class="flex-1 flex gap-5 items-start">
                                 <div class="space-y-3 frame-width-102-160">
@@ -1013,7 +1193,7 @@
                                         <div onclick="likeBook(this)" class="cursor-pointer absolute bottom-3 right-3 z-10 w-9 h-9 rounded-full flex items-center justify-center"
                                             style="background-color: rgba(0, 0, 0, 0.16);">
                                             <i class="fa-solid fa-heart text-white text-xl"></i>
-                                        </div>                                        
+                                        </div>
                                     </div>
 
                                     <div class="flex items-center justify-center gap-2 py-1.5 rounded border cursor-pointer" onclick="gotoPage('./CA-book-product-detail.html')">
@@ -1021,12 +1201,12 @@
                                         <span class="inline-block text-13-l-18 font-semibold">미리보기</span>
                                     </div>
                                 </div>
-                                
+
                                 <div class="flex-1">
                                     <div class="frame-height-full-236 flex flex-col justify-between w-full">
-                                        <div class="w-full">                                        
+                                        <div class="w-full">
                                             <h4 class="text-base font-semibold truncate mb-1">책 제목</h4>
-                                            <p class="text-13-l-18 font-normal text-gray-400 mb-3">저자 ∙ 바오로딸</p>                                        
+                                            <p class="text-13-l-18 font-normal text-gray-400 mb-3">저자 ∙ 바오로딸</p>
                                             <div class="flex items-center gap-1">
                                                 <span class="inline-block text-sm font-semibold text-red-500">10%</span>
                                                 <span class="ml-1 whitespace-nowrap flex items-center">
@@ -1040,14 +1220,14 @@
                                         <div class="hidden sm:flex w-full">
                                             <div style="max-width: 400px;">
                                                 <p class="text-14-l-22 font-normal text-gray-400 two-lines">
-                                                    자녀에게 ‘신앙’을 선물하고픈 부모들의 현실적인 고민을 듣고 30여 년간 청소년 ‧ 청년 사목을 해온 저자가 사목 경험과 통찰을 나눈 신앙교육 안내서다. 
+                                                    자녀에게 ‘신앙’을 선물하고픈 부모들의 현실적인 고민을 듣고 30여 년간 청소년 ‧ 청년 사목을 해온 저자가 사목 경험과 통찰을 나눈 신앙교육 안내서다.
                                                 </p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-            
+
                             <div class="flex flex-row-reverse sm:flex-col gap-y-3 gap-x-2 w-full sm:w-auto">
                                 <div class="py-2.5 px-0 sm:px-6 rounded border flex-1 flex items-center justify-center bg-pink-100 border-pink-100 cursor-pointer" onclick="gotoPage('./CO-sh-shopping-cart.html')">
                                     <span class="whitespace-nowrap inline-block text-15-l-22 font-semibold text-pink-600">바로구매</span>
@@ -1094,7 +1274,7 @@
                 el.classList.remove('bg-gray-800')
             })
 
-            
+
             displayBook = typeDisplayBook.grid
             renderListBookGridView()
         });
@@ -1115,7 +1295,7 @@
                 el.classList.add('bg-gray-800')
             })
 
-            
+
             displayBook = typeDisplayBook.list
             renderListBookListView()
         });
@@ -1124,7 +1304,7 @@
             let stringHTML = ''
             Array(4).fill(null).forEach((el, i) => {
                 stringHTML +=
-                `
+                    `
                     <li class="">
                         <button class="toggle-menu-btn w-full text-left text-sm leading-5 font-semibold cursor-pointer p-2">대분류</button>
                         <ul class="${i === 0 ? '' : 'hidden'} p-2 border-b">
@@ -1167,7 +1347,7 @@
                 });
             });
         }
-        renderLeftMenu()
+        // renderLeftMenu()
 
         function loveAllBookChoose(block) {
             block.querySelector('i').classList.toggle('text-gray-400')
@@ -1203,7 +1383,7 @@
                 document.querySelector('#frame-pagi').classList.add('hidden')
             }
         }
-    
+
         const paginationButtons = document.querySelectorAll('#list-btn-pagi button');
         paginationButtons.forEach(button => {
             button.addEventListener('click', () => {
@@ -1223,7 +1403,7 @@
         });
 
         function moveTenPage(status) {
-            switch(status) {
+            switch (status) {
                 case 'plus':
                     paginationButtons.forEach(button => {
                         if (Number(button.textContent) + 5 > 20) return
@@ -1242,18 +1422,18 @@
         }
 
         function gotoSE(status) {
-            switch(status) {
+            switch (status) {
                 case 'start':
                     let i = 1
-                    paginationButtons.forEach(button => {                       
-                        button.querySelector('span').textContent = i++;                        
+                    paginationButtons.forEach(button => {
+                        button.querySelector('span').textContent = i++;
                     });
-                    paginationButtons.forEach((button, index) => {                        
+                    paginationButtons.forEach((button, index) => {
                         const span = button.querySelector('span');
                         span.classList.remove('bg-black', 'text-white');
                         span.classList.add('text-gray-400');
 
-                        if (index === 0) {                                    
+                        if (index === 0) {
                             const span = button.querySelector('span');
                             span.classList.add('bg-black', 'text-white');
                             span.classList.remove('text-gray-400');
@@ -1263,14 +1443,14 @@
                 case 'end':
                     let y = (20 - 4)
                     paginationButtons.forEach(button => {
-                        button.querySelector('span').textContent = y++                        
+                        button.querySelector('span').textContent = y++
                     });
                     paginationButtons.forEach((button, index) => {
                         const span = button.querySelector('span');
                         span.classList.remove('bg-black', 'text-white');
                         span.classList.add('text-gray-400');
 
-                        if (index === 4) {                                    
+                        if (index === 4) {
                             const span = button.querySelector('span');
                             span.classList.add('bg-black', 'text-white');
                             span.classList.remove('text-gray-400');
@@ -1280,6 +1460,13 @@
             }
         }
 
+        function handleToggleMenuSearch(el, menuId) {
+            toggle(menuId)
+            el.querySelector('i').classList.toggle('fa-chevron-up')
+            el.querySelector('i').classList.toggle('fa-chevron-down')
+            el.classList.toggle('pb-5')
+        }
     </script>
 </body>
+
 </html>

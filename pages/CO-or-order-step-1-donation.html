@@ -22,7 +22,8 @@
 <body>
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
     <header>
-        <section class="hidden sm:block h-16 overflow-hidden pt-2" style="background: linear-gradient(to right, #2e3d4e, #241d36);">
+        <section class="hidden sm:block h-16 overflow-hidden pt-2"
+            style="background: linear-gradient(to right, #2e3d4e, #241d36);">
             <div class="container-layout h-16 flex items-center justify-center">
                 <img style="width: 280px; height: 72px;" src="../assets/images/banner/promo-banner.svg" alt="icon">
             </div>
@@ -42,33 +43,40 @@
         <section>
             <div class="container-layout py-2 mobi-px sm:py-8 utility-layout">
                 <div class="flex items-center justify-between gap-0 ">
-                    <div class="cursor-pointer header-logo overflow-hidden">
-                        <a href="../index.html">
-                            <img class="header-logo" src="../assets/images/logo/Logo.svg" alt="Logo" />
-                        </a>
+                    <div class="cursor-pointer header-logo overflow-hidden" onclick="gotoPage('/index.html')">
+                        <img class="header-logo" src="../assets/images/logo/Logo.svg" alt="Logo" />
                     </div>
                     <!-- input search vvvvvv -->
                     <div class="flex-1 hidden sm:block max-w-xl">
-                        <div id="frame-header-search" class="rounded-full relative" style="background: linear-gradient(to right, #0C98E7, #B956EA, #F03964); padding: 1px; ">
+                        <div id="frame-header-search" class="rounded-full relative"
+                            style="background: linear-gradient(to right, #0C98E7, #B956EA, #F03964); padding: 1px; ">
                             <div
                                 class="bg-white flex justify-between items-center h-full overflow-hidden px-5 py-3 rounded-full">
                                 <div class="text-base font-normal flex-1 flex">
-                                    <input id="header-input-search" oninput="handleChangeTextSearch()" type="text" placeholder="하루 10분 주님과 단 둘이" class="flex-1 pr-4">
+                                    <input id="header-input-search" oninput="handleChangeTextSearch()" type="text"
+                                        placeholder="하루 10분 주님과 단 둘이" class="flex-1 pr-4">
                                 </div>
-                                <div class="pl-6 border-l cursor-pointer" style="border-color: rgba(112, 115, 124, 0.22);" onclick="gotoPage('./P-search.html')" >
+                                <div class="pl-6 border-l cursor-pointer"
+                                    style="border-color: rgba(112, 115, 124, 0.22);"
+                                    onclick="gotoPage('./P-search.html')">
                                     <img src="../assets/images/icon/header/home-search.svg" alt="icon">
                                 </div>
                             </div>
                             <!-- result -->
                             <div id="header-search-result" class="overflow-hidden hidden" style="height: 0px;">
-                                <div class="absolute top-full left-0 right-0 z-50 bg-white border shadow-md border-bl-br-24-px">
+                                <div
+                                    class="absolute top-full left-0 right-0 z-50 bg-white border shadow-md border-bl-br-24-px">
                                     <ul class="">
-                                        <li class="text-15-l-22 font-normal py-3 px-5 truncate hover:bg-gray-100 cursor-pointer" onclick="gotoPage('./P-search.html')">하루 10분 성모님 손잡고</li>
-                                        <li class="text-15-l-22 font-normal py-3 px-5 truncate hover:bg-gray-100 cursor-pointer" onclick="gotoPage('./P-search.html')">하루 10분 성모님 손잡고</li>
-                                        <li class="text-15-l-22 font-normal py-3 px-5 truncate hover:bg-gray-100 cursor-pointer" onclick="gotoPage('./P-search.html')">하루 10분 성모님 손잡고</li>
+                                        <li class="text-15-l-22 font-normal py-3 px-5 truncate hover:bg-gray-100 cursor-pointer"
+                                            onclick="gotoPage('./P-search.html')">하루 10분 성모님 손잡고</li>
+                                        <li class="text-15-l-22 font-normal py-3 px-5 truncate hover:bg-gray-100 cursor-pointer"
+                                            onclick="gotoPage('./P-search.html')">하루 10분 성모님 손잡고</li>
+                                        <li class="text-15-l-22 font-normal py-3 px-5 truncate hover:bg-gray-100 cursor-pointer"
+                                            onclick="gotoPage('./P-search.html')">하루 10분 성모님 손잡고</li>
                                     </ul>
                                     <div class="py-1 px-5 flex justify-end border-t">
-                                        <button onclick="closeHeaderSearchResult()" class="text-13-l-18 py-1.5 px-2 rounded hover:bg-gray-100">닫기</button>
+                                        <button onclick="closeHeaderSearchResult()"
+                                            class="text-13-l-18 py-1.5 px-2 rounded hover:bg-gray-100">닫기</button>
                                     </div>
                                 </div>
                             </div>
@@ -76,25 +84,44 @@
                     </div>
                     <!-- input search ^^^^ -->
 
+                    <div class="sm:hidden mx-4 max-w-32 flex-1">
+                        <div class="py-2 px-3 flex items-center rounded-full gap-x-2"
+                            style="background-color: rgba(247, 247, 248, 1);">
+                            <input type="text" class="text-base font-normal w-full bg-transparent"
+                                placeholder="하루 10분 주...">
+                            <button class="w-5 h-5 flex items-center justify-center">
+                                <img class="w-full h-full" src="../assets/images/icon/main/icon-search.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+
                     <div class="gap-3 hidden sm:flex">
                         <div class="cursor-pointer relative w-12 h-12">
-                            <img style="width: 48px !important; height: 48px !important;" src="../assets/images/icon/header/home-cart.svg" alt="icon" />
-                            <div class="text-9-l-11 text-white p-0.5 rounded-full bg-red-400 absolute bottom-0 right-0">9,999</div>
+                            <img style="width: 48px !important; height: 48px !important;"
+                                src="../assets/images/icon/header/home-cart.svg" alt="icon" />
+                            <div class="text-9-l-11 text-white p-0.5 rounded-full bg-red-400 absolute bottom-0 right-0">
+                                9,999</div>
                         </div>
                         <div class="cursor-pointer">
-                            <img id="icon-acc-login" style="width: 56px !important; height: 56px !important;" src="../assets/images/icon/header/my-home-account.svg" alt="icon" />
+                            <img id="icon-acc-login" style="width: 56px !important; height: 56px !important;"
+                                src="../assets/images/icon/header/my-home-account.svg" alt="icon" />
                         </div>
                     </div>
 
                     <div class="flex sm:hidden gap-5 items-center">
-                        <div class="text-xs font-semibold py-2 px-4 rounded-full text-white bg-header-highlight">
+                        <div
+                            class="text-xs font-semibold py-2 px-4 rounded-full text-white bg-header-highlight whitespace-nowrap">
                             로그인
                         </div>
-                        <div>
-                            <img  src="../assets/images/icon/header/shopping-bag.svg" alt="">
+                        <div class="relative">
+                            <img class="w-6 h-6" src="../assets/images/icon/header/shopping-bag.svg" alt="">
+                            <div class="text-white p-0.5 rounded-full absolute bottom-0 left-3"
+                                style="background-color: rgba(238, 23, 98, 1); font-size: 8px; line-height: 10px;">
+                                9,999</div>
                         </div>
-                        <div>
-                            <img id="btn-toggle-menu-m" src="../assets/images/icon/header/menu.svg" alt="">
+                        <div class="w-6 h-6">
+                            <img class="w-6 h-6" id="btn-toggle-menu-m" src="../assets/images/icon/header/menu.svg"
+                                alt="">
                         </div>
                     </div>
                 </div>
@@ -105,12 +132,13 @@
             <div class="container-layout overflow-hidden">
                 <div class="flex justify-between overflow-auto custom-scroll">
                     <div>
-                        <ul id="header-list-category" class="flex">                            
+                        <ul id="header-list-category" class="flex">
                         </ul>
                     </div>
                     <div class="hidden sm:flex gap-2 items-center">
                         <span class="text-base font-semibold hidden sm:block" style="white-space: nowrap;">전체 메뉴</span>
-                        <img class="cursor-pointer" id="btn-toggle-menu-l" src="../assets/images/icon/header/home-hbg-menu.svg" alt="icon">
+                        <img class="cursor-pointer" id="btn-toggle-menu-l"
+                            src="../assets/images/icon/header/home-hbg-menu.svg" alt="icon">
                     </div>
                 </div>
             </div>
@@ -122,8 +150,10 @@
 
         <div id="content-toggle-menu" class="container-layout relative w-full">
             <div class="absolute top-0 right-0 lg:right-12 w-full">
-                <div class="absolute top-0 right-0 toggle-menu-size bg-white sm:border overflow-hidden sm:rounded-xl py-6 md:pr-2.5">
-                    <div class="w-full h-full overflow-y-auto overflow-x-hidden header-toggle-menu-custom-scroll md:pr-2">
+                <div
+                    class="absolute top-0 right-0 toggle-menu-size bg-white sm:border overflow-hidden sm:rounded-xl py-6 md:pr-2.5">
+                    <div
+                        class="w-full h-full overflow-y-auto overflow-x-hidden header-toggle-menu-custom-scroll md:pr-2">
 
                         <div class="flex p-6 sm:hidden items-center justify-between">
                             <span class="inline-block text-20-l-28 font-semibold ">전체 메뉴</span>
@@ -134,7 +164,7 @@
                         </div>
 
                         <div class="w-full pl-5 md:px-5 mb-6 pr-2 md:pr-0">
-                            <div class="mb-8">                              
+                            <div class="mb-8">
                                 <div class="overflow-hidden rounded-lg "
                                     style="background: linear-gradient(to right, #0C98E7, #B956EA, #F03964); padding: 1px; ">
                                     <div
@@ -142,7 +172,9 @@
                                         <div class="flex text-base font-normal flex-1">
                                             <input class="w-full pr-4" type="text" placeholder="하루 10분 주님과 단 둘이">
                                         </div>
-                                        <div class="pl-4 border-l" style="border-color: rgba(112, 115, 124, 0.22); cursor: pointer;" onclick="gotoPage('./P-search.html')">
+                                        <div class="pl-4 border-l"
+                                            style="border-color: rgba(112, 115, 124, 0.22); cursor: pointer;"
+                                            onclick="gotoPage('./pages/P-search.html')">
                                             <img src="../assets/images/icon/header/home-search.svg" alt="icon">
                                         </div>
                                     </div>
@@ -152,16 +184,19 @@
                             <div id="toggle-menu-overview-no-login" class="mb-8 hidden">
                                 <div class="rounded-xl p-4" style="background-color: rgba(255, 249, 237, 1);">
                                     <div class="mb-2">
-                                        <div class="flex items-center mb-1 cursor-pointer" onclick="gotoPage('./AU-login-login.html')">
+                                        <div class="flex items-center mb-1 cursor-pointer"
+                                            onclick="gotoPage('./pages/AU-login-login.html')">
                                             <h4 class="text-18-l-26 font-semibold">로그인</h4>
                                             <div>
                                                 <img src="../assets/images/icon/header/next.svg" alt="icon">
                                             </div>
                                         </div>
-                                        <p class="text-sm font-normal" style="color: rgba(55, 56, 60, 0.6);">로그인을 하셔서 내 정보를 확인해 주세요</p>
+                                        <p class="text-sm font-normal" style="color: rgba(55, 56, 60, 0.6);">로그인을 하셔서 내
+                                            정보를 확인해 주세요</p>
                                     </div>
 
-                                    <div class="text-xs font-normal bg-white py-2 text-center rounded-full" style="color: rgba(46, 47, 51, 0.88);">회원가입을 통해 다양한 혜택을 받으세요</div>
+                                    <div class="text-xs font-normal bg-white py-2 text-center rounded-full"
+                                        style="color: rgba(46, 47, 51, 0.88);">회원가입을 통해 다양한 혜택을 받으세요</div>
                                 </div>
                             </div>
 
@@ -177,14 +212,17 @@
                                             <div class="flex items-center gap-4">
                                                 <div class="flex items-center gap-2">
                                                     <div>
-                                                        <img src="../assets/images/icon/header/chat.svg" alt="icon">
+                                                        <img class="w-6 h-6" src="../assets/images/icon/header/chat.svg"
+                                                            alt="icon">
                                                     </div>
                                                     <p class="text-xs font-normal">카카오 연동</p>
                                                 </div>
 
                                                 <div class="flex items-center gap-2">
                                                     <div>
-                                                        <img src="../assets/images/icon/header/dot-grey.svg" alt="icon">
+                                                        <img class="w-6 h-6"
+                                                            src="../assets/images/image/auth/member-bronze.png"
+                                                            alt="icon">
                                                     </div>
                                                     <p class="text-xs font-normal">등급</p>
                                                 </div>
@@ -194,23 +232,41 @@
                                         <div class="rounded-xl bg-white py-3 px-2">
                                             <div>
                                                 <div class="flex items-center justify-between">
-                                                    <div class="flex flex-col items-center justify-center gap-0.5 menu-item-size cursor-pointer" onclick="gotoPage('./CO-sh-shopping-cart.html')">
-                                                        <img src="../assets/images/icon/header/cart.svg" alt="icon">
+                                                    <div class="flex flex-col items-center justify-center gap-0.5 menu-item-size cursor-pointer"
+                                                        onclick="gotoPage('./pages/CO-sh-shopping-cart.html')">
+                                                        <div class="relative">
+                                                            <img src="../assets/images/icon/header/cart.svg" alt="icon">
+                                                            <div class="text-white p-0.5 rounded-full absolute bottom-0 left-3"
+                                                                style="background-color: rgba(238, 23, 98, 1); font-size: 8px; line-height: 10px;">
+                                                                9,999</div>
+                                                        </div>
                                                         <p class="text-15-l-22 font-medium hidden sm:block">장바구니</p>
                                                     </div>
-                                                    <div style="width: 1px; background-color: rgba(112, 115, 124, 0.16);" class="h-5"></div>
-                                                    <div class="flex flex-col items-center justify-center gap-0.5 menu-item-size cursor-pointer" onclick="gotoPage('./MY-mw-deposit.html')">
+                                                    <div style="width: 1px; background-color: rgba(112, 115, 124, 0.16);"
+                                                        class="h-5"></div>
+                                                    <div class="flex flex-col items-center justify-center gap-0.5 menu-item-size cursor-pointer"
+                                                        onclick="gotoPage('./pages/MY-mw-deposit.html')">
                                                         <img src="../assets/images/icon/header/wallet.svg" alt="icon">
                                                         <p class="text-15-l-22 font-medium hidden sm:block">나의지갑</p>
                                                     </div>
-                                                    <div style="width: 1px; background-color: rgba(112, 115, 124, 0.16);" class="h-5"></div>
-                                                    <div class="flex flex-col items-center justify-center gap-0.5 menu-item-size cursor-pointer" onclick="gotoPage('./CO-or-order-step-0.html')">
+                                                    <div style="width: 1px; background-color: rgba(112, 115, 124, 0.16);"
+                                                        class="h-5"></div>
+                                                    <div class="flex flex-col items-center justify-center gap-0.5 menu-item-size cursor-pointer"
+                                                        onclick="gotoPage('./pages/CO-or-order-step-0.html')">
                                                         <img src="../assets/images/icon/header/order.svg" alt="icon">
                                                         <p class="text-15-l-22 font-medium hidden sm:block">주문/배송</p>
                                                     </div>
-                                                    <div style="width: 1px; background-color: rgba(112, 115, 124, 0.16);" class="h-5"></div>
-                                                    <div class="flex flex-col items-center justify-center gap-0.5 menu-item-size cursor-pointer" onclick="gotoPage('./CO-wl-wishlist.html')">
-                                                        <img src="../assets/images/icon/header/heart.svg" alt="icon">
+                                                    <div style="width: 1px; background-color: rgba(112, 115, 124, 0.16);"
+                                                        class="h-5"></div>
+                                                    <div class="flex flex-col items-center justify-center gap-0.5 menu-item-size cursor-pointer"
+                                                        onclick="gotoPage('./pages/CO-wl-wishlist.html')">
+                                                        <div class="relative">
+                                                            <img src="../assets/images/icon/header/heart.svg"
+                                                                alt="icon">
+                                                            <div class="text-white p-0.5 rounded-full absolute bottom-0 left-3"
+                                                                style="background-color: rgba(238, 23, 98, 1); font-size: 8px; line-height: 10px;">
+                                                                9,999</div>
+                                                        </div>
                                                         <p class="text-15-l-22 font-medium hidden sm:block">찜목록</p>
                                                     </div>
                                                 </div>
@@ -224,22 +280,28 @@
                                 <div class="overflow-x-auto custom-scroll">
                                     <ul class="flex items-center border-b">
                                         <li class="p-2.5 border-b-2" style="border-color: rgba(32, 131, 254, 1);">
-                                            <a href="#" class="text-15-l-22 font-medium inline-block whitespace-nowrap" style="height: 22px; color: rgba(32, 131, 254, 1);">도서</a>
+                                            <a href="#" class="text-15-l-22 font-medium inline-block whitespace-nowrap"
+                                                style="height: 22px; color: rgba(32, 131, 254, 1);">도서</a>
                                         </li>
                                         <li class="p-2.5">
-                                            <a href="#" class="text-15-l-22 font-medium inline-block whitespace-nowrap" style="height: 22px;">성물</a>
+                                            <a href="#" class="text-15-l-22 font-medium inline-block whitespace-nowrap"
+                                                style="height: 22px;">성물</a>
                                         </li>
                                         <li class="p-2.5">
-                                            <a href="#" class="text-15-l-22 font-medium inline-block whitespace-nowrap" style="height: 22px;">굿즈</a>
+                                            <a href="#" class="text-15-l-22 font-medium inline-block whitespace-nowrap"
+                                                style="height: 22px;">굿즈</a>
                                         </li>
                                         <li class="p-2.5">
-                                            <a href="#" class="text-15-l-22 font-medium inline-block whitespace-nowrap" style="height: 22px;">바오로딸 Pick</a>
+                                            <a href="#" class="text-15-l-22 font-medium inline-block whitespace-nowrap"
+                                                style="height: 22px;">바오로딸 Pick</a>
                                         </li>
                                         <li class="p-2.5">
-                                            <a href="#" class="text-15-l-22 font-medium inline-block whitespace-nowrap" style="height: 22px;">ebook</a>
+                                            <a href="#" class="text-15-l-22 font-medium inline-block whitespace-nowrap"
+                                                style="height: 22px;">ebook</a>
                                         </li>
                                         <li class="p-2.5">
-                                            <a href="#" class="text-15-l-22 font-medium inline-block whitespace-nowrap" style="height: 22px;">음반/뮤직/DVD</a>
+                                            <a href="#" class="text-15-l-22 font-medium inline-block whitespace-nowrap"
+                                                style="height: 22px;">음반/뮤직/DVD</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -255,77 +317,106 @@
                                     </div>
 
                                     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-4 w-full">
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(0, 0, 0, 1);">성경</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">신학</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">전례</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">교리/성사</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">교회문헌</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">교회법</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">묵상/영성/강론</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">교회사</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">교부학</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">수도생활</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">성지</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">철학</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">종교</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">사회</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">예술/문화</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">가정/심리/교육</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">교회인물</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">문학</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">청소년</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">어린이</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">악보</div>
-                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer" style="color: rgba(46, 47, 51, 0.88);">기타</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(0, 0, 0, 1);">성경</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">신학</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">전례</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">교리/성사</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">교회문헌</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">교회법</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">묵상/영성/강론</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">교회사</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">교부학</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">수도생활</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">성지</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">철학</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">종교</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">사회</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">예술/문화</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">가정/심리/교육</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">교회인물</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">문학</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">청소년</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">어린이</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">악보</div>
+                                        <div class="whitespace-nowrap text-15-l-22 font-medium cursor-pointer"
+                                            style="color: rgba(46, 47, 51, 0.88);">기타</div>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </div>
 
                         <div class="pl-5 md:px-5 py-5 mb-6" style="background-color: rgba(247, 247, 248, 1);">
-                            <div class="flex items-center md:justify-between flex-wrap gap-1 md:gap-2.5 overflow-x-auto custom-scroll">
-                                <div class="flex items-center gap-x-6 w-fit">
-                                    <div class="space-y-2" style="width: 140px">
-                                        <div class="flex items-center justify-center py-4 rounded-md" style="background-color: #74A2EF;">
+                            <div
+                                class="flex items-center md:justify-between flex-wrap gap-1 md:gap-2.5 overflow-x-auto custom-scroll">
+                                <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2.5 sm:gap-6 w-full">
+                                    <div class="space-y-2 w-100-140">
+                                        <div class="flex items-center justify-center py-4 rounded-md"
+                                            style="background-color: #74A2EF;">
                                             <img src="../assets/images/image/common/t-1.png" alt="">
                                         </div>
-                                        <p class="text-center text-base font-medium">이벤트</p>
+                                        <p class="text-center text-base font-medium whitespace-nowrap">이벤트</p>
                                     </div>
-                                    <div class="space-y-2" style="width: 140px">
-                                        <div class="flex items-center justify-center py-4 rounded-md" style="background-color: #67CEE1;">
+                                    <div class="space-y-2 w-100-140">
+                                        <div class="flex items-center justify-center py-4 rounded-md"
+                                            style="background-color: #67CEE1;">
                                             <img src="../assets/images/image/common/t-2.png" alt="">
                                         </div>
-                                        <p class="text-center text-base font-medium">스페셜</p>
+                                        <p class="text-center text-base font-medium whitespace-nowrap">스페셜</p>
                                     </div>
-                                    <div class="space-y-2" style="width: 140px">
-                                        <div class="flex items-center justify-center py-4 rounded-md" style="background-color: #F09E8D;">
+                                    <div class="space-y-2 w-100-140">
+                                        <div class="flex items-center justify-center py-4 rounded-md"
+                                            style="background-color: #F09E8D;">
                                             <img src="../assets/images/image/common/t-3.png" alt="">
                                         </div>
-                                        <p class="text-center text-base font-medium">이책의 한 문장</p>
+                                        <p class="text-center text-base font-medium whitespace-nowrap">이책의 한 문장</p>
                                     </div>
-                                    <div class="space-y-2" style="width: 140px">
-                                        <div class="flex items-center justify-center py-4 rounded-md" style="background-color: #62BFBD;">
+                                    <div class="space-y-2 w-100-140">
+                                        <div class="flex items-center justify-center py-4 rounded-md"
+                                            style="background-color: #62BFBD;">
                                             <img src="../assets/images/image/common/t-4.png" alt="">
                                         </div>
-                                        <p class="text-center text-base font-medium">카드뉴스</p>
+                                        <p class="text-center text-base font-medium whitespace-nowrap">카드뉴스</p>
                                     </div>
-                                    <div class="space-y-2" style="width: 140px">
-                                        <div class="flex items-center justify-center py-4 rounded-md" style="background-color: #F58FB2;">
+                                    <div class="space-y-2 w-100-140">
+                                        <div class="flex items-center justify-center py-4 rounded-md"
+                                            style="background-color: #F58FB2;">
                                             <img src="../assets/images/image/common/t-5.png" alt="">
                                         </div>
-                                        <p class="text-center text-base font-medium">유튜브</p>
+                                        <p class="text-center text-base font-medium whitespace-nowrap">유튜브</p>
                                     </div>
-                                    <div class="space-y-2" style="width: 140px">
-                                        <div class="flex items-center justify-center py-4 rounded-md" style="background-color: #8696E1;">
+                                    <div class="space-y-2 w-100-140">
+                                        <div class="flex items-center justify-center py-4 rounded-md"
+                                            style="background-color: #8696E1;">
                                             <img src="../assets/images/image/common/t-6.png" alt="">
                                         </div>
-                                        <p class="text-center text-base font-medium">주님과 함께</p>
+                                        <p class="text-center text-base font-medium whitespace-nowrap">주님과 함께</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="px-5 mb-8">
                             <div>
                                 <div class="flex gap-0.5 mb-3">
@@ -336,12 +427,15 @@
                                 <div class="overflow-auto custom-scroll">
                                     <div class="flex gap-2.5" style="width: 1000px;">
                                         <div class="cursor-pointer flex gap-4 flex-1">
-                                            <div class="scope-imgage border shadow-md" style="width: 102px; height: 150px;">
-                                                <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="">
+                                            <div class="scope-imgage border shadow-md"
+                                                style="width: 102px; height: 150px;">
+                                                <img class="w-full h-full"
+                                                    src="../assets/images/image/books/book-error-small-x.png" alt="">
                                             </div>
                                             <div class="flex flex-col gap-1.5">
                                                 <h3 class="text-base font-semibold">수험생을 위한 묵주의 9일기도</h3>
-                                                <p class="text-13-l-18 font-normal" style="color: rgba(55, 56, 60, 0.6);">김옥순 수녀</p>
+                                                <p class="text-13-l-18 font-normal"
+                                                    style="color: rgba(55, 56, 60, 0.6);">김옥순 수녀</p>
                                                 <div class="text-sm font-semibold flex items-center gap-0.5">
                                                     <p style="color: rgba(238, 23, 98, 1);">10%</p>
                                                     <p>12,600</p>
@@ -351,12 +445,15 @@
                                         </div>
 
                                         <div class="cursor-pointer flex gap-4 flex-1">
-                                            <div class="scope-imgage border shadow-md" style="width: 102px; height: 150px;">
-                                                <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="">
+                                            <div class="scope-imgage border shadow-md"
+                                                style="width: 102px; height: 150px;">
+                                                <img class="w-full h-full"
+                                                    src="../assets/images/image/books/book-error-small-x.png" alt="">
                                             </div>
                                             <div class="flex flex-col gap-1.5">
                                                 <h3 class="text-base font-semibold">수험생을 위한 묵주의 9일기도</h3>
-                                                <p class="text-13-l-18 font-normal" style="color: rgba(55, 56, 60, 0.6);">김옥순 수녀</p>
+                                                <p class="text-13-l-18 font-normal"
+                                                    style="color: rgba(55, 56, 60, 0.6);">김옥순 수녀</p>
                                                 <div class="text-sm font-semibold flex items-center gap-0.5">
                                                     <p style="color: rgba(238, 23, 98, 1);">10%</p>
                                                     <p>12,600</p>
@@ -371,9 +468,9 @@
 
                         <div class="pl-5 mb-8">
                             <div class="overflow-auto custom-scroll-x">
-                                <div class="flex items-center gap-x-6" style="width: calc(300px * 3 + 24px * 2);">
+                                <div class="flex items-center gap-x-6" style="width: calc(325px * 3 + 24px * 2);">
                                     <div class="rounded-lg overflow-hidden"
-                                        style="width: 300px; height: 88px; background-color: rgba(62, 81, 155, 1);">
+                                        style="width: 325px; height: 88px; background-color: rgba(62, 81, 155, 1);">
                                         <div class="w-full h-full flex items-center justify-between px-8">
                                             <div>
                                                 <span class="inline-block text-18-l-26 text-white">수도자의 <br>
@@ -386,10 +483,11 @@
                                     </div>
 
                                     <div class="rounded-lg overflow-hidden"
-                                        style="width: 300px; height: 88px; background-color: rgba(62, 81, 155, 1);">
+                                        style="width: 325px; height: 88px; background-color: rgba(62, 81, 155, 1);">
                                         <div class="w-full h-full flex items-center justify-between px-8">
                                             <div>
-                                                <span class="inline-block text-18-l-26 text-white">이 책 <br> 너무 좋은데</span>
+                                                <span class="inline-block text-18-l-26 text-white">이 책 <br> 너무
+                                                    좋은데</span>
                                             </div>
                                             <div class="flex items-end h-full">
                                                 <img src="../assets/images/image/header/hand.png" alt="">
@@ -398,27 +496,29 @@
                                     </div>
 
                                     <div class="rounded-lg overflow-hidden"
-                                        style="width: 300px; height: 88px; background-color: rgba(62, 81, 155, 1);">
+                                        style="width: 325px; height: 88px; background-color: rgba(62, 81, 155, 1);">
                                         <div class="w-full h-full flex justify-between px-8">
                                             <div class="flex items-center">
                                                 <span class="inline-block text-18-l-26 text-white">기부나눔</span>
                                             </div>
                                             <div class="flex">
-                                                <img class="w-20 h-20" src="../assets/images/image/header/heart.png" alt="">
+                                                <img class="w-20 h-20" src="../assets/images/image/header/heart.png"
+                                                    alt="">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="text-center">
-                            <button id="btn-logout" onclick="logout()" class="text-base font-semibold py-1.5 px-4 cursor-pointer hover:bg-gray-100 rounded">로그아웃</button>
+                            <button id="btn-logout" onclick="logout()"
+                                class="text-base font-semibold py-1.5 px-4 cursor-pointer hover:bg-gray-100 rounded">로그아웃</button>
                         </div>
-                        
+
                         <div class="h-20"></div>
                     </div>
-                </div>            
+                </div>
             </div>
         </div>
     </section>
@@ -511,7 +611,7 @@
                         <div class="px-5 flex items-center justify-between">
                             <div class="flex items-center gap-2 cursor-pointer">
                                 <span
-                                    class="inline-block text-1420-1724 font-semibold py-1 px-3 border rounded-full">도서</span>                               
+                                    class="inline-block text-1420-1724 font-semibold py-1 px-3 border rounded-full">도서</span>
                             </div>
                             <button class="rounded border text-13-l-18 font-semibold py-1.5 px-4">도서소득 공제 안내</button>
                         </div>
@@ -524,8 +624,8 @@
                                     <div>
                                         <input id="book-1" type="checkbox" checked hidden>
                                         <label for="book-1" class="flex items-center gap-2 cursor-pointer">
-                                            <img class="icon-book w-6 h-6" src="../assets/images/icon/common/check-black.svg"
-                                                alt="icon">
+                                            <img class="icon-book w-6 h-6"
+                                                src="../assets/images/icon/common/check-black.svg" alt="icon">
                                             <h4 class="block sm:hidden text-base font-semibold">책 제목</h4>
                                         </label>
                                     </div>
@@ -589,8 +689,8 @@
                                     <div>
                                         <input id="book-1" type="checkbox" checked hidden>
                                         <label for="book-1" class="flex items-center gap-2 cursor-pointer">
-                                            <img class="icon-book w-6 h-6" src="../assets/images/icon/common/check-black.svg"
-                                                alt="icon">
+                                            <img class="icon-book w-6 h-6"
+                                                src="../assets/images/icon/common/check-black.svg" alt="icon">
                                             <h4 class="block sm:hidden text-base font-semibold">책 제목</h4>
                                         </label>
                                     </div>
@@ -671,8 +771,8 @@
                                     <div>
                                         <input id="book-1" type="checkbox" checked hidden>
                                         <label for="book-1" class="flex items-center gap-2 cursor-pointer">
-                                            <img class="icon-book w-6 h-6" src="../assets/images/icon/common/check-black.svg"
-                                                alt="icon">
+                                            <img class="icon-book w-6 h-6"
+                                                src="../assets/images/icon/common/check-black.svg" alt="icon">
                                             <h4 class="block sm:hidden text-base font-semibold">책 제목</h4>
                                         </label>
                                     </div>
@@ -745,8 +845,8 @@
                                     <div>
                                         <input id="book-1" type="checkbox" checked hidden>
                                         <label for="book-1" class="flex items-center gap-2 cursor-pointer">
-                                            <img class="icon-book w-6 h-6" src="../assets/images/icon/common/check-black.svg"
-                                                alt="icon">
+                                            <img class="icon-book w-6 h-6"
+                                                src="../assets/images/icon/common/check-black.svg" alt="icon">
                                             <h4 class="block sm:hidden text-base font-semibold">책 제목</h4>
                                         </label>
                                     </div>
@@ -836,8 +936,8 @@
                                     <div>
                                         <input id="book-1" type="checkbox" checked hidden>
                                         <label for="book-1" class="flex items-center gap-2 cursor-pointer">
-                                            <img class="icon-book w-6 h-6" src="../assets/images/icon/common/check-black.svg"
-                                                alt="icon">
+                                            <img class="icon-book w-6 h-6"
+                                                src="../assets/images/icon/common/check-black.svg" alt="icon">
                                             <h4 class="block sm:hidden text-base font-semibold">책 제목</h4>
                                         </label>
                                     </div>
@@ -891,8 +991,8 @@
                                     <div>
                                         <input id="book-1" type="checkbox" checked hidden>
                                         <label for="book-1" class="flex items-center gap-2 cursor-pointer">
-                                            <img class="icon-book w-6 h-6" src="../assets/images/icon/common/check-black.svg"
-                                                alt="icon">
+                                            <img class="icon-book w-6 h-6"
+                                                src="../assets/images/icon/common/check-black.svg" alt="icon">
                                             <h4 class="block sm:hidden text-base font-semibold">책 제목</h4>
                                         </label>
                                     </div>
@@ -959,7 +1059,8 @@
                         <div class="p-5 sm:py-5 sm:px-6 sm:border-b flex items-center justify-between">
                             <h2 class="text-1724-2230 font-semibold">주문 합계</h2>
 
-                            <button class="text-13-l-18 font-semibold py-1.5 px-3 rounded-lg border" onclick="toggle('#modal-list-address')">변경하기</button>
+                            <button class="text-13-l-18 font-semibold py-1.5 px-3 rounded-lg border"
+                                onclick="toggle('#modal-list-address')">변경하기</button>
                         </div>
 
                         <div class="p-5 sm:p-6 sm:pb-8">
@@ -987,7 +1088,7 @@
 
                     <div class="block sm:hidden h-2" style="background-color: rgba(247, 247, 248, 1);"></div>
                     <!-- khung 2 -->
-               
+
                     <div class="block sm:hidden h-2" style="background-color: rgba(247, 247, 248, 1);"></div>
                     <!-- khung 3 -->
                     <div class="bg-white sm:border-t sm:border rounded-lg">
@@ -1016,17 +1117,19 @@
                                     <div class="w-full border rounded p-2 px-4 flex items-center gap-3">
                                         <input type="text" maxlength="50" placeholder="50자 이내로 적어주세요"
                                             class="flex-1 border-gray-300" id="prayer-message">
-                                        <span class="inline-block text-xs font-normal text-gray-300" id="prayer-count">0/50</span>                                      
+                                        <span class="inline-block text-xs font-normal text-gray-300"
+                                            id="prayer-count">0/50</span>
                                     </div>
-                                    
+
                                 </div>
                                 <div class="flex flex-col items-start gap-y-2 sm:gap-y-3">
-                                    <span class="text-1522-1624 font-medium">선물 받는 분에게 보내는 메시지</span>                                   
+                                    <span class="text-1522-1624 font-medium">선물 받는 분에게 보내는 메시지</span>
                                     <div class="w-full border rounded p-2 px-4 flex items-center gap-3">
                                         <input type="text" maxlength="50" placeholder="50자 이내로 적어주세요"
                                             class="flex-1 border-gray-300" id="gift-message">
-                                        <span class="inline-block text-xs font-normal text-gray-300" id="gift-count">0/50</span>                                      
-                                    </div>                                
+                                        <span class="inline-block text-xs font-normal text-gray-300"
+                                            id="gift-count">0/50</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1047,21 +1150,22 @@
                                 <div>
                                     <div class="flex items-center gap-x-8 gap-y-2 flex-wrap">
                                         <span class="text-1522-1624 font-medium w-24">할인쿠폰</span>
-                                        
+
                                         <div class="flex-1 flex items-center gap-x-2">
                                             <div class="flex-1 border rounded p-2 px-4 flex items-center gap-2">
-                                                <input type="text" placeholder="0" class="text-right flex-1 border-gray-300 co-input-discount">
-                                                <span class="inline-block text-xs font-normal text-gray-300">원</span>                                      
+                                                <input type="text" placeholder="0"
+                                                    class="text-right flex-1 border-gray-300 co-input-discount">
+                                                <span class="inline-block text-xs font-normal text-gray-300">원</span>
                                             </div>
-                                            <button 
-                                                class="rounded py-2.5 px-3 sm:px-5 text-15-l-22 font-semibold whitespace-nowrap sm:w-28" 
-                                                style="color: rgba(31, 111, 237, 1); background-color: rgba(230, 241, 255, 1);" 
+                                            <button
+                                                class="rounded py-2.5 px-3 sm:px-5 text-15-l-22 font-semibold whitespace-nowrap sm:w-28"
+                                                style="color: rgba(31, 111, 237, 1); background-color: rgba(230, 241, 255, 1);"
                                                 onclick="toggle('#modal-coupon')">쿠폰 변경</button>
                                         </div>
                                     </div>
                                     <div class="flex items-center gap-x-8 gap-y-2 flex-wrap mt-2">
                                         <span class="hidden sm:block text-1522-1624 font-medium w-24"></span>
-                                        
+
                                         <div class="flex-1 flex items-center gap-x-2">
                                             <p class="text-xs font-normal text-gray-300">*가장 할인이 큰 쿠폰이 자동적용됩니다.</p>
                                         </div>
@@ -1071,15 +1175,15 @@
                                 <div>
                                     <div class="flex items-center gap-x-8 gap-y-2 flex-wrap">
                                         <span class="text-1522-1624 font-medium w-24">마일리지</span>
-                                        
+
                                         <div class="flex-1 flex items-center gap-x-2">
                                             <div class="flex-1 border rounded p-2 px-4 flex items-center gap-2">
-                                                <input id="input-point" min="0" max="2000" type="number" placeholder="0" class="text-right flex-1 border-gray-300 co-input-discount">
-                                                <span class="inline-block text-xs font-normal text-gray-300">원</span>                                      
+                                                <input id="input-point" min="0" max="2000" type="number" placeholder="0"
+                                                    class="text-right flex-1 border-gray-300 co-input-discount">
+                                                <span class="inline-block text-xs font-normal text-gray-300">원</span>
                                             </div>
-                                            <button
-                                                onclick="document.querySelector('#input-point').value = 2000"
-                                                class="rounded py-2.5 px-3 sm:px-5 text-15-l-22 font-semibold whitespace-nowrap sm:w-28" 
+                                            <button onclick="document.querySelector('#input-point').value = 2000"
+                                                class="rounded py-2.5 px-3 sm:px-5 text-15-l-22 font-semibold whitespace-nowrap sm:w-28"
                                                 style="color: rgba(31, 111, 237, 1); background-color: rgba(230, 241, 255, 1);">
                                                 쿠폰 변경
                                             </button>
@@ -1087,16 +1191,19 @@
                                     </div>
                                     <div class="flex items-center gap-x-8 gap-y-2 flex-wrap mt-2">
                                         <span class="hidden sm:block text-1522-1624 font-medium w-24"></span>
-                                        
-                                        <div class="flex-1 flex flex:col sm:flex-row items-center gap-y-2 gap-x-9 flex-wrap">
+
+                                        <div
+                                            class="flex-1 flex flex:col sm:flex-row items-center gap-y-2 gap-x-9 flex-wrap">
                                             <div class="flex items-center">
                                                 <span class="inline-block text-xs font-normal">현재 마일리지</span>
-                                                <span class="ml-2 flex items-center whitespace-normal" style="color: rgba(32, 131, 254, 1);">
+                                                <span class="ml-2 flex items-center whitespace-normal"
+                                                    style="color: rgba(32, 131, 254, 1);">
                                                     <span class="inline-block text-xs font-semibold">00000000000</span>
                                                     <span class="inline-block text-xs font-normal">점</span>
                                                 </span>
                                             </div>
-                                            <p class="text-xs font-normal text-gray-300 whitespace-normal">*가장 할인이 큰 쿠폰이 자동적용됩니다.</p>
+                                            <p class="text-xs font-normal text-gray-300 whitespace-normal">*가장 할인이 큰 쿠폰이
+                                                자동적용됩니다.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1104,27 +1211,32 @@
                                 <div>
                                     <div class="flex items-center gap-x-8 gap-y-2 flex-wrap">
                                         <span class="text-1522-1624 font-medium w-24">예치금</span>
-                                        
+
                                         <div class="flex-1 flex items-center gap-x-2">
                                             <div class="flex-1 border rounded p-2 px-4 flex items-center gap-2">
-                                                <input id="momney" type="number" placeholder="0" class="text-right flex-1 border-gray-300 co-input-discount">
-                                                <span class="inline-block text-xs font-normal text-gray-300">원</span>                                      
+                                                <input id="momney" type="number" placeholder="0"
+                                                    class="text-right flex-1 border-gray-300 co-input-discount">
+                                                <span class="inline-block text-xs font-normal text-gray-300">원</span>
                                             </div>
                                             <button onclick="document.querySelector('#momney').value = 2000"
-                                            class="rounded py-2.5 px-3 sm:px-5 text-15-l-22 font-semibold whitespace-nowrap sm:w-28" style="color: rgba(31, 111, 237, 1); background-color: rgba(230, 241, 255, 1);">쿠폰 변경</button>
+                                                class="rounded py-2.5 px-3 sm:px-5 text-15-l-22 font-semibold whitespace-nowrap sm:w-28"
+                                                style="color: rgba(31, 111, 237, 1); background-color: rgba(230, 241, 255, 1);">쿠폰
+                                                변경</button>
                                         </div>
                                     </div>
                                     <div class="flex items-center gap-x-8 gap-y-2 flex-wrap mt-2">
                                         <span class="hidden sm:block text-1522-1624 font-medium w-24"></span>
-                                        
-                                        <div class="flex-1 flex flex:col sm:flex-row items-center gap-y-2 gap-x-9 flex-wrap">
+
+                                        <div
+                                            class="flex-1 flex flex:col sm:flex-row items-center gap-y-2 gap-x-9 flex-wrap">
                                             <div class="flex items-center">
                                                 <span class="inline-block text-xs font-normal">현재 예치금</span>
-                                                <span class="ml-2 flex items-center whitespace-normal" style="color: rgba(32, 131, 254, 1);">
+                                                <span class="ml-2 flex items-center whitespace-normal"
+                                                    style="color: rgba(32, 131, 254, 1);">
                                                     <span class="inline-block text-xs font-semibold">00000000000</span>
                                                     <span class="inline-block text-xs font-normal">점</span>
                                                 </span>
-                                            </div>                                            
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1132,27 +1244,34 @@
                                 <div>
                                     <div class="flex items-center gap-x-8 gap-y-2 flex-wrap">
                                         <span class="text-1522-1624 font-medium w-26 whitespace-nowrap">바오로딸상품권</span>
-                                        
+
                                         <div class="flex-1 flex items-center gap-x-2">
                                             <div class="flex-1 border rounded p-2 px-4 flex items-center gap-2">
-                                                <input type="number" class="text-right flex-1 border-gray-300 co-input-discount" readonly>                                                
+                                                <input type="number"
+                                                    class="text-right flex-1 border-gray-300 co-input-discount"
+                                                    readonly>
                                             </div>
-                                            <button onclick="toggle('#modal-certificate')" class="rounded py-2.5 px-3 sm:px-5 text-15-l-22 font-semibold whitespace-nowrap sm:w-28" style="color: rgba(31, 111, 237, 1); background-color: rgba(230, 241, 255, 1);">상품권 등록</button>
+                                            <button onclick="toggle('#modal-certificate')"
+                                                class="rounded py-2.5 px-3 sm:px-5 text-15-l-22 font-semibold whitespace-nowrap sm:w-28"
+                                                style="color: rgba(31, 111, 237, 1); background-color: rgba(230, 241, 255, 1);">상품권
+                                                등록</button>
                                         </div>
                                     </div>
                                     <div class="flex sm:hidden items-center gap-x-8 gap-y-2 flex-wrap mt-2">
                                         <span class="hidden sm:block text-1522-1624 font-medium w-24"></span>
-                                        
-                                        <div class="flex-1 flex flex:col sm:flex-row items-center gap-y-2 gap-x-9 flex-wrap">
+
+                                        <div
+                                            class="flex-1 flex flex:col sm:flex-row items-center gap-y-2 gap-x-9 flex-wrap">
                                             <div class="flex items-center">
                                                 <span class="inline-block text-xs font-normal">현재 마일리지</span>
-                                                <span class="ml-2 flex items-center whitespace-normal" style="color: rgba(32, 131, 254, 1);">
+                                                <span class="ml-2 flex items-center whitespace-normal"
+                                                    style="color: rgba(32, 131, 254, 1);">
                                                     <span class="inline-block text-xs font-semibold">00000000000</span>
                                                     <span class="inline-block text-xs font-normal">점</span>
                                                 </span>
-                                            </div>                                            
+                                            </div>
                                         </div>
-                                    </div>                                  
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1167,7 +1286,8 @@
 
                         <div class="p-5 sm:p-6 sm:pb-8 sm:bg-gray-100">
                             <p class="text-14-l-22">
-                                도서 소득공제 대상상품에 한하여 신용카드, 카카오페이, 삼성페이, 페이나우, 실시간계좌이체, 온라인입금, 예치금, 바오로딸 상품권 결제 시에만 가능 합니다. <br>
+                                도서 소득공제 대상상품에 한하여 신용카드, 카카오페이, 삼성페이, 페이나우, 실시간계좌이체, 온라인입금, 예치금, 바오로딸 상품권 결제 시에만 가능 합니다.
+                                <br>
                                 법인카드 결제 및 현금영수증을 사업자증빙용으로 신청한 경우에는 도서 소득공제 제외됩니다. <br>
                                 휴대폰 결제는 도서 소득공제 제외됩니다.
                             </p>
@@ -1189,19 +1309,28 @@
                                         <input type="radio" name="method-pay" class="block sm:hidden w-6 h-6">
                                         <span class="text-1522-1624 font-medium w-24">간편 결제</span>
                                     </div>
-                                    
-                                    <div class="w-full sm:flex-1 lg:w-auto grid gap-4 md:grid-cols-4 sm:grid-cols-3 grid-cols-2">
-                                        <button onclick="chooseMethod(this, 1)" class="btn-method w-full rounded-lg py-1.5 border flex items-center justify-center">
-                                            <img style="width: 110px; height: 28px;" src="../assets/images/icon/cart/kakaopay.svg" alt="kakao">
+
+                                    <div
+                                        class="w-full sm:flex-1 lg:w-auto grid gap-4 md:grid-cols-4 sm:grid-cols-3 grid-cols-2">
+                                        <button onclick="chooseMethod(this, 1)"
+                                            class="btn-method w-full rounded-lg py-1.5 border flex items-center justify-center">
+                                            <img style="width: 110px; height: 28px;"
+                                                src="../assets/images/icon/cart/kakaopay.svg" alt="kakao">
                                         </button>
-                                        <button onclick="chooseMethod(this, 1)" class="btn-method w-full rounded-lg py-1.5 border flex items-center justify-center">
-                                            <img style="width: 110px; height: 28px;" src="../assets/images/icon/cart/npay.svg" alt="kakao">
+                                        <button onclick="chooseMethod(this, 1)"
+                                            class="btn-method w-full rounded-lg py-1.5 border flex items-center justify-center">
+                                            <img style="width: 110px; height: 28px;"
+                                                src="../assets/images/icon/cart/npay.svg" alt="kakao">
                                         </button>
-                                        <button onclick="chooseMethod(this, 1)" class="btn-method w-full rounded-lg py-1.5 border flex items-center justify-center">
-                                            <img style="width: 110px; height: 28px;" src="../assets/images/icon/cart/payco.svg" alt="kakao">
+                                        <button onclick="chooseMethod(this, 1)"
+                                            class="btn-method w-full rounded-lg py-1.5 border flex items-center justify-center">
+                                            <img style="width: 110px; height: 28px;"
+                                                src="../assets/images/icon/cart/payco.svg" alt="kakao">
                                         </button>
-                                        <button onclick="chooseMethod(this, 1)" class="btn-method w-full rounded-lg py-1.5 border flex items-center justify-center">
-                                            <img style="width: 110px; height: 28px;" src="../assets/images/icon/cart/samsungpay.svg" alt="kakao">
+                                        <button onclick="chooseMethod(this, 1)"
+                                            class="btn-method w-full rounded-lg py-1.5 border flex items-center justify-center">
+                                            <img style="width: 110px; height: 28px;"
+                                                src="../assets/images/icon/cart/samsungpay.svg" alt="kakao">
                                         </button>
                                     </div>
                                 </div>
@@ -1211,15 +1340,17 @@
                                         <input type="radio" name="method-pay" class="block sm:hidden w-6 h-6">
                                         <span class="text-1522-1624 font-medium w-24">일반 결제</span>
                                     </div>
-                                    
+
                                     <div class="flex-1 hidden sm:flex items-center gap-3">
-                                        <button onclick="chooseMethod(this, 2)" class="btn-method flex-1 py-2.5 px-3 whitespace-nowrap text-15-l-22 font-semibold border border-gray-300 rounded-lg">
+                                        <button onclick="chooseMethod(this, 2)"
+                                            class="btn-method flex-1 py-2.5 px-3 whitespace-nowrap text-15-l-22 font-semibold border border-gray-300 rounded-lg">
                                             신용카드
                                         </button>
-                                        <button onclick="chooseMethod(this, 2)" class="btn-method flex-1 py-2.5 px-3 whitespace-nowrap text-15-l-22 font-semibold border border-gray-300 rounded-lg">
+                                        <button onclick="chooseMethod(this, 2)"
+                                            class="btn-method flex-1 py-2.5 px-3 whitespace-nowrap text-15-l-22 font-semibold border border-gray-300 rounded-lg">
                                             휴대폰 결제
                                         </button>
-                                                                             
+
                                     </div>
                                 </div>
                                 <!-- khoi 3 -->
@@ -1228,46 +1359,52 @@
                                         <input type="radio" name="method-pay" class="block sm:hidden w-6 h-6">
                                         <span class="text-1522-1624 font-medium w-24">현금 결제</span>
                                     </div>
-                                    
+
                                     <div class="flex-1 hidden sm:flex items-center gap-3">
-                                        <button onclick="chooseMethod(this, 3)" class="btn-method flex-1 py-2.5 px-3 whitespace-nowrap text-15-l-22 font-semibold border border-gray-300 rounded-lg">
+                                        <button onclick="chooseMethod(this, 3)"
+                                            class="btn-method flex-1 py-2.5 px-3 whitespace-nowrap text-15-l-22 font-semibold border border-gray-300 rounded-lg">
                                             실시간 계좌이체
                                         </button>
-                                        <button onclick="chooseMethod(this, 3)" class="btn-method flex-1 py-2.5 px-3 whitespace-nowrap text-15-l-22 font-semibold border border-gray-300 rounded-lg">
+                                        <button onclick="chooseMethod(this, 3)"
+                                            class="btn-method flex-1 py-2.5 px-3 whitespace-nowrap text-15-l-22 font-semibold border border-gray-300 rounded-lg">
                                             온라인(무통장)입금
                                         </button>
-                                        <button onclick="chooseMethod(this, 3)" class="btn-method flex-1 py-2.5 px-3 whitespace-nowrap text-15-l-22 font-semibold border border-gray-300 rounded-lg">
+                                        <button onclick="chooseMethod(this, 3)"
+                                            class="btn-method flex-1 py-2.5 px-3 whitespace-nowrap text-15-l-22 font-semibold border border-gray-300 rounded-lg">
                                             가상계좌(에스크로)
-                                        </button>                                                                             
+                                        </button>
                                     </div>
                                 </div>
 
                                 <!-- khoi bo sung -->
                                 <div id="input-info-bank" class="flex items-center gap-x-8 gap-y-2 flex-wrap hidden">
-                                    <div class="hidden sm:flex items-center gap-3 py-2.5 sm:py-0">                                        
+                                    <div class="hidden sm:flex items-center gap-3 py-2.5 sm:py-0">
                                         <span class="text-1522-1624 font-medium w-24"></span>
                                     </div>
-                                    
+
                                     <div class="flex-1 rounded-lg p-5 bg-gray-100 space-y-3">
-                                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-y-2 gap-x-3">                                           
+                                        <div
+                                            class="flex flex-col sm:flex-row items-start sm:items-center gap-y-2 gap-x-3">
                                             <select class="w-full sm:flex-1 py-2 px-4 rounded border bg-white">
                                                 <option value="">은행을 선택해주세요</option>
                                             </select>
-                                           
+
 
                                             <div class="w-full sm:flex-1 py-2 px-4 rounded border bg-white">
-                                                <input class="text-15-l-22 font-normal w-full bg-transparent" placeholder="입금자명을 입력해주세요" type="text">
+                                                <input class="text-15-l-22 font-normal w-full bg-transparent"
+                                                    placeholder="입금자명을 입력해주세요" type="text">
                                             </div>
-                                        </div>                                                                                                             
+                                        </div>
                                         <div class="py-2 px-4 rounded border bg-white">
-                                            <input class="text-15-l-22 font-normal w-full bg-transparent" placeholder="입금자명을 입력해주세요" type="text">
+                                            <input class="text-15-l-22 font-normal w-full bg-transparent"
+                                                placeholder="입금자명을 입력해주세요" type="text">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="block sm:hidden h-2" style="background-color: rgba(247, 247, 248, 1);"></div>
                     <!-- khung 8 -->
                     <div class="bg-white sm:border-t sm:border border-gray-200 rounded-lg">
@@ -1275,7 +1412,7 @@
                             <div class="flex flex-col gap-5">
                                 <div class="flex items-start gap-x-8 gap-y-5 flex-wrap">
                                     <div class="flex items-center gap-x-3 cursor-pointer" id="icon-cash">
-                                        <input type="checkbox" hidden>                                        
+                                        <input type="checkbox" hidden>
                                         <img class="w-6 h-6" src="../assets/images/icon/common/check-black.svg" alt="">
                                         <span class="text-1522-1624 font-medium whitespace-nowrap">현금 영수증 신청</span>
                                     </div>
@@ -1284,13 +1421,17 @@
                                         <!-- Options -->
                                         <div class="flex space-x-4 mb-2 sm:mb-3">
                                             <label id="choose-b-1" class="flex items-center cursor-pointer">
-                                                <input type="radio" name="purpose" class="w-5 h-5 form-radio text-blue-600"
-                                                    checked />
-                                                <span class="ml-3 inline-block text-sm font-normal whitespace-nowrap">개인소득공제용</span>
+                                                <input type="radio" name="purpose"
+                                                    class="w-5 h-5 form-radio text-blue-600" checked />
+                                                <span
+                                                    class="ml-3 inline-block text-sm font-normal whitespace-nowrap">개인소득공제용</span>
                                             </label>
                                             <label id="choose-b-2" class="flex items-center cursor-pointer">
-                                                <input type="radio" name="purpose" class="w-5 h-5 form-radio text-blue-600" />
-                                                <span class="ml-3 inline-block text-sm font-normal whitespace-nowrap">사업자 지출증빙</span>
+                                                <input type="radio" name="purpose"
+                                                    class="w-5 h-5 form-radio text-blue-600" />
+                                                <span
+                                                    class="ml-3 inline-block text-sm font-normal whitespace-nowrap">사업자
+                                                    지출증빙</span>
                                             </label>
                                         </div>
 
@@ -1422,7 +1563,7 @@
                         <img class="w-6 h-6" src="../assets/images/icon/common/x.svg" alt="icon">
                     </button>
                 </div>
-    
+
                 <!-- Add Address Button -->
                 <div class="mb-6">
                     <button onclick="toggle('#modal-list-address');toggle('#modal-form-address')"
@@ -1430,14 +1571,15 @@
                         + 배송지 추가
                     </button>
                 </div>
-    
+
                 <!-- Address List -->
-                <div class="space-y-5 sm:space-y-6 mb-2.5 sm:mb-6 overflow-y-auto custom-scroll" style="max-height: 378px;">
+                <div class="space-y-5 sm:space-y-6 mb-2.5 sm:mb-6 overflow-y-auto custom-scroll"
+                    style="max-height: 378px;">
                     <!-- Address Item 1 -->
                     <div class="flex items-center justify-between gap-y-3 gap-x-8 sm:py-3 flex-wrap sm:flex-nowrap">
                         <input type="radio" name="address"
                             class="h-6 w-6 text-blue-600 border-gray-300 focus:ring-blue-500">
-    
+
                         <div class="flex-grow space-y-3">
                             <div class="flex items-center gap-2">
                                 <span class="inline-block text-base font-semibold">배송지명</span>
@@ -1450,7 +1592,7 @@
                                 [02763] 서울특별시 00구 00로 100 (00동 000) 000동 000호
                             </div>
                         </div>
-    
+
                         <div class="flex flex-row sm:flex-col items-center justify-center gap-2">
                             <button
                                 class="hover:text-gray-800 whitespace-nowrap flex items-center gap-x-0.5 py-1.5 pl-2 pr-4 border rounded ">
@@ -1464,12 +1606,12 @@
                             </button>
                         </div>
                     </div>
-    
+
                     <!-- Address Item 2 -->
                     <div class="flex items-center justify-between gap-y-3 gap-x-8 sm:py-3 flex-wrap sm:flex-nowrap">
                         <input type="radio" name="address"
                             class="h-6 w-6 text-blue-600 border-gray-300 focus:ring-blue-500">
-    
+
                         <div class="flex-grow space-y-3">
                             <div class="flex items-center gap-2">
                                 <span class="inline-block text-base font-semibold">배송지명</span>
@@ -1479,7 +1621,7 @@
                                 [02763] 서울특별시 00구 00로 100 (00동 000) 000동 000호
                             </div>
                         </div>
-    
+
                         <div class="flex flex-row sm:flex-col items-center justify-center gap-2">
                             <button
                                 class="hover:text-gray-800 whitespace-nowrap flex items-center gap-x-0.5 py-1.5 pl-2 pr-4 border rounded ">
@@ -1498,7 +1640,7 @@
                     <div class="flex items-center justify-between gap-y-3 gap-x-8 sm:py-3 flex-wrap sm:flex-nowrap">
                         <input type="radio" name="address"
                             class="h-6 w-6 text-blue-600 border-gray-300 focus:ring-blue-500">
-    
+
                         <div class="flex-grow space-y-3">
                             <div class="flex items-center gap-2">
                                 <span class="inline-block text-base font-semibold">배송지명</span>
@@ -1508,7 +1650,7 @@
                                 [02763] 서울특별시 00구 00로 100 (00동 000) 000동 000호
                             </div>
                         </div>
-    
+
                         <div class="flex flex-row sm:flex-col items-center justify-center gap-2">
                             <button
                                 class="hover:text-gray-800 whitespace-nowrap flex items-center gap-x-0.5 py-1.5 pl-2 pr-4 border rounded ">
@@ -1523,7 +1665,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Select Button -->
                 <div class="mt-20 sm:mt-6 pb-1 sm:pb-0 pt-6 sm:pt-0">
                     <button onclick="toggle('#modal-list-address')"
@@ -1534,7 +1676,8 @@
             </div>
         </div>
 
-        <div id="modal-form-address" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+        <div id="modal-form-address"
+            class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
             <!-- Modal Content -->
             <div class="bg-white sm:rounded-lg p-5 sm:p-8" style="width: 560px;">
                 <!-- Modal Header -->
@@ -1544,7 +1687,7 @@
                         <img class="w-6 h-6" src="../assets/images/icon/common/x.svg" alt="icon">
                     </button>
                 </div>
-    
+
                 <!-- Address List -->
                 <div class="space-y-5 sm:space-y-6 mb-2.5 sm:mb-6">
                     <!-- Address Item 1 -->
@@ -1554,20 +1697,20 @@
                             <input placeholder="입력값" type="text" class="w-full inline-block text-15-l-22">
                         </div>
                     </div>
-    
+
                     <hr>
-    
+
                     <div class="flex-1 py-2 px-4 rounded border flex items-center gap-3">
                         <input placeholder="기존 입력된 주소" type="text" class="w-full inline-block text-15-l-22">
                         <img src="../assets/images/icon/header/home-search.svg" alt="">
                     </div>
-    
+
                     <div class="flex-1 py-2 px-4 rounded border flex items-center gap-3">
                         <input placeholder="기존 입력된 주소" type="text" class="w-full inline-block text-15-l-22">
                     </div>
-    
+
                 </div>
-    
+
                 <!-- Select Button -->
                 <div class="mt-20 sm:mt-6 pb-1 sm:pb-0 pt-6 sm:pt-0">
                     <button onclick="toggle('#modal-form-address')"
@@ -1578,7 +1721,8 @@
             </div>
         </div>
 
-        <div id="modal-coupon" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+        <div id="modal-coupon"
+            class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
             <!-- Modal Content -->
             <div class="bg-white sm:rounded-lg p-5 sm:p-8 h-full overflow-y-auto custom-scroll" style="width: 560px;">
                 <!-- Modal Header -->
@@ -1588,15 +1732,16 @@
                         <img class="w-6 h-6" src="../assets/images/icon/common/x.svg" alt="icon">
                     </button>
                 </div>
-    
+
                 <!-- Address List -->
                 <div class="space-y-5 sm:space-y-6">
                     <div class="sm:px-9">
                         <!-- item 1 -->
                         <div class="flex flex-col sm:flex-row items-start sm:items-center gap-x-6 gap-y-3">
                             <!-- Radio button -->
-                            <input type="radio" name="coupon" class="cursor-pointer h-5 w-5 text-blue-600 focus:ring-blue-500">
-    
+                            <input type="radio" name="coupon"
+                                class="cursor-pointer h-5 w-5 text-blue-600 focus:ring-blue-500">
+
                             <!-- Coupon Card -->
                             <div class="w-full rounded-xl border overflow-hidden">
                                 <div class="flex justify-between items-start py-6 pr-6 sm:pr-4 pl-6 flex-wrap">
@@ -1606,16 +1751,16 @@
                                         <p class="text-2028-2230 font-semibold mb-3">10% 할인</p>
                                         <p class="text-xs font-normal text-gray-400">최소 금액 10,000원 사용시 이용가능</p>
                                     </div>
-    
+
                                     <!-- Tag Label -->
                                     <div class="flex flex-col gap-y-3">
                                         <span
                                             class="px-2.5 py-1 text-xs font-medium bg-blue-100 text-blue-600 rounded-full">도서전용</span>
-    
+
                                         <div class="w-16 h-16 rounded-full bg-gray-200"></div>
                                     </div>
                                 </div>
-    
+
                                 <!-- Date Range -->
                                 <div class="border-t border-dashed mt-4 py-3 px-6">
                                     <p class="text-1318-1420 font-normal text-gray-400">2024.09.09 ~ 2024.09.09</p>
@@ -1623,13 +1768,14 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <div class="sm:px-9">
                         <!-- item 1 -->
                         <div class="flex flex-col sm:flex-row items-start sm:items-center gap-x-6 gap-y-3">
                             <!-- Radio button -->
-                            <input type="radio" name="coupon" class="cursor-pointer h-5 w-5 text-blue-600 focus:ring-blue-500">
-    
+                            <input type="radio" name="coupon"
+                                class="cursor-pointer h-5 w-5 text-blue-600 focus:ring-blue-500">
+
                             <!-- Coupon Card -->
                             <div class="w-full rounded-xl border overflow-hidden">
                                 <div class="flex justify-between items-start py-6 pr-6 sm:pr-4 pl-6 flex-wrap">
@@ -1639,16 +1785,16 @@
                                         <p class="text-2028-2230 font-semibold mb-3">10% 할인</p>
                                         <p class="text-xs font-normal text-gray-400">최소 금액 10,000원 사용시 이용가능</p>
                                     </div>
-    
+
                                     <!-- Tag Label -->
                                     <div class="flex flex-col gap-y-3">
                                         <span
                                             class="px-2.5 py-1 text-xs font-medium bg-purple-100 text-purple-600 rounded-full">도서전용</span>
-    
+
                                         <div class="w-16 h-16 rounded-full bg-gray-200"></div>
                                     </div>
                                 </div>
-    
+
                                 <!-- Date Range -->
                                 <div class="border-t border-dashed mt-4 py-3 px-6">
                                     <p class="text-1318-1420 font-normal text-gray-400">2024.09.09 ~ 2024.09.09</p>
@@ -1656,13 +1802,14 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <div class="sm:px-9">
                         <!-- item 1 -->
                         <div class="flex flex-col sm:flex-row items-start sm:items-center gap-x-6 gap-y-3">
                             <!-- Radio button -->
-                            <input type="radio" name="coupon" class="cursor-pointer h-5 w-5 text-blue-600 focus:ring-blue-500">
-    
+                            <input type="radio" name="coupon"
+                                class="cursor-pointer h-5 w-5 text-blue-600 focus:ring-blue-500">
+
                             <!-- Coupon Card -->
                             <div class="w-full rounded-xl border overflow-hidden">
                                 <div class="flex justify-between items-start py-6 pr-6 sm:pr-4 pl-6 flex-wrap">
@@ -1672,16 +1819,16 @@
                                         <p class="text-2028-2230 font-semibold mb-3">10% 할인</p>
                                         <p class="text-xs font-normal text-gray-400">최소 금액 10,000원 사용시 이용가능</p>
                                     </div>
-    
+
                                     <!-- Tag Label -->
                                     <div class="flex flex-col gap-y-3">
                                         <span
                                             class="px-2.5 py-1 text-xs font-medium bg-red-100 text-red-600 rounded-full">도서전용</span>
-    
+
                                         <div class="w-16 h-16 rounded-full bg-gray-200"></div>
                                     </div>
                                 </div>
-    
+
                                 <!-- Date Range -->
                                 <div class="border-t border-dashed mt-4 py-3 px-6">
                                     <p class="text-1318-1420 font-normal text-gray-400">2024.09.09 ~ 2024.09.09</p>
@@ -1690,7 +1837,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Select Button -->
                 <div class="mt-20 sm:mt-6 pb-1 sm:pb-0 pt-6 sm:pt-0">
                     <button onclick="toggle('#modal-coupon')"
@@ -1701,7 +1848,8 @@
             </div>
         </div>
 
-        <div id="modal-certificate" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+        <div id="modal-certificate"
+            class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
             <!-- Modal Content -->
             <div class="bg-white sm:rounded-lg p-5 sm:p-8 h-full overflow-y-auto custom-scroll" style="width: 560px;">
                 <!-- Modal Header -->
@@ -1711,9 +1859,10 @@
                         <img class="w-6 h-6" src="../assets/images/icon/common/x.svg" alt="icon">
                     </button>
                 </div>
-    
+
                 <div class="flex flex-col items-center justify-center gap-y-6 pb-3">
-                    <div class="rounded-xl shadow-md pt-3.5 pl-3.5 pr-4 pb-5 border" style="width: 244px; height: 146px;">
+                    <div class="rounded-xl shadow-md pt-3.5 pl-3.5 pr-4 pb-5 border"
+                        style="width: 244px; height: 146px;">
                         <div>
                             <img style="width: 38px; height: 38px;" src="../assets/images/logo/Logo.svg" alt="icon">
                         </div>
@@ -1726,14 +1875,14 @@
                             <img src="../assets/images/image/common/barcode.png" alt="bode">
                         </div>
                     </div>
-    
+
                     <div class="space-y-2">
                         <p class="text-15-l-22 font-normal text-gray-600">상품권 뒷면 하단의 스크래치를 동전으로 긁으신 후 12자리 번호를 입력하시고 하단에
                             [결제하기] 버튼을 클릭하시면 됩니다.</p>
                         <p class="text-15-l-22 font-normal text-gray-600">상품권 번호는 영문 대/소 문자를 구분하여 입력해 주시기 바랍니다.</p>
                     </div>
                 </div>
-                
+
                 <div class="bg-gray-100 bg-gray-100-overflow-5-sm-8">
                     <div class="py-3">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-3">
@@ -1788,7 +1937,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Select Button -->
                 <div class="mt-20 sm:mt-6 pb-1 sm:pb-0 pt-6 sm:pt-0 space-y-6">
                     <p class="text-14-l-20 font-normal text-gray-400">
@@ -1802,13 +1951,15 @@
                     </button>
                 </div>
             </div>
-            
+
         </div>
     </section>
     <!-- --------------------------------------------------------------------0000------------------------------------------------------------- -->
     <!-- go to top -->
     <div class="fixed bottom-24 right-6 block sm:hidden z-50">
-        <div onclick="scrollToTop()" class="cursor-pointer flex flex-col justify-center items-center gap-1 shadow-lg rounded-full bg-white" style="width: 56px; height: 56px;">
+        <div onclick="scrollToTop()"
+            class="cursor-pointer flex flex-col justify-center items-center gap-1 shadow-lg rounded-full bg-white"
+            style="width: 56px; height: 56px;">
             <img src="../assets/images/icon/common/up.svg" alt="">
             <span class="inline-block text-xs font-semibold">TOP</span>
         </div>
@@ -1819,23 +1970,32 @@
         <div class="flex items-center w-full">
             <div class="flex-1 h-16 cursor-pointer" onclick="gotoPage('#')">
                 <div class="w-full flex relative">
-                    <div class="h-16 w-1/2 bg-white" style="border-top-right-radius: 48px; box-shadow: 0 -4px 1px 0 rgba(0, 0, 0, 0.02);"></div>
-                    <div class="h-16 w-1/2 bg-white" style="border-top-left-radius: 48px; box-shadow: 0 -4px 1px 0 rgba(0, 0, 0, 0.02);"></div>
-                    
+                    <div class="h-16 w-1/2 bg-white"
+                        style="border-top-right-radius: 48px; box-shadow: 0 -4px 1px 0 rgba(0, 0, 0, 0.02);"></div>
+                    <div class="h-16 w-1/2 bg-white"
+                        style="border-top-left-radius: 48px; box-shadow: 0 -4px 1px 0 rgba(0, 0, 0, 0.02);"></div>
+
                     <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-                        <img style="width: 48px; height: 48px;" src="../assets/images/icon/common/home-choose.svg" alt="icon">
+                        <img style="width: 48px; height: 48px;" src="../assets/images/icon/common/home-choose.svg"
+                            alt="icon">
                     </div>
-                </div>                
+                </div>
             </div>
-            <div onclick="gotoPage('./P-search.html')" class="cursor-pointer flex-1 flex justify-center items-center flex-col py-2.5 gap-1 bg-white" style="box-shadow: 0 -4px 1px 0 rgba(0, 0, 0, 0.02);">
+            <div onclick="gotoPage('./P-search.html')"
+                class="cursor-pointer flex-1 flex justify-center items-center flex-col py-2.5 gap-1 bg-white"
+                style="box-shadow: 0 -4px 1px 0 rgba(0, 0, 0, 0.02);">
                 <img style="width: 24px; height: 24px;" src="../assets/images/icon/common/search.svg" alt="icon">
                 <span class="text-xs font-medium">검색</span>
             </div>
-            <div onclick="gotoPage('./MY-main.html')" class="cursor-pointer flex-1 flex justify-center items-center flex-col py-2.5 gap-1 bg-white" style="box-shadow: 0 -4px 1px 0 rgba(0, 0, 0, 0.02);">
+            <div onclick="gotoPage('./MY-main.html')"
+                class="cursor-pointer flex-1 flex justify-center items-center flex-col py-2.5 gap-1 bg-white"
+                style="box-shadow: 0 -4px 1px 0 rgba(0, 0, 0, 0.02);">
                 <img style="width: 24px; height: 24px;" src="../assets/images/icon/common/person.svg" alt="icon">
                 <span class="text-xs font-medium">마이페이지</span>
             </div>
-            <div onclick="gotoPage('./MY-mi-history.html')" class="cursor-pointer flex-1 flex justify-center items-center flex-col py-2.5 gap-1 bg-white" style="box-shadow: 0 -4px 1px 0 rgba(0, 0, 0, 0.02);">
+            <div onclick="gotoPage('./MY-mi-history.html')"
+                class="cursor-pointer flex-1 flex justify-center items-center flex-col py-2.5 gap-1 bg-white"
+                style="box-shadow: 0 -4px 1px 0 rgba(0, 0, 0, 0.02);">
                 <img style="width: 24px; height: 24px;" src="../assets/images/icon/common/big-dot.svg" alt="icon">
                 <span class="text-xs font-medium">최근 본 상품</span>
             </div>
@@ -1849,17 +2009,17 @@
                 <div class="text-base font-semibold p-2.5" style="white-space: nowrap;">공지사항</div>
                 <div class="flex flex-1 items-center justify-between overflow-hidden">
                     <div style="font-size: 15px; line-height: 22px; font-weight: 400; color: rgba(46, 47, 51, 0.88);"
-                    class="truncate cursor-pointer" onclick="gotoPage('./CS-no-notice-detail.html')">
+                        class="truncate cursor-pointer" onclick="gotoPage('./CS-no-notice-detail.html')">
                         서비스 점검으로 인한 서비스 중단 안내</div>
 
                     <div class="block sm:hidden cursor-pointer" onclick="gotoPage('./CS-no-notice.html')">
-                            <img src="../assets/images/icon/footer/arrow-right.svg" alt="icon">                        
+                        <img src="../assets/images/icon/footer/arrow-right.svg" alt="icon">
                     </div>
 
                     <div class="hidden sm:flex cursor-pointer" onclick="gotoPage('./CS-no-notice.html')">
                         <div class="text-base font-semibold" style="color: rgba(55, 56, 60, 0.6)">더보기</div>
                         <div>
-                            <img src="../assets/images/icon/footer/add.svg" alt="icon">                            
+                            <img src="../assets/images/icon/footer/add.svg" alt="icon">
                         </div>
                     </div>
                 </div>
@@ -1868,44 +2028,64 @@
     </section>
 
     <footer class="py-6">
-        <div class="container-layout px-5 sm:px-0 flex justify-between flex-col sm:flex-row mobi-px">
-            <div>
-                <div class="text-base font-medium cursor-pointer" onclick="gotoPage('./CS-cc-main.html')">고객센터</div>
+        <div class="container-layout px-5 sm:px-0 flex flex-col sm:flex-row mobi-px">
+            <div class="flex-1">
+                <div class="text-base font-medium cursor-pointer" onclick="gotoPage('./pages/CS-cc-main.html')">고객센터
+                </div>
                 <div class="my-3">
                     <h2 class="text-2xl font-bold mb-4">02-944-0807</h2>
                     <div class="flex flex-col gap-1">
-                        <p class="font-normal text-13-l-18"><span>상당시간</span> <span
-                                style="color: rgba(46, 47, 51, 0.88);">9:00~18:00</span></p>
-                        <p class="font-normal text-13-l-18"><span>점심시간</span> <span>12:30~13:30</span></p>
-                        <p class="font-normal text-13-l-18">토, 일, 공휴일 휴무</p>
+                        <p class="font-normal text-13-l-18"><span class="inline-block w-12">상당시간</span> <span
+                                class="font-normal" style="color: rgba(46, 47, 51, 0.88);">9:00~18:00</span></p>
+                        <p class="font-normal text-13-l-18 whitespace-nowrap"><span
+                                class="inline-block w-12">점심시간</span>
+                            <span class="inline-block mr-4">12:30~13:30</span>
+                            <span class="inline-block font-normal text-13-l-18">토, 일, 공휴일 휴무</span>
+                        </p>
                     </div>
                 </div>
-                <div class="font-semibold text-13-l-18 py-1.5 text-center text-white rounded hidden sm:block cursor-pointer"
-                    style="background-color: rgba(46, 47, 51, 0.88);" onclick="gotoPage('./CS-11-inquiry.html')" >1:1 문의</div>
+                <div class="font-semibold text-13-l-18 py-1.5 text-center text-white rounded hidden sm:block cursor-pointer w-full"
+                    style="background-color: rgba(46, 47, 51, 0.88);" onclick="gotoPage('/pages/CS-11-inquiry.html')">
+                    1:1 문의</div>
             </div>
             <!--  -->
-            <div class="sm:px-2 sm:mx-2 md:px-16 md:mx-16 border-r border-l hidden sm:flex sm:flex-col">
+            <div
+                class="flex-1 sm:px-2 sm:mx-2 md:px-16 md:mx-16 sm:border-r sm:border-l sm:flex sm:flex-col mt-3 pt-3 border-t sm:mt-0 sm:pt-0 sm:border-t-0">
                 <div class="text-base font-medium mb-3">은행계좌 안내</div>
                 <div class="mb-2">
                     <p class="mb-1 text-lg font-semibold flex items-center flex-wrap">
-                        <span class="inline-block sm:w-14 text-13-l-18 font-normal">농협</span> <span class="inline-block text-lg font-semibold">171104-51-006966</span>
+                        <span class="inline-block sm:w-14 text-13-l-18 font-normal">농협</span>
+                        <span class="inline-block text-lg font-semibold">
+                            171104-51-006966
+                            <button class="ml-2" title="copy" onclick="copyToClipboard('171104-51-006966')">
+                                <img src="../assets/images/icon/main/coppy.svg" alt="">
+                            </button>
+                        </span>
                     </p>
                     <p class="mb-1 text-lg font-semibold flex items-center flex-wrap">
-                        <span class="inline-block sm:w-14 text-13-l-18 font-normal">국민은행</span> <span class="inline-block text-lg font-semibold">017037-04-000844</span>
+                        <span class="inline-block sm:w-14 text-13-l-18 font-normal">국민은행</span>
+                        <span class="inline-block text-lg font-semibold">
+                            017037-04-000844
+                            <button class="" title="copy" onclick="copyToClipboard('017037-04-000844')">
+                                <img src="../assets/images/icon/main/coppy.svg" alt="">
+                            </button>
+                        </span>
                     </p>
                     <p class="mb-1 flex items-center flex-wrap">
-                        <span class="inline-block sm:w-14 text-13-l-18 font-normal">예금주</span> <span class="inline-block text-13-l-18 font-normal">재단법인 천주교 성바오로딸수도회</span>
+                        <span class="inline-block sm:w-14 text-13-l-18 font-normal">예금주</span> <span
+                            class="inline-block text-13-l-18 font-normal">재단법인 천주교 성바오로딸수도회</span>
                     </p>
                 </div>
                 <!-- <div class="text-13-l-18 font-normal">예금주 : 재단법인 천주교 성바오로딸수도회</div> -->
             </div>
             <!--  -->
-            <div class="hidden sm:block">
+            <div class="flex-1 hidden sm:block">
                 <div class="text-base font-medium mb-3 px-2">서원 안내</div>
                 <div>
                     <div class="grid grid-cols-3 gap-6">
                         <div>
-                            <h2 class="text-13-l-18 font-medium py-1 px-2 cursor-pointer" onclick="gotoPage('./CS-m-national.html')">알베리오네센터</h2>
+                            <h2 class="text-13-l-18 font-medium py-1 px-2 cursor-pointer"
+                                onclick="gotoPage('./pages/CS-m-national.html')">알베리오네센터</h2>
                             <ul class="space-y-2 text-13-l-18 font-normal">
                                 <li class="py-1 px-2">광주</li>
                                 <li class="py-1 px-2">부산</li>
@@ -1915,7 +2095,8 @@
                         </div>
 
                         <div>
-                            <h2 class="text-13-l-18 font-medium py-1 px-2 cursor-pointer" onclick="gotoPage('./CS-m-national.html')">혜화나무</h2>
+                            <h2 class="text-13-l-18 font-medium py-1 px-2 cursor-pointer"
+                                onclick="gotoPage('./pages/CS-m-national.html')">혜화나무</h2>
                             <ul class="space-y-2 text-13-l-18 font-normal">
                                 <li class="py-1 px-2">대구</li>
                                 <li class="py-1 px-2">분당</li>
@@ -1925,7 +2106,8 @@
                         </div>
 
                         <div>
-                            <h2 class="text-13-l-18 font-medium py-1 px-2 cursor-pointer" onclick="gotoPage('./CS-m-national.html')">명동 가톨릭 회관</h2>
+                            <h2 class="text-13-l-18 font-medium py-1 px-2 cursor-pointer"
+                                onclick="gotoPage('./pages/CS-m-national.html')">명동 가톨릭 회관</h2>
                             <ul class="space-y-2 text-13-l-18 font-normal">
                                 <li class="py-1 px-2">대전</li>
                                 <li class="py-1 px-2">수원</li>
@@ -1941,13 +2123,15 @@
                 <div class="flex gap-3 items-center">
                     <ul class="flex gap-1.5">
                         <li class="cursor-pointer"> <img src="../assets/images/icon/footer/chat.svg" alt="icon"> </li>
-                        <li class="cursor-pointer"> <img src="../assets/images/icon/footer/instagram.svg" alt="icon"> </li>
-                        <li class="cursor-pointer"> <img src="../assets/images/icon/footer/youtube.svg" alt="icon"> </li>
+                        <li class="cursor-pointer"> <img src="../assets/images/icon/footer/instagram.svg" alt="icon">
+                        </li>
+                        <li class="cursor-pointer"> <img src="../assets/images/icon/footer/youtube.svg" alt="icon">
+                        </li>
                     </ul>
                     <div>
                         <select class="py-2.5 px-4 border rounded-lg">
                             <option value="패밀리 사이트">패밀리 사이트</option>
-                            <option value="예시">예시 - 1</option>                            
+                            <option value="예시">예시 - 1</option>
                         </select>
                     </div>
                 </div>
@@ -1992,9 +2176,12 @@
 
                     <div class="gap-3 items-center hidden sm:flex">
                         <ul class="flex gap-1.5">
-                            <li class="cursor-pointer"> <img src="../assets/images/icon/footer/chat.svg" alt="icon"> </li>
-                            <li class="cursor-pointer"> <img src="../assets/images/icon/footer/instagram.svg" alt="icon"> </li>
-                            <li class="cursor-pointer"> <img src="../assets/images/icon/footer/youtube.svg" alt="icon"> </li>
+                            <li class="cursor-pointer"> <img src="../assets/images/icon/footer/chat.svg" alt="icon">
+                            </li>
+                            <li class="cursor-pointer"> <img src="../assets/images/icon/footer/instagram.svg"
+                                    alt="icon"> </li>
+                            <li class="cursor-pointer"> <img src="../assets/images/icon/footer/youtube.svg" alt="icon">
+                            </li>
                         </ul>
                         <div>
                             <select class="py-2.5 px-4 border rounded-lg">
@@ -2041,9 +2228,9 @@
         document.querySelectorAll('.icon-book').forEach(icon => {
             icon.addEventListener('click', () => {
                 if (icon.src.includes('white')) {
-                    icon.src= '../assets/images/icon/common/check-black.svg'
+                    icon.src = '../assets/images/icon/common/check-black.svg'
                 } else {
-                    icon.src= '../assets/images/icon/common/check-white.svg'
+                    icon.src = '../assets/images/icon/common/check-white.svg'
                 }
             })
         })
@@ -2063,7 +2250,7 @@
             btnHiddenInputLockCode.classList.add('border-blue-500', 'text-blue-500')
             btnHiddenInputLockCode.classList.remove('border-gray-300')
             inputLockCode.classList.add('hidden')
-            
+
             btnShowInputLockCode.classList.remove('border-blue-500', 'text-blue-500')
             btnShowInputLockCode.classList.add('border-gray-300')
         })
@@ -2072,7 +2259,7 @@
         function updateCharCount(inputId, countId) {
             const input = document.getElementById(inputId);
             const count = document.getElementById(countId);
-            input.addEventListener('input', function() {
+            input.addEventListener('input', function () {
                 count.textContent = `${input.value.length}/${input.getAttribute('maxlength')}`;
             });
         }
