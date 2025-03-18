@@ -521,12 +521,12 @@ input[type="number"] {
 }
 
 .container-custom-slide .slide .item:nth-child(3) {
-  left: calc(1 * 24px + 1 * 10px);
+  left: calc(1 * 24px + 1 * 4px);
 }
 
 .container-custom-slide .slide .item:nth-child(4) {
-  width: calc(100% - 2 * 24px - 2 * 10px);
-  left: calc(2 * 24px + 2 * 10px);
+  width: calc(100% - 2 * 24px - 2 * 4px);
+  left: calc(2 * 24px + 2 * 4px);
 }
 
 .container-custom-slide .slide .item:nth-child(n + 5) {
@@ -538,6 +538,17 @@ input[type="number"] {
 }
 .container-custom-slide .slide .item:nth-child(4) .content {
   opacity: 1;
+}
+
+.slide-navi {
+  width: calc(100% - 2 * 24px - 2 * 4px);
+}
+
+@media (max-width: 1024px) {
+
+  .slide-navi {
+    width: calc(100% - 2 * 24px - 2 * 4px);
+  }
 }
 
 /* .container-custom-slide .button {
