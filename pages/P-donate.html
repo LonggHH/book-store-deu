@@ -20,6 +20,18 @@
     <link rel="stylesheet" href="../assets/css/util.css">
     <link rel="stylesheet" href="../assets/css/icons.css">
     <link rel="stylesheet" href="../assets/css/SP/special.css">
+
+    <style>
+        .font-40-80 {
+            font-size: 80px;
+        }
+
+        @media (max-width: 640px) {
+            .font-40-80 {
+                font-size: 40px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -573,7 +585,7 @@
                     <span class="text-gray-400 inline-block text-13-l-18 font-normal">스페셜</span>
                     <img class="icon-down" src="../assets/images/icon/category/breadcrumb-down.svg" alt="icon">
                     <img class="icon-up hidden" src="../assets/images/icon/category/breadcrumb-up.svg" alt="icon">
-                    <div class="absolute z-10 top-7 left-0 hidden breadcrumb-sub-menu">
+                    <div class="absolute z-50 top-7 left-0 hidden breadcrumb-sub-menu">
                         <ul class="py-1 border rounded-lg bg-white">
                             <li class="py-1 px-2.5 w-full">
                                 <a href="./CA-book-main-category.html"
@@ -610,7 +622,7 @@
 
     <!-- main category -->
     <section>
-        <div class="mb-8">
+        <div class="sm:mb-8">
             <div class="hidden sm:block container-layout">
                 <p class="flex items-center gap-x-6">
                     <span class="inline-block text-28-l-38 font-bold">기부 나눔</span>
@@ -621,302 +633,325 @@
         </div>
 
         <div class="container-layout">
-            <div class="px-2 h-330-680 flex flex-col gap-y-6 sm:gap-y-14 items-center justify-center text-white overflow-hidden"
-                style="background-color: rgba(49, 107, 223, 1);">
-                <div class="relative" style="">
-                    <div class="relative text-5878-122164 z-20">
-                        기부천사가 <br>
-                        되어주세요
-                    </div>
-
-                    <div class="w-28 h-28 rounded-full sm:w-64 sm:h-64 absolute -top-6 -left-10 sm:-top-12 sm:-left-28 z-10"
-                        style="background-color: rgba(36, 96, 218, 1);"></div>
-
-                    <div class="w-3 h-3 sm:w-6 sm:h-6 rounded-full absolute top-0 right-0 sm:-top-3 sm:right-3"
-                        style="background-color: rgba(255, 166, 137, 1);"></div>
-
-                    <div class="absolute bottom-0 right-0 z-30 flex items-center justify-center py-2 sm:py-4 px-6 sm:px-12 rounded-full w-auto"
-                        style="background-color: rgba(55, 89, 183, 1);">
-                        <i class="fa-solid fa-heart text-white text-2xl sm:text-5xl"></i>
-                    </div>
-                </div>
-
-                <div class="relative">
-                    <div class="text-center text-1216-2533 font-normal">
-                        바오로딸과 함께하는 사랑의 책 나눔은 <br>
-                        독서 환경이 열악한 저소득층 아동, 다문화 가존, 군부대, 교도소 등에 <br>
-                        신앙생활에 꼭 필요한 책이나 미디어를 보내는 사랑의 초대입니다. <br>
-                        관심과 사랑이 그리운 이들에게 주님 사라의 말씀을 전하는 <br>
-                        선교사가 되어 주십시오 <br>
-                    </div>
-
-                    <div class="w-3 sm:w-6 h-1 sm:h-2 rounded-full absolute -top-3 left-10 sm:left-24"
-                        style="background-color: rgba(88, 166, 249, 1); transform: rotate(30deg);"></div>
-
-                    <div class="flex items-center justify-center w-6 h-6 rounded-full absolute -bottom-3 sm:bottom-0 right-16 sm:right-40"
-                        style="background-color: rgba(98, 150, 255, 0.8);">
-                        <div class="w-2 h-2 rounded-full" style="background-color: rgba(49, 107, 223, 1);"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div style="background-color: rgba(225, 235, 255, 1);">
-                <div class="flex flex-col items-center justify-center px-3 py-8 sm:py-16">
-                    <div class="text-1418-3038 text-center font-bold" style="color: rgba(55, 89, 183, 1);">
-                        소외된 이웃들에게 <br>
-                        주님 사랑의 말씀을 전하는 선교사가 되어 주세요
-                    </div>
-
-                    <div class="mb-2 mt-4 sm:mb-5 sm:mt-8 flex flex-col gap-y-2 sm:gap-y-4">
-                        <div class="flex items-center gap-x-3 sm:gap-x-7 rounded-full p-4 sm:p-8"
-                            style="background-color: rgba(114, 163, 249, 1);">
-                            <div>
-                                <img class="w-14 h-14 sm:w-28 sm:h-28" src="../assets/images/image/donate/donate-1.png"
-                                    alt="">
+            <div class="flex justify-center">
+                <div class="" style="max-width: 750px;">
+                    <div class="px-2 h-330-680 flex flex-col gap-y-6 sm:gap-y-14 items-center justify-center text-white overflow-hidden"
+                        style="background-color: rgba(49, 107, 223, 1);">
+                        <div class="relative" style="">
+                            <div class="relative z-20">
+                                <p class="text-5878-122164">기부천사가</p>
+                                <p class="font-40-80">되어주세요</p>
                             </div>
-                            <div class="flex-1 text-1216-2533 text-white font-medium">
-                                책은 참 좋은 매체입니다. <br>
-                                내가 직접 찾아가 만날수 없는 사람에게까지, <br>
-                                그 가까이까지 다가가 우리의 말을 대신해 줍니다.
+
+                            <div class="w-28 h-28 rounded-full sm:w-64 sm:h-64 absolute -top-6 -left-10 sm:-top-12 sm:-left-28 z-10"
+                                style="background-color: rgba(36, 96, 218, 1);"></div>
+
+                            <div class="w-3 h-3 sm:w-6 sm:h-6 rounded-full absolute top-0 right-0 sm:-top-3 sm:right-3"
+                                style="background-color: rgba(255, 166, 137, 1);"></div>
+
+                            <div class="absolute bottom-3 sm:bottom-6 right-0 z-30 flex items-center justify-center py-2 sm:py-4 px-6 sm:px-12 rounded-full w-auto"
+                                style="background-color: rgba(55, 89, 183, 1);">
+                                <i class="fa-solid fa-heart text-white text-2xl sm:text-5xl"></i>
                             </div>
                         </div>
 
-                        <div class="flex flex-row-reverse items-center gap-x-3 sm:gap-x-7 rounded-full p-4 sm:p-8"
-                            style="background-color: rgba(55, 89, 183, 1);">
-                            <div>
-                                <img class="w-14 h-14 sm:w-28 sm:h-28" src="../assets/images/image/donate/donate-3.png"
-                                    alt="">
-                            </div>
-                            <div class="flex-1 text-1216-2533 text-white font-medium">
-                                소외된 이웃들에게 주님 사랑의 말씀을 전하는 <br>
-                                선교사가 되어 주세요.
-                            </div>
-                        </div>
-
-                        <div class="flex items-center gap-x-3 sm:gap-x-7 rounded-full p-4 sm:p-8"
-                            style="background-color: rgba(114, 163, 249, 1);">
-                            <div>
-                                <img class="w-14 h-14 sm:w-28 sm:h-28" src="../assets/images/image/donate/donate-2.png"
-                                    alt="">
-                            </div>
-                            <div class="flex-1 text-1216-2533 text-white font-medium">
-                                우리가 보내는 책 한 권이 <br>
-                                가난한 이웃, 어린이, 이주민들에게 <br>
-                                희망과 기쁨, 용기가 되어 줄 것입니다.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-1216-2533 text-center font-normal">
-                        *책 또는 기부금을 후원해 주시면 책을 필요로 하는 시설과 <br>
-                        작은 독서실 등으로 전달하겠습니다. <br>
-                        감사합니다.
-                    </div>
-                </div>
-            </div>
-
-            <div class="px-3 py-8 sm:py-16" style="background-color: rgba(240, 245, 255, 1);">
-                <div class="flex flex-col items-center justify-center gap-y-4 sm:gap-y-8">
-                    <div class="text-1418-3038 font-bold py-0.5 px-9 sm:py-2 sm:px-20 rounded-full bg-white"
-                        style="color: rgba(55, 89, 183, 1);">
-                        이 달의 추천 도서
-                    </div>
-
-                    <div class="grid grid-cols-2 gap-2.5">
-                        <div class="space-y-3" style="width: 160px;">
-                            <div class="border scope-imgage-small" style=" height: 236px;">
-                                <img class="w-full h-full" src="../assets/images/image/books/book1.png" alt="">
+                        <div class="relative">
+                            <div class="text-center text-1216-2533 font-normal">
+                                바오로딸과 함께하는 사랑의 책 나눔은 <br>
+                                독서 환경이 열악한 저소득층 아동, 다문화 가존, 군부대, 교도소 등에 <br>
+                                신앙생활에 꼭 필요한 책이나 미디어를 보내는 사랑의 초대입니다. <br>
+                                관심과 사랑이 그리운 이들에게 주님 사라의 말씀을 전하는 <br>
+                                선교사가 되어 주십시오 <br>
                             </div>
 
-                            <div class="two-lines text-base font-semibold">
-                                사순, 희망의 시간
-                            </div>
-                        </div>
-                        <div class="space-y-3" style="width: 160px;">
-                            <div class="border scope-imgage-small" style=" height: 236px;">
-                                <img class="w-full h-full" src="../assets/images/image/books/book2.png" alt="">
-                            </div>
+                            <div class="w-3 sm:w-6 h-1 sm:h-2 rounded-full absolute -top-3 left-10 sm:left-24"
+                                style="background-color: rgba(88, 166, 249, 1); transform: rotate(30deg);"></div>
 
-                            <div class="two-lines text-base font-semibold">
-                                사순, 희망의 시간
-                            </div>
-                        </div>
-                        <div class="space-y-3" style="width: 160px;">
-                            <div class="border scope-imgage-small" style=" height: 236px;">
-                                <img class="w-full h-full" src="../assets/images/image/books/book3.png" alt="">
-                            </div>
-
-                            <div class="two-lines text-base font-semibold">
-                                사순, 희망의 시간
-                            </div>
-                        </div>
-                        <div class="space-y-3" style="width: 160px;">
-                            <div class="border scope-imgage-small" style=" height: 236px;">
-                                <img class="w-full h-full" src="../assets/images/image/books/book4.png" alt="">
-                            </div>
-
-                            <div class="two-lines text-base font-semibold">
-                                사순, 희망의 시간
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="px-3 py-8 sm:py-16" style="background-color: rgba(45, 92, 187, 1);">
-                <div class="flex flex-col items-center justify-center gap-y-4 sm:gap-y-8">
-                    <div class="text-center text-white font-bold text-1418-3038">
-                        기부 천사가 <br>
-                        되어주셔서 감사합니다
-                    </div>
-
-                    <div class="w-full" style="max-width: 700px;">
-                        <div class="rounded-xl overflow-hidden p-1 bg-white">
-                            <div class="rounded-xl overflow-hidden flex items-stretch">
-                                <div class="p-2 sm:p-4" style="background-color: rgba(225, 235, 255, 1);">
-                                    <div class="text-1012-2026 whitespace-nowrap" style="color: rgba(24, 81, 194, 1);">
-                                        2월</div>
-                                </div>
-
-                                <div class="w-full">
-                                    <table class="w-full">
-                                        <thead class="border-b">
-                                            <tr>
-                                                <td
-                                                    class="text-812-1624 text-gray-400 font-medium text-center py-1 sm:py-2">
-                                                    책/기부금 보내주시 곳</td>
-                                                <td
-                                                    class="text-812-1624 text-gray-400 font-medium text-center py-1 sm:py-2">
-                                                    책 보낸 곳</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td
-                                                    class="text-812-1624 text-black font-normal text-center py-1 sm:py-2">
-                                                    김정림</td>
-                                                <td
-                                                    class="text-812-1624 text-gray-400 font-normal text-center py-1 sm:py-2">
-                                                    -</td>
-                                            </tr>
-                                            <tr>
-                                                <td
-                                                    class="text-812-1624 text-black font-normal text-center py-1 sm:py-2">
-                                                    김정림</td>
-                                                <td
-                                                    class="text-812-1624 text-gray-400 font-normal text-center py-1 sm:py-2">
-                                                    -</td>
-                                            </tr>
-                                            <tr>
-                                                <td
-                                                    class="text-812-1624 text-black font-normal text-center py-1 sm:py-2">
-                                                    김정림</td>
-                                                <td
-                                                    class="text-812-1624 text-gray-400 font-normal text-center py-1 sm:py-2">
-                                                    -</td>
-                                            </tr>
-                                            <tr>
-                                                <td
-                                                    class="text-812-1624 text-black font-normal text-center py-1 sm:py-2">
-                                                    김정림</td>
-                                                <td
-                                                    class="text-812-1624 text-gray-400 font-normal text-center py-1 sm:py-2">
-                                                    -</td>
-                                            </tr>
-                                            <tr>
-                                                <td
-                                                    class="text-812-1624 text-black font-normal text-center py-1 sm:py-2">
-                                                    김정림</td>
-                                                <td
-                                                    class="text-812-1624 text-gray-400 font-normal text-center py-1 sm:py-2">
-                                                    -</td>
-                                            </tr>
-                                            <tr>
-                                                <td
-                                                    class="text-812-1624 text-black font-normal text-center py-1 sm:py-2">
-                                                    김정림</td>
-                                                <td
-                                                    class="text-812-1624 text-gray-400 font-normal text-center py-1 sm:py-2">
-                                                    -</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                            <div class="flex items-center justify-center w-6 h-6 rounded-full absolute -bottom-3 sm:bottom-0 right-16 sm:right-40"
+                                style="background-color: rgba(98, 150, 255, 0.8);">
+                                <div class="w-2 h-2 rounded-full" style="background-color: rgba(49, 107, 223, 1);">
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="px-3 py-8 sm:py-16" style="background-color: rgba(37, 53, 83, 1);">
-                <div class="flex flex-col items-center justify-center w-full">
-                    <div class="flex flex-col gap-y-2.5 sm:gap-y-4 text-white w-full" style="max-width: 700px;">
-                        <div class="text-center text-1418-3038 font-bold">기부하는 방법</div>
+                    <div style="background-color: rgba(225, 235, 255, 1);">
+                        <div class="flex flex-col items-center justify-center px-3 py-8 sm:py-16">
+                            <div class="relative">
+                                <div class="relative z-10 text-1418-3038 text-center font-bold"
+                                    style="color: rgba(55, 89, 183, 1);">
+                                    소외된 이웃들에게 <br>
+                                    주님 사랑의 말씀을 전하는 선교사가 되어 주세요
+                                </div>
+                                <div class="absolute z-0 top-0 -right-8 sm:-right-16">
+                                    <img class="w-24 h-24 sm:w-auto sm:h-auto"
+                                        src="../assets/images/image/donate/donate-4.png" alt="">
+                                </div>
+                            </div>
 
-                        <div class="text-center text-1216-2533 font-normal">
-                            책이나 소정의 금액으로 기부해주시면 <br>
-                            관련 책을 구매하여 보내겠습니다.
-                        </div>
 
-                        <div class="space-y-2.5 sm:space-y-5">
-                            <div class="space-y-1.5 sm:space-y-2.5">
-                                <div class=" text-1216-2533 font-medium">매체 기부</div>
-
-                                <div class="rounded-lg overflow-hidden" style="background-color: rgb(59, 83, 129);">
-                                    <div class="text-1114-2230 flex items-center border-b border-black"
-                                        style="color: rgba(164, 178, 204, 1);">
-                                        <div class="py-1.5 px-3">매체 하나 기부</div>
-
-                                        <div style="width: 1px; height: 28px; background-color: rgba(37, 53, 83, 1);">
-                                        </div>
-
-                                        <div class="flex-1 py-1.5 px-3">기부하기 선택</div>
+                            <div class="relative z-10 mb-2 mt-4 sm:mb-5 sm:mt-8 flex flex-col gap-y-2 sm:gap-y-4">
+                                <div class="flex items-center gap-x-3 sm:gap-x-7 rounded-full p-4 sm:p-8"
+                                    style="background-color: rgba(114, 163, 249, 1);">
+                                    <div>
+                                        <img class="w-14 h-14 sm:w-28 sm:h-28"
+                                            src="../assets/images/image/donate/donate-1.png" alt="">
                                     </div>
-
-                                    <div class="text-1114-2230 flex items-center "
-                                        style="color: rgba(164, 178, 204, 1);">
-                                        <div class="py-1.5 px-3">매체 하나 기부</div>
-
-                                        <div style="width: 1px; height: 28px; background-color: rgba(37, 53, 83, 1);">
-                                        </div>
-
-                                        <div class="flex-1 py-1.5 px-3">기부하기 선택</div>
+                                    <div class="flex-1 text-1216-2533 text-white font-medium">
+                                        책은 참 좋은 매체입니다. <br>
+                                        내가 직접 찾아가 만날수 없는 사람에게까지, <br>
+                                        그 가까이까지 다가가 우리의 말을 대신해 줍니다.
                                     </div>
                                 </div>
 
-                                <div class="text-1114-2230 font-normal" style="color: rgba(164, 178, 204, 1);">
-                                    결제방법은 일반 주문과 똑같이 신용카드, 계좌이체, 무통장 <br>
-                                    입금으로 결제 됩니다.
+                                <div class="flex flex-row-reverse items-center gap-x-3 sm:gap-x-7 rounded-full p-4 sm:p-8"
+                                    style="background-color: rgba(55, 89, 183, 1);">
+                                    <div>
+                                        <img class="w-14 h-14 sm:w-28 sm:h-28"
+                                            src="../assets/images/image/donate/donate-3.png" alt="">
+                                    </div>
+                                    <div class="flex-1 text-1216-2533 text-white font-medium">
+                                        소외된 이웃들에게 주님 사랑의 말씀을 전하는 <br>
+                                        선교사가 되어 주세요.
+                                    </div>
                                 </div>
 
-                                <div class="text-1114-2230 font-normal" style="color: rgba(164, 178, 204, 1);">
-                                    *기부매체 결제 시 택배비는 포함되지 않습니다.
+                                <div class="flex items-center gap-x-3 sm:gap-x-7 rounded-full p-4 sm:p-8"
+                                    style="background-color: rgba(114, 163, 249, 1);">
+                                    <div>
+                                        <img class="w-14 h-14 sm:w-28 sm:h-28"
+                                            src="../assets/images/image/donate/donate-2.png" alt="">
+                                    </div>
+                                    <div class="flex-1 text-1216-2533 text-white font-medium">
+                                        우리가 보내는 책 한 권이 <br>
+                                        가난한 이웃, 어린이, 이주민들에게 <br>
+                                        희망과 기쁨, 용기가 되어 줄 것입니다.
+                                    </div>
                                 </div>
-
                             </div>
 
-                            <div class="space-y-1.5 sm:space-y-2.5">
-                                <div class=" text-1216-2533 font-medium">금액 기부</div>
+                            <div class="text-1216-2533 text-center font-normal">
+                                *책 또는 기부금을 후원해 주시면 책을 필요로 하는 시설과 <br>
+                                작은 독서실 등으로 전달하겠습니다. <br>
+                                감사합니다.
+                            </div>
+                        </div>
+                    </div>
 
-                                <div class="rounded-lg overflow-hidden" style="background-color: rgb(59, 83, 129);">
+                    <div class="px-3 py-8 sm:py-16" style="background-color: rgba(240, 245, 255, 1);">
+                        <div class="flex flex-col items-center justify-center gap-y-4 sm:gap-y-8">
+                            <div class="text-1418-3038 font-bold py-0.5 px-9 sm:py-2 sm:px-20 rounded-full bg-white"
+                                style="color: rgba(55, 89, 183, 1);">
+                                이 달의 추천 도서
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-2.5">
+                                <div class="space-y-3">
                                     <div
-                                        class="text-1114-2230 text-white py-2 sm:py-3 flex items-center gap-x-1 justify-center">
-                                        <p class="text-1216-2533 font-normal text-center">국민은행 </p>
-                                        <span class="inline-block text-1420-3042 ">017037-04-002468</span>
-                                        <p>(재)성바오로딸수도회</p>
+                                        class="border scope-imgage-small frame-image-size-102150-160236 overflow-hidden">
+                                        <img class="w-full h-full" src="../assets/images/image/books/book1.png" alt="">
+                                    </div>
+
+                                    <div class="two-lines text-sm sm:text-base font-semibold">
+                                        사순, 희망의 시간
                                     </div>
                                 </div>
+                                <div class="space-y-3">
+                                    <div
+                                        class="border scope-imgage-small frame-image-size-102150-160236 overflow-hidden">
+                                        <img class="w-full h-full" src="../assets/images/image/books/book2.png" alt="">
+                                    </div>
 
-                                <div class="text-1114-2230 font-normal" style="color: rgba(164, 178, 204, 1);">
-                                    무통장입금 후에 메일(communi@pauline.or.kr)로 연락을 주시거나, 송금하실 때 책나눔/입금자 성함이라고 적어주시면 감사드리겠습니다.
+                                    <div class="two-lines text-sm sm:text-base font-semibold">
+                                        사순, 희망의 시간
+                                    </div>
+                                </div>
+                                <div class="space-y-3">
+                                    <div
+                                        class="border scope-imgage-small frame-image-size-102150-160236 overflow-hidden">
+                                        <img class="w-full h-full" src="../assets/images/image/books/book3.png" alt="">
+                                    </div>
+
+                                    <div class="two-lines text-sm sm:text-base font-semibold">
+                                        사순, 희망의 시간
+                                    </div>
+                                </div>
+                                <div class="space-y-3">
+                                    <div
+                                        class="border scope-imgage-small frame-image-size-102150-160236 overflow-hidden">
+                                        <img class="w-full h-full" src="../assets/images/image/books/book4.png" alt="">
+                                    </div>
+
+                                    <div class="two-lines text-sm sm:text-base font-semibold">
+                                        사순, 희망의 시간
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="px-3 py-8 sm:py-16" style="background-color: rgba(45, 92, 187, 1);">
+                        <div class="flex flex-col items-center justify-center gap-y-4 sm:gap-y-8">
+                            <div class="text-center text-white font-bold text-1418-3038">
+                                기부 천사가 <br>
+                                되어주셔서 감사합니다
+                            </div>
+
+                            <div class="w-full" style="max-width: 700px;">
+                                <div class="rounded-xl overflow-hidden p-1 bg-white">
+                                    <div class="rounded-xl overflow-hidden flex items-stretch">
+                                        <div class="p-2 sm:p-4" style="background-color: rgba(225, 235, 255, 1);">
+                                            <div class="text-1012-2026 whitespace-nowrap"
+                                                style="color: rgba(24, 81, 194, 1);">
+                                                2월</div>
+                                        </div>
+
+                                        <div class="w-full">
+                                            <table class="w-full">
+                                                <thead class="border-b">
+                                                    <tr>
+                                                        <td
+                                                            class="text-812-1624 text-gray-400 font-medium text-center py-1 sm:py-2">
+                                                            책/기부금 보내주시 곳</td>
+                                                        <td
+                                                            class="text-812-1624 text-gray-400 font-medium text-center py-1 sm:py-2">
+                                                            책 보낸 곳</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td
+                                                            class="text-812-1624 text-black font-normal text-center py-1 sm:py-2">
+                                                            김정림</td>
+                                                        <td
+                                                            class="text-812-1624 text-gray-400 font-normal text-center py-1 sm:py-2">
+                                                            -</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td
+                                                            class="text-812-1624 text-black font-normal text-center py-1 sm:py-2">
+                                                            김정림</td>
+                                                        <td
+                                                            class="text-812-1624 text-gray-400 font-normal text-center py-1 sm:py-2">
+                                                            -</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td
+                                                            class="text-812-1624 text-black font-normal text-center py-1 sm:py-2">
+                                                            김정림</td>
+                                                        <td
+                                                            class="text-812-1624 text-gray-400 font-normal text-center py-1 sm:py-2">
+                                                            -</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td
+                                                            class="text-812-1624 text-black font-normal text-center py-1 sm:py-2">
+                                                            김정림</td>
+                                                        <td
+                                                            class="text-812-1624 text-gray-400 font-normal text-center py-1 sm:py-2">
+                                                            -</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td
+                                                            class="text-812-1624 text-black font-normal text-center py-1 sm:py-2">
+                                                            김정림</td>
+                                                        <td
+                                                            class="text-812-1624 text-gray-400 font-normal text-center py-1 sm:py-2">
+                                                            -</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td
+                                                            class="text-812-1624 text-black font-normal text-center py-1 sm:py-2">
+                                                            김정림</td>
+                                                        <td
+                                                            class="text-812-1624 text-gray-400 font-normal text-center py-1 sm:py-2">
+                                                            -</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="px-3 py-8 sm:py-16" style="background-color: rgba(37, 53, 83, 1);">
+                        <div class="flex flex-col items-center justify-center w-full">
+                            <div class="flex flex-col gap-y-2.5 sm:gap-y-4 text-white w-full" style="max-width: 700px;">
+                                <div class="text-center text-1418-3038 font-bold">기부하는 방법</div>
+
+                                <div class="text-center text-1216-2533 font-normal">
+                                    책이나 소정의 금액으로 기부해주시면 <br>
+                                    관련 책을 구매하여 보내겠습니다.
                                 </div>
 
-                                <div class="text-1114-2230 font-normal" style="color: rgba(164, 178, 204, 1);">
-                                    *예) 책나눔/홍길동 <br>
-                                    *익명으로 하길 원하시면 >책나 <br>
-                                    눔/익명
-                                </div>
+                                <div class="space-y-2.5 sm:space-y-5">
+                                    <div class="space-y-1.5 sm:space-y-2.5">
+                                        <div class=" text-1216-2533 font-medium">매체 기부</div>
 
+                                        <div class="rounded-lg overflow-hidden"
+                                            style="background-color: rgb(59, 83, 129);">
+                                            <div class="text-1114-2230 flex items-center border-b border-black"
+                                                style="color: rgba(164, 178, 204, 1);">
+                                                <div class="py-1.5 px-3">매체 하나 기부</div>
+
+                                                <div
+                                                    style="width: 1px; height: 28px; background-color: rgba(37, 53, 83, 1);">
+                                                </div>
+
+                                                <div class="flex-1 py-1.5 px-3">기부하기 선택</div>
+                                            </div>
+
+                                            <div class="text-1114-2230 flex items-center "
+                                                style="color: rgba(164, 178, 204, 1);">
+                                                <div class="py-1.5 px-3">매체 하나 기부</div>
+
+                                                <div
+                                                    style="width: 1px; height: 28px; background-color: rgba(37, 53, 83, 1);">
+                                                </div>
+
+                                                <div class="flex-1 py-1.5 px-3">기부하기 선택</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="text-1114-2230 font-normal" style="color: rgba(164, 178, 204, 1);">
+                                            결제방법은 일반 주문과 똑같이 신용카드, 계좌이체, 무통장 <br>
+                                            입금으로 결제 됩니다.
+                                        </div>
+
+                                        <div class="text-1114-2230 font-normal" style="color: rgba(164, 178, 204, 1);">
+                                            *기부매체 결제 시 택배비는 포함되지 않습니다.
+                                        </div>
+
+                                    </div>
+
+                                    <div class="space-y-1.5 sm:space-y-2.5">
+                                        <div class=" text-1216-2533 font-medium">금액 기부</div>
+
+                                        <div class="rounded-lg overflow-hidden"
+                                            style="background-color: rgb(59, 83, 129);">
+                                            <div
+                                                class="text-1114-2230 text-white py-2 sm:py-3 flex items-center gap-x-1 justify-center">
+                                                <p class="text-1216-2533 font-normal text-center">국민은행 </p>
+                                                <span class="inline-block text-1420-3042 ">017037-04-002468</span>
+                                                <p>(재)성바오로딸수도회</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="text-1114-2230 font-normal" style="color: rgba(164, 178, 204, 1);">
+                                            무통장입금 후에 메일(communi@pauline.or.kr)로 연락을 주시거나, 송금하실 때 책나눔/입금자 성함이라고 적어주시면
+                                            감사드리겠습니다.
+                                        </div>
+
+                                        <div class="text-1114-2230 font-normal" style="color: rgba(164, 178, 204, 1);">
+                                            *예) 책나눔/홍길동 <br>
+                                            *익명으로 하길 원하시면 >책나 <br>
+                                            눔/익명
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
