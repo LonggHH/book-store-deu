@@ -11,6 +11,10 @@ body {
   font-size: 16px;
 }
 
+.text-gray-400 {
+  color: #70737C;
+}
+
 .container-layout {
   max-width: 70rem;
   margin: 0 auto;
@@ -22,8 +26,8 @@ body {
   border-color: black;
 }
 .header-logo {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
 }
 
 input,
@@ -641,12 +645,12 @@ input[type="number"] {
 
 .frame-image-size-102102-196196 {
   width: 196px;
-  width: 196px;
+  height: 196px;
 }
 
 .frame-image-size-102102-160160 {
   width: 160px;
-  width: 160px;
+  height: 160px;
 }
 
 .frame-image-size-196290-350520 {
@@ -1241,7 +1245,7 @@ input[type="number"] {
 
   .frame-image-size-102102-160160 {
     width: 102px;
-    width: 102px;
+    height: 102px;
   }
 
   .frame-image-size-280200-460200 {
@@ -1330,7 +1334,7 @@ input[type="number"] {
 
   .frame-image-size-102102-196196 {
     width: 102px;
-    width: 102px;
+    height: 102px;
   }
 
   .frame-video-size-320180-340190 {

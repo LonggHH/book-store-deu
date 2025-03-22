@@ -1009,9 +1009,311 @@
                         </div>
 
                         <div class="text-center py-4 px-5 sm:p-0 mt-8">
-                            <button
+                            <button onclick="showSectionPayment(this)"
                                 class="text-15-l-22 font-semibold text-white bg-blue-500 rounded py-2.5 w-full sm:w-28">반품하기</button>
                         </div>
+
+
+
+                        <section id="section-payment" class="hidden">
+                            <div
+                                class="py-6 px-5 sm:p-0 border sm:border-none border-t-8 border-b-8 border-gray-100 mt-6 sm:mt-8">
+                                <div class="text-center rounded-lg border border-gray-100 p-3 sm:px-6 space-y-2"
+                                    style="background-color: #FFFAFA;">
+                                    <p class="text-base font-medium" style="color: #FF4242;">추가결제가 필요합니다.</p>
+                                    <p class="text-sm font-normal text-gray-500">*총환불 금액이 마이너스(-)이면 반품시 결제를 하셔야합니다.</p>
+                                </div>
+                            </div>
+
+                            <section class="sm:mt-8">
+                                <div class="p-5 sm:p-0 sm:pb-3 border-b border-gray-100 sm:border-black sm:mb-8">
+                                    <p class="text-1724-2230 font-semibold">결제</p>
+                                </div>
+
+                                <div class="bg-white sm:border rounded-lg">
+                                    <!-- Tiêu đề và các nút -->
+                                    <div class="p-5 sm:py-5 sm:px-6 sm:border-b  flex items-center justify-between">
+                                        <h2 class="text-lg font-semibold">할인 적용</h2>
+                                    </div>
+
+                                    <!-- Thông tin người nhận và địa chỉ -->
+                                    <div class="p-5 sm:p-6 sm:pb-8">
+                                        <div class=" flex flex-col gap-y-5">
+                                            <!-- pt3 -->
+                                            <div>
+                                                <div class="flex items-center gap-x-8 gap-y-2 flex-wrap">
+                                                    <span class="text-1522-1624 font-medium w-24">예치금</span>
+
+                                                    <div class="flex-1 flex items-center gap-x-2">
+                                                        <div
+                                                            class="flex-1 border rounded p-2 px-4 flex items-center gap-2">
+                                                            <input id="momney" type="number" placeholder="0"
+                                                                class="text-right flex-1 border-gray-300 co-input-discount">
+                                                            <span
+                                                                class="inline-block text-xs font-normal text-gray-300">원</span>
+                                                        </div>
+                                                        <button onclick="document.querySelector('#momney').value = 2000"
+                                                            class="rounded py-2.5 px-3 sm:px-5 text-15-l-22 font-semibold whitespace-nowrap sm:w-28"
+                                                            style="color: rgba(31, 111, 237, 1); background-color: rgba(230, 241, 255, 1);">쿠폰
+                                                            변경</button>
+                                                    </div>
+                                                </div>
+                                                <div class="flex items-center gap-x-8 gap-y-2 flex-wrap mt-2">
+                                                    <span
+                                                        class="hidden sm:block text-1522-1624 font-medium w-24"></span>
+
+                                                    <div
+                                                        class="flex-1 flex flex:col sm:flex-row items-center gap-y-2 gap-x-9 flex-wrap">
+                                                        <div class="flex items-center">
+                                                            <span class="inline-block text-xs font-normal">현재 예치금</span>
+                                                            <span class="ml-2 flex items-center whitespace-normal"
+                                                                style="color: rgba(32, 131, 254, 1);">
+                                                                <span
+                                                                    class="inline-block text-xs font-semibold">00000000000</span>
+                                                                <span class="inline-block text-xs font-normal">점</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- pt4 -->
+                                            <div>
+                                                <div class="flex items-center gap-x-8 gap-y-2 flex-wrap">
+                                                    <span
+                                                        class="text-1522-1624 font-medium w-26 whitespace-nowrap">바오로딸상품권</span>
+
+                                                    <div class="flex-1 flex items-center gap-x-2">
+                                                        <div
+                                                            class="flex-1 border rounded p-2 px-4 flex items-center gap-2">
+                                                            <input type="number"
+                                                                class="text-right flex-1 border-gray-300 co-input-discount"
+                                                                readonly>
+                                                        </div>
+                                                        <button onclick="toggle('#modal-certificate')"
+                                                            class="rounded py-2.5 px-3 sm:px-5 text-15-l-22 font-semibold whitespace-nowrap sm:w-28"
+                                                            style="color: rgba(31, 111, 237, 1); background-color: rgba(230, 241, 255, 1);">상품권
+                                                            등록</button>
+                                                    </div>
+                                                </div>
+                                                <div class="flex sm:hidden items-center gap-x-8 gap-y-2 flex-wrap mt-2">
+                                                    <span
+                                                        class="hidden sm:block text-1522-1624 font-medium w-24"></span>
+
+                                                    <div
+                                                        class="flex-1 flex flex:col sm:flex-row items-center gap-y-2 gap-x-9 flex-wrap">
+                                                        <div class="flex items-center">
+                                                            <span class="inline-block text-xs font-normal">현재
+                                                                마일리지</span>
+                                                            <span class="ml-2 flex items-center whitespace-normal"
+                                                                style="color: rgba(32, 131, 254, 1);">
+                                                                <span
+                                                                    class="inline-block text-xs font-semibold">00000000000</span>
+                                                                <span class="inline-block text-xs font-normal">점</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <div class="bg-white border-t sm:border border-gray-200 sm:rounded-lg sm:mt-4">
+                                <div class="p-5 sm:py-5 sm:px-6 sm:border-b flex items-center gap-x-2.5">
+                                    <h2 class="text-1724-2230 font-semibold">결제 수단</h2>
+                                </div>
+
+                                <div class="p-5 sm:p-6 sm:pb-8">
+                                    <div class="flex flex-col gap-5">
+                                        <!-- khoi 1 -->
+                                        <div class="flex items-center gap-x-8 gap-y-2 flex-wrap">
+                                            <div class="flex items-center gap-3 py-2.5 sm:py-0">
+                                                <input type="radio" name="method-pay" class="block sm:hidden w-6 h-6">
+                                                <span class="text-1522-1624 font-medium w-24">간편 결제</span>
+                                            </div>
+
+                                            <div
+                                                class="w-full sm:flex-1 lg:w-auto grid gap-4 md:grid-cols-4 sm:grid-cols-3 grid-cols-2">
+                                                <button onclick="chooseMethod(this, 1)"
+                                                    class="btn-method w-full rounded-lg py-1.5 border flex items-center justify-center">
+                                                    <img style="width: 110px; height: 28px;"
+                                                        src="../assets/images/icon/cart/kakaopay.svg" alt="kakao">
+                                                </button>
+                                                <button onclick="chooseMethod(this, 1)"
+                                                    class="btn-method w-full rounded-lg py-1.5 border flex items-center justify-center">
+                                                    <img style="width: 110px; height: 28px;"
+                                                        src="../assets/images/icon/cart/npay.svg" alt="kakao">
+                                                </button>
+                                                <button onclick="chooseMethod(this, 1)"
+                                                    class="btn-method w-full rounded-lg py-1.5 border flex items-center justify-center">
+                                                    <img style="width: 110px; height: 28px;"
+                                                        src="../assets/images/icon/cart/payco.svg" alt="kakao">
+                                                </button>
+                                                <button onclick="chooseMethod(this, 1)"
+                                                    class="btn-method w-full rounded-lg py-1.5 border flex items-center justify-center">
+                                                    <img style="width: 110px; height: 28px;"
+                                                        src="../assets/images/icon/cart/samsungpay.svg" alt="kakao">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- khoi 2 -->
+                                        <div class="flex items-center gap-x-8 gap-y-2 flex-wrap">
+                                            <div class="flex items-center gap-3 py-2.5 sm:py-0">
+                                                <input type="radio" name="method-pay" class="block sm:hidden w-6 h-6">
+                                                <span class="text-1522-1624 font-medium w-24">일반 결제</span>
+                                            </div>
+
+                                            <div class="flex-1 hidden sm:flex items-center gap-3">
+                                                <button onclick="chooseMethod(this, 2)"
+                                                    class="btn-method flex-1 py-2.5 px-3 whitespace-nowrap text-15-l-22 font-semibold border border-gray-300 rounded-lg">
+                                                    신용카드
+                                                </button>
+                                                <button onclick="chooseMethod(this, 2)"
+                                                    class="btn-method flex-1 py-2.5 px-3 whitespace-nowrap text-15-l-22 font-semibold border border-gray-300 rounded-lg">
+                                                    휴대폰 결제
+                                                </button>
+
+                                            </div>
+                                        </div>
+                                        <!-- khoi 3 -->
+                                        <div class="flex items-center gap-x-8 gap-y-2 flex-wrap">
+                                            <div class="flex items-center gap-3 py-2.5 sm:py-0">
+                                                <input type="radio" name="method-pay" class="block sm:hidden w-6 h-6">
+                                                <span class="text-1522-1624 font-medium w-24">현금 결제</span>
+                                            </div>
+
+                                            <div class="flex-1 hidden sm:flex items-center gap-3">
+                                                <button onclick="chooseMethod(this, 3)"
+                                                    class="btn-method flex-1 py-2.5 px-3 whitespace-nowrap text-15-l-22 font-semibold border border-gray-300 rounded-lg">
+                                                    실시간 계좌이체
+                                                </button>
+                                                <button onclick="chooseMethod(this, 3)"
+                                                    class="btn-method flex-1 py-2.5 px-3 whitespace-nowrap text-15-l-22 font-semibold border border-gray-300 rounded-lg">
+                                                    온라인(무통장)입금
+                                                </button>
+                                                <button onclick="chooseMethod(this, 3)"
+                                                    class="btn-method flex-1 py-2.5 px-3 whitespace-nowrap text-15-l-22 font-semibold border border-gray-300 rounded-lg">
+                                                    가상계좌(에스크로)
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- khoi bo sung -->
+                                        <div id="input-info-bank"
+                                            class="flex items-center gap-x-8 gap-y-2 flex-wrap hidden">
+                                            <div class="hidden sm:flex items-center gap-3 py-2.5 sm:py-0">
+                                                <span class="text-1522-1624 font-medium w-24"></span>
+                                            </div>
+
+                                            <div class="flex-1 rounded-lg p-5 bg-gray-100 space-y-3">
+                                                <div
+                                                    class="flex flex-col sm:flex-row items-start sm:items-center gap-y-2 gap-x-3">
+                                                    <select class="w-full sm:flex-1 py-2 px-4 rounded border bg-white">
+                                                        <option value="">은행을 선택해주세요</option>
+                                                    </select>
+
+
+                                                    <div class="w-full sm:flex-1 py-2 px-4 rounded border bg-white">
+                                                        <input class="text-15-l-22 font-normal w-full bg-transparent"
+                                                            placeholder="입금자명을 입력해주세요" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="py-2 px-4 rounded border bg-white">
+                                                    <input class="text-15-l-22 font-normal w-full bg-transparent"
+                                                        placeholder="입금자명을 입력해주세요" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class=" bg-white border-t sm:border border-gray-200 sm:rounded-lg sm:mt-4">
+                                <div class="p-5 sm:py-5 sm:px-6 sm:border-b">
+                                    <h2 class="text-1724-2230 font-semibold">결제 상세</h2>
+                                </div>
+
+                                <div class="p-5 sm:p-6 sm:pb-0">
+                                    <div class="flex flex-col gap-3">
+                                        <div class="flex items-center justify-between">
+                                            <span class="text-15-l-22 font-medium text-gray-500">반품 상품수</span>
+                                            <span class="text-15-l-22 font-medium">6 개</span>
+                                        </div>
+                                        <div class="flex items-center justify-between">
+                                            <span class="text-15-l-22 font-medium text-gray-500">반품 상품금액</span>
+                                            <span class="text-15-l-22 font-medium">30,000 개</span>
+                                        </div>
+                                        <div class="flex items-center justify-between">
+                                            <span class="text-15-l-22 font-medium text-gray-500">배송비</span>
+                                            <span class="text-15-l-22 font-medium">0 개</span>
+                                        </div>
+                                        <div class="flex items-center justify-between">
+                                            <span class="text-15-l-22 font-medium text-gray-500">반품 택배비</span>
+                                            <span class="text-15-l-22 font-medium">3,500 개</span>
+                                        </div>
+                                        <div class="flex items-center justify-between">
+                                            <span class="text-15-l-22 font-medium text-gray-500">회수 마일리지</span>
+                                            <span class="text-15-l-22 font-medium">0 개</span>
+                                        </div>
+                                    </div>
+
+                                    <hr class="block my-6 border-gray-300">
+
+                                    <div class="flex items-center justify-between sm:my-6">
+                                        <div class="flex sm:flex-row items-center justify-between w-full">
+                                            <span class="text-1318-1522 font-normal whitespace-nowrap sm:mb-0">최종 결제
+                                                금액</span>
+                                            <span
+                                                class="flex items-center text-22-l-30 font-semibold whitespace-nowrap">1,600<span
+                                                    class="inline-block text-15-l-22 font-normal">개</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="block sm:hidden h-2" style="background-color: rgba(247, 247, 248, 1);">
+                                </div>
+
+                                <div class="p-5 sm:p-0">
+                                    <div class="px-5 py-5 sm:py-6 rounded-xl sm:rounded-none"
+                                        style="background-color: rgba(247, 247, 248, 1);">
+                                        <p class="text-15-l-22 font-medium mb-5" style="color: rgba(32, 131, 254, 1);">
+                                            반품 결제정보에 동의합니다.
+                                        </p>
+
+                                        <div class="flex flex-col gap-y-2">
+                                            <div class="flex items-center justify-between">
+                                                <span class="text-13-l-18 font-normal inline-block text-gray-700">(전자상거래
+                                                    제 8조 2항)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="sm:hidden px-5 sm:px-0 flex items-center justify-between sm:my-6 border-t-8 border-gray-100 sm:rounded-lg py-2.5">
+                                    <div class="block sm:hidden">
+                                        <span class="inline-block text-15-l-22 font-medium">총 1개</span>
+                                    </div>
+                                    <div class="flex flex-col sm:flex-row items-center justify-between sm:w-full">
+                                        <span class="text-1318-1522 font-normal whitespace-nowrap mb-1 sm:mb-0">전체 주문
+                                            금액</span>
+                                        <span
+                                            class="flex items-center text-22-l-30 font-semibold whitespace-nowrap">20,000<span
+                                                class="inline-block text-15-l-22 font-normal">개</span></span>
+                                    </div>
+                                </div>
+
+                                <div class="py-2.5 px-5 sm:p-6 border-t sm:border-none">
+                                    <div class="flex">
+                                        <button onclick="gotoPage('./CO-or-order-step-3-order.html')"
+                                            class="flex-1 whitespace-nowrap py-2.5 text-15-l-22 font-semibold text-white rounded"
+                                            style="background-color: rgba(32, 131, 254, 1);">결제하기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
                     </div>
                 </main>
                 <!-- start main -->
@@ -1373,6 +1675,113 @@
             </div>
         </div>
 
+
+        <!-- modal 3 -->
+        <div id="modal-certificate"
+            class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+            <!-- Modal Content -->
+            <div class="bg-white sm:rounded-lg p-5 sm:p-8 h-full overflow-y-auto custom-scroll" style="width: 560px;">
+                <!-- Modal Header -->
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-2028-2230 font-semibold">상품권 등록</h3>
+                    <button class="cursor-pointer" onclick="toggle('#modal-certificate')">
+                        <img class="w-6 h-6" src="../assets/images/icon/common/x.svg" alt="icon">
+                    </button>
+                </div>
+
+                <div class="flex flex-col items-center justify-center gap-y-6 pb-3">
+                    <div class="rounded-xl shadow-md pt-3.5 pl-3.5 pr-4 pb-5 border"
+                        style="width: 244px; height: 146px;">
+                        <div>
+                            <img style="width: 38px; height: 38px;" src="../assets/images/logo/Logo.svg" alt="icon">
+                        </div>
+                        <div class="flex justify-end w-full">
+                            <div class="py-1 px-2.5 border-2 border-blue-600">
+                                <span class="text-base font-semibold">1234 1234 1234</span>
+                            </div>
+                        </div>
+                        <div class="mt-8 flex justify-end">
+                            <img src="../assets/images/image/common/barcode.png" alt="bode">
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <p class="text-15-l-22 font-normal text-gray-600">상품권 뒷면 하단의 스크래치를 동전으로 긁으신 후 12자리 번호를 입력하시고 하단에
+                            [결제하기] 버튼을 클릭하시면 됩니다.</p>
+                        <p class="text-15-l-22 font-normal text-gray-600">상품권 번호는 영문 대/소 문자를 구분하여 입력해 주시기 바랍니다.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-100 bg-gray-100-overflow-5-sm-8">
+                    <div class="py-3">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-3">
+                            <div class="flex items-center">
+                                <span class="inline-block h-5 w-5 text-sm">1.</span>
+                                <input type="number" class="ml-2 border rounded w-full p-2">
+                            </div>
+                            <div class="flex items-center">
+                                <span class="inline-block h-5 w-5 text-sm">2.</span>
+                                <input type="number" class="ml-2 border rounded w-full p-2">
+                            </div>
+                            <div class="flex items-center">
+                                <span class="inline-block h-5 w-5 text-sm">3.</span>
+                                <input type="number" class="ml-2 border rounded w-full p-2">
+                            </div>
+                            <div class="flex items-center">
+                                <span class="inline-block h-5 w-5 text-sm">4.</span>
+                                <input type="number" class="ml-2 border rounded w-full p-2">
+                            </div>
+                            <div class="flex items-center">
+                                <span class="inline-block h-5 w-5 text-sm">5.</span>
+                                <input type="number" class="ml-2 border rounded w-full p-2">
+                            </div>
+                            <div class="flex items-center">
+                                <span class="inline-block h-5 w-5 text-sm">6.</span>
+                                <input type="number" class="ml-2 border rounded w-full p-2">
+                            </div>
+                            <div class="flex items-center">
+                                <span class="inline-block h-5 w-5 text-sm">7.</span>
+                                <input type="number" class="ml-2 border rounded w-full p-2">
+                            </div>
+                            <div class="flex items-center">
+                                <span class="inline-block h-5 w-5 text-sm">8.</span>
+                                <input type="number" class="ml-2 border rounded w-full p-2">
+                            </div>
+                            <div class="flex items-center">
+                                <span class="inline-block h-5 w-5 text-sm">9.</span>
+                                <input type="number" class="ml-2 border rounded w-full p-2">
+                            </div>
+                            <div class="flex items-center">
+                                <span class="inline-block h-5 w-5 text-sm">10.</span>
+                                <input type="number" class="ml-2 border rounded w-full p-2">
+                            </div>
+                            <div class="flex items-center">
+                                <span class="inline-block h-5 w-5 text-sm">11.</span>
+                                <input type="number" class="ml-2 border rounded w-full p-2">
+                            </div>
+                            <div class="flex items-center">
+                                <span class="inline-block h-5 w-5 text-sm">12.</span>
+                                <input type="number" class="ml-2 border rounded w-full p-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Select Button -->
+                <div class="mt-20 sm:mt-6 pb-1 sm:pb-0 pt-6 sm:pt-0 space-y-6">
+                    <p class="text-14-l-20 font-normal text-gray-400">
+                        - 상품권의 스크래치를 벗긴 이후 바오로딸 전국 서원에서는 사용하실 수 없습니다. <br>
+                        - 상품권 결제 후 잔액 발생 시 예치금으로 충전하여 드립니다. <br>
+                        - 결제 후 주문 취소 시 상품권은 예치금으로 전환하여 드립니다.
+                    </p>
+                    <button onclick="toggle('#modal-certificate')"
+                        class="w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        선택하기
+                    </button>
+                </div>
+            </div>
+
+        </div>
     </section>
 
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
@@ -1722,6 +2131,25 @@
                 document.querySelector('#exchange-item-pc').innerHTML = ''
                 document.querySelector('#exchange-item-mobile').innerHTML = ''
             }
+        }
+
+        //----------------------------------
+        function chooseMethod(btn, i) {
+            document.querySelectorAll('.btn-method').forEach((btnItem) => {
+                btnItem.classList.remove('border-blue-400')
+            })
+            btn.classList.add('border-blue-400')
+
+            if (i === 3) {
+                document.querySelector('#input-info-bank').classList.remove('hidden')
+            } else {
+                document.querySelector('#input-info-bank').classList.add('hidden')
+            }
+        }
+
+        function showSectionPayment(el) {
+            document.querySelector('#section-payment').classList.remove('hidden')
+            el.classList.add('hidden')
         }
     </script>
 </body>

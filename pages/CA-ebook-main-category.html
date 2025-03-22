@@ -788,6 +788,48 @@
                         <!-- end slide -->
 
                     </div>
+
+                    <!-- pagiantion -->
+                    <div class="flex items-center justify-center">
+                        <div class="flex items-center">
+                            <button onclick="gotoSE('start')" class="p-1 sm:p-2">
+                                <img class="w-6 h-6" src="../assets/images/icon/common/prev-to-first.svg" alt="icon">
+                            </button>
+                            <button onclick="moveTenPage('minus')" class="p-1 sm:p-2">
+                                <img class="w-6 h-6" src="../assets/images/icon/common/prev.svg" alt="icon">
+                            </button>
+
+                            <div id="list-btn-pagi" class="flex items-center">
+                                <button class="p-1 sm:p-2">
+                                    <span
+                                        class="w-6 h-6 rounded-full bg-black text-white text-13-l-18 font-medium flex items-center justify-center">1</span>
+                                </button>
+                                <button class="p-1 sm:p-2">
+                                    <span
+                                        class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">2</span>
+                                </button>
+                                <button class="p-1 sm:p-2">
+                                    <span
+                                        class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">3</span>
+                                </button>
+                                <button class="p-1 sm:p-2">
+                                    <span
+                                        class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">4</span>
+                                </button>
+                                <button class="p-1 sm:p-2">
+                                    <span
+                                        class="w-6 h-6 rounded-full text-gray-400 text-13-l-18 font-medium flex items-center justify-center">5</span>
+                                </button>
+                            </div>
+
+                            <button onclick="moveTenPage('plus')" class="p-1 sm:p-2">
+                                <img class="w-6 h-6" src="../assets/images/icon/common/next.svg" alt="icon">
+                            </button>
+                            <button onclick="gotoSE('end')" class="p-1 sm:p-2">
+                                <img class="w-6 h-6" src="../assets/images/icon/common/next-to-end.svg" alt="icon">
+                            </button>
+                        </div>
+                    </div>
                 </main>
                 <!-- start main -->
 
@@ -1315,6 +1357,84 @@
             document.querySelector(`#list-suggestion`).innerHTML = stringHTMl;
         }
         renderListSuggestion()
+
+        // pagiantion js
+        const paginationButtons = document.querySelectorAll('#list-btn-pagi button');
+        paginationButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // pageIndex = Number(button.textContent)
+                // Xóa lớp cũ khỏi tất cả các nút
+                paginationButtons.forEach(btn => {
+                    const span = btn.querySelector('span');
+                    span.classList.remove('bg-black', 'text-white');
+                    span.classList.add('text-gray-400');
+                });
+
+                // Thêm lớp vào nút hiện tại
+                const span = button.querySelector('span');
+                span.classList.add('bg-black', 'text-white');
+                span.classList.remove('text-gray-400');
+            });
+        });
+
+        function moveTenPage(status) {
+            switch (status) {
+                case 'plus':
+                    paginationButtons.forEach(button => {
+                        if (Number(button.textContent) + 5 > 20) return
+
+                        button.querySelector('span').textContent = Number(button.textContent) + 5
+                    });
+                    break
+                case 'minus':
+                    paginationButtons.forEach(button => {
+                        if (Number(button.textContent) - 5 > 0) {
+                            button.querySelector('span').textContent = Number(button.textContent) - 5
+                        }
+                    });
+                    break
+            }
+        }
+
+        function gotoSE(status) {
+            switch (status) {
+                case 'start':
+                    let i = 1
+                    paginationButtons.forEach(button => {
+                        button.querySelector('span').textContent = i++;
+                    });
+                    paginationButtons.forEach((button, index) => {
+                        const span = button.querySelector('span');
+                        span.classList.remove('bg-black', 'text-white');
+                        span.classList.add('text-gray-400');
+
+                        if (index === 0) {
+                            const span = button.querySelector('span');
+                            span.classList.add('bg-black', 'text-white');
+                            span.classList.remove('text-gray-400');
+                        }
+                    });
+                    break
+                case 'end':
+                    let y = (20 - 4)
+                    paginationButtons.forEach(button => {
+                        button.querySelector('span').textContent = y++
+                    });
+                    paginationButtons.forEach((button, index) => {
+                        const span = button.querySelector('span');
+                        span.classList.remove('bg-black', 'text-white');
+                        span.classList.add('text-gray-400');
+
+                        if (index === 4) {
+                            const span = button.querySelector('span');
+                            span.classList.add('bg-black', 'text-white');
+                            span.classList.remove('text-gray-400');
+                        }
+                    });
+                    break
+            }
+        }
+
     </script>
 </body>
 
