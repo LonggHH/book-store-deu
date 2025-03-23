@@ -1641,63 +1641,85 @@
         // ==
         function renderLeftMenu() {
             let stringHTML = ''
-            Array(4).fill(null).forEach((el, i) => {
-                stringHTML +=
+            const menu = [
+                { name: '성경' },
+                { name: '신학' },
+                { name: '전례' },
+                { name: '교리/성사' },
+                { name: '교회문헌' },
+                { name: '교회법' },
+                { name: '묵상/영성/강론' },
+                { name: '교회사' },
+                { name: '교부학' },
+                { name: '수도생활' },
+                { name: '성지' },
+                { name: '철학' },
+                { name: '종교' },
+                { name: '사회' },
+                { name: '예술/분학' },
+                { name: '가정/심리/교육' },
+            ]
+            const subMenu = [
+                { name: '새번역 성경' },
+                { name: '200주년 성경' },
+                { name: '주석 성경' },
+                { name: '외국어 성경' },
+                { name: '성경 해설 및 주석 성경' },
+                { name: '새성경연구방법 일반' },
+                { name: '성경묵상' },
+                { name: '성경 에세이' },
+                { name: '성경 공부 교재' },
+                { name: '거룩한 도서' },
+                { name: '사전' },
+                { name: '외경' },
+                { name: '성경 신학' },
+                { name: '성경 언어' },
+            ]
+
+            menu.forEach((el) => {
+                let subString = ''
+                subMenu.forEach((item) => {
+                    subString += `
+                        <li class="p-2 text-gray-400 hover:text-gray-800 hover:bg-gray-200 hover:font-semibold cursor-pointer text-sm font-normal">${item.name}</li>
                     `
-                    <li class="">
-                        <button class="toggle-menu-btn w-full text-left text-sm leading-5 font-semibold cursor-pointer p-2 flex items-center justify-between">
-                            <span class="inline-block text-18-l-26">대분류</span>
-                            <i class="fa-solid fa-chevron-down text-gray-400 font-normal"></i>
+                })
+
+                stringHTML += `
+                    <li onmouseenter="showMenu(this)" onmouseleave="hideMenu(this)"
+                        class="flex items-center justify-between hover:bg-gray-100 cursor-pointer relative group">
+
+                        <p class="p-2 text-base font-semibold" style="color: #171719;">${el.name}</p>
+
+                        <button
+                            class="w-5 h-5 flex items-center justify-center absolute right-2 top-1/2 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            <i class="fa-solid fa-chevron-left"></i>
                         </button>
-                        <ul class="${i === 0 ? '' : 'hidden'} p-2 border-b">
-                            <li class="flex items-center justify-between py-1.5 cursor-pointer" onclick="gotoPage('./CA-good-middle-category.html')">
-                                <span class="text-base font-normal">중분류</span>
-                                <img class="${i === 0 ? '' : 'hidden'}" src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg" alt=">">
-                            </li>
-                            <li class="flex items-center justify-between py-1.5 cursor-pointer" onclick="gotoPage('./CA-good-middle-category.html')">
-                                <span class="text-base font-normal text-gray-500">중분류</span>
-                                <img class="hidden" src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg" alt=">">
-                            </li>
-                            <li class="flex items-center justify-between py-1.5 cursor-pointer" onclick="gotoPage('./CA-good-middle-category.html')">
-                                <span class="text-base font-normal text-gray-500">중분류</span>
-                                <img class="hidden" src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg" alt=">">
-                            </li>
-                            <li class="flex items-center justify-between py-1.5 cursor-pointer" onclick="gotoPage('./CA-good-middle-category.html')">
-                                <span class="text-base font-normal text-gray-500">중분류</span>
-                                <img class="hidden" src="../assets/images/icon/category/circle-chevron-right-bg-black-text-white.svg" alt=">">
-                            </li>
+
+                        <ul
+                            style="border-top-right-radius: 8px; border-bottom-right-radius: 8px; width: 120px; box-shadow: 0px 4px 8px 0px #0000000A;"
+                            class="border absolute top-0 left-full bg-gray-100 shadow-md z-50 text-sm hidden">
+                            ${subString}
                         </ul>
                     </li>
                 `
             })
+
             document.querySelector('#left-menu').innerHTML = stringHTML
-
-            document.querySelectorAll('.toggle-menu-btn').forEach((button, i) => {
-                button.addEventListener('click', () => {
-                    // Ẩn tất cả menu con
-                    document.querySelectorAll('.toggle-menu-btn + ul').forEach(menu => {
-                        menu.classList.add('hidden');
-                        menu.classList.remove('visible');
-                    });
-
-                    // Hiện menu con của button được click
-                    const menu = button.nextElementSibling; // Lấy menu con ngay sau button
-                    if (menu) {
-                        menu.classList.toggle('hidden');
-                        menu.classList.toggle('visible');
-                    }
-
-                    //
-                    document.querySelectorAll('.toggle-menu-btn').forEach((button, y) => {
-                        if (i !== y) {
-                            button.querySelector('i').classList.remove('fa-chevron-up')
-                            button.querySelector('i').classList.add('fa-chevron-down')
-                        }
-                    })
-                    button.querySelector('i').classList.remove('fa-chevron-down')
-                    button.querySelector('i').classList.add('fa-chevron-up')
-                });
-            });
+        }
+        // Hiển thị và ẩn menu con
+        function showMenu(element) {
+            const submenu = element.querySelector('ul')
+            if (submenu) {
+                submenu.classList.remove('hidden')
+                submenu.classList.add('block')
+            }
+        }
+        function hideMenu(element) {
+            const submenu = element.querySelector('ul')
+            if (submenu) {
+                submenu.classList.remove('block')
+                submenu.classList.add('hidden')
+            }
         }
         renderLeftMenu()
 
