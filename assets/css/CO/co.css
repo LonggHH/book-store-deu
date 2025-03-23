@@ -107,6 +107,16 @@
   height: 160px;
 }
 
+.frame-size-102102-lg160160 {
+  width: 160px;
+  height: 160px;
+}
+
+.frame-size-7070-lg160160 {
+  width: 160px;
+  height: 160px;
+}
+
 .frame-size-70108-160150 {
   width: 160px;
   height: 150px;
@@ -324,5 +334,18 @@
 @media (max-width: 375px) {
   .co-input-discount {
     width: 128px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .frame-size-102102-lg160160 {
+    width: 120px;
+    height: 120px;
+  }
+
+  .frame-size-7070-lg160160 {
+    width: 70px;
+    height: 70px;
   }
 }

@@ -110,7 +110,7 @@ ol li {
   background-color: rgba(55, 56, 60, 0.28);
 }
 
-.text-highlight-dot::after {
+/* .text-highlight-dot::after {
   content: "";
   position: absolute;
   top: 10px;
@@ -120,7 +120,7 @@ ol li {
   height: 6px;
   background-color: #ee1762;
   border-radius: 50%;
-}
+} */
 
 .text-9-l-11 {
   font-size: 9px;
@@ -1017,6 +1017,11 @@ input[type="number"] {
 
 @media (max-width: 640px) {
 
+  .header-logo {
+    width: 40px;
+    height: 40px;
+  }
+
   .text-1826-2230 {
     font-size: 18px;
     line-height: 26px;
@@ -1397,10 +1402,6 @@ input[type="number"] {
 }
 
 @media (max-width: 425px) {
-  .header-logo {
-    width: 40px;
-    height: 40px;
-  }
 
   .mobi-hidden {
     display: none;
