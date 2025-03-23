@@ -1847,8 +1847,9 @@
     <aside style="height: 44px;"></aside>
 
     <!-- bot -->
-    <div id="matte" class="fixed top-0 left-0 w-screen h-screen bg-black opacity-60 hidden" style="z-index: 100;"></div>
-    <section class="fixed bottom-0 left-0 right-0 bg-white"
+    <div id="matte" class="fixed top-0 left-0 w-screen h-screen bg-black opacity-60 hidden" style="z-index: 100;"
+        onclick="hideSection()"></div>
+    <section id="botton-menu" class="fixed bottom-0 left-0 right-0 bg-white"
         style="border-top-left-radius: 8px; border-top-right-radius: 8px; z-index: 100;">
         <div class="container-layout pt-2.5 pb-6">
             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-x-5 flex-wrap gap-y-2">
@@ -1883,7 +1884,7 @@
                             </div>
 
                             <div id="frame-sc-count"
-                                class="sm:hidden scope-change-quantity flex items-center space-x-4 p-1 border rounded"
+                                class="sm:hidden scope-change-quantity flex items-center justify-between space-x-4 p-1 border rounded flex-1 sm:w-auto"
                                 style="width: fit-content;">
                                 <button id="bot-minus"
                                     class="xy-30-38 flex items-center justify-center bg-gray-100 rounded">-</button>
@@ -1902,6 +1903,18 @@
                                     <i class="fa-solid fa-x"></i>
                                 </button>
                             </div> -->
+                        </div>
+
+                        <div id="mobile-price-select"
+                            class="flex sm:hidden sm:flex-row items-end sm:items-center gap-y-1 gap-x-6 justify-between sm:justify-normal w-full sm:w-auto">
+                            <h4
+                                class="text-1318-1624 font-normal text-gray-400 sm:text-black sm:font-semibold whitespace-nowrap">
+                                총 상품 금액</h4>
+                            <div class="flex items-center gap-x-1">
+                                <span class="inline-block text-2230-2838 font-semibold sm:font-bold"
+                                    id="total-price">9,000</span>
+                                <span class="inline-block text-base font-normal">원</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -3285,7 +3298,7 @@
             if (wScreen <= 640) {
                 matte.classList.add('hidden')
                 btnDown.classList.add('hidden')
-                frameTopPrice.classList.remove('hidden')
+                // frameTopPrice.classList.remove('hidden')
                 frameTopEditPrice.classList.add('hidden')
                 frameBtnNear.classList.remove('hidden')
                 frameBtnFar.classList.add('hidden')
@@ -3535,6 +3548,20 @@
             document.querySelector('#count-pc').value = quantity
             document.querySelector('#total-price').innerHTML = (9000 * quantity).toLocaleString('en-US')
         })
+
+        // ---
+        function hideSection() {
+            // Ẩn lớp nền và section
+            document.getElementById('matte').classList.add('hidden');
+            closeEditQuantity()
+        }
+
+        if (selectCountValues.length === 0) {
+            document.querySelector('#frame-sc-select').classList.add('hidden')
+            document.querySelector('#frame-sc-count').querySelector('input').classList.add('flex-1')
+            document.querySelector('#frame-sc-select-pc').classList.add('hidden')
+            document.querySelector('#frame-sc-pc-count').classList.add('hidden')
+        }
     </script>
 </body>
 
