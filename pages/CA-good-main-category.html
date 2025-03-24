@@ -844,17 +844,18 @@
                             <div class="mobi-px flex items-center justify-between">
                                 <h3 class="text-2028-2230 font-semibold">BEST</h3>
 
-                                <!-- <div class="flex items-center gap-1 py-1 cursor-pointer">
-                                    <span class="inline-block text-sm sm:text-base font-semibold text-gray-400">더보기</span>
+                                <div class="flex items-center gap-1 py-1 cursor-pointer">
+                                    <span
+                                        class="inline-block text-sm sm:text-base font-semibold text-gray-400">더보기</span>
                                     <img src="../assets/images/icon/common/plus-gray.svg" alt="+">
-                                </div> -->
+                                </div>
                             </div>
 
                             <!-- start slide -->
                             <div class="pl-5 md:pl-0">
                                 <div class="relative">
                                     <!-- best swiper -->
-                                    <div class="overflow-x-hidden">
+                                    <div class="overflow-x-scroll custom-scroll" id="frame-best-swiper">
                                         <div id="bestSwiper" class="swiper sanctuary-best-slide-size">
                                             <div class="swiper-wrapper">
 
@@ -1578,7 +1579,7 @@
                                 </div>
 
                                 <div class="flex-1 space-y-1 sm:space-y-1.5">
-                                    <h4 class="text-base font-semibold">영원한 도움의 성모 매일기도 영원한 도움의 성모 매일기도</h4>
+                                    <h4 class="text-base font-semibold two-lines">영원한 도움의 성모 매일기도 영원한 도움의 성모 매일기도</h4>
                                     <span class="hidden text-13-l-18 font-normal text-gray-400">지은이</span>
                                     <div class="hidden sm:block">
                                         <span class="inline-block text-sm font-semibold text-red-500">10%</span>
@@ -1606,6 +1607,29 @@
             })
         }
         renderSlideBest()
+        const swiperContainer = document.querySelector('#frame-best-swiper');
+        swiperContainer.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            isSwiping = true;
+        });
+        swiperContainer.addEventListener('touchmove', (e) => {
+            if (!isSwiping) return;
+            let moveX = e.touches[0].clientX;
+            let diff = startX - moveX;
+            if (Math.abs(diff) > 10) {
+                if (diff > 0) {
+                    swiperContainer.scrollBy({ left: 300, behavior: 'smooth' });
+                    startX = moveX; // Cập nhật lại vị trí bắt đầu để cuộn tiếp
+                } else {
+                    swiperContainer.scrollBy({ left: -300, behavior: 'smooth' });
+                    startX = moveX; // Cập nhật lại vị trí bắt đầu để cuộn tiếp
+                }
+                isSwiping = false;
+            }
+        });
+        swiperContainer.addEventListener('touchend', () => {
+            isSwiping = false;
+        });
 
         function renderSlideNew() {
             let stringHTMl = ""
