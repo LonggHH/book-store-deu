@@ -149,3 +149,24 @@ function copyToClipboard(content) {
         console.error("Lỗi sao chép: ", err);
     });
 }
+
+// page 8
+const imgLogo = document.querySelector('img.header-logo')
+function updateImageLogoSource() {
+    let path = '.'
+    if (!window.location.pathname.endsWith("index.html")) {
+        path = '..'
+    }
+
+    if (window.innerWidth <= 640) {
+        // Màn hình nhỏ (mobile, tablet)
+        imgLogo.src = `${path}/assets/images/logo/mini_logo_top.png`;
+    } else {
+        // Màn hình lớn (desktop)
+        imgLogo.src = `${path}/assets/images/logo/Logo.svg`;
+    }
+}
+updateImageLogoSource();
+
+// Lắng nghe sự kiện thay đổi kích thước màn hình
+window.addEventListener('resize', updateImageLogoSource);
