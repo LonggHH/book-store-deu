@@ -701,67 +701,27 @@
                     <main class="flex-1 space-y-12-18 frame-main-size">
                         <!-- banner slide -->
                         <div id="frame-banner" class="">
-                            <div id="frame-boss" class="height-200-340" style="max-width: 940px;">
+                            <div id="frame-boss" class="height-slide-banner" style="max-width: 940px;">
                                 <div class="container-custom-slide">
                                     <!-- slide -->
                                     <div class="slide">
                                         <div class="item"
-                                            style="background-image: url(https://i.ibb.co/qCkd9jS/img1.jpg);">
+                                            style="background-image: url(https://dev.pauline.or.kr/upload/2025/02/20250217164004_14799.png);">
                                         </div>
                                         <div class="item"
-                                            style="background-image: url(https://i.ibb.co/jrRb11q/img2.jpg);">
+                                            style="background-image: url(https://dev.pauline.or.kr/upload/2025/02/20250219120638_17114.jpg);">
                                         </div>
                                         <div class="item"
-                                            style="background-image: url(https://i.ibb.co/NSwVv8D/img3.jpg);">
-                                        </div>
-
-                                        <div class="item"
-                                            style=" background-color: rgb(67, 83, 135); background-image: linear-gradient(to right,rgba(40, 59, 118, 0.9), rgba(67, 83, 135, 0.4)), url('../assets/images/banner/banner-book-15-transparent.png');">
-                                            <div class="content w-full h-full">
-                                                <div
-                                                    class="w-full h-full flex items-stretch justify-center gap-4 md:gap-0 lg:gap-4">
-                                                    <div class="flex items-center">
-                                                        <div class="flex flex-col items-end justify-between">
-                                                            <h4
-                                                                class="text-36-l-48 text-right font-bold text-white mb-4 whitespace-nowrap">
-                                                                마리아의<br>
-                                                                신비를<br>
-                                                                풀다
-                                                            </h4>
-                                                            <div
-                                                                class="text-sm font-normal py-1 px-2 border rounded-sm border-white text-white">
-                                                                브랜트 피트리</div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="flex items-center">
-                                                        <div class="frame-size-140190-164250">
-                                                            <img class="hidden sm:block frame-size-140190-164250"
-                                                                src="../assets/images/image/books/book15.png" alt="img">
-                                                            <img class="block sm:hidden frame-size-140190-164250"
-                                                                src="../assets/images/image/books/book15-1.png"
-                                                                alt="img">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="hidden sm:flex items-center md:ml-0 lg:ml-4">
-                                                        <div class="w-52 h-60 flex items-end">
-                                                            <p class="text-13-l-18 font-normal text-gray-50">
-                                                                성서학자인 저자가 성모 신심에 의구심을 품었던 자신의 체험을 바탕으로, 학술적인 내용인 마리아 교리에
-                                                                대한
-                                                                성경적 근거를 명확하게 밝히면서도 대중 강연처럼 설득력 있고 알기 쉽게 설명해주는 책이다.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="item"
-                                            style="background-image: url(https://i.ibb.co/jTQfmTq/img5.jpg);">
+                                            style="background-image: url(https://dev.pauline.or.kr/upload/2025/02/20250217144355_37325.png);">
                                         </div>
                                         <div class="item"
-                                            style="background-image: url(https://i.ibb.co/RNkk6L0/img6.jpg);">
+                                            style="background-image: url(https://dev.pauline.or.kr/upload/2025/02/20250217154520_79758.png);">
+                                        </div>
+                                        <div class="item"
+                                            style="background-image: url(https://dev.pauline.or.kr/upload/2025/02/20250217143830_27200.png);">
+                                        </div>
+                                        <div class="item"
+                                            style="background-image: url(https://dev.pauline.or.kr/upload/2025/02/20250217144355_37325.png);">
                                         </div>
                                     </div>
 
@@ -1404,53 +1364,74 @@
     <script src="../assets/js/common.js"></script>
 
     <script>
-        let next = document.querySelector('#frame-boss .next')
-        let prev = document.querySelector('#frame-boss .prev')
+        let mainBannerNext = document.querySelector('#frame-boss .next');
+        let mainBannerPrev = document.querySelector('#frame-boss .prev');
+        let mainBannerAutoSlideInterval;
+        const mainBannerIndexElement = document.querySelector('#index-slide-boss-item');
+        const mainBannerBanner = document.querySelector('#frame-boss');
+        let mainBannerIsSwiping = false;
+        let mainBannerStartX = 0;
 
-        next.addEventListener('click', throttle(() => {
-            handleNext('frame-boss')
+        function updateMainBannerIndex(value) {
+            let index = value;
+            if (index > 10) index = 1;
+            if (index < 1) index = 10;
+            if (index < 10) index = '0' + index;
+            mainBannerIndexElement.innerHTML = index;
+        }
 
-            let index = document.querySelector('#index-slide-boss-item').innerHTML
-            index = Number(index)
-            index++
-            if (index > 10) {
-                index = 1
-            }
-            if (index < 10) {
-                index = '0' + index
-            }
-            document.querySelector('#index-slide-boss-item').innerHTML = index
-        }, 1000))
+        function mainBannerNextSlide() {
+            handleNext('frame-boss');
+            let currentIndex = Number(mainBannerIndexElement.innerHTML);
+            updateMainBannerIndex(currentIndex + 1);
+        }
 
-        prev.addEventListener('click', throttle(() => {
-            handlePrev('frame-boss')
+        function mainBannerPrevSlide() {
+            handlePrev('frame-boss');
+            let currentIndex = Number(mainBannerIndexElement.innerHTML);
+            updateMainBannerIndex(currentIndex - 1);
+        }
 
-            let index = document.querySelector('#index-slide-boss-item').innerHTML
-            index = Number(index)
-            index--
-            if (index < 1) {
-                index = 10
-            }
-            if (index < 10) {
-                index = '0' + index
-            }
-            document.querySelector('#index-slide-boss-item').innerHTML = index
-        }, 1000))
+        function startMainBannerAutoSlide() {
+            mainBannerAutoSlideInterval = setInterval(mainBannerNextSlide, 5000);
+        }
 
-        setInterval(() => {
-            handleNext('frame-boss')
+        function stopMainBannerAutoSlide() {
+            clearInterval(mainBannerAutoSlideInterval);
+        }
 
-            let index = document.querySelector('#index-slide-boss-item').innerHTML
-            index = Number(index)
-            index++
-            if (index > 10) {
-                index = 1
+        mainBannerNext.addEventListener('click', throttle(mainBannerNextSlide, 1000));
+        mainBannerPrev.addEventListener('click', throttle(mainBannerPrevSlide, 1000));
+
+        mainBannerBanner.addEventListener('touchstart', (e) => {
+            mainBannerStartX = e.touches[0].clientX;
+            mainBannerIsSwiping = true;
+            stopMainBannerAutoSlide();
+        });
+
+        mainBannerBanner.addEventListener('touchmove', (e) => {
+            if (!mainBannerIsSwiping) return;
+            let moveX = e.touches[0].clientX;
+            let diff = mainBannerStartX - moveX;
+
+            if (Math.abs(diff) > 10) {
+                if (diff > 0) {
+                    mainBannerNextSlide();
+                } else {
+                    mainBannerPrevSlide();
+                }
+                mainBannerStartX = moveX;
+                mainBannerIsSwiping = false;
             }
-            if (index < 10) {
-                index = '0' + index
-            }
-            document.querySelector('#index-slide-boss-item').innerHTML = index
-        }, 7000)
+        });
+
+        mainBannerBanner.addEventListener('touchend', () => {
+            mainBannerIsSwiping = false;
+            startMainBannerAutoSlide();
+        });
+
+        startMainBannerAutoSlide();
+        // mobile slide end
 
         function renderListBestMusic() {
             let stringHTMl = ""

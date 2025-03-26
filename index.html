@@ -105,14 +105,14 @@
             position: absolute;
             border-radius: 8px;
             /* background-size: auto; */
-            background-position: center;
+            background-position: top left;
             background-repeat: no-repeat;
             display: inline-block;
             /* transition: 1s; */
             transition: all 0.5s linear;
             overflow: hidden;
 
-            background-size: 1052px 400px;
+            background-size: 1064px 400px;
         }
 
         .container-custom-slide .slide .item:nth-child(1),
@@ -154,20 +154,26 @@
 
         .height-slide-banner {
             height: 400px;
+            /* aspect-ratio: 2.55 / 1; */
         }
 
-        /* exc3 start */
+        /* danh cho dieu huong */
         .slide-navi {
             width: calc(100% - 2 * 24px - 2 * 4px);
         }
 
         @media (max-width: 1024px) {
 
-            /* custom slide */
+            .container-custom-slide .slide .item {
+                width: 100%;
+                background-position: center;
+                background-size: cover;
+            }
+
             .container-custom-slide .slide .item:nth-child(1),
             .container-custom-slide .slide .item:nth-child(2),
             .container-custom-slide .slide .item:nth-child(3) {
-                left: -50px;
+                left: -100%;
             }
 
             .container-custom-slide .slide .item:nth-child(4) {
@@ -178,38 +184,59 @@
             .slide-navi {
                 width: 100%;
             }
+
+            .height-slide-banner {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 51 / 20;
+                max-height: 400px;
+            }
         }
 
-        /* exc3 start */
         @media (max-width: 425px) {
-
-
-            /* custom slide */
-            .container-custom-slide .slide .item:nth-child(1),
-            .container-custom-slide .slide .item:nth-child(2),
-            .container-custom-slide .slide .item:nth-child(3) {
-                left: -50px;
-            }
-
-            .container-custom-slide .slide .item:nth-child(4) {
-                width: 100%;
-                left: 0;
-            }
-
-            /* custom slide */
-
             .container-custom-slide {
                 border-radius: 0px;
             }
 
             .container-custom-slide .slide .item {
-
                 border-radius: 0px;
-                /* background-size: 1020px 420px; */
+            }
+        }
+    </style>
+
+    <style>
+        .card-new-width {
+            width: calc(100% - 350px);
+        }
+
+        .width-lord-item {
+            width: 350px;
+            height: 350px;
+        }
+
+        .lord-width {
+            width: 350px;
+        }
+
+        @media (max-width: 760px) {
+            .card-new-width {
+                width: calc(50%);
             }
 
-            .height-slide-banner {
-                height: 200px;
+            .width-lord-item {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 1 / 1;
+            }
+
+            .lord-width {
+                width: calc(50% - 32px);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .lord-width {
+                width: calc(50% - 20px);
             }
         }
     </style>
@@ -835,12 +862,24 @@
                     <div class="container-custom-slide">
                         <!-- slide -->
                         <div class="slide">
-                            <div class="item" style="background-image: url(https://i.ibb.co/qCkd9jS/img1.jpg);"></div>
-                            <div class="item" style="background-image: url(https://i.ibb.co/jrRb11q/img2.jpg);"></div>
-                            <div class="item" style="background-image: url(https://i.ibb.co/NSwVv8D/img3.jpg);"></div>
-                            <div class="item" style="background-image: url(https://i.ibb.co/NSwVv8D/img4.jpg);"></div>
-                            <div class="item" style="background-image: url(https://i.ibb.co/jTQfmTq/img5.jpg);"></div>
-                            <div class="item" style="background-image: url(https://i.ibb.co/RNkk6L0/img6.jpg);"></div>
+                            <div class="item"
+                                style="background-image: url(https://dev.pauline.or.kr/upload/2025/02/20250217164004_14799.png);">
+                            </div>
+                            <div class="item"
+                                style="background-image: url(https://dev.pauline.or.kr/upload/2025/02/20250219120638_17114.jpg);">
+                            </div>
+                            <div class="item"
+                                style="background-image: url(https://dev.pauline.or.kr/upload/2025/02/20250217144355_37325.png);">
+                            </div>
+                            <div class="item"
+                                style="background-image: url(https://dev.pauline.or.kr/upload/2025/02/20250217154520_79758.png);">
+                            </div>
+                            <div class="item"
+                                style="background-image: url(https://dev.pauline.or.kr/upload/2025/02/20250217143830_27200.png);">
+                            </div>
+                            <div class="item"
+                                style="background-image: url(https://dev.pauline.or.kr/upload/2025/02/20250217144355_37325.png);">
+                            </div>
                         </div>
 
                         <!-- text -->
@@ -941,7 +980,7 @@
                 <div class="relative flex flex-col lg:flex-row items-center justify-between gap-y-5 gap-x-5">
 
                     <div class="rounded-lg bg-white p-5 flex-1 space-y-5">
-                        <div class="flex-1 space-y-5 flex items-center gap-x-5">
+                        <div id="frame-recomment-mobile" class="flex-1 space-y-5 flex items-center gap-x-5">
                             <div>
                                 <div class="border shadow scope-imgage-big cursor-pointer frame-image-size-102150-196290"
                                     onclick="gotoPage('./pages/CA-book-product-detail.html')">
@@ -972,8 +1011,8 @@
                     </div>
 
                     <div class="relative block sm:hidden">
-                        <ul class="w-full space-x-1 flex justify-center" style="color: #333;">
-                            <li class="w-5 h-2 rounded-2xl transition duration-500 bg-gray-800"></li>
+                        <ul id="recomment-dots" class="w-full space-x-1 flex justify-center" style="color: #333;">
+                            <li class="w-2 h-2 rounded-2xl transition duration-500 bg-gray-300"></li>
                             <li class="w-2 h-2 rounded-2xl transition duration-500 bg-gray-300"></li>
                             <li class="w-2 h-2 rounded-2xl transition duration-500 bg-gray-300"></li>
                             <li class="w-2 h-2 rounded-2xl transition duration-500 bg-gray-300"></li>
@@ -1507,9 +1546,9 @@
     <!-- exc6 start -->
     <div class="h-12 sm:h-24"></div>
     <section>
-        <div class="container-layout overflow-x-scroll custom-scroll-x">
+        <div class="container-layout">
             <div class="flex items-start sm:justify-between gap-y-10 gap-x-5">
-                <div class="flex-1 sm:flex-2 space-y-5 sm:space-y-8">
+                <div class="space-y-5 sm:space-y-8 overflow-x-auto custom-scroll card-new-width">
                     <div class="px-5 sm:px-8 lg:px-0 flex items-center gap-x-1"> <!-- exc6 end -->
                         <h4 class="text-2028-2838 font-semibold">카드뉴스</h4>
                         <img src="./assets/images/icon/main/news.svg" alt="">
@@ -1518,27 +1557,27 @@
                     <div class="pl-5 sm:pl-8 lg:pl-0">
                         <div class="relative">
                             <!-- best swiper -->
-                            <div class="overflow-x-auto custom-scroll-x">
-                                <div id="newsSwiper" class="swiper w-150-740">
+                            <div class="">
+                                <div id="newsSwiper" class="swiper ">
                                     <div class="swiper-wrapper">
 
                                         <div class="swiper-slide">
-                                            <div class="size-150150-350350 rounded-lg overflow-hidden"
+                                            <div class="width-lord-item  rounded-lg overflow-hidden"
                                                 style="background-color: rgba(0, 166, 146, 1);">
 
                                             </div>
                                         </div>
 
                                         <div class="swiper-slide">
-                                            <div class="size-150150-350350 rounded-lg overflow-hidden"
-                                                style="background-color: rgba(0, 166, 146, 1);">
+                                            <div class="width-lord-item  rounded-lg overflow-hidden"
+                                                style="background-color: red;">
 
                                             </div>
                                         </div>
 
                                         <div class="swiper-slide">
-                                            <div class="size-150150-350350 rounded-lg overflow-hidden"
-                                                style="background-color: rgba(0, 166, 146, 1);">
+                                            <div class="width-lord-item  rounded-lg overflow-hidden"
+                                                style="background-color: blue;">
 
                                             </div>
                                         </div>
@@ -1548,7 +1587,9 @@
                             </div>
 
                             <!-- button navigation -->
-                            <div class="flex justify-end items-center gap-x-6 mt-4">
+
+                            <div class="absolute left-0 right-0 z-20 hidden sm:flex justify-between items-center"
+                                style="top: calc(50% - 20px);">
                                 <button id="news-swiper-button-prev"
                                     class="w-10 h-10 bg-white rounded-full border shadow">
                                     <i class="text-gray-600 fa-solid fa-chevron-left"></i>
@@ -1562,17 +1603,14 @@
                     </div>
                 </div>
 
-                <div class="flex-1 space-y-5 sm:space-y-8">
+                <div class="lord-width space-y-5 sm:space-y-8">
                     <div class="h-38-auto">
                         <h4 class="text-2028-2838 font-semibold">주님과 함께</h4>
                     </div>
 
-                    <div class="flex items-center gap-x-5">
-
-                        <div class="">
-                            <div class="size-150150-350350 rounded-lg overflow-hidden"
-                                style="background-color: rgba(0, 166, 146, 1); aspect-ratio: 1 / 1;">
-                            </div>
+                    <div class="">
+                        <div class="rounded-lg overflow-hidden width-lord-item"
+                            style="background-color: rgba(0, 166, 146, 1);">
                         </div>
                     </div>
                 </div>
@@ -1959,52 +1997,74 @@
     <script src="./assets/js/common.js"></script>
 
     <script>
-        let next = document.querySelector('#frame-boss .next')
-        let prev = document.querySelector('#frame-boss .prev')
+        let mainBannerNext = document.querySelector('#frame-boss .next');
+        let mainBannerPrev = document.querySelector('#frame-boss .prev');
+        let mainBannerAutoSlideInterval;
+        const mainBannerIndexElement = document.querySelector('#index-slide-boss-item');
+        const mainBannerBanner = document.querySelector('#frame-boss');
+        let mainBannerIsSwiping = false;
+        let mainBannerStartX = 0;
 
-        next.addEventListener('click', throttle(() => {
-            handleNext('frame-boss')
+        function updateMainBannerIndex(value) {
+            let index = value;
+            if (index > 10) index = 1;
+            if (index < 1) index = 10;
+            if (index < 10) index = '0' + index;
+            mainBannerIndexElement.innerHTML = index;
+        }
 
-            let index = document.querySelector('#index-slide-boss-item').innerHTML
-            index = Number(index)
-            index++
-            if (index > 10) {
-                index = 1
-            }
-            if (index < 10) {
-                index = '0' + index
-            }
-            document.querySelector('#index-slide-boss-item').innerHTML = index
-        }, 1000))
+        function mainBannerNextSlide() {
+            handleNext('frame-boss');
+            let currentIndex = Number(mainBannerIndexElement.innerHTML);
+            updateMainBannerIndex(currentIndex + 1);
+        }
 
-        prev.addEventListener('click', throttle(() => {
-            handlePrev('frame-boss')
+        function mainBannerPrevSlide() {
+            handlePrev('frame-boss');
+            let currentIndex = Number(mainBannerIndexElement.innerHTML);
+            updateMainBannerIndex(currentIndex - 1);
+        }
 
-            let index = document.querySelector('#index-slide-boss-item').innerHTML
-            index = Number(index)
-            index--
-            if (index < 1) {
-                index = 10
-            }
-            if (index < 10) {
-                index = '0' + index
-            }
-            document.querySelector('#index-slide-boss-item').innerHTML = index
-        }, 1000))
+        function startMainBannerAutoSlide() {
+            mainBannerAutoSlideInterval = setInterval(mainBannerNextSlide, 5000);
+        }
 
-        setInterval(() => {
-            handleNext('frame-boss')
-            let index = document.querySelector('#index-slide-boss-item').innerHTML
-            index = Number(index)
-            index++
-            if (index > 10) {
-                index = 1
+        function stopMainBannerAutoSlide() {
+            clearInterval(mainBannerAutoSlideInterval);
+        }
+
+        mainBannerNext.addEventListener('click', throttle(mainBannerNextSlide, 1000));
+        mainBannerPrev.addEventListener('click', throttle(mainBannerPrevSlide, 1000));
+
+        mainBannerBanner.addEventListener('touchstart', (e) => {
+            mainBannerStartX = e.touches[0].clientX;
+            mainBannerIsSwiping = true;
+            stopMainBannerAutoSlide();
+        });
+
+        mainBannerBanner.addEventListener('touchmove', (e) => {
+            if (!mainBannerIsSwiping) return;
+            let moveX = e.touches[0].clientX;
+            let diff = mainBannerStartX - moveX;
+
+            if (Math.abs(diff) > 10) {
+                if (diff > 0) {
+                    mainBannerNextSlide();
+                } else {
+                    mainBannerPrevSlide();
+                }
+                mainBannerStartX = moveX;
+                mainBannerIsSwiping = false;
             }
-            if (index < 10) {
-                index = '0' + index
-            }
-            document.querySelector('#index-slide-boss-item').innerHTML = index
-        }, 5000);
+        });
+
+        mainBannerBanner.addEventListener('touchend', () => {
+            mainBannerIsSwiping = false;
+            startMainBannerAutoSlide();
+        });
+
+        startMainBannerAutoSlide();
+        // mobile slide end
 
         function renderSlideNew() {
             let stringHTMl = ""
@@ -2227,13 +2287,14 @@
                 320: {
                     slidesPerView: 1,
                 },
-                640: {
+                760: {
                     slidesPerView: 2,
                 },
             },
         });
 
         let book1Index = 1
+        var recommentSwiper
         function renderRecomment() {
             let stringHTMl = ''
             Array(5).fill(null).forEach((e, i) => {
@@ -2254,7 +2315,7 @@
             })
             document.querySelector('#recommentSwiper .swiper-wrapper').innerHTML = stringHTMl
 
-            var recommentSwiper = new Swiper("#recommentSwiper", {
+            recommentSwiper = new Swiper("#recommentSwiper", {
                 slidesPerView: 4,
                 spaceBetween: 16,
                 loop: true,
@@ -2273,6 +2334,7 @@
                             book1Index = 1
                         }
                         document.querySelector('#book1-main-img').src = `./assets/images/image/books/book${book1Index}.png`
+                        updateDots(book1Index)
                     },
                     slidePrevTransitionStart: function () {
                         book1Index--
@@ -2280,11 +2342,67 @@
                             book1Index = 5
                         }
                         document.querySelector('#book1-main-img').src = `./assets/images/image/books/book${book1Index}.png`
+                        updateDots(book1Index)
                     },
                 },
             });
         }
         renderRecomment()
+        // mobile
+        const recommentSlide = document.querySelector('#frame-recomment-mobile');
+        let recommentStartX;
+        let recommentIsSwiping = false;
+
+        // Cập nhật dot khi chuyển slide
+        function updateDots(activeIndex) {
+            const dots = document.querySelectorAll("#recomment-dots li");
+            dots.forEach((dot, index) => {
+                dot.classList.remove("bg-gray-800", "w-5", "bg-gray-300");
+                dot.classList.add("bg-gray-300");
+            });
+            dots.forEach((dot, index) => {
+                if (index === activeIndex - 1) {
+                    dot.classList.remove("bg-gray-300");
+                    dot.classList.add("bg-gray-800", "w-5");
+                }
+            });
+        }
+
+        recommentSlide.addEventListener('touchstart', (e) => {
+            recommentStartX = e.touches[0].clientX;
+            recommentIsSwiping = true;
+            recommentSwiper.autoplay.stop();
+        });
+
+        recommentSlide.addEventListener('touchmove', (e) => {
+            if (!recommentIsSwiping) return;
+            let moveX = e.touches[0].clientX;
+            let diff = recommentStartX - moveX;
+
+            if (Math.abs(diff) > 10) {
+                if (diff > 0) {
+                    book1Index++;
+                    if (book1Index > 5) {
+                        book1Index = 1;
+                    }
+                } else {
+                    book1Index--;
+                    if (book1Index < 1) {
+                        book1Index = 5;
+                    }
+                }
+                document.querySelector('#book1-main-img').src = `./assets/images/image/books/book${book1Index}.png`;
+                updateDots(book1Index)
+                recommentStartX = moveX;
+                recommentIsSwiping = false;
+            }
+        });
+
+        recommentSlide.addEventListener('touchend', () => {
+            recommentIsSwiping = false;
+            recommentSwiper.autoplay.start();
+        });
+        // mobile
 
 
         let sentenceIndex = 1
