@@ -3,7 +3,7 @@
 }
 
 /* Default (for screens smaller than 640px) */
-.space-y-0-18 > * + * {
+.space-y-0-18>*+* {
     margin-top: 72px;
 }
 
@@ -17,7 +17,7 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 815px) {
     .cs-main-size {
         width: 100%;
     }
@@ -25,11 +25,15 @@
 
 /* Apply 72px spacing for screens 640px and larger */
 @media (max-width: 640px) {
-    .space-y-0-18 > * + * {
+    .space-y-0-18>*+* {
         margin-top: 0px;
     }
 
     .frequently-asked-questions-item-size {
         width: 100%;
     }
+}
+
+.gap-60px {
+    column-gap: 60px;
 }

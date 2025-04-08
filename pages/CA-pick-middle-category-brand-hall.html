@@ -666,7 +666,7 @@
 
     <section class="mt-5 sm:mt-6">
         <div class="container-layout">
-            <div class="flex items-start relative justify-between flex-wrap gap-side-menu-main-content">
+            <div class="flex items-start relative justify-between gap-side-menu-main-content padding-left-medium">
 
                 <nav class="hidden md:block category-side-menu">
                     <div class="space-y-3">
@@ -715,7 +715,7 @@
                 </nav>
 
                 <!-- start main (+class: frame-main-size) -->
-                <main class="flex-1  overflow-hidden">
+                <main class="flex-1  overflow-hidden sm:px-8 md:px-0">
 
                     <section class="hidden lg:block" style="padding-bottom: 17px;">
                         <div class="container-layout mobi-px py-2 sm:py-0 bg-gray-100 sm:bg-white">
@@ -910,7 +910,10 @@
                         <div class="px-5 sm:px-0">
                             <div class="border-t border-b py-6">
 
-                                <div id="list-book-grid" class="flex flex-wrap gap-x-2 sm:gap-x-8 gap-y-6"></div>
+                                <!-- <div id="list-book-grid" class="flex flex-wrap gap-x-2 sm:gap-x-8 gap-y-6"></div> -->
+                                <div id="list-book-grid"
+                                    class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-2 sm:gap-x-8 gap-y-6">
+                                </div>
 
                                 <div id="list-book-list" class="space-y-9 sm:space-y-6"></div>
 
@@ -1353,7 +1356,7 @@
             grid: 'grid',
             list: 'list'
         }
-        let quantityBook = 4;
+        let quantityBook = 7;
         let totalPage = 1;
         const pagePerSet = 5;
         let currentSet = 1;
@@ -1390,13 +1393,13 @@
             Array(quantity).fill(null).forEach((e, i) => {
                 stringHTML +=
                     `
-                    <div class="space-y-3 frame-width-102-160">
+                    <div class="space-y-3">
                         <div>
                             <img onclick="chooseBookItem(this)" class='cursor-pointer item-choose-book' src="../assets/images/icon/common/check-white.svg" alt="o">
                         </div>
 
                         <div class="space-y-3">
-                            <div class="relative frame-image-border-26 frame-image-size-102102-160160 overflow-hidden shadow-md border">
+                            <div class="relative frame-image-border-26 overflow-hidden shadow-md border">
                                 <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="book">
                                 <div onclick="likeBook(this)" class="cursor-pointer absolute bottom-3 right-3 z-10 w-9 h-9 rounded-full flex items-center justify-center"
                                     style="background-color: rgba(0, 0, 0, 0.16);">

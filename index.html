@@ -240,6 +240,29 @@
             }
         }
     </style>
+
+    <style>
+        @media (min-width: 769px) and (max-width: 1124px) {
+            .header-padding {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+
+        @media (min-width: 640px) and (max-width: 850px) {
+            .header-input {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+
+        @media (min-width: 1024px) and (max-width: 1128px) {
+            .container-layout {
+                padding-left: 2rem;
+                /* padding-right: 2rem; */
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -292,13 +315,13 @@
         </section>
 
         <section>
-            <div class="container-layout py-2 mobi-px sm:py-8 utility-layout">
+            <div class="container-layout py-2 mobi-px sm:py-8 utility-layout header-padding">
                 <div class="flex items-center justify-between gap-0 ">
                     <div class="cursor-pointer header-logo overflow-hidden" onclick="gotoPage('index.html')">
                         <img class="header-logo" src="../assets/images/logo/Logo.svg" alt="Logo" />
                     </div>
                     <!-- input search vvvvvv -->
-                    <div class="flex-1 hidden sm:block max-w-xl">
+                    <div class="flex-1 hidden sm:block max-w-xl header-input">
                         <div id="frame-header-search" class="rounded-full relative"
                             style="background: linear-gradient(to right, #0C98E7, #B956EA, #F03964); padding: 1px; ">
                             <div
@@ -1121,14 +1144,14 @@
                             </div>
 
                             <!-- button navigation -->
-                            <div class="hidden absolute left-0 right-0 z-10 sm:flex justify-between items-center"
+                            <div class="absolute left-0 right-0 z-10 flex justify-between items-center"
                                 style="top: calc(50% - 20px);">
                                 <button id="new-swiper-button-prev"
-                                    class="w-10 h-10 bg-white rounded-full border shadow transform lg:-translate-x-16">
+                                    class="w-10 h-10 bg-white rounded-full border shadow transform xl:-translate-x-16">
                                     <i class="text-gray-600 fa-solid fa-chevron-left"></i>
                                 </button>
                                 <button id="new-swiper-button-next"
-                                    class="w-10 h-10 bg-white rounded-full border shadow transform lg:translate-x-16">
+                                    class="w-10 h-10 bg-white rounded-full border shadow transform -translate-x-5 lg:translate-x-0 xl:translate-x-16">
                                     <i class="text-gray-600 fa-solid fa-chevron-right"></i>
                                 </button>
                             </div>
@@ -1213,17 +1236,17 @@
                             </div>
 
                             <!-- button navigation -->
-                            <!-- <div class="absolute left-0 right-0 z-10 hidden sm:flex justify-between items-center"
+                            <div class="absolute left-0 right-0 z-10 flex justify-between items-center"
                                 style="top: calc(50% - 20px);">
                                 <button id="best-swiper-button-prev"
-                                    class="w-10 h-10 bg-white rounded-full border shadow transform lg:-translate-x-16">
+                                    class="w-10 h-10 bg-white rounded-full border shadow transform xl:-translate-x-16">
                                     <i class="text-gray-600 fa-solid fa-chevron-left"></i>
                                 </button>
                                 <button id="best-swiper-button-next"
-                                    class="w-10 h-10 bg-white rounded-full border shadow transform lg:translate-x-16">
+                                    class="w-10 h-10 bg-white rounded-full border shadow transform -translate-x-5 lg:translate-x-0 xl:translate-x-16">
                                     <i class="text-gray-600 fa-solid fa-chevron-right"></i>
                                 </button>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                     <!-- end slide -->
@@ -1414,10 +1437,10 @@
                 <div class="absolute left-0 right-0 z-10 hidden lg:flex justify-between items-center"
                     style="top: calc(50% - 20px);">
                     <button id="prev"
-                        class="w-10 h-10 bg-white rounded-full border shadow transform lg:-translate-x-16">
+                        class="w-10 h-10 bg-white rounded-full border shadow transform xl:-translate-x-16">
                         <i class="text-gray-600 fa-solid fa-chevron-left"></i>
                     </button>
-                    <button id="next" class="w-10 h-10 bg-white rounded-full border shadow transform lg:translate-x-16">
+                    <button id="next" class="w-10 h-10 bg-white rounded-full border shadow transform xl:translate-x-16">
                         <i class="text-gray-600 fa-solid fa-chevron-right"></i>
                     </button>
                 </div>
@@ -1699,14 +1722,14 @@
                             </div>
 
                             <!-- button navigation -->
-                            <div class="absolute left-0 right-0 z-10 hidden sm:flex justify-between items-center"
+                            <div class="absolute left-0 right-0 z-10 flex justify-between items-center"
                                 style="top: calc(50% - 20px);">
                                 <button id="review-swiper-button-prev"
-                                    class="w-10 h-10 bg-white rounded-full border shadow transform lg:-translate-x-16">
+                                    class="w-10 h-10 bg-white rounded-full border shadow transform xl:-translate-x-16">
                                     <i class="text-gray-600 fa-solid fa-chevron-left"></i>
                                 </button>
                                 <button id="review-swiper-button-next"
-                                    class="w-10 h-10 bg-white rounded-full border shadow transform lg:translate-x-16">
+                                    class="w-10 h-10 bg-white rounded-full border shadow transform -translate-x-5 lg:translate-x-0 xl:translate-x-16">
                                     <i class="text-gray-600 fa-solid fa-chevron-right"></i>
                                 </button>
                             </div>
@@ -1795,7 +1818,7 @@
     </section>
 
     <footer class="py-6">
-        <div class="container-layout px-5 lg:px-0 flex flex-col lg:flex-row mobi-px">
+        <div class="container-layout px-5 lg:px-0 flex flex-col sm:flex-row mobi-px">
             <div class="flex-1">
                 <div class="text-base font-medium cursor-pointer" onclick="gotoPage('./pages/CS-cc-main.html')">고객센터
                 </div>
@@ -1808,7 +1831,7 @@
                                 class="inline-block w-12">점심시간</span>
                             <span class="inline-block mr-4">12:30~13:30</span>
                             <br class="sm:hidden">
-                            <span class="inline-block font-normal text-13-l-18">토, 일, 공휴일 휴무</span>
+                            <span class="inline-block font-normal text-13-l-18 mt-1 sm:mt-0">토, 일, 공휴일 휴무</span>
                         </p>
                     </div>
                 </div>
@@ -1818,7 +1841,7 @@
             </div>
             <!--  -->
             <div
-                class="flex-1 lg:px-16 lg:mx-16 lg:border-r lg:border-l sm:flex sm:flex-col mt-3 pt-3 border-t lg:mt-0 lg:pt-0 lg:border-t-0">
+                class="flex-1 lg:px-16 lg:mx-16 lg:border-r lg:border-l sm:flex sm:flex-col mt-3 pt-3 border-t sm:mt-0 sm:pt-0 sm:border-t-0">
                 <div class="text-base font-medium mb-3">은행계좌 안내</div>
                 <div class="mb-2">
                     <p class="mb-1 text-lg font-semibold flex items-center flex-wrap">
@@ -1890,10 +1913,13 @@
             <div class="block sm:hidden">
                 <div class="flex gap-3 items-center">
                     <ul class="flex gap-1.5">
-                        <li class="cursor-pointer"> <img src="../assets/images/icon/footer/chat.svg" alt="icon"> </li>
-                        <li class="cursor-pointer"> <img src="../assets/images/icon/footer/instagram.svg" alt="icon">
+                        <li class="cursor-pointer"> <img class="w-8 h-8" src="../assets/images/icon/footer/chat.svg"
+                                alt="icon"> </li>
+                        <li class="cursor-pointer"> <img class="w-8 h-8"
+                                src="../assets/images/icon/footer/instagram.svg" alt="icon">
                         </li>
-                        <li class="cursor-pointer"> <img src="../assets/images/icon/footer/youtube.svg" alt="icon">
+                        <li class="cursor-pointer"> <img class="w-8 h-8" src="../assets/images/icon/footer/youtube.svg"
+                                alt="icon">
                         </li>
                     </ul>
                     <div>
@@ -2105,7 +2131,7 @@
 
         function renderSlideBest() {
             let stringHTMl = ""
-            Array(6).fill(null).forEach((e, i) => {
+            Array(7).fill(null).forEach((e, i) => {
                 let badge = '<img src="../assets/images/icon/category/' + (i === 0 ? 'badge-color' : 'badge-gray') + '.svg" alt="icon">'
 
                 stringHTMl +=
@@ -2408,7 +2434,7 @@
         let sentenceIndex = 1
         let nextSentence = document.querySelector('#frame-sentence #next')
         let prevSentence = document.querySelector('#frame-sentence #prev')
-        nextSentence.addEventListener('click', function () {
+        function fNextSentence() {
             let items = document.querySelectorAll('.sentence-item')
             document.querySelector('.sentence-slide').appendChild(items[0])
 
@@ -2416,9 +2442,12 @@
             if (sentenceIndex > 9) sentenceIndex = 1
             document.querySelector('#sentence-img').src = `./assets/images/image/books/book${sentenceIndex}.png`
             document.querySelector('#sentence-img-second').src = `./assets/images/image/books/book${sentenceIndex}.png`
+        }
+        nextSentence.addEventListener('click', function () {
+            fNextSentence()
         })
 
-        prevSentence.addEventListener('click', function () {
+        function fPrevSentence() {
             let items = document.querySelectorAll('.sentence-item')
             document.querySelector('.sentence-slide').prepend(items[items.length - 1]) // here the length of items = 6
 
@@ -2426,16 +2455,13 @@
             if (sentenceIndex < 1) sentenceIndex = 9
             document.querySelector('#sentence-img').src = `./assets/images/image/books/book${sentenceIndex}.png`
             document.querySelector('#sentence-img-second').src = `./assets/images/image/books/book${sentenceIndex}.png`
+        }
+        prevSentence.addEventListener('click', function () {
+            fPrevSentence()
         })
 
         const intervalId = setInterval(() => {
-            let items = document.querySelectorAll('.sentence-item')
-            document.querySelector('.sentence-slide').appendChild(items[0])
-
-            sentenceIndex++
-            if (sentenceIndex > 9) sentenceIndex = 1
-            document.querySelector('#sentence-img').src = `./assets/images/image/books/book${sentenceIndex}.png`
-            document.querySelector('#sentence-img-second').src = `./assets/images/image/books/book${sentenceIndex}.png`
+            fNextSentence()
         }, 5000);
 
         //--- exc2 start

@@ -620,7 +620,7 @@
 
     <section class="mt-6 sm:mt-6">
         <div class="container-layout">
-            <div class="flex items-start relative justify-between flex-wrap">
+            <div class="flex items-start relative justify-between padding-left-medium gap-x-1.5">
 
                 <nav class="hidden md:block category-side-menu">
                     <div class="space-y-3">
@@ -672,7 +672,7 @@
 
                 <!-- =================================== start main >>>>>>>>> =================================== -->
 
-                <div class="flex-1 frame-main-size">
+                <div class="flex-1 frame-main-size menu-left-hidden">
                     <section class="hidden sm:block w-fit" style="padding-bottom: 17px;">
                         <div class="container-layout mobi-px py-2 sm:py-0 bg-gray-100 sm:bg-white">
                             <div class="flex items-center gap-2 sm:py-1">
@@ -839,14 +839,17 @@
                                     </div>
 
                                     <!-- button navigation -->
-                                    <!-- <div class="absolute left-0 right-0 z-10 flex justify-between items-center" style="top: calc(50% - 20px);">
-                                        <button id="best-swiper-button-prev" class="w-10 h-10 bg-white rounded-full border shadow transform -translate-x-16">
+                                    <div class="absolute left-0 right-0 z-20 flex justify-between items-center"
+                                        style="top: calc(50% - 20px);">
+                                        <button id="best-swiper-button-prev"
+                                            class="w-10 h-10 bg-white rounded-full border shadow transform xl:-translate-x-16">
                                             <i class="text-gray-600 fa-solid fa-chevron-left"></i>
                                         </button>
-                                        <button id="best-swiper-button-next" class="w-10 h-10 bg-white rounded-full border shadow transform translate-x-16">
+                                        <button id="best-swiper-button-next"
+                                            class="w-10 h-10 bg-white rounded-full border shadow transform -translate-x-5 lg:translate-x-0 xl:translate-x-16">
                                             <i class="text-gray-600 fa-solid fa-chevron-right"></i>
                                         </button>
-                                    </div> -->
+                                    </div>
                                 </div>
                             </div>
                             <!-- end slide -->
@@ -899,11 +902,11 @@
                                     <div class="absolute left-0 right-0 z-10 flex justify-between items-center"
                                         style="top: calc(50% - 20px);">
                                         <button id="new-swiper-button-prev"
-                                            class="w-10 h-10 bg-white rounded-full border shadow transform -translate-x-16">
+                                            class="w-10 h-10 bg-white rounded-full border shadow transform xl:-translate-x-16">
                                             <i class="text-gray-600 fa-solid fa-chevron-left"></i>
                                         </button>
                                         <button id="new-swiper-button-next"
-                                            class="w-10 h-10 bg-white rounded-full border shadow transform translate-x-16">
+                                            class="w-10 h-10 bg-white rounded-full border shadow transform -translate-x-5 lg:translate-x-0 xl:translate-x-16">
                                             <i class="text-gray-600 fa-solid fa-chevron-right"></i>
                                         </button>
                                     </div>
@@ -1060,11 +1063,11 @@
                                     <div class="absolute left-0 right-0 z-10 flex justify-between items-center"
                                         style="top: calc(50% - 20px);">
                                         <button id="children-swiper-button-prev"
-                                            class="w-10 h-10 bg-white rounded-full border shadow transform -translate-x-16">
+                                            class="w-10 h-10 bg-white rounded-full border shadow transform xl:-translate-x-16">
                                             <i class="text-gray-600 fa-solid fa-chevron-left"></i>
                                         </button>
                                         <button id="children-swiper-button-next"
-                                            class="w-10 h-10 bg-white rounded-full border shadow transform translate-x-16">
+                                            class="w-10 h-10 bg-white rounded-full border shadow transform -translate-x-5 lg:translate-x-0 xl:translate-x-16">
                                             <i class="text-gray-600 fa-solid fa-chevron-right"></i>
                                         </button>
                                     </div>
@@ -1139,11 +1142,11 @@
                                     <div class="absolute left-0 right-0 z-10 flex justify-between items-center"
                                         style="top: calc(50% - 20px);">
                                         <button id="review-swiper-button-prev"
-                                            class="w-10 h-10 bg-white rounded-full border shadow transform -translate-x-16">
+                                            class="w-10 h-10 bg-white rounded-full border shadow transform xl:-translate-x-16">
                                             <i class="text-gray-600 fa-solid fa-chevron-left"></i>
                                         </button>
                                         <button id="review-swiper-button-next"
-                                            class="w-10 h-10 bg-white rounded-full border shadow transform translate-x-16">
+                                            class="w-10 h-10 bg-white rounded-full border shadow transform -translate-x-5 lg:translate-x-0 xl:translate-x-16">
                                             <i class="text-gray-600 fa-solid fa-chevron-right"></i>
                                         </button>
                                     </div>
@@ -1555,7 +1558,7 @@
 
         function renderSlideBest() {
             let stringHTMl = ""
-            Array(6).fill(null).forEach((e, i) => {
+            Array(7).fill(null).forEach((e, i) => {
                 let badge = '<img src="../assets/images/icon/category/' + (i === 0 ? 'badge-color' : 'badge-gray') + '.svg" alt="icon">'
 
                 stringHTMl +=

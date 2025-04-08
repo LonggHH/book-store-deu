@@ -674,7 +674,7 @@
 
     <section class="mt-5 sm:mt-6">
         <div class="container-layout">
-            <div class="flex items-start relative justify-between flex-wrap gap-side-menu-main-content">
+            <div class="flex items-start relative justify-between gap-side-menu-main-content padding-left-medium">
 
                 <nav class="hidden md:block category-side-menu">
                     <div class="space-y-3">
@@ -705,7 +705,7 @@
                 </nav>
 
                 <!-- start main (+class: frame-main-size) -->
-                <main class="flex-1 space-y-2 sm:space-y-3.5 overflow-hidden">
+                <main class="flex-1 space-y-2 sm:space-y-3.5 overflow-hidden sm:px-8 md:px-0">
                     <!-- grid / list menu -->
 
                     <section class="sm:mb-6 hidden lg:block border-b" style="padding-bottom: 17px;">
@@ -871,7 +871,10 @@
 
                     <div class="px-5 sm:px-0">
                         <div class="border-t border-b py-6">
-                            <div id="list-book-grid" class="flex flex-wrap gap-x-2 sm:gap-x-8 gap-y-6"></div>
+                            <!-- <div id="list-book-grid" class="flex flex-wrap gap-x-2 sm:gap-x-8 gap-y-6"></div> -->
+                            <div id="list-book-grid"
+                                class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-2 sm:gap-x-8 gap-y-6">
+                            </div>
 
                             <div id="list-book-list" class="space-y-9 sm:space-y-6"></div>
                         </div>
@@ -1365,7 +1368,7 @@
             grid: 'grid',
             list: 'list'
         }
-        let quantityBook = 4;
+        let quantityBook = 7;
         let totalPage = 1;
         const pagePerSet = 5;
         let currentSet = 1;
@@ -1402,14 +1405,14 @@
             Array(quantity).fill(null).forEach((e, i) => {
                 stringHTML +=
                     `
-                    <div class="space-y-3 frame-width-102-160">
+                    <div class="space-y-3">
                         <div>
                             <img onclick="chooseBookItem(this)" class='cursor-pointer item-choose-book' src="../assets/images/icon/common/check-white.svg" alt="o">
                         </div>
 
                         <div class="space-y-3">
-                            <div class="relative frame-image-border-26 frame-image-size-102150-160236 overflow-hidden shadow-md border">
-                                <img class="w-full h-full" src="../assets/images/image/books/book-error-small-x.png" alt="book">
+                            <div class="relative frame-image-border-26 w2h3 overflow-hidden shadow-md border">
+                                <img class="w-full w2h3" src="../assets/images/image/books/book-error-small-x.png" alt="book">
                                 <div onclick="likeBook(this)" class="cursor-pointer absolute bottom-1 right-1 sm:bottom-3 sm:right-3 z-10 w-9 h-9 rounded-full flex items-center justify-center"
                                     style="background-color: rgba(0, 0, 0, 0.16);">
                                     <i class="fa-solid fa-heart text-white text-xl"></i>
@@ -1418,7 +1421,7 @@
                             </div>
 
                             <div>
-                                <h4 class="text-base font-semibold mb-1 cursor-pointer two-lines h-12" onclick="gotoPage('./CA-book-product-detail.html')">책 제목 책 제목</h4>
+                                <h4 class="text-base font-semibold mb-1 cursor-pointer two-lines h-12" onclick="gotoPage('./CA-book-product-detail.html')">책 제목 책 제목 책 제목 책 제목 책 제목 책 제목</h4>
                                 <p class="text-13-l-18 font-normal text-gray-400 mb-3">저자 ∙ 바오로딸</p>
                                 <div class="flex items-center gap-1">
                                     <span class="inline-block text-sm font-semibold text-red-500">10%</span>
