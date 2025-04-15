@@ -88,6 +88,13 @@
                 margin-right: 20px;
             }
         }
+
+        @media (max-width: 1280px) {
+            #banner2 .flickity-button {
+                display: none;
+            }
+
+        }
     </style>
     <style>
         /* custom slide */
@@ -218,7 +225,7 @@
             width: 350px;
         }
 
-        @media (max-width: 760px) {
+        @media (max-width: 759px) {
             .card-new-width {
                 width: calc(50%);
             }
@@ -230,13 +237,13 @@
             }
 
             .lord-width {
-                width: calc(50% - 32px);
+                width: calc(50%);
             }
         }
 
         @media (max-width: 640px) {
             .lord-width {
-                width: calc(50% - 20px);
+                width: calc(50%);
             }
         }
     </style>
@@ -260,6 +267,10 @@
             .container-layout {
                 padding-left: 2rem;
                 /* padding-right: 2rem; */
+            }
+
+            .padding-right-screen-large {
+                padding-right: 2rem;
             }
         }
     </style>
@@ -303,9 +314,11 @@
         </section>
         <!-- exc2 end -->
 
-        <section class="border-b hidden sm:block" style="background-color: rgba(112, 115, 124, 0.08);">
+        <section class="border-b hidden sm:block padding-right-screen-large"
+            style="background-color: rgba(112, 115, 124, 0.08);">
             <div class="container-layout">
-                <div class="text-xs font-normal py-3 flex gap-5 justify-end" style="color: rgba(46, 47, 51, 0.88);">
+                <div class="px-5 sm:px-8 lg:px-0 text-xs font-normal py-3 flex gap-5 justify-end"
+                    style="color: rgba(46, 47, 51, 0.88);">
                     <a href="./pages/AU-login-login.html">로그인</a>
                     <a href="./pages/AU-membership.html">회원가입</a>
                     <a href="./pages/CO-sh-shopping-cart.html">주문/배송</a>
@@ -315,7 +328,8 @@
         </section>
 
         <section>
-            <div class="container-layout py-2 mobi-px sm:py-8 utility-layout header-padding">
+            <div
+                class="container-layout py-2 sm:py-8 px-5 sm:px-8 lg:px-0 utility-layout header-padding padding-right-screen-large">
                 <div class="flex items-center justify-between gap-0 ">
                     <div class="cursor-pointer header-logo overflow-hidden" onclick="gotoPage('index.html')">
                         <img class="header-logo" src="../assets/images/logo/Logo.svg" alt="Logo" />
@@ -406,8 +420,8 @@
         </section>
 
         <section class="border-b">
-            <div class="container-layout overflow-hidden">
-                <div class="flex justify-between overflow-auto custom-scroll">
+            <div class="container-layout overflow-hidden padding-right-screen-large">
+                <div class="px-5 sm:px-8 lg:px-0 flex justify-between overflow-auto custom-scroll">
                     <div>
                         <ul class="flex">
                             <li class="py-4 px-3.5 relative underline-active"> <a
@@ -879,7 +893,7 @@
     <!-- main vvvv-->
     <!-- banner slide -->
     <section class="mt-6">
-        <div class="container-layout">
+        <div class="container-layout padding-right-screen-large">
             <div id="frame-banner" class="">
                 <div id="frame-boss" class="height-slide-banner" style="max-width: 1120px;">
                     <div class="container-custom-slide">
@@ -937,8 +951,8 @@
     </section>
 
     <section class="my-12 sm:my-8">
-        <div class="container-layout">
-            <ul class="pl-5 sm:pl-8 lg:pl-0 flex items-center justify-between gap-x-5 overflow-x-auto custom-scroll">
+        <div class="container-layout padding-right-screen-large">
+            <ul class="flex px-5 sm:px-8 lg:px-0 items-center justify-between gap-x-5 overflow-x-auto custom-scroll">
                 <li class="flex items-center gap-y-2 justify-center flex-col">
                     <div class="w-20 h-20 rounded-3xl flex items-center justify-center"
                         style="background-color: rgba(247, 247, 248, 1);">
@@ -1068,7 +1082,7 @@
                     </div>
 
                     <!-- button navigation -->
-                    <div class="hidden absolute left-0 right-0 z-10 lg:flex justify-between items-center"
+                    <div class="hidden absolute left-0 right-0 z-10 xl:flex justify-between items-center"
                         style="top: calc(50% - 20px);">
                         <button id="recomment-swiper-button-prev"
                             class="w-10 h-10 bg-white rounded-full border shadow transform lg:-translate-x-16">
@@ -1510,12 +1524,12 @@
                     </div>
                 </div>
 
-                <div>
+                <div class="overflow-x-auto">
                     <!-- start slide -->
                     <div class="pl-5 sm:pl-8 lg:pl-0">
                         <div class="relative">
                             <!-- best swiper -->
-                            <div class="overflow-x-auto custom-scroll-x">
+                            <div class="overflow-x-auto custom-scroll">
                                 <div id="ytSwiper" class="swiper width-580-1120">
                                     <div class="swiper-wrapper">
 
@@ -1570,14 +1584,14 @@
     <div class="h-12 sm:h-24"></div>
     <section>
         <div class="container-layout">
-            <div class="flex items-start sm:justify-between gap-y-10 gap-x-5">
+            <div class="flex items-start sm:justify-between gap-y-10 gap-x-5 px-5 sm:px-8 lg:px-0">
                 <div class="space-y-5 sm:space-y-8 overflow-x-auto custom-scroll card-new-width">
-                    <div class="px-5 sm:px-8 lg:px-0 flex items-center gap-x-1"> <!-- exc6 end -->
+                    <div class="flex items-center gap-x-1"> <!-- exc6 end -->
                         <h4 class="text-2028-2838 font-semibold">카드뉴스</h4>
                         <img src="./assets/images/icon/main/news.svg" alt="">
                     </div>
 
-                    <div class="pl-5 sm:pl-8 lg:pl-0">
+                    <div class="">
                         <div class="relative">
                             <!-- best swiper -->
                             <div class="">
@@ -1666,7 +1680,7 @@
                     <div class="pl-5 sm:pl-8 lg:pl-0">
                         <div class="relative">
                             <!-- best swiper -->
-                            <div class="overflow-x-auto custom-scroll-x">
+                            <div class="overflow-x-auto custom-scroll">
                                 <div id="reviewSwiper" class="swiper width-580-1120">
                                     <div class="swiper-wrapper">
 
@@ -1793,9 +1807,9 @@
     </div>
 
     <!-- notice -->
-    <section id="announcement" class=" py-2 border-t border-b">
-        <div class="container-layout px-5 sm:px-0">
-            <div class="flex items-center gap-5">
+    <section id="announcement" class="py-2 border-t border-b">
+        <div class="container-layout padding-right-screen-large">
+            <div class="flex items-center gap-5 px-5 lg:px-0">
                 <div class="text-base font-semibold p-2.5" style="white-space: nowrap;">공지사항</div>
                 <div class="flex flex-1 items-center justify-between overflow-hidden">
                     <div style="font-size: 15px; line-height: 22px; font-weight: 400; color: rgba(46, 47, 51, 0.88);"
@@ -1818,7 +1832,7 @@
     </section>
 
     <footer class="py-6">
-        <div class="container-layout px-5 lg:px-0 flex flex-col sm:flex-row mobi-px">
+        <div class="container-layout padding-right-screen-large px-5 lg:px-0 flex flex-col sm:flex-row mobi-px">
             <div class="flex-1">
                 <div class="text-base font-medium cursor-pointer" onclick="gotoPage('./pages/CS-cc-main.html')">고객센터
                 </div>
@@ -1949,7 +1963,8 @@
         </div>
 
 
-        <div class="container-layout flex flex-col sm:flex-row flex-wrap py-2.5 px-5 sm:px-0 gap-4 sm:gap-0">
+        <div
+            class="container-layout padding-right-screen-large flex flex-col sm:flex-row flex-wrap py-2.5 px-5 lg:px-0 gap-4 sm:gap-0">
 
             <div style="width: 160px; height: 92px;" class="flex items-center justify-start sm:justify-center">
                 <img style="width: 72px; height: 72px;" src="../assets/images/logo/logo-grey.svg" alt="img">

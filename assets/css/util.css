@@ -1473,7 +1473,7 @@ input[type="number"] {
 @media (min-width: 769px) and (max-width: 1124px) {
   .padding-left-medium {
     padding-left: 2rem;
-    /* padding-right: 2rem; */
+    padding-right: 2rem;
   }
 }
 
@@ -1502,14 +1502,41 @@ input[type="number"] {
   }
 }
 
-@media (min-width: 1010px) and (max-width: 1124px) {
+@media (min-width: 768px) and (max-width: 1124px) {
   .myp-padding {
     padding-left: 2rem;
     padding-right: 2rem;
   }
 }
 
-@media (min-width: 970px) and (max-width: 1124px) {
+.myp-padding-col-gap {
+  column-gap: 60px;
+}
+
+@media (min-width: 768px) and (max-width: 890px) {
+  .myp-padding-col-gap {
+    column-gap: 8px;
+  }
+}
+
+.myp-width-number-info {
+ width: 112px;
+}
+
+@media (min-width: 815px) and (max-width: 870px) {
+  .myp-width-number-info {
+    width: fit-content;
+  }
+}
+
+@media (max-width: 710px) {
+  .myp-width-number-info {
+    width: fit-content;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1124px) {
   .csp-padding {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -1519,5 +1546,69 @@ input[type="number"] {
 @media (max-width: 815px) {
   .hidden-left-menu-my-page {
     display: none;
+  }
+
+  .hidden-left-menu-category-page {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1128px) {
+  .padding-right-screen-large {
+      padding-right: 2rem;
+  }
+
+  .padding-right-left-large {
+      padding-left: 2rem;
+  }
+
+  .padding-screen-large {
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+}
+
+@media (min-width: 769px) and (max-width: 1124px) {
+  .header-padding {
+      padding-left: 2rem;
+      padding-right: 2rem;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 850px) {
+  .header-input {
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+}
+
+@media (min-width: 815px) and (max-width: 1124px) {
+  .padding-left-right-pc-815 {
+      padding-left: 2rem;
+      padding-right: 2rem;
+  }
+
+  .padding-right-pc-815 {
+      padding-right: 2rem;
+  }
+  .padding-left-pc-815 {
+      padding-left: 2rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .bread-crumb-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.gap-info-product-shopping-cart {
+  column-gap: 20px;
+}
+
+@media (min-width: 1024px) and (max-width: 1085px) {
+  .gap-info-product-shopping-cart {
+    column-gap: 4px;
   }
 }

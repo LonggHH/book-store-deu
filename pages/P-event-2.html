@@ -25,32 +25,62 @@
 <body>
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
     <header>
-        <section class="hidden sm:block h-16 overflow-hidden pt-2"
-            style="background: linear-gradient(to right, #2e3d4e, #241d36);">
-            <div class="container-layout h-16 flex items-center justify-center">
-                <img style="width: 280px; height: 72px;" src="../assets/images/banner/promo-banner.svg" alt="icon">
+        <!-- exc2 start -->
+        <section id="main-popup-top" class="fixed top-0 left-0 w-screen flex items-center justify-center hidden"
+            style="z-index: 99;">
+            <div class="mt-4 bg-white w-full mx-auto border rounded-xl"
+                style="max-width: 320px; border-color: rgba(112, 115, 124, 0.08); box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.04);">
+                <div class="w-full">
+                    <div class="w-full overflow-hidden rounded-xl"
+                        style="min-height: 400px; max-height: 560px; height: 400px;">
+                        <img src="../assets/images/image/banner/sub-banner-top.png" alt="">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button id="hide-today" class="text-sm font-medium text-gray-500 py-2 px-3 cursor-pointer">오늘은
+                            그만보기</button>
+
+                        <button id="close-popup"
+                            class="text-sm font-medium text-gray-500 py-2 px-3 cursor-pointer">닫기</button>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="border-b hidden sm:block" style="background-color: rgba(112, 115, 124, 0.08);">
+        <section id="top-popup" class="block h-16 overflow-hidden pt-2"
+            style="background: linear-gradient(to right, #2e3d4e, #241d36);">
+            <div class="container-layout h-16 flex items-center justify-center relative"
+                style="width: 280px; height: 72px;">
+                <img style="width: 280px; height: 72px;" src="../assets/images/banner/promo-banner.svg" alt="icon">
+
+                <div id="btn-close-top-popup" class="sm:hidden absolute top-4 -right-6 cursor-pointer">
+                    <img src="../assets/images/image/banner/close.png" alt="">
+                </div>
+            </div>
+        </section>
+        <!-- exc2 end -->
+
+        <section class="border-b hidden sm:block padding-right-screen-large"
+            style="background-color: rgba(112, 115, 124, 0.08);">
             <div class="container-layout">
-                <div class="text-xs font-normal py-3 flex gap-5 justify-end" style="color: rgba(46, 47, 51, 0.88);">
-                    <a href="./AU-login-login.html">로그인</a>
-                    <a href="./AU-membership.html">회원가입</a>
-                    <a href="./CO-sh-shopping-cart.html">주문/배송</a>
-                    <a href="./CS-cc-main.html">고객센터</a>
+                <div class="px-5 sm:px-8 lg:px-0 text-xs font-normal py-3 flex gap-5 justify-end"
+                    style="color: rgba(46, 47, 51, 0.88);">
+                    <a href="../pages/AU-login-login.html">로그인</a>
+                    <a href="../pages/AU-membership.html">회원가입</a>
+                    <a href="../pages/CO-sh-shopping-cart.html">주문/배송</a>
+                    <a href="../pages/CS-cc-main.html">고객센터</a>
                 </div>
             </div>
         </section>
 
         <section>
-            <div class="container-layout py-2 mobi-px sm:py-8 utility-layout">
+            <div
+                class="container-layout py-2 sm:py-8 px-5 sm:px-8 lg:px-0 utility-layout header-padding padding-right-screen-large">
                 <div class="flex items-center justify-between gap-0 ">
-                    <div class="cursor-pointer header-logo overflow-hidden" onclick="gotoPage('/index.html')">
+                    <div class="cursor-pointer header-logo overflow-hidden" onclick="gotoPage('index.html')">
                         <img class="header-logo" src="../assets/images/logo/Logo.svg" alt="Logo" />
                     </div>
                     <!-- input search vvvvvv -->
-                    <div class="flex-1 hidden sm:block max-w-xl">
+                    <div class="flex-1 hidden sm:block max-w-xl header-input">
                         <div id="frame-header-search" class="rounded-full relative"
                             style="background: linear-gradient(to right, #0C98E7, #B956EA, #F03964); padding: 1px; ">
                             <div
@@ -61,7 +91,7 @@
                                 </div>
                                 <div class="pl-6 border-l cursor-pointer"
                                     style="border-color: rgba(112, 115, 124, 0.22);"
-                                    onclick="gotoPage('./P-search.html')">
+                                    onclick="gotoPage('../pages/P-search.html')">
                                     <img src="../assets/images/icon/header/home-search.svg" alt="icon">
                                 </div>
                             </div>
@@ -71,11 +101,11 @@
                                     class="absolute top-full left-0 right-0 z-50 bg-white border shadow-md border-bl-br-24-px">
                                     <ul class="">
                                         <li class="text-15-l-22 font-normal py-3 px-5 truncate hover:bg-gray-100 cursor-pointer"
-                                            onclick="gotoPage('./P-search.html')">하루 10분 성모님 손잡고</li>
+                                            onclick="gotoPage('../pages/P-search.html')">하루 10분 성모님 손잡고</li>
                                         <li class="text-15-l-22 font-normal py-3 px-5 truncate hover:bg-gray-100 cursor-pointer"
-                                            onclick="gotoPage('./P-search.html')">하루 10분 성모님 손잡고</li>
+                                            onclick="gotoPage('../pages/P-search.html')">하루 10분 성모님 손잡고</li>
                                         <li class="text-15-l-22 font-normal py-3 px-5 truncate hover:bg-gray-100 cursor-pointer"
-                                            onclick="gotoPage('./P-search.html')">하루 10분 성모님 손잡고</li>
+                                            onclick="gotoPage('../pages/P-search.html')">하루 10분 성모님 손잡고</li>
                                     </ul>
                                     <div class="py-1 px-5 flex justify-end border-t">
                                         <button onclick="closeHeaderSearchResult()"
@@ -87,14 +117,17 @@
                     </div>
                     <!-- input search ^^^^ -->
 
-                    <div class="sm:hidden mx-4 max-w-32 flex-1">
-                        <div class="py-2 px-3 flex items-center rounded-full gap-x-2"
-                            style="background-color: rgba(247, 247, 248, 1);">
-                            <input type="text" class="text-base font-normal w-full bg-transparent"
-                                placeholder="하루 10분 주...">
-                            <button class="w-5 h-5 flex items-center justify-center">
-                                <img class="w-full h-full" src="../assets/images/icon/main/icon-search.svg" alt="">
-                            </button>
+                    <div class="rounded-full relative sm:hidden mx-4 max-w-32 flex-1"
+                        style="background: linear-gradient(to right, #0C98E7, #B956EA, #F03964); padding: 1px; ">
+                        <div class="flex-1">
+                            <div class="py-2 px-3 flex items-center rounded-full gap-x-2"
+                                style="background-color: rgba(247, 247, 248, 1);">
+                                <input type="text" class="text-base font-normal w-full bg-transparent"
+                                    placeholder="하루 10분 주...">
+                                <button class="w-5 h-5 flex items-center justify-center">
+                                    <img class="w-full h-full" src="../assets/images/icon/main/icon-search.svg" alt="">
+                                </button>
+                            </div>
                         </div>
                     </div>
 
@@ -132,35 +165,35 @@
         </section>
 
         <section class="border-b">
-            <div class="container-layout overflow-hidden">
-                <div class="flex justify-between overflow-auto custom-scroll">
+            <div class="container-layout overflow-hidden padding-right-left-large padding-right-screen-large">
+                <div class="px-5 sm:px-8 lg:px-0 flex justify-between overflow-auto custom-scroll">
                     <div>
                         <ul class="flex">
-                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
-                                    style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
-                                    href="../index.html">전체</a> </li>
+                            <li class="py-4 px-3.5 relative underline-active"> <a
+                                    class="inline-block h-6 text-base font-semibold"
+                                    style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="#">홈</a> </li>
                             <li class="py-4 px-3.5 text-highlight text-highlight-dot"> <a
                                     class="inline-block h-6 text-base font-medium"
                                     style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
-                                    href="../index.html">스페셜</a> </li>
+                                    href="../pages/SP-1.html">스페셜</a> </li>
                             <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
                                     style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
-                                    href="./CA-book-main-category.html">도서</a> </li>
+                                    href="../pages/CA-book-main-category.html">도서</a> </li>
                             <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
                                     style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
-                                    href="./CA-sanctuary-main-category.html">성물</a> </li>
+                                    href="../pages/CA-sanctuary-main-category.html">성물</a> </li>
                             <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
                                     style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
-                                    href="./CA-good-main-category.html">굿즈</a> </li>
+                                    href="../pages/CA-good-main-category.html">굿즈</a> </li>
                             <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
                                     style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
-                                    href="./CA-pick-main-category.html">바오로딸 Pick</a> </li>
+                                    href="../pages/CA-pick-main-category.html">바오로딸 Pick</a> </li>
                             <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
                                     style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
-                                    href="./CA-ebook-main-category.html">ebook</a> </li>
+                                    href="../pages/CA-ebook-main-category.html">ebook</a> </li>
                             <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
                                     style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
-                                    href="./CA-dvd-main-category.html">음반/뮤직/DVD</a> </li>
+                                    href="../pages/CA-dvd-main-category.html">음반/뮤직/DVD</a> </li>
                         </ul>
                     </div>
                     <div class="hidden sm:flex gap-2 items-center">

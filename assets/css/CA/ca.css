@@ -10,6 +10,13 @@
 
 .frame-main-size {
   max-width: 940px;
+  width: 100%;
+}
+
+@media (min-width: 815px) and (max-width: 1124px) {
+  .frame-main-size {
+    padding-right: 2rem;
+  }
 }
 
 .frame-size-full-300 {
@@ -20,7 +27,7 @@
   width: 456px;
 }
 
- 
+
 .custom-input-range::-webkit-slider-thumb {
   -webkit-appearance: none !important;
   appearance: none !important;
@@ -31,8 +38,7 @@
   cursor: pointer !important;
 }
 
-
-@media (max-width: 1024px) {
+@media (max-width: 1124px) {
   .frame-main-size {
     overflow-x: hidden;
   }
@@ -43,7 +49,7 @@
     width: 100%;
     max-width: 360px;
   }
-  
+
   .frame-size-full-456 {
     width: 100%;
     max-width: 360px;
