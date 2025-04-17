@@ -146,8 +146,11 @@
 
                     <div class="flex sm:hidden gap-5 items-center">
                         <div
-                            class="text-xs font-semibold py-2 px-4 rounded-full text-white bg-header-highlight whitespace-nowrap">
+                            class="hidden sm:block text-xs font-semibold py-2 px-4 rounded-full text-white bg-header-highlight whitespace-nowrap">
                             로그인
+                        </div>
+                        <div class="w-8 h-8 overflow-hidden sm:hidden">
+                            <img src="../assets/images/image/common/user-no-login.png" alt="">
                         </div>
                         <div class="relative">
                             <img class="w-6 h-6" src="../assets/images/icon/header/shopping-bag.svg" alt="">
@@ -164,47 +167,47 @@
             </div>
         </section>
 
-        <section class="border-b">
-            <div class="container-layout overflow-hidden padding-right-left-large padding-right-screen-large">
-                <div class="px-5 sm:px-8 lg:px-0 flex justify-between overflow-auto custom-scroll">
-                    <div>
-                        <ul class="flex">
-                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
-                                    style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="#">홈</a> </li>
-                            <li class="py-4 px-3.5 text-highlight text-highlight-dot"> <a
-                                    class="inline-block h-6 text-base font-medium"
-                                    style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
-                                    href="../pages/SP-1.html">스페셜</a> </li>
-                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
-                                    style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
-                                    href="../pages/CA-book-main-category.html">도서</a> </li>
-                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
-                                    style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
-                                    href="../pages/CA-sanctuary-main-category.html">성물</a> </li>
-                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
-                                    style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
-                                    href="../pages/CA-good-main-category.html">굿즈</a> </li>
-                            <li class="py-4 px-3.5 relative underline-active"> <a
-                                    class="inline-block h-6 text-base font-semibold"
-                                    style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
-                                    href="../pages/CA-pick-main-category.html">바오로딸 Pick</a> </li>
-                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
-                                    style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
-                                    href="../pages/CA-ebook-main-category.html">ebook</a> </li>
-                            <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
-                                    style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
-                                    href="../pages/CA-dvd-main-category.html">음반/뮤직/DVD</a> </li>
-                        </ul>
-                    </div>
-                    <div class="hidden sm:flex gap-2 items-center">
-                        <span class="text-base font-semibold hidden sm:block" style="white-space: nowrap;">전체 메뉴</span>
-                        <img class="cursor-pointer" id="btn-toggle-menu-l"
-                            src="../assets/images/icon/header/home-hbg-menu.svg" alt="icon">
-                    </div>
+    </header>
+    <section class="border-b sticky top-0 z-30 bg-white">
+        <div class="container-layout overflow-hidden padding-right-left-large padding-right-screen-large">
+            <div class="px-5 sm:px-8 lg:px-0 flex justify-between overflow-auto custom-scroll">
+                <div>
+                    <ul class="flex">
+                        <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
+                                style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);" href="#">홈</a> </li>
+                        <li class="py-4 px-3.5 text-highlight text-highlight-dot"> <a
+                                class="inline-block h-6 text-base font-medium"
+                                style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
+                                href="../pages/SP-1.html">스페셜</a> </li>
+                        <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
+                                style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
+                                href="../pages/CA-book-main-category.html">도서</a> </li>
+                        <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
+                                style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
+                                href="../pages/CA-sanctuary-main-category.html">성물</a> </li>
+                        <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
+                                style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
+                                href="../pages/CA-good-main-category.html">굿즈</a> </li>
+                        <li class="py-4 px-3.5 relative underline-active"> <a
+                                class="inline-block h-6 text-base font-semibold"
+                                style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
+                                href="../pages/CA-pick-main-category.html">바오로딸 Pick</a> </li>
+                        <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
+                                style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
+                                href="../pages/CA-ebook-main-category.html">ebook</a> </li>
+                        <li class="py-4 px-3.5"> <a class="inline-block h-6 text-base font-medium"
+                                style="white-space: nowrap;color: rgba(46, 47, 51, 0.88);"
+                                href="../pages/CA-dvd-main-category.html">음반/뮤직/DVD</a> </li>
+                    </ul>
+                </div>
+                <div class="hidden sm:flex gap-2 items-center">
+                    <span class="text-base font-semibold hidden sm:block" style="white-space: nowrap;">전체 메뉴</span>
+                    <img class="cursor-pointer" id="btn-toggle-menu-l"
+                        src="../assets/images/icon/header/home-hbg-menu.svg" alt="icon">
                 </div>
             </div>
-        </section>
-    </header>
+        </div>
+    </section>
 
     <section id="toggle-menu" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 z-50 hidden">
         <div class="h-0 sm:h-60 w-full"></div>
@@ -589,7 +592,8 @@
     <!-- breadcrumb -->
     <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
     <section class="sm:mt-6 sm:mb-8">
-        <div class="container-layout mobi-px py-2 sm:py-0 bg-gray-100 sm:bg-white">
+        <div
+            class="container-layout padding-right-left-large padding-right-screen-large px-5 sm:px-8 lg:px-0 py-2 sm:py-0 bg-gray-100 sm:bg-white">
             <div class="flex items-center gap-2 sm:py-1">
                 <div>
                     <a href="../index.html">
@@ -650,9 +654,10 @@
 
     <section class="mt-5 sm:mt-0">
         <div class="container-layout">
-            <div class="flex items-start relative justify-between flex-wrap gap-side-menu-main-content">
+            <div
+                class="flex items-start relative justify-between padding-left-pc-815 padding-right-pc-815 gap-side-menu-main-content">
 
-                <nav class="hidden md:block category-side-menu">
+                <nav class="hidden md:block hidden-left-menu-category-page">
                     <div class="space-y-3">
                         <div class="space-y-3">
                             <div class="space-y-3">

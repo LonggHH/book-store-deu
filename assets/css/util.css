@@ -1513,7 +1513,7 @@ input[type="number"] {
   column-gap: 60px;
 }
 
-@media (min-width: 768px) and (max-width: 890px) {
+@media (min-width: 768px) and (max-width: 815px) {
   .myp-padding-col-gap {
     column-gap: 8px;
   }
@@ -1523,7 +1523,7 @@ input[type="number"] {
  width: 112px;
 }
 
-@media (min-width: 815px) and (max-width: 870px) {
+@media (min-width: 815px) and (max-width: 1024px) {
   .myp-width-number-info {
     width: fit-content;
   }
@@ -1610,5 +1610,31 @@ input[type="number"] {
 @media (min-width: 1024px) and (max-width: 1085px) {
   .gap-info-product-shopping-cart {
     column-gap: 4px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 815px) {
+  .ca-middle-content-padding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 814px) {
+  .ca-middle-content-padding-secondary {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 815px) {
+  .pick-bullet-middle-padding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .ca-middle-content-padding-more {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
