@@ -599,7 +599,7 @@ input[type="number"] {
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 639px) {
   .container-custom-slide {
     border-radius: 0px;
   }
@@ -1634,6 +1634,14 @@ input[type="number"] {
   }
 
   .ca-middle-content-padding-more {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+  .padding-banner {
+    /* CSS trong khoảng từ 640 đến 1024 */
     padding-left: 2rem;
     padding-right: 2rem;
   }
